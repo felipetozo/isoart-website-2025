@@ -1,0 +1,32 @@
+.SobreEmpresaSection {
+    background-color: rgba(var(--color-darkBlue), 1);
+    padding: 5rem 0;
+    width: 100%;
+}
+
+.SobreEmpresaWrapper {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+}
+
+.SobreEmpresaContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.doubleButton {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (min-width:1600px) {
+    .SobreEmpresaWrapper {
+        grid-template-columns: 20% 70%;
+    }
+}

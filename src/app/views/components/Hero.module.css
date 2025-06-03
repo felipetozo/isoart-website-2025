@@ -1,0 +1,51 @@
+.HeroSection {
+    width: 100vw;
+    height: 80vh;
+    max-height: max-content;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url('/img/HeroBanners/banner001.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.HeroSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(var(--color-almostBlack), 0.50);
+    z-index: 2;
+}
+
+.HeroWrapper {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    top: 45%;
+    flex-direction: column;
+    position: relative;
+    max-width: 1600px;
+    justify-content: space-between;
+    gap: 5rem;
+    z-index: 2;
+}
+
+.HeroContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    z-index: 3;
+}
+
+@media (min-width:1200px) {
+    .HeroWrapper {
+        flex-direction: row;
+    }
+}

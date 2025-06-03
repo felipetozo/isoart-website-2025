@@ -1,0 +1,112 @@
+.MainFormSection {
+    background-color: rgba(var(--color-isoartBlue), 1);
+    width: 100%;
+    padding: 5rem 0;
+}
+
+.MainFormWrapper {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.MainFormHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.MainFormHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.MainFormContactItem {
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.MainFormContactItem svg {
+    color: rgba(var(--color-lightestBlue), 1);
+}
+
+.MainFormHeader h4 {
+    font-family: var(--font-RedHat);
+    color: rgba(var(--color-lightestBlue), 1);
+    width: 100%;
+}
+
+.MainForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.MainFormContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.cadastroForm {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    background-color: rgba(var(--color-darkBlue), 0.1);
+    border: 1px solid rgba(var(--color-lightestBlue), 0.1);
+}
+
+.MainFormContainer img {
+    border-radius: 0.2rem;
+    overflow: hidden;
+}
+
+.MainFormContainer h3 {
+    color: rgba(var(--color-lightestBlue), 1);
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+}
+
+.MainFormLocationsListItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    background-color: rgba(var(--color-darkBlue), 0.1);
+    border: 1px solid rgba(var(--color-lightestBlue), 0.1);
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+    height: max-content;
+}
+
+@media (min-width:1200px) {
+
+    .MainFormHeader,
+    .MainFormHeaderContainer,
+    .MainFormContainer,
+    .MainFormLocationsList,
+    .MainForm {
+        flex-direction: row;
+    }
+
+    .cadastroForm {
+        width: 50%;
+    }
+
+    .MainFormLocationsListItem {
+        width: 20%;
+    }
+}

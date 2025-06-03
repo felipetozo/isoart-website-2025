@@ -1,0 +1,32 @@
+/* FormInput.module.css */
+.formInput {
+    margin-bottom: 1rem;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-family: var(--font-RedHat);
+}
+
+.input {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(var(--color-darkBlue), 0.1);
+    border: 1px solid rgba(var(--color-lightestBlue), 0.1);
+    border-radius: 0.5rem;
+    color: rgba(var(--color-almostWhite), 0.65);
+    font-size: 0.8rem;
+}
+
+.input:hover {
+    border: 1px solid rgba(var(--color-lightestBlue), 0.25);
+    background-color: rgba(var(--color-lightestBlue), 0.05);
+}
+
+.error {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+}

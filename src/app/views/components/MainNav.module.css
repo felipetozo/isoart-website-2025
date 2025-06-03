@@ -1,0 +1,143 @@
+/* ======================================================== */
+/* Container Principal dos Navegadores                      */
+/* ======================================================== */
+
+.navContainer {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* ======================================================== */
+/* Navegador Institucional                                  */
+/* ======================================================== */
+
+.institutionalNavSection {
+    width: 100%;
+    display: none;
+    padding: 1rem 0;
+}
+
+.institutionalNavWrapper {
+    width: 90%;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    border-radius: 0.25rem;
+    background-color: rgba(var(--color-almostWhite), 0.05);
+    backdrop-filter: blur(1rem);
+    padding: 0.5rem 1rem;
+    font-family: var(--font-RedHat);
+    -webkit-backdrop-filter: blur(1rem);
+}
+
+.institutionalNavMessage {
+    display: flex;
+    align-items: center;
+}
+
+.institutionalNavItems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.institutionalNavWrapper ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.institutionalNavSocial {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* ======================================================= */
+/* Main Nav                                                */
+/* ======================================================= */
+
+.MainNavSection {
+    width: 100%;
+}
+
+.MainNavWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    align-items: center;
+    border-radius: 0.25rem;
+    background-color: rgba(var(--color-almostWhite), 0.75);
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+}
+
+.MainNavLinks,
+.MainNavButton {
+    display: none;
+}
+
+.MainNavLinks ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+.MainNavLinks ul li {
+    display: flex;
+    width: 100%;
+    max-width: max-content;
+}
+
+.MainNavLinks a {
+    color: rgba(var(--color-almostBlack), 1);
+    display: flex;
+}
+
+.MainNavMenuIcon {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: rgba(var(--color-isoartBlue), 0.8);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.MainNavMenuIcon:hover {
+    background-color: rgba(var(--color-isoartBlue), 1);
+}
+
+@media (min-width:1200px) {
+
+    .institutionalNavSection {
+        display: block;
+    }
+
+    .MainNavWrapper {
+        margin-top: 0;
+    }
+
+    .MainNavLinks,
+    .MainNavButton {
+        display: block;
+    }
+
+    .MainNavMenuIcon {
+        display: none;
+    }
+}
