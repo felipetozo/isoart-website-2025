@@ -5,13 +5,26 @@
     position: relative;
     top: 0;
     left: 0;
-    background-image: url('/img/HeroBanners/banner001.jpg');
-    background-size: cover;
-    background-position: center;
+    overflow: hidden;
     z-index: 1;
 }
 
-.HeroSection::before {
+.SliderWrapper {
+    width: 500%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.Slide {
+    width: 100vw;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.Slide::before {
     content: '';
     position: absolute;
     top: 0;
@@ -27,25 +40,117 @@
     height: 100%;
     margin: 0 auto;
     display: flex;
-    top: 45%;
     flex-direction: column;
-    position: relative;
     max-width: 1600px;
-    justify-content: space-between;
-    gap: 5rem;
-    z-index: 2;
+    align-items: flex-start;
 }
 
 .HeroContainer {
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1.25rem;
+    color: rgba(var(--color-almostWhite), 1);
+    z-index: 3;
+    position: absolute;
+    top: 65%;
+    transform: translateY(-50%);
+}
+
+.HeroContainer h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.HeroContainer p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 1.25rem;
+}
+
+/* Animação CSS pura para blur-to-sharp */
+.split {
+    filter: blur(10px);
+    opacity: 0;
+    animation: blurToSharp 0.2s ease-out forwards;
+}
+
+@keyframes blurToSharp {
+    from {
+        filter: blur(10px);
+        opacity: 0;
+    }
+
+    to {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+/* Reset da animação quando slide muda */
+.HeroContainer.slideChanged .split {
+    animation: none;
+    filter: blur(10px);
+    opacity: 0;
+}
+
+.HeroContainer.slideActive .split {
+    animation: blurToSharp 0.2s ease-out forwards;
+}
+
+.Navigation {
+    position: absolute;
+    bottom: 2rem;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     z-index: 3;
 }
 
-@media (min-width:1200px) {
+.NavChevron {
+    font-size: 1rem;
+    color: rgba(var(--color-almostWhite), 0.75);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.NavChevron:hover {
+    color: rgba(var(--color-almostWhite), 1);
+}
+
+.NavDot {
+    width: 1.5rem;
+    height: 0.1rem;
+    background-color: rgba(var(--color-almostWhite), 0.50);
+    cursor: pointer;
+}
+
+.NavDot.active {
+    background-color: rgba(var(--color-almostWhite), 0.75);
+    height: 0.2rem;
+}
+
+.heroSpacer {
+    height: 0;
+}
+
+@media (min-width: 1200px) {
     .HeroWrapper {
         flex-direction: row;
+        align-items: flex-start;
+        padding-bottom: 5%;
+    }
+
+    .HeroContainer {
+        width: 50%;
+    }
+
+    .HeroContainer h1 {
+        font-size: 3.5rem;
+    }
+
+    .HeroContainer p {
+        font-size: 1.5rem;
     }
 }

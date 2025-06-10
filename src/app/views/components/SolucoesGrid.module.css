@@ -2,13 +2,15 @@
     width: 100%;
     padding: 10rem 0;
     background-color: rgba(var(--color-almostWhite), 1);
+    position: relative;
+    overflow: hidden;
 }
 
 .SolucoesGridWrapper {
     width: 90%;
     margin: 0 auto;
-    display: flex;
     max-width: 1600px;
+    display: flex;
     flex-direction: column;
     gap: 5rem;
 }
@@ -21,18 +23,21 @@
 }
 
 .SolucoesGridGrid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: nowrap;
     gap: 1.5rem;
+    height: 50rem;
+    padding: 0 10rem 10rem 0;
 }
 
 .SolucoesGridCard {
     position: relative;
     border-radius: 0.6rem;
     overflow: hidden;
-    height: 50rem;
+    height: 100%;
+    flex: 0 0 auto;
+    width: 40vw;
     cursor: pointer;
-    transition: transform 0.3s ease;
 }
 
 .SolucoesGridCardImage {
@@ -100,24 +105,9 @@
     background: linear-gradient(transparent, rgba(141, 169, 85, 0.8));
 }
 
-
-/* Tablet - min-width: 768px */
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
     .SolucoesGridGrid {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-    }
-
-    .SolucoesGridCardContainer {
-        padding: 1.8rem;
-    }
-
-    .SolucoesGridCardContainer h5 {
-        font-size: 1.4rem;
-    }
-
-    .SolucoesGridCardContainer p {
-        font-size: 0.95rem;
+        gap: 2.5rem;
     }
 
     .SolucoesGridHeader {
@@ -126,12 +116,7 @@
         align-items: flex-start;
         gap: 0;
     }
-}
 
-@media (min-width:1200px) {
-    .SolucoesGridGrid {
-        gap: 2.5rem;
-    }
 
     .SolucoesGridCardContainer {
         padding: 2rem;

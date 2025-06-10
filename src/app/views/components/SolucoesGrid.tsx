@@ -1,10 +1,49 @@
+'use client';
+
 import styles from './SolucoesGrid.module.css';
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function SolucoesGrid() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const gridRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const section = sectionRef.current;
+        const grid = gridRef.current;
+
+        if (!section || !grid) return;
+
+        gsap.to(grid, {
+            x: () => -(grid.scrollWidth - window.innerWidth),
+            ease: 'none',
+            force3D: true,
+            scrollTrigger: {
+                trigger: section,
+                start: 'top top',
+                end: () => `+=${grid.scrollWidth + window.innerWidth}`,
+                scrub: 1,
+                pin: true,
+                pinSpacing: 'margin',
+                invalidateOnRefresh: true,
+            },
+        });
+
+        return () => {
+            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+        };
+    }, []);
+
+
+
     return (
         <>
-            <section className={styles.SolucoesGridSection} id="#SolucoesGrid">
+
+            <section className={styles.SolucoesGridSection} ref={sectionRef} id="SolucoesGrid">
                 <div className={styles.SolucoesGridWrapper}>
                     <div className={styles.SolucoesGridHeader}>
                         <p>Nossos produtos</p>
@@ -14,12 +53,12 @@ function SolucoesGrid() {
                             Isolante Rígido (PIR)
                         </h3>
                     </div>
-                    <div className={styles.SolucoesGridGrid}>
+                    <div className={styles.SolucoesGridGrid} ref={gridRef}>
                         <div className={styles.SolucoesGridCard}>
                             <div className={styles.SolucoesGridCardImage}>
                                 <Image
                                     src={'/img/SolucoesGrid/telhas.jpg'}
-                                    alt="Logotipo Isoart"
+                                    alt="Soluções Construtivas Isotérmicas"
                                     width={1000}
                                     height={700}
                                 />
@@ -33,7 +72,7 @@ function SolucoesGrid() {
                             <div className={styles.SolucoesGridCardImage}>
                                 <Image
                                     src={'/img/SolucoesGrid/construcaocivil.jpg'}
-                                    alt="Logotipo Isoart"
+                                    alt="Construção Civil"
                                     width={1000}
                                     height={700}
                                 />
@@ -47,7 +86,7 @@ function SolucoesGrid() {
                             <div className={styles.SolucoesGridCardImage}>
                                 <Image
                                     src={'/img/SolucoesGrid/molduras.jpg'}
-                                    alt="Logotipo Isoart"
+                                    alt="Decoração"
                                     width={1000}
                                     height={700}
                                 />
@@ -61,7 +100,7 @@ function SolucoesGrid() {
                             <div className={styles.SolucoesGridCardImage}>
                                 <Image
                                     src={'/img/SolucoesGrid/molduras.jpg'}
-                                    alt="Logotipo Isoart"
+                                    alt="Forros em EPS"
                                     width={1000}
                                     height={700}
                                 />
@@ -75,7 +114,7 @@ function SolucoesGrid() {
                             <div className={styles.SolucoesGridCardImage}>
                                 <Image
                                     src={'/img/SolucoesGrid/embalagens.jpg'}
-                                    alt="Logotipo Isoart"
+                                    alt="Embalagens"
                                     width={1000}
                                     height={700}
                                 />

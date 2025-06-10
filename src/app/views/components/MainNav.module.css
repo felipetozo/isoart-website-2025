@@ -47,6 +47,16 @@
     gap: 1rem;
 }
 
+.institutionalNavItems ul li a {
+    font-size: 0.75rem;
+    color: rgba(var(--color-almostWhite), 0.5);
+    font-weight: 500;
+}
+
+.institutionalNavItems ul li a:hover {
+    color: rgba(var(--color-almostWhite), 1);
+}
+
 .institutionalNavWrapper ul {
     display: flex;
     flex-direction: row;
@@ -59,6 +69,12 @@
     flex-direction: row;
     gap: 1rem;
     align-items: center;
+}
+
+.institutionalNavSocial svg {
+    color: rgba(var(--color-almostWhite), 0.5);
+    padding: 1rem;
+    border-radius: 100%;
 }
 
 /* ======================================================= */

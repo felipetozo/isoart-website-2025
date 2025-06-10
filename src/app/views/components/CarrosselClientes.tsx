@@ -6,11 +6,11 @@ function CarrosselClientes() {
         <>
             <section className={styles.CarrosselClientesSection} id="CarrosselClientes">
                 <div className={styles.CarrosselClientesWrapper}>
-                    <p>Join 25k+ companies that trust us</p>
+                    <p>Confiança dos Clientes em Nossos Parceiros</p>
                     <ul>
                         <li>
                             <Image
-                                src={'/img/isoart-logotipo.svg'}
+                                src={'/img/parceiros/parceiro-8.png'}
                                 alt="Logotipo Isoart"
                                 width={120}
                                 height={62}
@@ -18,7 +18,7 @@ function CarrosselClientes() {
                         </li>
                         <li>
                             <Image
-                                src={'/img/isoart-logotipo.svg'}
+                                src={'/img/parceiros/parceiro-9.png'}
                                 alt="Logotipo Isoart"
                                 width={120}
                                 height={62}
@@ -26,7 +26,7 @@ function CarrosselClientes() {
                         </li>
                         <li>
                             <Image
-                                src={'/img/isoart-logotipo.svg'}
+                                src={'/img/parceiros/parceiro-10.png'}
                                 alt="Logotipo Isoart"
                                 width={120}
                                 height={62}
@@ -34,7 +34,7 @@ function CarrosselClientes() {
                         </li>
                         <li>
                             <Image
-                                src={'/img/isoart-logotipo.svg'}
+                                src={'/img/parceiros/parceiro-11.png'}
                                 alt="Logotipo Isoart"
                                 width={120}
                                 height={62}
@@ -42,7 +42,39 @@ function CarrosselClientes() {
                         </li>
                         <li>
                             <Image
-                                src={'/img/isoart-logotipo.svg'}
+                                src={'/img/parceiros/parceiro-12.png'}
+                                alt="Logotipo Isoart"
+                                width={120}
+                                height={62}
+                            />
+                        </li>
+                        <li>
+                            <Image
+                                src={'/img/parceiros/parceiro-13.png'}
+                                alt="Logotipo Isoart"
+                                width={120}
+                                height={62}
+                            />
+                        </li>
+                        <li>
+                            <Image
+                                src={'/img/parceiros/parceiro-14.png'}
+                                alt="Logotipo Isoart"
+                                width={120}
+                                height={62}
+                            />
+                        </li>
+                        <li>
+                            <Image
+                                src={'/img/parceiros/parceiro-15.png'}
+                                alt="Logotipo Isoart"
+                                width={120}
+                                height={62}
+                            />
+                        </li>
+                        <li>
+                            <Image
+                                src={'/img/parceiros/parceiro-16.png'}
                                 alt="Logotipo Isoart"
                                 width={120}
                                 height={62}

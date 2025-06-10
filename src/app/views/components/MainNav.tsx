@@ -66,11 +66,26 @@ function MainNav() {
                     </div>
                     <div className={styles.institutionalNavItems}>
                         <ul>
-                            <li><Link href="/">Sobre a empresa</Link></li>
-                            <li><Link href="/">Sobre o PIR e o EPS</Link></li>
-                            <li><Link href="/">Vagas</Link></li>
-                            <li><Link href="/">Notícias</Link></li>
-                            <li><Link href="/">Contato</Link></li>
+                            <li>
+                                <Link href="/">SOBRE A EMPRESA</Link>
+                                <span className={styles.navLinkUnderlineWhite}></span>
+                            </li>
+                            <li>
+                                <Link href="/">SOBRE O PIR E EPS</Link>
+                                <span className={styles.navLinkUnderlineWhite}></span>
+                            </li>
+                            <li>
+                                <Link href="/">VAGAS</Link>
+                                <span className={styles.navLinkUnderlineWhite}></span>
+                            </li>
+                            <li>
+                                <Link href="/">NOTÍCIAS</Link>
+                                <span className={styles.navLinkUnderlineWhite}></span>
+                            </li>
+                            <li>
+                                <Link href="/">CONTATO</Link>
+                                <span className={styles.navLinkUnderlineWhite}></span>
+                            </li>
                         </ul>
                         <div className={styles.institutionalNavSocial}>
                             <Link href="/"><BsInstagram /></Link>

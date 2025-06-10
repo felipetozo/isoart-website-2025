@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Lorem ipsum dolor sit amet constectur",
+        "description": "Lorem ipsum dolor sit amet constectur amit lit. Lorem ipsum dolor sit amet constectur amit lib. Lorem ipsum dolor sit amit lorem ipsum constectur amit.",
+        "buttonText": "Saiba mais",
+        "buttonLink": "/cadastro",
+        "backgroundImage": "/img/HeroBanners/banner001.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Lorem ipsum dolor sit amet constectur",
+        "description": "Lorem ipsum dolor sit amet constectur amit lit. Lorem ipsum dolor sit amet constectur amit lib. Lorem ipsum dolor sit amit lorem ipsum constectur amit.",
+        "buttonText": "Saiba mais",
+        "buttonLink": "/cadastro",
+        "backgroundImage": "/img/HeroBanners/banner001.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Lorem ipsum dolor sit amet constectur",
+        "description": "Lorem ipsum dolor sit amet constectur amit lit. Lorem ipsum dolor sit amet constectur amit lib. Lorem ipsum dolor sit amit lorem ipsum constectur amit.",
+        "buttonText": "Saiba mais",
+        "buttonLink": "/cadastro",
+        "backgroundImage": "/img/HeroBanners/banner001.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Lorem ipsum dolor sit amet constectur",
+        "description": "Lorem ipsum dolor sit amet constectur amit lit. Lorem ipsum dolor sit amet constectur amit lib. Lorem ipsum dolor sit amit lorem ipsum constectur amit.",
+        "buttonText": "Saiba mais",
+        "buttonLink": "/cadastro",
+        "backgroundImage": "/img/HeroBanners/banner001.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Lorem ipsum dolor sit amet constectur",
+        "description": "Lorem ipsum dolor sit amet constectur amit lit. Lorem ipsum dolor sit amet constectur amit lib. Lorem ipsum dolor sit amit lorem ipsum constectur amit.",
+        "buttonText": "Saiba mais",
+        "buttonLink": "/cadastro",
+        "backgroundImage": "/img/HeroBanners/banner001.jpg"
+    }
+]
