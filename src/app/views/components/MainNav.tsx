@@ -11,11 +11,11 @@ import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin } from 'react-icons/bs';
 import menuData from '@/app/data/menuData.json';
 
 function MainNav() {
-    const submenuRef = useRef(null);
-    const hideTimeoutRef = useRef(null);
-    const [activeSubmenu, setActiveSubmenu] = useState(null); // Estado para rastrear o submenu ativo
+    const submenuRef = useRef<HTMLDivElement | null>(null);
+    const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null); // Estado para rastrear o submenu ativo
 
-    const showSubmenu = (index) => {
+    const showSubmenu = (index: number) => {
         if (hideTimeoutRef.current) {
             clearTimeout(hideTimeoutRef.current);
             hideTimeoutRef.current = null;
@@ -35,7 +35,7 @@ function MainNav() {
         tl.eventCallback('onComplete', () => setActiveSubmenu(null)); // Limpa o submenu ativo após a animação
     };
 
-    const handleMouseEnterLi = (index) => {
+    const handleMouseEnterLi = (index: number) => {
         showSubmenu(index);
     };
 
