@@ -18,20 +18,24 @@ function SolucoesGrid() {
 
         if (!section || !grid) return;
 
-        gsap.to(grid, {
+        const animation = gsap.to(grid, {
             x: () => -(grid.scrollWidth - window.innerWidth),
             ease: 'none',
             force3D: true,
             scrollTrigger: {
                 trigger: section,
                 start: 'top top',
-                end: () => `+=${grid.scrollWidth + window.innerWidth}`,
+                end: () => `+=${grid.scrollWidth - window.innerWidth}`,
                 scrub: 1,
                 pin: true,
                 pinSpacing: 'margin',
+                anticipatePin: 1,
                 invalidateOnRefresh: true,
             },
         });
+
+        // Forçar atualização inicial
+        ScrollTrigger.refresh();
 
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());

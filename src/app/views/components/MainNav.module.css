@@ -57,7 +57,7 @@
     color: rgba(var(--color-almostWhite), 1);
 }
 
-.institutionalNavWrapper ul {
+.institutionalNavItems ul {
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -73,8 +73,10 @@
 
 .institutionalNavSocial svg {
     color: rgba(var(--color-almostWhite), 0.5);
-    padding: 1rem;
-    border-radius: 100%;
+}
+
+.institutionalNavSocial svg:hover {
+    color: rgba(var(--color-almostWhite), 1);
 }
 
 /* ======================================================= */
@@ -151,16 +153,38 @@
 
 .MainNavMenuIcon {
     display: flex;
-    align-items: center;
-    font-size: 1.5rem;
+    flex-direction: column;
+    padding: 0.75rem;
+    width: 3rem;
+    height: 3rem;
+    gap: 0.5rem;
     cursor: pointer;
-    background-color: rgba(var(--color-isoartBlue), 0.8);
-    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(var(--color-isoartBlue), 0.85);
     border-radius: 0.25rem;
+    position: relative;
 }
 
 .MainNavMenuIcon:hover {
     background-color: rgba(var(--color-isoartBlue), 1);
+}
+
+.menuBarTop {
+    width: 100%;
+    height: 0.2rem;
+    background-color: rgba(var(--color-almostWhite), 0.65);
+    position: relative;
+    transform-origin: center;
+}
+
+.menuBarBottom {
+    width: 100%;
+    height: 0.2rem;
+    background-color: rgba(var(--color-almostWhite), 0.65);
+    position: relative;
+
+    transform-origin: center;
 }
 
 .SubMenuCategorias {
@@ -203,7 +227,6 @@
 }
 
 @media (min-width:1200px) {
-
     .institutionalNavSection {
         display: block;
     }
@@ -220,4 +243,75 @@
     .MainNavMenuIcon {
         display: none;
     }
+}
+
+/* ======================================================= */
+/* Mobile Menu                                             */
+/* ======================================================= */
+
+.mobileMenu {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    color: white;
+    gap: 1rem;
+}
+
+.mobileMenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobileMenu ul li {
+    margin: 1.6rem 0;
+}
+
+.mobileMenu ul li a {
+    color: rgba(var(--color-almostBlack), 1);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.mobileMenu ul li a:hover {
+    color: #a3bffa;
+}
+
+.mobileContact {
+    padding: 1rem;
+    background-color: #2a3a54;
+    border-radius: 0.25rem;
+}
+
+.mobileContact p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.mobileSocial {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.mobileSocial a {
+    color: #a3bffa;
+}
+
+.mobileSocial a:hover {
+    color: white;
+}
+
+.mobileBanner {
+    padding: 1rem;
+    background-color: #4a5a74;
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+.mobileBanner p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
 }

@@ -6,21 +6,22 @@ import styles from './MainNav.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/app/views/UI/Button';
-import { CgMenuRight } from 'react-icons/cg';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin } from 'react-icons/bs';
 import menuData from '@/app/data/menuData.json';
 
 function MainNav() {
     const submenuRef = useRef<HTMLDivElement | null>(null);
     const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-    const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null); // Estado para rastrear o submenu ativo
+    const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const iconRef = useRef<HTMLDivElement | null>(null);
 
     const showSubmenu = (index: number) => {
         if (hideTimeoutRef.current) {
             clearTimeout(hideTimeoutRef.current);
             hideTimeoutRef.current = null;
         }
-        setActiveSubmenu(index); // Define o submenu ativo
+        setActiveSubmenu(index);
         const tl = gsap.timeline();
         tl.set(submenuRef.current, { display: 'flex' });
         tl.fromTo(submenuRef.current, { height: 0 }, { height: 'auto', duration: 0.1 });
@@ -32,7 +33,7 @@ function MainNav() {
         tl.to(`.${styles.SubMenuItem}`, { opacity: 0, duration: 0.1 });
         tl.to(submenuRef.current, { height: 0, duration: 0.1 });
         tl.set(submenuRef.current, { display: 'none' });
-        tl.eventCallback('onComplete', () => setActiveSubmenu(null)); // Limpa o submenu ativo após a animação
+        tl.eventCallback('onComplete', () => setActiveSubmenu(null));
     };
 
     const handleMouseEnterLi = (index: number) => {
@@ -54,6 +55,39 @@ function MainNav() {
 
     const handleMouseLeaveSubmenu = () => {
         hideSubmenu();
+    };
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+        const tl = gsap.timeline();
+        const topBar = iconRef.current?.querySelector(`.${styles.menuBarTop}`);
+        const bottomBar = iconRef.current?.querySelector(`.${styles.menuBarBottom}`);
+        if (topBar && bottomBar) {
+            if (!isMobileMenuOpen) {
+                tl.to(topBar, {
+                    rotate: 45,
+                    translateY: '0.35rem',
+                    duration: 0.2,
+                    ease: "power2.out",
+                    transformOrigin: "center",
+                }, 0);
+                tl.to(bottomBar, {
+                    rotate: -45,
+                    translateY: '-0.35rem',
+                    duration: 0.2,
+                    ease: "power2.out",
+                    transformOrigin: "center",
+                }, 0);
+            } else {
+                tl.to([topBar, bottomBar], {
+                    rotate: 0,
+                    translateY: 0,
+                    duration: 0.3,
+                    ease: "power2.in",
+                    transformOrigin: "center",
+                });
+            }
+        }
     };
 
     return (
@@ -132,8 +166,9 @@ function MainNav() {
                                 </Button>
                             </Link>
                         </div>
-                        <div className={styles.MainNavMenuIcon}>
-                            <CgMenuRight />
+                        <div className={styles.MainNavMenuIcon} onClick={toggleMobileMenu} ref={iconRef}>
+                            <span className={styles.menuBarTop}></span>
+                            <span className={styles.menuBarBottom}></span>
                         </div>
                     </div>
                     <div
@@ -157,6 +192,34 @@ function MainNav() {
                                 </div>
                             ))}
                     </div>
+                    {isMobileMenuOpen && (
+                        <div className={styles.mobileMenu}>
+                            <ul>
+                                <li><Link href="/">Home</Link></li>
+                                <li><Link href="/solucoes">Soluções</Link></li>
+                                <li><Link href="/sobre">Sobre</Link></li>
+                                <li><Link href="/contato">Contato</Link></li>
+                            </ul>
+                            <div className={styles.mobileContact}>
+                                <p>Rua Dorivaldo Soncela, 1490</p>
+                                <p>Santa Tereza do Oeste - Paraná - Brasil</p>
+                                <p>☎ +55 45 3231 1699</p>
+                                <p>📱 +55 45 99133 9642</p>
+                                <p>📧 contato@isoart.com.br</p>
+                                <div className={styles.mobileSocial}>
+                                    <Link href="/"><BsInstagram /></Link>
+                                    <Link href="/"><BsFacebook /></Link>
+                                    <Link href="/"><BsYoutube /></Link>
+                                    <Link href="/"><BsLinkedin /></Link>
+                                </div>
+                            </div>
+                            <div className={styles.mobileBanner}>
+                                <p>Conheça tudo sobre o EPS e o PIR</p>
+                                <p>Tudo o que você precisa para saber se nossas soluções são ideais para você em um único lugar.</p>
+                                <Link href="/eps-pir"><Button variant="primary" size="small">Saiba mais</Button></Link>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </section>
         </div>
