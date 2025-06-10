@@ -27,6 +27,7 @@
     flex-wrap: nowrap;
     gap: 1.5rem;
     height: 50rem;
+    width: 640vw;
     padding: 0 10rem 10rem 0;
 }
 
@@ -36,7 +37,7 @@
     overflow: hidden;
     height: 100%;
     flex: 0 0 auto;
-    width: 40vw;
+    width: 120vw;
     cursor: pointer;
 }
 
@@ -108,6 +109,11 @@
 @media (min-width: 1200px) {
     .SolucoesGridGrid {
         gap: 2.5rem;
+        width: 230vw;
+    }
+
+    .SolucoesGridCard {
+        width: 40vw;
     }
 
     .SolucoesGridHeader {
