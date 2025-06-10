@@ -24,9 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${RedHat.variable} ${inter.variable} antialiased`}
-      >
+      <body className={`${RedHat.variable} ${inter.variable} antialiased`}>
         {children}
       </body>
     </html>

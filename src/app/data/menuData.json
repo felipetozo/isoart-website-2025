@@ -1,0 +1,116 @@
+[
+    {
+        "title": "Telhas e Painéis",
+        "link": "/",
+        "subproducts": [
+            {
+                "name": "Telhas Térmicas",
+                "image": "/img/produtos/telhastermicas.jpg"
+            },
+            {
+                "name": "Fachada e fechamento lateral",
+                "image": "/img/produtos/painelfachada.jpg"
+            },
+            {
+                "name": "Divisória e Forro",
+                "image": "/img/produtos/divisoriaforro.jpg"
+            },
+            {
+                "name": "Sala Limpa",
+                "image": "/img/produtos/salalimpa.jpg"
+            },
+            {
+                "name": "Câmara Frigorífica",
+                "image": "/img/produtos/camarafrigorifica.jpg"
+            }
+        ]
+    },
+    {
+        "title": "Construção Civil",
+        "link": "/",
+        "subproducts": [
+            {
+                "name": "Lajes em EPS",
+                "image": "/img/produtos/lajesemeps.jpg"
+            },
+            {
+                "name": "Flocos em EPS",
+                "image": "/img/produtos/flocosemeps.jpg"
+            },
+            {
+                "name": "Blocos em EPS",
+                "image": "/img/produtos/blocosemeps.jpg"
+            },
+            {
+                "name": "Chapas e Painéis em EPS",
+                "image": "/img/produtos/chapaspaineisemeps.jpg"
+            }
+        ]
+    },
+    {
+        "title": "Forros",
+        "link": "/",
+        "subproducts": [
+            {
+                "name": "Duna",
+                "image": "/img/produtos/painelfachada.jpg"
+            },
+            {
+                "name": "Duna",
+                "image": "/img/produtos/painelfachada.jpg"
+            },
+            {
+                "name": "Duna",
+                "image": "/img/produtos/painelfachada.jpg"
+            }
+        ]
+    },
+    {
+        "title": "Molduras Decorativas",
+        "link": "/",
+        "subproducts": [
+            {
+                "name": "Molduras para portas e Janelas",
+                "image": "/img/produtos/moldurasportasjanelas.jpg"
+            },
+            {
+                "name": "Molduras para Beiral",
+                "image": "/img/produtos/moldurasbeiral.jpg"
+            },
+            {
+                "name": "Molduras para Colunas e Capitéis",
+                "image": "/img/produtos/moldurascolunascapiteis.jpg"
+            },
+            {
+                "name": "Molduras para Muros",
+                "image": "/img/produtos/moldurasmuros.jpg"
+            },
+            {
+                "name": "Molduras para Paredes",
+                "image": "/img/produtos/moldurasparedes.jpg"
+            }
+        ]
+    },
+    {
+        "title": "Embalagens em EPS",
+        "link": "/",
+        "subproducts": [
+            {
+                "name": "Cantoneiras em EPS",
+                "image": "/img/produtos/embalagensemeps.jpg"
+            },
+            {
+                "name": "Chapas, boops, cubos e calços em EPS",
+                "image": "/img/produtos/embalagensemeps.jpg"
+            },
+            {
+                "name": "Moldes personalizáveis",
+                "image": "/img/produtos/embalagensemeps.jpg"
+            },
+            {
+                "name": "Pérolas em EPS",
+                "image": "/img/produtos/embalagensemeps.jpg"
+            }
+        ]
+    }
+]

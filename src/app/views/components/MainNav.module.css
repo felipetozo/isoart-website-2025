@@ -28,7 +28,7 @@
     justify-content: space-between;
     margin: 0 auto;
     border-radius: 0.25rem;
-    background-color: rgba(var(--color-almostWhite), 0.05);
+    background-color: rgba(var(--color-almostBlack), 0.50);
     backdrop-filter: blur(1rem);
     padding: 0.5rem 1rem;
     font-family: var(--font-RedHat);
@@ -71,18 +71,27 @@
 
 .MainNavWrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     padding: 1rem;
     width: 90%;
     max-width: 1600px;
+    height: max-content;
     margin: 0 auto;
     margin-top: 1rem;
+    gap: 2rem;
     align-items: center;
     border-radius: 0.25rem;
     background-color: rgba(var(--color-almostWhite), 0.75);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+}
+
+.MainNavContent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .MainNavLinks,
@@ -99,12 +108,28 @@
 
 .MainNavLinks ul li {
     display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: max-content;
+    height: 100%;
 }
 
 .MainNavLinks a {
     color: rgba(var(--color-almostBlack), 1);
+    display: flex;
+}
+
+.navLinkUnderline {
+    height: 1px;
+    width: 0%;
+    background-color: rgba(var(--color-almostBlack), 1);
+}
+
+.MainNavLinks ul li:hover .navLinkUnderline {
+    width: 100%;
+}
+
+.MainNavLinks ul li:hover .SubMenuCategorias {
     display: flex;
 }
 
@@ -120,6 +145,45 @@
 
 .MainNavMenuIcon:hover {
     background-color: rgba(var(--color-isoartBlue), 1);
+}
+
+.SubMenuCategorias {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.SubMenuItem {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.SubMenuItem a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    background-color: rgba(var(--color-almostWhite), 0.150);
+    border: 1px solid rgba(var(--color-almostWhite), 0.25);
+    color: rgba(var(--color-almostBlack), 0.50);
+    line-height: 1.2;
+}
+
+.SubMenuItem img {
+    border-radius: 0.2rem;
+}
+
+.SubMenuItem a:hover {
+    background-color: rgba(var(--color-almostWhite), 0.25);
+    border: 1px solid rgba(var(--color-almostWhite), 0.45);
+    color: rgba(var(--color-almostBlack), 1);
 }
 
 @media (min-width:1200px) {
