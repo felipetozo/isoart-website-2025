@@ -46,10 +46,9 @@ interface CategoryData {
     benefits?: Benefit[];
 }
 
+// Adjust CategoryPageProps to handle async params with Awaited
 interface CategoryPageProps {
-    params: {
-        category: string;
-    };
+    params: Awaited<Promise<{ category: string }>>;
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
@@ -62,7 +61,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     try {
         // Normalizar o slug para evitar problemas com maiúsculas/minúsculas
         const normalizedCategory = category.toLowerCase().replace(/ /g, '-');
-        console.log('Importando arquivo:', `@/app/data/${normalizedCategory}.json`);
+        console.log('Importando arquivo:', `@/app/data/categories/${normalizedCategory}.json`);
 
         const specificCategoryData = await import(`@/app/data/categories/${normalizedCategory}.json`);
         categoryData = specificCategoryData.default as CategoryData;
@@ -190,7 +189,7 @@ export async function generateMetadata({ params }: CategoryPageProps) {
     let categoryData: CategoryData | undefined;
 
     try {
-        const specificCategoryData = await import(`@/app/data/${category}.json`);
+        const specificCategoryData = await import(`@/app/data/categories/${category}.json`);
         categoryData = specificCategoryData.default as CategoryData;
     } catch (error) {
         categoryData = (menuData as CategoryData[]).find(
