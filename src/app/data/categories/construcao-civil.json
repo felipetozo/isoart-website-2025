@@ -1,0 +1,82 @@
+{
+    "id": 2,
+    "title": "Construção Civil",
+    "slug": "construcao-civil",
+    "metaDescription": "Explore as soluções em EPS para construção civil da ISOART, perfeitas para projetos inovadores e sustentáveis.",
+    "hero": {
+        "title": "Construção Civil com EPS",
+        "description": "A ISOART oferece soluções em EPS que combinam leveza, resistência e eficiência para construções modernas.",
+        "buttonText": "Saiba Mais sobre Nossas Soluções",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/geral/exemplo.png"
+    },
+    "categoryDescription": "Descubra as melhores opções em EPS para construção civil, ideais para lajes, blocos e preenchimentos que garantem economia e desempenho em seus projetos.",
+    "products": [
+        {
+            "id": 6,
+            "name": "Lajes em EPS",
+            "slug": "lajes-em-eps",
+            "description": "Lajes com preenchimento em EPS, reduzindo custos e melhorando a estrutura.",
+            "image": "/img/geral/exemplo.png",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Lajes"
+            }
+        },
+        {
+            "id": 7,
+            "name": "Flocos em EPS",
+            "slug": "flocos-em-eps",
+            "description": "Flocos de EPS para diversas aplicações em construção.",
+            "image": "/img/geral/exemplo.png",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Preenchimento"
+            }
+        },
+        {
+            "id": 8,
+            "name": "Blocos em EPS",
+            "slug": "blocos-em-eps",
+            "description": "Blocos de EPS para construções leves e resistentes.",
+            "image": "/img/geral/exemplo.png",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Blocos"
+            }
+        },
+        {
+            "id": 9,
+            "name": "Chapas e Painéis em EPS",
+            "slug": "chapas-paineis-em-eps",
+            "description": "Chapas e painéis de EPS para diversas construções.",
+            "image": "/img/geral/exemplo.png",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Painéis"
+            }
+        }
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Leveza Estrutural",
+            "description": "Reduz o peso da construção sem comprometer a resistência."
+        },
+        {
+            "id": 2,
+            "title": "Eficiência Energética",
+            "description": "Melhora o isolamento térmico e reduz custos."
+        },
+        {
+            "id": 3,
+            "title": "Durabilidade",
+            "description": "Materiais resistentes para longa vida útil."
+        },
+        {
+            "id": 4,
+            "title": "Sustentabilidade",
+            "description": "Contribui para construções ecológicas."
+        }
+    ]
+}

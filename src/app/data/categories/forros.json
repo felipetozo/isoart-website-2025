@@ -1,0 +1,71 @@
+{
+    "id": 3,
+    "title": "Forros",
+    "slug": "forros",
+    "metaDescription": "Descubra os forros da ISOART, soluções acústicas e decorativas para diversos ambientes.",
+    "hero": {
+        "title": "Forros Inovadores",
+        "description": "A ISOART oferece forros em EPS que combinam estética e desempenho acústico.",
+        "buttonText": "Saiba Mais sobre Nossas Soluções",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/geral/exemplo.png"
+    },
+    "categoryDescription": "Nossos forros em EPS são ideais para melhorar a acústica e a decoração de espaços internos, com opções personalizáveis.",
+    "products": [
+        {
+            "id": 10,
+            "name": "Duna",
+            "slug": "duna",
+            "description": "Forro modelo Duna com design único.",
+            "image": "/img/geral/exemplo.png",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Decoração Interna"
+            }
+        },
+        {
+            "id": 11,
+            "name": "Acústico",
+            "slug": "acustico",
+            "description": "Forro com propriedades acústicas superiores.",
+            "image": "/img/geral/exemplo.png",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Controle Acústico"
+            }
+        },
+        {
+            "id": 12,
+            "name": "Decorativo",
+            "slug": "decorativo",
+            "description": "Forro decorativo para ambientes elegantes.",
+            "image": "/img/geral/exemplo.png",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Decoração"
+            }
+        }
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Acústica Melhorada",
+            "description": "Reduz o ruído em ambientes internos."
+        },
+        {
+            "id": 2,
+            "title": "Design Versátil",
+            "description": "Opções que se adaptam a qualquer estilo."
+        },
+        {
+            "id": 3,
+            "title": "Instalação Fácil",
+            "description": "Processo simples e rápido."
+        },
+        {
+            "id": 4,
+            "title": "Durabilidade",
+            "description": "Resistência a longo prazo."
+        }
+    ]
+}

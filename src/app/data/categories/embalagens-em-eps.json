@@ -1,0 +1,82 @@
+{
+    "id": 5,
+    "title": "Embalagens em EPS",
+    "slug": "embalagens-em-eps",
+    "metaDescription": "Descubra as embalagens em EPS da ISOART, soluções inteligentes para proteger e transportar seus produtos.",
+    "hero": {
+        "title": "Embalagens em EPS",
+        "description": "A ISOART proporciona embalagens em EPS sob medida, garantindo segurança e eficiência no transporte.",
+        "buttonText": "Saiba Mais sobre Nossas Soluções",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/geral/exemplo.png"
+    },
+    "categoryDescription": "Nossas embalagens em EPS oferecem proteção personalizada para produtos industriais e comerciais, com opções como cantoneiras, moldes e pérolas.",
+    "products": [
+        {
+            "id": 18,
+            "name": "Cantoneiras em EPS",
+            "slug": "cantoneiras-em-eps",
+            "description": "Cantoneiras de EPS para proteção de cantos durante o transporte.",
+            "image": "/img/geral/exemplo.png",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Proteção de Cantos"
+            }
+        },
+        {
+            "id": 19,
+            "name": "Chapas, boops, cubos e calços em EPS",
+            "slug": "chapas-boops-cubos-e-calcos-em-eps",
+            "description": "Variedade de formas em EPS para embalagens e preenchimento.",
+            "image": "/img/geral/exemplo.png",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Embalagens Diversas"
+            }
+        },
+        {
+            "id": 20,
+            "name": "Moldes personalizáveis",
+            "slug": "moldes-personalizaveis",
+            "description": "Moldes de EPS personalizados para embalagens específicas.",
+            "image": "/img/geral/exemplo.png",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Moldes Personalizados"
+            }
+        },
+        {
+            "id": 21,
+            "name": "Pérolas em EPS",
+            "slug": "perolas-em-eps",
+            "description": "Pérolas de EPS para preenchimento de embalagens.",
+            "image": "/img/geral/exemplo.png",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Preenchimento"
+            }
+        }
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Proteção Eficiente",
+            "description": "Garante a integridade dos produtos durante o transporte."
+        },
+        {
+            "id": 2,
+            "title": "Leveza",
+            "description": "Reduz o peso total da embalagem."
+        },
+        {
+            "id": 3,
+            "title": "Personalização",
+            "description": "Soluções sob medida para diferentes necessidades."
+        },
+        {
+            "id": 4,
+            "title": "Custo-benefício",
+            "description": "Economia aliada à qualidade."
+        }
+    ]
+}

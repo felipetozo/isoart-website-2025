@@ -8,7 +8,7 @@
         "description": "Líder em soluções de isolamento térmico, a ISOART oferece telhas e painéis de alta qualidade, com materiais como PIR e EPS, que garantem excelente performance para sua construção.",
         "buttonText": "Saiba Mais sobre Nossas Soluções",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/telhas-e-revestimentos-desktop.jpg"
+        "backgroundImage": "/img/geral/exemplo.png"
     },
     "categoryDescription": "Na ISOART, você encontra as melhores opções em telhas térmicas e painéis isolantes, projetados para oferecer durabilidade, eficiência energética e conforto térmico em qualquer tipo de projeto. Nossos produtos são ideais para indústrias, comércios, residências e câmaras frias.",
     "products": [
@@ -17,7 +17,7 @@
             "name": "Telhas Térmicas",
             "slug": "telhas-termicas",
             "description": "Telhas com isolamento térmico superior, reduzindo custos com energia e proporcionando conforto.",
-            "image": "/img/produtos/telhastermicas.jpg",
+            "image": "/img/geral/exemplo.png",
             "specifications": {
                 "material": "Aço galvanizado + EPS/PIR",
                 "espessura": "30mm, 50mm, 100mm",

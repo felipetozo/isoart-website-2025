@@ -182,7 +182,7 @@ function MainNav() {
                         <div className={styles.MainNavButton}>
                             <Link href="/cadastro">
                                 <Button variant="primary" size="medium">
-                                    Cadastrar-se
+                                    Entrar em contato
                                 </Button>
                             </Link>
                         </div>
