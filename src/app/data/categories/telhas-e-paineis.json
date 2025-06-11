@@ -1,6 +1,6 @@
 {
     "id": 1,
-    "title": "Telhas e Painéis",
+    "title": "Telhas e Revestimentos Térmicos Isoart - Ideais para construção civil",
     "slug": "telhas-e-paineis",
     "metaDescription": "Descubra as soluções em telhas térmicas e painéis isolantes da ISOART, ideais para construção civil e industrial.",
     "hero": {
@@ -10,14 +10,14 @@
         "buttonLink": "/contato",
         "backgroundImage": "/img/geral/exemplo.png"
     },
-    "categoryDescription": "Na ISOART, você encontra as melhores opções em telhas térmicas e painéis isolantes, projetados para oferecer durabilidade, eficiência energética e conforto térmico em qualquer tipo de projeto. Nossos produtos são ideais para indústrias, comércios, residências e câmaras frias.",
+    "categoryDescription": "Eficiência térmica e resistência para construções industriais, comerciais e residenciais. Nossas telhas e painéis garantem alto desempenho, isolamento térmico e durabilidade, ideais para galpões, centros logísticos e obras que exigem proteçãoe estética de alto padrão.",
     "products": [
         {
             "id": 1,
             "name": "Telhas Térmicas",
             "slug": "telhas-termicas",
-            "description": "Telhas com isolamento térmico superior, reduzindo custos com energia e proporcionando conforto.",
-            "image": "/img/geral/exemplo.png",
+            "description": "Telhas com núbleo em PIR ou EPS e revestimento duplo com chapas de aço galvalume ou filme.",
+            "image": "/img/produtos/telhastermicas.jpg",
             "specifications": {
                 "material": "Aço galvanizado + EPS/PIR",
                 "espessura": "30mm, 50mm, 100mm",
@@ -74,23 +74,18 @@
     "benefits": [
         {
             "id": 1,
-            "title": "Economia de Energia",
-            "description": "Nossos produtos reduzem significativamente a necessidade de climatização, gerando economia."
+            "title": "Isolamento térmico",
+            "description": "Mantém a temperatura interna estável, reduzindo a necessidade de climatização e proporcionando mais eficiência energética."
         },
         {
             "id": 2,
-            "title": "Conforto Térmico",
-            "description": "Mantêm a temperatura interna estável, proporcionando um ambiente mais agradável."
+            "title": "Alta resistência",
+            "description": "Suporta impactos, intempéries e altas temperaturas, oferecendo maior proteção e segurança em qualquer aplicação."
         },
         {
             "id": 3,
-            "title": "Durabilidade",
-            "description": "Fabricados com materiais de alta resistência, garantindo longa vida útil."
-        },
-        {
-            "id": 4,
-            "title": "Sustentabilidade",
-            "description": "Contribuição para construções mais verdes e eficientes."
+            "title": "Durabilidade prolongada",
+            "description": "Material leve, resistente e de baixa manutenção, garantindo uma vida útil estendida com excelente custo-benefício."
         }
     ]
 }

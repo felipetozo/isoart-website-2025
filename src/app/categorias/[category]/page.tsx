@@ -126,44 +126,40 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             )}
 
             {/* Products Grid */}
-            <section className={styles['products-section']}>
-                <h2 className={styles['products-title']}>Produtos em {categoryData.title}</h2>
-                <div className={styles['products-grid']}>
-                    {categoryData.products.map((product) => (
-                        <article key={product.id} className={styles['product-card']}>
-                            {product.image && (
-                                <div className={styles['product-image-container']}>
-                                    <Image
-                                        src={product.image}
-                                        alt={product.name}
-                                        width={300}
-                                        height={200}
-                                        className={styles['product-image']}
-                                    />
+            <section className={styles.CategoryProductsSection}>
+                <div className={styles.CategoryProductsWrapper}>
+                    <div className={styles.CategoryProductsGrid}>
+                        {categoryData.products.map((product) => (
+                            <article key={product.id} className={styles.CategoryProductsGridCard}>
+                                {product.image && (
+                                    <div className={styles.CategoryProductsGridImg}>
+                                        <Image
+                                            src={product.image}
+                                            alt={product.name}
+                                            width={300}
+                                            height={200}
+                                        />
+                                    </div>
+                                )}
+                                <div className={styles.CategoryProductsGridContent}>
+                                    <h3>{product.name}</h3>
+                                    <p>{product.description}</p>
+                                    <Link href={`/categorias/${categoryData.slug}/${product.slug}`}>
+                                        Ver Detalhes →
+                                    </Link>
                                 </div>
-                            )}
-                            <div className={styles['product-content']}>
-                                <h3 className={styles['product-name']}>{product.name}</h3>
-                                <p className={styles['product-description']}>{product.description}</p>
-                                <Link
-                                    href={`/categorias/${categoryData.slug}/${product.slug}`}
-                                    className={styles['product-link']}
-                                >
-                                    Ver Detalhes →
-                                </Link>
-                            </div>
-                        </article>
-                    ))}
+                            </article>
+                        ))}
+                    </div>
                 </div>
             </section>
 
             {/* Benefits Section */}
-            <section className={styles['benefits-section']}>
-                <h2>Benefícios das Nossas Soluções</h2>
-                <div className={styles['benefits-grid']}>
+            <section className={styles.BenefitsSection}>
+                <div className={styles.BenefitsWrapper}>
                     {benefitsSection.map((benefit) => (
-                        <div key={benefit.id} className={styles['benefit-card']}>
-                            <h3>{benefit.title}</h3>
+                        <div key={benefit.id} className={styles.BenefitsCard}>
+                            <h4>{benefit.title}</h4>
                             <p>{benefit.description}</p>
                         </div>
                     ))}
