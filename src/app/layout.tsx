@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Red_Hat_Display, Inter } from "next/font/google";
 import "./globals.css";
+import MainNav from "./components/MainNav/MainNav";
+import Footer from "./components/Footer/Footer";
 
 const RedHat = Red_Hat_Display({
   variable: "--font-RedHat",
@@ -25,7 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${RedHat.variable} ${inter.variable} antialiased`}>
+        <MainNav />
         {children}
+        <Footer />
       </body>
     </html>
   );

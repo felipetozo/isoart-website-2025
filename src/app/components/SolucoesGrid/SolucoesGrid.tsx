@@ -24,13 +24,11 @@ function SolucoesGrid() {
             force3D: true,
             scrollTrigger: {
                 trigger: section,
+                markers: true,
                 start: 'top top',
-                end: () => `+=${grid.scrollWidth - window.innerWidth}`,
-                scrub: 1,
                 pin: true,
-                pinSpacing: 'margin',
-                anticipatePin: 1,
-                invalidateOnRefresh: true,
+                scrub: 1,
+                preventOverlaps: true,
             },
         });
 

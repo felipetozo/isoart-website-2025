@@ -7,7 +7,26 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/app/views/UI/Button';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin } from 'react-icons/bs';
-import menuData from '@/app/data/menuData.json';
+import menuData from '@/app/data/menuData.json'; // Ensure this path is correct
+
+// Define the types for your menu data for better type safety
+interface Product {
+    id: number;
+    name: string;
+    slug: string;
+    description: string;
+    image?: string;
+    specifications?: { [key: string]: string; };
+}
+
+interface Category {
+    id: number;
+    title: string;
+    slug: string;
+    description: string;
+    image?: string;
+    products: Product[];
+}
 
 function MainNav() {
     const submenuRef = useRef<HTMLDivElement | null>(null);
@@ -101,23 +120,23 @@ function MainNav() {
                     <div className={styles.institutionalNavItems}>
                         <ul>
                             <li>
-                                <Link href="/">SOBRE A EMPRESA</Link>
+                                <Link href="/sobre-a-empresa">SOBRE A EMPRESA</Link> {/* Example of static link */}
                                 <span className={styles.navLinkUnderlineWhite}></span>
                             </li>
                             <li>
-                                <Link href="/">SOBRE O PIR E EPS</Link>
+                                <Link href="/sobre-eps-pir">SOBRE O PIR E EPS</Link> {/* Example of static link */}
                                 <span className={styles.navLinkUnderlineWhite}></span>
                             </li>
                             <li>
-                                <Link href="/">VAGAS</Link>
+                                <Link href="/vagas">VAGAS</Link> {/* Example of static link */}
                                 <span className={styles.navLinkUnderlineWhite}></span>
                             </li>
                             <li>
-                                <Link href="/">NOTÍCIAS</Link>
+                                <Link href="/noticias">NOTÍCIAS</Link> {/* Example of static link */}
                                 <span className={styles.navLinkUnderlineWhite}></span>
                             </li>
                             <li>
-                                <Link href="/">CONTATO</Link>
+                                <Link href="/contato">CONTATO</Link> {/* Example of static link */}
                                 <span className={styles.navLinkUnderlineWhite}></span>
                             </li>
                         </ul>
@@ -147,13 +166,14 @@ function MainNav() {
                         </div>
                         <div className={styles.MainNavLinks}>
                             <ul>
-                                {menuData.map((item, index) => (
+                                {(menuData as Category[]).map((item, index) => ( // Cast menuData to Category[]
                                     <li
-                                        key={index}
+                                        key={item.id} // Use item.id as key for better stability
                                         onMouseEnter={() => handleMouseEnterLi(index)}
                                         onMouseLeave={handleMouseLeaveLi}
                                     >
-                                        <Link href={item.link}>{item.title}</Link>
+                                        {/* Use item.slug to construct the category link */}
+                                        <Link href={`/categorias/${item.slug}`}>{item.title}</Link>
                                         <span className={styles.navLinkUnderline}></span>
                                     </li>
                                 ))}
@@ -176,18 +196,20 @@ function MainNav() {
                         ref={submenuRef}
                         onMouseEnter={handleMouseEnterSubmenu}
                         onMouseLeave={handleMouseLeaveSubmenu}
+                        data-category={activeSubmenu !== null ? (menuData[activeSubmenu] as Category).title.toLowerCase().replace(/ /g, '') : ''}
                     >
                         {activeSubmenu !== null &&
-                            menuData[activeSubmenu].subproducts.map((subproduct, index) => (
-                                <div key={index} className={styles.SubMenuItem}>
-                                    <Link href="/">
+                            (menuData[activeSubmenu] as Category).products.map((product, index) => ( // Change subproducts to products
+                                <div key={product.id} className={styles.SubMenuItem}> {/* Use product.id as key */}
+                                    {/* Construct the dynamic product link using category slug and product slug */}
+                                    <Link href={`/categorias/${(menuData[activeSubmenu] as Category).slug}/${product.slug}`}>
                                         <Image
-                                            src={subproduct.image}
-                                            alt={subproduct.name}
+                                            src={product.image || '/img/placeholder.jpg'} // Provide a fallback image
+                                            alt={product.name}
                                             width={120}
                                             height={85}
                                         />
-                                        <p>{subproduct.name}</p>
+                                        <p>{product.name}</p>
                                     </Link>
                                 </div>
                             ))}

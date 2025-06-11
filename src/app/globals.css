@@ -11,13 +11,19 @@
   --color-darkBlue: 15, 19, 30;
   --color-highBlue: 35, 73, 200;
   --color-lightestBlue: 03, 174, 251;
+
+  --color-solucoes-telhas: 159, 139, 84;
+  --color-solucoes-construcao: 134, 188, 37;
+  --color-solucoes-decoracao: 37, 61, 107;
+  --color-solucoes-embalagens: 196, 213, 86;
+  --color-solucoes-forros: 03, 174, 251;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-RedHat-sans);
+  --font-mono: var(--font-Inter-mono);
 }
 
 @media (prefers-color-scheme: dark) {

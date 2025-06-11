@@ -1,115 +1,232 @@
 [
     {
+        "id": 1,
         "title": "Telhas e Painéis",
-        "link": "/",
-        "subproducts": [
+        "slug": "telhas-e-paineis",
+        "description": "Soluções completas em telhas térmicas e painéis isolantes",
+        "image": "/img/categories/telhas-paineis.jpg",
+        "products": [
             {
+                "id": 1,
                 "name": "Telhas Térmicas",
-                "image": "/img/produtos/telhastermicas.jpg"
+                "slug": "telhas-termicas",
+                "description": "Telhas com isolamento térmico superior, reduzindo custos com energia e proporcionando conforto.",
+                "image": "/img/produtos/telhastermicas.jpg",
+                "specifications": {
+                    "material": "Aço galvanizado + EPS/PIR",
+                    "espessura": "30mm, 50mm, 100mm",
+                    "cor": "Diversas opções",
+                    "aplicacao": "Coberturas"
+                }
             },
             {
-                "name": "Fachada e fechamento lateral",
-                "image": "/img/produtos/painelfachada.jpg"
+                "id": 2,
+                "name": "Fachada e Fechamento Lateral",
+                "slug": "fachada-fechamento-lateral",
+                "description": "Painéis versáteis para fachadas e fechamentos laterais, oferecendo isolamento e estética.",
+                "image": "/img/produtos/painelfachada.jpg",
+                "specifications": {
+                    "material": "Aço galvanizado + EPS/PIR",
+                    "acabamento": "Pré-pintado, Natural"
+                }
             },
             {
+                "id": 3,
                 "name": "Divisória e Forro",
-                "image": "/img/produtos/divisoriaforro.jpg"
+                "slug": "divisoria-e-forro",
+                "description": "Soluções práticas e eficientes para divisórias internas e forros termoacústicos.",
+                "image": "/img/produtos/divisoriaforro.jpg",
+                "specifications": {
+                    "material": "Aço galvanizado + EPS/PIR",
+                    "espessura": "50mm, 75mm",
+                    "isolamento": "Térmico e Acústico"
+                }
             },
             {
+                "id": 4,
                 "name": "Sala Limpa",
-                "image": "/img/produtos/salalimpa.jpg"
+                "slug": "sala-limpa",
+                "description": "Painéis específicos para ambientes de sala limpa, com alta assepsia e controle de partículas.",
+                "image": "/img/produtos/salalimpa.jpg",
+                "specifications": {
+                    "material": "Aço inoxidável + PIR",
+                    "conformidade": "Normas de salas limpas"
+                }
             },
             {
+                "id": 5,
                 "name": "Câmara Frigorífica",
-                "image": "/img/produtos/camarafrigorifica.jpg"
+                "slug": "camara-frigorifica",
+                "description": "Painéis robustos e eficientes para isolamento de câmaras frigoríficas, garantindo temperaturas ideais.",
+                "image": "/img/produtos/camarafrigorifica.jpg",
+                "specifications": {
+                    "material": "Aço pré-pintado/inoxidável + PIR",
+                    "temperatura": "Baixa e Média"
+                }
             }
         ]
     },
     {
+        "id": 2,
         "title": "Construção Civil",
-        "link": "/",
-        "subproducts": [
+        "slug": "construcao-civil",
+        "description": "Soluções em EPS para construção civil",
+        "image": "/img/categories/construcao-civil.jpg",
+        "products": [
             {
+                "id": 6,
                 "name": "Lajes em EPS",
-                "image": "/img/produtos/lajesemeps.jpg"
+                "slug": "lajes-em-eps",
+                "description": "Lajes com preenchimento em EPS",
+                "image": "/img/produtos/lajesemeps.jpg",
+                "specifications": {}
             },
             {
+                "id": 7,
                 "name": "Flocos em EPS",
-                "image": "/img/produtos/flocosemeps.jpg"
+                "slug": "flocos-em-eps",
+                "description": "Flocos de EPS para diversas aplicações",
+                "image": "/img/produtos/flocosemeps.jpg",
+                "specifications": {}
             },
             {
+                "id": 8,
                 "name": "Blocos em EPS",
-                "image": "/img/produtos/blocosemeps.jpg"
+                "slug": "blocos-em-eps",
+                "description": "Blocos de EPS para construção",
+                "image": "/img/produtos/blocosemeps.jpg",
+                "specifications": {}
             },
             {
+                "id": 9,
                 "name": "Chapas e Painéis em EPS",
-                "image": "/img/produtos/chapaspaineisemeps.jpg"
+                "slug": "chapas-paineis-em-eps",
+                "description": "Chapas e painéis de EPS",
+                "image": "/img/produtos/chapaspaineisemeps.jpg",
+                "specifications": {}
             }
         ]
     },
     {
+        "id": 3,
         "title": "Forros",
-        "link": "/",
-        "subproducts": [
+        "slug": "forros",
+        "description": "Variedade de forros para diversos ambientes",
+        "image": "/img/categories/forros.jpg",
+        "products": [
             {
+                "id": 10,
                 "name": "Duna",
-                "image": "/img/produtos/painelfachada.jpg"
+                "slug": "duna",
+                "description": "Forro modelo Duna",
+                "image": "/img/produtos/painelfachada.jpg",
+                "specifications": {}
             },
             {
-                "name": "Duna",
-                "image": "/img/produtos/painelfachada.jpg"
+                "id": 11,
+                "name": "Acústico",
+                "slug": "acustico",
+                "description": "Forro com propriedades acústicas",
+                "image": "/img/produtos/painelfachada.jpg",
+                "specifications": {}
             },
             {
-                "name": "Duna",
-                "image": "/img/produtos/painelfachada.jpg"
+                "id": 12,
+                "name": "Decorativo",
+                "slug": "decorativo",
+                "description": "Forro com design decorativo",
+                "image": "/img/produtos/painelfachada.jpg",
+                "specifications": {}
             }
         ]
     },
     {
+        "id": 4,
         "title": "Molduras Decorativas",
-        "link": "/",
-        "subproducts": [
+        "slug": "molduras-decorativas",
+        "description": "Molduras em EPS para decoração e acabamento",
+        "image": "/img/categories/molduras-decorativas.jpg",
+        "products": [
             {
+                "id": 13,
                 "name": "Molduras para portas e Janelas",
-                "image": "/img/produtos/moldurasportasjanelas.jpg"
+                "slug": "molduras-portas-janelas",
+                "description": "Molduras para acabamento de portas e janelas",
+                "image": "/img/produtos/moldurasportasjanelas.jpg",
+                "specifications": {}
             },
             {
+                "id": 14,
                 "name": "Molduras para Beiral",
-                "image": "/img/produtos/moldurasbeiral.jpg"
+                "slug": "molduras-beiral",
+                "description": "Molduras para beirais",
+                "image": "/img/produtos/moldurasbeiral.jpg",
+                "specifications": {}
             },
             {
+                "id": 15,
                 "name": "Molduras para Colunas e Capitéis",
-                "image": "/img/produtos/moldurascolunascapiteis.jpg"
+                "slug": "molduras-colunas-capiteis",
+                "description": "Molduras para colunas e capitéis",
+                "image": "/img/produtos/moldurascolunascapiteis.jpg",
+                "specifications": {}
             },
             {
+                "id": 16,
                 "name": "Molduras para Muros",
-                "image": "/img/produtos/moldurasmuros.jpg"
+                "slug": "molduras-muros",
+                "description": "Molduras para muros",
+                "image": "/img/produtos/moldurasmuros.jpg",
+                "specifications": {}
             },
             {
+                "id": 17,
                 "name": "Molduras para Paredes",
-                "image": "/img/produtos/moldurasparedes.jpg"
+                "slug": "molduras-paredes",
+                "description": "Molduras para paredes",
+                "image": "/img/produtos/moldurasparedes.jpg",
+                "specifications": {}
             }
         ]
     },
     {
+        "id": 5,
         "title": "Embalagens em EPS",
-        "link": "/",
-        "subproducts": [
+        "slug": "embalagens-em-eps",
+        "description": "Soluções em embalagens de EPS sob medida",
+        "image": "/img/categories/embalagens-em-eps.jpg",
+        "products": [
             {
+                "id": 18,
                 "name": "Cantoneiras em EPS",
-                "image": "/img/produtos/embalagensemeps.jpg"
+                "slug": "cantoneiras-em-eps",
+                "description": "Cantoneiras de EPS para proteção",
+                "image": "/img/produtos/embalagensemeps.jpg",
+                "specifications": {}
             },
             {
+                "id": 19,
                 "name": "Chapas, boops, cubos e calços em EPS",
-                "image": "/img/produtos/embalagensemeps.jpg"
+                "slug": "chapas-boops-cubos-e-calcos-em-eps",
+                "description": "Variedade de formas em EPS para embalagens",
+                "image": "/img/produtos/embalagensemeps.jpg",
+                "specifications": {}
             },
             {
+                "id": 20,
                 "name": "Moldes personalizáveis",
-                "image": "/img/produtos/embalagensemeps.jpg"
+                "slug": "moldes-personalizaveis",
+                "description": "Moldes de EPS personalizados",
+                "image": "/img/produtos/embalagensemeps.jpg",
+                "specifications": {}
             },
             {
+                "id": 21,
                 "name": "Pérolas em EPS",
-                "image": "/img/produtos/embalagensemeps.jpg"
+                "slug": "perolas-em-eps",
+                "description": "Pérolas de EPS para preenchimento",
+                "image": "/img/produtos/embalagensemeps.jpg",
+                "specifications": {}
             }
         ]
     }

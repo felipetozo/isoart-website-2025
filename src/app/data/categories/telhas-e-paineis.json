@@ -1,0 +1,96 @@
+{
+    "id": 1,
+    "title": "Telhas e Painéis",
+    "slug": "telhas-e-paineis",
+    "metaDescription": "Descubra as soluções em telhas térmicas e painéis isolantes da ISOART, ideais para construção civil e industrial.",
+    "hero": {
+        "title": "Telhas e Revestimentos",
+        "description": "Líder em soluções de isolamento térmico, a ISOART oferece telhas e painéis de alta qualidade, com materiais como PIR e EPS, que garantem excelente performance para sua construção.",
+        "buttonText": "Saiba Mais sobre Nossas Soluções",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/telhas-e-revestimentos-desktop.jpg"
+    },
+    "categoryDescription": "Na ISOART, você encontra as melhores opções em telhas térmicas e painéis isolantes, projetados para oferecer durabilidade, eficiência energética e conforto térmico em qualquer tipo de projeto. Nossos produtos são ideais para indústrias, comércios, residências e câmaras frias.",
+    "products": [
+        {
+            "id": 1,
+            "name": "Telhas Térmicas",
+            "slug": "telhas-termicas",
+            "description": "Telhas com isolamento térmico superior, reduzindo custos com energia e proporcionando conforto.",
+            "image": "/img/produtos/telhastermicas.jpg",
+            "specifications": {
+                "material": "Aço galvanizado + EPS/PIR",
+                "espessura": "30mm, 50mm, 100mm",
+                "cor": "Diversas opções",
+                "aplicacao": "Coberturas"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Fachada e Fechamento Lateral",
+            "slug": "fachada-fechamento-lateral",
+            "description": "Painéis versáteis para fachadas e fechamentos laterais, oferecendo isolamento e estética.",
+            "image": "/img/produtos/painelfachada.jpg",
+            "specifications": {
+                "material": "Aço galvanizado + EPS/PIR",
+                "acabamento": "Pré-pintado, Natural"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Divisória e Forro",
+            "slug": "divisoria-e-forro",
+            "description": "Soluções práticas e eficientes para divisórias internas e forros termoacústicos.",
+            "image": "/img/produtos/divisoriaforro.jpg",
+            "specifications": {
+                "material": "Aço galvanizado + EPS/PIR",
+                "espessura": "50mm, 75mm",
+                "isolamento": "Térmico e Acústico"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Sala Limpa",
+            "slug": "sala-limpa",
+            "description": "Painéis específicos para ambientes de sala limpa, com alta assepsia e controle de partículas.",
+            "image": "/img/produtos/salalimpa.jpg",
+            "specifications": {
+                "material": "Aço inoxidável + PIR",
+                "conformidade": "Normas de salas limpas"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Câmara Frigorífica",
+            "slug": "camara-frigorifica",
+            "description": "Painéis robustos e eficientes para isolamento de câmaras frigoríficas, garantindo temperaturas ideais.",
+            "image": "/img/produtos/camarafrigorifica.jpg",
+            "specifications": {
+                "material": "Aço pré-pintado/inoxidável + PIR",
+                "temperatura": "Baixa e Média"
+            }
+        }
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Economia de Energia",
+            "description": "Nossos produtos reduzem significativamente a necessidade de climatização, gerando economia."
+        },
+        {
+            "id": 2,
+            "title": "Conforto Térmico",
+            "description": "Mantêm a temperatura interna estável, proporcionando um ambiente mais agradável."
+        },
+        {
+            "id": 3,
+            "title": "Durabilidade",
+            "description": "Fabricados com materiais de alta resistência, garantindo longa vida útil."
+        },
+        {
+            "id": 4,
+            "title": "Sustentabilidade",
+            "description": "Contribuição para construções mais verdes e eficientes."
+        }
+    ]
+}

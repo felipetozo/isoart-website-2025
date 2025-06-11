@@ -183,7 +183,6 @@
     height: 0.2rem;
     background-color: rgba(var(--color-almostWhite), 0.65);
     position: relative;
-
     transform-origin: center;
 }
 
@@ -210,20 +209,100 @@
     width: 100%;
     padding: 0.5rem;
     border-radius: 0.4rem;
-    background-color: rgba(var(--color-almostWhite), 0.150);
-    border: 1px solid rgba(var(--color-almostWhite), 0.25);
     color: rgba(var(--color-almostBlack), 0.50);
     line-height: 1.2;
 }
 
-.SubMenuItem img {
-    border-radius: 0.2rem;
+/* Updated hover styles for menu items */
+.MainNavLinks ul li:nth-child(1):hover .navLinkUnderline {
+    background-color: rgba(var(--color-solucoes-telhas), 1);
 }
 
-.SubMenuItem a:hover {
-    background-color: rgba(var(--color-almostWhite), 0.25);
-    border: 1px solid rgba(var(--color-almostWhite), 0.45);
+.MainNavLinks ul li:nth-child(2):hover .navLinkUnderline {
+    background-color: rgba(var(--color-solucoes-construcao), 1);
+}
+
+.MainNavLinks ul li:nth-child(3):hover .navLinkUnderline {
+    background-color: rgba(var(--color-solucoes-forros), 1);
+}
+
+.MainNavLinks ul li:nth-child(4):hover .navLinkUnderline {
+    background-color: rgba(var(--color-solucoes-decoracao), 1);
+}
+
+.MainNavLinks ul li:nth-child(5):hover .navLinkUnderline {
+    background-color: rgba(var(--color-solucoes-embalagens), 1);
+}
+
+/* Updated submenu styles to match category colors */
+.SubMenuCategorias .SubMenuItem a {
+    background-color: rgba(var(--color-solucoes-telhas), 0.150);
+    border: 1px solid rgba(var(--color-solucoes-telhas), 0.25);
+}
+
+.SubMenuCategorias .SubMenuItem a:hover {
+    background-color: rgba(var(--color-solucoes-telhas), 0.25);
+    border: 1px solid rgba(var(--color-solucoes-telhas), 0.45);
     color: rgba(var(--color-almostBlack), 1);
+}
+
+.SubMenuCategorias[data-category="telhas"] .SubMenuItem a {
+    background-color: rgba(var(--color-solucoes-telhas), 0.150);
+    border: 1px solid rgba(var(--color-solucoes-telhas), 0.25);
+}
+
+.SubMenuCategorias[data-category="telhas"] .SubMenuItem a:hover {
+    background-color: rgba(var(--color-solucoes-telhas), 0.25);
+    border: 1px solid rgba(var(--color-solucoes-telhas), 0.45);
+    color: rgba(var(--color-almostBlack), 1);
+}
+
+.SubMenuCategorias[data-category="construcao"] .SubMenuItem a {
+    background-color: rgba(var(--color-solucoes-construcao), 0.150);
+    border: 1px solid rgba(var(--color-solucoes-construcao), 0.25);
+}
+
+.SubMenuCategorias[data-category="construcao"] .SubMenuItem a:hover {
+    background-color: rgba(var(--color-solucoes-construcao), 0.25);
+    border: 1px solid rgba(var(--color-solucoes-construcao), 0.45);
+    color: rgba(var(--color-almostBlack), 1);
+}
+
+.SubMenuCategorias[data-category="forros"] .SubMenuItem a {
+    background-color: rgba(var(--color-solucoes-forros), 0.150);
+    border: 1px solid rgba(var(--color-solucoes-forros), 0.25);
+}
+
+.SubMenuCategorias[data-category="forros"] .SubMenuItem a:hover {
+    background-color: rgba(var(--color-solucoes-forros), 0.25);
+    border: 1px solid rgba(var(--color-solucoes-forros), 0.45);
+    color: rgba(var(--color-almostBlack), 1);
+}
+
+.SubMenuCategorias[data-category="decoracao"] .SubMenuItem a {
+    background-color: rgba(var(--color-solucoes-decoracao), 0.150);
+    border: 1px solid rgba(var(--color-solucoes-decoracao), 0.25);
+}
+
+.SubMenuCategorias[data-category="decoracao"] .SubMenuItem a:hover {
+    background-color: rgba(var(--color-solucoes-decoracao), 0.25);
+    border: 1px solid rgba(var(--color-solucoes-decoracao), 0.45);
+    color: rgba(var(--color-almostBlack), 1);
+}
+
+.SubMenuCategorias[data-category="embalagens"] .SubMenuItem a {
+    background-color: rgba(var(--color-solucoes-embalagens), 0.150);
+    border: 1px solid rgba(var(--color-solucoes-embalagens), 0.25);
+}
+
+.SubMenuCategorias[data-category="embalagens"] .SubMenuItem a:hover {
+    background-color: rgba(var(--color-solucoes-embalagens), 0.25);
+    border: 1px solid rgba(var(--color-solucoes-embalagens), 0.45);
+    color: rgba(var(--color-almostBlack), 1);
+}
+
+.SubMenuItem img {
+    border-radius: 0.2rem;
 }
 
 @media (min-width:1200px) {
