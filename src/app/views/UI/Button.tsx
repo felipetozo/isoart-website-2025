@@ -12,6 +12,7 @@ interface ButtonProps {
     fullWidth?: boolean;
     className?: string;
     type?: 'button' | 'submit' | 'reset';
+    style?: React.CSSProperties; // Added style prop
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -23,6 +24,7 @@ const Button: React.FC<ButtonProps> = ({
     fullWidth = false,
     className = '',
     type = 'button',
+    style, // Destructured style prop
 }) => {
     const buttonClasses = [
         styles.button,
@@ -39,6 +41,7 @@ const Button: React.FC<ButtonProps> = ({
                 className={buttonClasses}
                 onClick={onClick}
                 disabled={disabled}
+                style={style} // Applied style prop
             >
                 {children}
             </button>

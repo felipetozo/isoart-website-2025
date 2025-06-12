@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import styles from './page.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import menuData from '@/app/data/menuData.json'; // Import the consolidated menuData.json
+import menuData from '@/app/data/menuData.json';
 import SobreEmpresa from '@/app/components/SobreEmpresa/SobreEmpresa';
 import MainForm from '@/app/components/MainForm/MainForm';
 import Button from '@/app/views/UI/Button';
@@ -51,8 +51,16 @@ interface CategoryPageProps {
     params: Promise<{ category: string }>;
 }
 
+// Color mapping based on category slugs
+const categoryColorMap: { [key: string]: string } = {
+    'telhas-e-paineis': 'var(--color-solucoes-telhas)',
+    'construcao-civil': 'var(--color-solucoes-construcao)',
+    'forros': 'var(--color-solucoes-forros)',
+    'molduras-decorativas': 'var(--color-solucoes-decoracao)',
+    'embalagens-em-eps': 'var(--color-solucoes-embalagens)',
+};
+
 export default async function CategoryPage({ params }: CategoryPageProps) {
-    // Await the params since it's now a Promise in Next.js 15
     const { category } = await params;
 
     let categoryData: CategoryData | undefined;
@@ -60,7 +68,6 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     console.log('Tentando carregar categoria:', category);
 
     try {
-        // Normalizar o slug para evitar problemas com maiúsculas/minúsculas
         const normalizedCategory = category.toLowerCase().replace(/ /g, '-');
         console.log('Importando arquivo:', `@/app/data/categories/${normalizedCategory}.json`);
 
@@ -69,36 +76,36 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         console.log('Dados carregados do arquivo específico:', categoryData);
     } catch (error) {
         console.error('Erro ao importar arquivo específico:', error);
-        // Fallback para menuData.json
         categoryData = (menuData as CategoryData[]).find(
             (item: CategoryData) => item.slug === category
         );
         console.log('Usando dados do menuData.json:', categoryData);
     }
 
-    // Se a categoria não existir, mostrar 404
     if (!categoryData) {
         console.log('Categoria não encontrada:', category);
         notFound();
     }
 
-    // Define default values for hero section if not provided
     const heroSection = categoryData.hero || {
         title: categoryData.title,
         description: categoryData.description || categoryData.categoryDescription || 'Nossas soluções de alta qualidade.',
-        buttonText: 'Saiba Mais',
+        buttonText: 'Solicite um orçamento',
         buttonLink: '/contato',
         backgroundImage: '/img/default-category-hero.jpg'
     };
 
-    // Define default benefits if not provided
     const benefitsSection = categoryData.benefits || [
         { id: 1, title: "Qualidade Superior", description: "Produtos com rigoroso controle de qualidade." },
         { id: 2, title: "Eficiência Garantida", description: "Soluções que entregam o melhor desempenho." }
     ];
 
+    // Get the category color (default to a neutral color if not found)
+    const categoryColor = categoryColorMap[categoryData.slug] || 'var(--color-almostBlack)';
+    console.log('Category Color for', categoryData.slug, ':', categoryColor); // Debug log
+
     return (
-        <div className={styles.CategoryPage}>
+        <div className={styles.CategoryPage} style={{ '--button-background': categoryColor } as React.CSSProperties}>
             {/* Hero Section */}
             <section
                 className={styles.CategoryPageHeroSection}
@@ -108,9 +115,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 <div className={styles.CategoryPageHeroContent}>
                     <h1>{heroSection.title}</h1>
                     <p>{heroSection.description}</p>
-                    <Link href="/cadastro">
-                        <Button variant="primary" size="medium">
-                            Entrar em contato
+                    <Link href={heroSection.buttonLink || '/contato'}>
+                        <Button
+                            variant="primary"
+                            size="medium"
+                        >
+                            {heroSection.buttonText || 'Entrar em contato'}
                         </Button>
                     </Link>
                 </div>
@@ -120,7 +130,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             {categoryData.categoryDescription && (
                 <section className={styles.CategoryDescriptionSection}>
                     <div className={styles.CategoryDescriptionWrapper}>
-                        <h2>{categoryData.categoryDescription}</h2>
+                        <h2 style={{ color: categoryColor }}>{categoryData.categoryDescription}</h2>
                     </div>
                 </section>
             )}
@@ -130,7 +140,14 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 <div className={styles.CategoryProductsWrapper}>
                     <div className={styles.CategoryProductsGrid}>
                         {categoryData.products.map((product) => (
-                            <article key={product.id} className={styles.CategoryProductsGridCard}>
+                            <article
+                                key={product.id}
+                                className={styles.CategoryProductsGridCard}
+                                style={{
+                                    backgroundColor: `rgba(${categoryColor}, 0.150)`,
+                                    border: `1px solid rgba(${categoryColor}, 0.25)`,
+                                }}
+                            >
                                 {product.image && (
                                     <div className={styles.CategoryProductsGridImg}>
                                         <Image
@@ -158,7 +175,14 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             <section className={styles.BenefitsSection}>
                 <div className={styles.BenefitsWrapper}>
                     {benefitsSection.map((benefit) => (
-                        <div key={benefit.id} className={styles.BenefitsCard}>
+                        <div
+                            key={benefit.id}
+                            className={styles.BenefitsCard}
+                            style={{
+                                backgroundColor: `rgba(${categoryColor}, 0.20)`,
+                                border: `1px solid rgba(${categoryColor}, 0.15)`,
+                            }}
+                        >
                             <h4>{benefit.title}</h4>
                             <p>{benefit.description}</p>
                         </div>
@@ -181,7 +205,6 @@ export async function generateStaticParams() {
 
 // Dynamic metadata for SEO - Also fix params here
 export async function generateMetadata({ params }: CategoryPageProps) {
-    // Await the params since it's now a Promise in Next.js 15
     const { category } = await params;
 
     let categoryData: CategoryData | undefined;
@@ -201,7 +224,6 @@ export async function generateMetadata({ params }: CategoryPageProps) {
         };
     }
 
-    // Use the available description fields with fallbacks
     const description = categoryData.metaDescription ||
         categoryData.description ||
         categoryData.categoryDescription ||

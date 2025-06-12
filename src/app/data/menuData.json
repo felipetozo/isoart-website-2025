@@ -112,14 +112,14 @@
         "title": "Forros",
         "slug": "forros",
         "description": "Variedade de forros para diversos ambientes",
-        "image": "/img/categories/forros.jpg",
+        "image": "/img/geral/exemplo.png",
         "products": [
             {
                 "id": 10,
                 "name": "Duna",
                 "slug": "duna",
                 "description": "Forro modelo Duna",
-                "image": "/img/produtos/duna.jpg",
+                "image": "/img/geral/exemplo.png",
                 "specifications": {}
             },
             {
@@ -127,7 +127,7 @@
                 "name": "Acústico",
                 "slug": "acustico",
                 "description": "Forro com propriedades acústicas",
-                "image": "/img/produtos/acustico.jpg",
+                "image": "/img/geral/exemplo.png",
                 "specifications": {}
             },
             {
@@ -135,7 +135,7 @@
                 "name": "Decorativo",
                 "slug": "decorativo",
                 "description": "Forro com design decorativo",
-                "image": "/img/produtos/decorativo.jpg",
+                "image": "/img/geral/exemplo.png",
                 "specifications": {}
             }
         ]
@@ -194,14 +194,14 @@
         "title": "Embalagens em EPS",
         "slug": "embalagens-em-eps",
         "description": "Soluções em embalagens de EPS sob medida",
-        "image": "/img/categories/embalagens-em-eps.jpg",
+        "image": "/img/geral/exemplo.png",
         "products": [
             {
                 "id": 18,
                 "name": "Cantoneiras em EPS",
                 "slug": "cantoneiras-em-eps",
                 "description": "Cantoneiras de EPS para proteção",
-                "image": "/img/produtos/cantoneirasemeps.jpg",
+                "image": "/img/geral/exemplo.png",
                 "specifications": {}
             },
             {
@@ -209,7 +209,7 @@
                 "name": "Chapas, boops, cubos e calços em EPS",
                 "slug": "chapas-boops-cubos-e-calcos-em-eps",
                 "description": "Variedade de formas em EPS para embalagens",
-                "image": "/img/produtos/chapasboopscuboscalcos.jpg",
+                "image": "/img/geral/exemplo.png",
                 "specifications": {}
             },
             {
@@ -217,7 +217,7 @@
                 "name": "Moldes personalizáveis",
                 "slug": "moldes-personalizaveis",
                 "description": "Moldes de EPS personalizados",
-                "image": "/img/produtos/moldespersonalizaveis.jpg",
+                "image": "/img/geral/exemplo.png",
                 "specifications": {}
             },
             {
@@ -225,7 +225,7 @@
                 "name": "Pérolas em EPS",
                 "slug": "perolas-em-eps",
                 "description": "Pérolas de EPS para preenchimento",
-                "image": "/img/produtos/perolasemeps.jpg",
+                "image": "/img/geral/exemplo.png",
                 "specifications": {}
             }
         ]

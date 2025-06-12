@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/app/views/UI/Button';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin } from 'react-icons/bs';
-import menuData from '@/app/data/menuData.json'; // Ensure this path is correct
+import menuData from '@/app/data/menuData.json';
 
 // Define the types for your menu data for better type safety
 interface Product {
@@ -52,7 +52,7 @@ function MainNav() {
         tl.to(`.${styles.SubMenuItem}`, { opacity: 0, duration: 0.1 });
         tl.to(submenuRef.current, { height: 0, duration: 0.1 });
         tl.set(submenuRef.current, { display: 'none' });
-        tl.eventCallback('onComplete', () => setActiveSubmenu(null));
+        tl.eventCallback('onComplete', () => setActiveSubmenu(null)); // Fixed syntax
     };
 
     const handleMouseEnterLi = (index: number) => {
@@ -119,26 +119,11 @@ function MainNav() {
                     </div>
                     <div className={styles.institutionalNavItems}>
                         <ul>
-                            <li>
-                                <Link href="/sobre-a-empresa">SOBRE A EMPRESA</Link> {/* Example of static link */}
-                                <span className={styles.navLinkUnderlineWhite}></span>
-                            </li>
-                            <li>
-                                <Link href="/sobre-eps-pir">SOBRE O PIR E EPS</Link> {/* Example of static link */}
-                                <span className={styles.navLinkUnderlineWhite}></span>
-                            </li>
-                            <li>
-                                <Link href="/vagas">VAGAS</Link> {/* Example of static link */}
-                                <span className={styles.navLinkUnderlineWhite}></span>
-                            </li>
-                            <li>
-                                <Link href="/noticias">NOTÍCIAS</Link> {/* Example of static link */}
-                                <span className={styles.navLinkUnderlineWhite}></span>
-                            </li>
-                            <li>
-                                <Link href="/contato">CONTATO</Link> {/* Example of static link */}
-                                <span className={styles.navLinkUnderlineWhite}></span>
-                            </li>
+                            <li><Link href="/sobre-a-empresa">SOBRE A EMPRESA</Link></li>
+                            <li><Link href="/sobre-eps-pir">SOBRE O PIR E EPS</Link></li>
+                            <li><Link href="/vagas">VAGAS</Link></li>
+                            <li><Link href="/noticias">NOTÍCIAS</Link></li>
+                            <li><Link href="/contato">CONTATO</Link></li>
                         </ul>
                         <div className={styles.institutionalNavSocial}>
                             <Link href="/"><BsInstagram /></Link>
@@ -166,13 +151,12 @@ function MainNav() {
                         </div>
                         <div className={styles.MainNavLinks}>
                             <ul>
-                                {(menuData as Category[]).map((item, index) => ( // Cast menuData to Category[]
+                                {(menuData as Category[]).map((item, index) => (
                                     <li
-                                        key={item.id} // Use item.id as key for better stability
+                                        key={item.id}
                                         onMouseEnter={() => handleMouseEnterLi(index)}
                                         onMouseLeave={handleMouseLeaveLi}
                                     >
-                                        {/* Use item.slug to construct the category link */}
                                         <Link href={`/categorias/${item.slug}`}>{item.title}</Link>
                                         <span className={styles.navLinkUnderline}></span>
                                     </li>
@@ -196,15 +180,14 @@ function MainNav() {
                         ref={submenuRef}
                         onMouseEnter={handleMouseEnterSubmenu}
                         onMouseLeave={handleMouseLeaveSubmenu}
-                        data-category={activeSubmenu !== null ? (menuData[activeSubmenu] as Category).title.toLowerCase().replace(/ /g, '') : ''}
+                        data-category={activeSubmenu !== null ? (menuData[activeSubmenu] as Category).slug.replace(/-/g, '') : ''}
                     >
                         {activeSubmenu !== null &&
-                            (menuData[activeSubmenu] as Category).products.map((product, index) => ( // Change subproducts to products
-                                <div key={product.id} className={styles.SubMenuItem}> {/* Use product.id as key */}
-                                    {/* Construct the dynamic product link using category slug and product slug */}
+                            (menuData[activeSubmenu] as Category).products.map((product, index) => (
+                                <div key={product.id} className={styles.SubMenuItem}>
                                     <Link href={`/categorias/${(menuData[activeSubmenu] as Category).slug}/${product.slug}`}>
                                         <Image
-                                            src={product.image || '/img/placeholder.jpg'} // Provide a fallback image
+                                            src={product.image || '/img/placeholder.jpg'}
                                             alt={product.name}
                                             width={120}
                                             height={85}

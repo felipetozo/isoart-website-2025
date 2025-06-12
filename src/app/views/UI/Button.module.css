@@ -11,6 +11,10 @@
     outline: none;
     overflow: hidden;
     white-space: nowrap;
+    --button-background: rgba(var(--color-isoartBlue), 0.8);
+    /* Default background */
+    background-color: var(--button-background);
+    /* Use variable */
 }
 
 .button.disabled {
@@ -20,43 +24,44 @@
 
 /* Variants */
 .primary {
-    background-color: rgba(var(--color-isoartBlue), 0.8);
+    --button-background: rgba(var(--color-isoartBlue), 0.8);
+    /* Default for primary */
     border: 1px solid rgba(var(--color-isoartBlue), 0.9);
     color: rgba(var(--color-stubbornBlack), 0.8);
 }
 
 .primary:hover:not(disabled) {
-    background-color: rgba(var(--color-isoartBlue), 1);
+    --button-background: rgba(var(--color-isoartBlue), 1);
     border: 1px solid rgba(var(--color-isoartBlue), 1);
     color: rgba(var(--color-stubbornBlack), 1);
 }
 
 .secondary {
-    background-color: rgba(var(--color-highBlue), 0);
+    --button-background: rgba(var(--color-highBlue), 0);
     border: 1px solid rgba(var(--color-highBlue), 0.85);
     color: rgba(var(--color-almostWhite), 0.8);
 }
 
 .secondary:hover:not(disabled) {
-    background-color: rgba(var(--color-highBlue), 0.1);
+    --button-background: rgba(var(--color-highBlue), 0.1);
     border: 1px solid rgba(var(--color-highBlue), 0.25);
     color: rgba(var(--color-almostWhite), 1);
 }
 
 .white {
-    background-color: rgba(var(--color-almostWhite), 0.85);
+    --button-background: rgba(var(--color-almostWhite), 0.85);
     border: 1px solid rgba(var(--color-almostWhite), 0.95);
     color: rgba(var(--color-almostBlack), 0.85);
 }
 
 .white:hover {
-    background-color: rgba(var(--color-almostBlack), 1);
+    --button-background: rgba(var(--color-almostBlack), 1);
     border: 1px solid rgba(var(--color-almostBlack), 0.5);
     color: rgba(var(--color-almostWhite), 1);
 }
 
 .lightBlue {
-    background-color: rgba(var(--color-highBlue), 0.90);
+    --button-background: rgba(var(--color-highBlue), 0.90);
     border: 1px solid rgba(var(--color-highBlue), 0.95);
     color: rgba(var(--color-almostWhite), 0.85);
 }
