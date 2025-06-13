@@ -218,11 +218,6 @@ function MainNav() {
                                     <Link href="/"><BsLinkedin /></Link>
                                 </div>
                             </div>
-                            <div className={styles.mobileBanner}>
-                                <p>Conheça tudo sobre o EPS e o PIR</p>
-                                <p>Tudo o que você precisa para saber se nossas soluções são ideais para você em um único lugar.</p>
-                                <Link href="/eps-pir"><Button variant="primary" size="small">Saiba mais</Button></Link>
-                            </div>
                         </div>
                     )}
                 </div>
