@@ -6,6 +6,7 @@ import menuData from '@/app/data/menuData.json';
 import SobreEmpresa from '@/app/components/SobreEmpresa/SobreEmpresa';
 import MainForm from '@/app/components/MainForm/MainForm';
 import Button from '@/app/views/UI/Button';
+import { TbWindOff } from "react-icons/tb";
 
 // Updated interfaces to match the actual data structure
 interface Product {
@@ -167,16 +168,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             <section className={styles.BenefitsSection}>
                 <div className={styles.BenefitsWrapper}>
                     {benefitsSection.map((benefit) => (
-                        <div
-                            key={benefit.id}
-                            className={styles.BenefitsCard}
+                        <div key={benefit.id} className={styles.BenefitsCard}
                             style={{
-                                backgroundColor: `rgba(${categoryColor}, 0.20)`,
+                                backgroundColor: `rgba(${categoryColor}, 0.05)`,
                                 border: `1px solid rgba(${categoryColor}, 0.15)`,
-                            }}
-                        >
-                            <h4>{benefit.title}</h4>
-                            <p>{benefit.description}</p>
+                            }}>
+                            <h4 style={{ color: `rgba(${categoryColor}, 1)` }}>{benefit.title}</h4>
+                            <p style={{ color: `rgba(var(--color-almostBlack), 0.5)` }}>{benefit.description}</p>
                         </div>
                     ))}
                 </div>

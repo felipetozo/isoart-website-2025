@@ -63,8 +63,8 @@ function MainForm() {
                             </div>
                             <div className={styles.cadastroFormFields}>
                                 <FormSelection
-                                    id="assuntoDesejado"
-                                    label="Assunto"
+                                    id="solucaoDesejada"
+                                    label="Solução desejada"
                                     value=""
                                     onChange={() => { }}
                                 />
