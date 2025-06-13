@@ -29,6 +29,7 @@
     margin: 0 auto;
     border-radius: 0.25rem;
     background-color: rgba(var(--color-almostBlack), 0.50);
+    border: 1px solid rgba(var(--color-almostWhite), 0.05);
     backdrop-filter: blur(1rem);
     padding: 0.5rem 1rem;
     font-family: var(--font-RedHat);
@@ -100,6 +101,7 @@
     align-items: center;
     border-radius: 0.25rem;
     background-color: rgba(var(--color-almostWhite), 0.75);
+    border: 1px solid rgba(var(--color-almostBlack), 0.05);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
 }
@@ -320,12 +322,12 @@
 .mobileMenu {
     display: flex;
     flex-direction: column;
-    height: 80vh;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 2rem;
+    gap: 2rem;
+    width: 100%;
     border-radius: 0.25rem;
-    color: white;
-    gap: 1rem;
+    font-family: var(--font-RedHat);
 }
 
 .mobileMenu ul {
@@ -333,28 +335,27 @@
     padding: 0;
 }
 
-.mobileMenu ul li {
-    margin: 1.6rem 0;
-}
-
 .mobileMenu ul li a {
-    color: rgba(var(--color-almostBlack), 1);
+    color: rgba(var(--color-isoartBlue), 0.85);
     text-decoration: none;
-    font-size: 2rem;
+    font-weight: 800;
+    font-size: 2.4rem;
 }
 
 .mobileMenu ul li a:hover {
-    color: #a3bffa;
+    color: rgba(var(--color-almostWhite), 1);
 }
 
 .mobileContact {
-    padding: 1rem;
-    background-color: #2a3a54;
     border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
 }
 
 .mobileContact p {
     margin: 0.25rem 0;
+    color: rgba(var(--color-almostBlack), 0.50);
     font-size: 0.9rem;
 }
 
@@ -365,7 +366,7 @@
 }
 
 .mobileSocial a {
-    color: #a3bffa;
+    color: rgba(var(--color-almostBlack), 0.65);
 }
 
 .mobileSocial a:hover {
@@ -374,12 +375,15 @@
 
 .mobileBanner {
     padding: 1rem;
-    background-color: #4a5a74;
+    background-color: rgba(var(--color-almostWhite), 0.75);
     border-radius: 0.25rem;
-    text-align: center;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
 .mobileBanner p {
-    margin: 0.25rem 0;
+    color: rgba(var(--color-almostBlack), 1);
     font-size: 0.9rem;
 }

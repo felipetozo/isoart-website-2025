@@ -130,7 +130,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             {categoryData.categoryDescription && (
                 <section className={styles.CategoryDescriptionSection}>
                     <div className={styles.CategoryDescriptionWrapper}>
-                        <h2 style={{ color: categoryColor }}>{categoryData.categoryDescription}</h2>
+                        <h2 style={{ color: `rgba(${categoryColor}, 1)` }}>{categoryData.categoryDescription}</h2>
                     </div>
                 </section>
             )}
@@ -140,31 +140,23 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 <div className={styles.CategoryProductsWrapper}>
                     <div className={styles.CategoryProductsGrid}>
                         {categoryData.products.map((product) => (
-                            <article
-                                key={product.id}
-                                className={styles.CategoryProductsGridCard}
-                                style={{
-                                    backgroundColor: `rgba(${categoryColor}, 0.150)`,
-                                    border: `1px solid rgba(${categoryColor}, 0.25)`,
-                                }}
-                            >
-                                {product.image && (
-                                    <div className={styles.CategoryProductsGridImg}>
-                                        <Image
-                                            src={product.image}
-                                            alt={product.name}
-                                            width={300}
-                                            height={200}
-                                        />
+                            <article key={product.id} className={styles.CategoryProductsGridCard}>
+                                <Link href={`/categorias/${categoryData.slug}/${product.slug}`}>
+                                    <div className={styles.CategoryProductsGridContent}>
+                                        <h4 style={{ color: `rgba(${categoryColor}, 1)` }}>{product.name}</h4>
+                                        <p>{product.description}</p>
                                     </div>
-                                )}
-                                <div className={styles.CategoryProductsGridContent}>
-                                    <h3>{product.name}</h3>
-                                    <p>{product.description}</p>
-                                    <Link href={`/categorias/${categoryData.slug}/${product.slug}`}>
-                                        Ver Detalhes →
-                                    </Link>
-                                </div>
+                                    {product.image && (
+                                        <div className={styles.CategoryProductsGridImg}>
+                                            <Image
+                                                src={product.image}
+                                                alt={product.name}
+                                                width={300}
+                                                height={200}
+                                            />
+                                        </div>
+                                    )}
+                                </Link>
                             </article>
                         ))}
                     </div>
