@@ -320,7 +320,7 @@
 /* ======================================================= */
 
 .mobileMenu {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     padding: 2rem;
@@ -328,6 +328,7 @@
     width: 100%;
     border-radius: 0.25rem;
     font-family: var(--font-RedHat);
+    overflow: hidden;
 }
 
 .mobileMenu ul {

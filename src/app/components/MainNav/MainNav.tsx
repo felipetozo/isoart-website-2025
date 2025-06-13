@@ -30,6 +30,7 @@ interface Category {
 
 function MainNav() {
     const submenuRef = useRef<HTMLDivElement | null>(null);
+    const mobileMenuRef = useRef<HTMLDivElement | null>(null);
     const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
     const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -52,7 +53,7 @@ function MainNav() {
         tl.to(`.${styles.SubMenuItem}`, { opacity: 0, duration: 0.1 });
         tl.to(submenuRef.current, { height: 0, duration: 0.1 });
         tl.set(submenuRef.current, { display: 'none' });
-        tl.eventCallback('onComplete', () => setActiveSubmenu(null)); // Fixed syntax
+        tl.eventCallback('onComplete', () => setActiveSubmenu(null));
     };
 
     const handleMouseEnterLi = (index: number) => {
@@ -77,12 +78,15 @@ function MainNav() {
     };
 
     const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
+        const willOpen = !isMobileMenuOpen;
+        setIsMobileMenuOpen(willOpen);
         const tl = gsap.timeline();
         const topBar = iconRef.current?.querySelector(`.${styles.menuBarTop}`);
         const bottomBar = iconRef.current?.querySelector(`.${styles.menuBarBottom}`);
+        const mobileMenuItems = mobileMenuRef.current?.querySelectorAll(`.${styles.mobileMenu} ul li, .${styles.mobileContact} p, .${styles.mobileSocial} a`);
+
         if (topBar && bottomBar) {
-            if (!isMobileMenuOpen) {
+            if (willOpen) {
                 tl.to(topBar, {
                     rotate: 45,
                     translateY: '0.35rem',
@@ -97,6 +101,11 @@ function MainNav() {
                     ease: "power2.out",
                     transformOrigin: "center",
                 }, 0);
+                tl.set(mobileMenuRef.current, { display: 'flex' });
+                tl.fromTo(mobileMenuRef.current, { height: 0 }, { height: 'auto', duration: 0.1 });
+                if (mobileMenuItems) {
+                    tl.fromTo(mobileMenuItems, { opacity: 0 }, { opacity: 1, duration: 0.1, stagger: 0.1 });
+                }
             } else {
                 tl.to([topBar, bottomBar], {
                     rotate: 0,
@@ -105,6 +114,11 @@ function MainNav() {
                     ease: "power2.in",
                     transformOrigin: "center",
                 });
+                if (mobileMenuItems) {
+                    tl.to(mobileMenuItems, { opacity: 0, duration: 0.1 });
+                }
+                tl.to(mobileMenuRef.current, { height: 0, duration: 0.1 });
+                tl.set(mobileMenuRef.current, { display: 'none' });
             }
         }
     };
@@ -197,29 +211,27 @@ function MainNav() {
                                 </div>
                             ))}
                     </div>
-                    {isMobileMenuOpen && (
-                        <div className={styles.mobileMenu}>
-                            <ul>
-                                <li><Link href="/">Home</Link></li>
-                                <li><Link href="/solucoes">Soluções</Link></li>
-                                <li><Link href="/sobre">Sobre</Link></li>
-                                <li><Link href="/contato">Contato</Link></li>
-                            </ul>
-                            <div className={styles.mobileContact}>
-                                <p>Rua Dorivaldo Soncela, 1490</p>
-                                <p>Santa Tereza do Oeste - Paraná - Brasil</p>
-                                <p>☎ +55 45 3231 1699</p>
-                                <p>📱 +55 45 99133 9642</p>
-                                <p>📧 contato@isoart.com.br</p>
-                                <div className={styles.mobileSocial}>
-                                    <Link href="/"><BsInstagram /></Link>
-                                    <Link href="/"><BsFacebook /></Link>
-                                    <Link href="/"><BsYoutube /></Link>
-                                    <Link href="/"><BsLinkedin /></Link>
-                                </div>
+                    <div className={styles.mobileMenu} ref={mobileMenuRef}>
+                        <ul>
+                            <li><Link href="/">Home</Link></li>
+                            <li><Link href="/solucoes">Soluções</Link></li>
+                            <li><Link href="/sobre">Sobre</Link></li>
+                            <li><Link href="/contato">Contato</Link></li>
+                        </ul>
+                        <div className={styles.mobileContact}>
+                            <p>Rua Dorivaldo Soncela, 1490</p>
+                            <p>Santa Tereza do Oeste - Paraná - Brasil</p>
+                            <p>☎ +55 45 3231 1699</p>
+                            <p>📱 +55 45 99133 9642</p>
+                            <p>📧 contato@isoart.com.br</p>
+                            <div className={styles.mobileSocial}>
+                                <Link href="/"><BsInstagram /></Link>
+                                <Link href="/"><BsFacebook /></Link>
+                                <Link href="/"><BsYoutube /></Link>
+                                <Link href="/"><BsLinkedin /></Link>
                             </div>
                         </div>
-                    )}
+                    </div>
                 </div>
             </section>
         </div>
