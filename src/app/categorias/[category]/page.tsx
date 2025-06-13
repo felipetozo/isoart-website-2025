@@ -55,20 +55,27 @@ interface CategoryPageProps {
     params: Promise<{ category: string }>;
 }
 
-// Color mapping based on category slugs
+// Color mapping based on category slugs - FIXED: Using RGB values instead of CSS variables
 const categoryColorMap: { [key: string]: string } = {
-    'telhas-e-paineis': 'var(--color-solucoes-telhas)',
-    'construcao-civil': 'var(--color-solucoes-construcao)',
-    'forros': 'var(--color-solucoes-forros)',
-    'molduras-decorativas': 'var(--color-solucoes-decoracao)',
-    'embalagens-em-eps': 'var(--color-solucoes-embalagens)',
+    'telhas-e-paineis': '159, 139, 84',
+    'construcao-civil': '134, 188, 37',
+    'forros': '03, 174, 251',
+    'molduras-decorativas': '37, 61, 107',
+    'embalagens-em-eps': '196, 213, 86',
 };
 
 // Map benefit titles to specific icons
-const benefitIconMap: { [key: string]: JSX.Element } = {
-    'Isolamento térmico': <TbWindOff size={40} />,
-    'Alta resistência': <TbTopologyStarRing2 size={40} />,
-    'Durabilidade prolongada': <TbShieldShare size={40} />
+const getBenefitIcon = (title: string): React.ReactElement => {
+    switch (title) {
+        case 'Isolamento térmico':
+            return <TbWindOff size={40} />;
+        case 'Alta resistência':
+            return <TbTopologyStarRing2 size={40} />;
+        case 'Durabilidade prolongada':
+            return <TbShieldShare size={40} />;
+        default:
+            return <TbWindOff size={40} />;
+    }
 };
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
@@ -112,11 +119,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     ];
 
     // Get the category color (default to a neutral color if not found)
-    const categoryColor = categoryColorMap[categoryData.slug] || 'var(--color-almostBlack)';
+    const categoryColor = categoryColorMap[categoryData.slug] || '17, 17, 17';
     console.log('Category Color for', categoryData.slug, ':', categoryColor); // Debug log
 
     return (
-        <div className={styles.CategoryPage} style={{ '--button-background': categoryColor } as React.CSSProperties}>
+        <div className={styles.CategoryPage} style={{ '--button-background': `rgb(${categoryColor})` } as React.CSSProperties}>
             {/* Hero Section */}
             <section
                 className={styles.CategoryPageHeroSection}
@@ -184,10 +191,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                                 border: `1px solid rgba(${categoryColor}, 0.15)`,
                             }}>
                             <div className={styles.BenefitIcon}>
-                                {benefitIconMap[benefit.title] || <TbWindOff size={40} />}
+                                {getBenefitIcon(benefit.title)}
                             </div>
                             <h5 style={{ color: `rgba(${categoryColor}, 1)` }}>{benefit.title}</h5>
-                            <p style={{ color: `rgba(var(--color-almostBlack), 0.5)` }}>{benefit.description}</p>
+                            <p style={{ color: `rgba(17, 17, 17, 0.5)` }}>{benefit.description}</p>
                         </div>
                     ))}
                 </div>
