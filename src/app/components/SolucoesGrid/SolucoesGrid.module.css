@@ -26,9 +26,9 @@
     display: flex;
     flex-wrap: nowrap;
     gap: 1.5rem;
-    height: 50rem;
-    width: 640vw;
-    padding: 0 10rem 10rem 0;
+    height: 40rem;
+    width: 620vw;
+    padding: 0 10rem 5rem 0;
 }
 
 .SolucoesGridCard {
@@ -37,7 +37,7 @@
     overflow: hidden;
     height: 100%;
     flex: 0 0 auto;
-    width: 120vw;
+    width: 100vw;
     cursor: pointer;
 }
 
