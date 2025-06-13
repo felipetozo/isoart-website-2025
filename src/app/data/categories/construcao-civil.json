@@ -10,7 +10,7 @@
         "buttonLink": "/contato",
         "backgroundImage": "/img/geral/exemplo.png"
     },
-    "categoryDescription": "Descubra as melhores opções em EPS para construção civil, ideais para lajes, blocos e preenchimentos que garantem economia e desempenho em seus projetos.",
+    "categoryDescription": "Leveza, resistência e eficiência para construções mais inteligentes. Nossos produtos em EPS reduzem custos, aumentam a produtividade e oferecem soluções inovadoras para lajes, preenchimentos e isolamento térmico com alto desempenho.",
     "products": [
         {
             "id": 6,
@@ -61,22 +61,17 @@
         {
             "id": 1,
             "title": "Leveza Estrutural",
-            "description": "Reduz o peso da construção sem comprometer a resistência."
+            "description": "Reduz o peso da construção, permitindo fundações leves e economia em materiais estruturais sem comprometer a resistência."
         },
         {
             "id": 2,
-            "title": "Eficiência Energética",
-            "description": "Melhora o isolamento térmico e reduz custos."
+            "title": "Eficiência Térmica e Acústica",
+            "description": "Minimiza a troca de calor e ruídos, proporcionando maior conforto e reduzindo o consumo de energia para climatização."
         },
         {
             "id": 3,
-            "title": "Durabilidade",
-            "description": "Materiais resistentes para longa vida útil."
-        },
-        {
-            "id": 4,
-            "title": "Sustentabilidade",
-            "description": "Contribui para construções ecológicas."
+            "title": "Agilidade e Economia",
+            "description": "Facilidade de manuseio e instalação aceleram a obra, reduzindo custos com mão de obra e otimizando o tempo de execução."
         }
     ]
 }

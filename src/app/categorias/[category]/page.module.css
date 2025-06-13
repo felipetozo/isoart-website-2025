@@ -68,8 +68,8 @@
 }
 
 .CategoryDescriptionWrapper h2 {
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.4rem;
+    font-weight: 800;
     margin-bottom: 2rem;
     color: rgba(var(--color-almostBlack), 1);
     width: 100%;

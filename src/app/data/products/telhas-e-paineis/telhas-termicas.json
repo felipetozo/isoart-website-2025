@@ -1,0 +1,13 @@
+{
+    "id": 1,
+    "name": "Telhas Térmicas",
+    "slug": "telhas-termicas",
+    "description": "Telhas com núcleo em PIR ou EPS e revestimento duplo com chapas de aço galvalume ou filme, ideais para coberturas com excelente isolamento térmico.",
+    "image": "/img/produtos/telhastermicas.jpg",
+    "specifications": {
+        "material": "Aço galvanizado + EPS/PIR",
+        "espessura": "30mm, 50mm, 100mm",
+        "cor": "Diversas opções",
+        "aplicacao": "Coberturas"
+    }
+}

@@ -61,22 +61,17 @@
         {
             "id": 1,
             "title": "Proteção Eficiente",
-            "description": "Garante a integridade dos produtos durante o transporte."
+            "description": "Amotece impactos e vibraçoes, preservando o produto durante transporte e armazenamento."
         },
         {
             "id": 2,
-            "title": "Leveza",
-            "description": "Reduz o peso total da embalagem."
+            "title": "Leveza e Economia",
+            "description": "Reduz o peso total da embalagem, facilitando o manuseio e otimizando custos logísticos."
         },
         {
             "id": 3,
-            "title": "Personalização",
-            "description": "Soluções sob medida para diferentes necessidades."
-        },
-        {
-            "id": 4,
-            "title": "Custo-benefício",
-            "description": "Economia aliada à qualidade."
+            "title": "Alta Versatilidade",
+            "description": "Pode ser moldado em diversos formatos, adaptando-se a diferentes tipos de produtos."
         }
     ]
 }

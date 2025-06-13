@@ -173,7 +173,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                                 backgroundColor: `rgba(${categoryColor}, 0.05)`,
                                 border: `1px solid rgba(${categoryColor}, 0.15)`,
                             }}>
-                            <h4 style={{ color: `rgba(${categoryColor}, 1)` }}>{benefit.title}</h4>
+                            <h5 style={{ color: `rgba(${categoryColor}, 1)` }}>{benefit.title}</h5>
                             <p style={{ color: `rgba(var(--color-almostBlack), 0.5)` }}>{benefit.description}</p>
                         </div>
                     ))}

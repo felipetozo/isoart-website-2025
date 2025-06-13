@@ -71,23 +71,18 @@
     "benefits": [
         {
             "id": 1,
-            "title": "Design Elegante",
-            "description": "Acabamentos que elevam a estética dos ambientes."
+            "title": "Acabamento Sofisticado",
+            "description": "Detalhes elegantes que valorizam o design e agregam estilo a qualquer construção, do clássico ao contemporâneo."
         },
         {
             "id": 2,
-            "title": "Fácil Instalação",
-            "description": "Instalação rápida e sem complicações."
+            "title": "Instalação Rápida e Fácil",
+            "description": "Leves, permitem aplicações ágeis sem necessidade de reforços estruturais, reduzindo tempo e custos."
         },
         {
             "id": 3,
-            "title": "Durabilidade",
-            "description": "Resistência a intempéries e uso prolongado."
-        },
-        {
-            "id": 4,
-            "title": "Versatilidade",
-            "description": "Adapta-se a diversos estilos de decoração."
+            "title": "Durabilidade e Resistência",
+            "description": "Materiais resistentes às intempéries garantem longa vida útil, baixa manutenção e excelente acabamento estético."
         }
     ]
 }
