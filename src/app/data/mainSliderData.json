@@ -5,7 +5,7 @@
         "description": "Lorem ipsum dolor sit amet constectur amit lit. Lorem ipsum dolor sit amet constectur amit lib. Lorem ipsum dolor sit amit lorem ipsum constectur amit.",
         "buttonText": "Saiba mais",
         "buttonLink": "/cadastro",
-        "backgroundImage": "/img/HeroBanners/banner001.jpg"
+        "backgroundImage": "/img/HeroBanners/banner001.webp"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "description": "Lorem ipsum dolor sit amet constectur amit lit. Lorem ipsum dolor sit amet constectur amit lib. Lorem ipsum dolor sit amit lorem ipsum constectur amit.",
         "buttonText": "Saiba mais",
         "buttonLink": "/cadastro",
-        "backgroundImage": "/img/HeroBanners/banner001.jpg"
+        "backgroundImage": "/img/HeroBanners/banner001.webp"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "description": "Lorem ipsum dolor sit amet constectur amit lit. Lorem ipsum dolor sit amet constectur amit lib. Lorem ipsum dolor sit amit lorem ipsum constectur amit.",
         "buttonText": "Saiba mais",
         "buttonLink": "/cadastro",
-        "backgroundImage": "/img/HeroBanners/banner001.jpg"
+        "backgroundImage": "/img/HeroBanners/banner001.webp"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "description": "Lorem ipsum dolor sit amet constectur amit lit. Lorem ipsum dolor sit amet constectur amit lib. Lorem ipsum dolor sit amit lorem ipsum constectur amit.",
         "buttonText": "Saiba mais",
         "buttonLink": "/cadastro",
-        "backgroundImage": "/img/HeroBanners/banner001.jpg"
+        "backgroundImage": "/img/HeroBanners/banner001.webp"
     },
     {
         "id": 5,
@@ -37,6 +37,6 @@
         "description": "Lorem ipsum dolor sit amet constectur amit lit. Lorem ipsum dolor sit amet constectur amit lib. Lorem ipsum dolor sit amit lorem ipsum constectur amit.",
         "buttonText": "Saiba mais",
         "buttonLink": "/cadastro",
-        "backgroundImage": "/img/HeroBanners/banner001.jpg"
+        "backgroundImage": "/img/HeroBanners/banner001.webp"
     }
 ]
