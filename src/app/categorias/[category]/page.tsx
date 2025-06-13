@@ -7,6 +7,8 @@ import SobreEmpresa from '@/app/components/SobreEmpresa/SobreEmpresa';
 import MainForm from '@/app/components/MainForm/MainForm';
 import Button from '@/app/views/UI/Button';
 import { TbWindOff } from "react-icons/tb";
+import { TbShieldShare } from "react-icons/tb";
+import { TbTopologyStarRing2 } from "react-icons/tb";
 
 // Updated interfaces to match the actual data structure
 interface Product {
@@ -32,6 +34,7 @@ interface Benefit {
     id: number;
     title: string;
     description: string;
+    icon?: string; // Optional icon field for future JSON updates
 }
 
 interface CategoryData {
@@ -59,6 +62,13 @@ const categoryColorMap: { [key: string]: string } = {
     'forros': 'var(--color-solucoes-forros)',
     'molduras-decorativas': 'var(--color-solucoes-decoracao)',
     'embalagens-em-eps': 'var(--color-solucoes-embalagens)',
+};
+
+// Map benefit titles to specific icons
+const benefitIconMap: { [key: string]: JSX.Element } = {
+    'Isolamento térmico': <TbWindOff size={40} />,
+    'Alta resistência': <TbTopologyStarRing2 size={40} />,
+    'Durabilidade prolongada': <TbShieldShare size={40} />
 };
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
@@ -173,6 +183,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                                 backgroundColor: `rgba(${categoryColor}, 0.05)`,
                                 border: `1px solid rgba(${categoryColor}, 0.15)`,
                             }}>
+                            <div className={styles.BenefitIcon}>
+                                {benefitIconMap[benefit.title] || <TbWindOff size={40} />}
+                            </div>
                             <h5 style={{ color: `rgba(${categoryColor}, 1)` }}>{benefit.title}</h5>
                             <p style={{ color: `rgba(var(--color-almostBlack), 0.5)` }}>{benefit.description}</p>
                         </div>

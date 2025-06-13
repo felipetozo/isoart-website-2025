@@ -158,6 +158,15 @@
     border-radius: 0.25rem;
 }
 
+.BenefitIcon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: max-content;
+    margin-bottom: 1rem;
+    color: rgba(var(--color-almostBlack), 0.5);
+}
+
 /* Responsive Design */
 
 @media (min-width: 800px) and (max-width:1199px) {
