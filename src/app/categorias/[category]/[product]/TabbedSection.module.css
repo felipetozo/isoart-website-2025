@@ -1,0 +1,61 @@
+/* Tabbed Section */
+.TabbedSection {
+    width: 100%;
+    padding: 5rem 0;
+}
+
+.TabbedWrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.TabButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgba(var(--color-almostBlack), 0.5);
+    position: relative;
+    padding: 1rem 0;
+    text-align: left;
+    width: 100%;
+    border-top: 1px solid rgba(var(--color-almostBlack), 0.5);
+}
+
+.TabButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--border-color, transparent);
+}
+
+.TabButton:hover {
+    color: rgba(var(--color-almostBlack), 0.75);
+}
+
+.ActiveTab {
+    color: rgba(var(--color-almostBlack), 1);
+}
+
+.ActiveTab::before {
+    width: 100%;
+}
+
+.TabContent {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(var(--color-almostBlack), 0.65);
+}
+
+.TabButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}

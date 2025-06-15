@@ -68,7 +68,7 @@
 }
 
 .CategoryDescriptionWrapper h2 {
-    font-size: 2.4rem;
+    font-size: clamp(1.8rem, 2vw, 2.4rem);
     font-weight: 800;
     margin-bottom: 2rem;
     color: rgba(var(--color-almostBlack), 1);
@@ -126,6 +126,7 @@
 }
 
 .CategoryProductsGridContent h4 {
+    font-size: 1.2rem;
     font-weight: 600;
 }
 

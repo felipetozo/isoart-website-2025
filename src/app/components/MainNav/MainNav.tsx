@@ -140,10 +140,10 @@ function MainNav() {
                             <li><Link href="/contato">CONTATO</Link></li>
                         </ul>
                         <div className={styles.institutionalNavSocial}>
-                            <Link href="/"><BsInstagram /></Link>
-                            <Link href="/"><BsFacebook /></Link>
-                            <Link href="/"><BsYoutube /></Link>
-                            <Link href="/"><BsLinkedin /></Link>
+                            <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank"><BsInstagram /></Link>
+                            <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank"><BsFacebook /></Link>
+                            <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank"><BsYoutube /></Link>
+                            <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank"><BsLinkedin /></Link>
                         </div>
                     </div>
                 </div>
@@ -225,10 +225,10 @@ function MainNav() {
                             <p>📱 +55 45 99133 9642</p>
                             <p>📧 contato@isoart.com.br</p>
                             <div className={styles.mobileSocial}>
-                                <Link href="/"><BsInstagram /></Link>
-                                <Link href="/"><BsFacebook /></Link>
-                                <Link href="/"><BsYoutube /></Link>
-                                <Link href="/"><BsLinkedin /></Link>
+                                <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank"><BsInstagram /></Link>
+                                <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank"><BsFacebook /></Link>
+                                <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank"><BsYoutube /></Link>
+                                <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank"><BsLinkedin /></Link>
                             </div>
                         </div>
                     </div>
