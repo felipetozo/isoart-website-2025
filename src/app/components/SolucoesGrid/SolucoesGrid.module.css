@@ -23,22 +23,22 @@
 }
 
 .SolucoesGridGrid {
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 1.5rem;
-    height: 40rem;
-    width: 620vw;
-    padding: 0 10rem 5rem 0;
+    height: auto;
 }
 
 .SolucoesGridCard {
     position: relative;
-    border-radius: 0.6rem;
+    border-radius: 0.2rem;
     overflow: hidden;
-    height: 100%;
-    flex: 0 0 auto;
-    width: 100vw;
+    height: 40rem;
     cursor: pointer;
+}
+
+.SolucoesGridCard:hover .SolucoesGridCardContainer {
+    height: 50%;
 }
 
 .SolucoesGridCardImage {
@@ -74,12 +74,13 @@
     bottom: 0;
     left: 0;
     right: 0;
+    height: 35%;
     z-index: 4;
     padding: 1.5rem;
     color: rgba(var(--color-almostWhite), 1);
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
 }
 
 .SolucoesGridCardContainer h5 {
@@ -87,7 +88,7 @@
 }
 
 .SolucoesGridCard:nth-child(1) .SolucoesGridCardContainer {
-    background: linear-gradient(transparent, rgba(139, 126, 102, 0.8));
+    background: linear-gradient(transparent, rgba(var(--color-solucoes-telhas), 1));
 }
 
 .SolucoesGridCard:nth-child(2) .SolucoesGridCardContainer {
@@ -106,14 +107,16 @@
     background: linear-gradient(transparent, rgba(141, 169, 85, 0.8));
 }
 
+/* Desktop */
 @media (min-width: 1200px) {
-    .SolucoesGridGrid {
-        gap: 2.5rem;
-        width: 230vw;
-    }
 
     .SolucoesGridCard {
-        width: 40vw;
+        height: 40rem;
+    }
+
+    .SolucoesGridCard:nth-child(4),
+    .SolucoesGridCard:nth-child(5) {
+        grid-column: span 1;
     }
 
     .SolucoesGridHeader {
@@ -121,18 +124,5 @@
         justify-content: space-between;
         align-items: flex-start;
         gap: 0;
-    }
-
-
-    .SolucoesGridCardContainer {
-        padding: 2rem;
-    }
-
-    .SolucoesGridCardContainer h5 {
-        font-size: 1.5rem;
-    }
-
-    .SolucoesGridCardContainer p {
-        font-size: 1rem;
     }
 }

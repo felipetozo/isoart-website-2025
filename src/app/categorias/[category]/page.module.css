@@ -105,12 +105,11 @@
     overflow: hidden;
     justify-content: space-between;
     gap: 1rem;
-    border-radius: 0.6rem;
-    border: 1px solid rgba(var(--color-neutral-light), 1);
+    border-radius: 0.2rem;
+    height: 100%;
     background-color: rgba(var(--color-neutral-semiLight), 0.5);
     padding: 1.4rem;
     margin: 0;
-    height: max-content;
 }
 
 .CategoryProductsGridCard:hover {
@@ -132,7 +131,7 @@
 
 .CategoryProductsGridImg img {
     width: 100%;
-    border-radius: 0.40rem;
+    border-radius: 0.1rem;
 }
 
 .BenefitsSection {

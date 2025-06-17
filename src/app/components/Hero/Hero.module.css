@@ -31,7 +31,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(var(--color-almostBlack), 0.50);
+    background-color: rgba(var(--color-almostBlack), 0.350);
     z-index: 2;
 }
 
@@ -68,7 +68,6 @@
     margin-bottom: 1.25rem;
 }
 
-/* Animação CSS pura para blur-to-sharp */
 .split {
     filter: blur(10px);
     opacity: 0;
@@ -87,7 +86,6 @@
     }
 }
 
-/* Reset da animação quando slide muda */
 .HeroContainer.slideChanged .split {
     animation: none;
     filter: blur(10px);

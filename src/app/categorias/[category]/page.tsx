@@ -158,7 +158,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 <div className={styles.CategoryProductsWrapper}>
                     <div className={styles.CategoryProductsGrid}>
                         {categoryData.products.map((product) => (
-                            <article key={product.id} className={styles.CategoryProductsGridCard}>
+                            <article key={product.id} className={styles.CategoryProductsGridCard} style={{ border: `1px solid rgba(${categoryColor}, 1)` }}>
                                 <Link href={`/categorias/${categoryData.slug}/${product.slug}`}>
                                     <div className={styles.CategoryProductsGridContent}>
                                         <h4 style={{ color: `rgba(${categoryColor}, 1)` }}>{product.name}</h4>
