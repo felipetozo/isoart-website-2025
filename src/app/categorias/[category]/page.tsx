@@ -55,15 +55,6 @@ interface CategoryPageProps {
     params: Promise<{ category: string }>;
 }
 
-// Color mapping based on category slugs - FIXED: Using RGB values instead of CSS variables
-const categoryColorMap: { [key: string]: string } = {
-    'telhas-e-paineis': '159, 139, 84',
-    'construcao-civil': '134, 188, 37',
-    'forros': '03, 174, 251',
-    'molduras-decorativas': '37, 61, 107',
-    'embalagens-em-eps': '196, 213, 86',
-};
-
 // Map benefit titles to specific icons
 const getBenefitIcon = (title: string): React.ReactElement => {
     switch (title) {
@@ -118,12 +109,8 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         { id: 2, title: "Eficiência Garantida", description: "Soluções que entregam o melhor desempenho." }
     ];
 
-    // Get the category color (default to a neutral color if not found)
-    const categoryColor = categoryColorMap[categoryData.slug] || '17, 17, 17';
-    console.log('Category Color for', categoryData.slug, ':', categoryColor); // Debug log
-
     return (
-        <div className={styles.CategoryPage} style={{ '--button-background': `rgb(${categoryColor})` } as React.CSSProperties}>
+        <div className={styles.CategoryPage}>
             {/* Hero Section */}
             <section
                 className={styles.CategoryPageHeroSection}
@@ -134,10 +121,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                     <h1>{heroSection.title}</h1>
                     <p>{heroSection.description}</p>
                     <Link href={heroSection.buttonLink || '/contato'}>
-                        <Button
-                            variant="primary"
-                            size="medium"
-                        >
+                        <Button variant="primary" size="medium">
                             {heroSection.buttonText || 'Entrar em contato'}
                         </Button>
                     </Link>
@@ -148,7 +132,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             {categoryData.categoryDescription && (
                 <section className={styles.CategoryDescriptionSection}>
                     <div className={styles.CategoryDescriptionWrapper}>
-                        <h2 style={{ color: `rgba(${categoryColor}, 1)` }}>{categoryData.categoryDescription}</h2>
+                        <h2>{categoryData.categoryDescription}</h2>
                     </div>
                 </section>
             )}
@@ -158,10 +142,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 <div className={styles.CategoryProductsWrapper}>
                     <div className={styles.CategoryProductsGrid}>
                         {categoryData.products.map((product) => (
-                            <article key={product.id} className={styles.CategoryProductsGridCard} style={{ border: `1px solid rgba(${categoryColor}, 1)` }}>
+                            <article key={product.id} className={styles.CategoryProductsGridCard}>
                                 <Link href={`/categorias/${categoryData.slug}/${product.slug}`}>
                                     <div className={styles.CategoryProductsGridContent}>
-                                        <h4 style={{ color: `rgba(${categoryColor}, 1)` }}>{product.name}</h4>
+                                        <h4>{product.name}</h4>
                                         <p>{product.description}</p>
                                     </div>
                                     {product.image && (
@@ -185,16 +169,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             <section className={styles.BenefitsSection}>
                 <div className={styles.BenefitsWrapper}>
                     {benefitsSection.map((benefit) => (
-                        <div key={benefit.id} className={styles.BenefitsCard}
-                            style={{
-                                backgroundColor: `rgba(${categoryColor}, 0.05)`,
-                                border: `1px solid rgba(${categoryColor}, 0.15)`,
-                            }}>
+                        <div key={benefit.id} className={styles.BenefitsCard}>
                             <div className={styles.BenefitIcon}>
                                 {getBenefitIcon(benefit.title)}
                             </div>
-                            <h5 style={{ color: `rgba(${categoryColor}, 1)` }}>{benefit.title}</h5>
-                            <p style={{ color: `rgba(17, 17, 17, 0.5)` }}>{benefit.description}</p>
+                            <h5>{benefit.title}</h5>
+                            <p>{benefit.description}</p>
                         </div>
                     ))}
                 </div>
