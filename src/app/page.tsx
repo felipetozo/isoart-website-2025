@@ -29,7 +29,6 @@ function Home() {
       <main>
         <Hero />
         <SobreEmpresa />
-        <CarrosselClientes />
         <SolucoesGrid />
         <MainForm />
       </main>

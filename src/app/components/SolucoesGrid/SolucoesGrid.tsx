@@ -11,7 +11,7 @@ function SolucoesGrid() {
                 <div className={styles.SolucoesGridHeader}>
                     <p>Nossos produtos</p>
                     <h3>
-                        Soluções em Poliestireno Expandido (EPS) e Poliuretano Isolante Rígido (PIR)
+                        Soluções em Poliestireno Expandido (EPS) e Poliisocianurato Isolante Rígido (PIR)
                     </h3>
                 </div>
                 <div className={styles.SolucoesGridGrid}>

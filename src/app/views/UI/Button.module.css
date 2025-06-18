@@ -6,15 +6,12 @@
     flex-direction: row;
     justify-content: center;
     cursor: pointer;
-    border: none;
     gap: 0.5rem;
     outline: none;
     overflow: hidden;
     white-space: nowrap;
-    --button-background: rgba(var(--color-isoartBlue), 0.8);
-    /* Default background */
+    --button-background: rgba(var(--color-isoartBlue), 1);
     background-color: var(--button-background);
-    /* Use variable */
 }
 
 .button.disabled {
@@ -24,27 +21,26 @@
 
 /* Variants */
 .primary {
-    --button-background: rgba(var(--color-isoartBlue), 0.8);
-    /* Default for primary */
-    border: 1px solid rgba(var(--color-isoartBlue), 0.9);
-    color: rgba(var(--color-stubbornBlack), 0.8);
+    --button-background: rgba(var(--color-isoartBlue), 1);
+    border: 1px solid rgba(var(--color-isoartBlue), 0);
+    color: rgba(var(--color-almostWhite), 0.8);
 }
 
 .primary:hover:not(disabled) {
-    --button-background: rgba(var(--color-isoartBlue), 1);
-    border: 1px solid rgba(var(--color-isoartBlue), 1);
-    color: rgba(var(--color-stubbornBlack), 1);
+    --button-background: rgba(var(--color-isoartBlue), 0.75);
+    border: 1px solid rgba(var(--color-lightBlue), 0.5);
+    color: rgba(var(--color-almostWhite), 1);
 }
 
 .secondary {
-    --button-background: rgba(var(--color-highBlue), 0);
-    border: 1px solid rgba(var(--color-highBlue), 0.85);
+    --button-background: rgba(var(--color-isoartBlue), 0);
+    border: 1px solid rgba(var(--color-isoartBlue), 0.85);
     color: rgba(var(--color-almostWhite), 0.8);
 }
 
 .secondary:hover:not(disabled) {
-    --button-background: rgba(var(--color-highBlue), 0.1);
-    border: 1px solid rgba(var(--color-highBlue), 0.25);
+    --button-background: rgba(var(--color-lightBlue), 0.1);
+    border: 1px solid rgba(var(--color-lightBlue), 0.25);
     color: rgba(var(--color-almostWhite), 1);
 }
 

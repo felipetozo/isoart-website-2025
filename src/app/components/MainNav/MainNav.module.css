@@ -96,12 +96,12 @@
     max-width: 1600px;
     height: max-content;
     margin: 0 auto;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     gap: 2rem;
     align-items: center;
     border-radius: 0.25rem;
     background-color: rgba(var(--color-almostWhite), 0.75);
-    border: 1px solid rgba(var(--color-almostBlack), 0.05);
+    border: 1px solid rgba(var(--color-almostBlack), 0.1);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
 }
@@ -202,6 +202,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    background-color: rgba(var(--color-almostWhite), 0.5);
+    border: 1px solid rgba(var(--color-isoartGold), 0.25);
+}
+
+.SubMenuItem:hover {
+    background-color: rgba(var(--color-almostWhite), 0.75);
+    border: 1px solid rgba(var(--color-isoartGold), 1);
 }
 
 .SubMenuItem a {
@@ -215,7 +222,7 @@
     line-height: 1.2;
 }
 
-/* Updated hover styles for menu items */
+/* Updated hover styles for menu items
 .MainNavLinks ul li:nth-child(1):hover .navLinkUnderline {
     background-color: rgba(var(--color-solucoes-telhas), 1);
 }
@@ -234,9 +241,9 @@
 
 .MainNavLinks ul li:nth-child(5):hover .navLinkUnderline {
     background-color: rgba(var(--color-solucoes-embalagens), 1);
-}
+} */
 
-/* Updated submenu styles to match category colors */
+/* Updated submenu styles to match category colors
 .SubMenuCategorias[data-category="telhasepaineis"] .SubMenuItem a {
     background-color: rgba(var(--color-solucoes-telhas), 0.150);
     border: 1px solid rgba(var(--color-solucoes-telhas), 0.25);
@@ -290,7 +297,7 @@
     background-color: rgba(var(--color-solucoes-embalagens), 0.25);
     border: 1px solid rgba(var(--color-solucoes-embalagens), 0.45);
     color: rgba(var(--color-almostBlack), 1);
-}
+} */
 
 .SubMenuItem img {
     border-radius: 0.2rem;

@@ -21,6 +21,24 @@
     gap: 1rem;
 }
 
+.FooterColumn h5 {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    color: rgba(var(--color-lightBlue));
+}
+
+.FooterColumn li {
+    line-height: 2;
+    width: max-content;
+    color: rgba(var(--color-almostBlack), 0.4);
+}
+
+.FooterColumn li:hover {
+    color: rgba(var(--color-lightBlue), 1);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .MainFormContactItem {
     display: flex;
     max-width: max-content;
@@ -34,8 +52,15 @@
     padding: 1rem 0;
 }
 
-.MainFormContactItem {
-    color: rgba(var(--color-highBlue), 1);
+.MainFormContactItem,
+.MainFormNavSocial {
+    color: rgba(var(--color-almostBlack), 0.4);
+}
+
+.MainFormContactItem:hover,
+.MainFormNavSocial svg:hover {
+    color: rgba(var(--color-lightBlue), 1);
+    cursor: pointer;
 }
 
 .FooterNavWrapper {
@@ -57,6 +82,7 @@
 
 .FooterCNPJ p {
     margin: 0 auto;
+    font-size: 0.8rem;
 }
 
 .FooterLogos {

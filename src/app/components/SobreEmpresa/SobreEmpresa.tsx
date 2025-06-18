@@ -19,7 +19,7 @@ function SobreEmpresa() {
                         </h3>
                         <div className={styles.doubleButton}>
                             <Link href="/cadastro">
-                                <Button variant="lightBlue" size="medium">
+                                <Button variant="primary" size="medium">
                                     Saiba mais
                                 </Button>
                             </Link>

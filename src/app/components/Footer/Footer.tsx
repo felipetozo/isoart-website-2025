@@ -11,10 +11,6 @@ function Footer() {
             <section className={styles.FooterSection}>
                 <div className={styles.FooterWrapper}>
                     <div className={styles.FooterColumn}>
-                        <p>
-                            Rua Dorivaldo Soncela, 1490<br />
-                            Santa Tereza do Oeste - Paraná - Brasil
-                        </p>
                         <div className={styles.MainFormContactItem}>
                             <MdOutlinePhoneInTalk />
                             <p>+55 45 3231 1699</p>
@@ -27,17 +23,21 @@ function Footer() {
                             <MdOutlineMarkEmailUnread />
                             <p>contato@isoart.com.br</p>
                         </div>
+                        <p>
+                            Rua Dorivaldo Soncela, 1490<br />
+                            Santa Tereza do Oeste - Paraná - Brasil
+                        </p>
                         <div className={styles.MainFormNavSocial}>
-                            <Link href="/"><span><BsInstagram /></span></Link>
-                            <Link href="/"><span><BsFacebook /></span></Link>
-                            <Link href="/"><span><BsYoutube /></span></Link>
-                            <Link href="/"><span><BsLinkedin /></span></Link>
+                            <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank"><BsInstagram /></Link>
+                            <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank"><BsFacebook /></Link>
+                            <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank"><BsYoutube /></Link>
+                            <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank"><BsLinkedin /></Link>
                         </div>
                     </div>
                     <div className={styles.FooterColumn}>
                         <div className={styles.FooterNavWrapper}>
                             <div>
-                                <h4>Institucional</h4>
+                                <h5>Institucional</h5>
                                 <ul>
                                     <li>Sobre a empresa</li>
                                     <li>Sobre o PIR e o EPS</li>
@@ -46,16 +46,17 @@ function Footer() {
                                 </ul>
                             </div>
                             <div>
-                                <h4>Produtos</h4>
+                                <h5>Produtos</h5>
                                 <ul>
-                                    <li>Isolamento Térmicos</li>
-                                    <li>Construção Civil</li>
-                                    <li>Decoração</li>
-                                    <li>Embalagens</li>
+                                    <li><Link href="/categorias/telhas-e-paineis">Telhas e Revestimentos</Link></li>
+                                    <li><Link href="/categorias/construcao-civil">Construção Civil</Link></li>
+                                    <li><Link href="/categorias/forros">Forros</Link></li>
+                                    <li><Link href="/categorias/molduras-decorativas">Molduras Decorativas</Link></li>
+                                    <li><Link href="/categorias/embalagens-em-eps">Embalagens</Link></li>
                                 </ul>
                             </div>
                             <div>
-                                <h4>Suporte</h4>
+                                <h5>Suporte</h5>
                                 <ul>
                                     <li>Contato</li>
                                     <li>Políticas de privacidade</li>
@@ -87,8 +88,7 @@ function Footer() {
                 <div className={styles.FooterWrapper}>
                     <div className={styles.FooterCNPJ}>
                         <p>
-                            {new Date().getFullYear()} - Isoart Indústria de produtos térmicos e construtivos ltda.<br />
-                            CNPJ: 09.094.564/0001-05
+                            {new Date().getFullYear()} - Isoart Indústria de produtos térmicos e construtivos ltda. CNPJ: 09.094.564/0001-05
                         </p>
                     </div>
                 </div>

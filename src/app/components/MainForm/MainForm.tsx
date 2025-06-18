@@ -79,7 +79,7 @@ function MainForm() {
                             </div>
 
                             <div className={styles.cadastroFormFields}>
-                                <Button variant="white" size="medium">
+                                <Button variant="primary" size="medium">
                                     <span>
                                         Enviar solicitação
                                     </span>
