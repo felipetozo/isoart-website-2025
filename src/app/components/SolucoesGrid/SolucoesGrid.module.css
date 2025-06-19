@@ -39,6 +39,7 @@
 
 .SolucoesGridCard:hover .SolucoesGridCardContainer {
     height: 50%;
+    background: linear-gradient(180deg, rgba(var(--color-almostWhite), 0.1) 50%, rgba(var(--color-isoartGold), 1) 100%);
 }
 
 .SolucoesGridCardImage {

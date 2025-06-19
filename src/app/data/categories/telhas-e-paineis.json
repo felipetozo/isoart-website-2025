@@ -2,10 +2,10 @@
     "id": 1,
     "title": "Telhas e Revestimentos Térmicos Isoart - Ideais para construção civil",
     "slug": "telhas-e-paineis",
-    "metaDescription": "Descubra as soluções em telhas térmicas e painéis isolantes da ISOART, ideais para construção civil e industrial.",
+    "metaDescription": "Telhas e painéis da Isoart para coberturas e fachadas. Disponíveis com ou sem isolamento térmico em EPS/PIR, oferecem eficiência energética e resistência. Adequados para diversos projetos de construção.",
     "hero": {
         "title": "Telhas e Revestimentos",
-        "description": "Líder em soluções de isolamento térmico, a ISOART oferece telhas e painéis de alta qualidade, com materiais como PIR e EPS, que garantem excelente performance para sua construção.",
+        "description": "Telhas e painéis da Isoart para coberturas e fachadas. Disponíveis com ou sem isolamento térmico em EPS/PIR, oferecem eficiência energética e resistência. Adequados para diversos projetos de construção.",
         "buttonText": "Entre em contato",
         "buttonLink": "/contato",
         "backgroundImage": "/img/geral/exemplo.png"
@@ -74,17 +74,17 @@
     "benefits": [
         {
             "id": 1,
-            "title": "Isolamento térmico",
-            "description": "Mantém a temperatura interna estável, reduzindo a necessidade de climatização e proporcionando mais eficiência energética."
+            "title": "Eficiência Térmica e Acústica",
+            "description": "Minimiza a troca de calor e ruídos, proporcionando maior conforto e reduzindo o consumo de energia para climatização."
         },
         {
             "id": 2,
-            "title": "Alta resistência",
-            "description": "Suporta impactos, intempéries e altas temperaturas, oferecendo maior proteção e segurança em qualquer aplicação."
+            "title": "Instalação Rápida e Fácil",
+            "description": "Leves, permitem aplicações ágeis sem necessidade de reforços estruturais, reduzindo tempo e custos."
         },
         {
             "id": 3,
-            "title": "Durabilidade prolongada",
+            "title": "Durabilidade Prolongada",
             "description": "Material leve, resistente e de baixa manutenção, garantindo uma vida útil estendida com excelente custo-benefício."
         }
     ]

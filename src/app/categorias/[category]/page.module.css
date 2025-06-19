@@ -95,8 +95,8 @@
 .CategoryProductsGrid {
     display: grid;
     width: 100%;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 .CategoryProductsGridCard {
@@ -104,23 +104,22 @@
     flex-direction: column;
     overflow: hidden;
     justify-content: space-between;
-    gap: 1rem;
     border-radius: 0.2rem;
-    height: 100%;
-    background-color: rgba(var(--color-almostBlack), 0.05);
-    border: 1px solid rgba(var(--color-isoartGold), 0.25);
+    background-color: rgba(var(--color-isoartGold), 0.15);
+    border: 1px solid rgba(var(--color-isoartBlue), 0.25);
     padding: 1.4rem;
     margin: 0;
 }
 
 .CategoryProductsGridCard:hover {
-    background-color: rgba(var(--color-almostBlack), 0.10);
-    border: 1px solid rgba(var(--color-isoartGold), 0.50);
+    background-color: rgba(var(--color-isoartGold), 0.25);
+    border: 1px solid rgba(var(--color-lightBlue), 0.750);
 }
 
 .CategoryProductsGridContent {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 1rem;
     margin: 0 0 1rem 0;
     color: rgba(var(--color-almostBlack), 0.5);
@@ -135,47 +134,6 @@
 .CategoryProductsGridImg img {
     width: 100%;
     border-radius: 0.1rem;
-}
-
-.BenefitsSection {
-    width: 100%;
-    background-color: rgba(var(--color-almostWhite), 1);
-    padding: 5rem 0;
-    color: rgba(var(--color-almostBlack), 1);
-}
-
-.BenefitsWrapper {
-    width: 90%;
-    margin: 0 auto;
-    display: grid;
-    gap: 2rem;
-    max-width: 1600px;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-}
-
-.BenefitsCard {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    border-radius: 0.25rem;
-    background-color: rgba(var(--color-isoartGold), 0.25);
-    border: 1px solid rgba(var(--color-lightBlue), 0.25);
-}
-
-.BenefitsCard h5 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: rgba(var(--color-isoartBlue), 1);
-}
-
-.BenefitIcon {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    max-width: max-content;
-    margin-bottom: 1rem;
-    color: rgba(var(--color-isoartGold), 0.5);
 }
 
 /* Responsive Design */

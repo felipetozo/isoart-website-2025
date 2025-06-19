@@ -1,16 +1,16 @@
 [
     {
         "id": 1,
-        "title": "Telhas e revestimentos",
+        "title": "Telhas e Revestimentos",
         "slug": "telhas-e-paineis",
-        "description": "Isolamento térmico, resistência e durabilidade.",
+        "description": "Telhas e painéis da Isoart para coberturas e fachadas. Disponíveis com ou sem isolamento térmico em EPS/PIR, oferecem eficiência energética e resistência. Adequados para diversos projetos de construção.",
         "image": "/img/geral/exemplo.png",
         "products": [
             {
                 "id": 1,
-                "name": "Telhas Térmicas",
+                "name": "Telhas e Revestimentos",
                 "slug": "telhas-termicas",
-                "description": "Telhas com isolamento térmico superior, reduzindo custos com energia e proporcionando conforto.",
+                "description": "Telhas e painéis da Isoart para coberturas e fachadas. Disponíveis com ou sem isolamento térmico em EPS/PIR, oferecem eficiência energética e resistência. Adequados para diversos projetos de construção.",
                 "image": "/img/produtos/telhastermicas.jpg",
                 "specifications": {
                     "material": "Aço galvanizado + EPS/PIR",

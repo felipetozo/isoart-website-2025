@@ -2,10 +2,10 @@
     "id": 4,
     "title": "Molduras Decorativas",
     "slug": "molduras-decorativas",
-    "metaDescription": "Conheça as molduras decorativas em EPS da ISOART, perfeitas para acabamentos elegantes e funcionais.",
+    "metaDescription": "Molduras em EPS para portas, janelas e paredes. Leves, duráveis e de fácil instalação, são ideais para acabamentos decorativos em ambientes internos e externos.",
     "hero": {
         "title": "Molduras Decorativas",
-        "description": "A ISOART oferece molduras em EPS que combinam design e durabilidade para diversos ambientes.",
+        "description": "Molduras em EPS para portas, janelas e paredes. Leves, duráveis e de fácil instalação, são ideais para acabamentos decorativos em ambientes internos e externos.",
         "buttonText": "Entre em contato",
         "buttonLink": "/contato",
         "backgroundImage": "/img/geral/exemplo.png"
@@ -81,8 +81,8 @@
         },
         {
             "id": 3,
-            "title": "Durabilidade e Resistência",
-            "description": "Materiais resistentes às intempéries garantem longa vida útil, baixa manutenção e excelente acabamento estético."
+            "title": "Durabilidade prolongada",
+            "description": "Material leve, resistente e de baixa manutenção, garantindo uma vida útil estendida com excelente custo-benefício."
         }
     ]
 }

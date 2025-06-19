@@ -6,9 +6,7 @@ import menuData from '@/app/data/menuData.json';
 import SobreEmpresa from '@/app/components/SobreEmpresa/SobreEmpresa';
 import MainForm from '@/app/components/MainForm/MainForm';
 import Button from '@/app/views/UI/Button';
-import { TbWindOff } from "react-icons/tb";
-import { TbShieldShare } from "react-icons/tb";
-import { TbTopologyStarRing2 } from "react-icons/tb";
+import BenefitsSection from '@/app/components/BenefitsSection/BenefitsSection';
 
 // Updated interfaces to match the actual data structure
 interface Product {
@@ -34,7 +32,7 @@ interface Benefit {
     id: number;
     title: string;
     description: string;
-    icon?: string; // Optional icon field for future JSON updates
+    icon?: string;
 }
 
 interface CategoryData {
@@ -54,20 +52,6 @@ interface CategoryData {
 interface CategoryPageProps {
     params: Promise<{ category: string }>;
 }
-
-// Map benefit titles to specific icons
-const getBenefitIcon = (title: string): React.ReactElement => {
-    switch (title) {
-        case 'Isolamento térmico':
-            return <TbWindOff size={40} />;
-        case 'Alta resistência':
-            return <TbTopologyStarRing2 size={40} />;
-        case 'Durabilidade prolongada':
-            return <TbShieldShare size={40} />;
-        default:
-            return <TbWindOff size={40} />;
-    }
-};
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
     const { category } = await params;
@@ -165,21 +149,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 </div>
             </section>
 
-            {/* Benefits Section */}
-            <section className={styles.BenefitsSection}>
-                <div className={styles.BenefitsWrapper}>
-                    {benefitsSection.map((benefit) => (
-                        <div key={benefit.id} className={styles.BenefitsCard}>
-                            <div className={styles.BenefitIcon}>
-                                {getBenefitIcon(benefit.title)}
-                            </div>
-                            <h5>{benefit.title}</h5>
-                            <p>{benefit.description}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
+            <BenefitsSection benefits={benefitsSection} />
             <SobreEmpresa />
             <MainForm />
         </div>

@@ -7,6 +7,7 @@
     left: 0;
     overflow: hidden;
     z-index: 1;
+    cursor: grab;
 }
 
 .SliderWrapper {
@@ -63,9 +64,10 @@
 }
 
 .HeroContainer p {
-    font-size: 1.2rem;
-    max-width: 600px;
+    max-width: 800px;
+    line-height: 1.2;
     margin-bottom: 1.25rem;
+    color: rgba(var(--color-almostWhite), 0.75);
 }
 
 .split {

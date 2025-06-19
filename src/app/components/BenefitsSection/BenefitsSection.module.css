@@ -1,0 +1,37 @@
+.BenefitsSection {
+    width: 100%;
+    background-color: rgba(var(--color-almostWhite), 1);
+    padding: 10rem 0;
+    color: rgba(var(--color-almostBlack), 1);
+}
+
+.BenefitsWrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    gap: 5rem;
+    max-width: 1600px;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.BenefitsCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.BenefitsCard h5 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(var(--color-isoartBlue), 1);
+}
+
+.BenefitIcon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: max-content;
+    margin-bottom: 1rem;
+    color: rgba(var(--color-isoartGold), 0.5);
+}
