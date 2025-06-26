@@ -1,17 +1,11 @@
 'use client';
 import { useState } from 'react';
 import styles from './MainForm.module.css';
-import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
+import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn } from 'react-icons/md';
 import { BsWhatsapp } from 'react-icons/bs';
 import FormField from '@/app/views/UI/Form/FormField';
-import FormSelection from '@/app/views/UI/Form/FormSelection';
 import Button from '@/app/views/UI/Button';
 import Image from 'next/image';
-import { createClient } from '@supabase/supabase-js';
-
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 interface FormData {
     name: string;
@@ -20,6 +14,39 @@ interface FormData {
     solution: string;
     city: string;
 }
+
+// Componente FormSelection inline para evitar problemas de dependência
+interface FormSelectionProps {
+    id: string;
+    label: string;
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+    options: Array<{ value: string; label: string }>;
+    error?: string;
+}
+
+const FormSelection: React.FC<FormSelectionProps> = ({
+    id,
+    label,
+    value,
+    onChange,
+    options = [], // Valor padrão para evitar undefined
+    error
+}) => {
+    return (
+        <div>
+            <label htmlFor={id}>{label}</label>
+            <select id={id} name={id} value={value} onChange={onChange}>
+                {options.map((option) => (
+                    <option key={option.value} value={option.value}>
+                        {option.label}
+                    </option>
+                ))}
+            </select>
+            {error && <span className="error">{error}</span>}
+        </div>
+    );
+};
 
 function MainForm() {
     const [formData, setFormData] = useState<FormData>({
@@ -52,21 +79,18 @@ function MainForm() {
         if (!validateForm()) return;
 
         setSubmitStatus('submitting');
+
         try {
-            const { error } = await supabase.from('contact_requests').insert([
-                {
-                    name: formData.name,
-                    email: formData.email,
-                    phone: formData.phone,
-                    solution: formData.solution,
-                    city: formData.city,
-                },
-            ]);
-            if (error) throw error;
+            // Aqui você pode adicionar a lógica para enviar para seu backend PHP/MySQL
+            console.log('Dados do formulário:', formData);
+
+            // Simular envio por enquanto
+            await new Promise(resolve => setTimeout(resolve, 1000));
+
             setSubmitStatus('success');
             setFormData({ name: '', email: '', phone: '', solution: '', city: '' });
         } catch (error) {
-            console.error('Error submitting form:', error);
+            console.error('Erro ao enviar formulário:', error);
             setSubmitStatus('error');
         }
     };
@@ -144,6 +168,7 @@ function MainForm() {
                                     { value: 'paineis', label: 'Painéis Sanduíche' },
                                     { value: 'mantas', label: 'Mantas Térmicas' },
                                 ]}
+                                error={errors.solution}
                             />
                         </div>
                         <div className={styles.cadastroFormFields}>
@@ -157,6 +182,7 @@ function MainForm() {
                                     { value: 'santa_tereza', label: 'Santa Tereza do Oeste - PR' },
                                     { value: 'xanxere', label: 'Xanxerê - SC' },
                                 ]}
+                                error={errors.city}
                             />
                         </div>
                         <div className={styles.cadastroFormFields}>
@@ -178,47 +204,110 @@ function MainForm() {
                             <p className={styles.errorMessage}>Erro ao enviar. Tente novamente.</p>
                         )}
                     </form>
+
                     <div className={styles.MainFormLocationsListItem}>
                         <Image
                             src={'/img/geral/endereco-1.jpg'}
-                            alt="Logotipo Isoart"
+                            alt="Fábrica 1 Isoart"
                             width={1000}
                             height={700}
                         />
                         <h3>Fábrica 1 (Matriz)</h3>
-                        <span>+55 45 3231 1699</span>
-                        <span>+55 45 99133 9642</span>
-                        <span>contato@isoart.com.br</span>
-                        <span>Rua Dorivaldo Soncela, 1490</span>
-                        <span>Santa Tereza do Oeste - Paraná</span>
+                        <div className={styles.MainFormContactItem}>
+                            <a href="tel:+554532311699">
+                                <MdOutlinePhoneInTalk />
+                                <p>+55 45 3231 1699</p>
+                            </a>
+                        </div>
+                        <div className={styles.MainFormContactItem}>
+                            <a href="https://wa.me/5545991339642" target="_blank" rel="noopener noreferrer">
+                                <BsWhatsapp />
+                                <p>+55 45 99133 9642</p>
+                            </a>
+                        </div>
+                        <div className={styles.MainFormContactItem}>
+                            <a href="mailto:contato@isoart.com.br">
+                                <MdOutlineMarkEmailUnread />
+                                <p>contato@isoart.com.br</p>
+                            </a>
+                        </div>
+                        <div className={styles.MainFormContactItem}>
+                            <a href="https://maps.google.com/?q=Rua+Dorivaldo+Soncela,+1490,+Santa+Tereza+do+Oeste,+Paraná" target="_blank" rel="noopener noreferrer">
+                                <MdLocationOn />
+                                <p>Rua Dorivaldo Soncela, 1490<br />
+                                    Santa Tereza do Oeste - Paraná</p>
+                            </a>
+                        </div>
                     </div>
+
                     <div className={styles.MainFormLocationsListItem}>
                         <Image
                             src={'/img/geral/endereco-1.jpg'}
-                            alt="Logotipo Isoart"
+                            alt="Fábrica 2 Isoart"
                             width={1000}
                             height={700}
                         />
                         <h3>Fábrica 2</h3>
-                        <span>+55 49 3433 2025</span>
-                        <span>+55 49 99963 8373</span>
-                        <span>contato@isoart.com.br</span>
-                        <span>Rodovia BR 282 - KM 496</span>
-                        <span>Xanxerê - Santa Catarina</span>
+                        <div className={styles.MainFormContactItem}>
+                            <a href="tel:+554934332025">
+                                <MdOutlinePhoneInTalk />
+                                <p>+55 49 3433 2025</p>
+                            </a>
+                        </div>
+                        <div className={styles.MainFormContactItem}>
+                            <a href="https://wa.me/5549999638373" target="_blank" rel="noopener noreferrer">
+                                <BsWhatsapp />
+                                <p>+55 49 99963 8373</p>
+                            </a>
+                        </div>
+                        <div className={styles.MainFormContactItem}>
+                            <a href="mailto:contato@isoart.com.br">
+                                <MdOutlineMarkEmailUnread />
+                                <p>contato@isoart.com.br</p>
+                            </a>
+                        </div>
+                        <div className={styles.MainFormContactItem}>
+                            <a href="https://maps.google.com/?q=Rodovia+BR+282+KM+496,+Xanxerê,+Santa+Catarina" target="_blank" rel="noopener noreferrer">
+                                <MdLocationOn />
+                                <p>Rodovia BR 282 - KM 496<br />
+                                    Xanxerê - Santa Catarina</p>
+                            </a>
+                        </div>
                     </div>
+
                     <div className={styles.MainFormLocationsListItem}>
                         <Image
                             src={'/img/geral/endereco-1.jpg'}
-                            alt="Logotipo Isoart"
+                            alt="Fábrica 3 Isoart"
                             width={1000}
                             height={700}
                         />
                         <h3>Fábrica 3</h3>
-                        <span>+55 45 3011 1000</span>
-                        <span>+55 49 99826 0240</span>
-                        <span>contato@isoart.com.br</span>
-                        <span>Rodovia BR 277 - KM 608</span>
-                        <span>Santa Tereza do Oeste - Paraná</span>
+                        <div className={styles.MainFormContactItem}>
+                            <a href="tel:+554530111000">
+                                <MdOutlinePhoneInTalk />
+                                <p>+55 45 3011 1000</p>
+                            </a>
+                        </div>
+                        <div className={styles.MainFormContactItem}>
+                            <a href="https://wa.me/5549998260240" target="_blank" rel="noopener noreferrer">
+                                <BsWhatsapp />
+                                <p>+55 49 99826 0240</p>
+                            </a>
+                        </div>
+                        <div className={styles.MainFormContactItem}>
+                            <a href="mailto:contato@isoart.com.br">
+                                <MdOutlineMarkEmailUnread />
+                                <p>contato@isoart.com.br</p>
+                            </a>
+                        </div>
+                        <div className={styles.MainFormContactItem}>
+                            <a href="https://maps.google.com/?q=Rodovia+BR+277+KM+608,+Santa+Tereza+do+Oeste,+Paraná" target="_blank" rel="noopener noreferrer">
+                                <MdLocationOn />
+                                <p>Rodovia BR 277 - KM 608<br />
+                                    Santa Tereza do Oeste - Paraná</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
