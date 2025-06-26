@@ -151,8 +151,7 @@ function Hero() {
                                     ref={(el) => {
                                         containerRefs.current[index] = el;
                                     }}
-                                    className={styles.HeroContainer}
-                                >
+                                    className={styles.HeroContainer}>
                                     <h1 className={styles.split}>{slide.title}</h1>
                                     <p className={styles.split}>{slide.description}</p>
                                     <Link href={slide.buttonLink}>

@@ -18,16 +18,22 @@ function MainForm() {
                         </h4>
                         <div className={styles.MainFormHeaderContainer}>
                             <div className={styles.MainFormContactItem}>
-                                <MdOutlinePhoneInTalk />
-                                <p>+55 45 3231 1699</p>
+                                <a href="tel:+554532311699">
+                                    <MdOutlinePhoneInTalk />
+                                    <p>+55 45 3231 1699</p>
+                                </a>
                             </div>
                             <div className={styles.MainFormContactItem}>
-                                <BsWhatsapp />
-                                <p>+55 45 99133 9642</p>
+                                <a href="tel:+5545991339642">
+                                    <BsWhatsapp />
+                                    <p>+55 45 99133 9642</p>
+                                </a>
                             </div>
                             <div className={styles.MainFormContactItem}>
-                                <MdOutlineMarkEmailUnread />
-                                <p>contato@isoart.com.br</p>
+                                <a href="mailto:contato@isoart.com.br">
+                                    <MdOutlineMarkEmailUnread />
+                                    <p>contato@isoart.com.br</p>
+                                </a>
                             </div>
                         </div>
                     </div>

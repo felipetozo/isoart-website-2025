@@ -29,11 +29,20 @@
     justify-content: space-between;
 }
 
-.MainFormContactItem {
+.MainFormContactItem a {
     max-width: max-content;
     display: flex;
     align-items: center;
+    height: max-content;
     gap: 0.5rem;
+}
+
+.MainFormContactItem a:hover {
+    color: rgba(var(--color-lightestBlue), 1);
+}
+
+.MainFormContactItem a:hover svg {
+    color: rgba(var(--color-almostWhite), 1);
 }
 
 .MainFormContactItem svg {
