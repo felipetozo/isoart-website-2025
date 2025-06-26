@@ -88,7 +88,7 @@ function Footer() {
                 <div className={styles.FooterWrapper}>
                     <div className={styles.FooterCNPJ}>
                         <p>
-                            {new Date().getFullYear()} - Isoart Indústria de produtos térmicos e construtivos ltda. CNPJ: 09.094.564/0001-05
+                            2008 - {new Date().getFullYear()} | Isoart Indústria de produtos térmicos e construtivos ltda. CNPJ: 09.094.564/0001-05
                         </p>
                     </div>
                 </div>
