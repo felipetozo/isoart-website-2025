@@ -17,7 +17,7 @@
             "name": "Molduras para portas e Janelas",
             "slug": "molduras-portas-janelas",
             "description": "Molduras para acabamento de portas e janelas com design elegante.",
-            "image": "/img/geral/exemplo.png",
+            "image": "/img/produtos/moldurasportasjanelas.jpg",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Portas e Janelas"
@@ -28,7 +28,7 @@
             "name": "Molduras para Beiral",
             "slug": "molduras-beiral",
             "description": "Molduras para beirais com acabamento sofisticado.",
-            "image": "/img/geral/exemplo.png",
+            "image": "/img/produtos/moldurasbeiral.jpg",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Beirais"
@@ -39,7 +39,7 @@
             "name": "Molduras para Colunas e Capitéis",
             "slug": "molduras-colunas-capiteis",
             "description": "Molduras para colunas e capitéis com estilo clássico.",
-            "image": "/img/geral/exemplo.png",
+            "image": "/img/produtos/moldurascolunascapiteis.jpg",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Colunas"
@@ -50,7 +50,7 @@
             "name": "Molduras para Muros",
             "slug": "molduras-muros",
             "description": "Molduras para muros com resistência e estética.",
-            "image": "/img/geral/exemplo.png",
+            "image": "/img/produtos/moldurasmuros.jpg",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Muros"
@@ -61,7 +61,7 @@
             "name": "Molduras para Paredes",
             "slug": "molduras-paredes",
             "description": "Molduras para paredes com design versátil.",
-            "image": "/img/geral/exemplo.png",
+            "image": "/img/produtos/moldurasparedes.jpg",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Paredes"

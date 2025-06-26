@@ -70,6 +70,7 @@ interface Benefit {
     id: number;
     title: string;
     description: string;
+    icon?: string;
 }
 
 interface CategoryData {
@@ -95,6 +96,21 @@ interface ProductPageProps {
     params: Promise<{ category: string; product: string }>;
 }
 
+// Função para buscar dados da categoria
+async function getCategoryData(categorySlug: string): Promise<CategoryData | undefined> {
+    let categoryData: CategoryData | undefined;
+
+    try {
+        const normalizedCategory = categorySlug.toLowerCase().replace(/ /g, '-');
+        const categoryFile = await import(`@/app/data/categories/${normalizedCategory}.json`);
+        categoryData = categoryFile.default as CategoryData;
+    } catch (error) {
+        categoryData = (menuData as CategoryData[]).find((item: CategoryData) => item.slug === categorySlug);
+    }
+
+    return categoryData;
+}
+
 export default async function ProductPage({ params }: ProductPageProps) {
     const { category, product } = await params;
 
@@ -116,6 +132,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
         notFound();
     }
 
+    // Buscar dados da categoria para pegar os benefícios
+    const categoryData = await getCategoryData(category);
+
     const heroSection = productData.hero || {
         title: productData.name,
         description: 'Descubra a solução ideal para coberturas eficientes com isolamento térmico superior.',
@@ -129,7 +148,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
         description: 'A Telha Térmica Isoart é uma solução leve e eficiente para a construção civil, substituindo com vantagens os sistemas tradicionais. Produzida com núcleos de poliestireno expandido (EPS) ou poliisocianurato (PIR) e revestimento em aço galvalume, proporciona estruturas mais leves, redução de carga nas fundações e maior agilidade na obra. Além de excelente desempenho térmico, permite economia significativa de concreto, aço e mão de obra, sendo ideal para projetos que exigem produtividade, conforto e custo-benefício.'
     };
 
-    const benefits = productData.benefits || [];
+    // Usar os benefícios da categoria se existirem, senão usar os benefícios do produto ou padrão
+    const benefits = categoryData?.benefits || productData.benefits || [
+        { id: 1, title: "Qualidade Superior", description: "Produtos com rigoroso controle de qualidade." },
+        { id: 2, title: "Eficiência Garantida", description: "Soluções que entregam o melhor desempenho." }
+    ];
 
     const generalCharacteristics = productData.generalCharacteristics || [
         'Adaptações personalizadas de altura, largura e comprimento',
@@ -207,7 +230,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 </div>
             </section>
 
-            {/* Benefits */}
+            {/* Benefits - Agora usando os benefícios da categoria */}
             <BenefitsSection benefits={benefits} />
 
             {/* General Characteristics */}
@@ -220,7 +243,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                     <div className={styles.featuresGrid}>
                         {generalCharacteristics.map((char, index) => (
                             <div key={index} className={styles.feature}>
-                                <span><TbChecks size={24} /></span> {char}
+                                <span><TbChecks size={24} /></span> <p>{char}</p>
                             </div>
                         ))}
                     </div>
@@ -255,14 +278,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <section className={styles.TechnicalSpecsSection}>
                 <div className={styles.TechnicalSpecsWrapper}>
                     <div className={styles.TechnicalSpecsContent}>
-                        <div className={styles.Blueprint}>
-                            <Image
-                                src={technicalSpecs.image || '/img/geral/exemplo3.png'}
-                                alt={technicalSpecs.alt || productData.name || 'Especificações Técnicas'}
-                                width={600}
-                                height={400}
-                            />
-                        </div>
                         <div className={styles.SpecDetails}>
                             <h4>Características técnicas</h4>
 

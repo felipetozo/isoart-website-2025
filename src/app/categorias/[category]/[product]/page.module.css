@@ -56,7 +56,7 @@
 
 .ProductPageDescriptionSection {
     width: 100%;
-    padding: 5rem 0;
+    padding: 5rem 0 0 0;
 }
 
 .ProductPageDescriptionWrapper {
@@ -82,12 +82,6 @@
     width: 100%;
     justify-content: space-between;
     overflow: hidden;
-}
-
-.CarouselImages {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
 }
 
 .BenefitsSection {
@@ -128,23 +122,38 @@
     gap: 2rem;
 }
 
+.GeneralCharacteristicsWrapper h3 {
+    color: rgba(var(--color-isoartGold), 1);
+}
+
 .GeneralCharacteristicsWrapper img {
     overflow: hidden;
 }
 
-.CharacteristicsGrid {
+.featuresGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(27.5rem, 1fr));
     gap: 1rem;
 }
 
-.CharacteristicsGrid span {
+.feature span {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0;
     padding: 0.5rem;
     border-radius: 100%;
+    background-color: rgba(var(--color-isoartGold), 1);
+}
+
+.feature {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.feature p {
+    color: rgba(var(--color-almostBlack), 0.65);
 }
 
 .CharacteristicItem {
@@ -209,7 +218,7 @@
 .TechnicalSpecsSection {
     width: 100%;
     padding: 5rem 0;
-    background-color: rgba(var(--color-neutral-semiLight), 1);
+    background-color: rgba(var(--color-isoartBlue), 1);
 }
 
 .TechnicalSpecsWrapper {

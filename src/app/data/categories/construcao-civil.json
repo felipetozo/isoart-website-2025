@@ -17,7 +17,7 @@
             "name": "Lajes em EPS",
             "slug": "lajes-em-eps",
             "description": "Lajes com preenchimento em EPS, reduzindo custos e melhorando a estrutura.",
-            "image": "/img/geral/exemplo.png",
+            "image": "/img/produtos/lajesemeps.jpg",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Lajes"
@@ -28,7 +28,7 @@
             "name": "Flocos em EPS",
             "slug": "flocos-em-eps",
             "description": "Flocos de EPS para diversas aplicações em construção.",
-            "image": "/img/geral/exemplo.png",
+            "image": "/img/produtos/flocosemeps.jpg",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Preenchimento"
@@ -39,7 +39,7 @@
             "name": "Blocos em EPS",
             "slug": "blocos-em-eps",
             "description": "Blocos de EPS para construções leves e resistentes.",
-            "image": "/img/geral/exemplo.png",
+            "image": "/img/produtos/blocosemeps.jpg",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Blocos"
@@ -50,7 +50,7 @@
             "name": "Chapas e Painéis em EPS",
             "slug": "chapas-paineis-em-eps",
             "description": "Chapas e painéis de EPS para diversas construções.",
-            "image": "/img/geral/exemplo.png",
+            "image": "/img/produtos/chapaspaineisemeps.jpg",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Painéis"

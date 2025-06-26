@@ -33,7 +33,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--border-color, transparent);
+    background-color: rgba(var(--color-isoartGold), 1);
 }
 
 .TabButton:hover {
