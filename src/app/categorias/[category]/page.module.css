@@ -104,6 +104,7 @@
     flex-direction: column;
     overflow: hidden;
     justify-content: space-between;
+    height: 100%;
     border-radius: 0.2rem;
     background-color: rgba(var(--color-isoartGold), 0.15);
     border: 1px solid rgba(var(--color-isoartBlue), 0.25);
@@ -121,6 +122,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
+    height: 100%;
     margin: 0 0 1rem 0;
     color: rgba(var(--color-almostBlack), 0.5);
 }
@@ -134,15 +136,10 @@
 .CategoryProductsGridImg img {
     width: 100%;
     border-radius: 0.1rem;
+    mix-blend-mode: multiply;
 }
 
 /* Responsive Design */
-
-@media (min-width: 800px) and (max-width:1199px) {
-    .CategoryPageHeroSection {
-        height: 50vw;
-    }
-}
 
 @media (min-width: 1200px) {
     .CategoryPageHeroSection {

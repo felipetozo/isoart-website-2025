@@ -129,19 +129,21 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                             <article key={product.id} className={styles.CategoryProductsGridCard}>
                                 <Link href={`/categorias/${categoryData.slug}/${product.slug}`}>
                                     <div className={styles.CategoryProductsGridContent}>
-                                        <h4>{product.name}</h4>
-                                        <p>{product.description}</p>
-                                    </div>
-                                    {product.image && (
-                                        <div className={styles.CategoryProductsGridImg}>
-                                            <Image
-                                                src={product.image}
-                                                alt={product.name}
-                                                width={300}
-                                                height={200}
-                                            />
+                                        {product.image && (
+                                            <div className={styles.CategoryProductsGridImg}>
+                                                <Image
+                                                    src={product.image}
+                                                    alt={product.name}
+                                                    width={300}
+                                                    height={200}
+                                                />
+                                            </div>
+                                        )}
+                                        <div>
+                                            <h4>{product.name}</h4>
+                                            <p>{product.description}</p>
                                         </div>
-                                    )}
+                                    </div>
                                 </Link>
                             </article>
                         ))}
