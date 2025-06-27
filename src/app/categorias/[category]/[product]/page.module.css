@@ -124,6 +124,7 @@
 
 .GeneralCharacteristicsWrapper h3 {
     color: rgba(var(--color-isoartGold), 1);
+    margin-top: 3rem;
 }
 
 .GeneralCharacteristicsWrapper img {
@@ -148,8 +149,12 @@
 
 .feature {
     display: flex;
-    gap: 0.5rem;
+    gap: 1rem;
     align-items: center;
+    background-color: rgba(var(--color-neutral-light), 0.25);
+    border: 1px solid rgba(var(--color-isoartGold), 0.25);
+    padding: 2rem;
+    border-radius: 0.2rem;
 }
 
 .feature p {
@@ -201,17 +206,26 @@
     flex-direction: column;
     gap: 2rem;
     padding: 1rem;
-    border-radius: 0.4rem;
+    border-radius: 0.2rem;
     width: 100%;
+    background-color: rgba(var(--color-neutral-light), 1);
+    border: 1px solid rgba(var(--color-isoartGold), 0.1);
 }
 
 .VideoPlaceholder {
     display: flex;
-    width: 90%;
+    width: 100%;
+    overflow: hidden;
+    height: 35rem;
     margin: 0 auto;
     max-width: 1600px;
     justify-content: center;
-    padding: 5rem 0 0 0;
+}
+
+.VideoPlaceholder img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.2rem;
 }
 
 /* Technical Specifications Section */

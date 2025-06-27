@@ -239,7 +239,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                     <div className={styles.VideoPlaceholder}>
                         <Image src={productData.image || '/img/geral/exemplo2.png'} alt={productData.name} width={1600} height={500} />
                     </div>
-                    <h3>Características Gerais</h3>
+                    <h3>Características Gerais:</h3>
                     <div className={styles.featuresGrid}>
                         {generalCharacteristics.map((char, index) => (
                             <div key={index} className={styles.feature}>
@@ -265,9 +265,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
                             ))}
                         </div>
                     </div>
-                </div>
-                <div className={styles.VideoPlaceholder}>
-                    <Image src={productData.image || '/img/geral/exemplo2.png'} alt={productData.name} width={1280} height={720} />
                 </div>
             </section>
 
