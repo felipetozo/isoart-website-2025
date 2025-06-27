@@ -1,0 +1,154 @@
+{
+    "id": 12,
+    "name": "Molduras para Colunas e Capitéis",
+    "slug": "molduras-para-colunas-e-capiteis",
+    "description": "Molduras em EPS de alta densidade com revestimento flexível, projetadas para colunas e capitéis, oferecendo elegância, leveza e personalização para projetos arquitetônicos.",
+    "image": "/img/produtos/moldurascolunascapiteis.jpg",
+    "specifications": {
+        "material": "EPS virgem com revestimento de resina polimérica",
+        "densidade": "20-30 kg/m³",
+        "dimensoes": "Personalizável (quadradas ou redondas)",
+        "aplicacao": "Colunas e capitéis internos e externos"
+    },
+    "hero": {
+        "title": "Molduras para Colunas e Capitéis",
+        "description": "Soluções decorativas para colunas e capitéis, combinando sofisticação e facilidade de instalação.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/produtos/moldurascolunascapiteis.jpg"
+    },
+    "categoryDescription": {
+        "title": "As Molduras para Colunas e Capitéis Isoart trazem charme e elegância para projetos arquitetônicos internos e externos.",
+        "description": "As Molduras para Colunas e Capitéis Isoart são fabricadas em EPS de alta densidade com revestimento flexível, ideais para envolver pilares quadrados (até 30x30 cm) ou redondos (diâmetro até 30 cm). Com instalação simples e personalização, oferecem estética sofisticada, resistência a variações climáticas e baixo impacto estrutural, perfeitas para residências e edifícios comerciais."
+    },
+    "projectImages": [
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Design sofisticado",
+            "description": "Valoriza colunas com acabamentos personalizáveis."
+        },
+        {
+            "id": 2,
+            "title": "Leveza estrutural",
+            "description": "Não sobrecarrega pilares, ideal para reformas."
+        },
+        {
+            "id": 3,
+            "title": "Resistência climática",
+            "description": "Suporta umidade e variações térmicas sem danos."
+        }
+    ],
+    "generalCharacteristics": [
+        "EPS de alta densidade (20-30 kg/m³)",
+        "Revestimento flexível com resina polimérica e pós minerais",
+        "Resistência à compressão de 0,15-0,25 MPa",
+        "Absorção de água < 4% em 5 anos",
+        "Modelos quadrados ou redondos para pilares até 30 cm",
+        "100% reciclável, sem emissão de CFC"
+    ],
+    "applications": {
+        "title": "Soluções elegantes para colunas e capitéis em projetos arquitetônicos",
+        "description": "As Molduras para Colunas e Capitéis Isoart são ideais para revestir pilares em ambientes internos e externos, oferecendo estética clássica ou moderna. Com instalação rápida e resistência a intempéries, são perfeitas para residências, escritórios e espaços comerciais.",
+        "indications": [
+            {
+                "icon": "🏠",
+                "text": "Colunas residenciais"
+            },
+            {
+                "icon": "🏢",
+                "text": "Pilares em escritórios"
+            },
+            {
+                "icon": "🏬",
+                "text": "Fachadas comerciais"
+            },
+            {
+                "icon": "🛠️",
+                "text": "Projetos de decoração"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Estética personalizável": "Disponíveis em modelos quadrados ou redondos, as molduras permitem acabamentos como massas, texturas e pinturas, adaptando-se a projetos clássicos ou modernos.",
+        "Instalação prática": "Fixação com argamassa AC-3 e tarugos de madeira para peças maiores garante rapidez e precisão, com emendas reforçadas por espuma PU e fita telada.",
+        "Durabilidade externa": "O EPS de alta densidade e o revestimento flexível resistem a chuvas, sol e variações térmicas, ideal para colunas externas sem trincas.",
+        "Sustentabilidade": "100% recicláveis e livres de CFC, as molduras Isoart são ambientalmente responsáveis, com logística reversa pela empresa."
+    },
+    "technicalSpecs": {
+        "image": "/img/geral/exemplo3.png",
+        "alt": "Molduras para Colunas e Capitéis Isoart - Especificações Técnicas",
+        "table": {
+            "headers": [
+                "Modelo",
+                "Densidade (kg/m³)",
+                "Dimensões",
+                "Peso aproximado (kg/m²)",
+                "Resistência à compressão",
+                "Absorção de água",
+                "Acabamento"
+            ],
+            "rows": [
+                [
+                    "Moldura EPS 20",
+                    "20",
+                    "Personalizável",
+                    "0.4",
+                    "0,15 MPa",
+                    "< 4%",
+                    "Massa flexível"
+                ],
+                [
+                    "Moldura EPS 25",
+                    "25",
+                    "Personalizável",
+                    "0.5",
+                    "0,2 MPa",
+                    "< 4%",
+                    "Massa flexível"
+                ],
+                [
+                    "Moldura EPS 30",
+                    "30",
+                    "Personalizável",
+                    "0.6",
+                    "0,25 MPa",
+                    "< 4%",
+                    "Massa flexível"
+                ]
+            ]
+        },
+        "features": [
+            {
+                "icon": "♻️",
+                "title": "100% Reciclável"
+            },
+            {
+                "icon": "🌿",
+                "title": "Sem emissão de CFC"
+            },
+            {
+                "icon": "📏",
+                "title": "Fabricado sob medida"
+            }
+        ],
+        "downloads": [
+            {
+                "title": "Ficha técnica Molduras para Colunas e Capitéis Isoart",
+                "icon": "📄",
+                "link": "/downloads/ficha-tecnica-molduras-colunas-capiteis.pdf"
+            },
+            {
+                "title": "Catálogo de produtos Isoart",
+                "icon": "📋",
+                "link": "/downloads/catalogo-produtos-isoart.pdf"
+            }
+        ]
+    }
+}

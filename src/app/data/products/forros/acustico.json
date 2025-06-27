@@ -1,0 +1,154 @@
+{
+    "id": 11,
+    "name": "Acústico",
+    "slug": "acustico",
+    "description": "Forro Acústico em EPS de alta densidade, projetado para absorção sonora e isolamento térmico, ideal para ambientes que exigem conforto acústico e estético.",
+    "image": "/img/produtos/acustico.jpg",
+    "specifications": {
+        "material": "EPS virgem com revestimento acústico opcional",
+        "densidade": "15-20 kg/m³",
+        "dimensoes": "Personalizável sob consulta",
+        "aplicacao": "Tetos internos com exigência acústica"
+    },
+    "hero": {
+        "title": "Forro Acústico",
+        "description": "Solução em EPS para tetos com alta absorção sonora, leveza e isolamento térmico, ideal para ambientes residenciais e comerciais.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/produtos/acustico.jpg"
+    },
+    "categoryDescription": {
+        "title": "O Forro Acústico Isoart proporciona conforto sonoro e térmico para ambientes internos.",
+        "description": "O Forro Acústico Isoart, fabricado em EPS de alta densidade, é projetado para reduzir ruídos e oferecer isolamento térmico. Substitui materiais tradicionais como gesso, com maior leveza e resistência a umidade. Ideal para auditórios, escritórios e espaços comerciais que exigem conforto acústico, combina estética, funcionalidade e instalação rápida, com opções personalizáveis."
+    },
+    "projectImages": [
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Absorção sonora",
+            "description": "Reduz ruídos, melhorando o conforto em ambientes internos."
+        },
+        {
+            "id": 2,
+            "title": "Instalação prática",
+            "description": "Fixação com adesivos ou argamassa, reduzindo custos de obra."
+        },
+        {
+            "id": 3,
+            "title": "Isolamento térmico",
+            "description": "Contribui para economia de energia em climatização."
+        }
+    ],
+    "generalCharacteristics": [
+        "EPS de alta densidade (15-20 kg/m³)",
+        "Condutividade térmica de ~0,035 W/m·K",
+        "Resistência à compressão de 0,10-0,15 MPa",
+        "Absorção de água < 4% em 5 anos",
+        "Design otimizado para absorção sonora",
+        "100% reciclável, sem emissão de CFC"
+    ],
+    "applications": {
+        "title": "Forro acústico para ambientes que exigem conforto sonoro e estético",
+        "description": "O Forro Acústico Isoart é ideal para tetos internos que requerem redução de ruídos, como auditórios, salas de reunião e restaurantes. Com leveza, resistência a umidade e isolamento térmico, oferece funcionalidade e estética para projetos residenciais e comerciais.",
+        "indications": [
+            {
+                "icon": "🏠",
+                "text": "Home theaters e salas de estar"
+            },
+            {
+                "icon": "🏢",
+                "text": "Salas de reunião e escritórios"
+            },
+            {
+                "icon": "🎭",
+                "text": "Auditórios e teatros"
+            },
+            {
+                "icon": "🏬",
+                "text": "Restaurantes e lojas"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Absorção sonora": "O design otimizado do EPS e revestimentos acústicos opcionais reduzem ruídos, proporcionando conforto sonoro em ambientes internos.",
+        "Instalação eficiente": "Fixação com adesivos específicos ou argamassa AC-3 garante rapidez, praticidade e limpeza, com emendas reforçadas por fita telada.",
+        "Isolamento térmico": "O EPS de baixa condutividade térmica (~0,035 W/m·K) contribui para conforto térmico e economia de energia.",
+        "Sustentabilidade": "100% reciclável e livre de CFC, o Forro Acústico é ambientalmente responsável, com logística reversa praticada pela Isoart."
+    },
+    "technicalSpecs": {
+        "image": "/img/geral/exemplo3.png",
+        "alt": "Forro Acústico Isoart - Especificações Técnicas",
+        "table": {
+            "headers": [
+                "Modelo",
+                "Densidade (kg/m³)",
+                "Dimensões",
+                "Peso aproximado (kg/m²)",
+                "Resistência à compressão",
+                "Absorção de água",
+                "Acabamento"
+            ],
+            "rows": [
+                [
+                    "Acústico EPS 15",
+                    "15",
+                    "Personalizável",
+                    "0.3",
+                    "0,10 MPa",
+                    "< 4%",
+                    "Lisa ou acústica"
+                ],
+                [
+                    "Acústico EPS 18",
+                    "18",
+                    "Personalizável",
+                    "0.35",
+                    "0,12 MPa",
+                    "< 4%",
+                    "Lisa ou acústica"
+                ],
+                [
+                    "Acústico EPS 20",
+                    "20",
+                    "Personalizável",
+                    "0.4",
+                    "0,15 MPa",
+                    "< 4%",
+                    "Lisa ou acústica"
+                ]
+            ]
+        },
+        "features": [
+            {
+                "icon": "♻️",
+                "title": "100% Reciclável"
+            },
+            {
+                "icon": "🌿",
+                "title": "Sem emissão de CFC"
+            },
+            {
+                "icon": "📏",
+                "title": "Fabricado sob medida"
+            }
+        ],
+        "downloads": [
+            {
+                "title": "Ficha técnica Forro Acústico Isoart",
+                "icon": "📄",
+                "link": "/downloads/ficha-tecnica-acustico.pdf"
+            },
+            {
+                "title": "Catálogo de produtos Isoart",
+                "icon": "📋",
+                "link": "/downloads/catalogo-produtos-isoart.pdf"
+            }
+        ]
+    }
+}

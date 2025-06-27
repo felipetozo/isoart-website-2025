@@ -1,0 +1,145 @@
+{
+    "id": 21,
+    "name": "Pérolas em EPS",
+    "slug": "perolas-em-eps",
+    "description": "Pérolas em EPS para preenchimento de embalagens, oferecendo proteção contra impactos e leveza para transporte de produtos frágeis.",
+    "image": "/img/produtos/perolas-em-eps.jpg",
+    "specifications": {
+        "material": "EPS virgem",
+        "densidade": "10-12 kg/m³",
+        "dimensoes": "Grânulos de 2-8 mm",
+        "aplicacao": "Preenchimento de embalagens"
+    },
+    "hero": {
+        "title": "Pérolas em EPS",
+        "description": "Soluções em EPS para preenchimento de embalagens, garantindo proteção contra impactos e leveza no transporte.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/produtos/perolas-em-eps.jpg"
+    },
+    "categoryDescription": {
+        "title": "As Pérolas em EPS Isoart oferecem preenchimento leve e protetor para embalagens.",
+        "description": "As Pérolas em EPS Isoart são grânulos de poliestireno expandido de baixa densidade, ideais para preencher espaços em embalagens e proteger produtos frágeis durante transporte e armazenamento. Com alta resistência a impactos e leveza, são perfeitas para indústrias logísticas, de varejo e e-commerce, sendo 100% recicláveis e sustentáveis."
+    },
+    "projectImages": [
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Proteção contra impactos",
+            "description": "Absorve choques, protegendo produtos frágeis em embalagens."
+        },
+        {
+            "id": 2,
+            "title": "Leveza extrema",
+            "description": "Reduz significativamente o peso das embalagens."
+        },
+        {
+            "id": 3,
+            "title": "Sustentabilidade",
+            "description": "100% reciclável, com logística reversa pela Isoart."
+        }
+    ],
+    "generalCharacteristics": [
+        "EPS de baixa densidade (10-12 kg/m³)",
+        "Resistência à compressão de 0,10-0,12 MPa",
+        "Absorção de água < 2% em 5 anos",
+        "Grânulos de 2-8 mm para preenchimento",
+        "Não propaga fungos ou bactérias",
+        "100% reciclável, sem emissão de CFC"
+    ],
+    "applications": {
+        "title": "Preenchimento protetor para embalagens de produtos frágeis",
+        "description": "As Pérolas em EPS Isoart são ideais para preencher espaços em embalagens, protegendo produtos frágeis como eletrônicos, vidros e itens de varejo durante transporte e armazenamento. Com leveza e resistência, atendem a indústrias logísticas, de e-commerce e varejo, reduzindo danos e custos.",
+        "indications": [
+            {
+                "icon": "📺",
+                "text": "Eletrônicos"
+            },
+            {
+                "icon": "🪟",
+                "text": "Vidros e cerâmicas"
+            },
+            {
+                "icon": "📦",
+                "text": "Produtos de varejo"
+            },
+            {
+                "icon": "🚚",
+                "text": "Logística e e-commerce"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Proteção contra impactos": "Os grânulos de EPS absorvem choques, garantindo a proteção de produtos frágeis durante transporte.",
+        "Leveza": "Com densidade de 10-12 kg/m³, as pérolas reduzem o peso das embalagens, otimizando custos logísticos.",
+        "Versatilidade": "Grânulos de 2-8 mm adaptam-se a diferentes tipos de embalagens e produtos.",
+        "Sustentabilidade": "100% recicláveis e livres de CFC, as pérolas são ambientalmente responsáveis, com logística reversa pela Isoart."
+    },
+    "technicalSpecs": {
+        "image": "/img/geral/exemplo3.png",
+        "alt": "Pérolas em EPS Isoart - Especificações Técnicas",
+        "table": {
+            "headers": [
+                "Modelo",
+                "Densidade (kg/m³)",
+                "Dimensões",
+                "Peso aproximado (kg/m³)",
+                "Resistência à compressão",
+                "Absorção de água",
+                "Aplicação"
+            ],
+            "rows": [
+                [
+                    "Pérola EPS 10",
+                    "10",
+                    "2-8 mm",
+                    "0.2",
+                    "0,10 MPa",
+                    "< 2%",
+                    "Preenchimento"
+                ],
+                [
+                    "Pérola EPS 12",
+                    "12",
+                    "2-8 mm",
+                    "0.25",
+                    "0,12 MPa",
+                    "< 2%",
+                    "Preenchimento"
+                ]
+            ]
+        },
+        "features": [
+            {
+                "icon": "♻️",
+                "title": "100% Reciclável"
+            },
+            {
+                "icon": "🌿",
+                "title": "Sem emissão de CFC"
+            },
+            {
+                "icon": "📏",
+                "title": "Grânulos versáteis"
+            }
+        ],
+        "downloads": [
+            {
+                "title": "Ficha técnica Pérolas em EPS Isoart",
+                "icon": "📄",
+                "link": "/downloads/ficha-tecnica-perolas-em-eps.pdf"
+            },
+            {
+                "title": "Catálogo de produtos Isoart",
+                "icon": "📋",
+                "link": "/downloads/catalogo-produtos-isoart.pdf"
+            }
+        ]
+    }
+}

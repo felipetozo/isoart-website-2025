@@ -1,0 +1,154 @@
+{
+    "id": 18,
+    "name": "Cantoneiras em EPS",
+    "slug": "cantoneiras-em-eps",
+    "description": "Cantoneiras em EPS de alta densidade para proteção de bordas durante transporte e armazenamento, com resistência a impactos e personalização sob medida.",
+    "image": "/img/produtos/cantoneiras-em-eps.jpg",
+    "specifications": {
+        "material": "EPS virgem",
+        "densidade": "10-15 kg/m³",
+        "dimensoes": "Personalizável sob consulta",
+        "aplicacao": "Proteção de bordas em móveis, eletrodomésticos e vidros"
+    },
+    "hero": {
+        "title": "Cantoneiras em EPS",
+        "description": "Soluções em EPS para proteção de bordas, garantindo segurança no transporte de móveis, eletrodomésticos e produtos frágeis.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/produtos/cantoneiras-em-eps.jpg"
+    },
+    "categoryDescription": {
+        "title": "As Cantoneiras em EPS Isoart oferecem proteção robusta para bordas de produtos durante transporte e armazenamento.",
+        "description": "As Cantoneiras em EPS Isoart são fabricadas em poliestireno expandido de alta densidade, proporcionando alta resistência a impactos e leveza. Ideais para proteger bordas de móveis, eletrodomésticos, vidros e outros produtos frágeis, são personalizáveis e 100% recicláveis, atendendo às necessidades de indústrias moveleiras, logísticas e de varejo com eficiência e sustentabilidade."
+    },
+    "projectImages": [
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Proteção contra impactos",
+            "description": "Garante segurança para bordas de produtos frágeis durante transporte."
+        },
+        {
+            "id": 2,
+            "title": "Leveza e personalização",
+            "description": "Reduz custos de logística com formatos sob medida."
+        },
+        {
+            "id": 3,
+            "title": "Sustentabilidade",
+            "description": "100% reciclável, com logística reversa pela Isoart."
+        }
+    ],
+    "generalCharacteristics": [
+        "EPS de alta densidade (10-15 kg/m³)",
+        "Resistência à compressão de 0,10-0,15 MPa",
+        "Absorção de água < 2% em 5 anos",
+        "Alta resistência a impactos",
+        "Não propaga fungos ou bactérias",
+        "100% reciclável, sem emissão de CFC"
+    ],
+    "applications": {
+        "title": "Proteção de bordas em transporte e armazenamento de produtos frágeis",
+        "description": "As Cantoneiras em EPS Isoart são ideais para proteger bordas de móveis, eletrodomésticos, vidros e outros itens frágeis durante transporte e armazenamento. Com alta resistência a impactos e personalização, atendem a indústrias moveleiras, logísticas e de varejo, reduzindo danos e custos.",
+        "indications": [
+            {
+                "icon": "🛋️",
+                "text": "Móveis e estofados"
+            },
+            {
+                "icon": "📺",
+                "text": "Eletrodomésticos"
+            },
+            {
+                "icon": "🪟",
+                "text": "Vidros e espelhos"
+            },
+            {
+                "icon": "🚚",
+                "text": "Logística e e-commerce"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Proteção contra impactos": "O EPS de alta densidade absorve choques, protegendo bordas de produtos frágeis durante transporte e armazenamento.",
+        "Personalização": "Produzidas sob medida, as cantoneiras atendem a diferentes tamanhos e formatos, otimizando a logística.",
+        "Leveza": "Com densidade de 10-15 kg/m³, reduzem o peso das embalagens, diminuindo custos de transporte.",
+        "Sustentabilidade": "100% recicláveis e livres de CFC, as cantoneiras são ambientalmente responsáveis, com logística reversa pela Isoart."
+    },
+    "technicalSpecs": {
+        "image": "/img/geral/exemplo3.png",
+        "alt": "Cantoneiras em EPS Isoart - Especificações Técnicas",
+        "table": {
+            "headers": [
+                "Modelo",
+                "Densidade (kg/m³)",
+                "Dimensões",
+                "Peso aproximado (kg/m³)",
+                "Resistência à compressão",
+                "Absorção de água",
+                "Aplicação"
+            ],
+            "rows": [
+                [
+                    "Cantoneira EPS 10",
+                    "10",
+                    "Personalizável",
+                    "0.2",
+                    "0,10 MPa",
+                    "< 2%",
+                    "Proteção de bordas"
+                ],
+                [
+                    "Cantoneira EPS 12",
+                    "12",
+                    "Personalizável",
+                    "0.25",
+                    "0,12 MPa",
+                    "< 2%",
+                    "Proteção de bordas"
+                ],
+                [
+                    "Cantoneira EPS 15",
+                    "15",
+                    "Personalizável",
+                    "0.3",
+                    "0,15 MPa",
+                    "< 2%",
+                    "Proteção de bordas"
+                ]
+            ]
+        },
+        "features": [
+            {
+                "icon": "♻️",
+                "title": "100% Reciclável"
+            },
+            {
+                "icon": "🌿",
+                "title": "Sem emissão de CFC"
+            },
+            {
+                "icon": "📏",
+                "title": "Fabricado sob medida"
+            }
+        ],
+        "downloads": [
+            {
+                "title": "Ficha técnica Cantoneiras em EPS Isoart",
+                "icon": "📄",
+                "link": "/downloads/ficha-tecnica-cantoneiras-em-eps.pdf"
+            },
+            {
+                "title": "Catálogo de produtos Isoart",
+                "icon": "📋",
+                "link": "/downloads/catalogo-produtos-isoart.pdf"
+            }
+        ]
+    }
+}

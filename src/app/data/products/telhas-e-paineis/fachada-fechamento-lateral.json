@@ -1,0 +1,154 @@
+{
+    "id": 2,
+    "name": "Fachada e Fechamento Lateral",
+    "slug": "fachada-fechamento-lateral",
+    "description": "Painéis isotérmicos com núcleo em PIR ou EPS e revestimento duplo em aço galvalume, ideais para fachadas e fechamentos laterais com excelente isolamento térmico e apelo estético.",
+    "image": "/img/produtos/painelfachada.jpg",
+    "specifications": {
+        "material": "Aço galvanizado + EPS/PIR",
+        "espessura": "50mm, 70mm, 100mm, 120mm, 150mm",
+        "cor": "Pré-pintado (branca RAL 9003) ou natural, outras sob consulta",
+        "aplicacao": "Fachadas, fechamentos laterais"
+    },
+    "hero": {
+        "title": "Fachada e Fechamento Lateral",
+        "description": "Soluções versáteis para fachadas e fechamentos laterais com isolamento térmico superior e estética moderna.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/produtos/painelfachada.jpg"
+    },
+    "categoryDescription": {
+        "title": "Os Painéis de Fachada e Fechamento Lateral Isoart combinam estética, isolamento térmico e praticidade, ideais para projetos arquitetônicos modernos.",
+        "description": "Os Painéis de Fachada e Fechamento Lateral Isoart são projetados para oferecer isolamento térmico e acústico, além de um acabamento esteticamente atraente. Produzidos com núcleo de poliestireno expandido (EPS) ou poliisocianurato (PIR) e revestimento em aço galvalume, garantem leveza, resistência à corrosão e facilidade de instalação. São ideais para projetos que buscam eficiência energética, rapidez na execução e design inovador, atendendo a construções industriais, comerciais e residenciais."
+    },
+    "projectImages": [
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Isolamento térmico superior",
+            "description": "Reduz a troca térmica, promovendo conforto e economia de energia."
+        },
+        {
+            "id": 2,
+            "title": "Estética moderna",
+            "description": "Acabamento elegante com opções de cores personalizáveis."
+        },
+        {
+            "id": 3,
+            "title": "Fácil instalação",
+            "description": "Sistema modular que agiliza a montagem e reduz custos."
+        }
+    ],
+    "generalCharacteristics": [
+        "Produção em linha contínua para maior uniformidade e qualidade",
+        "Leveza que reduz a carga estrutural",
+        "Alta resistência à corrosão e intempéries",
+        "Personalização de cores e acabamentos (liso, frisado ou microfrisado)",
+        "Excelente isolamento térmico e acústico",
+        "Compatível com projetos sustentáveis, com materiais recicláveis"
+    ],
+    "applications": {
+        "title": "Versatilidade e eficiência para fachadas modernas e fechamentos laterais robustos",
+        "description": "Os Painéis de Fachada e Fechamento Lateral Isoart são perfeitos para projetos que exigem isolamento térmico, estética e durabilidade. Fabricados com núcleo de EPS ou PIR e revestimento metálico, oferecem montagem rápida, redução de custos e conforto ambiental, sendo ideais para galpões, shoppings e escritórios.",
+        "indications": [
+            {
+                "icon": "🏬",
+                "text": "Shoppings e centros comerciais"
+            },
+            {
+                "icon": "🏭",
+                "text": "Galpões industriais"
+            },
+            {
+                "icon": "🏢",
+                "text": "Edifícios comerciais"
+            },
+            {
+                "icon": "🏠",
+                "text": "Fachadas residenciais"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Isolamento térmico eficiente": "Os painéis com núcleo em EPS ou PIR oferecem excelente isolamento térmico, reduzindo a necessidade de climatização e promovendo economia de energia. O PIR, com baixa condutividade térmica (0,022 W/m.K), é ideal para projetos que exigem alta eficiência energética, enquanto o EPS proporciona ótimo custo-benefício.",
+        "Estética e personalização": "Com revestimento em aço galvalume pré-pintado (branca RAL 9003 ou outras cores sob consulta) e opções de acabamento liso, frisado ou microfrisado, os painéis Isoart permitem personalização estética para atender às necessidades arquitetônicas de cada projeto, garantindo um visual moderno e funcional.",
+        "Montagem rápida e econômica": "O sistema modular com encaixe macho-fêmea facilita a instalação, reduzindo o tempo de obra e os custos com mão de obra. A leveza dos painéis minimiza a necessidade de equipamentos pesados, otimizando o transporte e a logística no canteiro de obras.",
+        "Durabilidade e sustentabilidade": "Produzidos com materiais recicláveis e resistentes à corrosão, os painéis Isoart garantem longa vida útil com manutenção mínima. O uso de pentano como agente de expansão no PIR assegura conformidade ambiental, sem emissão de HCFCs, atendendo ao Protocolo de Montreal."
+    },
+    "technicalSpecs": {
+        "image": "/img/geral/exemplo3.png",
+        "alt": "Painéis de Fachada e Fechamento Lateral Isoart - Especificações Técnicas",
+        "table": {
+            "headers": [
+                "Modelo",
+                "Espessura (mm)",
+                "Largura padrão (mm)",
+                "Peso aproximado (kg/m²)",
+                "Densidade EPS/PIR (kg/m³)",
+                "Isolamento térmico",
+                "Resistência ao fogo"
+            ],
+            "rows": [
+                [
+                    "Painel EPS 50",
+                    "50",
+                    "1130",
+                    "8.5",
+                    "15-20",
+                    "Excelente",
+                    "Classe F-1 (autoextinguível)"
+                ],
+                [
+                    "Painel PIR 70",
+                    "70",
+                    "1130",
+                    "10.2",
+                    "30-38",
+                    "Superior",
+                    "Classe R1 (II-A)"
+                ],
+                [
+                    "Painel PIR 100",
+                    "100",
+                    "1130",
+                    "11.5",
+                    "30-38",
+                    "Superior",
+                    "Classe R1 (II-A)"
+                ]
+            ]
+        },
+        "features": [
+            {
+                "icon": "♻️",
+                "title": "100% Reciclável"
+            },
+            {
+                "icon": "🌿",
+                "title": "Livre de HCFCs"
+            },
+            {
+                "icon": "📏",
+                "title": "Fabricado sob medida"
+            }
+        ],
+        "downloads": [
+            {
+                "title": "Ficha técnica Painéis de Fachada Isoart",
+                "icon": "📄",
+                "link": "/downloads/ficha-tecnica-paineis-fachada.pdf"
+            },
+            {
+                "title": "Catálogo de produtos Isoart",
+                "icon": "📋",
+                "link": "/downloads/catalogo-produtos-isoart.pdf"
+            }
+        ]
+    }
+}

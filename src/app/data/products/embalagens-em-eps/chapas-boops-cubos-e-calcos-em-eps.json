@@ -1,0 +1,154 @@
+{
+    "id": 19,
+    "name": "Chapas, Boops, Cubos e Calços em EPS",
+    "slug": "chapas-boops-cubos-e-calcos-em-eps",
+    "description": "Embalagens em EPS de alta densidade, como chapas, boops, cubos e calços, para proteção e preenchimento, com resistência a impactos e personalização.",
+    "image": "/img/produtos/chapas-boops-cubos-calcos.jpg",
+    "specifications": {
+        "material": "EPS virgem",
+        "densidade": "10-15 kg/m³",
+        "dimensoes": "Personalizável sob consulta",
+        "aplicacao": "Preenchimento e proteção em embalagens"
+    },
+    "hero": {
+        "title": "Chapas, Boops, Cubos e Calços em EPS",
+        "description": "Soluções versáteis em EPS para proteção e preenchimento, garantindo segurança no transporte de produtos frágeis.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/produtos/chapas-boops-cubos-calcos.jpg"
+    },
+    "categoryDescription": {
+        "title": "As Chapas, Boops, Cubos e Calços em EPS Isoart oferecem proteção versátil para embalagens.",
+        "description": "Fabricados em poliestireno expandido de alta densidade, esses produtos proporcionam proteção e preenchimento para itens frágeis durante transporte e armazenamento. Personalizáveis em diferentes formatos e tamanhos, são ideais para indústrias logísticas, moveleiras e de varejo, combinando leveza, resistência a impactos e sustentabilidade."
+    },
+    "projectImages": [
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Versatilidade de formatos",
+            "description": "Disponíveis como chapas, boops, cubos e calços para diversas aplicações."
+        },
+        {
+            "id": 2,
+            "title": "Proteção contra impactos",
+            "description": "Absorve choques, protegendo produtos frágeis."
+        },
+        {
+            "id": 3,
+            "title": "Leveza e sustentabilidade",
+            "description": "Reduz custos de transporte e é 100% reciclável."
+        }
+    ],
+    "generalCharacteristics": [
+        "EPS de alta densidade (10-15 kg/m³)",
+        "Resistência à compressão de 0,10-0,15 MPa",
+        "Absorção de água < 2% em 5 anos",
+        "Alta resistência a impactos",
+        "Não propaga fungos ou bactérias",
+        "100% reciclável, sem emissão de CFC"
+    ],
+    "applications": {
+        "title": "Proteção e preenchimento em embalagens para transporte e armazenamento",
+        "description": "As Chapas, Boops, Cubos e Calços em EPS Isoart são ideais para proteger e preencher espaços em embalagens de produtos frágeis, como eletrônicos, móveis e vidros. Personalizáveis, atendem a indústrias logísticas, moveleiras e de varejo, garantindo segurança e redução de custos.",
+        "indications": [
+            {
+                "icon": "📺",
+                "text": "Eletrônicos e eletrodomésticos"
+            },
+            {
+                "icon": "🛋️",
+                "text": "Móveis e estofados"
+            },
+            {
+                "icon": "🪟",
+                "text": "Vidros e espelhos"
+            },
+            {
+                "icon": "🚚",
+                "text": "Logística e e-commerce"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Versatilidade": "Disponíveis em formatos como chapas, boops, cubos e calços, adaptam-se a diferentes necessidades de proteção e preenchimento.",
+        "Proteção contra impactos": "O EPS de alta densidade absorve choques, garantindo a integridade de produtos frágeis.",
+        "Leveza": "Com densidade de 10-15 kg/m³, reduzem o peso das embalagens, otimizando custos de transporte.",
+        "Sustentabilidade": "100% recicláveis e livres de CFC, são ambientalmente responsáveis, com logística reversa pela Isoart."
+    },
+    "technicalSpecs": {
+        "image": "/img/geral/exemplo3.png",
+        "alt": "Chapas, Boops, Cubos e Calços em EPS Isoart - Especificações Técnicas",
+        "table": {
+            "headers": [
+                "Modelo",
+                "Densidade (kg/m³)",
+                "Dimensões",
+                "Peso aproximado (kg/m³)",
+                "Resistência à compressão",
+                "Absorção de água",
+                "Aplicação"
+            ],
+            "rows": [
+                [
+                    "Chapa EPS 10",
+                    "10",
+                    "Personalizável",
+                    "0.2",
+                    "0,10 MPa",
+                    "< 2%",
+                    "Preenchimento"
+                ],
+                [
+                    "Cubo EPS 12",
+                    "12",
+                    "Personalizável",
+                    "0.25",
+                    "0,12 MPa",
+                    "< 2%",
+                    "Proteção"
+                ],
+                [
+                    "Calço EPS 15",
+                    "15",
+                    "Personalizável",
+                    "0.3",
+                    "0,15 MPa",
+                    "< 2%",
+                    "Fixação"
+                ]
+            ]
+        },
+        "features": [
+            {
+                "icon": "♻️",
+                "title": "100% Reciclável"
+            },
+            {
+                "icon": "🌿",
+                "title": "Sem emissão de CFC"
+            },
+            {
+                "icon": "📏",
+                "title": "Fabricado sob medida"
+            }
+        ],
+        "downloads": [
+            {
+                "title": "Ficha técnica Chapas, Boops, Cubos e Calços Isoart",
+                "icon": "📄",
+                "link": "/downloads/ficha-tecnica-chapas-boops-cubos-calcos.pdf"
+            },
+            {
+                "title": "Catálogo de produtos Isoart",
+                "icon": "📋",
+                "link": "/downloads/catalogo-produtos-isoart.pdf"
+            }
+        ]
+    }
+}

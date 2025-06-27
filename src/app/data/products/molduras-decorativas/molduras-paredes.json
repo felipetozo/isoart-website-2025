@@ -1,0 +1,154 @@
+{
+    "id": 14,
+    "name": "Molduras para Paredes",
+    "slug": "molduras-para-paredes",
+    "description": "Molduras em EPS de alta densidade com revestimento flexível, ideais para acabamento decorativo de paredes internas e externas, com leveza e personalização.",
+    "image": "/img/produtos/moldurasparedes.jpg",
+    "specifications": {
+        "material": "EPS virgem com revestimento de resina polimérica",
+        "densidade": "20-30 kg/m³",
+        "dimensoes": "Personalizável sob consulta",
+        "aplicacao": "Paredes internas e externas, boiseries"
+    },
+    "hero": {
+        "title": "Molduras para Paredes",
+        "description": "Soluções decorativas para paredes, combinando estética, leveza e facilidade de instalação.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/produtos/moldurasparedes.jpg"
+    },
+    "categoryDescription": {
+        "title": "As Molduras para Paredes Isoart transformam ambientes com acabamentos elegantes e personalizáveis.",
+        "description": "As Molduras para Paredes Isoart são fabricadas em EPS de alta densidade com revestimento flexível à base de resina polimérica, perfeitas para acabamentos decorativos como boiseries e divisórias. Com instalação rápida, resistência a intempéries e personalização, são ideais para projetos residenciais, comerciais e de retrofit, valorizando paredes internas e externas."
+    },
+    "projectImages": [
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Estética versátil",
+            "description": "Ideal para boiseries e acabamentos decorativos personalizados."
+        },
+        {
+            "id": 2,
+            "title": "Instalação prática",
+            "description": "Fixação com argamassa AC-3 garante rapidez e limpeza."
+        },
+        {
+            "id": 3,
+            "title": "Resistência climática",
+            "description": "Suporta umidade e variações térmicas para uso externo."
+        }
+    ],
+    "generalCharacteristics": [
+        "EPS de alta densidade (20-30 kg/m³)",
+        "Revestimento flexível com resina polimérica e pós minerais",
+        "Resistência à compressão de 0,15-0,25 MPa",
+        "Absorção de água < 4% em 5 anos",
+        "Superfície lisa, livre de escurecimento cimentício",
+        "100% reciclável, sem emissão de CFC"
+    ],
+    "applications": {
+        "title": "Acabamento decorativo para paredes internas e externas em projetos sofisticados",
+        "description": "As Molduras para Paredes Isoart são perfeitas para criar boiseries, divisórias e acabamentos decorativos em paredes internas e externas. Com personalização e resistência a intempéries, são ideais para residências, escritórios e espaços comerciais, valorizando a estética com baixo impacto estrutural.",
+        "indications": [
+            {
+                "icon": "🏠",
+                "text": "Paredes residenciais"
+            },
+            {
+                "icon": "🏢",
+                "text": "Escritórios e salas comerciais"
+            },
+            {
+                "icon": "🏬",
+                "text": "Fachadas comerciais"
+            },
+            {
+                "icon": "🛠️",
+                "text": "Projetos de decoração"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Estética e personalização": "Produzidas sob medida, as molduras para paredes permitem acabamentos como texturas, pinturas e boiseries, criando ambientes elegantes e modernos.",
+        "Instalação eficiente": "A fixação com argamassa colante AC-3 e emendas com espuma PU e fita telada garante rapidez, praticidade e acabamento perfeito.",
+        "Durabilidade externa": "O EPS de alta densidade e o revestimento flexível resistem a chuvas, sol e variações térmicas, ideal para paredes externas.",
+        "Sustentabilidade": "100% recicláveis e livres de CFC, as molduras Isoart são ambientalmente responsáveis, com logística reversa pela empresa."
+    },
+    "technicalSpecs": {
+        "image": "/img/geral/exemplo3.png",
+        "alt": "Molduras para Paredes Isoart - Especificações Técnicas",
+        "table": {
+            "headers": [
+                "Modelo",
+                "Densidade (kg/m³)",
+                "Dimensões",
+                "Peso aproximado (kg/m²)",
+                "Resistência à compressão",
+                "Absorção de água",
+                "Acabamento"
+            ],
+            "rows": [
+                [
+                    "Moldura EPS 20",
+                    "20",
+                    "Personalizável",
+                    "0.4",
+                    "0,15 MPa",
+                    "< 4%",
+                    "Massa flexível"
+                ],
+                [
+                    "Moldura EPS 25",
+                    "25",
+                    "Personalizável",
+                    "0.5",
+                    "0,2 MPa",
+                    "< 4%",
+                    "Massa flexível"
+                ],
+                [
+                    "Moldura EPS 30",
+                    "30",
+                    "Personalizável",
+                    "0.6",
+                    "0,25 MPa",
+                    "< 4%",
+                    "Massa flexível"
+                ]
+            ]
+        },
+        "features": [
+            {
+                "icon": "♻️",
+                "title": "100% Reciclável"
+            },
+            {
+                "icon": "🌿",
+                "title": "Sem emissão de CFC"
+            },
+            {
+                "icon": "📏",
+                "title": "Fabricado sob medida"
+            }
+        ],
+        "downloads": [
+            {
+                "title": "Ficha técnica Molduras para Paredes Isoart",
+                "icon": "📄",
+                "link": "/downloads/ficha-tecnica-molduras-paredes.pdf"
+            },
+            {
+                "title": "Catálogo de produtos Isoart",
+                "icon": "📋",
+                "link": "/downloads/catalogo-produtos-isoart.pdf"
+            }
+        ]
+    }
+}

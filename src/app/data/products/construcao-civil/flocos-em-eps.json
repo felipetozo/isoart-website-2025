@@ -1,0 +1,154 @@
+{
+    "id": 7,
+    "name": "Flocos em EPS",
+    "slug": "flocos-em-eps",
+    "description": "Flocos de EPS (Poliestireno Expandido) para mistura em concreto leve, ideais para preenchimentos e regularizações de pisos e lajes com redução de peso e isolamento térmico.",
+    "image": "/img/produtos/flocosemeps.jpg",
+    "specifications": {
+        "material": "Poliestireno Expandido (EPS)",
+        "densidade": "10-15 kg/m³",
+        "tamanho": "2-5 mm (granulometria variável)",
+        "aplicacao": "Concreto leve, preenchimento de pisos e lajes"
+    },
+    "hero": {
+        "title": "Flocos em EPS",
+        "description": "Solução leve e sustentável para concreto leve, com excelente isolamento térmico e redução de custos.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/produtos/flocosemeps.jpg"
+    },
+    "categoryDescription": {
+        "title": "Os Flocos em EPS Isoart são ideais para concreto leve, reduzindo peso e custos em obras de preenchimento e regularização.",
+        "description": "Os Flocos em EPS Isoart são utilizados na mistura de concreto leve, composto por cimento, areia, água e flocos de EPS. Com baixa densidade e alta capacidade de isolamento térmico, são perfeitos para preenchimentos e regularizações de pisos e lajes, proporcionando leveza, economia de materiais e sustentabilidade em projetos de construção civil."
+    },
+    "projectImages": [
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Redução de peso",
+            "description": "Diminui significativamente o peso do concreto, aliviando a estrutura."
+        },
+        {
+            "id": 2,
+            "title": "Isolamento térmico",
+            "description": "Melhora o conforto térmico com baixa condutividade térmica."
+        },
+        {
+            "id": 3,
+            "title": "Sustentabilidade",
+            "description": "Material 100% reciclável, sem emissão de CFC."
+        }
+    ],
+    "generalCharacteristics": [
+        "Densidade média de 10-15 kg/m³",
+        "Granulometria de 2-5 mm para mistura homogênea",
+        "Coeficiente de condução térmica de 0,028 Kcal/h.m.°C",
+        "Material autoextinguível (Classe F)",
+        "Resistência à umidade com absorção máxima de 4% em 5 anos",
+        "Compatível com cimento, cal, gesso e areia"
+    ],
+    "applications": {
+        "title": "Solução leve e econômica para preenchimentos em projetos de construção",
+        "description": "Os Flocos em EPS Isoart são ideais para a produção de concreto leve, usado em preenchimentos e regularizações de pisos e lajes. Com excelente isolamento térmico e baixa densidade, são perfeitos para obras que buscam redução de peso e custos, mantendo a sustentabilidade.",
+        "indications": [
+            {
+                "icon": "🏠",
+                "text": "Preenchimento de pisos residenciais"
+            },
+            {
+                "icon": "🏢",
+                "text": "Regularização de lajes comerciais"
+            },
+            {
+                "icon": "🏭",
+                "text": "Obras industriais"
+            },
+            {
+                "icon": "🛠️",
+                "text": "Reformas e nivelamentos"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Redução de peso": "Os flocos de EPS reduzem significativamente a densidade do concreto leve, aliviando a carga estrutural e permitindo economia em fundações e pilares.",
+        "Isolamento térmico": "Com coeficiente de condução térmica de 0,028 Kcal/h.m.°C, os flocos de EPS proporcionam conforto térmico, reduzindo custos com climatização.",
+        "Sustentabilidade": "Produzidos sem CFC e 100% recicláveis, os flocos de EPS são ambientalmente responsáveis, com logística reversa praticada pela Isoart.",
+        "Facilidade de uso": "A granulometria de 2-5 mm garante mistura homogênea com cimento, facilitando a aplicação em obras de preenchimento e regularização."
+    },
+    "technicalSpecs": {
+        "image": "/img/geral/exemplo3.png",
+        "alt": "Flocos em EPS Isoart - Especificações Técnicas",
+        "table": {
+            "headers": [
+                "Modelo",
+                "Granulometria (mm)",
+                "Densidade (kg/m³)",
+                "Peso aproximado (kg/m³)",
+                "Isolamento térmico",
+                "Absorção de água",
+                "Resistência à compressão"
+            ],
+            "rows": [
+                [
+                    "Flocos EPS 10",
+                    "2-5",
+                    "10",
+                    "0.01",
+                    "Excelente",
+                    "< 4%",
+                    "0,05 MPa"
+                ],
+                [
+                    "Flocos EPS 12",
+                    "2-5",
+                    "12",
+                    "0.012",
+                    "Excelente",
+                    "< 4%",
+                    "0,06 MPa"
+                ],
+                [
+                    "Flocos EPS 15",
+                    "2-5",
+                    "15",
+                    "0.015",
+                    "Excelente",
+                    "< 4%",
+                    "0,07 MPa"
+                ]
+            ]
+        },
+        "features": [
+            {
+                "icon": "♻️",
+                "title": "100% Reciclável"
+            },
+            {
+                "icon": "🌿",
+                "title": "Sem emissão de CFC"
+            },
+            {
+                "icon": "📏",
+                "title": "Granulometria personalizável"
+            }
+        ],
+        "downloads": [
+            {
+                "title": "Ficha técnica Flocos em EPS Isoart",
+                "icon": "📄",
+                "link": "/downloads/ficha-tecnica-flocos-eps.pdf"
+            },
+            {
+                "title": "Catálogo de produtos Isoart",
+                "icon": "📋",
+                "link": "/downloads/catalogo-produtos-isoart.pdf"
+            }
+        ]
+    }
+}

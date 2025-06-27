@@ -1,0 +1,154 @@
+{
+    "id": 9,
+    "name": "Chapas e Painéis em EPS",
+    "slug": "chapas-paineis-em-eps",
+    "description": "Chapas e painéis em EPS (Poliestireno Expandido) para isolamento térmico e acústico, ideais para divisórias, forros e preenchimentos em construções sustentáveis.",
+    "image": "/img/produtos/chapaspaineisemeps.jpg",
+    "specifications": {
+        "material": "Poliestireno Expandido (EPS)",
+        "espessura": "20mm, 50mm, 100mm",
+        "densidade": "13-20 kg/m³",
+        "aplicacao": "Divisórias, forros, isolamento térmico"
+    },
+    "hero": {
+        "title": "Chapas e Painéis em EPS",
+        "description": "Soluções leves e versáteis para isolamento térmico e acústico em projetos de construção civil.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/produtos/chapaspaineisemeps.jpg"
+    },
+    "categoryDescription": {
+        "title": "As Chapas e Painéis em EPS Isoart oferecem isolamento térmico, leveza e versatilidade para projetos modernos.",
+        "description": "As Chapas e Painéis em EPS Isoart são ideais para aplicações em divisórias, forros e isolamento térmico na construção civil. Produzidos com poliestireno expandido de alta qualidade, proporcionam leveza, resistência à umidade e excelente isolamento térmico e acústico, garantindo economia e sustentabilidade em projetos residenciais, comerciais e industriais."
+    },
+    "projectImages": [
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Isolamento térmico",
+            "description": "Reduz custos com climatização, proporcionando conforto ambiental."
+        },
+        {
+            "id": 2,
+            "title": "Leveza e manuseio",
+            "description": "Facilita transporte e instalação, reduzindo custos de obra."
+        },
+        {
+            "id": 3,
+            "title": "Sustentabilidade",
+            "description": "Material 100% reciclável, com logística reversa pela Isoart."
+        }
+    ],
+    "generalCharacteristics": [
+        "Densidade média de 13-20 kg/m³",
+        "Coeficiente de condução térmica de 0,028 Kcal/h.m.°C",
+        "Resistência à compressão de 0,1-0,2 MPa",
+        "Material autoextinguível (Classe F)",
+        "Resistência à umidade com absorção máxima de 4%",
+        "Produção sob medida para projetos específicos"
+    ],
+    "applications": {
+        "title": "Soluções versáteis para isolamento e divisórias em construções sustentáveis",
+        "description": "As Chapas e Painéis em EPS Isoart são perfeitas para divisórias, forros e isolamento térmico em obras que buscam eficiência energética e rapidez na execução. Com alta resistência à umidade e facilidade de corte, são ideais para projetos residenciais, comerciais e industriais.",
+        "indications": [
+            {
+                "icon": "🏠",
+                "text": "Divisórias residenciais"
+            },
+            {
+                "icon": "🏢",
+                "text": "Forros comerciais"
+            },
+            {
+                "icon": "🏭",
+                "text": "Isolamento em galpões industriais"
+            },
+            {
+                "icon": "🛠️",
+                "text": "Projetos de retrofit"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Isolamento térmico": "Com coeficiente de condução térmica de 0,028 Kcal/h.m.°C, as chapas e painéis em EPS reduzem custos com climatização, garantindo conforto térmico em ambientes internos.",
+        "Leveza e instalação": "A baixa densidade (13-20 kg/m³) facilita o transporte e a instalação, reduzindo custos com mão de obra e equipamentos em obras.",
+        "Versatilidade": "Produzidos sob medida, os painéis e chapas se adaptam a diferentes espessuras e formatos, ideais para divisórias, forros e preenchimentos.",
+        "Sustentabilidade": "100% recicláveis e livres de CFC, os produtos Isoart são ambientalmente responsáveis, com centros de reciclagem nas unidades fabris."
+    },
+    "technicalSpecs": {
+        "image": "/img/geral/exemplo3.png",
+        "alt": "Chapas e Painéis em EPS Isoart - Especificações Técnicas",
+        "table": {
+            "headers": [
+                "Modelo",
+                "Espessura (mm)",
+                "Densidade (kg/m³)",
+                "Peso aproximado (kg/m²)",
+                "Isolamento térmico",
+                "Resistência à compressão",
+                "Absorção de água"
+            ],
+            "rows": [
+                [
+                    "Chapa EPS 20",
+                    "20",
+                    "13-20",
+                    "0.26-0.4",
+                    "Excelente",
+                    "0,1-0,2 MPa",
+                    "< 4%"
+                ],
+                [
+                    "Chapa EPS 50",
+                    "50",
+                    "13-20",
+                    "0.65-1.0",
+                    "Excelente",
+                    "0,1-0,2 MPa",
+                    "< 4%"
+                ],
+                [
+                    "Chapa EPS 100",
+                    "100",
+                    "13-20",
+                    "1.3-2.0",
+                    "Excelente",
+                    "0,1-0,2 MPa",
+                    "< 4%"
+                ]
+            ]
+        },
+        "features": [
+            {
+                "icon": "♻️",
+                "title": "100% Reciclável"
+            },
+            {
+                "icon": "🌿",
+                "title": "Sem emissão de CFC"
+            },
+            {
+                "icon": "📏",
+                "title": "Fabricado sob medida"
+            }
+        ],
+        "downloads": [
+            {
+                "title": "Ficha técnica Chapas e Painéis em EPS Isoart",
+                "icon": "📄",
+                "link": "/downloads/ficha-tecnica-chapas-paineis-eps.pdf"
+            },
+            {
+                "title": "Catálogo de produtos Isoart",
+                "icon": "📋",
+                "link": "/downloads/catalogo-produtos-isoart.pdf"
+            }
+        ]
+    }
+}

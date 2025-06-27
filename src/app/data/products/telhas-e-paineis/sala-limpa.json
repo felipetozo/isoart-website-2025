@@ -1,0 +1,154 @@
+{
+    "id": 4,
+    "name": "Sala Limpa",
+    "slug": "sala-limpa",
+    "description": "Painéis isotérmicos com núcleo em PIR e revestimento em aço inoxidável ou galvalume, projetados para ambientes de sala limpa com alta assepsia e controle de partículas, atendendo normas rigorosas.",
+    "image": "/img/produtos/salalimpa.jpg",
+    "specifications": {
+        "material": "Aço inoxidável AISI 304 ou galvalume + PIR",
+        "espessura": "50mm, 100mm, 150mm",
+        "cor": "Aço inoxidável fosco ou branca RAL 9003",
+        "aplicacao": "Salas limpas (indústria farmacêutica, eletrônica, hospitalar)"
+    },
+    "hero": {
+        "title": "Sala Limpa",
+        "description": "Painéis isotérmicos de alta performance para ambientes controlados com rigoroso controle de partículas e assepsia.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/produtos/salalimpa.jpg"
+    },
+    "categoryDescription": {
+        "title": "Os Painéis de Sala Limpa Isoart garantem assepsia, controle de partículas e isolamento térmico para ambientes altamente controlados.",
+        "description": "Os Painéis de Sala Limpa Isoart são projetados para atender às exigências de ambientes controlados, como indústrias farmacêuticas, eletrônicas e hospitalares. Com núcleo de poliisocianurato (PIR) e revestimento em aço inoxidável AISI 304 ou galvalume, oferecem alta resistência química, facilidade de limpeza e conformidade com normas de salas limpas, garantindo segurança e eficiência."
+    },
+    "projectImages": [
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png",
+        "/img/geral/exemplo.png"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Alta assepsia",
+            "description": "Superfícies lisas e resistentes facilitam a limpeza e o controle de partículas."
+        },
+        {
+            "id": 2,
+            "title": "Conformidade com normas",
+            "description": "Atende padrões rigorosos de salas limpas (ISO 14644, GMP)."
+        },
+        {
+            "id": 3,
+            "title": "Durabilidade",
+            "description": "Resistência a agentes químicos e corrosão para longa vida útil."
+        }
+    ],
+    "generalCharacteristics": [
+        "Núcleo em PIR com densidade 30-38 kg/m³",
+        "Revestimento em aço inoxidável AISI 304 ou galvalume",
+        "Superfícies lisas para fácil higienização",
+        "Alta resistência ao fogo (Classe R1, NBR 15366)",
+        "Isolamento térmico superior (0,022 W/m.K)",
+        "Produção sob medida para projetos específicos"
+    ],
+    "applications": {
+        "title": "Soluções para ambientes controlados com alta exigência de assepsia e eficiência",
+        "description": "Os Painéis de Sala Limpa Isoart são ideais para ambientes que exigem controle rigoroso de partículas e temperatura, como laboratórios, indústrias farmacêuticas e eletrônicas. Com materiais de alta qualidade e acabamento liso, garantem assepsia, durabilidade e conformidade com normas internacionais.",
+        "indications": [
+            {
+                "icon": "🏥",
+                "text": "Indústria farmacêutica"
+            },
+            {
+                "icon": "🔬",
+                "text": "Laboratórios de pesquisa"
+            },
+            {
+                "icon": "⚙️",
+                "text": "Indústria eletrônica"
+            },
+            {
+                "icon": "🏨",
+                "text": "Ambientes hospitalares"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Controle de assepsia": "Os painéis com revestimento em aço inoxidável AISI 304 ou galvalume liso garantem superfícies fáceis de limpar, minimizando a contaminação por partículas e atendendo normas como ISO 14644 e GMP para salas limpas.",
+        "Isolamento térmico": "O núcleo de PIR (condutividade térmica 0,022 W/m.K) mantém temperaturas estáveis, reduzindo custos com climatização em ambientes controlados, como laboratórios e indústrias farmacêuticas.",
+        "Resistência química": "O aço inoxidável e o PIR são resistentes a agentes químicos e corrosivos, garantindo durabilidade em ambientes agressivos e reduzindo custos de manutenção.",
+        "Conformidade e segurança": "Produzidos com materiais livres de HCFCs e retardantes à chama (Classe R1), os painéis Isoart oferecem segurança contra incêndios e conformidade com normas ambientais e técnicas."
+    },
+    "technicalSpecs": {
+        "image": "/img/geral/exemplo3.png",
+        "alt": "Painéis de Sala Limpa Isoart - Especificações Técnicas",
+        "table": {
+            "headers": [
+                "Modelo",
+                "Espessura (mm)",
+                "Largura padrão (mm)",
+                "Peso aproximado (kg/m²)",
+                "Densidade PIR (kg/m³)",
+                "Isolamento térmico",
+                "Resistência ao fogo"
+            ],
+            "rows": [
+                [
+                    "Painel PIR 50",
+                    "50",
+                    "1130",
+                    "10.5",
+                    "30-38",
+                    "Superior",
+                    "Classe R1 (II-A)"
+                ],
+                [
+                    "Painel PIR 100",
+                    "100",
+                    "1130",
+                    "12.0",
+                    "30-38",
+                    "Superior",
+                    "Classe R1 (II-A)"
+                ],
+                [
+                    "Painel PIR 150",
+                    "150",
+                    "1130",
+                    "13.5",
+                    "30-38",
+                    "Superior",
+                    "Classe R1 (II-A)"
+                ]
+            ]
+        },
+        "features": [
+            {
+                "icon": "♻️",
+                "title": "100% Reciclável"
+            },
+            {
+                "icon": "🌿",
+                "title": "Livre de HCFCs"
+            },
+            {
+                "icon": "📏",
+                "title": "Fabricado sob medida"
+            }
+        ],
+        "downloads": [
+            {
+                "title": "Ficha técnica Painéis de Sala Limpa Isoart",
+                "icon": "📄",
+                "link": "/downloads/ficha-tecnica-paineis-sala-limpa.pdf"
+            },
+            {
+                "title": "Catálogo de produtos Isoart",
+                "icon": "📋",
+                "link": "/downloads/catalogo-produtos-isoart.pdf"
+            }
+        ]
+    }
+}

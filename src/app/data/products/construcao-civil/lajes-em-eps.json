@@ -1,25 +1,25 @@
 {
-    "id": 1,
-    "name": "Telhas Térmicas",
-    "slug": "telhas-termicas",
-    "description": "Telhas com núcleo em PIR ou EPS e revestimento duplo com chapas de aço galvalume ou filme, ideais para coberturas com excelente isolamento térmico.",
-    "image": "/img/geral/exemplo2.png",
+    "id": 6,
+    "name": "Lajes em EPS",
+    "slug": "lajes-em-eps",
+    "description": "Lajes em EPS (Poliestireno Expandido) projetadas para reduzir peso e custos em construções, oferecendo isolamento térmico e acústico, além de maior agilidade na obra.",
+    "image": "/img/produtos/lajesemeps.jpg",
     "specifications": {
-        "material": "Aço galvanizado + EPS/PIR",
-        "espessura": "30mm, 50mm, 100mm",
-        "cor": "Diversas opções",
-        "aplicacao": "Coberturas"
+        "material": "Poliestireno Expandido (EPS)",
+        "espessura": "120mm, 150mm, 200mm",
+        "densidade": "13-20 kg/m³",
+        "aplicacao": "Lajes treliçadas, preenchimento de pisos"
     },
     "hero": {
-        "title": "Telhas Térmicas",
-        "description": "Descubra a solução ideal para coberturas eficientes com isolamento térmico superior.",
+        "title": "Lajes em EPS",
+        "description": "Soluções leves e econômicas para lajes com isolamento térmico e acústico superior.",
         "buttonText": "Solicite um orçamento",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/produtos/telhastermicas.jpg"
+        "backgroundImage": "/img/produtos/lajesemeps.jpg"
     },
     "categoryDescription": {
-        "title": "As Lajes em Eps Isoart oferecem leveza, economia e excelente desempenho estrutural, otimizando a obra e garantindo conforto térmico com menor custo.",
-        "description": "A Laje em EPS Isoart é uma solução leve e eficiente para a construção civil, substituindo com vantagens os sistemas tradicionais. Produzida com blocos de Poliestireno Expandido (EPS), proporciona estruturas mais leves, redução de carga nas fundações e maior agilidade na obra. Além de excelente desempenho térmico, permite economia significativa de concreto, aço e mão de obra, sendo ideal para projetos que exigem produtividade, conforto e custo-benefício."
+        "title": "As Lajes em EPS Isoart oferecem leveza, economia e excelente desempenho térmico, otimizando a obra e garantindo conforto com menor custo.",
+        "description": "As Lajes em EPS Isoart são uma solução leve e eficiente para a construção civil, substituindo com vantagens os sistemas tradicionais. Produzidas com poliestireno expandido (EPS), proporcionam redução de carga nas fundações, maior agilidade na obra e excelente isolamento térmico e acústico. Ideais para projetos que exigem produtividade, conforto e custo-benefício, conforme normas ABNT NBR 14859."
     },
     "projectImages": [
         "/img/geral/exemplo.png",
@@ -31,31 +31,31 @@
     "benefits": [
         {
             "id": 1,
-            "title": "Leveza Estrutural",
-            "description": "Reduz o peso da construção, permitindo fundações leves e economia em materiais estruturais sem comprometer a resistência."
+            "title": "Redução de peso",
+            "description": "Diminui a carga estrutural, otimizando fundações e pilares."
         },
         {
             "id": 2,
-            "title": "Eficiência Térmica e Acústica",
-            "description": "Miniaza a troca de calor e ruídos, proporcionando maior conforto e reduzindo o consumo de energia para climatização."
+            "title": "Isolamento térmico",
+            "description": "Reduz a necessidade de climatização, garantindo conforto."
         },
         {
             "id": 3,
-            "title": "Agilidade e Economia",
-            "description": "Facilidade de manuseio e instalação aceleram a obra, reduzindo custos com mão de obra e otimizando o tempo de execução."
+            "title": "Economia na obra",
+            "description": "Reduz até 20% dos custos com materiais e mão de obra."
         }
     ],
     "generalCharacteristics": [
-        "Adaptações personalizadas de altura, largura e comprimento",
-        "Menor carga sobre a estrutura com excelente desempenho mecânico",
-        "Mais fácil de transportar e montar, otimizando o tempo da obra",
-        "Menor consumo de recursos como concreto, aço e madeira",
-        "Conforto térmico e redução de ruídos em ambientes internos",
-        "Recebe chapisco e reboco com ótima aderência"
+        "Leveza com densidade média de 13-20 kg/m³",
+        "Alta resistência à compressão (0,1-0,2 MPa)",
+        "Isolamento térmico com coeficiente de 0,028 Kcal/h.m.°C",
+        "Material autoextinguível (Classe F)",
+        "100% reciclável, sem emissão de CFC",
+        "Facilidade de corte e adaptação em obra"
     ],
     "applications": {
-        "title": "Maior economia, agilidade na execução e conforto térmico com menor esforço estrutural",
-        "description": "A Laje em EPS Isoart é fabricada com blocos de poliestireno expandido ou poliisocianurato, proporcionando telhas mais leves, com menor consumo de concreto e aço, fácil manuseio e excelente isolamento térmico. Ideal para obras que exigem rapidez, desempenho e redução de custos.",
+        "title": "Leveza e eficiência para lajes em projetos residenciais e comerciais",
+        "description": "As Lajes em EPS Isoart são ideais para construções que buscam redução de custos e maior rapidez na execução. Com excelente isolamento térmico e acústico, são perfeitas para lajes treliçadas e preenchimento de pisos em obras residenciais, comerciais e industriais.",
         "indications": [
             {
                 "icon": "🏠",
@@ -76,23 +76,23 @@
         ]
     },
     "tabDescriptions": {
-        "Alívio de carga na estrutura": "A leveza do EPS reduz significativamente o peso próprio da laje em comparação aos sistemas tradicionais, o que alivia a carga nas fundações, pilares e vigas. Isso possibilita um dimensionamento mais eficiente e econômico de toda a estrutura, resultando em menor consumo de concreto e aço. Além disso, permite vencer vãos maiores com menos elementos de apoio, otimizando o projeto e contribuindo para uma execução mais racional da obra.",
-        "Economia na obra": "As Lajes em EPS oferecem economia em diversas frentes: materiais, tempo e mão de obra. A montagem é mais simples e ágil, exigindo menos profissionais no canteiro. O transporte das peças é facilitado pelo baixo peso, tanto na horizontal quanto na vertical. A redução no uso de formas de madeira, concreto e aço também impacta diretamente no orçamento, tornando o sistema mais competitivo e sustentável, sem abrir mão do desempenho estrutural.",
-        "Flexibilidade no projeto": "Com produção sob medida, as lajes em EPS se adaptam a diferentes necessidades construtivas, tanto em altura quanto em largura e comprimento. Sua estrutura facilita a criação de caminhos para instalações elétricas e hidráulicas, podendo ser moldada com ferramentas simples ou sopradores térmicos. Isso elimina o risco de danificar a capa de concreto, como ocorre em sistemas cerâmicos, e permite adequações sem comprometer a integridade da laje.",
-        "Isolamento térmico inteligente": "Além de atuar como um excelente isolante térmico, o EPS contribui para uma cura mais adequada do concreto. Ele evita fuga da água de amassamento, mantendo a umidade por mais tempo e melhorando a resistência da laje após a concretagem. O resultado é uma estrutura mais estável e durável, que proporciona conforto térmico ao ambiente e reduz a necessidade de climatização artificial - o que impacta diretamente no consumo energético da edificação."
+        "Alívio de carga na estrutura": "A leveza do EPS reduz significativamente o peso próprio da laje em comparação aos sistemas tradicionais, aliviando a carga nas fundações, pilares e vigas, permitindo um dimensionamento mais econômico e eficiente.",
+        "Economia na obra": "As lajes em EPS oferecem economia em materiais, tempo e mão de obra, com montagem simples e redução no uso de concreto, aço e formas de madeira, conforme ABNT NBR 14859.",
+        "Isolamento térmico e acústico": "O EPS proporciona excelente isolamento térmico (0,028 Kcal/h.m.°C) e acústico, reduzindo custos com climatização e melhorando o conforto ambiental.",
+        "Flexibilidade no projeto": "Produzidas sob medida, as lajes em EPS se adaptam a diferentes vãos e formatos, facilitando a passagem de instalações elétricas e hidráulicas."
     },
     "technicalSpecs": {
         "image": "/img/geral/exemplo3.png",
-        "alt": "Telhas Térmicas Isoart - Especificações Técnicas",
+        "alt": "Lajes em EPS Isoart - Especificações Técnicas",
         "table": {
             "headers": [
                 "Modelo",
-                "Altura (mm)",
+                "Espessura (mm)",
                 "Largura padrão (mm)",
                 "Peso aproximado (kg/m²)",
                 "Densidade EPS (kg/m³)",
                 "Isolamento térmico",
-                "Absorção de água"
+                "Resistência à compressão"
             ],
             "rows": [
                 [
@@ -100,34 +100,34 @@
                     "120",
                     "300",
                     "4.5",
-                    "12 a 20",
+                    "13-20",
                     "Excelente",
-                    "< 2%"
+                    "0,1-0,2 MPa"
                 ],
                 [
                     "Laje EPS 15",
                     "150",
                     "300",
                     "5.2",
-                    "12 a 20",
+                    "13-20",
                     "Excelente",
-                    "< 2%"
+                    "0,1-0,2 MPa"
                 ],
                 [
                     "Laje EPS 20",
                     "200",
                     "300",
                     "6.3",
-                    "12 a 20",
+                    "13-20",
                     "Excelente",
-                    "< 2%"
+                    "0,1-0,2 MPa"
                 ]
             ]
         },
         "features": [
             {
                 "icon": "♻️",
-                "title": "95% Reciclável"
+                "title": "100% Reciclável"
             },
             {
                 "icon": "🌿",
@@ -140,7 +140,7 @@
         ],
         "downloads": [
             {
-                "title": "Ficha técnica Lajes EPS Isoart",
+                "title": "Ficha técnica Lajes em EPS Isoart",
                 "icon": "📄",
                 "link": "/downloads/ficha-tecnica-lajes-eps.pdf"
             },
