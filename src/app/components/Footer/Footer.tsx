@@ -76,7 +76,7 @@ function Footer() {
                             </Link>
                             <Link href="/">
                                 <Image
-                                    src={'/img/geral/selo-iso.png'}
+                                    src={'/img/geral/selo-iso.svg'}
                                     alt="Logotipo Isoart"
                                     width={120}
                                     height={62}
