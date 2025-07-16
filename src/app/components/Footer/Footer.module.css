@@ -91,11 +91,17 @@
     align-items: center;
 }
 
+.FooterLogos img {
+    min-width: 3.5rem;
+    min-height: 3.55rem;
+    object-fit: contain;
+}
+
 @media (min-width:1200px) {
 
     .FooterWrapper,
     .FooterNavWrapper {
         flex-direction: row;
-        gap: 10rem;
+        gap: 5rem;
     }
 }

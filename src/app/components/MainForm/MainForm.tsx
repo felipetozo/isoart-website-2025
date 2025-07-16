@@ -4,6 +4,7 @@ import styles from './MainForm.module.css';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn } from 'react-icons/md';
 import { BsWhatsapp } from 'react-icons/bs';
 import FormField from '@/app/views/UI/Form/FormField';
+import FormSelection from '@/app/views/UI/Form/FormSelection';
 import Button from '@/app/views/UI/Button';
 import Image from 'next/image';
 
@@ -14,39 +15,6 @@ interface FormData {
     solution: string;
     city: string;
 }
-
-// Componente FormSelection inline para evitar problemas de dependência
-interface FormSelectionProps {
-    id: string;
-    label: string;
-    value: string;
-    onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-    options: Array<{ value: string; label: string }>;
-    error?: string;
-}
-
-const FormSelection: React.FC<FormSelectionProps> = ({
-    id,
-    label,
-    value,
-    onChange,
-    options = [], // Valor padrão para evitar undefined
-    error
-}) => {
-    return (
-        <div>
-            <label htmlFor={id}>{label}</label>
-            <select id={id} name={id} value={value} onChange={onChange}>
-                {options.map((option) => (
-                    <option key={option.value} value={option.value}>
-                        {option.label}
-                    </option>
-                ))}
-            </select>
-            {error && <span className="error">{error}</span>}
-        </div>
-    );
-};
 
 function MainForm() {
     const [formData, setFormData] = useState<FormData>({
@@ -242,7 +210,7 @@ function MainForm() {
 
                     <div className={styles.MainFormLocationsListItem}>
                         <Image
-                            src={'/img/geral/endereco-1.jpg'}
+                            src={'/img/geral/endereco-2.jpg'}
                             alt="Fábrica 2 Isoart"
                             width={1000}
                             height={700}
@@ -277,7 +245,7 @@ function MainForm() {
 
                     <div className={styles.MainFormLocationsListItem}>
                         <Image
-                            src={'/img/geral/endereco-1.jpg'}
+                            src={'/img/geral/endereco-3.jpg'}
                             alt="Fábrica 3 Isoart"
                             width={1000}
                             height={700}

@@ -1,13 +1,15 @@
 'use client';
 
 import React from 'react';
-import styles from './FormField.module.css';
+import styles from './FormSelection.module.css';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 
 interface FormSelectionProps {
     id: string;
     label: string;
     value: string;
     onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+    options: Array<{ value: string; label: string }>;
     error?: string;
 }
 
@@ -16,26 +18,28 @@ const FormSelection: React.FC<FormSelectionProps> = ({
     label,
     value,
     onChange,
+    options = [],
     error
 }) => {
     return (
         <div className={styles.formInput}>
             <label htmlFor={id} className={styles.label}>{label}</label>
-            <select
-                id={id}
-                name={id}
-                value={value}
-                onChange={onChange}
-                className={styles.input}
-            >
-                <option value="" disabled>Solução desejada</option>
-                <option value="telhas">Telhas ou Painéis Isotérmicos</option>
-                <option value="construcao">Construção Civil</option>
-                <option value="forros">Forros</option>
-                <option value="molduras">Molduras Decorativas</option>
-                <option value="embalagens">Embalagens</option>
-                <option value="outro">Outro</option>
-            </select>
+            <div className={styles.selectContainer}>
+                <select
+                    id={id}
+                    name={id}
+                    value={value}
+                    onChange={onChange}
+                    className={styles.select}
+                >
+                    {options.map((option) => (
+                        <option key={option.value} value={option.value}>
+                            {option.label}
+                        </option>
+                    ))}
+                </select>
+                <MdKeyboardArrowDown className={styles.chevronIcon} size={20} />
+            </div>
             {error && <div className={styles.error}>{error}</div>}
         </div>
     );
