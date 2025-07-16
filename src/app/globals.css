@@ -43,6 +43,10 @@
   --color-neutral-semiLight: 223, 226, 230;
   --color-neutral-light: 251, 251, 251;
 
+  /* Cores reciclagem - Tons de Verde */
+  --color-darkGreen: 58, 78, 25;
+  --color-lightGreen: 134, 188, 37;
+
 }
 
 @theme inline {
@@ -132,4 +136,12 @@ p {
   font-size: clamp(0.9rem, 1rem, 1.125rem);
   line-height: 1.6;
   font-family: var(--font-Inter);
+}
+
+.blueText {
+  color: rgba(var(--color-isoartBlue), 1);
+}
+
+.goldText {
+  color: rgba(var(--color-isoartGold), 1);
 }

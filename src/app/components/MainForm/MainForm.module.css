@@ -70,9 +70,12 @@
 
 .cadastroForm {
     width: 100%;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 0.4rem;
-    background-color: rgba(var(--color-darkBlue), 0.1);
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(var(--color-almostWhite), 0.02);
     border: 1px solid rgba(var(--color-lightestBlue), 0.1);
 }
 
@@ -94,11 +97,11 @@
     width: 100%;
     padding: 1rem;
     border-radius: 0.4rem;
-    background-color: rgba(var(--color-darkBlue), 0.1);
+    background-color: rgba(var(--color-almostWhite), 0.02);
     border: 1px solid rgba(var(--color-lightestBlue), 0.1);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
-    height: max-content;
+    height: 100%;
 }
 
 @media (min-width:1200px) {
@@ -112,10 +115,11 @@
     }
 
     .cadastroForm {
-        width: 50%;
+        width: 40%;
     }
 
     .MainFormLocationsListItem {
         width: 20%;
+        height: 100%;
     }
 }
