@@ -25,19 +25,19 @@ const FormSelection: React.FC<FormSelectionProps> = ({
         <div className={styles.formInput}>
             <label htmlFor={id} className={styles.label}>{label}</label>
             <div className={styles.selectContainer}>
-                <select
-                    id={id}
-                    name={id}
-                    value={value}
-                    onChange={onChange}
+            <select
+                id={id}
+                name={id}
+                value={value}
+                onChange={onChange}
                     className={styles.select}
-                >
+            >
                     {options.map((option) => (
                         <option key={option.value} value={option.value}>
                             {option.label}
                         </option>
                     ))}
-                </select>
+            </select>
                 <MdKeyboardArrowDown className={styles.chevronIcon} size={20} />
             </div>
             {error && <div className={styles.error}>{error}</div>}

@@ -47,6 +47,15 @@
   --color-darkGreen: 58, 78, 25;
   --color-lightGreen: 134, 188, 37;
 
+  /* Cores RAL para revestimentos PIR */
+  --ral-9003: 241, 244, 247; /* Branco Sinal */
+  --ral-7035: 209, 214, 210; /* Cinza Claro */
+  --ral-9006: 178, 178, 178; /* Cinza Alumínio */
+  --ral-1015: 235, 223, 182; /* Bege Claro */
+  --ral-6032: 0, 148, 92; /* Verde Tráfego */
+  --ral-5010: 0, 82, 130; /* Azul Genciana */
+  --ral-3000: 192, 12, 14; /* Vermelho Fogo */
+
 }
 
 @theme inline {
@@ -144,4 +153,17 @@ p {
 
 .goldText {
   color: rgba(var(--color-isoartGold), 1);
+}
+
+.aviso-azul {
+  background: rgba(var(--color-isoartBlue), 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2rem;
+  color: rgba(var(--color-isoartBlue), 1);
+  font-size: 0.9rem;
+  text-align: center;
+  width: max-content;
 }
