@@ -201,7 +201,7 @@
                 "name": "Cantoneiras em EPS",
                 "slug": "cantoneiras-em-eps",
                 "description": "Cantoneiras de EPS para proteção",
-                "image": "/img/geral/exemplo.png",
+                "image": "/img/produtos/embalagens-cantoneiras.jpg",
                 "specifications": {}
             },
             {
@@ -209,7 +209,7 @@
                 "name": "Chapas, boops, cubos e calços em EPS",
                 "slug": "chapas-boops-cubos-e-calcos-em-eps",
                 "description": "Variedade de formas em EPS para embalagens",
-                "image": "/img/geral/exemplo.png",
+                "image": "/img/produtos/embalagens-chapasboopscalcos.jpg",
                 "specifications": {}
             },
             {
@@ -217,7 +217,7 @@
                 "name": "Moldes personalizáveis",
                 "slug": "moldes-personalizaveis",
                 "description": "Moldes de EPS personalizados",
-                "image": "/img/geral/exemplo.png",
+                "image": "/img/produtos/embalagens-moldes.jpg",
                 "specifications": {}
             },
             {
@@ -225,7 +225,7 @@
                 "name": "Pérolas em EPS",
                 "slug": "perolas-em-eps",
                 "description": "Pérolas de EPS para preenchimento",
-                "image": "/img/geral/exemplo.png",
+                "image": "/img/produtos/embalagens-perolas.jpg",
                 "specifications": {}
             }
         ]

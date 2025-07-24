@@ -3,7 +3,7 @@
     "name": "Pérolas em EPS",
     "slug": "perolas-em-eps",
     "description": "Pérolas em EPS para preenchimento de embalagens, oferecendo proteção contra impactos e leveza para transporte de produtos frágeis.",
-    "image": "/img/produtos/perolas-em-eps.jpg",
+    "image": "/img/produtos/embalagens-perolas.jpg",
     "specifications": {
         "material": "EPS virgem",
         "densidade": "10-12 kg/m³",
@@ -22,11 +22,7 @@
         "description": "As Pérolas em EPS Isoart são grânulos de poliestireno expandido de baixa densidade, ideais para preencher espaços em embalagens e proteger produtos frágeis durante transporte e armazenamento. Com alta resistência a impactos e leveza, são perfeitas para indústrias logísticas, de varejo e e-commerce, sendo 100% recicláveis e sustentáveis."
     },
     "projectImages": [
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png"
+        "/img/produtos/embalagens-perolas.jpg"
     ],
     "benefits": [
         {
