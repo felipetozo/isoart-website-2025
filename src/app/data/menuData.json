@@ -116,26 +116,18 @@
         "products": [
             {
                 "id": 10,
-                "name": "Duna",
-                "slug": "duna",
-                "description": "Forro modelo Duna",
-                "image": "/img/geral/exemplo.png",
+                "name": "Dunas",
+                "slug": "dunas",
+                "description": "Forro modelo Dunas",
+                "image": "/img/produtos/forros/forros-dunas-01.avif",
                 "specifications": {}
             },
             {
                 "id": 11,
-                "name": "Acústico",
-                "slug": "acustico",
-                "description": "Forro com propriedades acústicas",
-                "image": "/img/geral/exemplo.png",
-                "specifications": {}
-            },
-            {
-                "id": 12,
-                "name": "Decorativo",
-                "slug": "decorativo",
-                "description": "Forro com design decorativo",
-                "image": "/img/geral/exemplo.png",
+                "name": "Paris",
+                "slug": "paris",
+                "description": "Forro modelo Paris",
+                "image": "/img/produtos/forros/forros-paris-01.avif",
                 "specifications": {}
             }
         ]
@@ -149,10 +141,10 @@
         "products": [
             {
                 "id": 13,
-                "name": "Molduras para portas e Janelas",
+                "name": "Molduras para Portas e Janelas",
                 "slug": "molduras-portas-janelas",
                 "description": "Molduras para acabamento de portas e janelas",
-                "image": "/img/produtos/moldurasportasjanelas.jpg",
+                "image": "/img/produtos/molduras/molduras-portas-01.avif",
                 "specifications": {}
             },
             {
@@ -160,7 +152,7 @@
                 "name": "Molduras para Beiral",
                 "slug": "molduras-beiral",
                 "description": "Molduras para beirais",
-                "image": "/img/produtos/moldurasbeiral.jpg",
+                "image": "/img/produtos/molduras/molduras-beiral-01.avif",
                 "specifications": {}
             },
             {
@@ -168,7 +160,7 @@
                 "name": "Molduras para Colunas e Capitéis",
                 "slug": "molduras-colunas-capiteis",
                 "description": "Molduras para colunas e capitéis",
-                "image": "/img/produtos/moldurascolunascapiteis.jpg",
+                "image": "/img/produtos/molduras/molduras-colunas-01.avif",
                 "specifications": {}
             },
             {
@@ -176,7 +168,7 @@
                 "name": "Molduras para Muros",
                 "slug": "molduras-muros",
                 "description": "Molduras para muros",
-                "image": "/img/produtos/moldurasmuros.jpg",
+                "image": "/img/produtos/molduras/molduras-muros-01.avif",
                 "specifications": {}
             },
             {
@@ -184,7 +176,7 @@
                 "name": "Molduras para Paredes",
                 "slug": "molduras-paredes",
                 "description": "Molduras para paredes",
-                "image": "/img/produtos/moldurasparedes.jpg",
+                "image": "/img/produtos/molduras/molduras-paredes-01.avif",
                 "specifications": {}
             }
         ]
@@ -194,30 +186,14 @@
         "title": "Embalagens em EPS",
         "slug": "embalagens-em-eps",
         "description": "Soluções em embalagens de EPS sob medida",
-        "image": "/img/geral/exemplo.png",
+        "image": "/img/produtos/embalagens/embalagens/embalagens-01.avif",
         "products": [
             {
                 "id": 18,
-                "name": "Cantoneiras em EPS",
-                "slug": "cantoneiras-em-eps",
-                "description": "Cantoneiras de EPS para proteção",
-                "image": "/img/produtos/embalagens-cantoneiras.jpg",
-                "specifications": {}
-            },
-            {
-                "id": 19,
-                "name": "Chapas, boops, cubos e calços em EPS",
-                "slug": "chapas-boops-cubos-e-calcos-em-eps",
-                "description": "Variedade de formas em EPS para embalagens",
-                "image": "/img/produtos/embalagens-chapasboopscalcos.jpg",
-                "specifications": {}
-            },
-            {
-                "id": 20,
-                "name": "Moldes personalizáveis",
-                "slug": "moldes-personalizaveis",
-                "description": "Moldes de EPS personalizados",
-                "image": "/img/produtos/embalagens-moldes.jpg",
+                "name": "Embalagens em EPS",
+                "slug": "embalagens-em-eps",
+                "description": "Soluções completas em embalagens de EPS",
+                "image": "/img/produtos/embalagens/embalagens/embalagens-01.avif",
                 "specifications": {}
             },
             {
@@ -225,7 +201,7 @@
                 "name": "Pérolas em EPS",
                 "slug": "perolas-em-eps",
                 "description": "Pérolas de EPS para preenchimento",
-                "image": "/img/produtos/embalagens-perolas.jpg",
+                "image": "/img/produtos/embalagens/perolas/embalagens-perolas-01.avif",
                 "specifications": {}
             }
         ]

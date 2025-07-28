@@ -58,19 +58,19 @@
         "description": "O Forro Acústico Isoart é ideal para tetos internos que requerem redução de ruídos, como auditórios, salas de reunião e restaurantes. Com leveza, resistência a umidade e isolamento térmico, oferece funcionalidade e estética para projetos residenciais e comerciais.",
         "indications": [
             {
-                "icon": "🏠",
+                "icon": "TbHome",
                 "text": "Home theaters e salas de estar"
             },
             {
-                "icon": "🏢",
+                "icon": "TbBuilding",
                 "text": "Salas de reunião e escritórios"
             },
             {
-                "icon": "🎭",
+                "icon": "TbMicrophone",
                 "text": "Auditórios e teatros"
             },
             {
-                "icon": "🏬",
+                "icon": "TbBuildingStore",
                 "text": "Restaurantes e lojas"
             }
         ]
@@ -80,75 +80,5 @@
         "Instalação eficiente": "Fixação com adesivos específicos ou argamassa AC-3 garante rapidez, praticidade e limpeza, com emendas reforçadas por fita telada.",
         "Isolamento térmico": "O EPS de baixa condutividade térmica (~0,035 W/m·K) contribui para conforto térmico e economia de energia.",
         "Sustentabilidade": "100% reciclável e livre de CFC, o Forro Acústico é ambientalmente responsável, com logística reversa praticada pela Isoart."
-    },
-    "technicalSpecs": {
-        "image": "/img/geral/exemplo3.png",
-        "alt": "Forro Acústico Isoart - Especificações Técnicas",
-        "table": {
-            "headers": [
-                "Modelo",
-                "Densidade (kg/m³)",
-                "Dimensões",
-                "Peso aproximado (kg/m²)",
-                "Resistência à compressão",
-                "Absorção de água",
-                "Acabamento"
-            ],
-            "rows": [
-                [
-                    "Acústico EPS 15",
-                    "15",
-                    "Personalizável",
-                    "0.3",
-                    "0,10 MPa",
-                    "< 4%",
-                    "Lisa ou acústica"
-                ],
-                [
-                    "Acústico EPS 18",
-                    "18",
-                    "Personalizável",
-                    "0.35",
-                    "0,12 MPa",
-                    "< 4%",
-                    "Lisa ou acústica"
-                ],
-                [
-                    "Acústico EPS 20",
-                    "20",
-                    "Personalizável",
-                    "0.4",
-                    "0,15 MPa",
-                    "< 4%",
-                    "Lisa ou acústica"
-                ]
-            ]
-        },
-        "features": [
-            {
-                "icon": "♻️",
-                "title": "100% Reciclável"
-            },
-            {
-                "icon": "🌿",
-                "title": "Sem emissão de CFC"
-            },
-            {
-                "icon": "📏",
-                "title": "Fabricado sob medida"
-            }
-        ],
-        "downloads": [
-            {
-                "title": "Ficha técnica Forro Acústico Isoart",
-                "icon": "📄",
-                "link": "/downloads/ficha-tecnica-acustico.pdf"
-            },
-            {
-                "title": "Catálogo de produtos Isoart",
-                "icon": "📋",
-                "link": "/downloads/catalogo-produtos-isoart.pdf"
-            }
-        ]
     }
 }

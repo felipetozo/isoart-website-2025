@@ -1,0 +1,85 @@
+{
+    "id": 18,
+    "name": "Embalagens em EPS",
+    "slug": "embalagens-em-eps",
+    "description": "Soluções completas em embalagens de EPS para proteção e transporte de produtos, incluindo cantoneiras, chapas, boops, cubos, calços e moldes personalizáveis.",
+    "image": "/img/produtos/embalagens/embalagens/embalagens-01.avif",
+    "specifications": {
+        "material": "EPS virgem",
+        "densidade": "10-15 kg/m³",
+        "dimensoes": "Personalizável sob consulta",
+        "aplicacao": "Proteção e embalagem de produtos"
+    },
+    "hero": {
+        "title": "Embalagens em EPS",
+        "description": "Soluções completas em EPS para proteção eficiente durante transporte e armazenamento, amortecendo vibrações e impactos.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/produtos/embalagens/embalagens/embalagens-01.avif"
+    },
+    "categoryDescription": {
+        "title": "As Embalagens em EPS Isoart oferecem proteção eficiente e personalizada para diversos produtos.",
+        "description": "As Embalagens em EPS Isoart são fabricadas em poliestireno expandido de alta qualidade, oferecendo proteção eficiente que amortece vibrações e impactos durante transporte e armazenamento. Incluindo cantoneiras, chapas, boops, cubos, calços e moldes personalizáveis, atendem às necessidades de indústrias logísticas, de e-commerce e varejo com eficiência e sustentabilidade."
+    },
+    "projectImages": [
+        "/img/produtos/embalagens/embalagens/embalagens-01.avif",
+        "/img/produtos/embalagens/embalagens/embalagens-02.avif",
+        "/img/produtos/embalagens/embalagens/embalagens-03.avif",
+        "/img/produtos/embalagens/embalagens/embalagens-04.avif",
+        "/img/produtos/embalagens/embalagens/embalagens-05.avif"
+    ],
+
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Proteção eficiente",
+            "description": "Amortece vibrações e impactos durante transporte."
+        },
+        {
+            "id": 2,
+            "title": "Personalização completa",
+            "description": "Moldes sob medida para qualquer produto."
+        },
+        {
+            "id": 3,
+            "title": "Sustentabilidade",
+            "description": "100% reciclável, com logística reversa pela Isoart."
+        }
+    ],
+    "generalCharacteristics": [
+        "EPS de alta densidade (10-15 kg/m³)",
+        "Resistência à compressão de 0,10-0,15 MPa",
+        "Absorção de água < 2% em 5 anos",
+        "Alta resistência a impactos",
+        "Não propaga fungos ou bactérias",
+        "100% reciclável, sem emissão de CFC"
+    ],
+    "applications": {
+        "title": "Proteção eficiente para produtos durante transporte e armazenamento",
+        "description": "As Embalagens em EPS Isoart são ideais para proteger produtos frágeis durante transporte e armazenamento. Com alta resistência a impactos e personalização, atendem a indústrias logísticas, de e-commerce e varejo, reduzindo danos e custos.",
+        "indications": [
+            {
+                "icon": "TbPackage",
+                "text": "Produtos eletrônicos"
+            },
+            {
+                "icon": "TbTruck",
+                "text": "Logística e e-commerce"
+            },
+            {
+                "icon": "TbBuildingStore",
+                "text": "Varejo e distribuição"
+            },
+            {
+                "icon": "TbTools",
+                "text": "Indústrias diversas"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Proteção eficiente": "O EPS de alta densidade absorve choques e amortece vibrações, protegendo produtos frágeis durante transporte e armazenamento.",
+        "Personalização": "Produzidas sob medida, as embalagens atendem a diferentes tamanhos e formatos, otimizando a logística.",
+        "Leveza": "Com densidade de 10-15 kg/m³, reduzem o peso das embalagens, diminuindo custos de transporte.",
+        "Sustentabilidade": "100% recicláveis e livres de CFC, as embalagens são ambientalmente responsáveis, com logística reversa pela Isoart."
+    }
+} 

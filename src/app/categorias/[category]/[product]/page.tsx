@@ -8,26 +8,9 @@ import MainForm from '@/app/components/MainForm/MainForm';
 import Button from '@/app/views/UI/Button';
 import TabbedSection from './TabbedSection';
 import BenefitsSection from '@/app/components/BenefitsSection/BenefitsSection';
-import { TbChecks, TbCloudDownload } from "react-icons/tb";
-
-interface TechnicalSpecs {
-    image?: string;
-    alt?: string;
-    table?: {
-        headers: string[];
-        rows: string[][];
-    };
-    features?: {
-        icon: string;
-        title: string;
-        description: string;
-    }[];
-    downloads?: {
-        title: string;
-        icon: string;
-        link: string;
-    }[];
-}
+import { TbChecks, TbHome, TbBuilding, TbBuildingFactory, TbTools, TbPackage, TbDeviceTv, TbWindow, TbTruck, TbBuildingStore, TbArmchair, TbMicrophone } from "react-icons/tb";
+import ImageCarousel from '@/app/components/ImageCarousel/ImageCarousel';
+import SingleImage from '@/app/components/SingleImage/SingleImage';
 
 interface ProductData {
     id: number;
@@ -35,6 +18,7 @@ interface ProductData {
     slug: string;
     description: string;
     image?: string;
+    projectImages?: string[];
     specifications?: {
         [key: string]: string | undefined;
     };
@@ -63,7 +47,6 @@ interface ProductData {
     tabDescriptions?: {
         [key: string]: string;
     };
-    technicalSpecs?: TechnicalSpecs;
 }
 
 interface Benefit {
@@ -94,6 +77,26 @@ interface CategoryData {
 
 interface ProductPageProps {
     params: Promise<{ category: string; product: string }>;
+}
+
+// Função para renderizar ícones do Tabler
+function renderIcon(iconName: string) {
+    const iconMap: { [key: string]: React.ComponentType<any> } = {
+        'TbHome': TbHome,
+        'TbBuilding': TbBuilding,
+        'TbFactory': TbBuildingFactory,
+        'TbTools': TbTools,
+        'TbPackage': TbPackage,
+        'TbDeviceTv': TbDeviceTv,
+        'TbWindow': TbWindow,
+        'TbTruck': TbTruck,
+        'TbBuildingStore': TbBuildingStore,
+        'TbArmchair': TbArmchair,
+        'TbMicrophone': TbMicrophone,
+    };
+
+    const IconComponent = iconMap[iconName];
+    return IconComponent ? <IconComponent size={24} /> : <span>{iconName}</span>;
 }
 
 // Função para buscar dados da categoria
@@ -167,10 +170,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
         title: 'Maior economia, agilidade na execução e conforto térmico com menor esforço estrutural',
         description: 'A Telha Térmica Isoart é fabricada com blocos de poliestireno expandido ou poliisocianurato, proporcionando telhas mais leves, com menor consumo de concreto e aço, fácil manuseio e excelente isolamento térmico. Ideal para obras que exigem rapidez, desempenho e redução de custos.',
         indications: [
-            { icon: '🏠', text: 'Casas e sobrados' },
-            { icon: '🏢', text: 'Prédios residenciais' },
-            { icon: '🏭', text: 'Galpões industriais' },
-            { icon: '🏬', text: 'Estabelecimentos comerciais' }
+            { icon: 'TbHome', text: 'Casas e sobrados' },
+            { icon: 'TbBuilding', text: 'Prédios residenciais' },
+            { icon: 'TbFactory', text: 'Galpões industriais' },
+            { icon: 'TbBuildingStore', text: 'Estabelecimentos comerciais' }
         ]
     };
 
@@ -179,28 +182,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
         'Economia na obra': 'Com menor consumo de materiais como concreto e aço, as Telhas Térmicas otimizam custos e aceleram o cronograma, oferecendo alta eficiência na construção.',
         'Flexibilidade no projeto': 'Personalizáveis em dimensões e acabamentos, essas telhas se adaptam a diversos projetos, desde residências até galpões industriais, garantindo versatilidade.',
         'Isolamento térmico inteligente': 'Projetadas com materiais como PIR e EPS, as Telhas Térmicas oferecem excelente isolamento, reduzindo a necessidade de climatização e aumentando o conforto interno.'
-    };
-
-    const technicalSpecs = productData.technicalSpecs || {
-        image: '/img/geral/exemplo3.png',
-        alt: 'Especificações Técnicas',
-        table: {
-            headers: ['Modelo', 'Altura (mm)', 'Largura padrão (mm)', 'Peso aproximado (kg/m²)', 'Densidade EPS (kg/m³)', 'Isolamento térmico', 'Absorção de água'],
-            rows: [
-                ['Laje EPS 12', '120', '300', '4.5', '12 a 20', 'Excelente', '< 2%'],
-                ['Laje EPS 15', '150', '300', '5.2', '12 a 20', 'Excelente', '< 2%'],
-                ['Laje EPS 20', '200', '300', '6.3', '12 a 20', 'Excelente', '< 2%']
-            ]
-        },
-        features: [
-            { icon: '♻️', title: '95% Reciclável', description: 'Material sustentável' },
-            { icon: '🌿', title: 'Sem emissão de CFC', description: 'Ecologicamente correto' },
-            { icon: '📏', title: 'Fabricado sob medida', description: 'Personalização total' }
-        ],
-        downloads: [
-            { title: 'Ficha técnica Lajes EPS Isoart', icon: '📄', link: '/downloads/ficha-tecnica-lajes-eps.pdf' },
-            { title: 'Catálogo de produtos Isoart', icon: '📋', link: '/downloads/catalogo-produtos-isoart.pdf' }
-        ]
     };
 
     return (
@@ -236,9 +217,23 @@ export default async function ProductPage({ params }: ProductPageProps) {
             {/* General Characteristics */}
             <section className={styles.GeneralCharacteristicsSection}>
                 <div className={styles.GeneralCharacteristicsWrapper}>
-                    <div className={styles.VideoPlaceholder}>
-                        <Image src={productData.image || '/img/geral/exemplo2.png'} alt={productData.name} width={1600} height={500} />
-                    </div>
+                                    <div className={styles.imgPlaceholder}>
+                    {productData.projectImages && productData.projectImages.length > 0 ? (
+                        <ImageCarousel 
+                            images={productData.projectImages}
+                            alt={productData.name}
+                            width={1600}
+                            height={800}
+                        />
+                    ) : (
+                        <SingleImage 
+                            src={productData.image || '/img/geral/exemplo2.png'} 
+                            alt={productData.name} 
+                            width={1600} 
+                            height={800}
+                        />
+                    )}
+                </div>
                     <h3>Características Gerais:</h3>
                     <div className={styles.featuresGrid}>
                         {generalCharacteristics.map((char, index) => (
@@ -260,7 +255,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                         <div className={styles.ApplicationCards}>
                             {applications.indications.map((indication, index) => (
                                 <div key={index} className={styles.ApplicationCard}>
-                                    <span>{indication.icon}</span> {indication.text}
+                                    {renderIcon(indication.icon)} {indication.text}
                                 </div>
                             ))}
                         </div>
@@ -270,71 +265,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
             {/* Tabbed Section */}
             <TabbedSection tabDescriptions={tabDescriptions} />
-
-            {/* Technical Specifications */}
-            <section className={styles.TechnicalSpecsSection}>
-                <div className={styles.TechnicalSpecsWrapper}>
-                    <div className={styles.TechnicalSpecsContent}>
-                        <div className={styles.SpecDetails}>
-                            <h4>Características técnicas</h4>
-
-                            {/* Tabela de especificações */}
-                            {technicalSpecs.table && (
-                                <table className={styles.TechnicalTable}>
-                                    <thead>
-                                        <tr>
-                                            {technicalSpecs.table.headers.map((header, index) => (
-                                                <th key={index}>{header}</th>
-                                            ))}
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {technicalSpecs.table.rows.map((row, rowIndex) => (
-                                            <tr key={rowIndex}>
-                                                {row.map((cell, cellIndex) => (
-                                                    <td key={cellIndex}>{cell}</td>
-                                                ))}
-                                            </tr>
-                                        ))}
-                                    </tbody>
-                                </table>
-                            )}
-
-                            {/* Características especiais */}
-                            {technicalSpecs.features && (
-                                <div className={styles.TechnicalFeatures}>
-                                    {technicalSpecs.features.map((feature, index) => (
-                                        <div key={index} className={styles.TechnicalFeature}>
-                                            <span className={styles.icon}>{feature.icon}</span>
-                                            <span className={styles.text}>{feature.title}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
-
-                            {/* Downloads */}
-                            {technicalSpecs.downloads && (
-                                <div className={styles.DownloadSection}>
-                                    <h5>Downloads:</h5>
-                                    <div className={styles.DownloadButtons}>
-                                        {technicalSpecs.downloads.map((download, index) => (
-                                            <a
-                                                key={index}
-                                                href={download.link}
-                                                className={styles.DownloadButton}
-                                                download
-                                            >
-                                                <span className={styles.icon}><TbCloudDownload /></span>
-                                                {download.title}
-                                            </a>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <SobreEmpresa />
             <MainForm />

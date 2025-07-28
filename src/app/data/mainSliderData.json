@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "Uma nova fábrica, uma nova solução",
-        "description": "Lorem ipsum dolor sit amet constectur amit lit. Lorem ipsum dolor sit amet constectur amit lib. Lorem ipsum dolor sit amit lorem ipsum constectur amit.",
+        "description": "",
         "buttonText": "Saiba mais",
         "buttonLink": "/cadastro",
         "backgroundImage": "/img/HeroBanners/banner001.webp"

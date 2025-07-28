@@ -3,7 +3,7 @@
     "name": "Telhas Térmicas",
     "slug": "telhas-termicas",
     "description": "Telhas com núcleo em PIR ou EPS e revestimento duplo com chapas de aço galvalume ou filme, ideais para coberturas com excelente isolamento térmico.",
-    "image": "/img/geral/exemplo2.png",
+    "image": "/img/produtos/telhastermicas.jpg",
     "specifications": {
         "material": "Aço galvanizado + EPS/PIR",
         "espessura": "30mm, 50mm, 100mm",
@@ -21,13 +21,7 @@
         "title": "As Telhas Térmicas Isoart oferecem leveza, economia e excelente desempenho térmico, otimizando a obra e garantindo conforto com menor custo.",
         "description": "A Telha Térmica Isoart é uma solução leve e eficiente para a construção civil, substituindo com vantagens os sistemas tradicionais. Produzida com núcleos de poliestireno expandido (EPS) ou poliisocianurato (PIR) e revestimento em aço galvalume, proporciona estruturas mais leves, redução de carga nas fundações e maior agilidade na obra. Além de excelente desempenho térmico, permite economia significativa de concreto, aço e mão de obra, sendo ideal para projetos que exigem produtividade, conforto e custo-benefício."
     },
-    "projectImages": [
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png"
-    ],
+
     "benefits": [
         {
             "id": 1,
@@ -58,19 +52,19 @@
         "description": "A Telha Térmica Isoart é fabricada com blocos de poliestireno expandido ou poliisocianurato, proporcionando telhas mais leves, com menor consumo de concreto e aço, fácil manuseio e excelente isolamento térmico. Ideal para obras que exigem rapidez, desempenho e redução de custos.",
         "indications": [
             {
-                "icon": "🏠",
+                "icon": "TbHome",
                 "text": "Casas e sobrados"
             },
             {
-                "icon": "🏢",
+                "icon": "TbBuilding",
                 "text": "Prédios residenciais"
             },
             {
-                "icon": "🏭",
+                "icon": "TbFactory",
                 "text": "Galpões industriais"
             },
             {
-                "icon": "🏬",
+                "icon": "TbBuildingStore",
                 "text": "Estabelecimentos comerciais"
             }
         ]
@@ -80,75 +74,5 @@
         "Economia na obra": "As Lajes em EPS oferecem economia em diversas frentes: materiais, tempo e mão de obra. A montagem é mais simples e ágil, exigindo menos profissionais no canteiro. O transporte das peças é facilitado pelo baixo peso, tanto na horizontal quanto na vertical. A redução no uso de formas de madeira, concreto e aço também impacta diretamente no orçamento, tornando o sistema mais competitivo e sustentável, sem abrir mão do desempenho estrutural.",
         "Flexibilidade no projeto": "Com produção sob medida, as lajes em EPS se adaptam a diferentes necessidades construtivas, tanto em altura quanto em largura e comprimento. Sua estrutura facilita a criação de caminhos para instalações elétricas e hidráulicas, podendo ser moldada com ferramentas simples ou sopradores térmicos. Isso elimina o risco de danificar a capa de concreto, como ocorre em sistemas cerâmicos, e permite adequações sem comprometer a integridade da laje.",
         "Isolamento térmico inteligente": "Além de atuar como um excelente isolante térmico, o EPS contribui para uma cura mais adequada do concreto. Ele evita fuga da água de amassamento, mantendo a umidade por mais tempo e melhorando a resistência da laje após a concretagem. O resultado é uma estrutura mais estável e durável, que proporciona conforto térmico ao ambiente e reduz a necessidade de climatização artificial - o que impacta diretamente no consumo energético da edificação."
-    },
-    "technicalSpecs": {
-        "image": "/img/geral/exemplo3.png",
-        "alt": "Telhas Térmicas Isoart - Especificações Técnicas",
-        "table": {
-            "headers": [
-                "Modelo",
-                "Altura (mm)",
-                "Largura padrão (mm)",
-                "Peso aproximado (kg/m²)",
-                "Densidade EPS (kg/m³)",
-                "Isolamento térmico",
-                "Absorção de água"
-            ],
-            "rows": [
-                [
-                    "Laje EPS 12",
-                    "120",
-                    "300",
-                    "4.5",
-                    "12 a 20",
-                    "Excelente",
-                    "< 2%"
-                ],
-                [
-                    "Laje EPS 15",
-                    "150",
-                    "300",
-                    "5.2",
-                    "12 a 20",
-                    "Excelente",
-                    "< 2%"
-                ],
-                [
-                    "Laje EPS 20",
-                    "200",
-                    "300",
-                    "6.3",
-                    "12 a 20",
-                    "Excelente",
-                    "< 2%"
-                ]
-            ]
-        },
-        "features": [
-            {
-                "icon": "♻️",
-                "title": "95% Reciclável"
-            },
-            {
-                "icon": "🌿",
-                "title": "Sem emissão de CFC"
-            },
-            {
-                "icon": "📏",
-                "title": "Fabricado sob medida"
-            }
-        ],
-        "downloads": [
-            {
-                "title": "Ficha técnica Lajes EPS Isoart",
-                "icon": "📄",
-                "link": "/downloads/ficha-tecnica-lajes-eps.pdf"
-            },
-            {
-                "title": "Catálogo de produtos Isoart",
-                "icon": "📋",
-                "link": "/downloads/catalogo-produtos-isoart.pdf"
-            }
-        ]
     }
 }

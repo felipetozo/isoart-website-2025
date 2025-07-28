@@ -6,7 +6,7 @@ export default function Sustentabilidade() {
     <section className={styles.sustentabilidadeSection}>
       <div className={styles.sustentabilidadeWrapper}>
         <h2 className={styles.sustentabilidadeTitle}>
-          Reciclagem de EPS: sustentabilidade e Reaproveitamento inteligente
+          Reciclagem de EPS: sustentabilidade e reaproveitamento inteligente.
         </h2>
         
         <img 

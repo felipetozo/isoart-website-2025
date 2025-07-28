@@ -21,13 +21,7 @@
         "title": "Os Painéis de Câmara Frigorífica Isoart oferecem isolamento térmico excepcional para ambientes de baixa e média temperatura.",
         "description": "Os Painéis de Câmara Frigorífica Isoart são projetados para manter temperaturas controladas em câmaras de refrigeração e congelamento. Com núcleo de poliisocianurato (PIR) ou poliestireno expandido (EPS) e revestimento em aço pré-pintado ou inoxidável, garantem alta eficiência térmica, resistência à umidade e facilidade de limpeza, ideais para indústrias alimentícias, logísticas e farmacêuticas."
     },
-    "projectImages": [
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png"
-    ],
+
     "benefits": [
         {
             "id": 1,
@@ -62,7 +56,7 @@
                 "text": "Indústria alimentícia"
             },
             {
-                "icon": "🚚",
+                "icon": "TbTruck",
                 "text": "Centros de distribuição logística"
             },
             {
@@ -80,75 +74,5 @@
         "Vedação e resistência": "O sistema de encaixe macho-fêmea e revestimentos em aço inoxidável ou galvalume garantem estanqueidade, resistência à umidade e proteção contra condensação, ideal para ambientes úmidos.",
         "Higienização fácil": "Superfícies lisas em aço inoxidável ou pré-pintado facilitam a limpeza, atendendo normas sanitárias para indústrias alimentícias e farmacêuticas.",
         "Durabilidade e sustentabilidade": "Materiais recicláveis, livres de HCFCs e resistentes à corrosão garantem longa vida útil, com manutenção mínima e conformidade ambiental."
-    },
-    "technicalSpecs": {
-        "image": "/img/geral/exemplo3.png",
-        "alt": "Painéis de Câmara Frigorífica Isoart - Especificações Técnicas",
-        "table": {
-            "headers": [
-                "Modelo",
-                "Espessura (mm)",
-                "Largura padrão (mm)",
-                "Peso aproximado (kg/m²)",
-                "Densidade EPS/PIR (kg/m³)",
-                "Isolamento térmico",
-                "Resistência ao fogo"
-            ],
-            "rows": [
-                [
-                    "Painel EPS 100",
-                    "100",
-                    "1130",
-                    "9.0",
-                    "15-20",
-                    "Excelente",
-                    "Classe F-1"
-                ],
-                [
-                    "Painel PIR 150",
-                    "150",
-                    "1130",
-                    "12.5",
-                    "30-38",
-                    "Superior",
-                    "Classe R1 (II-A)"
-                ],
-                [
-                    "Painel PIR 200",
-                    "200",
-                    "1130",
-                    "14.0",
-                    "30-38",
-                    "Superior",
-                    "Classe R1 (II-A)"
-                ]
-            ]
-        },
-        "features": [
-            {
-                "icon": "♻️",
-                "title": "100% Reciclável"
-            },
-            {
-                "icon": "🌿",
-                "title": "Livre de HCFCs"
-            },
-            {
-                "icon": "📏",
-                "title": "Fabricado sob medida"
-            }
-        ],
-        "downloads": [
-            {
-                "title": "Ficha técnica Painéis de Câmara Frigorífica Isoart",
-                "icon": "📄",
-                "link": "/downloads/ficha-tecnica-paineis-camara-frigorifica.pdf"
-            },
-            {
-                "title": "Catálogo de produtos Isoart",
-                "icon": "📋",
-                "link": "/downloads/catalogo-produtos-isoart.pdf"
-            }
-        ]
     }
 }

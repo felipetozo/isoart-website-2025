@@ -8,7 +8,7 @@ function SobreEmpresa() {
             <section className={styles.SobreEmpresaSection} id="#SobreEmpresa">
                 <div className={styles.SobreEmpresaWrapper}>
                     <div className={styles.SobreEmpresaContainer}>
-                        <p>Criar, transformar e inovar.</p>
+                        <p>Expanda sua criatividade.</p>
                     </div>
                     <div className={styles.SobreEmpresaContainer}>
                         <h3>
@@ -18,13 +18,8 @@ function SobreEmpresa() {
                             atendem às diversas demandas do mercado.
                         </h3>
                         <div className={styles.doubleButton}>
-                            <Link href="/cadastro">
+                            <Link href="/sobre">
                                 <Button variant="primary" size="medium">
-                                    Saiba mais
-                                </Button>
-                            </Link>
-                            <Link href="/cadastro">
-                                <Button variant="secondary" size="medium">
                                     Saiba mais
                                 </Button>
                             </Link>

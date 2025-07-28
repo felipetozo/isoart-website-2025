@@ -67,7 +67,7 @@ function SolucoesGrid() {
                         <Link href="/categorias/forros">
                             <div className={styles.SolucoesGridCardImage}>
                                 <Image
-                                    src={'/img/SolucoesGrid/molduras.jpg'}
+                                    src={'/img/SolucoesGrid/forros.jpg'}
                                     alt="Forros em EPS"
                                     width={1000}
                                     height={700}

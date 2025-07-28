@@ -21,13 +21,7 @@
         "title": "Os Painéis de Divisória e Forro Isoart oferecem isolamento termoacústico, leveza e versatilidade para ambientes internos.",
         "description": "Os Painéis de Divisória e Forro Isoart são ideais para criar divisórias internas e forros termoacústicos em projetos comerciais, industriais e residenciais. Com núcleo de poliestireno expandido (EPS) ou poliisocianurato (PIR) e revestimento em aço galvalume, proporcionam excelente isolamento térmico e acústico, além de fácil instalação e acabamento estético. São perfeitos para escritórios, galpões e espaços que exigem conforto ambiental e rapidez na execução."
     },
-    "projectImages": [
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png"
-    ],
+
     "benefits": [
         {
             "id": 1,
@@ -58,19 +52,19 @@
         "description": "Os Painéis de Divisória e Forro Isoart são ideais para projetos que exigem divisórias internas e forros com alto desempenho termoacústico. Fabricados com núcleo de EPS ou PIR, oferecem montagem rápida, redução de ruídos e conforto térmico, sendo perfeitos para escritórios, auditórios e galpões industriais.",
         "indications": [
             {
-                "icon": "🏢",
+                "icon": "TbBuilding",
                 "text": "Escritórios e salas comerciais"
             },
             {
-                "icon": "🎭",
+                "icon": "TbMicrophone",
                 "text": "Auditórios e espaços culturais"
             },
             {
-                "icon": "🏭",
+                "icon": "TbFactory",
                 "text": "Galpões industriais"
             },
             {
-                "icon": "🏠",
+                "icon": "TbHome",
                 "text": "Ambientes residenciais"
             }
         ]
@@ -80,75 +74,5 @@
         "Montagem eficiente": "O sistema modular com encaixe macho-fêmea permite instalação rápida e limpa, reduzindo custos com mão de obra e equipamentos. A leveza dos painéis facilita o transporte e a logística no canteiro de obras.",
         "Personalização estética": "Disponíveis em acabamentos liso, frisado ou microfrisado, com revestimento em aço galvalume pré-pintado (branca RAL 9003 ou outras cores sob consulta), os painéis se adaptam a diferentes necessidades arquitetônicas, garantindo um visual moderno.",
         "Sustentabilidade e durabilidade": "Produzidos com materiais recicláveis e livres de HCFCs, os painéis Isoart são resistentes à corrosão, roedores e umidade, garantindo longa vida útil com manutenção mínima."
-    },
-    "technicalSpecs": {
-        "image": "/img/geral/exemplo3.png",
-        "alt": "Painéis de Divisória e Forro Isoart - Especificações Técnicas",
-        "table": {
-            "headers": [
-                "Modelo",
-                "Espessura (mm)",
-                "Largura padrão (mm)",
-                "Peso aproximado (kg/m²)",
-                "Densidade EPS/PIR (kg/m³)",
-                "Isolamento térmico",
-                "Redução acústica"
-            ],
-            "rows": [
-                [
-                    "Painel EPS 50",
-                    "50",
-                    "1130",
-                    "8.0",
-                    "15-20",
-                    "Excelente",
-                    "22-25 dB"
-                ],
-                [
-                    "Painel PIR 75",
-                    "75",
-                    "1130",
-                    "10.0",
-                    "30-38",
-                    "Superior",
-                    "25-30 dB"
-                ],
-                [
-                    "Painel PIR 100",
-                    "100",
-                    "1130",
-                    "11.0",
-                    "30-38",
-                    "Superior",
-                    "25-30 dB"
-                ]
-            ]
-        },
-        "features": [
-            {
-                "icon": "♻️",
-                "title": "100% Reciclável"
-            },
-            {
-                "icon": "🌿",
-                "title": "Livre de HCFCs"
-            },
-            {
-                "icon": "📏",
-                "title": "Fabricado sob medida"
-            }
-        ],
-        "downloads": [
-            {
-                "title": "Ficha técnica Painéis de Divisória e Forro Isoart",
-                "icon": "📄",
-                "link": "/downloads/ficha-tecnica-paineis-divisoria-forro.pdf"
-            },
-            {
-                "title": "Catálogo de produtos Isoart",
-                "icon": "📋",
-                "link": "/downloads/catalogo-produtos-isoart.pdf"
-            }
-        ]
     }
 }

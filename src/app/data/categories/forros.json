@@ -14,10 +14,10 @@
     "products": [
         {
             "id": 10,
-            "name": "Duna",
-            "slug": "duna",
-            "description": "Forro modelo Duna com design único.",
-            "image": "/img/geral/exemplo.png",
+            "name": "Dunas",
+            "slug": "dunas",
+            "description": "Forro modelo Dunas com design único.",
+            "image": "/img/produtos/forros/forros-dunas-01.png",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Decoração Interna"
@@ -25,24 +25,13 @@
         },
         {
             "id": 11,
-            "name": "Acústico",
-            "slug": "acustico",
-            "description": "Forro com propriedades acústicas superiores.",
-            "image": "/img/geral/exemplo.png",
+            "name": "Paris",
+            "slug": "paris",
+            "description": "Forro modelo Paris com design único.",
+            "image": "/img/produtos/forros/forros-paris-01.png",
             "specifications": {
                 "material": "EPS",
-                "aplicacao": "Controle Acústico"
-            }
-        },
-        {
-            "id": 12,
-            "name": "Decorativo",
-            "slug": "decorativo",
-            "description": "Forro decorativo para ambientes elegantes.",
-            "image": "/img/geral/exemplo.png",
-            "specifications": {
-                "material": "EPS",
-                "aplicacao": "Decoração"
+                "aplicacao": "Decoração Interna"
             }
         }
     ],

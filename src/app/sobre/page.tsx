@@ -136,9 +136,9 @@ export default function SobrePage() {
       {/* Galeria de imagens */}
       <section className={styles.gallerySection}>
         <div className={styles.galleryGrid}>
-          <img src="/img/geral/exemplo.png" alt="Exemplo 1" className={styles.galleryImage} />
-          <img src="/img/geral/exemplo.png" alt="Exemplo 2" className={styles.galleryImage} />
-          <img src="/img/geral/exemplo.png" alt="Exemplo 3" className={styles.galleryImage} />
+          <img src="/img/geral/endereco-1.jpg" alt="Exemplo 1" className={styles.galleryImage} />
+          <img src="/img/geral/endereco-2.jpg" alt="Exemplo 2" className={styles.galleryImage} />
+          <img src="/img/geral/endereco-3.jpg" alt="Exemplo 3" className={styles.galleryImage} />
         </div>
       </section>
 
@@ -148,11 +148,11 @@ export default function SobrePage() {
             <div className={styles.mapOverlayWrapper}>
               <div className={styles.mapOverlayContent}>
                 <h2 className={styles.mapOverlayTitle}>
-                  Atendimento em todo Brasil e Paraguai
+                  Atendimento em todo Brasil, Paraguai e Uruguai.
                 </h2>
                 <p className={styles.mapOverlayText}>
                   A Isoart possui 3 fábricas estrategicamente localizadas nas regiões oeste do Paraná e Santa Catarina, 
-                  garantindo cobertura completa em todo território brasileiro e paraguaio com excelência e qualidade.
+                  garantindo cobertura completa em todo território brasileiro, paraguaio e uruguaio com excelência e qualidade.
                 </p>
               </div>
             </div>
@@ -166,7 +166,9 @@ export default function SobrePage() {
             <Target className={styles.mvvIcon} />
             <h3 className={styles.mvvTitle}>Missão</h3>
             <p className={styles.mvvDescription}>
-              Satisfazer as necessidades dos clientes, superando suas expectativas, através da excelência na fabricação e distribuição de produtos térmicos construtivos, gerando soluções inovadoras com rentabilidade e respeito ao meio ambiente.
+            Satisfazer as necessidades dos clientes, superando suas expectativas,
+            através da excelência na fabricação e distribuição dos produtos de EPS,
+            gerando soluções inovadoras, com rentabilidade e respeito ao meio ambiente.
             </p>
           </div>
           
@@ -174,7 +176,8 @@ export default function SobrePage() {
             <Eye className={styles.mvvIcon} />
             <h3 className={styles.mvvTitle}>Visão</h3>
             <p className={styles.mvvDescription}>
-              Ser reconhecida como a empresa referência no setor em que atua, agregando valor social e econômico, dentro de princípios éticos e sustentáveis.
+              Ser reconhecida como a empresa referência no setor em que atua, agregando valor
+              social e econômico, dentro de princípios éticos e sustentáveis.
             </p>
           </div>
           
@@ -182,7 +185,8 @@ export default function SobrePage() {
             <Heart className={styles.mvvIcon} />
             <h3 className={styles.mvvTitle}>Valores</h3>
             <p className={styles.mvvDescription}>
-              Compromisso com a qualidade, excelência no atendimento, respeito ao meio ambiente, transparência nas ações, valorização da vida, inovação e ousadia.
+              Compromisso com a qualidade, excelência no atendimento, respeito ao meio ambiente,
+              transparência nas ações, valorização da vida, inovação e ousadia.
             </p>
           </div>
         </div>
@@ -194,7 +198,7 @@ export default function SobrePage() {
           <div className={styles.qualityLeftColumn}>
             <h4 className={styles.qualityTitle}>Política de qualidade</h4>
             <p className={styles.qualityDescription}>
-              A Isoart Soluções Térmicas, através da Política da Qualidade estabelece as diretrizes pelas quais declara seu compromisso com a satisfação dos clientes, colaboradores e comunidade.
+            O Grupo Isoart, através da Política de Qualidade estabelece as diretrizes pelas quais declara seu compromisso com a satisfação dos clientes, colaboradores e comunidade.
             </p>
             <p className={styles.qualityDescription}>
               Nesse sentido, buscamos a melhoria contínua do Sistema da Gestão da Qualidade, fundamentando nossas ações nas seguintes premissas:

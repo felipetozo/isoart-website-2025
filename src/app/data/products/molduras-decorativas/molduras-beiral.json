@@ -3,7 +3,7 @@
     "name": "Molduras para Beiral",
     "slug": "molduras-para-beiral",
     "description": "Molduras em EPS de alta densidade com revestimento flexível, perfeitas para acabamento estético de beirais, com leveza e resistência a intempéries.",
-    "image": "/img/produtos/moldurasbeiral.jpg",
+    "image": "/img/produtos/molduras/molduras-beiral-01.avif",
     "specifications": {
         "material": "EPS virgem com revestimento de resina polimérica",
         "densidade": "20-30 kg/m³",
@@ -15,18 +15,22 @@
         "description": "Soluções leves e elegantes para acabamento de beirais, valorizando fachadas com durabilidade e estilo.",
         "buttonText": "Solicite um orçamento",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/produtos/moldurasbeiral.jpg"
+        "backgroundImage": "/img/produtos/molduras/molduras-beiral-01.avif"
     },
     "categoryDescription": {
         "title": "As Molduras para Beiral Isoart combinam estética e funcionalidade para acabamentos externos de alta qualidade.",
         "description": "As Molduras para Beiral Isoart são fabricadas em EPS de alta densidade com revestimento de massa flexível à base de resina polimérica, oferecendo leveza, resistência a intempéries e personalização para beirais de telhados e fachadas. Ideais para projetos arquitetônicos que buscam sofisticação e praticidade, garantem instalação rápida e baixo impacto estrutural."
     },
     "projectImages": [
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png"
+        "/img/produtos/molduras/beiral/molduras-01.avif",
+        "/img/produtos/molduras/beiral/molduras-01.avif",
+        "/img/produtos/molduras/beiral/molduras-01.avif",
+        "/img/produtos/molduras/beiral/molduras-01.avif",
+        "/img/produtos/molduras/beiral/molduras-01.avif",
+        "/img/produtos/molduras/beiral/molduras-01.avif",
+        "/img/produtos/molduras/beiral/molduras-01.avif",
+        "/img/produtos/molduras/beiral/molduras-01.avif",
+        "/img/produtos/molduras/beiral/molduras-01.avif"
     ],
     "benefits": [
         {
@@ -58,19 +62,19 @@
         "description": "As Molduras para Beiral Isoart são ideais para acabamentos externos de telhados e fachadas, oferecendo estética diferenciada e resistência a intempéries. Com instalação simples e personalização, são perfeitas para residências, sobrados e edifícios comerciais.",
         "indications": [
             {
-                "icon": "🏠",
+                "icon": "TbHome",
                 "text": "Telhados residenciais"
             },
             {
-                "icon": "🏢",
+                "icon": "TbBuilding",
                 "text": "Fachadas comerciais"
             },
             {
-                "icon": "🏬",
+                "icon": "TbBuildingStore",
                 "text": "Edifícios institucionais"
             },
             {
-                "icon": "🛠️",
+                "icon": "TbTools",
                 "text": "Reformas de telhados"
             }
         ]
@@ -80,75 +84,5 @@
         "Instalação eficiente": "A fixação com argamassa colante AC-3 e tarugos de madeira para peças maiores proporciona rapidez, praticidade e limpeza na obra.",
         "Durabilidade externa": "O revestimento flexível e o EPS de alta densidade resistem a chuvas, sol e variações térmicas, garantindo longa vida útil sem manutenção.",
         "Sustentabilidade": "100% recicláveis e livres de CFC, as molduras Isoart são ambientalmente responsáveis, com logística reversa pela empresa."
-    },
-    "technicalSpecs": {
-        "image": "/img/geral/exemplo3.png",
-        "alt": "Molduras para Beiral Isoart - Especificações Técnicas",
-        "table": {
-            "headers": [
-                "Modelo",
-                "Densidade (kg/m³)",
-                "Dimensões",
-                "Peso aproximado (kg/m²)",
-                "Resistência à compressão",
-                "Absorção de água",
-                "Acabamento"
-            ],
-            "rows": [
-                [
-                    "Moldura EPS 20",
-                    "20",
-                    "Personalizável",
-                    "0.4",
-                    "0,15 MPa",
-                    "< 4%",
-                    "Massa flexível"
-                ],
-                [
-                    "Moldura EPS 25",
-                    "25",
-                    "Personalizável",
-                    "0.5",
-                    "0,2 MPa",
-                    "< 4%",
-                    "Massa flexível"
-                ],
-                [
-                    "Moldura EPS 30",
-                    "30",
-                    "Personalizável",
-                    "0.6",
-                    "0,25 MPa",
-                    "< 4%",
-                    "Massa flexível"
-                ]
-            ]
-        },
-        "features": [
-            {
-                "icon": "♻️",
-                "title": "100% Reciclável"
-            },
-            {
-                "icon": "🌿",
-                "title": "Sem emissão de CFC"
-            },
-            {
-                "icon": "📏",
-                "title": "Fabricado sob medida"
-            }
-        ],
-        "downloads": [
-            {
-                "title": "Ficha técnica Molduras para Beiral Isoart",
-                "icon": "📄",
-                "link": "/downloads/ficha-tecnica-molduras-beiral.pdf"
-            },
-            {
-                "title": "Catálogo de produtos Isoart",
-                "icon": "📋",
-                "link": "/downloads/catalogo-produtos-isoart.pdf"
-            }
-        ]
     }
 }

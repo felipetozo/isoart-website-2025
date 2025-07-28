@@ -78,10 +78,8 @@ export default function SobreEpsPirPage() {
             </p>
             <div className={styles.applicationsContainer}>
               <div className={styles.applicationsGrid}>
-                <img src="/img/geral/exemplo.png" alt="Aplicação 1" className={styles.applicationImage} />
-                <img src="/img/geral/exemplo2.png" alt="Aplicação 2" className={styles.applicationImage} />
-                <img src="/img/geral/exemplo3.png" alt="Aplicação 3" className={styles.applicationImage} />
-                <img src="/img/geral/exemplo.png" alt="Aplicação 4" className={styles.applicationImage} />
+                <img src="/img/EPS/EPS-Aplicacao-01.png" alt="Aplicação 1" className={styles.applicationImage} />
+                <img src="/img/EPS/EPS-Aplicacao-02.png" alt="Aplicação 2" className={styles.applicationImage} />
               </div>
             </div>
           </div>
@@ -137,10 +135,8 @@ export default function SobreEpsPirPage() {
             </p>
             <div className={styles.applicationsContainer}>
               <div className={styles.applicationsGrid}>
-                <img src="/img/geral/exemplo.png" alt="Aplicação 1" className={styles.applicationImage} />
-                <img src="/img/geral/exemplo2.png" alt="Aplicação 2" className={styles.applicationImage} />
-                <img src="/img/geral/exemplo3.png" alt="Aplicação 3" className={styles.applicationImage} />
-                <img src="/img/geral/exemplo.png" alt="Aplicação 4" className={styles.applicationImage} />
+              <img src="/img/PIR/PIR-Aplicacao-01.png" alt="Aplicação 1" className={styles.applicationImage} />
+              <img src="/img/PIR/PIR-Aplicacao-02.png" alt="Aplicação 2" className={styles.applicationImage} />
               </div>
             </div>
           </div>
@@ -157,44 +153,84 @@ export default function SobreEpsPirPage() {
             </p>
             <div className={styles.revestimentosGrid}>
               <div className={styles.revestimentoItem}>
-                <img src="/img/geral/exemplo.png" alt="Aço microfrisado" className={styles.revestimentoImage} />
+                <img src="/img/PIR/PIR-Revestimentos-01.png" alt="Aço microfrisado" className={styles.revestimentoImage} />
                 <p className={styles.revestimentoTitle}>Aço microfrisado</p>
               </div>
               <div className={styles.revestimentoItem}>
-                <img src="/img/geral/exemplo.png" alt="Aço frisado" className={styles.revestimentoImage} />
+                <img src="/img/PIR/PIR-Revestimentos-02.png" alt="Aço frisado" className={styles.revestimentoImage} />
                 <p className={styles.revestimentoTitle}>Aço frisado</p>
               </div>
               <div className={styles.revestimentoItem}>
-                <img src="/img/geral/exemplo.png" alt="Revestimento 3" className={styles.revestimentoImage} />
+                <img src="/img/PIR/PIR-Revestimentos-03.png" alt="Revestimento 3" className={styles.revestimentoImage} />
                 <p className={styles.revestimentoTitle}>Filme alumínio de face branca ou PVC</p>
               </div>
             </div>
             <div className={styles.revestimentosCores}>
               <div className={styles.coresGrid}>
                 {[
-                  { code: 'RAL 9003', name: 'Branco Sinal' },
-                  { code: 'RAL 7035', name: 'Cinza Claro' },
-                  { code: 'RAL 9006', name: 'Cinza Alumínio' },
-                  { code: 'RAL 1015', name: 'Bege Claro' },
-                  { code: 'RAL 6032', name: 'Verde Tráfego' },
-                  { code: 'RAL 5010', name: 'Azul Genciana' },
-                  { code: 'RAL 3000', name: 'Vermelho Fogo' },
-                ].map((cor) => (
-                  <div className={styles.corItem} key={cor.code}>
-                                         <span 
-                       className={styles.corThumb} 
-                       style={{ 
-                         backgroundColor: cor.code === 'RAL 9003' ? 'rgb(241, 244, 247)' :
-                         cor.code === 'RAL 7035' ? 'rgb(209, 214, 210)' :
-                         cor.code === 'RAL 9006' ? 'rgb(178, 178, 178)' :
-                         cor.code === 'RAL 1015' ? 'rgb(235, 223, 182)' :
-                         cor.code === 'RAL 6032' ? 'rgb(0, 148, 92)' :
-                         cor.code === 'RAL 5010' ? 'rgb(0, 82, 130)' :
-                         cor.code === 'RAL 3000' ? 'rgb(192, 12, 14)' : '#ccc'
-                       }}
-                     ></span>
-                    <p className={styles.corCode}>{cor.code}</p>
-                    <p className={styles.corName}>{cor.name}</p>
+                  { code: 'RAL 9003', name: 'Branco Sinal', type: 'color' },
+                  { code: 'RAL 7035', name: 'Cinza Claro', type: 'color' },
+                  { code: 'RAL 7040', name: 'Cinza Médio', type: 'color' },
+                  { code: 'RAL 7024', name: 'Cinza Grafite', type: 'color' },
+                  { code: 'RAL 9006', name: 'Prata', type: 'color' },
+                  { code: 'RAL 1015', name: 'Marfim', type: 'color' },
+                  { code: 'RAL 1023', name: 'Amarelo', type: 'color' },
+                  { code: 'RAL 8023', name: 'Terracota', type: 'color' },
+                  { code: 'RAL 3000', name: 'Vermelho Fogo', type: 'color' },
+                  { code: 'RAL 5010', name: 'Azul Genciana', type: 'color' },
+                  { code: 'RAL 6002', name: 'Verde Tráfego', type: 'color' },
+                  { code: 'RAL 9005', name: 'Preto', type: 'color' },
+                  { 
+                    code: 'Textura 01', 
+                    name: 'Natural Galvanizado', 
+                    type: 'texture',
+                    image: '/img/PIR/PIR-Textura-01.png'
+                  },
+                  { 
+                    code: 'Textura 02', 
+                    name: 'Amadeirado Claro', 
+                    type: 'texture',
+                    image: '/img/PIR/PIR-Textura-02.png'
+                  },
+                  { 
+                    code: 'Textura 03', 
+                    name: 'Amadeirado Escuro', 
+                    type: 'texture',
+                    image: '/img/PIR/PIR-Textura-03.png'
+                  },
+                ].map((item) => (
+                  <div className={styles.corItem} key={item.code}>
+                    {item.type === 'color' ? (
+                      <span 
+                        className={styles.corThumb} 
+                        style={{ 
+                          backgroundColor: item.code === 'RAL 9003' ? 'rgb(var(--ral-9003))' :
+                          item.code === 'RAL 7035' ? 'rgb(var(--ral-7035))' :
+                          item.code === 'RAL 7040' ? 'rgb(var(--ral-7040))' :
+                          item.code === 'RAL 7024' ? 'rgb(var(--ral-7024))' :
+                          item.code === 'RAL 9006' ? 'rgb(var(--ral-9006))' :
+                          item.code === 'RAL 1015' ? 'rgb(var(--ral-1015))' :
+                          item.code === 'RAL 1023' ? 'rgb(var(--ral-1023))' :
+                          item.code === 'RAL 8023' ? 'rgb(var(--ral-8023))' :
+                          item.code === 'RAL 3000' ? 'rgb(var(--ral-3000))' :
+                          item.code === 'RAL 5010' ? 'rgb(var(--ral-5010))' :
+                          item.code === 'RAL 6002' ? 'rgb(var(--ral-6002))' :
+                          item.code === 'RAL 9005' ? 'rgb(var(--ral-9005))' : '#ccc'
+                        }}
+                      ></span>
+                                         ) : (
+                       <div className={styles.texturaThumb}>
+                         <Image
+                           src={item.image || ''}
+                           alt={item.name}
+                           width={80}
+                           height={80}
+                           style={{ objectFit: 'cover', borderRadius: '4px' }}
+                         />
+                       </div>
+                     )}
+                    <p className={styles.corCode}>{item.code}</p>
+                    <p className={styles.corName}>{item.name}</p>
                   </div>
                 ))}
               </div>

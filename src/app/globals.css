@@ -49,13 +49,18 @@
   --color-lightGreen: 134, 188, 37;
 
   /* Cores RAL para revestimentos PIR */
-  --ral-9003: 241, 244, 247; /* Branco Sinal */
-  --ral-7035: 209, 214, 210; /* Cinza Claro */
-  --ral-9006: 178, 178, 178; /* Cinza Alumínio */
-  --ral-1015: 235, 223, 182; /* Bege Claro */
-  --ral-6032: 0, 148, 92; /* Verde Tráfego */
-  --ral-5010: 0, 82, 130; /* Azul Genciana */
+  --ral-9003: 241, 244, 247; /* Branco */
+  --ral-7035: 200, 214, 210; /* Cinza Claro */
+  --ral-7040: 204, 193, 193; /* Cinza médio */
+  --ral-7024: 83, 83, 83; /* Cinza grafite */
+  --ral-9006: 116, 116, 116; /* Prata */
+  --ral-1015: 213, 180, 150; /* Marfim */
+  --ral-1023: 225, 222, 0; /* Amarelo */
+  --ral-8023: 255, 107, 0; /* Terracota */
   --ral-3000: 192, 12, 14; /* Vermelho Fogo */
+  --ral-5010: 0, 82, 130; /* Azul Genciana */
+  --ral-6002: 0, 148, 92; /* Verde Tráfego */
+  --ral-9005: 0, 0, 0; /* Preto */
 
 }
 

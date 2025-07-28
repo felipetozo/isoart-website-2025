@@ -14,7 +14,7 @@
 
 .ProductPageHeroMask {
     content: '';
-    background-color: rgba(var(--color-almostBlack), 0.75);
+    background-color: rgba(var(--color-almostBlack), 0.5);
     width: 100%;
     height: 100%;
     top: 0;
@@ -212,171 +212,25 @@
     border: 1px solid rgba(var(--color-isoartGold), 0.1);
 }
 
-.VideoPlaceholder {
+.imgPlaceholder {
     display: flex;
     width: 100%;
     overflow: hidden;
-    height: 35rem;
+    height: 50rem;
     margin: 0 auto;
     max-width: 1600px;
     justify-content: center;
 }
 
-.VideoPlaceholder img {
+.imgPlaceholder img {
     width: 100%;
     height: auto;
     border-radius: 0.2rem;
 }
 
-/* Technical Specifications Section */
-.TechnicalSpecsSection {
-    width: 100%;
-    padding: 5rem 0;
-    background-color: rgba(var(--color-isoartBlue), 1);
-}
 
-.TechnicalSpecsWrapper {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 1600px;
-    gap: 3rem;
-}
 
-.TechnicalSpecsContent {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
 
-.Blueprint {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.Blueprint img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.2rem;
-    mix-blend-mode: multiply;
-}
-
-.SpecDetails {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 1.5rem;
-}
-
-.SpecDetails h4 {
-    font-size: 2rem;
-    font-weight: 800;
-    color: rgba(var(--color-almostWhite), 1);
-    margin-bottom: 1rem;
-}
-
-.TechnicalTable {
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 0.5rem;
-    overflow: hidden;
-}
-
-.TechnicalTable th,
-.TechnicalTable td {
-    padding: 1rem;
-    text-align: left;
-}
-
-.TechnicalTable th {
-    font-weight: bold;
-    color: rgba(var(--color-almostWhite), 1);
-}
-
-.TechnicalTable td {
-    color: rgba(var(--color-almostWhite), 0.65);
-    border-bottom: 1px solid rgba(var(--color-almostWhite), 0.50);
-}
-
-.TechnicalTable tr:last-child td {
-    border-bottom: none;
-}
-
-.TechnicalFeatures {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.TechnicalFeature {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.TechnicalFeature .icon {
-    font-size: 1rem;
-    color: rgba(var(--color-almostWhite), 1);
-}
-
-.TechnicalFeature .text {
-    font-weight: bold;
-    color: rgba(var(--color-almostWhite), 1);
-}
-
-.TechnicalFeature .description {
-    font-size: 0.9rem;
-    color: rgba(var(--color-almostBlack), 0.7);
-}
-
-.DownloadSection {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    justify-content: flex-start;
-}
-
-.DownloadSection h5 {
-    font-size: 1rem;
-    font-weight: 800;
-    color: rgba(var(--color-almostWhite), 1);
-}
-
-.DownloadButtons {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.DownloadButton {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem;
-    border: 1px solid rgba(var(--color-neutral-light), 0.5);
-    border-radius: 0.5rem;
-    text-decoration: none;
-    color: rgba(var(--color-almostWhite), 0.65);
-    font-weight: 500;
-}
-
-.DownloadButton:hover {
-    background-color: rgba(var(--color-neutral-light), 0.1);
-    border: 1px solid rgba(var(--color-neutral-light), 1);
-    color: rgba(var(--color-almostWhite), 1);
-}
-
-.DownloadButton .icon {
-    font-size: 1.2rem;
-}
 
 
 @media (min-width: 800px) and (max-width: 1199px) {
@@ -391,29 +245,7 @@
         min-height: 40rem;
     }
 
-    .BenefitsWrapper,
-    .TechnicalSpecsWrapper {
+    .BenefitsWrapper {
         flex-direction: row;
-    }
-
-    .TechnicalSpecsContent {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .Blueprint {
-        flex: 1;
-    }
-
-    .SpecDetails {
-        flex: 1;
-    }
-
-    .TechnicalFeatures {
-        justify-content: flex-start;
-    }
-
-    .DownloadButtons {
-        justify-content: flex-start;
     }
 }

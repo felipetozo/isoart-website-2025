@@ -128,8 +128,11 @@ function MainNav() {
             {/* Navegador Institucional */}
             <nav className={styles.institutionalNavSection}>
                 <div className={styles.institutionalNavWrapper}>
-                    <div className={styles.institutionalNavMessage}>
-                        Podemos usar este espaço com uma mensagem, notícia ou saudação
+                    <div className={styles.institutionalNavSocial}>
+                        <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank"><BsInstagram /></Link>
+                        <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank"><BsFacebook /></Link>
+                        <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank"><BsYoutube /></Link>
+                        <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank"><BsLinkedin /></Link>
                     </div>
                     <div className={styles.institutionalNavItems}>
                         <ul>
@@ -139,12 +142,6 @@ function MainNav() {
                             <li><Link href="/noticias">NOTÍCIAS</Link></li>
                             <li><Link href="/contato">CONTATO</Link></li>
                         </ul>
-                        <div className={styles.institutionalNavSocial}>
-                            <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank"><BsInstagram /></Link>
-                            <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank"><BsFacebook /></Link>
-                            <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank"><BsYoutube /></Link>
-                            <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank"><BsLinkedin /></Link>
-                        </div>
                     </div>
                 </div>
             </nav>

@@ -3,7 +3,7 @@
     "name": "Molduras para Portas e Janelas",
     "slug": "molduras-para-portas-e-janelas",
     "description": "Molduras decorativas em EPS de alta densidade com revestimento flexível, ideais para acabamento estético de portas e janelas, com fácil instalação e personalização.",
-    "image": "/img/produtos/moldurasportasjanelas.jpg",
+    "image": "/img/produtos/molduras/molduras-portas-01.avif",
     "specifications": {
         "material": "EPS virgem com revestimento de resina polimérica",
         "densidade": "20-30 kg/m³",
@@ -15,18 +15,25 @@
         "description": "Soluções elegantes para acabamento de portas e janelas, combinando estética, leveza e resistência.",
         "buttonText": "Solicite um orçamento",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/produtos/moldurasportasjanelas.jpg"
+        "backgroundImage": "/img/produtos/molduras/molduras-portas-01.avif"
     },
     "categoryDescription": {
         "title": "As Molduras para Portas e Janelas Isoart elevam a estética de ambientes internos e externos com leveza e durabilidade.",
         "description": "As Molduras para Portas e Janelas Isoart são fabricadas em EPS de alta densidade com revestimento flexível à base de resina polimérica, garantindo acabamento liso, resistência a intempéries e facilidade de instalação. Personalizáveis, são ideais para projetos arquitetônicos que buscam requinte, rapidez na aplicação e baixo impacto estrutural, atendendo a residências, escritórios e edifícios comerciais."
     },
     "projectImages": [
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png",
-        "/img/geral/exemplo.png"
+        "/img/produtos/molduras/portas/molduras-01.avif",
+        "/img/produtos/molduras/portas/molduras-01.avif",
+        "/img/produtos/molduras/portas/molduras-01.avif",
+        "/img/produtos/molduras/portas/molduras-01.avif",
+        "/img/produtos/molduras/portas/molduras-01.avif",
+        "/img/produtos/molduras/portas/molduras-01.avif",
+        "/img/produtos/molduras/portas/molduras-01.avif",
+        "/img/produtos/molduras/portas/molduras-01.avif",
+        "/img/produtos/molduras/portas/molduras-01.avif",
+        "/img/produtos/molduras/portas/molduras-01.avif",
+        "/img/produtos/molduras/portas/molduras-01.avif",
+        "/img/produtos/molduras/portas/molduras-01.avif"
     ],
     "benefits": [
         {
@@ -58,19 +65,19 @@
         "description": "As Molduras para Portas e Janelas Isoart são perfeitas para acabamentos internos e externos, proporcionando elegância e personalização. Com instalação rápida e resistência a intempéries, são ideais para residências, escritórios e fachadas comerciais, valorizando a estética sem sobrecarregar a estrutura.",
         "indications": [
             {
-                "icon": "🏠",
+                "icon": "TbHome",
                 "text": "Residências e sobrados"
             },
             {
-                "icon": "🏢",
+                "icon": "TbBuilding",
                 "text": "Escritórios e edifícios comerciais"
             },
             {
-                "icon": "🏬",
+                "icon": "TbBuildingStore",
                 "text": "Fachadas de lojas"
             },
             {
-                "icon": "🛠️",
+                "icon": "TbTools",
                 "text": "Projetos de retrofit"
             }
         ]
@@ -80,75 +87,5 @@
         "Instalação rápida": "A fixação com argamassa colante AC-3 e, para molduras maiores, tarugos de madeira, garante rapidez, praticidade e limpeza na obra, reduzindo custos.",
         "Resistência e durabilidade": "O EPS de alta densidade e o revestimento flexível resistem a variações bruscas de temperatura e umidade, ideal para uso externo sem trincas ou ressecamento.",
         "Sustentabilidade": "100% recicláveis e livres de CFC, as molduras Isoart são ambientalmente responsáveis, com logística reversa praticada pela empresa."
-    },
-    "technicalSpecs": {
-        "image": "/img/geral/exemplo3.png",
-        "alt": "Molduras para Portas e Janelas Isoart - Especificações Técnicas",
-        "table": {
-            "headers": [
-                "Modelo",
-                "Densidade (kg/m³)",
-                "Dimensões",
-                "Peso aproximado (kg/m²)",
-                "Resistência à compressão",
-                "Absorção de água",
-                "Acabamento"
-            ],
-            "rows": [
-                [
-                    "Moldura EPS 20",
-                    "20",
-                    "Personalizável",
-                    "0.4",
-                    "0,15 MPa",
-                    "< 4%",
-                    "Massa flexível"
-                ],
-                [
-                    "Moldura EPS 25",
-                    "25",
-                    "Personalizável",
-                    "0.5",
-                    "0,2 MPa",
-                    "< 4%",
-                    "Massa flexível"
-                ],
-                [
-                    "Moldura EPS 30",
-                    "30",
-                    "Personalizável",
-                    "0.6",
-                    "0,25 MPa",
-                    "< 4%",
-                    "Massa flexível"
-                ]
-            ]
-        },
-        "features": [
-            {
-                "icon": "♻️",
-                "title": "100% Reciclável"
-            },
-            {
-                "icon": "🌿",
-                "title": "Sem emissão de CFC"
-            },
-            {
-                "icon": "📏",
-                "title": "Fabricado sob medida"
-            }
-        ],
-        "downloads": [
-            {
-                "title": "Ficha técnica Molduras para Portas e Janelas Isoart",
-                "icon": "📄",
-                "link": "/downloads/ficha-tecnica-molduras-portas-janelas.pdf"
-            },
-            {
-                "title": "Catálogo de produtos Isoart",
-                "icon": "📋",
-                "link": "/downloads/catalogo-produtos-isoart.pdf"
-            }
-        ]
     }
 }
