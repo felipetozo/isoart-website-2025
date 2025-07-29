@@ -14,7 +14,6 @@ Site institucional e catálogo de produtos Isoart, desenvolvido com Next.js, Rea
 - **GSAP** e **Lenis** (animações e scroll suave)
 - **MySQL** (integração planejada para formulários)
 - **Supabase** (migração futura)
-- **Vercel** (deploy)
 
 ---
 
