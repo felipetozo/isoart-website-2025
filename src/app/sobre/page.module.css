@@ -1,5 +1,5 @@
 .heroSection {
-  background-image: url('/img/geral/exemplo.png');
+  background-image: url('/img/geral/endereco-01-01.avif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -150,11 +150,7 @@
   opacity: 0;
   pointer-events: none;
   z-index: 10;
-}
-
-.timelineItemActive .timelineImage {
-  opacity: 1;
-  pointer-events: auto;
+  /* Removendo transições CSS para deixar GSAP controlar */
 }
 
 .gallerySection {

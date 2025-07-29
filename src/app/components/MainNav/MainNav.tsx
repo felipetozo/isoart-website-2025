@@ -138,8 +138,6 @@ function MainNav() {
                         <ul>
                             <li><Link href="/sobre">SOBRE A EMPRESA</Link></li>
                             <li><Link href="/sobre-eps-pir">SOBRE O PIR E EPS</Link></li>
-                            <li><Link href="/vagas">VAGAS</Link></li>
-                            <li><Link href="/noticias">NOTÍCIAS</Link></li>
                             <li><Link href="/contato">CONTATO</Link></li>
                         </ul>
                     </div>

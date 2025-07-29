@@ -3,7 +3,7 @@
     "name": "Chapas e Painéis em EPS",
     "slug": "chapas-paineis-em-eps",
     "description": "Chapas e painéis em EPS (Poliestireno Expandido) para isolamento térmico e acústico, ideais para divisórias, forros e preenchimentos em construções sustentáveis.",
-    "image": "/img/produtos/chapaspaineisemeps.jpg",
+    "image": "/img/produtos/construcao-civil/chapas/chapas-01.avif",
     "specifications": {
         "material": "Poliestireno Expandido (EPS)",
         "espessura": "20mm, 50mm, 100mm",
@@ -15,12 +15,16 @@
         "description": "Soluções leves e versáteis para isolamento térmico e acústico em projetos de construção civil.",
         "buttonText": "Solicite um orçamento",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/produtos/chapaspaineisemeps.jpg"
+        "backgroundImage": "/img/produtos/construcao-civil/chapas/chapas-01.avif"
     },
     "categoryDescription": {
         "title": "As Chapas e Painéis em EPS Isoart oferecem isolamento térmico, leveza e versatilidade para projetos modernos.",
         "description": "As Chapas e Painéis em EPS Isoart são ideais para aplicações em divisórias, forros e isolamento térmico na construção civil. Produzidos com poliestireno expandido de alta qualidade, proporcionam leveza, resistência à umidade e excelente isolamento térmico e acústico, garantindo economia e sustentabilidade em projetos residenciais, comerciais e industriais."
     },
+    "projectImages": [
+        "/img/produtos/construcao-civil/chapas/chapas-01.avif",
+        "/img/produtos/construcao-civil/chapas/chapas-02.avif"
+    ],
 
     "benefits": [
         {

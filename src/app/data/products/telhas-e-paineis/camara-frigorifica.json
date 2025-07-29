@@ -3,7 +3,7 @@
     "name": "Câmara Frigorífica",
     "slug": "camara-frigorifica",
     "description": "Painéis isotérmicos com núcleo em PIR ou EPS e revestimento em aço pré-pintado ou inoxidável, projetados para câmaras frigoríficas com isolamento térmico superior e resistência a baixas temperaturas.",
-    "image": "/img/produtos/camarafrigorifica.jpg",
+    "image": "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-01.avif",
     "specifications": {
         "material": "Aço pré-pintado/inoxidável + PIR/EPS",
         "espessura": "100mm, 150mm, 200mm",
@@ -15,12 +15,20 @@
         "description": "Painéis robustos para câmaras frigoríficas, garantindo isolamento térmico eficiente e durabilidade em temperaturas extremas.",
         "buttonText": "Solicite um orçamento",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/produtos/camarafrigorifica.jpg"
+        "backgroundImage": "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-01.avif"
     },
     "categoryDescription": {
         "title": "Os Painéis de Câmara Frigorífica Isoart oferecem isolamento térmico excepcional para ambientes de baixa e média temperatura.",
         "description": "Os Painéis de Câmara Frigorífica Isoart são projetados para manter temperaturas controladas em câmaras de refrigeração e congelamento. Com núcleo de poliisocianurato (PIR) ou poliestireno expandido (EPS) e revestimento em aço pré-pintado ou inoxidável, garantem alta eficiência térmica, resistência à umidade e facilidade de limpeza, ideais para indústrias alimentícias, logísticas e farmacêuticas."
     },
+    "projectImages": [
+        "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-01.avif",
+        "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-02.avif",
+        "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-03.avif",
+        "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-04.avif",
+        "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-05.avif",
+        "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-06.avif"
+    ],
 
     "benefits": [
         {

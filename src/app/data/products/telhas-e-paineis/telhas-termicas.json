@@ -3,7 +3,7 @@
     "name": "Telhas Térmicas",
     "slug": "telhas-termicas",
     "description": "Telhas com núcleo em PIR ou EPS e revestimento duplo com chapas de aço galvalume ou filme, ideais para coberturas com excelente isolamento térmico.",
-    "image": "/img/produtos/telhastermicas.jpg",
+    "image": "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-01.avif",
     "specifications": {
         "material": "Aço galvanizado + EPS/PIR",
         "espessura": "30mm, 50mm, 100mm",
@@ -15,12 +15,23 @@
         "description": "Descubra a solução ideal para coberturas eficientes com isolamento térmico superior.",
         "buttonText": "Solicite um orçamento",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/produtos/telhastermicas.jpg"
+        "backgroundImage": "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-01.avif"
     },
     "categoryDescription": {
         "title": "As Telhas Térmicas Isoart oferecem leveza, economia e excelente desempenho térmico, otimizando a obra e garantindo conforto com menor custo.",
         "description": "A Telha Térmica Isoart é uma solução leve e eficiente para a construção civil, substituindo com vantagens os sistemas tradicionais. Produzida com núcleos de poliestireno expandido (EPS) ou poliisocianurato (PIR) e revestimento em aço galvalume, proporciona estruturas mais leves, redução de carga nas fundações e maior agilidade na obra. Além de excelente desempenho térmico, permite economia significativa de concreto, aço e mão de obra, sendo ideal para projetos que exigem produtividade, conforto e custo-benefício."
     },
+    "projectImages": [
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-01.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-02.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-03.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-04.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-05.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-06.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-07.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-08.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-09.avif"
+    ],
 
     "benefits": [
         {

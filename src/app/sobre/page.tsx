@@ -2,8 +2,9 @@
 import MainForm from '@/app/components/MainForm/MainForm';
 import Sustentabilidade from '@/app/components/Sustentabilidade/Sustentabilidade';
 import styles from './page.module.css';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Target, Eye, Heart } from 'lucide-react';
+import { gsap } from 'gsap';
 
 const TIMELINE = [
   {
@@ -11,30 +12,92 @@ const TIMELINE = [
     label: 'os primeiros passos',
     description:
       'Fundada em Santa Tereza do Oeste, Paraná, a Isoart iniciou sua trajetória com o propósito de oferecer soluções inovadoras e sustentáveis em Poliestireno Expandido (EPS). Desde o primeiro momento, a empresa estabeleceu um compromisso com a qualidade e a transparência, atendendo diferentes setores com excelência e construindo uma base sólida de confiança no mercado.',
-    image: '/img/geral/endereco-1.jpg',
+    image: '/img/geral/endereco-01-01.avif',
   },
   {
     year: '2015',
     label: 'Um novo capítulo',
     description:
       'A expansão para Xanxerê, Santa Catarina, marcou um ponto decisivo na história da Isoart. A inauguração da Fábrica 2 trouxe novas oportunidades, consolidando a empresa como uma das principais indústrias transformadoras de EPS do Brasil. Essa unidade não apenas aumentou a capacidade produtiva, mas também reforçou o compromisso com a sustentabilidade ao focar na industrialização e reciclagem de produtos em EPS.',
-    image: '/img/geral/endereco-2.jpg',
+    image: '/img/geral/endereco-02-01.avif',
   },
   {
     year: '2021',
     label: 'Projeto expandir',
     description:
       'Com o lançamento do projeto expandir, a Isoart inaugurou a moderna Fábrica 3 em Santa Tereza do Oeste, Paraná. Essa instalação representa um marco na evolução da empresa, projetada para atender às demandas de construções modernas e sustentáveis. Equipada com tecnologia de ponta, a Fábrica 3 produz telhas térmicas e isopainéis em linha contínua, com núcleos isolantes em Espuma Rígida de Poliisocianurato, PIR, ou EPS.',
-    image: '/img/geral/endereco-3.jpg',
+    image: '/img/geral/endereco-03-01.avif',
   },
 ];
 
 export default function SobrePage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [imgPos, setImgPos] = useState<{ x: number; y: number } | null>(null);
+  const imageRefs = useRef<(HTMLImageElement | null)[]>([]);
 
   // Detect mobile
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 900;
+
+  // Função para animar entrada da imagem
+  const animateImageIn = (index: number) => {
+    const imageRef = imageRefs.current[index];
+    if (imageRef && !isMobile) {
+      // Reset da imagem para estado inicial
+      gsap.set(imageRef, {
+        opacity: 0,
+        scale: 0.8,
+        filter: "blur(10px)",
+        rotation: -5,
+        transformOrigin: "center center"
+      });
+      
+      // Animação de entrada com efeito de blur e rotação
+      gsap.to(imageRef, {
+        opacity: 1,
+        scale: 1,
+        filter: "blur(0px)",
+        rotation: 0,
+        duration: 0.6,
+        ease: "back.out(1.7)"
+      });
+      
+      // Esconder o cursor
+      document.body.style.cursor = 'none';
+    }
+  };
+
+  // Função para animar saída da imagem
+  const animateImageOut = (index: number) => {
+    const imageRef = imageRefs.current[index];
+    if (imageRef && !isMobile) {
+      gsap.to(imageRef, {
+        opacity: 0,
+        scale: 0.8,
+        filter: "blur(5px)",
+        rotation: 5,
+        duration: 0.4,
+        ease: "back.in(1.7)"
+      });
+      
+      // Mostrar o cursor novamente
+      document.body.style.cursor = 'auto';
+    }
+  };
+
+  // Configuração inicial das imagens
+  useEffect(() => {
+    if (!isMobile) {
+      const imageItems = imageRefs.current.filter(Boolean) as HTMLImageElement[];
+      
+      // Configuração inicial das imagens
+      gsap.set(imageItems, {
+        opacity: 0,
+        scale: 0.8,
+        filter: "blur(10px)",
+        rotation: -5
+      });
+    }
+  }, [isMobile]);
 
   return (
     <div>
@@ -89,16 +152,34 @@ export default function SobrePage() {
                 styles.timelineItem +
                 (activeIndex === idx ? ' ' + styles.timelineItemActive : '')
               }
-              onMouseEnter={() => setActiveIndex(idx)}
-              onMouseLeave={() => setActiveIndex(null)}
+              onMouseEnter={() => {
+                setActiveIndex(idx);
+                animateImageIn(idx);
+              }}
+              onMouseLeave={() => {
+                animateImageOut(idx);
+                setActiveIndex(null);
+              }}
               onMouseMove={e => {
                 if (!isMobile && activeIndex === idx) {
                   const section = e.currentTarget as HTMLDivElement;
                   const rect = section.getBoundingClientRect();
-                  setImgPos({
+                  const newPos = {
                     x: e.clientX - rect.left,
                     y: e.clientY - rect.top,
-                  });
+                  };
+                  setImgPos(newPos);
+                  
+                  // Animação suave do movimento da imagem
+                  const imageRef = imageRefs.current[idx];
+                  if (imageRef) {
+                    gsap.to(imageRef, {
+                      left: newPos.x + 40,
+                      top: newPos.y,
+                      duration: 0.1,
+                      ease: "power2.out"
+                    });
+                  }
                 }
               }}
             >
@@ -119,12 +200,14 @@ export default function SobrePage() {
                 <div className={styles.timelineDescription}>{item.description}</div>
               </div>
               {/* Desktop: imagem flutuante ao lado, segue o mouse */}
-              {!isMobile && activeIndex === idx && (
+              {!isMobile && (
                 <img
+                  ref={(el: HTMLImageElement | null) => {
+                    imageRefs.current[idx] = el;
+                  }}
                   src={item.image}
                   alt={item.label}
                   className={styles.timelineImage}
-                  style={imgPos ? { left: imgPos.x + 40, top: imgPos.y, opacity: 1 } : {}}
                 />
               )}
             </div>
@@ -136,14 +219,14 @@ export default function SobrePage() {
       {/* Galeria de imagens */}
       <section className={styles.gallerySection}>
         <div className={styles.galleryGrid}>
-          <img src="/img/geral/endereco-1.jpg" alt="Exemplo 1" className={styles.galleryImage} />
-          <img src="/img/geral/endereco-2.jpg" alt="Exemplo 2" className={styles.galleryImage} />
-          <img src="/img/geral/endereco-3.jpg" alt="Exemplo 3" className={styles.galleryImage} />
+          <img src="/img/geral/endereco-01-01.avif" alt="Exemplo 1" className={styles.galleryImage} />
+          <img src="/img/geral/endereco-02-01.avif" alt="Exemplo 2" className={styles.galleryImage} />
+          <img src="/img/geral/endereco-03-01.avif" alt="Exemplo 3" className={styles.galleryImage} />
         </div>
       </section>
 
               <section className={styles.mapSection}>
-          <img src="/img/geral/isoart-mapa.png" alt="Mapa da Isoart" className={styles.mapImage} />
+          <img src="/img/geral/isoart-mapa.avif" alt="Mapa da Isoart" className={styles.mapImage} />
           <div className={styles.mapOverlay}>
             <div className={styles.mapOverlayWrapper}>
               <div className={styles.mapOverlayContent}>
@@ -257,4 +340,4 @@ export default function SobrePage() {
       <MainForm />
     </div>
   );
-} 
+}

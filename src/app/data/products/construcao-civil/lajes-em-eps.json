@@ -3,7 +3,7 @@
     "name": "Lajes em EPS",
     "slug": "lajes-em-eps",
     "description": "Lajes em EPS (Poliestireno Expandido) projetadas para reduzir peso e custos em construções, oferecendo isolamento térmico e acústico, além de maior agilidade na obra.",
-    "image": "/img/produtos/lajesemeps.jpg",
+    "image": "/img/produtos/construcao-civil/lajes/lajes-01.avif",
     "specifications": {
         "material": "Poliestireno Expandido (EPS)",
         "espessura": "120mm, 150mm, 200mm",
@@ -15,12 +15,17 @@
         "description": "Soluções leves e econômicas para lajes com isolamento térmico e acústico superior.",
         "buttonText": "Solicite um orçamento",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/produtos/lajesemeps.jpg"
+        "backgroundImage": "/img/produtos/construcao-civil/lajes/lajes-01.avif"
     },
     "categoryDescription": {
         "title": "As Lajes em EPS Isoart oferecem leveza, economia e excelente desempenho térmico, otimizando a obra e garantindo conforto com menor custo.",
         "description": "As Lajes em EPS Isoart são uma solução leve e eficiente para a construção civil, substituindo com vantagens os sistemas tradicionais. Produzidas com poliestireno expandido (EPS), proporcionam redução de carga nas fundações, maior agilidade na obra e excelente isolamento térmico e acústico. Ideais para projetos que exigem produtividade, conforto e custo-benefício, conforme normas ABNT NBR 14859."
     },
+    "projectImages": [
+        "/img/produtos/construcao-civil/lajes/lajes-01.avif",
+        "/img/produtos/construcao-civil/lajes/lajes-02.avif",
+        "/img/produtos/construcao-civil/lajes/lajes-03.avif"
+    ],
 
     "benefits": [
         {

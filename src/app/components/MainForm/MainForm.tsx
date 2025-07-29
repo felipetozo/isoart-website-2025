@@ -175,7 +175,7 @@ function MainForm() {
 
                     <div className={styles.MainFormLocationsListItem}>
                         <Image
-                            src={'/img/geral/endereco-1.jpg'}
+                            src={'/img/geral/endereco-01-01.avif'}
                             alt="Fábrica 1 Isoart"
                             width={1000}
                             height={700}
@@ -210,7 +210,7 @@ function MainForm() {
 
                     <div className={styles.MainFormLocationsListItem}>
                         <Image
-                            src={'/img/geral/endereco-2.jpg'}
+                            src={'/img/geral/endereco-02-01.avif'}
                             alt="Fábrica 2 Isoart"
                             width={1000}
                             height={700}
@@ -245,7 +245,7 @@ function MainForm() {
 
                     <div className={styles.MainFormLocationsListItem}>
                         <Image
-                            src={'/img/geral/endereco-3.jpg'}
+                            src={'/img/geral/endereco-03-01.avif'}
                             alt="Fábrica 3 Isoart"
                             width={1000}
                             height={700}

@@ -3,7 +3,7 @@
     "name": "Divisória e Forro",
     "slug": "divisoria-e-forro",
     "description": "Painéis isotérmicos com núcleo em PIR ou EPS e revestimento em aço galvalume, projetados para divisórias internas e forros termoacústicos, garantindo conforto térmico, acústico e praticidade na instalação.",
-    "image": "/img/produtos/divisoriaforro.jpg",
+    "image": "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-01.avif",
     "specifications": {
         "material": "Aço galvanizado + EPS/PIR",
         "espessura": "50mm, 75mm, 100mm",
@@ -15,12 +15,20 @@
         "description": "Soluções práticas para divisórias e forros com isolamento térmico e acústico de alto desempenho.",
         "buttonText": "Solicite um orçamento",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/produtos/divisoriaforro.jpg"
+        "backgroundImage": "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-01.avif"
     },
     "categoryDescription": {
         "title": "Os Painéis de Divisória e Forro Isoart oferecem isolamento termoacústico, leveza e versatilidade para ambientes internos.",
         "description": "Os Painéis de Divisória e Forro Isoart são ideais para criar divisórias internas e forros termoacústicos em projetos comerciais, industriais e residenciais. Com núcleo de poliestireno expandido (EPS) ou poliisocianurato (PIR) e revestimento em aço galvalume, proporcionam excelente isolamento térmico e acústico, além de fácil instalação e acabamento estético. São perfeitos para escritórios, galpões e espaços que exigem conforto ambiental e rapidez na execução."
     },
+    "projectImages": [
+        "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-01.avif",
+        "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-02.avif",
+        "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-03.avif",
+        "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-04.avif",
+        "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-05.avif",
+        "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-06.avif"
+    ],
 
     "benefits": [
         {

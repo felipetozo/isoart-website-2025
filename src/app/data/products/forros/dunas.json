@@ -3,7 +3,7 @@
     "name": "Dunas",
     "slug": "dunas",
     "description": "Forro Dunas em EPS de alta densidade, inspirado nas ondulações naturais das dunas de areia. Sua textura única combina múltiplos quadrados formados por linhas que se entrelaçam, criando um padrão orgânico que remete à beleza dos desertos e à harmonia da natureza.",
-    "image": "/img/produtos/forros/forros-dunas-01.png",
+    "image": "/img/produtos/forros/dunas/dunas-01.avif",
     "specifications": {
         "material": "EPS virgem com revestimento opcional",
         "densidade": "15-20 kg/m³",
@@ -15,16 +15,16 @@
         "description": "Inspirado nas ondulações naturais das dunas de areia, o Forro Dunas traz a harmonia da natureza para seus ambientes com textura única e design orgânico.",
         "buttonText": "Solicite um orçamento",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/produtos/forros/forros-dunas-01.png"
+        "backgroundImage": "/img/produtos/forros/dunas/dunas-01.avif"
     },
     "categoryDescription": {
         "title": "O Forro Dunas Isoart combina a beleza das dunas de areia com tecnologia moderna.",
         "description": "O Forro Dunas Isoart, fabricado em EPS de alta densidade, é inspirado nas ondulações naturais das dunas de areia. Sua textura única combina múltiplos quadrados formados por linhas que se entrelaçam, criando um padrão orgânico que remete à harmonia da natureza. Ideal para tetos de residências, escritórios e espaços comerciais, substitui materiais como gesso com maior leveza, resistência a umidade e instalação rápida, proporcionando economia e conforto térmico."
     },
     "projectImages": [
-        "/img/produtos/forros/forros-dunas-01.avif",
-        "/img/produtos/forros/forros-dunas-02.avif",
-        "/img/produtos/forros/forros-dunas-03.avif"
+        "/img/produtos/forros/dunas/dunas-01.avif",
+        "/img/produtos/forros/dunas/dunas-02.avif",
+        "/img/produtos/forros/dunas/dunas-03.avif"
     ],
     "benefits": [
         {

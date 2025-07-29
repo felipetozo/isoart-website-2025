@@ -8,7 +8,7 @@
         "description": "Embalagens em EPS para proteção de produtos durante transporte. Leves e resistentes, são personalizáveis para atender às necessidades de diversos setores.",
         "buttonText": "Entre em contato",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/geral/exemplo.png"
+        "backgroundImage": "/img/geral/endereco-03-01.avif"
     },
     "categoryDescription": "Nossas embalagens em EPS oferecem proteção personalizada para produtos industriais e comerciais, com opções como cantoneiras, moldes e pérolas.",
     "products": [
@@ -17,7 +17,7 @@
             "name": "Embalagens em EPS",
             "slug": "embalagens-em-eps",
             "description": "Soluções completas em embalagens de EPS para proteção e transporte.",
-            "image": "/img/geral/exemplo.png",
+            "image": "/img/produtos/embalagens/embalagens/embalagens-01.avif",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Proteção e Embalagem"
@@ -28,7 +28,7 @@
             "name": "Pérolas em EPS",
             "slug": "perolas-em-eps",
             "description": "Pérolas de EPS para preenchimento de embalagens.",
-            "image": "/img/geral/exemplo.png",
+            "image": "/img/produtos/embalagens/perolas/perolas-01.avif",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Preenchimento"

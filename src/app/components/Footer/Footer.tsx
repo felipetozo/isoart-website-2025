@@ -39,8 +39,8 @@ function Footer() {
                             <div>
                                 <h5>Institucional</h5>
                                 <ul>
-                                    <li>Sobre a empresa</li>
-                                    <li>Sobre o PIR e o EPS</li>
+                                    <li><Link href="/sobre">Sobre a empresa</Link></li>
+                                    <li><Link href="/sobre-eps-pir">Sobre o PIR e o EPS</Link></li>
                                 </ul>
                             </div>
                             <div>

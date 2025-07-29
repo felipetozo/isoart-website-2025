@@ -85,7 +85,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         description: categoryData.description || categoryData.categoryDescription || 'Nossas soluções de alta qualidade.',
         buttonText: 'Solicite um orçamento',
         buttonLink: '/contato',
-        backgroundImage: '/img/default-category-hero.jpg'
+        backgroundImage: '/img/default-category-hero.avif'
     };
 
     const benefitsSection = categoryData.benefits || [

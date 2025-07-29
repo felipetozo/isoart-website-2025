@@ -3,7 +3,7 @@
     "name": "Molduras para Muros",
     "slug": "molduras-para-muros",
     "description": "Molduras em EPS de alta densidade com revestimento flexível, projetadas para acabamento estético de muros e platibandas, com resistência a intempéries e instalação prática.",
-    "image": "/img/produtos/molduras/molduras-muros-01.avif",
+    "image": "/img/produtos/molduras/muros/muros-01.avif",
     "specifications": {
         "material": "EPS virgem com revestimento de resina polimérica",
         "densidade": "20-30 kg/m³",
@@ -15,17 +15,17 @@
         "description": "Soluções elegantes para acabamento de muros, combinando estética, leveza e durabilidade.",
         "buttonText": "Solicite um orçamento",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/produtos/molduras/molduras-muros-01.avif"
+        "backgroundImage": "/img/produtos/molduras/muros/muros-01.avif"
     },
     "categoryDescription": {
         "title": "As Molduras para Muros Isoart valorizam muros e platibandas com acabamento sofisticado e resistência ao clima.",
         "description": "As Molduras para Muros Isoart são fabricadas em EPS de alta densidade com revestimento flexível à base de resina polimérica, perfeitas para acabamentos externos em muros e platibandas. Com personalização, leveza e resistência a intempéries, oferecem estética moderna, instalação rápida e baixo impacto estrutural, ideais para projetos residenciais e comerciais."
     },
     "projectImages": [
-        "/img/produtos/molduras/muros/molduras-01.avif",
-        "/img/produtos/molduras/muros/molduras-01.avif",
-        "/img/produtos/molduras/muros/molduras-01.avif",
-        "/img/produtos/molduras/muros/molduras-01.avif"
+        "/img/produtos/molduras/muros/muros-01.avif",
+        "/img/produtos/molduras/muros/muros-02.avif",
+        "/img/produtos/molduras/muros/muros-03.avif",
+        "/img/produtos/molduras/muros/muros-04.avif"
     ],
     "benefits": [
         {

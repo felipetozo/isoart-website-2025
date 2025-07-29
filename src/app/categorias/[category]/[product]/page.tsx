@@ -143,7 +143,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         description: 'Descubra a solução ideal para coberturas eficientes com isolamento térmico superior.',
         buttonText: 'Solicite um orçamento',
         buttonLink: '/contato',
-        backgroundImage: productData.image || '/img/default-product-hero.jpg'
+        backgroundImage: productData.image || '/img/default-product-hero.avif'
     };
 
     const categoryDescription = productData.categoryDescription || {
@@ -227,7 +227,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                         />
                     ) : (
                         <SingleImage 
-                            src={productData.image || '/img/geral/exemplo2.png'} 
+                            src={productData.image || '/img/geral/exemplo2.avif'} 
                             alt={productData.name} 
                             width={1600} 
                             height={800}

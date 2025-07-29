@@ -10,7 +10,7 @@ export default function Sustentabilidade() {
         </h2>
         
         <img 
-          src="/img/geral/reciclagem-eps.png" 
+          src="/img/geral/reciclagem-eps.avif" 
           alt="Reciclagem de EPS" 
           className={styles.sustentabilidadeImage} 
         />

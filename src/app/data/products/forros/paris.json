@@ -3,7 +3,7 @@
     "name": "Paris",
     "slug": "paris",
     "description": "Forro Paris em EPS de alta densidade, inspirado na elegância da arquitetura parisiense. Sua textura única apresenta quadrados concêntricos que se fecham progressivamente, criando um padrão geométrico sofisticado que remete aos detalhes ornamentais dos edifícios históricos de Paris.",
-    "image": "/img/produtos/forros/forros-paris-01.png",
+    "image": "/img/produtos/forros/paris/paris-01.avif",
     "specifications": {
         "material": "EPS virgem com revestimento opcional",
         "densidade": "15-20 kg/m³",
@@ -15,16 +15,16 @@
         "description": "Inspirado na elegância da arquitetura parisiense, o Forro Paris traz sofisticação e refinamento para seus ambientes com padrão geométrico único.",
         "buttonText": "Solicite um orçamento",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/produtos/forros/forros-paris-01.png"
+        "backgroundImage": "/img/produtos/forros/paris/paris-01.avif"
     },
     "categoryDescription": {
         "title": "O Forro Paris Isoart combina a elegância da arquitetura parisiense com tecnologia moderna.",
         "description": "O Forro Paris Isoart, fabricado em EPS de alta densidade, é inspirado na elegância da arquitetura parisiense. Sua textura única apresenta quadrados concêntricos que se fecham progressivamente, criando um padrão geométrico sofisticado que remete aos detalhes ornamentais dos edifícios históricos de Paris. Ideal para tetos internos que requerem acabamentos estéticos sofisticados, substitui materiais como gesso e madeira, oferecendo leveza, resistência a umidade e instalação prática."
     },
     "projectImages": [
-        "/img/produtos/forros/forros-paris-01.avif",
-        "/img/produtos/forros/forros-paris-02.avif",
-        "/img/produtos/forros/forros-paris-03.avif"
+        "/img/produtos/forros/paris/paris-01.avif",
+        "/img/produtos/forros/paris/paris-02.avif",
+        "/img/produtos/forros/paris/paris-03.avif"
     ],
     "benefits": [
         {

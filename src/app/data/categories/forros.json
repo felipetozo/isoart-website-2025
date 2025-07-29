@@ -8,7 +8,7 @@
         "description": "Forros em EPS/PIR para tetos, projetados para isolamento térmico e acústico. Indicados para residências, comércios e indústrias, garantem maior conforto ambiental.",
         "buttonText": "Entre em contato",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/geral/exemplo.png"
+        "backgroundImage": "/img/geral/endereco-03-01.avif"
     },
     "categoryDescription": "Nossos forros em EPS são ideais para melhorar a acústica e a decoração de espaços internos, com opções personalizáveis.",
     "products": [
@@ -17,7 +17,7 @@
             "name": "Dunas",
             "slug": "dunas",
             "description": "Forro modelo Dunas com design único.",
-            "image": "/img/produtos/forros/forros-dunas-01.png",
+            "image": "/img/produtos/forros/dunas/dunas-01.avif",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Decoração Interna"
@@ -28,7 +28,7 @@
             "name": "Paris",
             "slug": "paris",
             "description": "Forro modelo Paris com design único.",
-            "image": "/img/produtos/forros/forros-paris-01.png",
+            "image": "/img/produtos/forros/paris/paris-01.avif",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Decoração Interna"

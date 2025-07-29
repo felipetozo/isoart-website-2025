@@ -52,7 +52,7 @@ export default function SobreEpsPirPage() {
               O Poliestireno Expandido (EPS), conhecido popularmente como Isopor, é um material leve e versátil, amplamente utilizado por suas propriedades de isolamento térmico e acústico. Além disso, é 100% reciclável e não emite substâncias prejudiciais ao meio ambiente, sendo uma escolha sustentável para diversas aplicações.
             </p>
             <div className={styles.epsImageContainer}>
-              <img src="/img/geral/eps-perolas.webp" alt="Pérola de EPS - Isoart" className={styles.epsImage} />
+              <img src="/img/geral/eps-perolas.avif" alt="Pérola de EPS - Isoart" className={styles.epsImage} />
             </div>
             <h2 className={styles.epsSubtitle}>Principais benefícios do EPS:</h2>
             <div className={styles.benefitsContainer}>
@@ -100,7 +100,7 @@ export default function SobreEpsPirPage() {
               ao fogo, sendo essencial para projetos industriais, comerciais e residenciais.
             </p>
             <div className={styles.pirImageContainer}>
-              <img src="/img/geral/pir-block.png" alt="PIR exemplo" className={styles.pirImage} />
+              <img src="/img/geral/pir-block.avif" alt="PIR exemplo" className={styles.pirImage} />
             </div>
             <h2 className={styles.pirSubtitle}>Principais benefícios do PIR:</h2>
             <div className={styles.benefitsContainer}>
@@ -225,7 +225,7 @@ export default function SobreEpsPirPage() {
                            alt={item.name}
                            width={80}
                            height={80}
-                           style={{ objectFit: 'cover', borderRadius: '4px' }}
+                           className={styles.texturaImage}
                          />
                        </div>
                      )}

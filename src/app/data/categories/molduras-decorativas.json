@@ -8,7 +8,7 @@
         "description": "Molduras em EPS para portas, janelas e paredes. Leves, duráveis e de fácil instalação, são ideais para acabamentos decorativos em ambientes internos e externos.",
         "buttonText": "Entre em contato",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/geral/exemplo.png"
+        "backgroundImage": "/img/geral/endereco-03-01.avif"
     },
     "categoryDescription": "Explore nossas molduras em EPS para portas, janelas, beirais e mais. Projetadas para agregar valor estético e funcionalidade aos seus projetos.",
     "products": [
@@ -17,7 +17,7 @@
             "name": "Molduras para portas e Janelas",
             "slug": "molduras-portas-janelas",
             "description": "Molduras para acabamento de portas e janelas com design elegante.",
-            "image": "/img/produtos/molduras/molduras-portas-01.png",
+            "image": "/img/produtos/molduras/portas/portas-01.avif",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Portas e Janelas"
@@ -28,7 +28,7 @@
             "name": "Molduras para Beiral",
             "slug": "molduras-beiral",
             "description": "Molduras para beirais com acabamento sofisticado.",
-            "image": "/img/produtos/molduras/molduras-beiral-01.png",
+            "image": "/img/produtos/molduras/beiral/beiral-01.avif",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Beirais"
@@ -39,7 +39,7 @@
             "name": "Molduras para Colunas e Capitéis",
             "slug": "molduras-colunas-capiteis",
             "description": "Molduras para colunas e capitéis com estilo clássico.",
-            "image": "/img/produtos/molduras/molduras-colunas-01.png",
+            "image": "/img/produtos/molduras/colunasecapiteis/colunas-01.avif",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Colunas"
@@ -50,7 +50,7 @@
             "name": "Molduras para Muros",
             "slug": "molduras-muros",
             "description": "Molduras para muros com resistência e estética.",
-            "image": "/img/produtos/molduras/molduras-muros-01.png",
+            "image": "/img/produtos/molduras/muros/muros-01.avif",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Muros"
@@ -61,7 +61,7 @@
             "name": "Molduras para Paredes",
             "slug": "molduras-paredes",
             "description": "Molduras para paredes com design versátil.",
-            "image": "/img/produtos/molduras/molduras-paredes-01.png",
+            "image": "/img/produtos/molduras/parede/parede-01.avif",
             "specifications": {
                 "material": "EPS",
                 "aplicacao": "Paredes"
