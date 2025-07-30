@@ -112,14 +112,14 @@
         "title": "Forros",
         "slug": "forros",
         "description": "Variedade de forros para diversos ambientes",
-        "image": "/img/produtos/forros/forros-dunas-01.avif",
+        "image": "/img/produtos/forros/dunas/dunas-01.avif",
         "products": [
             {
                 "id": 10,
                 "name": "Dunas",
                 "slug": "dunas",
                 "description": "Forro modelo Dunas",
-                "image": "/img/produtos/forros/forros-dunas-01.avif",
+                "image": "/img/produtos/forros/dunas/dunas-01.avif",
                 "specifications": {}
             },
             {
@@ -127,7 +127,7 @@
                 "name": "Paris",
                 "slug": "paris",
                 "description": "Forro modelo Paris",
-                "image": "/img/produtos/forros/forros-paris-01.avif",
+                "image": "/img/produtos/forros/paris/paris-01.avif",
                 "specifications": {}
             }
         ]

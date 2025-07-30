@@ -8,7 +8,8 @@ import MainForm from '@/app/components/MainForm/MainForm';
 import Button from '@/app/views/UI/Button';
 import TabbedSection from './TabbedSection';
 import BenefitsSection from '@/app/components/BenefitsSection/BenefitsSection';
-import { TbChecks, TbHome, TbBuilding, TbBuildingFactory, TbTools, TbPackage, TbDeviceTv, TbWindow, TbTruck, TbBuildingStore, TbArmchair, TbMicrophone } from "react-icons/tb";
+import { TbChecks, TbHome, TbMicroscope, TbBuildingFactory2, TbSnowflake, TbMedicineSyrup, TbBuilding, TbBuildingHospital, TbBuildingFactory, TbTools, TbPackage, TbDeviceTv, TbWindow, TbTruck, TbBuildingStore, TbArmchair, TbMicrophone, } from "react-icons/tb";
+import { IoFastFoodOutline } from "react-icons/io5";
 import ImageCarousel from '@/app/components/ImageCarousel/ImageCarousel';
 import SingleImage from '@/app/components/SingleImage/SingleImage';
 
@@ -93,6 +94,12 @@ function renderIcon(iconName: string) {
         'TbBuildingStore': TbBuildingStore,
         'TbArmchair': TbArmchair,
         'TbMicrophone': TbMicrophone,
+        'IoFastFoodOutline': IoFastFoodOutline,
+        'TbBuildingHospital': TbBuildingHospital,
+        'TbSnowflake': TbSnowflake,
+        'TbMedicineSyrup': TbMedicineSyrup,
+        'TbMicroscope': TbMicroscope,
+        'TbBuildingFactory2': TbBuildingFactory2,
     };
 
     const IconComponent = iconMap[iconName];

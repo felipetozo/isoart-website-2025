@@ -60,19 +60,19 @@
         "description": "Os Painéis de Sala Limpa Isoart são ideais para ambientes que exigem controle rigoroso de partículas e temperatura, como laboratórios, indústrias farmacêuticas e eletrônicas. Com materiais de alta qualidade e acabamento liso, garantem assepsia, durabilidade e conformidade com normas internacionais.",
         "indications": [
             {
-                "icon": "🏥",
+                "icon": "TbMedicineSyrup",
                 "text": "Indústria farmacêutica"
             },
             {
-                "icon": "🔬",
+                "icon": "TbMicroscope",
                 "text": "Laboratórios de pesquisa"
             },
             {
-                "icon": "⚙️",
+                "icon": "TbBuildingFactory2",
                 "text": "Indústria eletrônica"
             },
             {
-                "icon": "🏨",
+                "icon": "TbBuildingHospital",
                 "text": "Ambientes hospitalares"
             }
         ]

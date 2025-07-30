@@ -1,7 +1,7 @@
 /* Tabbed Section */
 .TabbedSection {
     width: 100%;
-    padding: 5rem 0;
+    padding: 0 0 5rem 0;
 }
 
 .TabbedWrapper {
@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .TabButton {
@@ -20,10 +20,10 @@
     cursor: pointer;
     color: rgba(var(--color-almostBlack), 0.5);
     position: relative;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     text-align: left;
     width: 100%;
-    border-top: 1px solid rgba(var(--color-almostBlack), 0.5);
+    border-top: 2px solid rgba(var(--color-almostBlack), 0.5);
 }
 
 .TabButton::before {
@@ -49,13 +49,11 @@
 }
 
 .TabContent {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: rgba(var(--color-almostBlack), 0.65);
+    color: rgba(var(--color-almostBlack), 0.75);
 }
 
 .TabButtons {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
 }

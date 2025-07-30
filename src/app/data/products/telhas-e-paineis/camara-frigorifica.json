@@ -60,7 +60,7 @@
         "description": "Os Painéis de Câmara Frigorífica Isoart são ideais para ambientes que exigem controle rigoroso de temperatura, como indústrias alimentícias, logísticas e farmacêuticas. Com alta resistência à umidade e fácil manutenção, garantem eficiência energética e longevidade.",
         "indications": [
             {
-                "icon": "🍖",
+                "icon": "IoFastFoodOutline",
                 "text": "Indústria alimentícia"
             },
             {
@@ -68,11 +68,11 @@
                 "text": "Centros de distribuição logística"
             },
             {
-                "icon": "💊",
+                "icon": "TbMedicineSyrup",
                 "text": "Indústria farmacêutica"
             },
             {
-                "icon": "❄️",
+                "icon": "TbSnowflake",
                 "text": "Câmaras de congelamento"
             }
         ]

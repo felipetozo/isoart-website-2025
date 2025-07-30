@@ -168,38 +168,41 @@ export default function SobreEpsPirPage() {
             <div className={styles.revestimentosCores}>
               <div className={styles.coresGrid}>
                 {[
-                  { code: 'RAL 9003', name: 'Branco Sinal', type: 'color' },
-                  { code: 'RAL 7035', name: 'Cinza Claro', type: 'color' },
-                  { code: 'RAL 7040', name: 'Cinza Médio', type: 'color' },
-                  { code: 'RAL 7024', name: 'Cinza Grafite', type: 'color' },
-                  { code: 'RAL 9006', name: 'Prata', type: 'color' },
-                  { code: 'RAL 1015', name: 'Marfim', type: 'color' },
-                  { code: 'RAL 1023', name: 'Amarelo', type: 'color' },
-                  { code: 'RAL 8023', name: 'Terracota', type: 'color' },
-                  { code: 'RAL 3000', name: 'Vermelho Fogo', type: 'color' },
-                  { code: 'RAL 5010', name: 'Azul Genciana', type: 'color' },
-                  { code: 'RAL 6002', name: 'Verde Tráfego', type: 'color' },
-                  { code: 'RAL 9005', name: 'Preto', type: 'color' },
+                  { id: 'ral9003', code: 'RAL 9003', name: 'Branco Sinal', type: 'color' },
+                  { id: 'ral7035', code: 'RAL 7035', name: 'Cinza Claro', type: 'color' },
+                  { id: 'ral7040', code: 'RAL 7040', name: 'Cinza Médio', type: 'color' },
+                  { id: 'ral7024', code: 'RAL 7024', name: 'Cinza Grafite', type: 'color' },
+                  { id: 'ral9006', code: 'RAL 9006', name: 'Prata', type: 'color' },
+                  { id: 'ral1015', code: 'RAL 1015', name: 'Marfim', type: 'color' },
+                  { id: 'ral1023', code: 'RAL 1023', name: 'Amarelo', type: 'color' },
+                  { id: 'ral8023', code: 'RAL 8023', name: 'Terracota', type: 'color' },
+                  { id: 'ral3000', code: 'RAL 3000', name: 'Vermelho Fogo', type: 'color' },
+                  { id: 'ral5010', code: 'RAL 5010', name: 'Azul Genciana', type: 'color' },
+                  { id: 'ral6002', code: 'RAL 6002', name: 'Verde Tráfego', type: 'color' },
+                  { id: 'ral9005', code: 'RAL 9005', name: 'Preto', type: 'color' },
                   { 
-                    code: 'Textura 01', 
+                    id: 'galvanizado',
+                    code: '', 
                     name: 'Natural Galvanizado', 
                     type: 'texture',
                     image: '/img/PIR/PIR-Textura-01.png'
                   },
                   { 
-                    code: 'Textura 02', 
+                    id: 'amadeirado-claro',
+                    code: '', 
                     name: 'Amadeirado Claro', 
                     type: 'texture',
-                    image: '/img/PIR/PIR-Textura-02.png'
+                    image: '/img/PIR/PIR-Textura-02.jpg'
                   },
                   { 
-                    code: 'Textura 03', 
+                    id: 'amadeirado-escuro',
+                    code: '', 
                     name: 'Amadeirado Escuro', 
                     type: 'texture',
-                    image: '/img/PIR/PIR-Textura-03.png'
+                    image: '/img/PIR/PIR-Textura-03.jpg'
                   },
                 ].map((item) => (
-                  <div className={styles.corItem} key={item.code}>
+                  <div className={styles.corItem} key={item.id}>
                     {item.type === 'color' ? (
                       <span 
                         className={styles.corThumb} 
@@ -363,4 +366,4 @@ export default function SobreEpsPirPage() {
 
     </div>
   );
-} 
+}
