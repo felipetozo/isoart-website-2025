@@ -222,83 +222,6 @@
     line-height: 1.2;
 }
 
-/* Updated hover styles for menu items
-.MainNavLinks ul li:nth-child(1):hover .navLinkUnderline {
-    background-color: rgba(var(--color-solucoes-telhas), 1);
-}
-
-.MainNavLinks ul li:nth-child(2):hover .navLinkUnderline {
-    background-color: rgba(var(--color-solucoes-construcao), 1);
-}
-
-.MainNavLinks ul li:nth-child(3):hover .navLinkUnderline {
-    background-color: rgba(var(--color-solucoes-forros), 1);
-}
-
-.MainNavLinks ul li:nth-child(4):hover .navLinkUnderline {
-    background-color: rgba(var(--color-solucoes-decoracao), 1);
-}
-
-.MainNavLinks ul li:nth-child(5):hover .navLinkUnderline {
-    background-color: rgba(var(--color-solucoes-embalagens), 1);
-} */
-
-/* Updated submenu styles to match category colors
-.SubMenuCategorias[data-category="telhasepaineis"] .SubMenuItem a {
-    background-color: rgba(var(--color-solucoes-telhas), 0.150);
-    border: 1px solid rgba(var(--color-solucoes-telhas), 0.25);
-}
-
-.SubMenuCategorias[data-category="telhasepaineis"] .SubMenuItem a:hover {
-    background-color: rgba(var(--color-solucoes-telhas), 0.25);
-    border: 1px solid rgba(var(--color-solucoes-telhas), 0.45);
-    color: rgba(var(--color-almostBlack), 1);
-}
-
-.SubMenuCategorias[data-category="construcaocivil"] .SubMenuItem a {
-    background-color: rgba(var(--color-solucoes-construcao), 0.150);
-    border: 1px solid rgba(var(--color-solucoes-construcao), 0.25);
-}
-
-.SubMenuCategorias[data-category="construcaocivil"] .SubMenuItem a:hover {
-    background-color: rgba(var(--color-solucoes-construcao), 0.25);
-    border: 1px solid rgba(var(--color-solucoes-construcao), 0.45);
-    color: rgba(var(--color-almostBlack), 1);
-}
-
-.SubMenuCategorias[data-category="forros"] .SubMenuItem a {
-    background-color: rgba(var(--color-solucoes-forros), 0.150);
-    border: 1px solid rgba(var(--color-solucoes-forros), 0.25);
-}
-
-.SubMenuCategorias[data-category="forros"] .SubMenuItem a:hover {
-    background-color: rgba(var(--color-solucoes-forros), 0.25);
-    border: 1px solid rgba(var(--color-solucoes-forros), 0.45);
-    color: rgba(var(--color-almostBlack), 1);
-}
-
-.SubMenuCategorias[data-category="moldurasdecorativas"] .SubMenuItem a {
-    background-color: rgba(var(--color-solucoes-decoracao), 0.150);
-    border: 1px solid rgba(var(--color-solucoes-decoracao), 0.25);
-}
-
-.SubMenuCategorias[data-category="moldurasdecorativas"] .SubMenuItem a:hover {
-    background-color: rgba(var(--color-solucoes-decoracao), 0.25);
-    border: 1px solid rgba(var(--color-solucoes-decoracao), 0.45);
-    color: rgba(var(--color-almostBlack), 1);
-}
-
-.SubMenuCategorias[data-category="embalagensemeps"] .SubMenuItem a {
-    background-color: rgba(var(--color-solucoes-embalagens), 0.150);
-    border: 1px solid rgba(var(--color-solucoes-embalagens), 0.25);
-}
-
-.SubMenuCategorias[data-category="embalagensemeps"] .SubMenuItem a:hover {
-    background-color: rgba(var(--color-solucoes-embalagens), 0.25);
-    border: 1px solid rgba(var(--color-solucoes-embalagens), 0.45);
-    color: rgba(var(--color-almostBlack), 1);
-} */
-
 .SubMenuItem img {
     border-radius: 0.2rem;
 }
@@ -351,20 +274,28 @@
 }
 
 .mobileMenu ul li a:hover {
-    color: rgba(var(--color-almostWhite), 1);
+    color: rgba(var(--color-isoartGold), 1);
 }
 
 .mobileContact {
     border-radius: 0.25rem;
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 1rem;
 }
 
 .mobileContact p {
-    margin: 0.25rem 0;
     color: rgba(var(--color-almostBlack), 0.50);
     font-size: 0.9rem;
+    width: 100%;
+}
+
+.mobileContact a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    line-height: 1.8;
 }
 
 .mobileSocial {
@@ -378,7 +309,7 @@
 }
 
 .mobileSocial a:hover {
-    color: white;
+    color: rgba(var(--color-isoartGold), 1);
 }
 
 .mobileBanner {

@@ -78,8 +78,8 @@ export default function SobreEpsPirPage() {
             </p>
             <div className={styles.applicationsContainer}>
               <div className={styles.applicationsGrid}>
-                <img src="/img/EPS/EPS-Aplicacao-01.png" alt="Aplicação 1" className={styles.applicationImage} />
-                <img src="/img/EPS/EPS-Aplicacao-02.png" alt="Aplicação 2" className={styles.applicationImage} />
+                <img src="/img/EPS/EPS-Aplicacao-01.avif" alt="Aplicação 1" className={styles.applicationImage} />
+                <img src="/img/EPS/EPS-Aplicacao-02.avif" alt="Aplicação 2" className={styles.applicationImage} />
               </div>
             </div>
           </div>
@@ -185,21 +185,21 @@ export default function SobreEpsPirPage() {
                     code: '', 
                     name: 'Natural Galvanizado', 
                     type: 'texture',
-                    image: '/img/PIR/PIR-Textura-01.png'
+                    image: '/img/PIR/PIR-Textura-01.avif'
                   },
                   { 
                     id: 'amadeirado-claro',
                     code: '', 
                     name: 'Amadeirado Claro', 
                     type: 'texture',
-                    image: '/img/PIR/PIR-Textura-02.jpg'
+                    image: '/img/PIR/PIR-Textura-02.avif'
                   },
                   { 
                     id: 'amadeirado-escuro',
                     code: '', 
                     name: 'Amadeirado Escuro', 
                     type: 'texture',
-                    image: '/img/PIR/PIR-Textura-03.jpg'
+                    image: '/img/PIR/PIR-Textura-03.avif'
                   },
                 ].map((item) => (
                   <div className={styles.corItem} key={item.id}>
@@ -286,7 +286,7 @@ export default function SobreEpsPirPage() {
           <div className={styles.IncendioImages}>
             <span>
               <Image
-                src="/img/incendio/pir-incendio-01.jpg"
+                src="/img/incendio/pir-incendio-01.avif"
                 alt="Proteção contra incêndio com PIR"
                 width={600}
                 height={818}
@@ -295,7 +295,7 @@ export default function SobreEpsPirPage() {
             </span>
             <span>
               <Image
-                src="/img/incendio/pir-incendio-02.jpg"
+                src="/img/incendio/pir-incendio-02.avif"
                 alt="Proteção contra incêndio com PIR"
                 width={600}
                 height={818}
@@ -304,7 +304,7 @@ export default function SobreEpsPirPage() {
             </span>
             <span>
               <Image
-                src="/img/incendio/pir-incendio-03.jpg"
+                src="/img/incendio/pir-incendio-03.avif"
                 alt="Proteção contra incêndio com PIR"
                 width={600}
                 height={818}
@@ -335,7 +335,7 @@ export default function SobreEpsPirPage() {
           <div className={styles.linhaProducaoImages}>
             <span>
               <Image
-                src="/img/fabrica/fabrica-01.jpg"
+                src="/img/fabrica/fabrica-01.avif"
                 alt="Proteção contra incêndio com PIR"
                 width={600}
                 height={818}
@@ -344,7 +344,7 @@ export default function SobreEpsPirPage() {
             </span>
             <span>
               <Image
-                src="/img/fabrica/fabrica-02.jpg"
+                src="/img/fabrica/fabrica-02.avif"
                 alt="Proteção contra incêndio com PIR"
                 width={600}
                 height={818}
@@ -353,7 +353,7 @@ export default function SobreEpsPirPage() {
             </span>
             <span>
               <Image
-                src="/img/fabrica/fabrica-03.jpg"
+                src="/img/fabrica/fabrica-03.avif"
                 alt="Proteção contra incêndio com PIR"
                 width={600}
                 height={818}

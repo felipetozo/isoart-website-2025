@@ -19,7 +19,7 @@ function SolucoesGrid() {
                         <Link href="/categorias/telhas-e-paineis">
                             <div className={styles.SolucoesGridCardImage}>
                                 <Image
-                                    src={'/img/SolucoesGrid/telhas.jpg'}
+                                    src={'/img/SolucoesGrid/telhas.avif'}
                                     alt="Soluções Construtivas Isotérmicas"
                                     width={1000}
                                     height={700}
@@ -35,7 +35,7 @@ function SolucoesGrid() {
                         <Link href="/categorias/construcao-civil">
                             <div className={styles.SolucoesGridCardImage}>
                                 <Image
-                                    src={'/img/SolucoesGrid/construcaocivil.jpg'}
+                                    src={'/img/SolucoesGrid/construcaocivil.avif'}
                                     alt="Construção Civil"
                                     width={1000}
                                     height={700}
@@ -51,7 +51,7 @@ function SolucoesGrid() {
                         <Link href="/categorias/molduras-decorativas">
                             <div className={styles.SolucoesGridCardImage}>
                                 <Image
-                                    src={'/img/SolucoesGrid/molduras.jpg'}
+                                    src={'/img/SolucoesGrid/molduras.avif'}
                                     alt="Decoração"
                                     width={1000}
                                     height={700}
@@ -67,7 +67,7 @@ function SolucoesGrid() {
                         <Link href="/categorias/forros">
                             <div className={styles.SolucoesGridCardImage}>
                                 <Image
-                                    src={'/img/SolucoesGrid/forros.jpg'}
+                                    src={'/img/SolucoesGrid/forros.avif'}
                                     alt="Forros em EPS"
                                     width={1000}
                                     height={700}
@@ -83,7 +83,7 @@ function SolucoesGrid() {
                         <Link href="/categorias/embalagens-em-eps">
                             <div className={styles.SolucoesGridCardImage}>
                                 <Image
-                                    src={'/img/SolucoesGrid/embalagens.jpg'}
+                                    src={'/img/SolucoesGrid/embalagens.avif'}
                                     alt="Embalagens"
                                     width={1000}
                                     height={700}

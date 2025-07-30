@@ -9,6 +9,7 @@ interface FormInputProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     placeholder?: string;
     error?: string;
+    theme?: 'default' | 'light';
 }
 
 const FormInput: React.FC<FormInputProps> = ({
@@ -19,10 +20,11 @@ const FormInput: React.FC<FormInputProps> = ({
     onChange,
     placeholder,
     error,
+    theme = 'default',
 }) => {
     return (
-        <div className={styles.formInput}>
-            <label htmlFor={id} className={styles.label}>{label}</label>  {/* Add className */}
+        <div className={`${styles.formInput} ${styles[theme]}`}>
+            <label htmlFor={id} className={`${styles.label} ${styles[`label_${theme}`]}`}>{label}</label>
             <input
                 type={type}
                 id={id}
@@ -30,9 +32,9 @@ const FormInput: React.FC<FormInputProps> = ({
                 value={value}
                 onChange={onChange}
                 placeholder={placeholder}
-                className={styles.input}
+                className={`${styles.input} ${styles[`input_${theme}`]}`}
             />
-            {error && <div className={styles.error}>{error}</div>}
+            {error && <div className={`${styles.error} ${styles[`error_${theme}`]}`}>{error}</div>}
         </div>
     );
 };

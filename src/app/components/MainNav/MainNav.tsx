@@ -7,6 +7,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/app/views/UI/Button';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin } from 'react-icons/bs';
+import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
+import { BsWhatsapp } from 'react-icons/bs';
 import menuData from '@/app/data/menuData.json';
 
 // Define the types for your menu data for better type safety
@@ -214,11 +216,11 @@ function MainNav() {
                             <li><Link href="/contato">Contato</Link></li>
                         </ul>
                         <div className={styles.mobileContact}>
-                            <p>Rua Dorivaldo Soncela, 1490</p>
-                            <p>Santa Tereza do Oeste - Paraná - Brasil</p>
-                            <p>☎ +55 45 3231 1699</p>
-                            <p>📱 +55 45 99133 9642</p>
-                            <p>📧 contato@isoart.com.br</p>
+                            <p>Rua Dorivaldo Soncela, 1490<br />
+                            Santa Tereza do Oeste - Paraná - Brasil</p>
+                            <p><a href="tel:+554532311699"><MdOutlinePhoneInTalk /> +55 45 3231 1699</a></p>
+                            <p><a href="https://wa.me/5545991339642" target="_blank" rel="noopener noreferrer"><BsWhatsapp /> +55 45 99133 9642</a></p>
+                            <p><a href="mailto:contato@isoart.com.br"><MdOutlineMarkEmailUnread /> contato@isoart.com.br</a></p>
                             <div className={styles.mobileSocial}>
                                 <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank"><BsInstagram /></Link>
                                 <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank"><BsFacebook /></Link>

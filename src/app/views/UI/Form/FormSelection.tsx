@@ -11,6 +11,7 @@ interface FormSelectionProps {
     onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
     options: Array<{ value: string; label: string }>;
     error?: string;
+    theme?: 'default' | 'light';
 }
 
 const FormSelection: React.FC<FormSelectionProps> = ({
@@ -19,18 +20,19 @@ const FormSelection: React.FC<FormSelectionProps> = ({
     value,
     onChange,
     options = [],
-    error
+    error,
+    theme = 'default',
 }) => {
     return (
-        <div className={styles.formInput}>
-            <label htmlFor={id} className={styles.label}>{label}</label>
-            <div className={styles.selectContainer}>
+        <div className={`${styles.formInput} ${styles[theme]}`}>
+            <label htmlFor={id} className={`${styles.label} ${styles[`label_${theme}`]}`}>{label}</label>
+            <div className={`${styles.selectContainer} ${styles[`selectContainer_${theme}`]}`}>
             <select
                 id={id}
                 name={id}
                 value={value}
                 onChange={onChange}
-                    className={styles.select}
+                    className={`${styles.select} ${styles[`select_${theme}`]}`}
             >
                     {options.map((option) => (
                         <option key={option.value} value={option.value}>
@@ -38,9 +40,9 @@ const FormSelection: React.FC<FormSelectionProps> = ({
                         </option>
                     ))}
             </select>
-                <MdKeyboardArrowDown className={styles.chevronIcon} size={20} />
+                <MdKeyboardArrowDown className={`${styles.chevronIcon} ${styles[`chevronIcon_${theme}`]}`} size={20} />
             </div>
-            {error && <div className={styles.error}>{error}</div>}
+            {error && <div className={`${styles.error} ${styles[`error_${theme}`]}`}>{error}</div>}
         </div>
     );
 };

@@ -56,8 +56,8 @@ function Footer() {
                             <div>
                                 <h5>Suporte</h5>
                                 <ul>
-                                    <li>Contato</li>
-                                    <li>Políticas de privacidade</li>
+                                    <li><Link href="/contato">Contato</Link></li>
+                                    <li><Link href="/privacidade">Políticas de privacidade</Link></li>
                                 </ul>
                             </div>
                         </div>

@@ -10,7 +10,7 @@ function CarrosselClientes() {
                     <ul>
                         <li>
                             <Image
-                                src={'/img/parceiros/parceiro-8.png'}
+                                src={'/img/parceiros/parceiro-8.avif'}
                                 alt="Logotipo Isoart"
                                 width={120}
                                 height={62}
@@ -18,7 +18,7 @@ function CarrosselClientes() {
                         </li>
                         <li>
                             <Image
-                                src={'/img/parceiros/parceiro-9.png'}
+                                src={'/img/parceiros/parceiro-9.avif'}
                                 alt="Logotipo Isoart"
                                 width={120}
                                 height={62}
@@ -26,7 +26,7 @@ function CarrosselClientes() {
                         </li>
                         <li>
                             <Image
-                                src={'/img/parceiros/parceiro-10.png'}
+                                src={'/img/parceiros/parceiro-10.avif'}
                                 alt="Logotipo Isoart"
                                 width={120}
                                 height={62}
@@ -34,7 +34,7 @@ function CarrosselClientes() {
                         </li>
                         <li>
                             <Image
-                                src={'/img/parceiros/parceiro-11.png'}
+                                src={'/img/parceiros/parceiro-11.avif'}
                                 alt="Logotipo Isoart"
                                 width={120}
                                 height={62}
@@ -42,7 +42,7 @@ function CarrosselClientes() {
                         </li>
                         <li>
                             <Image
-                                src={'/img/parceiros/parceiro-12.png'}
+                                src={'/img/parceiros/parceiro-12.avif'}
                                 alt="Logotipo Isoart"
                                 width={120}
                                 height={62}
@@ -50,7 +50,7 @@ function CarrosselClientes() {
                         </li>
                         <li>
                             <Image
-                                src={'/img/parceiros/parceiro-13.png'}
+                                src={'/img/parceiros/parceiro-13.avif'}
                                 alt="Logotipo Isoart"
                                 width={120}
                                 height={62}
@@ -58,7 +58,7 @@ function CarrosselClientes() {
                         </li>
                         <li>
                             <Image
-                                src={'/img/parceiros/parceiro-14.png'}
+                                src={'/img/parceiros/parceiro-14.avif'}
                                 alt="Logotipo Isoart"
                                 width={120}
                                 height={62}
@@ -66,7 +66,7 @@ function CarrosselClientes() {
                         </li>
                         <li>
                             <Image
-                                src={'/img/parceiros/parceiro-15.png'}
+                                src={'/img/parceiros/parceiro-15.avif'}
                                 alt="Logotipo Isoart"
                                 width={120}
                                 height={62}
@@ -74,7 +74,7 @@ function CarrosselClientes() {
                         </li>
                         <li>
                             <Image
-                                src={'/img/parceiros/parceiro-16.png'}
+                                src={'/img/parceiros/parceiro-16.avif'}
                                 alt="Logotipo Isoart"
                                 width={120}
                                 height={62}

@@ -62,6 +62,24 @@
     color: rgba(var(--color-almostWhite), 0.85);
 }
 
+.gold-border {
+    --button-background: rgba(var(--color-isoartGold), 0);
+    border: 1px solid rgba(var(--color-isoartGold), 0.50);
+    color: rgba(var(--color-almostBlack), 0.75);
+    transition: all 0.2s ease;
+}
+
+.gold-border:hover:not(disabled) {
+    --button-background: rgba(var(--color-isoartGold), 0.25);
+    color: rgba(var(--color-almostBlack), 1);
+}
+
+.gold-border:active:not(disabled) {
+    --button-background: rgba(var(--color-isoartBlue), 1);
+    border: 1px solid rgba(var(--color-isoartGold), 0);
+    color: rgba(var(--color-almostWhite), 1);
+}
+
 /* Sizes */
 .small {
     padding: 0.5rem 1rem;

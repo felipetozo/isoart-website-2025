@@ -65,4 +65,76 @@
     color: red;
     font-size: 0.8rem;
     margin-top: 0.4rem;
+}
+
+/* Light theme */
+.light {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.label_light {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-family: var(--font-RedHat);
+    color: rgba(var(--color-almostBlack), 0.5);
+}
+
+.selectContainer_light {
+    position: relative;
+    width: 100%;
+}
+
+.select_light {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    padding-right: 3rem;
+    background-color: rgba(var(--color-almostWhite), 1);
+    border: none;
+    border-bottom: 1px solid rgba(var(--color-isoartGold), 0.50);
+    border-radius: 0;
+    color: rgba(var(--color-almostBlack), 0.75);
+    font-size: 0.8rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background-image: none;
+    transition: all 0.2s ease;
+}
+
+.select_light:hover {
+    border-bottom: 1px solid rgba(var(--color-isoartGold), 1);
+}
+
+.select_light:focus {
+    outline: none;
+    border-bottom: 1px solid rgba(var(--color-isoartGold), 0.75);
+    background-color: rgba(var(--color-isoartGold), 0.25);
+    border-radius: 0;
+}
+
+.chevronIcon_light {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: rgba(var(--color-isoartGold), 0.75);
+    transition: color 0.2s ease;
+}
+
+.selectContainer_light:hover .chevronIcon_light {
+    color: rgba(var(--color-isoartGold), 1);
+}
+
+.select_light:focus + .chevronIcon_light {
+    color: rgba(var(--color-isoartGold), 1);
+}
+
+.error_light {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
 } 
