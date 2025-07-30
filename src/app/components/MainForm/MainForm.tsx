@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './MainForm.module.css';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn } from 'react-icons/md';
 import { BsWhatsapp } from 'react-icons/bs';
@@ -30,6 +30,10 @@ function MainForm() {
     const [errors, setErrors] = useState<Partial<FormData>>({});
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const [showToast, setShowToast] = useState(false);
+    const [states, setStates] = useState<Array<{value: string, label: string}>>([]);
+    const [cities, setCities] = useState<Array<{value: string, label: string}>>([]);
+    const [loadingStates, setLoadingStates] = useState(false);
+    const [loadingCities, setLoadingCities] = useState(false);
 
     const validateForm = (): boolean => {
         const newErrors: Partial<FormData> = {};
@@ -47,7 +51,52 @@ function MainForm() {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
         setErrors((prev) => ({ ...prev, [name]: undefined }));
+        
+        // Se mudou o estado, buscar cidades
+        if (name === 'state') {
+            setFormData(prev => ({ ...prev, city: '' }));
+            if (value) {
+                fetchCities(value);
+            } else {
+                setCities([]);
+            }
+        }
     };
+
+    const fetchStates = async () => {
+        setLoadingStates(true);
+        try {
+            const response = await fetch('/api/states');
+            if (response.ok) {
+                const data = await response.json();
+                setStates(data);
+            }
+        } catch (error) {
+            console.error('Erro ao buscar estados:', error);
+        } finally {
+            setLoadingStates(false);
+        }
+    };
+
+    const fetchCities = async (state: string) => {
+        setLoadingCities(true);
+        try {
+            const response = await fetch(`/api/cities?state=${encodeURIComponent(state)}`);
+            if (response.ok) {
+                const data = await response.json();
+                setCities(data);
+            }
+        } catch (error) {
+            console.error('Erro ao buscar cidades:', error);
+        } finally {
+            setLoadingCities(false);
+        }
+    };
+
+    // Carregar estados ao montar o componente
+    useEffect(() => {
+        fetchStates();
+    }, []);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -80,94 +129,7 @@ function MainForm() {
         }
     };
 
-    const states = [
-        { value: '', label: 'Selecione um estado' },
-        { value: 'PR', label: 'Paraná' },
-        { value: 'SC', label: 'Santa Catarina' },
-        { value: 'RS', label: 'Rio Grande do Sul' },
-        { value: 'SP', label: 'São Paulo' },
-        { value: 'RJ', label: 'Rio de Janeiro' },
-        { value: 'MG', label: 'Minas Gerais' },
-        { value: 'GO', label: 'Goiás' },
-        { value: 'MT', label: 'Mato Grosso' },
-        { value: 'MS', label: 'Mato Grosso do Sul' },
-        { value: 'DF', label: 'Distrito Federal' },
-        { value: 'outros', label: 'Outros' },
-    ];
-
-    const cities = {
-        'PR': [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'santa_tereza', label: 'Santa Tereza do Oeste' },
-            { value: 'cascavel', label: 'Cascavel' },
-            { value: 'toledo', label: 'Toledo' },
-            { value: 'foz_iguacu', label: 'Foz do Iguaçu' },
-            { value: 'curitiba', label: 'Curitiba' },
-            { value: 'outros', label: 'Outras cidades' },
-        ],
-        'SC': [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'xanxere', label: 'Xanxerê' },
-            { value: 'chapeco', label: 'Chapecó' },
-            { value: 'florianopolis', label: 'Florianópolis' },
-            { value: 'blumenau', label: 'Blumenau' },
-            { value: 'joinville', label: 'Joinville' },
-            { value: 'outros', label: 'Outras cidades' },
-        ],
-        'RS': [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'porto_alegre', label: 'Porto Alegre' },
-            { value: 'caxias_sul', label: 'Caxias do Sul' },
-            { value: 'pelotas', label: 'Pelotas' },
-            { value: 'outros', label: 'Outras cidades' },
-        ],
-        'SP': [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'sao_paulo', label: 'São Paulo' },
-            { value: 'campinas', label: 'Campinas' },
-            { value: 'santos', label: 'Santos' },
-            { value: 'outros', label: 'Outras cidades' },
-        ],
-        'RJ': [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'rio_janeiro', label: 'Rio de Janeiro' },
-            { value: 'niteroi', label: 'Niterói' },
-            { value: 'outros', label: 'Outras cidades' },
-        ],
-        'MG': [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'belo_horizonte', label: 'Belo Horizonte' },
-            { value: 'uberlandia', label: 'Uberlândia' },
-            { value: 'outros', label: 'Outras cidades' },
-        ],
-        'GO': [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'goiania', label: 'Goiânia' },
-            { value: 'anapolis', label: 'Anápolis' },
-            { value: 'outros', label: 'Outras cidades' },
-        ],
-        'MT': [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'cuiaba', label: 'Cuiabá' },
-            { value: 'varzea_grande', label: 'Várzea Grande' },
-            { value: 'outros', label: 'Outras cidades' },
-        ],
-        'MS': [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'campo_grande', label: 'Campo Grande' },
-            { value: 'dourados', label: 'Dourados' },
-            { value: 'outros', label: 'Outras cidades' },
-        ],
-        'DF': [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'brasilia', label: 'Brasília' },
-            { value: 'outros', label: 'Outras cidades' },
-        ],
-        'outros': [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'outros', label: 'Outras cidades' },
-        ],
-    };
+    // Estados e cidades agora são carregados dinamicamente do banco
 
     return (
         <section className={styles.MainFormSection}>
@@ -253,6 +215,7 @@ function MainForm() {
                                 onChange={handleChange}
                                 options={states}
                                 error={errors.state}
+                                disabled={loadingStates}
                             />
                         </div>
                         <div className={styles.cadastroFormFields}>
@@ -261,8 +224,9 @@ function MainForm() {
                                 label="Cidade"
                                 value={formData.city}
                                 onChange={handleChange}
-                                options={formData.state ? cities[formData.state as keyof typeof cities] || [] : [{ value: '', label: 'Selecione um estado primeiro' }]}
+                                options={cities}
                                 error={errors.city}
+                                disabled={loadingCities || !formData.state}
                             />
                         </div>
                         <div className={styles.cadastroFormFields}>
