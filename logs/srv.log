@@ -1,0 +1,10 @@
+
+> isoart-website-2025@0.1.0 start
+> next start -H 127.0.0.1 -p 3000
+
+   ▲ Next.js 15.3.1
+   - Local:        http://127.0.0.1:3000
+   - Network:      http://127.0.0.1:3000
+
+ ✓ Starting...
+ ✓ Ready in 881ms

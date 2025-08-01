@@ -102,19 +102,19 @@ export default function SobrePage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className={styles.heroSection}>
-        <div className={styles.heroMask}>
-          <div className={styles.heroWrapper}>
-            <h2 className={styles.heroTitle}>sobre nós</h2>
+      <section className={styles['hero-section']}>
+        <div className={styles['hero-mask']}>
+          <div className={styles['hero-wrapper']}>
+            <h2 className={styles['hero-title']}>sobre nós</h2>
           </div>
         </div>
       </section>
 
       {/* Hero Headline */}
-      <section className={styles.heroHeadlineSection}>
-        <div className={styles.heroHeadlineWrapper}>
-          <h1 className={styles.heroHeadline}>
-            Soluções inovadoras, sustentáveis e de alta qualidade em <span className="blueText">Poliestireno Expandido (EPS)</span> e <span className="blueText">Espuma Rígida de Poliisocianurato (PIR)</span> que atendem às diversas demandas do mercado.
+      <section className={styles['hero-headline-section']}>
+        <div className={styles['hero-headline-wrapper']}>
+          <h1 className={styles['hero-headline']}>
+            Soluções inovadoras, sustentáveis e de alta qualidade em <span className="blue-text">Poliestireno Expandido (EPS)</span> e <span className="blue-text">Espuma Rígida de Poliisocianurato (PIR)</span> que atendem às diversas demandas do mercado.
           </h1>
         </div>
       </section>

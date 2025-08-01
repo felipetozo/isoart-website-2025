@@ -27,7 +27,7 @@
     color: rgba(var(--color-isoartBlue), 1);
 }
 
-.BenefitIcon {
+.benefit-icon {
     display: flex;
     justify-content: flex-start;
     align-items: center;

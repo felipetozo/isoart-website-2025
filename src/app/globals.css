@@ -153,11 +153,11 @@ p {
   font-family: var(--font-Inter);
 }
 
-.blueText {
+.blue-text {
   color: rgba(var(--color-isoartBlue), 1);
 }
 
-.goldText {
+.gold-text {
   color: rgba(var(--color-isoartGold), 1);
 }
 

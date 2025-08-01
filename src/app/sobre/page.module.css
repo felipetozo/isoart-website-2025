@@ -1,4 +1,4 @@
-.heroSection {
+.hero-section {
   background-image: url('/img/geral/endereco-01-01.avif');
   background-size: cover;
   background-position: center;
@@ -10,7 +10,7 @@
   position: relative;
 }
 
-.heroMask {
+.hero-mask {
   background: rgba(var(--color-almostBlack), 0.65);
   position: absolute;
   top: 0;
@@ -23,7 +23,7 @@
   justify-content: flex-end;
 }
 
-.heroWrapper {
+.hero-wrapper {
   width: 90%;
   max-width: 1600px;
   margin: 0 auto;
@@ -35,11 +35,11 @@
   z-index: 3;
 }
 
-.heroTitle {
+.hero-title {
   color: rgba(var(--color-almostWhite), 1);
 }
 
-.heroHeadlineSection {
+.hero-headline-section {
   width: 100%;
   background-color: rgba(var(--color-almostWhite), 1);
   display: flex;
@@ -47,7 +47,7 @@
   padding: 5rem 0;
 }
 
-.heroHeadlineWrapper {
+.hero-headline-wrapper {
   width: 90%;
   max-width: 1600px;
   margin: 0 auto;
@@ -55,7 +55,7 @@
   flex-direction: column;
 }
 
-.heroHeadline {
+.hero-headline {
   width: 100%;
   font-size: 1.25rem;
   font-weight: 600;

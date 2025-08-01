@@ -97,11 +97,11 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         <div className={styles.CategoryPage}>
             {/* Hero Section */}
             <section
-                className={styles.CategoryPageHeroSection}
-                style={{ backgroundImage: `url(${heroSection.backgroundImage})` }}
-            >
-                <div className={styles.CategoryPageHeroMask}></div>
-                <div className={styles.CategoryPageHeroContent}>
+                        className={styles['category-page-hero-section']}
+        style={{ backgroundImage: `url(${heroSection.backgroundImage})` }}
+      >
+        <div className={styles['category-page-hero-mask']}></div>
+        <div className={styles['category-page-hero-content']}>
                     <h1>{heroSection.title}</h1>
                     <p>{heroSection.description}</p>
                     <Link href={heroSection.buttonLink || '/contato'}>

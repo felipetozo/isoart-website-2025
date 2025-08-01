@@ -1,6 +1,6 @@
 import styles from './Button.module.css';
 
-type ButtonVariant = 'primary' | 'secondary' | 'white' | 'lightBlue' | 'gold-border';
+type ButtonVariant = 'primary' | 'secondary' | 'white' | 'light-blue' | 'gold-border';
 type ButtonSize = 'small' | 'medium' | 'large';
 
 interface ButtonProps {
@@ -30,7 +30,7 @@ const Button: React.FC<ButtonProps> = ({
         styles.button,
         styles[variant],
         styles[size],
-        fullWidth ? styles.fullWidth : '',
+        fullWidth ? styles['full-width'] : '',
         className
     ].filter(Boolean).join(' ');
 

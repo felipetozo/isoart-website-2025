@@ -127,7 +127,7 @@ function Hero() {
 
     return (
         <>
-            <section className={styles.HeroSection} id="Hero">
+            <section className={styles['hero-section']} id="Hero">
                 <div
                     ref={sliderRef}
                     className={styles.SliderWrapper}
@@ -146,7 +146,7 @@ function Hero() {
                             className={styles.Slide}
                             style={{ backgroundImage: `url(${slide.backgroundImage})` }}
                         >
-                            <div className={styles.HeroWrapper}>
+                            <div className={styles['hero-wrapper']}>
                                 <div
                                     ref={(el) => {
                                         containerRefs.current[index] = el;

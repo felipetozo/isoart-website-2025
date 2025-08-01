@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
 import FormField from '../views/UI/Form/FormField';
 import FormSelection from '../views/UI/Form/FormSelection';
@@ -42,6 +42,8 @@ const ContatoPage: React.FC = () => {
     const [errors, setErrors] = useState<FormErrors>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [showToast, setShowToast] = useState(false);
+    const [states, setStates] = useState<Array<{value: string, label: string}>>([]);
+    const [loadingStates, setLoadingStates] = useState(false);
 
     const themes = [
         { value: 'telhas-e-revestimentos', label: 'Telhas e Revestimentos' },
@@ -51,19 +53,7 @@ const ContatoPage: React.FC = () => {
         { value: 'embalagens', label: 'Embalagens' },
     ];
 
-    const states = [
-        { value: '', label: 'Selecione um estado' },
-        { value: 'PR', label: 'Paraná' },
-        { value: 'SP', label: 'São Paulo' },
-        { value: 'SC', label: 'Santa Catarina' },
-        { value: 'RS', label: 'Rio Grande do Sul' },
-        { value: 'MG', label: 'Minas Gerais' },
-        { value: 'RJ', label: 'Rio de Janeiro' },
-        { value: 'BA', label: 'Bahia' },
-        { value: 'GO', label: 'Goiás' },
-        { value: 'MT', label: 'Mato Grosso' },
-        { value: 'MS', label: 'Mato Grosso do Sul' },
-    ];
+    // Estados serão carregados dinamicamente da API
 
     const cities = {
         PR: [
@@ -154,6 +144,26 @@ const ContatoPage: React.FC = () => {
             return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
         }
     };
+
+    const fetchStates = async () => {
+        setLoadingStates(true);
+        try {
+            const response = await fetch('/api/states');
+            if (response.ok) {
+                const data = await response.json();
+                setStates(data);
+            }
+        } catch (error) {
+            console.error('Erro ao buscar estados:', error);
+        } finally {
+            setLoadingStates(false);
+        }
+    };
+
+    // Carregar estados ao montar o componente
+    useEffect(() => {
+        fetchStates();
+    }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value, type } = e.target;
@@ -361,6 +371,7 @@ const ContatoPage: React.FC = () => {
                                         options={states}
                                         error={errors.state}
                                         theme="light"
+                                        disabled={loadingStates}
                                     />
                                 </div>
                                 <div>

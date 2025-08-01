@@ -1,4 +1,4 @@
-.heroSection {
+.hero-section {
   background-image: url('/img/geral/pir-eps-hero.avif');
   background-size: cover;
   background-position: center;
@@ -10,7 +10,7 @@
   position: relative;
 }
 
-.heroMask {
+.hero-mask {
   background: rgba(var(--color-almostBlack), 0.65);
   position: absolute;
   top: 0;
@@ -23,7 +23,7 @@
   justify-content: flex-end;
 }
 
-.heroWrapper {
+.hero-wrapper {
   width: 90%;
   max-width: 1600px;
   margin: 0 auto;
@@ -35,17 +35,17 @@
   z-index: 3;
 }
 
-.heroTitle {
+.hero-title {
   color: rgba(var(--color-almostWhite), 1);
 }
 
-.heroHeadlineSection {
+.hero-headline-section {
   width: 100%;
   background-color: rgba(var(--color-almostWhite), 1);
   padding: 5rem 0;
 }
 
-.heroHeadlineWrapper {
+.hero-headline-wrapper {
   width: 90%;
   max-width: 1600px;
   margin: 0 auto;
@@ -53,37 +53,37 @@
   flex-direction: column;
 }
 
-.heroHeadlineContainer {
+.hero-headline-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.heroHeadline {
+.hero-headline {
   width: 100%;
   font-size: 1.25rem;
   font-weight: 600;
   color: rgba(var(--color-almostBlack), 0.35);
 }
 
-.heroButtons {
+.hero-buttons {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.heroButtons a {
+.hero-buttons a {
   text-decoration: none;
   color: inherit;
 }
 
-.epsSection {
+.eps-section {
   width: 100%;
   background-color: rgba(var(--color-almostWhite), 1);
   padding: 5rem 0;
 }
 
-.epsWrapper {
+.eps-wrapper {
   width: 90%;
   max-width: 1600px;
   margin: 0 auto;
@@ -91,13 +91,13 @@
   flex-direction: column;
 }
 
-.epsContainer {
+.eps-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.epsTitle {
+.eps-title {
   color: rgba(var(--color-isoartBlue), 1);
   font-size: 2rem;
   margin-bottom: 1.5rem;

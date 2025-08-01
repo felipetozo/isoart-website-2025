@@ -44,8 +44,8 @@ function BenefitsSection({ benefits }: BenefitsSectionProps) {
             <div className={styles.BenefitsWrapper}>
                 {benefits.map((benefit) => (
                     <div key={benefit.id} className={styles.BenefitsCard}>
-                        <div className={styles.BenefitIcon}>
-                            {getBenefitIcon(benefit.title)}
+                                <div className={styles['benefit-icon']}>
+          {getBenefitIcon(benefit.title)}
                         </div>
                         <h5>{benefit.title}</h5>
                         <p>{benefit.description}</p>

@@ -1,5 +1,5 @@
 /* Hero Section */
-.CategoryPageHeroSection {
+.category-page-hero-section {
     background-color: rgba(var(--color-almostWhite), 1);
     width: 100%;
     padding: 10rem 0 5rem 0;
@@ -12,7 +12,7 @@
     z-index: 1;
 }
 
-.CategoryPageHeroMask {
+.category-page-hero-mask {
     content: '';
     background-color: rgba(var(--color-almostBlack), 0.75);
     width: 100%;
@@ -23,7 +23,7 @@
     z-index: 4;
 }
 
-.CategoryPageHeroContent {
+.category-page-hero-content {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -37,37 +37,37 @@
     color: rgba(var(--color-almostWhite), 1);
 }
 
-.CategoryPageHeroContent h1 {
+.category-page-hero-content h1 {
     font-size: 3rem;
     font-weight: bold;
     line-height: 1;
 }
 
-.CategoryPageHeroContent p {
+.category-page-hero-content p {
     font-size: 1.2rem;
     line-height: 1.4;
     max-width: 600px;
 }
 
-.CategoryPage {
+.category-page {
     min-height: 100vh;
     --button-background: rgba(var(--color-isoartBlue), 0.8);
     /* Default button background */
 }
 
-.CategoryDescriptionSection {
+.category-description-section {
     background-color: rgba(var(--color-almostWhite), 1);
     padding: 5rem 0;
     width: 100%;
 }
 
-.CategoryDescriptionWrapper {
+.category-description-wrapper {
     width: 90%;
     max-width: 1600px;
     margin: 0 auto;
 }
 
-.CategoryDescriptionWrapper h2 {
+.category-description-wrapper h2 {
     font-size: clamp(1.8rem, 2vw, 2.4rem);
     font-weight: 800;
     margin-bottom: 2rem;
@@ -79,20 +79,20 @@
 /* Grid de produtos da categoria ====================================================== */
 /* ==================================================================================== */
 
-.CategoryProductsSection {
+.category-products-section {
     width: 100%;
     background-color: rgba(var(--color-almostWhite), 1);
     margin: 0;
 }
 
-.CategoryProductsWrapper {
+.category-products-wrapper {
     width: 90%;
     margin: 0 auto;
     max-width: 1600px;
     color: rgba(var(--color-almostBlack), 1);
 }
 
-.CategoryProductsGrid {
+.category-products-grid {
     display: grid;
     width: 100%;
     gap: 1rem;

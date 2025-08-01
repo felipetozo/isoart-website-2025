@@ -1,4 +1,4 @@
-.HeroSection {
+.hero-section {
     width: 100vw;
     height: 80vh;
     max-height: max-content;
@@ -36,7 +36,7 @@
     z-index: 2;
 }
 
-.HeroWrapper {
+.hero-wrapper {
     width: 90%;
     height: 100%;
     margin: 0 auto;
@@ -137,7 +137,7 @@
 }
 
 @media (min-width: 1200px) {
-    .HeroWrapper {
+    .hero-wrapper {
         flex-direction: row;
         align-items: flex-start;
         padding-bottom: 5%;
