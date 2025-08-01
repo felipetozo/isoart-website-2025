@@ -5,10 +5,10 @@ import path from 'path';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, solution, state, city, terms } = body;
+    const { name, email, phone, theme, state, city, terms } = body;
 
     // Validação dos dados
-    if (!name || !email || !solution || !state || !city || !terms) {
+    if (!name || !email || !theme || !state || !city || !terms) {
       return NextResponse.json(
         { error: 'Todos os campos obrigatórios devem ser preenchidos' },
         { status: 400 }
@@ -37,12 +37,12 @@ export async function POST(request: NextRequest) {
     const sanitizedName = name.trim();
     const sanitizedEmail = email.trim().toLowerCase();
     const sanitizedPhone = phone ? phone.trim() : '';
-    const sanitizedSolution = solution.trim();
+    const sanitizedTheme = theme.trim();
     const sanitizedState = state.trim();
     const sanitizedCity = city.trim();
 
     // Caminho para o arquivo JSON
-    const filePath = path.join(process.cwd(), 'src', 'app', 'data', 'forms', 'mainform-submissions.json');
+    const filePath = path.join(process.cwd(), 'src', 'app', 'data', 'forms', 'contact-page-submissions.json');
 
     // Ler o arquivo existente ou criar novo
     let submissionsData;
@@ -76,11 +76,11 @@ export async function POST(request: NextRequest) {
       nome: sanitizedName,
       email: sanitizedEmail,
       telefone: sanitizedPhone,
-      solucao: sanitizedSolution,
+      tema: sanitizedTheme,
       estado: sanitizedState,
       cidade: sanitizedCity,
       aceitou_termos: terms,
-      origem: 'componente-mainform',
+      origem: 'pagina-contato',
       data_hora: dataHora
     };
 

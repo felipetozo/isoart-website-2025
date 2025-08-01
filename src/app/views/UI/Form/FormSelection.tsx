@@ -12,6 +12,7 @@ interface FormSelectionProps {
     options: Array<{ value: string; label: string }>;
     error?: string;
     theme?: 'default' | 'light';
+    disabled?: boolean;
 }
 
 const FormSelection: React.FC<FormSelectionProps> = ({
@@ -22,6 +23,7 @@ const FormSelection: React.FC<FormSelectionProps> = ({
     options = [],
     error,
     theme = 'default',
+    disabled = false,
 }) => {
     return (
         <div className={`${styles.formInput} ${styles[theme]}`}>
@@ -32,7 +34,8 @@ const FormSelection: React.FC<FormSelectionProps> = ({
                 name={id}
                 value={value}
                 onChange={onChange}
-                    className={`${styles.select} ${styles[`select_${theme}`]}`}
+                disabled={disabled}
+                className={`${styles.select} ${styles[`select_${theme}`]}`}
             >
                     {options.map((option) => (
                         <option key={option.value} value={option.value}>

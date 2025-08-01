@@ -1,31 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
-import pool from '@/lib/database';
+import fs from 'fs/promises';
+import path from 'path';
 
 export async function GET(request: NextRequest) {
   try {
-    const connection = await pool.getConnection();
-    
-    try {
-      // Buscar estados únicos da tabela municipios
-      const [rows] = await connection.execute(`
-        SELECT DISTINCT 
-          uf as value, 
-          uf as label 
-        FROM municipios 
-        WHERE uf IS NOT NULL AND uf != '' 
-        ORDER BY uf
-      `);
+    // Caminho para o arquivo JSON
+    const filePath = path.join(process.cwd(), 'src', 'app', 'data', 'states.json');
 
-      // Adicionar opção padrão
-      const states = [
-        { value: '', label: 'Selecione um estado' },
-        ...(rows as any[])
-      ];
+    // Ler o arquivo JSON
+    const fileContent = await fs.readFile(filePath, 'utf-8');
+    const statesData = JSON.parse(fileContent);
 
-      return NextResponse.json(states);
-    } finally {
-      connection.release();
-    }
+    return NextResponse.json(statesData.states);
 
   } catch (error) {
     console.error('Erro ao buscar estados:', error);

@@ -16,6 +16,17 @@ interface FormData {
     solution: string;
     state: string;
     city: string;
+    terms: boolean;
+}
+
+interface FormErrors {
+    name?: string;
+    email?: string;
+    phone?: string;
+    solution?: string;
+    state?: string;
+    city?: string;
+    terms?: string;
 }
 
 function MainForm() {
@@ -26,41 +37,57 @@ function MainForm() {
         solution: '',
         state: '',
         city: '',
+        terms: false,
     });
-    const [errors, setErrors] = useState<Partial<FormData>>({});
+    const [errors, setErrors] = useState<FormErrors>({});
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const [showToast, setShowToast] = useState(false);
     const [states, setStates] = useState<Array<{value: string, label: string}>>([]);
-    const [cities, setCities] = useState<Array<{value: string, label: string}>>([]);
     const [loadingStates, setLoadingStates] = useState(false);
-    const [loadingCities, setLoadingCities] = useState(false);
 
     const validateForm = (): boolean => {
-        const newErrors: Partial<FormData> = {};
+        const newErrors: FormErrors = {};
         if (!formData.name.trim()) newErrors.name = 'Nome é obrigatório';
         if (!formData.email.trim()) newErrors.email = 'E-mail é obrigatório';
         else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'E-mail inválido';
         if (!formData.solution) newErrors.solution = 'Selecione uma solução';
         if (!formData.state) newErrors.state = 'Selecione um estado';
-        if (!formData.city) newErrors.city = 'Selecione uma cidade';
+        if (!formData.city.trim()) newErrors.city = 'Digite sua cidade';
+        if (!formData.terms) newErrors.terms = 'Você deve aceitar os termos';
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-        const { name, value } = e.target;
-        setFormData((prev) => ({ ...prev, [name]: value }));
-        setErrors((prev) => ({ ...prev, [name]: undefined }));
+    // Função para aplicar máscara no telefone
+    const applyPhoneMask = (value: string): string => {
+        // Remove tudo que não é dígito
+        const numbers = value.replace(/\D/g, '');
         
-        // Se mudou o estado, buscar cidades
-        if (name === 'state') {
-            setFormData(prev => ({ ...prev, city: '' }));
-            if (value) {
-                fetchCities(value);
-            } else {
-                setCities([]);
-            }
+        // Aplica a máscara (00) 00000-0000
+        if (numbers.length <= 2) {
+            return `(${numbers}`;
+        } else if (numbers.length <= 7) {
+            return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
+        } else if (numbers.length <= 11) {
+            return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7)}`;
+        } else {
+            return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
         }
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+        const { name, value, type } = e.target;
+        const checked = type === 'checkbox' ? (e.target as HTMLInputElement).checked : undefined;
+        
+        // Aplicar máscara apenas para o campo telefone
+        if (name === 'phone') {
+            const maskedValue = applyPhoneMask(value);
+            setFormData((prev) => ({ ...prev, [name]: maskedValue }));
+        } else {
+            setFormData((prev) => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
+        }
+        
+        setErrors((prev) => ({ ...prev, [name]: undefined }));
     };
 
     const fetchStates = async () => {
@@ -78,20 +105,7 @@ function MainForm() {
         }
     };
 
-    const fetchCities = async (state: string) => {
-        setLoadingCities(true);
-        try {
-            const response = await fetch(`/api/cities?state=${encodeURIComponent(state)}`);
-            if (response.ok) {
-                const data = await response.json();
-                setCities(data);
-            }
-        } catch (error) {
-            console.error('Erro ao buscar cidades:', error);
-        } finally {
-            setLoadingCities(false);
-        }
-    };
+
 
     // Carregar estados ao montar o componente
     useEffect(() => {
@@ -117,7 +131,7 @@ function MainForm() {
 
             if (response.ok) {
                 setSubmitStatus('success');
-                setFormData({ name: '', email: '', phone: '', solution: '', state: '', city: '' });
+                setFormData({ name: '', email: '', phone: '', solution: '', state: '', city: '', terms: false });
                 setShowToast(true);
             } else {
                 console.error('Erro na API:', result.error);
@@ -188,7 +202,7 @@ function MainForm() {
                                 type="tel"
                                 value={formData.phone}
                                 onChange={handleChange}
-                                placeholder="Digite seu telefone / whatsapp"
+                                placeholder="(00) 00000-0000"
                                 error={errors.phone}
                             />
                         </div>
@@ -200,9 +214,11 @@ function MainForm() {
                                 onChange={handleChange}
                                 options={[
                                     { value: '', label: 'Selecione uma solução' },
-                                    { value: 'telhas', label: 'Telhas Térmicas' },
-                                    { value: 'paineis', label: 'Painéis Sanduíche' },
-                                    { value: 'mantas', label: 'Mantas Térmicas' },
+                                    { value: 'telhas-e-revestimentos', label: 'Telhas e Revestimentos' },
+                                    { value: 'construcao-civil', label: 'Construção Civil' },
+                                    { value: 'forros', label: 'Forros' },
+                                    { value: 'molduras', label: 'Molduras' },
+                                    { value: 'embalagens', label: 'Embalagens' },
                                 ]}
                                 error={errors.solution}
                             />
@@ -219,15 +235,31 @@ function MainForm() {
                             />
                         </div>
                         <div className={styles.cadastroFormFields}>
-                            <FormSelection
+                            <FormField
                                 id="city"
                                 label="Cidade"
+                                type="text"
                                 value={formData.city}
                                 onChange={handleChange}
-                                options={cities}
+                                placeholder="Digite sua cidade"
                                 error={errors.city}
-                                disabled={loadingCities || !formData.state}
                             />
+                        </div>
+                        <div className={styles.cadastroFormFields}>
+                            <div className={styles.termsContainer}>
+                                <input
+                                    type="checkbox"
+                                    id="terms"
+                                    name="terms"
+                                    checked={formData.terms}
+                                    onChange={handleChange}
+                                    className={styles.termsCheckbox}
+                                />
+                                <label htmlFor="terms" className={styles.termsText}>
+                                    Eu aceito a <a href="/privacidade" className={styles.termsLink}>política de privacidade</a>
+                                </label>
+                            </div>
+                            {errors.terms && <div className={styles.errorMessage}>{errors.terms}</div>}
                         </div>
                         <div className={styles.cadastroFormFields}>
                             <Button

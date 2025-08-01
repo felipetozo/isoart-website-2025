@@ -6,6 +6,7 @@ import FormSelection from '../views/UI/Form/FormSelection';
 import Button from '../views/UI/Button';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn } from 'react-icons/md';
 import { BsWhatsapp } from 'react-icons/bs';
+import Toast from '@/app/components/Toast/Toast';
 
 interface FormData {
     name: string;
@@ -40,10 +41,11 @@ const ContatoPage: React.FC = () => {
 
     const [errors, setErrors] = useState<FormErrors>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [showToast, setShowToast] = useState(false);
 
     const themes = [
-        { value: 'telhas', label: 'Telhas e Revestimentos' },
-        { value: 'construcao', label: 'Construção Civil' },
+        { value: 'telhas-e-revestimentos', label: 'Telhas e Revestimentos' },
+        { value: 'construcao-civil', label: 'Construção Civil' },
         { value: 'forros', label: 'Forros' },
         { value: 'molduras', label: 'Molduras' },
         { value: 'embalagens', label: 'Embalagens' },
@@ -136,23 +138,42 @@ const ContatoPage: React.FC = () => {
         ],
     };
 
+    // Função para aplicar máscara no telefone
+    const applyPhoneMask = (value: string): string => {
+        // Remove tudo que não é dígito
+        const numbers = value.replace(/\D/g, '');
+        
+        // Aplica a máscara (00) 00000-0000
+        if (numbers.length <= 2) {
+            return `(${numbers}`;
+        } else if (numbers.length <= 7) {
+            return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
+        } else if (numbers.length <= 11) {
+            return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7)}`;
+        } else {
+            return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
+        }
+    };
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value, type } = e.target;
         const checked = type === 'checkbox' ? (e.target as HTMLInputElement).checked : undefined;
         
-        setFormData(prev => ({
-            ...prev,
-            [name]: type === 'checkbox' ? checked : value,
-        }));
-
-        // Clear city when state changes
-        if (name === 'state') {
+        // Aplicar máscara apenas para o campo telefone
+        if (name === 'phone') {
+            const maskedValue = applyPhoneMask(value);
             setFormData(prev => ({
                 ...prev,
-                state: value,
-                city: '',
+                [name]: maskedValue,
+            }));
+        } else {
+            setFormData(prev => ({
+                ...prev,
+                [name]: type === 'checkbox' ? checked : value,
             }));
         }
+
+
 
         // Clear error when user starts typing
         if (errors[name as keyof FormErrors]) {
@@ -186,8 +207,8 @@ const ContatoPage: React.FC = () => {
 
         if (!formData.email.trim()) {
             newErrors.email = 'E-mail é obrigatório';
-        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            newErrors.email = 'E-mail inválido';
+        } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email)) {
+            newErrors.email = 'E-mail inválido. Use um formato válido como: exemplo@empresa.com';
         }
 
         if (!formData.phone.trim()) {
@@ -202,8 +223,8 @@ const ContatoPage: React.FC = () => {
             newErrors.state = 'Selecione um estado';
         }
 
-        if (!formData.city) {
-            newErrors.city = 'Selecione uma cidade';
+        if (!formData.city.trim()) {
+            newErrors.city = 'Digite sua cidade';
         }
 
         if (!formData.terms) {
@@ -223,23 +244,41 @@ const ContatoPage: React.FC = () => {
 
         setIsSubmitting(true);
         
-        // Simulate form submission
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        
-        setIsSubmitting(false);
-        
-        // Reset form
-        setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            theme: '',
-            state: '',
-            city: '',
-            terms: false,
-        });
-        
-        setErrors({});
+        try {
+            const response = await fetch('/api/contact-page', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                // Reset form on success
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    theme: '',
+                    state: '',
+                    city: '',
+                    terms: false,
+                });
+                setErrors({});
+                setShowToast(true);
+            } else {
+                console.error('Erro na API:', result.error);
+                // Aqui você pode adicionar um Toast de erro se quiser
+                alert(result.error || 'Erro ao enviar formulário. Tente novamente.');
+            }
+        } catch (error) {
+            console.error('Erro ao enviar formulário:', error);
+            alert('Erro ao enviar formulário. Tente novamente.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -287,7 +326,7 @@ const ContatoPage: React.FC = () => {
                                         type="tel"
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        placeholder="Digite seu telefone / whatsapp"
+                                        placeholder="(00) 00000-0000"
                                         error={errors.phone}
                                         theme="light"
                                     />
@@ -325,12 +364,13 @@ const ContatoPage: React.FC = () => {
                                     />
                                 </div>
                                 <div>
-                                    <FormSelection
+                                    <FormField
                                         id="city"
                                         label="Cidade"
+                                        type="text"
                                         value={formData.city}
                                         onChange={handleChange}
-                                        options={formData.state ? cities[formData.state as keyof typeof cities] || [] : [{ value: '', label: 'Selecione um estado primeiro' }]}
+                                        placeholder="Digite sua cidade"
                                         error={errors.city}
                                         theme="light"
                                     />
@@ -393,6 +433,14 @@ const ContatoPage: React.FC = () => {
                     </div>
                 </div>
             </section>
+            
+            <Toast
+                message="Sua mensagem foi enviada com sucesso!"
+                type="success"
+                isVisible={showToast}
+                onClose={() => setShowToast(false)}
+                duration={4000}
+            />
         </div>
     );
 };

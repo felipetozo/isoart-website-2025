@@ -13,7 +13,6 @@ Site institucional e catálogo de produtos Isoart, desenvolvido com Next.js, Rea
 - **TailwindCSS** (utilitários e reset)
 - **GSAP** e **Lenis** (animações e scroll suave)
 - **MySQL** (integração planejada para formulários)
-- **Supabase** (migração futura)
 
 ---
 
@@ -66,7 +65,6 @@ isoart-website-2025/
 
 - **Dados de navegação, categorias e produtos** em arquivos JSON (`/data`)
 - **Formulário de contato** planejado para integração com MySQL (ver `MainForm.md`)
-- **Migração futura** para Supabase
 - **Imagens e ícones** organizados em `/public`
 
 ---
