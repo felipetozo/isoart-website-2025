@@ -5,7 +5,7 @@ import Image from 'next/image';
 import menuData from '@/app/data/menu-data.json';
 import SobreEmpresa from '@/app/components/sobre-empresa/sobre-empresa';
 import MainForm from '@/app/components/main-form/main-form';
-import Button from '@/app/views/ui/button';
+import Button from '@/app/views/ui/button/button';
 import TabbedSection from './tabbed-section';
 import BenefitsSection from '@/app/components/benefits-section/benefits-section';
 import { TbChecks, TbHome, TbMicroscope, TbBuildingFactory2, TbSnowflake, TbMedicineSyrup, TbBuilding, TbBuildingHospital, TbBuildingFactory, TbTools, TbPackage, TbDeviceTv, TbWindow, TbTruck, TbBuildingStore, TbArmchair, TbMicrophone, } from "react-icons/tb";

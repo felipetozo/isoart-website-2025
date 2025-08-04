@@ -1,6 +1,6 @@
 import styles from './sobre-empresa.module.css';
 import Link from 'next/link';
-import Button from '@/app/views/ui/button';
+import Button from '@/app/views/ui/button/button';
 
 function SobreEmpresa() {
     return (
@@ -8,7 +8,7 @@ function SobreEmpresa() {
             <section className={styles['sobre-empresa-section']} id="#sobre-empresa">
                 <div className={styles['sobre-empresa-wrapper']}>
                     <div className={styles['sobre-empresa-container']}>
-                        <p>Expanda sua criatividade.</p>
+                        <p>Expanda sua criatividade</p>
                     </div>
                     <div className={styles['sobre-empresa-container']}>
                         <h3>

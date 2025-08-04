@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import styles from './main-nav.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import Button from '@/app/views/ui/button';
+import Button from '@/app/views/ui/button/button';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { BsWhatsapp } from 'react-icons/bs';
@@ -175,7 +175,7 @@ function MainNav() {
                             </ul>
                         </div>
                         <div className={styles['main-nav-button']}>
-                            <Link href="/cadastro">
+                            <Link href="/contato">
                                 <Button variant="primary" size="medium">
                                     Entrar em contato
                                 </Button>

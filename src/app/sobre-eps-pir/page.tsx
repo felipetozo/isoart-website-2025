@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import Button from "@/app/views/ui/button";
+import Button from "@/app/views/ui/button/button";
 import Sustentabilidade from "@/app/components/sustentabilidade/sustentabilidade";
 import { CheckCircle } from "lucide-react";
 import { FlameOff } from "tabler-icons-react";

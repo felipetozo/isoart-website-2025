@@ -5,7 +5,7 @@ import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn } from 're
 import { BsWhatsapp } from 'react-icons/bs';
 import FormField from '@/app/views/ui/form/form-field';
 import FormSelection from '@/app/views/ui/form/form-selection';
-import Button from '@/app/views/ui/button';
+import Button from '@/app/views/ui/button/button';
 import Image from 'next/image';
 import Toast from '@/app/views/ui/toast/toast';
 
