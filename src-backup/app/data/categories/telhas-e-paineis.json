@@ -1,0 +1,91 @@
+{
+    "id": 1,
+    "title": "Telhas e Revestimentos Térmicos Isoart - Ideais para construção civil",
+    "slug": "telhas-e-paineis",
+    "metaDescription": "Telhas e painéis da Isoart para coberturas e fachadas. Disponíveis com ou sem isolamento térmico em EPS/PIR, oferecem eficiência energética e resistência. Adequados para diversos projetos de construção.",
+    "hero": {
+        "title": "Telhas e Revestimentos",
+        "description": "Telhas e painéis da Isoart para coberturas e fachadas. Disponíveis com ou sem isolamento térmico em EPS/PIR, oferecem eficiência energética e resistência. Adequados para diversos projetos de construção.",
+        "buttonText": "Entre em contato",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/geral/endereco-03-01.avif"
+    },
+    "categoryDescription": "Eficiência térmica e resistência para construções industriais, comerciais e residenciais. Nossas telhas e painéis garantem alto desempenho, isolamento térmico e durabilidade, ideais para galpões, centros logísticos e obras que exigem proteção e estética de alto padrão.",
+    "products": [
+        {
+            "id": 1,
+            "name": "Telhas Térmicas",
+            "slug": "telhas-termicas",
+            "description": "Telhas com núbleo em PIR e revestimento duplo com chapas de aço galvalume ou filme.",
+            "image": "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-01.avif",
+            "specifications": {
+                "material": "Aço galvanizado + EPS/PIR",
+                "espessura": "30mm, 50mm, 100mm",
+                "cor": "Diversas opções",
+                "aplicacao": "Coberturas"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Fachada e Fechamento Lateral",
+            "slug": "fachada-fechamento-lateral",
+            "description": "Painéis versáteis para fachadas e fechamentos laterais, oferecendo isolamento e estética.",
+            "image": "/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-fechamento-01.avif",
+            "specifications": {
+                "material": "Aço galvanizado + EPS/PIR",
+                "acabamento": "Pré-pintado, Natural"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Divisória e Forro",
+            "slug": "divisoria-e-forro",
+            "description": "Soluções práticas e eficientes para divisórias internas e forros termoacústicos.",
+            "image": "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-01.avif",
+            "specifications": {
+                "material": "Aço galvanizado + EPS/PIR",
+                "espessura": "50mm, 75mm",
+                "isolamento": "Térmico e Acústico"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Sala Limpa",
+            "slug": "sala-limpa",
+            "description": "Painéis específicos para ambientes de sala limpa, com alta assepsia e controle de partículas.",
+            "image": "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-01.avif",
+            "specifications": {
+                "material": "Aço inoxidável + PIR",
+                "conformidade": "Normas de salas limpas"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Câmara Frigorífica",
+            "slug": "camara-frigorifica",
+            "description": "Painéis robustos e eficientes para isolamento de câmaras frigoríficas, garantindo temperaturas ideais.",
+            "image": "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-01.avif",
+            "specifications": {
+                "material": "Aço pré-pintado/inoxidável + PIR",
+                "temperatura": "Baixa e Média"
+            }
+        }
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Eficiência Térmica e Acústica",
+            "description": "Minimiza a troca de calor e ruídos, proporcionando maior conforto e reduzindo o consumo de energia para climatização."
+        },
+        {
+            "id": 2,
+            "title": "Instalação Rápida e Fácil",
+            "description": "Leves, permitem aplicações ágeis sem necessidade de reforços estruturais, reduzindo tempo e custos."
+        },
+        {
+            "id": 3,
+            "title": "Durabilidade Prolongada",
+            "description": "Material leve, resistente e de baixa manutenção, garantindo uma vida útil estendida com excelente custo-benefício."
+        }
+    ]
+}

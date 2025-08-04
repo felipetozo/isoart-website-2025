@@ -1,0 +1,55 @@
+{
+    "id": 3,
+    "title": "Forros",
+    "slug": "forros",
+    "metaDescription": "Forros em EPS/PIR para tetos, projetados para isolamento térmico e acústico. Indicados para residências, comércios e indústrias, garantem maior conforto ambiental.",
+    "hero": {
+        "title": "Forros Inovadores",
+        "description": "Forros em EPS/PIR para tetos, projetados para isolamento térmico e acústico. Indicados para residências, comércios e indústrias, garantem maior conforto ambiental.",
+        "buttonText": "Entre em contato",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/geral/endereco-03-01.avif"
+    },
+    "categoryDescription": "Nossos forros em EPS são ideais para melhorar a acústica e a decoração de espaços internos, com opções personalizáveis.",
+    "products": [
+        {
+            "id": 10,
+            "name": "Dunas",
+            "slug": "dunas",
+            "description": "Forro modelo Dunas com design único.",
+            "image": "/img/produtos/forros/dunas/dunas-01.avif",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Decoração Interna"
+            }
+        },
+        {
+            "id": 11,
+            "name": "Paris",
+            "slug": "paris",
+            "description": "Forro modelo Paris com design único.",
+            "image": "/img/produtos/forros/paris/paris-01.avif",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Decoração Interna"
+            }
+        }
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Eficiência Térmica e Acústica",
+            "description": "Minimiza a troca de calor e ruídos, proporcionando maior conforto e reduzindo o consumo de energia para climatização."
+        },
+        {
+            "id": 2,
+            "title": "Acabamento Sofisticado",
+            "description": "Detalhes elegantes que valorizam o design e agregam estilo a qualquer construção, do clássico ao contemporâneo."
+        },
+        {
+            "id": 3,
+            "title": "Instalação Rápida e Fácil",
+            "description": "Leves, permitem aplicações ágeis sem necessidade de reforços estruturais, reduzindo tempo e custos."
+        }
+    ]
+}

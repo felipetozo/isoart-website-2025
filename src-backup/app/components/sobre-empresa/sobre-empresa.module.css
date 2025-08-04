@@ -1,0 +1,28 @@
+.sobre-empresa-section {
+    background-color: rgba(15, 19, 30, 1);
+    background-color: rgba(var(--color-darkest-blue), 1);
+    padding: 5rem 0;
+    width: 100%;
+}
+
+.sobre-empresa-wrapper {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+}
+
+.sobre-empresa-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width:1600px) {
+    .sobre-empresa-wrapper {
+        grid-template-columns: 20% 70%;
+    }
+}

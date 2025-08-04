@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { notFound } from 'next/navigation';
 import styles from './page.module.css';
 import Link from 'next/link';
@@ -83,7 +82,7 @@ interface ProductPageProps {
 
 // Função para renderizar ícones do Tabler
 function renderIcon(iconName: string) {
-    const iconMap: { [key: string]: React.ComponentType<{ size?: number }> } = {
+    const iconMap: { [key: string]: React.ComponentType<any> } = {
         'TbHome': TbHome,
         'TbBuilding': TbBuilding,
         'TbFactory': TbBuildingFactory,
