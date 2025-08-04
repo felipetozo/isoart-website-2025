@@ -5,7 +5,7 @@ Site institucional da Isoart, empresa especializada em soluções em EPS e PIR p
 ## 🏗️ Estrutura do Projeto
 
 ### Tecnologias
-- **Next.js 15.3.1** - Framework React
+- **Next.js 15.4.5** - Framework React
 - **TypeScript** - Tipagem estática
 - **Tailwind CSS** - Framework CSS
 - **GSAP** - Animações
@@ -24,6 +24,7 @@ src/
 │   ├── hooks/            # Custom hooks
 │   ├── sobre/            # Páginas institucionais
 │   ├── sobre-eps-pir/    # Página sobre EPS/PIR
+│   ├── solucoes/         # Página de soluções
 │   ├── types/            # Tipos TypeScript
 │   └── views/ui/         # Componentes UI básicos
 ├── public/               # Assets estáticos
@@ -54,6 +55,7 @@ src/
 - **Home** (`/`) - Landing page com slider e soluções
 - **Sobre** (`/sobre`) - História e timeline da empresa
 - **Sobre EPS/PIR** (`/sobre-eps-pir`) - Informações técnicas
+- **Soluções** (`/solucoes`) - Catálogo de soluções
 - **Contato** (`/contato`) - Formulário e informações
 
 ### Categorias de Produtos
@@ -117,12 +119,18 @@ npm run start            # Produção local
 
 ## 📈 Performance
 
-### Otimizações
-- **Imagens otimizadas** com formatos modernos
-- **Lazy loading** de componentes
-- **Code splitting** automático
-- **Cache** de dados estáticos
-- **Compressão** de assets
+### Otimizações Recentes
+- **CSS Crítico Inline** - Melhora LCP (Largest Contentful Paint)
+- **Preload de Imagens** - `fetchPriority="high"` para recursos críticos
+- **Cores Hex** - Substituição de rgba por hex para melhor performance
+- **Fontes Otimizadas** - Carregamento otimizado de Google Fonts
+- **DNS Prefetch** - Para recursos externos
+
+### Métricas de Performance
+- **PageSpeed Score**: 99/100
+- **LCP**: Otimizado com CSS crítico
+- **FCP**: Melhorado com preload de recursos
+- **CLS**: Estável com animações controladas
 
 ### SEO
 - **Meta tags** dinâmicas por página
@@ -144,10 +152,16 @@ npm run start            # Produção local
 - Responsividade mobile-first
 - Acessibilidade implementada
 
+### Correções Recentes
+- **Menu Mobile**: Fechamento automático ao clicar em links
+- **Cores de Texto**: Correção de textos pretos em componentes escuros
+- **CSS Crítico**: Otimização para melhor LCP
+- **Performance**: Conversão rgba para hex
+
 ## 📝 Notas Técnicas
 
 ### Dependências Principais
-- `next`: 15.3.1
+- `next`: 15.4.5
 - `react`: ^19.0.0
 - `gsap`: ^3.13.0
 - `lenis`: ^1.3.4
@@ -158,7 +172,16 @@ npm run start            # Produção local
 - TypeScript com verificações relaxadas
 - Tailwind CSS com configuração customizada
 - Animações otimizadas com GSAP
+- CSS crítico inline para performance
+
+### Últimas Atualizações
+- **v15.4.5**: Atualização do Next.js
+- **Performance**: Otimizações de LCP e FCP
+- **CSS**: Correções de cores e estrutura
+- **Mobile**: Melhorias na navegação
 
 ---
 
 **Desenvolvido para Isoart** - Soluções em EPS e PIR para construção civil
+
+*Última atualização: Dezembro 2024*
