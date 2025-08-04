@@ -1,6 +1,6 @@
 "use client";
-import MainForm from '@/app/components/main-form/main-form';
-import Sustentabilidade from '@/app/components/sustentabilidade/sustentabilidade';
+import MainForm from '../components/main-form/main-form';
+import Sustentabilidade from '../components/sustentabilidade/sustentabilidade';
 import styles from './page.module.css';
 import { useState, useRef, useEffect } from 'react';
 import { Target, Eye, Heart } from 'lucide-react';

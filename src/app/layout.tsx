@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Red_Hat_Display, Inter } from "next/font/google";
 import "./globals.css";
-import MainNav from "@/app/components/main-nav/main-nav";
-import Footer from '@/app/components/footer/footer';
-import AnalyticsProvider from "@/app/components/analytics-provider/analytics-provider";
-import { LenisProvider } from "@/app/components/lenis-provider";
+import MainNav from "./components/main-nav/main-nav";
+import Footer from './components/footer/footer';
+import AnalyticsProvider from "./components/analytics-provider/analytics-provider";
+import { LenisProvider } from "./components/lenis-provider";
 
 const redhat = Red_Hat_Display({
   variable: "--font-redhat",
