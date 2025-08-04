@@ -1,24 +1,26 @@
 import type { Metadata } from "next";
 import { Red_Hat_Display, Inter } from "next/font/google";
 import "./globals.css";
-import MainNav from "./components/MainNav/MainNav";
-import Footer from "./components/Footer/Footer";
-import { Analytics } from "@vercel/analytics/next";
-import { LenisProvider } from "./components/LenisProvider";
+import MainNav from "./components/main-nav/main-nav";
+import Footer from "./components/footer/footer";
+import AnalyticsProvider from "@/app/components/analytics-provider/analytics-provider";
+import { LenisProvider } from "./components/lenis-provider";
 
-const RedHat = Red_Hat_Display({
-  variable: "--font-RedHat",
+const redhat = Red_Hat_Display({
+  variable: "--font-redhat",
   subsets: ["latin"],
 });
 
 const inter = Inter({
-  variable: "--font-Inter",
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Isoart",
+  title: "Isoart - Soluções em EPS e PIR",
   description: "A Isoart se destaca oferecendo soluções inovadoras e sustentáveis em EPS (Poliestireno Expandido) e PIR",
+  keywords: "EPS, PIR, Poliestireno Expandido, isolamento térmico, telhas, lajes, construção civil, molduras, forros, embalagens",
+  authors: [{ name: "Felipe Tozo e Isoart"}],
 };
 
 export default function RootLayout({
@@ -27,13 +29,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${RedHat.variable} ${inter.variable} antialiased`}>
+    <html lang="pt-BR">
+      <body className={`${redhat.variable} ${inter.variable} antialiased`}>
         <LenisProvider>
           <MainNav />
           {children}
           <Footer />
-          <Analytics />
+          <AnalyticsProvider />
         </LenisProvider>
       </body>
     </html>

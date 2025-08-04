@@ -2,16 +2,16 @@ import { notFound } from 'next/navigation';
 import styles from './page.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import menuData from '@/app/data/menuData.json';
-import SobreEmpresa from '@/app/components/SobreEmpresa/SobreEmpresa';
-import MainForm from '@/app/components/MainForm/MainForm';
-import Button from '@/app/views/UI/Button';
-import TabbedSection from './TabbedSection';
-import BenefitsSection from '@/app/components/BenefitsSection/BenefitsSection';
+import menuData from '@/app/data/menu-data.json';
+import SobreEmpresa from '@/app/components/sobre-empresa/sobre-empresa';
+import MainForm from '@/app/components/main-form/main-form';
+import Button from '@/app/views/ui/button';
+import TabbedSection from './tabbed-section';
+import BenefitsSection from '@/app/components/benefits-section/benefits-section';
 import { TbChecks, TbHome, TbMicroscope, TbBuildingFactory2, TbSnowflake, TbMedicineSyrup, TbBuilding, TbBuildingHospital, TbBuildingFactory, TbTools, TbPackage, TbDeviceTv, TbWindow, TbTruck, TbBuildingStore, TbArmchair, TbMicrophone, } from "react-icons/tb";
 import { IoFastFoodOutline } from "react-icons/io5";
-import ImageCarousel from '@/app/components/ImageCarousel/ImageCarousel';
-import SingleImage from '@/app/components/SingleImage/SingleImage';
+import ImageCarousel from '@/app/components/image-carousel/image-carousel';
+import SingleImage from '@/app/components/single-image/single-image';
 
 interface ProductData {
     id: number;
@@ -192,14 +192,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
     };
 
     return (
-        <div className={styles.ProductPage}>
+        <div className={styles['product-page']}>
             {/* Hero Section */}
             <section
-                className={styles.ProductPageHeroSection}
+                className={styles['product-page-hero-section']}
                 style={{ backgroundImage: `url(${heroSection.backgroundImage})` }}
             >
-                <div className={styles.ProductPageHeroMask}></div>
-                <div className={styles.ProductPageHeroContent}>
+                <div className={styles['product-page-hero-mask']}></div>
+                <div className={styles['product-page-hero-content']}>
                     <h1>{heroSection.title}</h1>
                     <p>{heroSection.description}</p>
                     <Link href={heroSection.buttonLink}>
@@ -211,8 +211,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </section>
 
             {/* Category Description */}
-            <section className={styles.ProductPageDescriptionSection}>
-                <div className={styles.ProductPageDescriptionWrapper}>
+            <section className={styles['product-page-description-section']}>
+                <div className={styles['product-page-description-wrapper']}>
                     <h3>{categoryDescription.title}</h3>
                     <p>{categoryDescription.description}</p>
                 </div>
@@ -222,9 +222,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <BenefitsSection benefits={benefits} />
 
             {/* General Characteristics */}
-            <section className={styles.GeneralCharacteristicsSection}>
-                <div className={styles.GeneralCharacteristicsWrapper}>
-                                    <div className={styles.imgPlaceholder}>
+            <section className={styles['general-characteristics-section']}>
+                <div className={styles['general-characteristics-wrapper']}>
+                                    <div className={styles['img-placeholder']}>
                     {productData.projectImages && productData.projectImages.length > 0 ? (
                         <ImageCarousel 
                             images={productData.projectImages}
@@ -242,9 +242,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
                     )}
                 </div>
                     <h3>Características Gerais:</h3>
-                    <div className={styles.featuresGrid}>
+                    <div className={styles['features-grid']}>
                         {generalCharacteristics.map((char, index) => (
-                            <div key={index} className={styles.feature}>
+                            <div key={index} className={styles['feature']}>
                                 <span><TbChecks size={24} /></span> <p>{char}</p>
                             </div>
                         ))}
@@ -253,15 +253,15 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </section>
 
             {/* Applications */}
-            <section className={styles.ApplicationsSection}>
-                <div className={styles.ApplicationsWrapper}>
+            <section className={styles['applications-section']}>
+                <div className={styles['applications-wrapper']}>
                     <h3>{applications.title}</h3>
                     <p>{applications.description}</p>
                     <p>Indicada para obras residenciais, comerciais e industriais como:</p>
-                    <div className={styles.ApplicationCarousel}>
-                        <div className={styles.ApplicationCards}>
+                    <div className={styles['application-carousel']}>
+                        <div className={styles['application-cards']}>
                             {applications.indications.map((indication, index) => (
-                                <div key={index} className={styles.ApplicationCard}>
+                                <div key={index} className={styles['application-card']}>
                                     {renderIcon(indication.icon)} {indication.text}
                                 </div>
                             ))}

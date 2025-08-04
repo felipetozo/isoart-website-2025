@@ -1,0 +1,75 @@
+/* FormInput.module.css */
+.form-input {
+    margin-bottom: 1rem;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-family: var(--font-redhat);
+}
+
+.input {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(16, 46, 65, 0.1);
+    border: 1px solid rgba(79, 184, 225, 0.1);
+    border-radius: 0.5rem;
+    color: rgba(241, 244, 247, 0.75);
+    font-size: 0.8rem;
+}
+
+.input:hover {
+    border: 1px solid rgba(79, 184, 225, 0.25);
+    background-color: rgba(79, 184, 225, 0.05);
+}
+
+.error {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+}
+
+/* Light theme */
+.light {
+    margin-bottom: 1rem;
+}
+
+.label-light {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-family: var(--font-redhat);
+    color: rgba(17, 17, 17, 0.5);
+}
+
+.input-light {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: rgba(241, 244, 247, 1);
+    border: 1px solid rgba(146, 151, 120, 0);
+    border-bottom: 1px solid rgba(146, 151, 120, 0.50);
+    border-radius: 0;
+    color: rgba(17, 17, 17, 0.75);
+    font-size: 0.8rem;
+}
+
+.input-light:hover {
+    border: 1px solid rgba(146, 151, 120, 0);
+    border-bottom: 1px solid rgba(146, 151, 120, 1);
+}
+
+.input-light:focus {
+    outline: none;
+    border: 1px solid rgba(146, 151, 120, 0);
+    border-bottom: 1px solid rgba(146, 151, 120, 0.75);
+    background-color: rgba(146, 151, 120, 0.25);
+    border-radius: 0;
+}
+
+.error-light {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+}

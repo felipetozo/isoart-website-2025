@@ -2,11 +2,11 @@ import { notFound } from 'next/navigation';
 import styles from './page.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import menuData from '@/app/data/menuData.json';
-import SobreEmpresa from '@/app/components/SobreEmpresa/SobreEmpresa';
-import MainForm from '@/app/components/MainForm/MainForm';
-import Button from '@/app/views/UI/Button';
-import BenefitsSection from '@/app/components/BenefitsSection/BenefitsSection';
+import menuData from '@/app/data/menu-data.json';
+import SobreEmpresa from '@/app/components/sobre-empresa/sobre-empresa';
+import MainForm from '@/app/components/main-form/main-form';
+import Button from '@/app/views/ui/button';
+import BenefitsSection from '@/app/components/benefits-section/benefits-section';
 
 // Updated interfaces to match the actual data structure
 interface Product {
@@ -94,14 +94,14 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     ];
 
     return (
-        <div className={styles.CategoryPage}>
+        <div className={styles['category-page']}>
             {/* Hero Section */}
             <section
-                        className={styles['category-page-hero-section']}
-        style={{ backgroundImage: `url(${heroSection.backgroundImage})` }}
-      >
-        <div className={styles['category-page-hero-mask']}></div>
-        <div className={styles['category-page-hero-content']}>
+                className={styles['category-page-hero-section']}
+                style={{ backgroundImage: `url(${heroSection.backgroundImage})` }}
+            >
+                <div className={styles['category-page-hero-mask']}></div>
+                <div className={styles['category-page-hero-content']}>
                     <h1>{heroSection.title}</h1>
                     <p>{heroSection.description}</p>
                     <Link href={heroSection.buttonLink || '/contato'}>
@@ -114,23 +114,23 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
             {/* Main Category Description */}
             {categoryData.categoryDescription && (
-                <section className={styles.CategoryDescriptionSection}>
-                    <div className={styles.CategoryDescriptionWrapper}>
+                <section className={styles['category-description-section']}>
+                    <div className={styles['category-description-wrapper']}>
                         <h2>{categoryData.categoryDescription}</h2>
                     </div>
                 </section>
             )}
 
             {/* Products Grid */}
-            <section className={styles.CategoryProductsSection}>
-                <div className={styles.CategoryProductsWrapper}>
-                    <div className={styles.CategoryProductsGrid}>
+            <section className={styles['category-products-section']}>
+                <div className={styles['category-products-wrapper']}>
+                    <div className={styles['category-products-grid']}>
                         {categoryData.products.map((product) => (
-                            <article key={product.id} className={styles.CategoryProductsGridCard}>
+                            <article key={product.id} className={styles['category-products-grid-card']}>
                                 <Link href={`/categorias/${categoryData.slug}/${product.slug}`}>
-                                    <div className={styles.CategoryProductsGridContent}>
+                                    <div className={styles['category-products-grid-content']}>
                                         {product.image && (
-                                            <div className={styles.CategoryProductsGridImg}>
+                                            <div className={styles['category-products-grid-img']}>
                                                 <Image
                                                     src={product.image}
                                                     alt={product.name}

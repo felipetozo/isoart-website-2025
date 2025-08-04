@@ -1,12 +1,12 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
-import FormField from '../views/UI/Form/FormField';
-import FormSelection from '../views/UI/Form/FormSelection';
-import Button from '../views/UI/Button';
+import FormField from '../views/ui/form/form-field';
+import FormSelection from '../views/ui/form/form-selection';
+import Button from '../views/ui/button';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn } from 'react-icons/md';
 import { BsWhatsapp } from 'react-icons/bs';
-import Toast from '@/app/components/Toast/Toast';
+import Toast from '@/app/views/ui/toast/toast';
 
 interface FormData {
     name: string;
@@ -293,20 +293,20 @@ const ContatoPage: React.FC = () => {
 
     return (
         <div>
-            <section className={styles.contatoHeroSection}>
-                <div className={styles.contatoHeroWrapper}>
+            <section className={styles['contato-hero-section']}>
+                <div className={styles['contato-hero-wrapper']}>
                     <h1>Entre em Contato</h1>
                     <p>Estamos aqui para ajudar você a encontrar as melhores soluções em EPS e PIR.</p>
                 </div>
             </section>
 
-            <section className={styles.contatoFormSection}>
-                <div className={styles.contatoFormWrapper}>
+            <section className={styles['contato-form-section']}>
+                <div className={styles['contato-form-wrapper']}>
                     <h4>Preencha o formulário abaixo</h4>
                     
-                    <form onSubmit={handleSubmit} className={styles.contatoForm}>
-                        <div className={styles.contatoFormFields}>
-                            <div className={styles.contatoFormFieldsRow}>
+                    <form onSubmit={handleSubmit} className={styles['contato-form']}>
+                        <div className={styles['contato-form-fields']}>
+                            <div className={styles['contato-form-fields-row']}>
                                 <div>
                                     <FormField
                                         id="name"
@@ -344,8 +344,8 @@ const ContatoPage: React.FC = () => {
                             </div>
                             
                             <div>
-                                <label className={styles.themeLabel}>Tema de interesse</label>
-                                <div className={styles.themeButtonsContainer}>
+                                <label className={styles['theme-label']}>Tema de interesse</label>
+                                <div className={styles['theme-buttons-container']}>
                                     {themes.map((theme) => (
                                         <Button
                                             key={theme.value}
@@ -358,10 +358,10 @@ const ContatoPage: React.FC = () => {
                                         </Button>
                                     ))}
                                 </div>
-                                {errors.theme && <span className={styles.themeError}>{errors.theme}</span>}
+                                {errors.theme && <span className={styles['theme-error']}>{errors.theme}</span>}
                             </div>
                             
-                            <div className={styles.contatoFormFieldsRow}>
+                            <div className={styles['contato-form-fields-row']}>
                                 <div>
                                     <FormSelection
                                         id="state"
@@ -388,27 +388,27 @@ const ContatoPage: React.FC = () => {
                                 </div>
                             </div>
 
-                            <div className={styles.termsContainer}>
+                            <div className={styles['terms-container']}>
                                 <input
                                     type="checkbox"
                                     id="terms"
                                     name="terms"
                                     checked={formData.terms}
                                     onChange={handleChange}
-                                    className={styles.termsCheckbox}
+                                    className={styles['terms-checkbox']}
                                 />
-                                <label htmlFor="terms" className={styles.termsText}>
-                                    Eu aceito a <a href="/privacidade" className={styles.termsLink}>política de privacidade</a>
+                                <label htmlFor="terms" className={styles['terms-text']}>
+                                    Eu aceito a <a href="/privacidade" className={styles['terms-link']}>política de privacidade</a>
                                 </label>
                             </div>
-                            {errors.terms && <span className={styles.themeError}>{errors.terms}</span>}
+                            {errors.terms && <span className={styles['theme-error']}>{errors.terms}</span>}
 
                             <Button
                                 type="submit"
                                 variant="primary"
                                 size="large"
                                 disabled={isSubmitting}
-                                className={styles.submitButton}
+                                className={styles['submit-button']}
                                 fullWidth
                             >
                                 {isSubmitting ? 'Enviando...' : 'Enviar'}
@@ -416,26 +416,26 @@ const ContatoPage: React.FC = () => {
                         </div>
                     </form>
 
-                    <div className={styles.contactInfo}>
-                        <div className={styles.contactItem}>
+                    <div className={styles['contact-info']}>
+                        <div className={styles['contact-item']}>
                             <a href="tel:+554532311699" target="_blank" rel="noopener noreferrer">
                                 <MdOutlinePhoneInTalk />
                                 <span>(45) 3231-1699</span>
                             </a>
                         </div>
-                        <div className={styles.contactItem}>
+                        <div className={styles['contact-item']}>
                             <a href="https://wa.me/554532311699" target="_blank" rel="noopener noreferrer">
                                 <BsWhatsapp />
                                 <span>(45) 3231-1699</span>
                             </a>
                         </div>
-                        <div className={styles.contactItem}>
+                        <div className={styles['contact-item']}>
                             <a href="mailto:contato@isoart.com.br" target="_blank" rel="noopener noreferrer">
                                 <MdOutlineMarkEmailUnread />
                                 <span>contato@isoart.com.br</span>
                             </a>
                         </div>
-                        <div className={styles.contactItem}>
+                        <div className={styles['contact-item']}>
                             <a href="https://maps.google.com/?q=Isoart+Indústria+de+EPS" target="_blank" rel="noopener noreferrer">
                                 <MdLocationOn />
                                 <span>Rua das Indústrias, 123 - Foz do Iguaçu, PR</span>

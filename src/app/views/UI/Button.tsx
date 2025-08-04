@@ -1,4 +1,4 @@
-import styles from './Button.module.css';
+import styles from './button.module.css';
 
 type ButtonVariant = 'primary' | 'secondary' | 'white' | 'light-blue' | 'gold-border';
 type ButtonSize = 'small' | 'medium' | 'large';
@@ -12,7 +12,7 @@ interface ButtonProps {
     fullWidth?: boolean;
     className?: string;
     type?: 'button' | 'submit' | 'reset';
-    style?: React.CSSProperties; // Added style prop
+    style?: React.CSSProperties;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -24,24 +24,25 @@ const Button: React.FC<ButtonProps> = ({
     fullWidth = false,
     className = '',
     type = 'button',
-    style, // Destructured style prop
+    style,
 }) => {
     const buttonClasses = [
-        styles.button,
+        styles['button'],
         styles[variant],
         styles[size],
         fullWidth ? styles['full-width'] : '',
+        disabled ? styles['disabled'] : '',
         className
     ].filter(Boolean).join(' ');
 
     return (
-        <div className="btnWrapper">
+        <div className={styles['btn-wrapper']}>
             <button
                 type={type}
                 className={buttonClasses}
                 onClick={onClick}
                 disabled={disabled}
-                style={style} // Applied style prop
+                style={style}
             >
                 {children}
             </button>

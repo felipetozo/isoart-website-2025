@@ -1,7 +1,7 @@
 "use client";
 import styles from "./page.module.css";
-import Button from "@/app/views/UI/Button";
-import Sustentabilidade from "@/app/components/Sustentabilidade/Sustentabilidade";
+import Button from "@/app/views/ui/button";
+import Sustentabilidade from "@/app/components/sustentabilidade/sustentabilidade";
 import { CheckCircle } from "lucide-react";
 import { FlameOff } from "tabler-icons-react";
 import Image from "next/image";
@@ -16,22 +16,22 @@ export default function SobreEpsPirPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className={styles.heroSection}>
-        <div className={styles.heroMask}>
-          <div className={styles.heroWrapper}>
-            <h2 className={styles.heroTitle}>Sobre o EPS e o PIR</h2>
+      <section className={styles['hero-section']}>
+        <div className={styles['hero-mask']}>
+          <div className={styles['hero-wrapper']}>
+            <h2 className={styles['hero-title']}>Sobre o EPS e o PIR</h2>
           </div>
         </div>
       </section>
 
       {/* Hero Headline + Botões */}
-      <section className={styles.heroHeadlineSection}>
-        <div className={styles.heroHeadlineWrapper}>
-          <div className={styles.heroHeadlineContainer}>
-            <h1 className={styles.heroHeadline}>
+      <section className={styles['hero-headline-section']}>
+        <div className={styles['hero-headline-wrapper']}>
+          <div className={styles['hero-headline-container']}>
+            <h1 className={styles['hero-headline']}>
               <span className="blueText">Poliestireno Expandido (EPS) e Espuma Rígida de Poliisocianurato (PIR):</span> eficiência térmica, sustentabilidade e tecnologia para construções modernas.
             </h1>
-            <div className={styles.heroButtons}>
+            <div className={styles['hero-buttons']}>
               <a href="#eps">
                 <Button variant="primary" size="medium">Conheça o EPS</Button>
               </a>
@@ -44,19 +44,19 @@ export default function SobreEpsPirPage() {
       </section>
 
       {/* Seção EPS */}
-      <section id="eps" className={styles.epsSection}>
-        <div className={styles.epsWrapper}>
-          <div className={styles.epsContainer}>
-            <h2 className={styles.epsTitle}>EPS: Eficiência e Sustentabilidade</h2>
-            <p className={styles.epsDescription}>
+      <section id="eps" className={styles['eps-section']}>
+        <div className={styles['eps-wrapper']}>
+          <div className={styles['eps-container']}>
+            <h2 className={styles['eps-title']}>EPS: Eficiência e Sustentabilidade</h2>
+            <p className={styles['eps-description']}>
               O Poliestireno Expandido (EPS), conhecido popularmente como Isopor, é um material leve e versátil, amplamente utilizado por suas propriedades de isolamento térmico e acústico. Além disso, é 100% reciclável e não emite substâncias prejudiciais ao meio ambiente, sendo uma escolha sustentável para diversas aplicações.
             </p>
-            <div className={styles.epsImageContainer}>
-              <img src="/img/geral/eps-perolas.avif" alt="Pérola de EPS - Isoart" className={styles.epsImage} />
+            <div className={styles['eps-image-container']}>
+              <img src="/img/geral/eps-perolas.avif" alt="Pérola de EPS - Isoart" className={styles['eps-image']} />
             </div>
-            <h2 className={styles.epsSubtitle}>Principais benefícios do EPS:</h2>
-            <div className={styles.benefitsContainer}>
-              <div className={styles.benefitsGrid}>
+            <h2 className={styles['eps-subtitle']}>Principais benefícios do EPS:</h2>
+            <div className={styles['benefits-container']}>
+              <div className={styles['benefits-grid']}>
                 {[
                   "Isolamento térmico eficiente",
                   "Excelente isolamento acústico",
@@ -65,21 +65,21 @@ export default function SobreEpsPirPage() {
                   "Reciclável e reaproveitável",
                   "Material leve e resistente a impactos",
                 ].map((benefit) => (
-                  <div className={styles.benefitItem} key={benefit}>
-                    <span className={styles.benefitIcon}><CheckCircle size={28} strokeWidth={2.5} /></span>
+                  <div className={styles['benefit-item']} key={benefit}>
+                    <span className={styles['benefit-icon']}><CheckCircle size={28} strokeWidth={2.5} /></span>
                     <span>{benefit}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <h3 className={styles.epsSubtitle}>Aplicações</h3>
-            <p className={styles.epsDescription}>
+            <h3 className={styles['eps-subtitle']}>Aplicações</h3>
+            <p className={styles['eps-description']}>
               Utilizado em isolamento térmico e acústico, embalagens, construção civil, decoração e outras aplicações. Ideal para edificações comerciais, industriais e residenciais, garantindo eficiência energética, conforto e proteção.
             </p>
-            <div className={styles.applicationsContainer}>
-              <div className={styles.applicationsGrid}>
-                <img src="/img/EPS/EPS-Aplicacao-01.avif" alt="Aplicação 1" className={styles.applicationImage} />
-                <img src="/img/EPS/EPS-Aplicacao-02.avif" alt="Aplicação 2" className={styles.applicationImage} />
+            <div className={styles['applications-container']}>
+              <div className={styles['applications-grid']}>
+                <img src="/img/EPS/EPS-Aplicacao-01.avif" alt="Aplicação 1" className={styles['application-image']} />
+                <img src="/img/EPS/EPS-Aplicacao-02.avif" alt="Aplicação 2" className={styles['application-image']} />
               </div>
             </div>
           </div>
@@ -90,21 +90,21 @@ export default function SobreEpsPirPage() {
       <Sustentabilidade />
       
       {/* Sobre o PIR */}
-      <section id="pir" className={styles.pirSection}>
-        <div className={styles.pirWrapper}>
-          <div className={styles.pirContainer}>
-            <h2 className={styles.pirTitle}>PIR: Alta Tecnologia e Segurança</h2>
-            <p className={styles.pirDescription}>
+      <section id="pir" className={styles['pir-section']}>
+        <div className={styles['pir-wrapper']}>
+          <div className={styles['pir-container']}>
+            <h2 className={styles['pir-title']}>PIR: Alta Tecnologia e Segurança</h2>
+            <p className={styles['pir-description']}>
               O Poliisocianurato (PIR) é um material isolante de alto desempenho, utilizado principalmente na fabricação de telhas
               e painéis térmicos. Produzido em linha contínua automatizada, o PIR garante um isolamento térmico superior e alta resistência
               ao fogo, sendo essencial para projetos industriais, comerciais e residenciais.
             </p>
-            <div className={styles.pirImageContainer}>
-              <img src="/img/geral/pir-block.avif" alt="PIR exemplo" className={styles.pirImage} />
+            <div className={styles['pir-image-container']}>
+              <img src="/img/geral/pir-block.avif" alt="PIR exemplo" className={styles['pir-image']} />
             </div>
-            <h2 className={styles.pirSubtitle}>Principais benefícios do PIR:</h2>
-            <div className={styles.benefitsContainer}>
-              <div className={styles.benefitsGrid}>
+            <h2 className={styles['pir-subtitle']}>Principais benefícios do PIR:</h2>
+            <div className={styles['benefits-container']}>
+              <div className={styles['benefits-grid']}>
                 {[
                   "Isolamento térmico de alto desempenho",
                   "Resistência ao fogo, com retardante autoextinguível",
@@ -113,8 +113,8 @@ export default function SobreEpsPirPage() {
                   "Ótimo isolamento acústico ( -30dB )",
                   "Sustentável, em conformidade com o Protocolo de Montreal",
                 ].map((benefit) => (
-                  <div className={styles.benefitItem} key={benefit}>
-                    <span className={styles.benefitIcon}><CheckCircle size={28} strokeWidth={2.5} /></span>
+                  <div className={styles['benefit-item']} key={benefit}>
+                    <span className={styles['benefit-icon']}><CheckCircle size={28} strokeWidth={2.5} /></span>
                     <span>{benefit}</span>
                   </div>
                 ))}
@@ -125,18 +125,18 @@ export default function SobreEpsPirPage() {
       </section>
 
       {/* Aplicações do PIR */}
-      <section className={styles.pirApplicationsSection}>
-        <div className={styles.pirApplicationsWrapper}>
-          <div className={styles.pirApplicationsContainer}>
-            <h2 className={styles.pirApplicationsTitle}>Aplicações do PIR:</h2>
-            <p className={styles.pirApplicationsDescription}>
+      <section className={styles['pir-applications-section']}>
+        <div className={styles['pir-applications-wrapper']}>
+          <div className={styles['pir-applications-container']}>
+            <h2 className={styles['pir-applications-title']}>Aplicações do PIR:</h2>
+            <p className={styles['pir-applications-description']}>
               Para cobertura e/ou fechamento de prédios e galpões industriais e comerciais, como supermercados, shopping centers,
               centros de distribuição e armazenagem, hospitais, agronegócios, ginásios e indústrias em geral, inclusive para residências.
             </p>
-            <div className={styles.applicationsContainer}>
-              <div className={styles.applicationsGrid}>
-              <img src="/img/PIR/PIR-Aplicacao-01.png" alt="Aplicação 1" className={styles.applicationImage} />
-              <img src="/img/PIR/PIR-Aplicacao-02.png" alt="Aplicação 2" className={styles.applicationImage} />
+            <div className={styles['applications-container']}>
+              <div className={styles['applications-grid']}>
+              <img src="/img/PIR/PIR-Aplicacao-01.avif" alt="Aplicação 1" className={styles['application-image']} />
+              <img src="/img/PIR/PIR-Aplicacao-02.avif" alt="Aplicação 2" className={styles['application-image']} />
               </div>
             </div>
           </div>
@@ -144,29 +144,29 @@ export default function SobreEpsPirPage() {
       </section>
 
       {/* Tipos de revestimentos e Cores */}
-      <section className={styles.revestimentosSection}>
-        <div className={styles.revestimentosWrapper}>
-          <div className={styles.revestimentosContainer}>
-            <h2 className={styles.revestimentosTitle}>Tipos de revestimentos e Cores</h2>
-            <p className={styles.revestimentosDescription}>
+      <section className={styles['revestimentos-section']}>
+        <div className={styles['revestimentos-wrapper']}>
+          <div className={styles['revestimentos-container']}>
+            <h2 className={styles['revestimentos-title']}>Tipos de revestimentos e Cores</h2>
+            <p className={styles['revestimentos-description']}>
               As telhas e painéis Isoart PIR são disponibilizados em diferentes tipos de revestimentos e cores, garantindo flexibilidade na escolha para atender às necessidades específicas de cada projeto.
             </p>
-            <div className={styles.revestimentosGrid}>
-              <div className={styles.revestimentoItem}>
-                <img src="/img/PIR/PIR-Revestimentos-01.png" alt="Aço microfrisado" className={styles.revestimentoImage} />
-                <p className={styles.revestimentoTitle}>Aço microfrisado</p>
+            <div className={styles['revestimentos-grid']}>
+              <div className={styles['revestimento-item']}>
+                <img src="/img/PIR/PIR-Revestimentos-01.avif" alt="Aço microfrisado" className={styles['revestimento-image']} />
+                <p className={styles['revestimento-title']}>Aço microfrisado</p>
               </div>
-              <div className={styles.revestimentoItem}>
-                <img src="/img/PIR/PIR-Revestimentos-02.png" alt="Aço frisado" className={styles.revestimentoImage} />
-                <p className={styles.revestimentoTitle}>Aço frisado</p>
+              <div className={styles['revestimento-item']}>
+                <img src="/img/PIR/PIR-Revestimentos-02.avif" alt="Aço frisado" className={styles['revestimento-image']} />
+                <p className={styles['revestimento-title']}>Aço frisado</p>
               </div>
-              <div className={styles.revestimentoItem}>
-                <img src="/img/PIR/PIR-Revestimentos-03.png" alt="Revestimento 3" className={styles.revestimentoImage} />
-                <p className={styles.revestimentoTitle}>Filme alumínio de face branca ou PVC</p>
+              <div className={styles['revestimento-item']}>
+                <img src="/img/PIR/PIR-Revestimentos-03.avif" alt="Revestimento 3" className={styles['revestimento-image']} />
+                <p className={styles['revestimento-title']}>Filme alumínio de face branca ou PVC</p>
               </div>
             </div>
-            <div className={styles.revestimentosCores}>
-              <div className={styles.coresGrid}>
+            <div className={styles['revestimentos-cores']}>
+              <div className={styles['cores-grid']}>
                 {[
                   { id: 'ral9003', code: 'RAL 9003', name: 'Branco Sinal', type: 'color' },
                   { id: 'ral7035', code: 'RAL 7035', name: 'Cinza Claro', type: 'color' },
@@ -202,10 +202,10 @@ export default function SobreEpsPirPage() {
                     image: '/img/PIR/PIR-Textura-03.avif'
                   },
                 ].map((item) => (
-                  <div className={styles.corItem} key={item.id}>
+                  <div className={styles['cor-item']} key={item.id}>
                     {item.type === 'color' ? (
                       <span 
-                        className={styles.corThumb} 
+                        className={styles['cor-thumb']} 
                         style={{ 
                           backgroundColor: item.code === 'RAL 9003' ? 'rgb(var(--ral-9003))' :
                           item.code === 'RAL 7035' ? 'rgb(var(--ral-7035))' :
@@ -222,24 +222,24 @@ export default function SobreEpsPirPage() {
                         }}
                       ></span>
                                          ) : (
-                       <div className={styles.texturaThumb}>
+                       <div className={styles['textura-thumb']}>
                          <Image
                            src={item.image || ''}
                            alt={item.name}
                            width={80}
                            height={80}
-                           className={styles.texturaImage}
+                           className={styles['textura-image']}
                          />
                        </div>
                      )}
-                    <p className={styles.corCode}>{item.code}</p>
-                    <p className={styles.corName}>{item.name}</p>
+                    <p className={styles['cor-code']}>{item.code}</p>
+                    <p className={styles['cor-name']}>{item.name}</p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-          <div className={styles.revestimentosAviso}>
+          <div className={styles['revestimentos-aviso']}>
             <span className="aviso-azul">
               Padrão Branco RAL 9003. As outras cores são sugestões, disponibilidade sob consulta.
             </span>
@@ -248,18 +248,18 @@ export default function SobreEpsPirPage() {
       </section>
 
       {/* Proteção contra incêndio */}
-      <section className={styles.IncendioSection}>
-        <div className={styles.IncendioWrapper}>
-          <div className={styles.IncendioHeader}>
-            <span className={styles.IncendioTitle}>
-              <span className={styles.IncendioTitleIcon}>
+      <section className={styles['incendio-section']}>
+        <div className={styles['incendio-wrapper']}>
+          <div className={styles['incendio-header']}>
+            <span className={styles['incendio-title']}>
+              <span className={styles['incendio-title-icon']}>
                 <FlameOff />
               </span>
               <h3>
                 PIR: O escudo protetor contra a propagação de incêndios
               </h3>
             </span>
-            <span className={styles.IncendioHeaderDescription}>
+            <span className={styles['incendio-header-description']}>
                 A performance do Poliisocianurato (PIR) em situações de incêndio é um de seus maiores
                 diferenciais, oferecendo uma camada de proteção passiva essencial para qualquer edificação.
                 Diferente de outros materiais, o PIR não contribui para a propagação de chamas.
@@ -269,10 +269,10 @@ export default function SobreEpsPirPage() {
                 um escudo protetor, realizando três funções cruciais:
             </span>
           </div>
-          <div className={styles.IncendioBlocos}>
+          <div className={styles['incendio-blocos']}>
             {incendioBlocos.map((b, i) =>
-              <div className={styles.IncendioBloco} key={i}>
-                <span className={styles.IncendioBlocoNumber}>
+              <div className={styles['incendio-bloco']} key={i}>
+                <span className={styles['incendio-bloco-number']}>
                   <h4>
                     {b.number}
                   </h4>
@@ -283,7 +283,7 @@ export default function SobreEpsPirPage() {
               </div>
             )}
           </div>
-          <div className={styles.IncendioImages}>
+          <div className={styles['incendio-images']}>
             <span>
               <Image
                 src="/img/incendio/pir-incendio-01.avif"
@@ -312,7 +312,7 @@ export default function SobreEpsPirPage() {
               />
             </span>
           </div>
-          <span className={styles.IncendioTeste}>
+          <span className={styles['incendio-teste']}>
             O teste demonstrado nas imagens comprova essa eficiência. Mesmo sob a ação direta de um queimador de 30kW por 30 minutos, o fogo ficou restrito
             à área de contato. Ao final, o resultado foi apenas uma carbonização superficial, com o restante do painel intacto e sem qualquer propagação de fogo,
             demonstrando por que o PIR é a escolha mais segura e inteligente para o seu projeto.
@@ -321,8 +321,8 @@ export default function SobreEpsPirPage() {
       </section>
 
       {/* Linha de produção */}
-      <section className={styles.linhaProducaoSection}>
-        <div className={styles.linhaProducaoWrapper}>
+      <section className={styles['linha-producao-section']}>
+        <div className={styles['linha-producao-wrapper']}>
           <h3>
             Produção automatizada para máximo eficiência
           </h3>
@@ -332,7 +332,7 @@ export default function SobreEpsPirPage() {
             e corte automatizado, assegurando excelente adesão, acabamento e padronização. Todos os produtos são resfriados, empilhados e embalados automaticamente,
             prontos para expedição.
           </span>
-          <div className={styles.linhaProducaoImages}>
+          <div className={styles['linha-producao-images']}>
             <span>
               <Image
                 src="/img/fabrica/fabrica-01.avif"

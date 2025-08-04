@@ -1,4 +1,4 @@
-import styles from './Footer.module.css';
+import styles from './footer.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from "react-icons/md";
@@ -8,18 +8,18 @@ import { BsWhatsapp } from "react-icons/bs";
 function Footer() {
     return (
         <>
-            <section className={styles.FooterSection}>
-                <div className={styles.FooterWrapper}>
-                    <div className={styles.FooterColumn}>
-                        <div className={styles.MainFormContactItem}>
+            <section className={styles['footer-section']}>
+                <div className={styles['footer-wrapper']}>
+                    <div className={styles['footer-column']}>
+                        <div className={styles['main-form-contact-item']}>
                             <MdOutlinePhoneInTalk />
                             <p>+55 45 3231 1699</p>
                         </div>
-                        <div className={styles.MainFormContactItem}>
+                        <div className={styles['main-form-contact-item']}>
                             <BsWhatsapp />
                             <p>+55 45 99133 9642</p>
                         </div>
-                        <div className={styles.MainFormContactItem}>
+                        <div className={styles['main-form-contact-item']}>
                             <MdOutlineMarkEmailUnread />
                             <p>contato@isoart.com.br</p>
                         </div>
@@ -27,15 +27,15 @@ function Footer() {
                             Rua Dorivaldo Soncela, 1490<br />
                             Santa Tereza do Oeste - Paraná - Brasil
                         </p>
-                        <div className={styles.MainFormNavSocial}>
+                        <div className={styles['main-form-nav-social']}>
                             <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank"><BsInstagram /></Link>
                             <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank"><BsFacebook /></Link>
                             <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank"><BsYoutube /></Link>
                             <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank"><BsLinkedin /></Link>
                         </div>
                     </div>
-                    <div className={styles.FooterColumn}>
-                        <div className={styles.FooterNavWrapper}>
+                    <div className={styles['footer-column']}>
+                        <div className={styles['footer-nav-wrapper']}>
                             <div>
                                 <h5>Institucional</h5>
                                 <ul>
@@ -62,8 +62,8 @@ function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.FooterColumn}>
-                        <div className={styles.FooterLogos}>
+                    <div className={styles['footer-column']}>
+                        <div className={styles['footer-logos']}>
                             <Link href="/">
                                 <Image
                                     src={'/img/isoart-logotipo.svg'}
@@ -83,8 +83,8 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className={styles.FooterWrapper}>
-                    <div className={styles.FooterCNPJ}>
+                <div className={styles['footer-wrapper']}>
+                    <div className={styles['footer-cnpj']}>
                         <p>
                             Isoart Indústria de produtos térmicos e construtivos ltda. CNPJ: 09.094.564/0001-05
                         </p>

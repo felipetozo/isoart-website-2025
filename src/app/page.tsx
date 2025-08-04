@@ -1,10 +1,9 @@
 'use client';
 
-import Hero from '@/app/components/Hero/Hero';
-import SobreEmpresa from '@/app/components/SobreEmpresa/SobreEmpresa';
-import CarrosselClientes from '@/app/components/CarrosselClientes/CarrosselClientes';
-import SolucoesGrid from '@/app/components/SolucoesGrid/SolucoesGrid';
-import MainForm from '@/app/components/MainForm/MainForm';
+import Hero from '@/app/components/hero/hero';
+import SobreEmpresa from '@/app/components/sobre-empresa/sobre-empresa';
+import SolucoesGrid from '@/app/components/solucoes-grid/solucoes-grid';
+import MainForm from '@/app/components/main-form/main-form';
 
 function Home() {
   return (

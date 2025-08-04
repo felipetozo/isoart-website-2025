@@ -1,12 +1,12 @@
 /* Styles for Contact Page */
 
-.contatoHeroSection {
+.contato-hero-section {
     width: 100%;
-    background-color: rgba(var(--color-almostWhite), 1);
+    background-color: rgba(241, 244, 247, 1);
     padding: 10rem 0 0 0;
 }
 
-.contatoHeroWrapper {
+.contato-hero-wrapper {
     width: 90%;
     max-width: 1600px;
     margin: 0 auto;
@@ -15,21 +15,21 @@
     gap: 1rem;
 }
 
-.contatoHeroWrapper h1 {
-    color: rgba(var(--color-isoartBlue), 1);
+.contato-hero-wrapper h1 {
+    color: rgba(24, 74, 100, 1);
 }
 
-.contatoHeroWrapper p {
-    color: rgba(var(--color-almostBlack), 0.75);
+.contato-hero-wrapper p {
+    color: rgba(17, 17, 17, 0.75);
 }
 
-.contatoFormSection {
+.contato-form-section {
     width: 100%;
     padding: 5rem 0;
-    background-color: rgba(var(--color-almostWhite), 1);
+    background-color: rgba(241, 244, 247, 1);
 }
 
-.contatoFormWrapper {
+.contato-form-wrapper {
     width: 90%;
     max-width: 1600px;
     margin: 0 auto;
@@ -38,86 +38,86 @@
     gap: 1rem;
 }
 
-.contatoFormWrapper h4 {
-    color: rgba(var(--color-isoartGold), 1);
+.contato-form-wrapper h4 {
+    color: rgba(146, 151, 120, 1);
 }
 
 /* Form styles */
-.contatoForm {
+.contato-form {
     width: 100%;
     padding: 2rem 0;
     border-radius: 0.4rem;
     gap: 1rem;
     display: flex;
     flex-direction: column;
-    background-color: rgba(var(--color-almostWhite), 1);
+    background-color: rgba(241, 244, 247, 1);
 }
 
-.contatoFormFields {
+.contato-form-fields {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.themeButtonsContainer {
+.theme-buttons-container {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 0.5rem;
 }
 
-.themeButtonsContainer button {
+.theme-buttons-container button {
     margin: 0;
 }
 
-.themeLabel {
-    color: rgba(var(--color-almostBlack), 0.5);
+.theme-label {
+    color: rgba(17, 17, 17, 0.5);
     font-size: 1rem;
-    font-family: var(--font-RedHat);
+    font-family: var(--font-redhat);
     margin-bottom: 0.5rem;
 }
 
-.themeError {
+.theme-error {
     color: red;
     font-size: 0.8rem;
     margin-top: 0.4rem;
 }
 
 /* Checkbox styles */
-.termsContainer {
+.terms-container {
     display: flex;
     align-items: flex-start;
     gap: 0.5rem;
     margin: 1rem 0;
 }
 
-.termsCheckbox {
+.terms-checkbox {
     width: 1rem;
     height: 1rem;
     border-radius: 0.2rem;
-    border: 1px solid rgba(var(--color-isoartGold), 0.5);
-    background-color: rgba(var(--color-almostWhite), 1);
+    border: 1px solid rgba(146, 151, 120, 0.5);
+    background-color: rgba(241, 244, 247, 1);
     cursor: pointer;
 }
 
-.termsText {
-    color: rgba(var(--color-almostBlack), 0.75);
+.terms-text {
+    color: rgba(17, 17, 17, 0.75);
     font-size: 0.8rem;
     line-height: 1.4;
 }
 
-.termsLink {
-    color: rgba(var(--color-isoartGold), 1);
+.terms-link {
+    color: rgba(146, 151, 120, 1);
     text-decoration: underline;
 }
 
 /* Submit button animation */
-.submitButton {
+.submit-button {
     position: relative;
     overflow: hidden;
 }
 
-.submitButton::before {
+.submit-button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -128,47 +128,47 @@
     transition: left 0.5s ease;
 }
 
-.submitButton:active::before {
+.submit-button:active::before {
     left: 100%;
 }
 
 /* Contact info styles */
-.contactInfo {
+.contact-info {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     margin-top: 2rem;
 }
 
-.contactItem {
+.contact-item {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.contactItem a {
+.contact-item a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: rgba(var(--color-almostBlack), 0.75);
+    color: rgba(17, 17, 17, 0.75);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
-.contactItem a:hover {
-    color: rgba(var(--color-isoartGold), 1);
+.contact-item a:hover {
+    color: rgba(146, 151, 120, 1);
 }
 
-.contactItem svg {
-    color: rgba(var(--color-isoartGold), 0.75);
+.contact-item svg {
+    color: rgba(146, 151, 120, 0.75);
 }
 
-.contactItem a:hover svg {
-    color: rgba(var(--color-isoartGold), 1);
+.contact-item a:hover svg {
+    color: rgba(146, 151, 120, 1);
 }
 
 @media (min-width: 1200px) {
-    .contatoHeroSection {
+    .contato-hero-section {
         padding: 15rem 0 0 0;
     }
 }

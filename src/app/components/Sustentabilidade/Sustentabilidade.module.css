@@ -1,10 +1,10 @@
-.sustentabilidadeSection {
+.sustentabilidade-section {
   width: 100%;
   padding: 10rem 0;
-  background-color: rgba(var(--color-darkGreen), 1);
+  background-color: rgba(58, 78, 25, 1);
 }
 
-.sustentabilidadeWrapper {
+.sustentabilidade-wrapper {
   width: 60%;
   max-width: 1600px;
   margin: 0 auto;
@@ -13,26 +13,26 @@
   gap: 3rem;
 }
 
-.sustentabilidadeTitle {
-  color: rgba(var(--color-almostWhite), 1);
+.sustentabilidade-title {
+  color: rgba(241, 244, 247, 1);
 }
 
-.sustentabilidadeImage {
+.sustentabilidade-image {
   width: 100%;
   height: auto;
   margin: 0 auto;
   border-radius: 0.5rem;
 }
 
-.sustentabilidadeDescription {
-  color: rgba(var(--color-almostWhite), 0.9);
+.sustentabilidade-description {
+  color: rgba(241, 244, 247, 0.9);
   line-height: 1.6;
   margin: 0 auto;
 }
 
-.sustentabilidadeAviso {
-  border: 1px solid rgba(var(--color-lightGreen), 1);
-  background-color: rgba(var(--color-almostWhite), 0.05);
+.sustentabilidade-aviso {
+  border: 1px solid rgba(134, 188, 37, 1);
+  background-color: rgba(241, 244, 247, 0.05);
   border-radius: 0.4rem;
   padding: 2rem;
   display: flex;
@@ -41,15 +41,15 @@
   margin: 0 auto;
 }
 
-.sustentabilidadeAvisoIcon {
+.sustentabilidade-aviso-icon {
   width: 2rem;
   height: 2rem;
-  color: rgba(var(--color-lightGreen), 1);
+  color: rgba(134, 188, 37, 1);
   flex-shrink: 0;
   margin-top: 0.25rem;
 }
 
-.sustentabilidadeAvisoText {
-  color: rgba(var(--color-almostWhite), 0.9);
+.sustentabilidade-aviso-text {
+  color: rgba(241, 244, 247, 0.9);
   line-height: 1.6;
 } 

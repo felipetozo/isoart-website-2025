@@ -1,6 +1,6 @@
 "use client";
-import MainForm from '@/app/components/MainForm/MainForm';
-import Sustentabilidade from '@/app/components/Sustentabilidade/Sustentabilidade';
+import MainForm from '@/app/components/main-form/main-form';
+import Sustentabilidade from '@/app/components/sustentabilidade/sustentabilidade';
 import styles from './page.module.css';
 import { useState, useRef, useEffect } from 'react';
 import { Target, Eye, Heart } from 'lucide-react';
@@ -120,8 +120,8 @@ export default function SobrePage() {
       </section>
 
       {/* Vídeo institucional */}
-      <section className={styles.videoSection}>
-        <div className={styles.videoWrapper}>
+      <section className={styles['video-section']}>
+        <div className={styles['video-wrapper']}>
           <iframe
             width="100%"
             height="100%"
@@ -139,18 +139,18 @@ export default function SobrePage() {
       </section>
 
        {/* Linha do tempo */}
-       <section className={styles.timelineSection}>
-        <div className={styles.timelineWrapper}>
-        <h5 className={styles.timelineTitle}>
+       <section className={styles['timeline-section']}>
+        <div className={styles['timeline-wrapper']}>
+        <h5 className={styles['timeline-title']}>
           Uma história marcada por grandes sucessos:
         </h5>
-        <div className={styles.timelineList}>
+        <div className={styles['timeline-list']}>
           {TIMELINE.map((item, idx) => (
             <div
               key={item.year}
               className={
-                styles.timelineItem +
-                (activeIndex === idx ? ' ' + styles.timelineItemActive : '')
+                styles['timeline-item'] +
+                (activeIndex === idx ? ' ' + styles['timeline-item-active'] : '')
               }
               onMouseEnter={() => {
                 setActiveIndex(idx);
@@ -184,20 +184,20 @@ export default function SobrePage() {
               }}
             >
               <div style={{ flex: 1, minWidth: 120 }}>
-                <div className={styles.timelineDate}>{item.year}</div>
-                <div className={styles.timelineLabel}>{item.label}</div>
+                <div className={styles['timeline-date']}>{item.year}</div>
+                <div className={styles['timeline-label']}>{item.label}</div>
                 {/* Mobile: imagem entre label e descrição */}
                 {isMobile && (
                   <img
                     src={item.image}
                     alt={item.label}
-                    className={styles.timelineImage}
+                    className={styles['timeline-image']}
                     style={{ position: 'static', opacity: 1, pointerEvents: 'auto', width: '100%', height: 180, margin: '1.5rem 0 1rem 0', transform: 'none' }}
                   />
                 )}
               </div>
               <div style={{ flex: 5 }}>
-                <div className={styles.timelineDescription}>{item.description}</div>
+                <div className={styles['timeline-description']}>{item.description}</div>
               </div>
               {/* Desktop: imagem flutuante ao lado, segue o mouse */}
               {!isMobile && (
@@ -207,7 +207,7 @@ export default function SobrePage() {
                   }}
                   src={item.image}
                   alt={item.label}
-                  className={styles.timelineImage}
+                  className={styles['timeline-image']}
                 />
               )}
             </div>
@@ -217,57 +217,57 @@ export default function SobrePage() {
       </section>
 
       {/* Galeria de imagens */}
-      <section className={styles.gallerySection}>
-        <div className={styles.galleryGrid}>
-          <img src="/img/geral/endereco-01-01.avif" alt="Exemplo 1" className={styles.galleryImage} />
-          <img src="/img/geral/endereco-02-01.avif" alt="Exemplo 2" className={styles.galleryImage} />
-          <img src="/img/geral/endereco-03-01.avif" alt="Exemplo 3" className={styles.galleryImage} />
+      <section className={styles['gallery-section']}>
+        <div className={styles['gallery-grid']}>
+          <img src="/img/geral/endereco-01-01.avif" alt="Exemplo 1" className={styles['gallery-image']} />
+          <img src="/img/geral/endereco-02-01.avif" alt="Exemplo 2" className={styles['gallery-image']} />
+          <img src="/img/geral/endereco-03-01.avif" alt="Exemplo 3" className={styles['gallery-image']} />
         </div>
       </section>
 
-              <section className={styles.mapSection}>
-          <img src="/img/geral/isoart-mapa.avif" alt="Mapa da Isoart" className={styles.mapImage} />
-          <div className={styles.mapOverlay}>
-            <div className={styles.mapOverlayWrapper}>
-              <div className={styles.mapOverlayContent}>
-                <h2 className={styles.mapOverlayTitle}>
-                  Atendimento em todo Brasil, Paraguai e Uruguai.
-                </h2>
-                <p className={styles.mapOverlayText}>
-                  A Isoart possui 3 fábricas estrategicamente localizadas nas regiões oeste do Paraná e Santa Catarina, 
-                  garantindo cobertura completa em todo território brasileiro, paraguaio e uruguaio com excelência e qualidade.
-                </p>
-              </div>
+      <section className={styles['map-section']}>
+        <img src="/img/geral/isoart-mapa.avif" alt="Mapa da Isoart" className={styles['map-image']} />
+        <div className={styles['map-overlay']}>
+          <div className={styles['map-overlay-wrapper']}>
+            <div className={styles['map-overlay-content']}>
+              <h2 className={styles['map-overlay-title']}>
+                Atendimento em todo Brasil, Paraguai e Uruguai.
+              </h2>
+              <p className={styles['map-overlay-text']}>
+                A Isoart possui 3 fábricas estrategicamente localizadas nas regiões oeste do Paraná e Santa Catarina, 
+                garantindo cobertura completa em todo território brasileiro, paraguaio e uruguaio com excelência e qualidade.
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Missão, Visão e Valores */}
-      <section className={styles.mvvSection}>
-        <div className={styles.mvvWrapper}>
-          <div className={styles.mvvItem}>
-            <Target className={styles.mvvIcon} />
-            <h3 className={styles.mvvTitle}>Missão</h3>
-            <p className={styles.mvvDescription}>
+      <section className={styles['mvv-section']}>
+        <div className={styles['mvv-wrapper']}>
+          <div className={styles['mvv-item']}>
+            <Target className={styles['mvv-icon']} />
+            <h3 className={styles['mvv-title']}>Missão</h3>
+            <p className={styles['mvv-description']}>
             Satisfazer as necessidades dos clientes, superando suas expectativas,
             através da excelência na fabricação e distribuição dos produtos de EPS,
             gerando soluções inovadoras, com rentabilidade e respeito ao meio ambiente.
             </p>
           </div>
           
-          <div className={styles.mvvItem}>
-            <Eye className={styles.mvvIcon} />
-            <h3 className={styles.mvvTitle}>Visão</h3>
-            <p className={styles.mvvDescription}>
+          <div className={styles['mvv-item']}>
+            <Eye className={styles['mvv-icon']} />
+            <h3 className={styles['mvv-title']}>Visão</h3>
+            <p className={styles['mvv-description']}>
               Ser reconhecida como a empresa referência no setor em que atua, agregando valor
               social e econômico, dentro de princípios éticos e sustentáveis.
             </p>
           </div>
           
-          <div className={styles.mvvItem}>
-            <Heart className={styles.mvvIcon} />
-            <h3 className={styles.mvvTitle}>Valores</h3>
-            <p className={styles.mvvDescription}>
+          <div className={styles['mvv-item']}>
+            <Heart className={styles['mvv-icon']} />
+            <h3 className={styles['mvv-title']}>Valores</h3>
+            <p className={styles['mvv-description']}>
               Compromisso com a qualidade, excelência no atendimento, respeito ao meio ambiente,
               transparência nas ações, valorização da vida, inovação e ousadia.
             </p>
@@ -276,58 +276,58 @@ export default function SobrePage() {
       </section>
 
       {/* Política de Qualidade */}
-      <section className={styles.qualitySection}>
-        <div className={styles.qualityWrapper}>
-          <div className={styles.qualityLeftColumn}>
-            <h4 className={styles.qualityTitle}>Política de qualidade</h4>
-            <p className={styles.qualityDescription}>
+      <section className={styles['quality-section']}>
+        <div className={styles['quality-wrapper']}>
+          <div className={styles['quality-left-column']}>
+            <h4 className={styles['quality-title']}>Política de qualidade</h4>
+            <p className={styles['quality-description']}>
             O Grupo Isoart, através da Política de Qualidade estabelece as diretrizes pelas quais declara seu compromisso com a satisfação dos clientes, colaboradores e comunidade.
             </p>
-            <p className={styles.qualityDescription}>
+            <p className={styles['quality-description']}>
               Nesse sentido, buscamos a melhoria contínua do Sistema da Gestão da Qualidade, fundamentando nossas ações nas seguintes premissas:
             </p>
-            <img src="/img/geral/selo-iso.svg" alt="Selo de Qualidade ISO" className={styles.qualityImage} />
+            <img src="/img/geral/selo-iso.svg" alt="Selo de Qualidade ISO" className={styles['quality-image']} />
           </div>
           
-          <div className={styles.qualityRightColumn}>
-            <div className={styles.qualityItem}>
-              <h3 className={styles.qualityItemNumber}>01</h3>
-              <p className={styles.qualityItemText}>
+          <div className={styles['quality-right-column']}>
+            <div className={styles['quality-item']}>
+              <h3 className={styles['quality-item-number']}>01</h3>
+              <p className={styles['quality-item-text']}>
                 Garantir a satisfação dos clientes, oferecendo produtos e serviços com qualidade.
               </p>
             </div>
             
-            <div className={styles.qualityItem}>
-              <h3 className={styles.qualityItemNumber}>02</h3>
-              <p className={styles.qualityItemText}>
+            <div className={styles['quality-item']}>
+              <h3 className={styles['quality-item-number']}>02</h3>
+              <p className={styles['quality-item-text']}>
                 Compartilhar nossos valores, construindo parcerias duradouras que resultem em ganhos para ambas as partes.
               </p>
             </div>
             
-            <div className={styles.qualityItem}>
-              <h3 className={styles.qualityItemNumber}>03</h3>
-              <p className={styles.qualityItemText}>
+            <div className={styles['quality-item']}>
+              <h3 className={styles['quality-item-number']}>03</h3>
+              <p className={styles['quality-item-text']}>
                 Manter um bom ambiente de trabalho, valorizando a segurança e o respeito à vida.
               </p>
             </div>
             
-            <div className={styles.qualityItem}>
-              <h3 className={styles.qualityItemNumber}>04</h3>
-              <p className={styles.qualityItemText}>
+            <div className={styles['quality-item']}>
+              <h3 className={styles['quality-item-number']}>04</h3>
+              <p className={styles['quality-item-text']}>
                 Buscar a melhoria contínua e o controle dos processos via indicadores de desempenho, favorecendo a obtenção e manutenção de vantagens competitivas.
               </p>
             </div>
             
-            <div className={styles.qualityItem}>
-              <h3 className={styles.qualityItemNumber}>05</h3>
-              <p className={styles.qualityItemText}>
+            <div className={styles['quality-item']}>
+              <h3 className={styles['quality-item-number']}>05</h3>
+              <p className={styles['quality-item-text']}>
                 Promover ações sustentáveis almejando o mínimo impacto ambiental.
               </p>
             </div>
             
-            <div className={styles.qualityItem}>
-              <h3 className={styles.qualityItemNumber}>06</h3>
-              <p className={styles.qualityItemText}>
+            <div className={styles['quality-item']}>
+              <h3 className={styles['quality-item-number']}>06</h3>
+              <p className={styles['quality-item-text']}>
                 Treinar e capacitar todos os colaboradores visando o cumprimento da Política de Qualidade.
               </p>
             </div>
