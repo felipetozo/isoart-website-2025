@@ -106,6 +106,7 @@ npm run dev
 
 ## 📈 Próximos passos
 
+- Usar fotos de melhor qualidade
 - Adicionar SEO dinâmico (meta tags)
 - Otimizar imagens e carregamento
 - Implementar filtros e busca
