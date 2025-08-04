@@ -204,6 +204,15 @@ function Hero() {
                             aria-label={`Slide ${index + 1} of ${sliderData.length}`}
                             aria-hidden={index !== currentSlide}
                         >
+                            {/* Preload da primeira imagem para LCP */}
+                            {index === 0 && (
+                                <link 
+                                    rel="preload" 
+                                    as="image" 
+                                    href={slide.backgroundImage}
+                                    fetchPriority="high"
+                                />
+                            )}
                             <div className={styles['hero-wrapper']}>
                                 <div
                                     ref={(el) => {

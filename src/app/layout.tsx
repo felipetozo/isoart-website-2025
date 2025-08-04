@@ -36,6 +36,7 @@ export default function RootLayout({
         {/* Preload recursos críticos */}
         <link rel="preload" href="/img/isoart-logotipo.svg" as="image" type="image/svg+xml" />
         <link rel="preload" href="/img/geral/endereco-01-01.avif" as="image" />
+        <link rel="preload" href="/img/HeroBanners/banner001.webp" as="image" fetchPriority="high" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         
@@ -60,6 +61,13 @@ export default function RootLayout({
               height: 80vh;
               position: relative;
               overflow: hidden;
+            }
+            
+            /* Primeira imagem do slider - LCP */
+            .hero-section .slide:first-child {
+              background-image: url('/img/HeroBanners/banner001.webp') !important;
+              background-size: cover !important;
+              background-position: center !important;
             }
             
             /* Navigation crítica */
