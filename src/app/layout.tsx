@@ -68,6 +68,20 @@ export default function RootLayout({
               color: rgba(241, 244, 247, 0.75) !important;
             }
             
+            /* Componentes com fundo escuro */
+            .main-form-section,
+            .sobre-empresa-section {
+              background-color: rgba(15, 19, 30, 1) !important;
+            }
+            
+            .main-form-section h4,
+            .main-form-section h3,
+            .main-form-section p,
+            .sobre-empresa-section h3,
+            .sobre-empresa-section p {
+              color: rgba(241, 244, 247, 1) !important;
+            }
+            
             /* Hero crítico */
             .hero-section {
               width: 100vw;
