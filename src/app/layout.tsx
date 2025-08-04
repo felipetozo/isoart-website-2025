@@ -61,17 +61,17 @@ export default function RootLayout({
             .hero-title,
             .nav-chevron,
             .nav-button {
-              color: rgba(241, 244, 247, 1) !important;
+              color: #f1f4f7 !important;
             }
             
             .hero-container p {
-              color: rgba(241, 244, 247, 0.75) !important;
+              color: #b8c3cc !important;
             }
             
             /* Componentes com fundo escuro */
             .main-form-section,
             .sobre-empresa-section {
-              background-color: rgba(15, 19, 30, 1) !important;
+              background-color: #0f131e !important;
             }
             
             .main-form-section h4,
@@ -79,7 +79,7 @@ export default function RootLayout({
             .main-form-section p,
             .sobre-empresa-section h3,
             .sobre-empresa-section p {
-              color: rgba(241, 244, 247, 1) !important;
+              color: #f1f4f7 !important;
             }
             
             /* Hero crítico */
