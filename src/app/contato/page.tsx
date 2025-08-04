@@ -1,9 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
-import FormField from '../views/ui/form/form-field';
-import FormSelection from '../views/ui/form/form-selection';
-import Button from '../views/ui/button';
+import FormField from '@/app/views/ui/form/form-field';
+import FormSelection from '@/app/views/ui/form/form-selection';
+import Button from '@/app/views/ui/button';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn } from 'react-icons/md';
 import { BsWhatsapp } from 'react-icons/bs';
 import Toast from '@/app/views/ui/toast/toast';
