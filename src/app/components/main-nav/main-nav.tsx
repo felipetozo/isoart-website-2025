@@ -125,6 +125,31 @@ function MainNav() {
         }
     };
 
+    const closeMobileMenu = () => {
+        if (isMobileMenuOpen) {
+            setIsMobileMenuOpen(false);
+            const tl = gsap.timeline();
+            const topBar = iconRef.current?.querySelector(`.${styles['menu-bar-top']}`);
+            const bottomBar = iconRef.current?.querySelector(`.${styles['menu-bar-bottom']}`);
+            const mobileMenuItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-menu']} ul li, .${styles['mobile-contact']} p, .${styles['mobile-social']} a`);
+
+            if (topBar && bottomBar) {
+                tl.to([topBar, bottomBar], {
+                    rotate: 0,
+                    translateY: 0,
+                    duration: 0.3,
+                    ease: "power2.in",
+                    transformOrigin: "center",
+                });
+                if (mobileMenuItems) {
+                    tl.to(mobileMenuItems, { opacity: 0, duration: 0.1 });
+                }
+                tl.to(mobileMenuRef.current, { height: 0, duration: 0.1 });
+                tl.set(mobileMenuRef.current, { display: 'none' });
+            }
+        }
+    };
+
     return (
         <div className={styles['nav-container']}>
             {/* Navegador Institucional */}
@@ -210,10 +235,10 @@ function MainNav() {
                     </div>
                     <div className={styles['mobile-menu']} ref={mobileMenuRef}>
                         <ul>
-                            <li><Link href="/">Home</Link></li>
-                            <li><Link href="/solucoes">Soluções</Link></li>
-                            <li><Link href="/sobre">Sobre</Link></li>
-                            <li><Link href="/contato">Contato</Link></li>
+                            <li><Link href="/" onClick={closeMobileMenu}>Home</Link></li>
+                            <li><Link href="/solucoes" onClick={closeMobileMenu}>Soluções</Link></li>
+                            <li><Link href="/sobre" onClick={closeMobileMenu}>Sobre</Link></li>
+                            <li><Link href="/contato" onClick={closeMobileMenu}>Contato</Link></li>
                         </ul>
                         <div className={styles['mobile-contact']}>
                             <p>Rua Dorivaldo Soncela, 1490<br />
