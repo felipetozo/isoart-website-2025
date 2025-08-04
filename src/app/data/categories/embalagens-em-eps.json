@@ -1,0 +1,55 @@
+{
+    "id": 5,
+    "title": "Embalagens em EPS",
+    "slug": "embalagens-em-eps",
+    "metaDescription": "Embalagens em EPS para proteção de produtos durante transporte. Leves e resistentes, são personalizáveis para atender às necessidades de diversos setores.",
+    "hero": {
+        "title": "Embalagens em EPS",
+        "description": "Embalagens em EPS para proteção de produtos durante transporte. Leves e resistentes, são personalizáveis para atender às necessidades de diversos setores.",
+        "buttonText": "Entre em contato",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/geral/endereco-03-01.avif"
+    },
+    "categoryDescription": "Nossas embalagens em EPS oferecem proteção personalizada para produtos industriais e comerciais, com opções como cantoneiras, moldes e pérolas.",
+    "products": [
+        {
+            "id": 18,
+            "name": "Embalagens em EPS",
+            "slug": "embalagens-em-eps",
+            "description": "Soluções completas em embalagens de EPS para proteção e transporte.",
+            "image": "/img/produtos/embalagens/embalagens/embalagens-01.avif",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Proteção e Embalagem"
+            }
+        },
+        {
+            "id": 21,
+            "name": "Pérolas em EPS",
+            "slug": "perolas-em-eps",
+            "description": "Pérolas de EPS para preenchimento de embalagens.",
+            "image": "/img/produtos/embalagens/perolas/perolas-01.avif",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Preenchimento"
+            }
+        }
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Proteção Eficiente",
+            "description": "Amortece impactos e vibrações, preservando o produto durante transporte e armazenamento."
+        },
+        {
+            "id": 2,
+            "title": "Leveza e Economia",
+            "description": "Reduz o peso total da embalagem, facilitando o manuseio e otimizando custos logísticos."
+        },
+        {
+            "id": 3,
+            "title": "Alta Versatilidade",
+            "description": "Pode ser moldado em diversos formatos, adaptando-se a diferentes tipos de produtos."
+        }
+    ]
+}

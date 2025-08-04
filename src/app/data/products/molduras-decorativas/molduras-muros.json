@@ -1,0 +1,83 @@
+{
+    "id": 13,
+    "name": "Molduras para Muros",
+    "slug": "molduras-para-muros",
+    "description": "Molduras em EPS de alta densidade com revestimento flexível, projetadas para acabamento estético de muros e platibandas, com resistência a intempéries e instalação prática.",
+    "image": "/img/produtos/molduras/muros/muros-01.avif",
+    "specifications": {
+        "material": "EPS virgem com revestimento de resina polimérica",
+        "densidade": "20-30 kg/m³",
+        "dimensoes": "Personalizável sob consulta",
+        "aplicacao": "Muros e platibandas externas"
+    },
+    "hero": {
+        "title": "Molduras para Muros",
+        "description": "Soluções elegantes para acabamento de muros, combinando estética, leveza e durabilidade.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/produtos/molduras/muros/muros-01.avif"
+    },
+    "categoryDescription": {
+        "title": "As Molduras para Muros Isoart valorizam muros e platibandas com acabamento sofisticado e resistência ao clima.",
+        "description": "As Molduras para Muros Isoart são fabricadas em EPS de alta densidade com revestimento flexível à base de resina polimérica, perfeitas para acabamentos externos em muros e platibandas. Com personalização, leveza e resistência a intempéries, oferecem estética moderna, instalação rápida e baixo impacto estrutural, ideais para projetos residenciais e comerciais."
+    },
+    "projectImages": [
+        "/img/produtos/molduras/muros/muros-01.avif",
+        "/img/produtos/molduras/muros/muros-02.avif",
+        "/img/produtos/molduras/muros/muros-03.avif",
+        "/img/produtos/molduras/muros/muros-04.avif"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Estética diferenciada",
+            "description": "Acabamentos personalizáveis para muros elegantes."
+        },
+        {
+            "id": 2,
+            "title": "Instalação fácil",
+            "description": "Fixação com argamassa AC-3 reduz tempo e custos."
+        },
+        {
+            "id": 3,
+            "title": "Resistência climática",
+            "description": "Suporta chuvas e variações térmicas sem trincas."
+        }
+    ],
+    "generalCharacteristics": [
+        "EPS de alta densidade (20-30 kg/m³)",
+        "Revestimento flexível com resina polimérica e pós minerais",
+        "Resistência à compressão de 0,15-0,25 MPa",
+        "Absorção de água < 4% em 5 anos",
+        "Superfície lisa, livre de escurecimento cimentício",
+        "100% reciclável, sem emissão de CFC"
+    ],
+    "applications": {
+        "title": "Acabamento sofisticado para muros e platibandas em projetos externos",
+        "description": "As Molduras para Muros Isoart são ideais para acabamentos externos em muros e platibandas, oferecendo estética moderna e resistência a intempéries. Com instalação prática e personalização, são perfeitas para residências, condomínios e espaços comerciais.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Muros residenciais"
+            },
+            {
+                "icon": "🏡",
+                "text": "Condomínios"
+            },
+            {
+                "icon": "TbBuildingStore",
+                "text": "Fachadas comerciais"
+            },
+            {
+                "icon": "TbTools",
+                "text": "Reformas externas"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Estética e personalização": "Produzidas sob medida, as molduras para muros permitem acabamentos como texturas, grafiatos e pinturas, valorizando platibandas e fachadas.",
+        "Instalação eficiente": "A fixação com argamassa colante AC-3 e tarugos de madeira para peças maiores garante rapidez, praticidade e limpeza na obra.",
+        "Durabilidade externa": "O EPS de alta densidade e o revestimento flexível resistem a chuvas, sol e variações térmicas, ideal para muros externos sem manutenção.",
+        "Sustentabilidade": "100% recicláveis e livres de CFC, as molduras Isoart são ambientalmente responsáveis, com logística reversa pela empresa."
+    }
+}

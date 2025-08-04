@@ -1,0 +1,140 @@
+/* FormSelection.module.css */
+.form-input {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-family: var(--font-redhat);
+}
+
+.select-container {
+    position: relative;
+    width: 100%;
+}
+
+.select {
+    width: 100%;
+    padding: 1rem;
+    padding-right: 3rem;
+    background-color: rgba(16, 46, 65, 0.1);
+    border: 1px solid rgba(79, 184, 225, 0.1);
+    border-radius: 0.5rem;
+    color: rgba(241, 244, 247, 0.65);
+    font-size: 0.8rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background-image: none;
+}
+
+.select:hover {
+    border: 1px solid rgba(79, 184, 225, 0.25);
+    background-color: rgba(79, 184, 225, 0.05);
+}
+
+.select:focus {
+    outline: none;
+    border: 1px solid rgba(79, 184, 225, 0.5);
+    background-color: rgba(79, 184, 225, 0.1);
+}
+
+.chevron-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: rgba(241, 244, 247, 0.5);
+    transition: color 0.2s ease;
+}
+
+.select-container:hover .chevron-icon {
+    color: rgba(241, 244, 247, 0.7);
+}
+
+.select:focus + .chevron-icon {
+    color: rgba(79, 184, 225, 0.8);
+}
+
+.error {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+}
+
+/* Light theme */
+.light {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.label-light {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-family: var(--font-redhat);
+    color: rgba(17, 17, 17, 0.5);
+}
+
+.select-container-light {
+    position: relative;
+    width: 100%;
+}
+
+.select-light {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    padding-right: 3rem;
+    background-color: rgba(241, 244, 247, 1);
+    border: none;
+    border-bottom: 1px solid rgba(146, 151, 120, 0.50);
+    border-radius: 0;
+    color: rgba(17, 17, 17, 0.75);
+    font-size: 0.8rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background-image: none;
+    transition: all 0.2s ease;
+}
+
+.select-light:hover {
+    border-bottom: 1px solid rgba(146, 151, 120, 1);
+}
+
+.select-light:focus {
+    outline: none;
+    border-bottom: 1px solid rgba(146, 151, 120, 0.75);
+    background-color: rgba(146, 151, 120, 0.25);
+    border-radius: 0;
+}
+
+.chevron-icon-light {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: rgba(146, 151, 120, 0.75);
+    transition: color 0.2s ease;
+}
+
+.select-container-light:hover .chevron-icon-light {
+    color: rgba(146, 151, 120, 1);
+}
+
+.select-light:focus + .chevron-icon-light {
+    color: rgba(146, 151, 120, 1);
+}
+
+.error-light {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+}
