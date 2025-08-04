@@ -1,0 +1,122 @@
+.footer-section {
+    width: 100%;
+    padding: 5rem 0;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(17, 17, 17, 0.75);
+}
+
+.footer-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    max-width: 1600px;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-column h5 {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    color: rgba(25, 129, 176, 1);
+    color: rgba(var(--color-light-blue), 1);
+}
+
+.footer-column li {
+    line-height: 2;
+    width: max-content;
+    color: rgba(17, 17, 17, 0.4);
+    color: rgba(var(--color-almost-black), 0.4);
+}
+
+.footer-column li:hover {
+    color: rgba(25, 129, 176, 1);
+    color: rgba(var(--color-light-blue), 1);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.main-form-contact-item {
+    display: flex;
+    max-width: max-content;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-form-nav-social {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.main-form-contact-item,
+.main-form-nav-social {
+    color: rgba(17, 17, 17, 0.4);
+    color: rgba(var(--color-almost-black), 0.4);
+}
+
+.main-form-contact-item:hover,
+.main-form-nav-social svg:hover {
+    color: rgba(25, 129, 176, 1);
+    color: rgba(var(--color-light-blue), 1);
+    cursor: pointer;
+}
+
+.footer-nav-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.footer-cnpj {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin: 5rem 0;
+    padding: 1rem 0;
+}
+
+.footer-cnpj p {
+    margin: 0 auto;
+    font-size: 0.8rem;
+    color: rgba(17, 17, 17, 0.50);
+    color: rgba(var(--color-almost-black), 0.50);
+    border-top: 1px solid rgba(17, 17, 17, 0.25);
+    padding: 1rem 0;
+    width: 80%;
+}
+
+.footer-logos {
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.footer-logos img {
+    min-width: 4rem;
+    min-height: 4rem;
+    object-fit: contain;
+}
+
+@media (min-width:1200px) {
+
+    .footer-wrapper,
+    .footer-nav-wrapper {
+        flex-direction: row;
+        gap: 5rem;
+    }
+    .footer-logos {
+        margin-top: 0rem;
+    }
+}
