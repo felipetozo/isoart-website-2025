@@ -29,9 +29,7 @@
     margin: 0 auto;
     border-radius: 0.25rem;
     background-color: rgba(17, 17, 17, 0.50);
-    background-color: rgba(var(--color-almost-black), 0.50);
     border: 1px solid rgba(241, 244, 247, 0.05);
-    border: 1px solid rgba(var(--color-almost-white), 0.05);
     padding: 0.5rem 1rem;
     font-family: var(--font-redhat);
     backdrop-filter: blur(1rem);
@@ -48,13 +46,11 @@
 .institutional-nav-items ul li a {
     font-size: 0.75rem;
     color: rgba(241, 244, 247, 0.5);
-    color: rgba(var(--color-almost-white), 0.5);
     font-weight: 500;
 }
 
 .institutional-nav-items ul li a:hover {
     color: rgba(241, 244, 247, 1);
-    color: rgba(var(--color-almost-white), 1);
 }
 
 .institutional-nav-items ul {
@@ -73,12 +69,10 @@
 
 .institutional-nav-social svg {
     color: rgba(241, 244, 247, 0.5);
-    color: rgba(var(--color-almost-white), 0.5);
 }
 
 .institutional-nav-social svg:hover {
     color: rgba(241, 244, 247, 1);
-    color: rgba(var(--color-almost-white), 1);
 }
 
 /* ======================================================= */
@@ -102,9 +96,7 @@
     align-items: center;
     border-radius: 0.25rem;
     background-color: rgba(241, 244, 247, 0.75);
-    background-color: rgba(var(--color-almost-white), 0.75);
     border: 1px solid rgba(17, 17, 17, 0.1);
-    border: 1px solid rgba(var(--color-almost-black), 0.1);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
 }
@@ -139,20 +131,17 @@
 
 .main-nav-links a {
     color: rgba(17, 17, 17, 1);
-    color: rgba(var(--color-almost-black), 1);
     display: flex;
 }
 
 .main-nav-links a:hover {
     color: rgba(146, 151, 120, 1);
-    color: rgba(var(--color-isoart-gold), 1)
 }
 
 .nav-link-underline {
     height: 1px;
     width: 0%;
     background-color: rgba(17, 17, 17, 1);
-    background-color: rgba(var(--color-almost-black), 1);
 }
 
 .main-nav-links ul li:hover .nav-link-underline {
@@ -174,21 +163,18 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(24, 74, 100, 0.85);
-    background-color: rgba(var(--color-isoart-blue), 0.85);
     border-radius: 0.25rem;
     position: relative;
 }
 
 .main-nav-menu-icon:hover {
     background-color: (24, 74, 100, 1);
-    background-color: rgba(var(--color-isoart-blue), 1);
 }
 
 .menu-bar-top {
     width: 100%;
     height: 0.2rem;
     background-color: rgba(241, 244, 247, 0.65);
-    background-color: rgba(var(--color-almost-white), 0.65);
     position: relative;
     transform-origin: center;
 }
@@ -197,7 +183,6 @@
     width: 100%;
     height: 0.2rem;
     background-color: (241, 244, 247, 0.65);
-    background-color: rgba(var(--color-almost-white), 0.65);
     position: relative;
     transform-origin: center;
 }
@@ -217,16 +202,12 @@
     flex-direction: column;
     width: 100%;
     background-color: rgba(241, 244, 247, 0.50);
-    background-color: rgba(var(--color-almost-white), 0.50);
     border: 1px solid rgba(146, 151, 120, 0.25);
-    border: 1px solid rgba(var(--color-isoart-gold), 0.25);
 }
 
 .sub-menu-item:hover {
     background-color: rgba(241, 244, 247, 0.75);
-    background-color: rgba(var(--color-almost-white), 0.75);
     border: 1px solid rgba(146, 151, 120, 1);
-    border: 1px solid rgba(var(--color-isoart-gold), 1);
 }
 
 .sub-menu-item a {
@@ -237,7 +218,6 @@
     padding: 0.5rem;
     border-radius: 0.4rem;
     color: rgba(17, 17, 17, 0.50);
-    color: rgba(var(--color-almost-black), 0.50);
     line-height: 1.2;
 }
 
@@ -286,7 +266,6 @@
 
 .mobile-menu ul li a {
     color: rgba(24, 74, 100, 0.85);
-    color: rgba(var(--color-isoart-blue), 0.85);
     text-decoration: none;
     font-weight: 800;
     font-size: 2.4rem;
@@ -294,7 +273,6 @@
 
 .mobile-menu ul li a:hover {
     color: rgba(146, 151, 120, 1);
-    color: rgba(var(--color-isoart-gold), 1);
 }
 
 .mobile-contact {
@@ -306,7 +284,6 @@
 
 .mobile-contact p {
     color: rgba(17, 17, 17, 0.50);
-    color: rgba(var(--color-almost-black), 0.50);
     font-size: 0.9rem;
     width: 100%;
 }
@@ -327,18 +304,15 @@
 
 .mobile-social a {
     color: rgba(17, 17, 17, 0.75);
-    color: rgba(var(--color-almost-black), 0.75);
 }
 
 .mobile-social a:hover {
     color: rgba(146, 151, 120, 1);
-    color: rgba(var(--color-isoart-gold), 1);
 }
 
 .mobile-banner {
     padding: 1rem;
     background-color: rgba(241, 244, 247, 0.75);
-    background-color: rgba(var(--color-almost-white), 0.75);
     border-radius: 0.25rem;
     gap: 1rem;
     display: flex;
@@ -348,6 +322,5 @@
 
 .mobile-banner p {
     color: rgba(17, 17, 17, 1);
-    color: rgba(var(--color-almost-black), 1);
     font-size: 0.9rem;
 }

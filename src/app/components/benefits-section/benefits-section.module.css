@@ -1,9 +1,7 @@
 .benefits-section {
     width: 100%;
     background-color: rgba(241, 244, 247, 1);
-    background-color: rgba(var(--color-almost-white), 1);
     color: rgba(17, 17, 17, 1);
-    color: rgba(var(--color-almost-black), 1);
     padding: 5rem 0;
 }
 
@@ -27,7 +25,6 @@
     font-size: 1.4rem;
     font-weight: 600;
     color: rgba(24, 74, 100, 1);
-    color: rgba(var(--color-isoart-blue), 1)
 }
 
 .benefit-icon {
@@ -37,5 +34,4 @@
     max-width: max-content;
     margin-bottom: 1rem;
     color: rgba(146, 151, 120, 0.5);
-    color: rgba(var(--color-isoart-gold), 0.5)
 }

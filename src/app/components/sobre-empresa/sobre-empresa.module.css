@@ -1,6 +1,5 @@
 .sobre-empresa-section {
     background-color: rgba(15, 19, 30, 1);
-    background-color: rgba(var(--color-darkest-blue), 1);
     padding: 5rem 0;
     width: 100%;
 }

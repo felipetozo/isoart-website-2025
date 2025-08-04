@@ -1,6 +1,5 @@
 .main-form-section {
     background-color: rgba(16, 46, 65, 1);
-    background-color: rgba(var(--color-dark-blue), 1);
     width: 100%;
     padding: 5rem 0;
 }
@@ -42,23 +41,19 @@
 
 .main-form-contact-item a:hover {
     color: rgba(79, 184, 225, 1);
-    color: rgba(var(--color-lightest-blue), 1);
 }
 
 .main-form-contact-item a:hover svg {
     color: rgba(241, 244, 247, 1);
-    color: rgba(var(--color-almost-white), 1);
 }
 
 .main-form-contact-item svg {
     color: rgba(79, 184, 225, 1);
-    color: rgba(var(--color-lightest-blue), 1);
 }
 
 .main-form-header h4 {
     font-family: var(--font-redhat);
     color: rgba(79, 184, 225, 1);
-    color: rgba(var(--color-lightestBlue), 1);
     width: 100%;
 }
 
@@ -83,9 +78,7 @@
     display: flex;
     flex-direction: column;
     background-color: rgba(241, 244, 247, 0.02);
-    background-color: rgba(var(--color-almost-white), 0.02);
-    border: 1px solid rgba(79, 184, 225, 1);
-    border: 1px solid rgba(var(--color-lightest-blue), 0.1);
+    border: 1px solid rgba(79, 184, 225, 0.1);
 }
 
 .main-form-container img {
@@ -95,7 +88,6 @@
 
 .main-form-container h3 {
     color: rgba(79, 184, 225, 1);
-    color: rgba(var(--color-lightest-blue), 1);
     font-size: 1.2rem;
     padding: 0.5rem 0;
 }
@@ -108,9 +100,7 @@
     padding: 1rem;
     border-radius: 0.4rem;
     background-color: rgba(241, 244, 247, 0.02);
-    background-color: rgba(var(--color-almost-white), 0.02);
-    border: 1px solid rgba(79, 184, 225, 1);
-    border: 1px solid rgba(var(--color-lightest-blue), 0.1);
+    border: 1px solid rgba(79, 184, 225, 0.1);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
     height: fill;

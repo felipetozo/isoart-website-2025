@@ -1,7 +1,6 @@
 .carrossel-clientes-section {
     width: 100%;
     background-color: rgba(16, 46, 65, 1);
-    background-color: rgba(var(--color-dark-blue), 1);
     padding: 0 0 10rem 0;
 }
 
@@ -13,7 +12,6 @@
     gap: 2rem;
     text-align: center;
     color: rgba(241, 244, 247, 0.75);
-    color: rgba(var(--color-almost-white), 0.75);
 }
 
 .carrossel-clientes-wrapper ul {

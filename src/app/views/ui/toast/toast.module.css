@@ -6,8 +6,8 @@
     z-index: 9999;
     padding: 1rem;
     border-radius: 0.5rem;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
     border: 1px solid rgba(255, 255, 255, 0.1);
     min-width: 300px;
     max-width: 90vw;
