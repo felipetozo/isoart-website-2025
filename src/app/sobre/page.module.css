@@ -150,10 +150,10 @@
   opacity: 0;
   pointer-events: none;
   z-index: 10;
-  /* Removendo transições CSS para deixar GSAP controlar */
 }
 
 .gallery-section {
+  display: none;
   width: 100%;
   padding: 5rem 0 0 0;
   background-color: rgba(241, 244, 247, 1);
@@ -189,7 +189,7 @@
 }
 
 .map-overlay {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -356,6 +356,10 @@
     opacity: 1;
     pointer-events: auto;
   }
+
+  .gallery-section {
+    display: block;
+  }
   
   .gallery-grid {
     flex-direction: row;
@@ -365,6 +369,10 @@
     width: calc(33.333% - 0.667rem);
     height: auto;
     object-fit: cover;
+  }
+
+  .map-overlay {
+    position: absolute;
   }
   
   .map-overlay-content {

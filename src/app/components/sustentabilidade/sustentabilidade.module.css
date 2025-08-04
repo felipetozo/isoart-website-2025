@@ -5,7 +5,7 @@
 }
 
 .sustentabilidade-wrapper {
-  width: 60%;
+  width: 90%;
   max-width: 1600px;
   margin: 0 auto;
   display: flex;
@@ -52,4 +52,10 @@
 .sustentabilidade-aviso-text {
   color: rgba(241, 244, 247, 0.9);
   line-height: 1.6;
-} 
+}
+
+@media (min-width: 1200px) {
+  .sustentabilidade-wrapper {
+    width: 60%;
+  }
+}

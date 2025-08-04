@@ -415,33 +415,6 @@ const ContatoPage: React.FC = () => {
                             </Button>
                         </div>
                     </form>
-
-                    <div className={styles['contact-info']}>
-                        <div className={styles['contact-item']}>
-                            <a href="tel:+554532311699" target="_blank" rel="noopener noreferrer">
-                                <MdOutlinePhoneInTalk />
-                                <span>(45) 3231-1699</span>
-                            </a>
-                        </div>
-                        <div className={styles['contact-item']}>
-                            <a href="https://wa.me/554532311699" target="_blank" rel="noopener noreferrer">
-                                <BsWhatsapp />
-                                <span>(45) 3231-1699</span>
-                            </a>
-                        </div>
-                        <div className={styles['contact-item']}>
-                            <a href="mailto:contato@isoart.com.br" target="_blank" rel="noopener noreferrer">
-                                <MdOutlineMarkEmailUnread />
-                                <span>contato@isoart.com.br</span>
-                            </a>
-                        </div>
-                        <div className={styles['contact-item']}>
-                            <a href="https://maps.google.com/?q=Isoart+Indústria+de+EPS" target="_blank" rel="noopener noreferrer">
-                                <MdLocationOn />
-                                <span>Rua das Indústrias, 123 - Foz do Iguaçu, PR</span>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </section>
             

@@ -1,157 +1,164 @@
-<<<<<<< HEAD
-# ISOART-WEBSITE-2025
+# Isoart Website 2025
 
-Site institucional e catálogo de produtos Isoart, desenvolvido com Next.js, React, TypeScript e CSS Modules.
-Este projeto utiliza rotas dinâmicas, animações modernas e arquitetura escalável para facilitar manutenção e evolução.
+Site institucional da Isoart, empresa especializada em soluções em EPS e PIR para construção civil, embalagens e isolamento térmico.
 
----
+## 🏗️ Estrutura do Projeto
 
-## 🚀 Stack e Tecnologias
+### Tecnologias
+- **Next.js 15.3.1** - Framework React
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Framework CSS
+- **GSAP** - Animações
+- **Lenis** - Scroll suave
+- **React Icons** - Ícones
 
-- **Next.js 15+** (App Router)
-- **React 19** (componentes funcionais)
-- **TypeScript** (tipagem estrita)
-- **CSS Modules** + **Tokens customizados** (em `globals.css`)
-- **TailwindCSS** (utilitários e reset)
-- **GSAP** e **Lenis** (animações e scroll suave)
-- **MySQL** (integração planejada para formulários)
-
----
-
-## 🗂️ Estrutura do Projeto
-
+### Estrutura de Pastas
 ```
-isoart-website-2025/
-├── src/
-│   ├── app/
-│   │   ├── categorias/           # Rotas dinâmicas de categorias/produtos
-│   │   ├── components/           # Componentes reutilizáveis (UI/UX)
-│   │   ├── data/                 # Dados em JSON (menu, produtos, categorias)
-│   │   ├── views/UI/             # Componentes de UI genéricos (Button, FormField)
-│   │   ├── globals.css           # Tokens de cor, tipografia, reset
-│   │   ├── layout.tsx            # Layout raiz (MainNav, Footer)
-│   │   └── page.tsx              # Página inicial
-│   └── lib/                      # Utilitários e integrações futuras
-├── public/                       # Imagens, ícones, assets
-└── README.md
+src/
+├── app/                    # App Router (Next.js 13+)
+│   ├── api/               # APIs (cities, contact, states)
+│   ├── categorias/        # Páginas de categorias e produtos
+│   ├── components/        # Componentes reutilizáveis
+│   ├── contato/          # Página de contato
+│   ├── data/             # Dados JSON (categorias, produtos, etc.)
+│   ├── hooks/            # Custom hooks
+│   ├── sobre/            # Páginas institucionais
+│   ├── sobre-eps-pir/    # Página sobre EPS/PIR
+│   ├── types/            # Tipos TypeScript
+│   └── views/ui/         # Componentes UI básicos
+├── public/               # Assets estáticos
+└── lib/                  # Utilitários
 ```
 
----
+## 🎨 Design System
 
-## 🎨 Estilização e Compatibilidade
+### Cores
+- **Azul Isoart**: `rgba(24, 74, 100, 1)` - Cor principal
+- **Gold Isoart**: `rgba(146, 151, 120, 1)` - Cor secundária
+- **Cinza**: Escala de cinzas para textos e backgrounds
 
-### Padrões CSS Obrigatórios
-Para máxima compatibilidade com sistemas corporativos/Linux:
+### Tipografia
+- **Red Hat Display**: Títulos e headlines
+- **Inter**: Texto corrido e UI
 
-- **CSS Custom Properties**: SEMPRE kebab-case (`--color-primary`, nunca `--colorPrimary`)
-- **Classes CSS**: SEMPRE kebab-case (`.blue-text`, nunca `.blueText`)
-- **Fallbacks obrigatórios** para cores:
-  ```css
-  .blue-text {
-    color: rgba(0, 123, 255, 0.65); /* fallback */
-    color: rgba(var(--color-primary), 0.65);
-  }
-  ```
-- **JSX**: usar notação de colchetes: `className={styles['blue-text']}`
+### Componentes
+- **Hero Sections**: Banners principais com slider
+- **Navigation**: Menu principal e institucional
+- **Cards**: Produtos e categorias
+- **Forms**: Formulários de contato
+- **Buttons**: Sistema de botões com variantes
 
-### Design System
-- **Tokens de cor e tipografia** definidos em `globals.css`
-- **CSS Modules** para escopo local e evitar conflitos
-- **TailwindCSS** para utilitários e reset
-- **Componentes de UI** (Button, FormField, etc) com variantes
-- **Animações** com GSAP e Lenis
+## 📱 Páginas
 
----
+### Páginas Principais
+- **Home** (`/`) - Landing page com slider e soluções
+- **Sobre** (`/sobre`) - História e timeline da empresa
+- **Sobre EPS/PIR** (`/sobre-eps-pir`) - Informações técnicas
+- **Contato** (`/contato`) - Formulário e informações
 
-## 🧩 Padrões de Componentes
+### Categorias de Produtos
+- **Telhas e Revestimentos** (`/categorias/telhas-e-paineis`)
+- **Construção Civil** (`/categorias/construcao-civil`)
+- **Forros** (`/categorias/forros`)
+- **Molduras Decorativas** (`/categorias/molduras-decorativas`)
+- **Embalagens** (`/categorias/embalagens-em-eps`)
 
-- **Componentes funcionais** com hooks (`useState`, `useEffect`, `useRef`)
-- **Tipagem explícita** de props, estados e dados (interfaces)
-- **Imports absolutos** via `@/` (configurado no `tsconfig.json`)
-- **Separação clara** entre dados (JSON), lógica e apresentação
-- **Responsividade** e **acessibilidade** consideradas
+### Produtos Individuais
+Cada categoria possui produtos específicos com páginas detalhadas:
+- Telhas Térmicas, Fachadas, Divisórias, etc.
+- Lajes, Blocos, Flocos, Chapas
+- Forros Dunas e Paris
+- Molduras para portas, beirais, colunas, etc.
+- Embalagens e Pérolas
 
----
+## 🔧 Configuração
 
-## 🔗 Integrações e Roteamento
-
-- **Dados** de navegação, categorias e produtos em arquivos JSON (`/data`)
-- **Rotas dinâmicas**: `/categorias/[category]` e `/categorias/[category]/[product]`
-- **Formulário de contato** planejado para integração com MySQL
-
----
-
-## 🛠️ Como rodar localmente
-
+### Build
 ```bash
-# Instale as dependências
-npm install
-
-# Rode o servidor de desenvolvimento
-npm run dev
-
-# Acesse: http://localhost:3000
+npm run build --no-lint  # Build sem linting para deploy
+npm run dev              # Desenvolvimento
+npm run start            # Produção local
 ```
 
+### Configurações Especiais
+- **ESLint desabilitado** durante build para evitar falhas
+- **TypeScript** com verificações relaxadas
+- **Imagens otimizadas** com Next.js Image
+- **Scroll suave** com Lenis
+- **Animações** com GSAP
+
+## 📊 Dados
+
+### Estrutura de Dados
+- **Categorias**: JSON com metadados e produtos
+- **Produtos**: Especificações técnicas e imagens
+- **Menu**: Navegação dinâmica
+- **Formulários**: Submissões de contato
+
+### APIs
+- `/api/cities` - Lista de cidades
+- `/api/states` - Lista de estados
+- `/api/contact` - Formulário principal
+- `/api/contact-page` - Formulário da página de contato
+
+## 🚀 Deploy
+
+### Vercel
+- Build otimizado para produção
+- Cache de imagens e assets
+- CDN global
+- Analytics integrado
+
+### Configurações de Build
+- ESLint ignorado durante build
+- TypeScript com verificações relaxadas
+- Otimização automática de imagens
+- Geração estática de páginas
+
+## 📈 Performance
+
+### Otimizações
+- **Imagens otimizadas** com formatos modernos
+- **Lazy loading** de componentes
+- **Code splitting** automático
+- **Cache** de dados estáticos
+- **Compressão** de assets
+
+### SEO
+- **Meta tags** dinâmicas por página
+- **Structured data** para produtos
+- **Sitemap** automático
+- **Open Graph** tags
+
+## 🔍 Manutenção
+
+### Limpeza de Código
+- CSS organizado por componentes
+- Variáveis CSS centralizadas
+- Componentes reutilizáveis
+- Tipos TypeScript bem definidos
+
+### Estrutura de Componentes
+- **Section** → **Wrapper** → **Container** → **Content** → **Elements**
+- Padrão consistente em todo o projeto
+- Responsividade mobile-first
+- Acessibilidade implementada
+
+## 📝 Notas Técnicas
+
+### Dependências Principais
+- `next`: 15.3.1
+- `react`: ^19.0.0
+- `gsap`: ^3.13.0
+- `lenis`: ^1.3.4
+- `react-icons`: ^5.5.0
+
+### Configurações Especiais
+- Build sem linting para evitar falhas de deploy
+- TypeScript com verificações relaxadas
+- Tailwind CSS com configuração customizada
+- Animações otimizadas com GSAP
+
 ---
 
-## 🤝 Contribuição e Manutenção
-
-- **CRÍTICO**: Sempre use kebab-case em CSS (nunca camelCase)
-- Siga os padrões de componentes e tipagem do projeto
-- Use sempre CSS Modules e inclua fallbacks para cores
-- Documente componentes complexos em arquivos `.md`
-- Teste responsividade e compatibilidade
-
----
-
-## 📈 Próximos passos
-
-- Usar fotos de melhor qualidade
-- Adicionar SEO dinâmico (meta tags)
-- Otimizar imagens e carregamento
-- Implementar filtros e busca
-- Integrar com CMS
-- Adicionar Analytics e ferramentas de trackeamento
-
----
-
-Este projeto segue padrões modernos de frontend com foco especial em compatibilidade com sistemas corporativos e Linux.
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> a3db27b194ba92dff54e12379a610ac6bef5492b
+**Desenvolvido para Isoart** - Soluções em EPS e PIR para construção civil
