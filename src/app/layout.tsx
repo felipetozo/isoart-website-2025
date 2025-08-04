@@ -55,6 +55,19 @@ export default function RootLayout({
               color: #171717;
             }
             
+            /* Cores críticas para textos brancos */
+            .hero-container h1,
+            .hero-container p,
+            .hero-title,
+            .nav-chevron,
+            .nav-button {
+              color: rgba(241, 244, 247, 1) !important;
+            }
+            
+            .hero-container p {
+              color: rgba(241, 244, 247, 0.75) !important;
+            }
+            
             /* Hero crítico */
             .hero-section {
               width: 100vw;
