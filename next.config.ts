@@ -7,9 +7,6 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  experimental: {
-    esmExternals: false,
-  },
   // Forçar desabilitação do linting
   onDemandEntries: {
     maxInactiveAge: 25 * 1000,
@@ -19,8 +16,6 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
-  // Otimizar CSS
-  optimizeCss: true,
   // Preload crítico
   async headers() {
     return [

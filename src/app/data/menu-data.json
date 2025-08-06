@@ -1,15 +1,15 @@
 [
     {
         "id": 1,
-        "title": "Telhas e Revestimentos",
+        "title": "Telhas e Painéis",
         "slug": "telhas-e-paineis",
         "description": "Telhas e painéis da Isoart para coberturas e fachadas. Disponíveis com ou sem isolamento térmico em EPS/PIR, oferecem eficiência energética e resistência. Adequados para diversos projetos de construção.",
         "image": "/img/geral/endereco-03-01.avif",
         "products": [
             {
                 "id": 1,
-                "name": "Telhas e Revestimentos",
-                "slug": "telhas-termicas",
+                "name": "Telhas e Painéis",
+                "slug": "telhas-paineis",
                 "description": "Telhas e painéis da Isoart para coberturas e fachadas. Disponíveis com ou sem isolamento térmico em EPS/PIR, oferecem eficiência energética e resistência. Adequados para diversos projetos de construção.",
                 "image": "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-01.avif",
                 "specifications": {
@@ -83,7 +83,7 @@
             },
             {
                 "id": 7,
-                "name": "Flocos em EPS",
+                "name": "Isolamento para telha",
                 "slug": "flocos-em-eps",
                 "description": "Flocos de EPS para diversas aplicações",
                 "image": "/img/produtos/construcao-civil/flocos/flocos-01.avif",
@@ -91,6 +91,14 @@
             },
             {
                 "id": 8,
+                "name": "Forros (modelo dunas, modelo paris)",
+                "slug": "forros",
+                "description": "Forros em EPS para diversos ambientes",
+                "image": "/img/produtos/forros/dunas/dunas-01.avif",
+                "specifications": {}
+            },
+            {
+                "id": 9,
                 "name": "Blocos em EPS",
                 "slug": "blocos-em-eps",
                 "description": "Blocos de EPS para construção",
@@ -98,8 +106,8 @@
                 "specifications": {}
             },
             {
-                "id": 9,
-                "name": "Chapas e Painéis em EPS",
+                "id": 10,
+                "name": "Chapa e Painéis em EPS",
                 "slug": "chapas-paineis-em-eps",
                 "description": "Chapas e painéis de EPS",
                 "image": "/img/produtos/construcao-civil/chapas/chapas-01.avif",
@@ -109,38 +117,13 @@
     },
     {
         "id": 3,
-        "title": "Forros",
-        "slug": "forros",
-        "description": "Variedade de forros para diversos ambientes",
-        "image": "/img/produtos/forros/dunas/dunas-01.avif",
-        "products": [
-            {
-                "id": 10,
-                "name": "Dunas",
-                "slug": "dunas",
-                "description": "Forro modelo Dunas",
-                "image": "/img/produtos/forros/dunas/dunas-01.avif",
-                "specifications": {}
-            },
-            {
-                "id": 11,
-                "name": "Paris",
-                "slug": "paris",
-                "description": "Forro modelo Paris",
-                "image": "/img/produtos/forros/paris/paris-01.avif",
-                "specifications": {}
-            }
-        ]
-    },
-    {
-        "id": 4,
         "title": "Molduras Decorativas",
         "slug": "molduras-decorativas",
         "description": "Molduras em EPS para decoração e acabamento",
         "image": "/img/produtos/molduras/muros-01.avif",
         "products": [
             {
-                "id": 13,
+                "id": 11,
                 "name": "Molduras para Portas e Janelas",
                 "slug": "molduras-portas-janelas",
                 "description": "Molduras para acabamento de portas e janelas",
@@ -148,7 +131,7 @@
                 "specifications": {}
             },
             {
-                "id": 14,
+                "id": 12,
                 "name": "Molduras para Beiral",
                 "slug": "molduras-beiral",
                 "description": "Molduras para beirais",
@@ -156,7 +139,7 @@
                 "specifications": {}
             },
             {
-                "id": 15,
+                "id": 13,
                 "name": "Molduras para Colunas e Capitéis",
                 "slug": "molduras-colunas-capiteis",
                 "description": "Molduras para colunas e capitéis",
@@ -164,7 +147,7 @@
                 "specifications": {}
             },
             {
-                "id": 16,
+                "id": 14,
                 "name": "Molduras para Muros",
                 "slug": "molduras-muros",
                 "description": "Molduras para muros",
@@ -172,7 +155,7 @@
                 "specifications": {}
             },
             {
-                "id": 17,
+                "id": 15,
                 "name": "Molduras para Paredes",
                 "slug": "molduras-paredes",
                 "description": "Molduras para paredes",
@@ -182,14 +165,14 @@
         ]
     },
     {
-        "id": 5,
+        "id": 4,
         "title": "Embalagens em EPS",
         "slug": "embalagens-em-eps",
         "description": "Soluções em embalagens de EPS sob medida",
         "image": "/img/produtos/embalagens/embalagens/embalagens-01.avif",
         "products": [
             {
-                "id": 18,
+                "id": 16,
                 "name": "Embalagens em EPS",
                 "slug": "embalagens-em-eps",
                 "description": "Soluções completas em embalagens de EPS",
@@ -197,7 +180,7 @@
                 "specifications": {}
             },
             {
-                "id": 21,
+                "id": 17,
                 "name": "Pérolas em EPS",
                 "slug": "perolas-em-eps",
                 "description": "Pérolas de EPS para preenchimento",

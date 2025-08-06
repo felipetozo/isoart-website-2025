@@ -28,7 +28,7 @@
     align-items: flex-start;
     padding: 0.5rem 0;
     justify-content: right;
-    color: rgba(241, 244, 247, 1);
+    color: rgba(241, 244, 247, 0.85);
 }
 
 .main-form-contact-item a {
@@ -44,16 +44,16 @@
 }
 
 .main-form-contact-item a:hover svg {
-    color: rgba(241, 244, 247, 1);
+    color: rgba(79, 184, 225, 1);
 }
 
 .main-form-contact-item svg {
-    color: rgba(79, 184, 225, 1);
+    color: rgba(241, 244, 247, 0.85);
 }
 
 .main-form-header h4 {
     font-family: var(--font-redhat);
-    color: rgba(79, 184, 225, 1);
+    color: rgba(241,244, 247, 0.85);
     width: 100%;
 }
 
@@ -87,7 +87,7 @@
 }
 
 .main-form-container h3 {
-    color: rgba(79, 184, 225, 1);
+    color: rgba(241, 244, 247, 0.75);
     font-size: 1.2rem;
     padding: 0.5rem 0;
 }

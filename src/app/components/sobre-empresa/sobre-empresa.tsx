@@ -19,7 +19,7 @@ function SobreEmpresa() {
                         </h3>
                         <div>
                             <Link href="/sobre">
-                                <Button variant="primary" size="medium">
+                                <Button variant="white" size="medium">
                                     Saiba mais
                                 </Button>
                             </Link>

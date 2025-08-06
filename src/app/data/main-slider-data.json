@@ -1,10 +1,11 @@
 [
+
     {
         "id": 1,
-        "title": "Uma nova fábrica, uma nova solução",
-        "description": "",
+        "title": "Molduras decorativas",
+        "description": "Molduras em EPS para portas, janelas e paredes. Leves, duráveis e de fácil instalação, são ideais para acabamentos decorativos em ambientes internos e externos.",
         "buttonText": "Saiba mais",
-        "buttonLink": "/contato",
+        "buttonLink": "/categorias/molduras-decorativas",
         "backgroundImage": "/img/HeroBanners/banner001.webp"
     },
     {
@@ -22,13 +23,5 @@
         "buttonText": "Saiba mais",
         "buttonLink": "/categorias/construcao-civil",
         "backgroundImage": "/img/HeroBanners/banner003.webp"
-    },
-    {
-        "id": 4,
-        "title": "Molduras decorativas",
-        "description": "Molduras em EPS para portas, janelas e paredes. Leves, duráveis e de fácil instalação, são ideais para acabamentos decorativos em ambientes internos e externos.",
-        "buttonText": "Saiba mais",
-        "buttonLink": "/categorias/molduras-decorativas",
-        "backgroundImage": "/img/HeroBanners/banner004.webp"
     }
 ]

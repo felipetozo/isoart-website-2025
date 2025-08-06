@@ -188,14 +188,17 @@ function MainNav() {
                         <div className={styles['main-nav-links']}>
                             <ul>
                                 {(menuData as Category[]).map((item, index) => (
-                                    <li
+                                    <Link
                                         key={item.id}
+                                        href={`/categorias/${item.slug}`}
                                         onMouseEnter={() => handleMouseEnterLi(index)}
                                         onMouseLeave={handleMouseLeaveLi}
                                     >
-                                        <Link href={`/categorias/${item.slug}`}>{item.title}</Link>
-                                        <span className={styles['nav-link-underline']}></span>
-                                    </li>
+                                        <li>
+                                            {item.title}
+                                            <span className={styles['nav-link-underline']}></span>
+                                        </li>
+                                    </Link>
                                 ))}
                             </ul>
                         </div>

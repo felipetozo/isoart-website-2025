@@ -1,7 +1,4 @@
-/* ======================================================== */
-/* Container Principal dos Navegadores                      */
-/* ======================================================== */
-
+/* Container Principal dos Navegadores */
 .nav-container {
     width: 100%;
     position: fixed;
@@ -10,10 +7,7 @@
     z-index: 9999;
 }
 
-/* ======================================================== */
-/* Navegador Institucional                                  */
-/* ======================================================== */
-
+/* Navegador Institucional */
 .institutional-nav-section {
     width: 100%;
     display: none;
@@ -75,10 +69,7 @@
     color: rgba(241, 244, 247, 1);
 }
 
-/* ======================================================= */
-/* Main Nav                                                */
-/* ======================================================= */
-
+/* Main Nav */
 .main-nav-section {
     width: 100%;
 }
@@ -132,25 +123,29 @@
 .main-nav-links a {
     color: rgba(17, 17, 17, 1);
     display: flex;
+    text-decoration: none;
 }
 
 .main-nav-links a:hover {
     color: rgba(146, 151, 120, 1);
 }
 
-.nav-link-underline {
-    height: 1px;
-    width: 0%;
-    background-color: rgba(17, 17, 17, 1);
-}
-
-.main-nav-links ul li:hover .nav-link-underline {
+.main-nav-links a:hover .nav-link-underline {
     width: 100%;
 }
 
-.main-nav-links ul li:hover .sub-menu-categorias {
+.main-nav-links a:hover + .sub-menu-categorias {
     display: flex;
 }
+
+.nav-link-underline {
+    height: 1px;
+    width: 0%;
+    background-color: rgba(146, 151, 120, 1);
+    transition: width 0.3s ease;
+}
+
+
 
 .main-nav-menu-icon {
     display: flex;
@@ -225,6 +220,29 @@
     border-radius: 0.2rem;
 }
 
+/* Esconder imagens no submenu para telas menores que 1400px */
+@media (max-width: 1399px) {
+    .sub-menu-item img {
+        display: none;
+    }
+    
+    .sub-menu-item a {
+        justify-content: center;
+        height: 5rem;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .sub-menu-item {
+        display: flex;
+        height: 100%;
+    }
+    
+    .sub-menu-categorias {
+        align-items: stretch;
+    }
+}
+
 @media (min-width:1200px) {
     .institutional-nav-section {
         display: block;
@@ -244,10 +262,8 @@
     }
 }
 
-/* ======================================================= */
-/* Mobile Menu                                             */
-/* ======================================================= */
 
+/* Mobile Menu */
 .mobile-menu {
     display: none;
     flex-direction: column;
