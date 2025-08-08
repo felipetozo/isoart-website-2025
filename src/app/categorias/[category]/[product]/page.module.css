@@ -200,8 +200,8 @@
 
 .application-cards {
     display: flex;
-    flex-direction: row;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
     width: 100%;
 }
 
@@ -245,6 +245,10 @@
     }
 
     .benefits-wrapper {
+        flex-direction: row;
+    }
+
+    .application-cards {
         flex-direction: row;
     }
 }

@@ -17,17 +17,30 @@ export default function TabbedSection({ tabDescriptions }: TabbedSectionProps) {
     return (
         <section className={styles['tabbed-section']}>
             <div className={styles['tabbed-wrapper']}>
-                <div className={styles['tab-buttons']}>
-                    {Object.keys(tabDescriptions).map((tab) => (
-                        <button
-                            key={tab}
-                            className={`${styles['tab-button']} ${activeTab === tab ? styles['active-tab'] : ''}`}
-                            onClick={() => handleTabClick(tab)}>
-                            {tab}
-                        </button>
+                {/* Desktop: Tabs funcionais */}
+                <div className={styles['desktop-tabs']}>
+                    <div className={styles['tab-buttons']}>
+                        {Object.keys(tabDescriptions).map((tab) => (
+                            <button
+                                key={tab}
+                                className={`${styles['tab-button']} ${activeTab === tab ? styles['active-tab'] : ''}`}
+                                onClick={() => handleTabClick(tab)}>
+                                {tab}
+                            </button>
+                        ))}
+                    </div>
+                    <p className={styles['tab-content']}>{tabDescriptions[activeTab]}</p>
+                </div>
+
+                {/* Mobile: Todas as seções visíveis */}
+                <div className={styles['mobile-sections']}>
+                    {Object.entries(tabDescriptions).map(([title, description]) => (
+                        <div key={title} className={styles['mobile-section']}>
+                            <h4 className={styles['mobile-section-title']}>{title}</h4>
+                            <p className={styles['mobile-section-content']}>{description}</p>
+                        </div>
                     ))}
                 </div>
-                <p className={styles['tab-content']}>{tabDescriptions[activeTab]}</p>
             </div>
         </section>
     );
