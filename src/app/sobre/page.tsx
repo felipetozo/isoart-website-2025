@@ -12,7 +12,7 @@ const TIMELINE = [
     label: 'os primeiros passos',
     description:
       'Fundada em Santa Tereza do Oeste, Paraná, a Isoart iniciou sua trajetória com o propósito de oferecer soluções inovadoras e sustentáveis em Poliestireno Expandido (EPS). Desde o primeiro momento, a empresa estabeleceu um compromisso com a qualidade e a transparência, atendendo diferentes setores com excelência e construindo uma base sólida de confiança no mercado.',
-    image: '/img/geral/endereco-01-01.avif',
+    image: '/img/geral/endereco-01-01-optimized.webp',
   },
   {
     year: '2015',
@@ -219,7 +219,7 @@ export default function SobrePage() {
       {/* Galeria de imagens */}
       <section className={styles['gallery-section']}>
         <div className={styles['gallery-grid']}>
-          <img src="/img/geral/endereco-01-01.avif" alt="Exemplo 1" className={styles['gallery-image']} />
+                          <img src="/img/geral/endereco-01-01-optimized.webp" alt="Exemplo 1" className={styles['gallery-image']} loading="lazy" />
           <img src="/img/geral/endereco-02-01.avif" alt="Exemplo 2" className={styles['gallery-image']} />
           <img src="/img/geral/endereco-03-01.avif" alt="Exemplo 3" className={styles['gallery-image']} />
         </div>

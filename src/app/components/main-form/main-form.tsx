@@ -280,10 +280,11 @@ function MainForm() {
 
                     <div className={styles['main-form-locations-list-item']}>
                         <Image
-                            src={'/img/geral/endereco-01-01.avif'}
+                            src={'/img/geral/endereco-01-01-optimized.webp'}
                             alt="Fábrica 1 Isoart"
                             width={1000}
                             height={700}
+                            loading="lazy"
                         />
                         <h5>Fábrica 1 (Matriz)</h5>
                         <div className={styles['main-form-contact-item']}>
@@ -319,6 +320,7 @@ function MainForm() {
                             alt="Fábrica 2 Isoart"
                             width={1000}
                             height={700}
+                            loading="lazy"
                         />
                         <h5>Fábrica 2</h5>
                         <div className={styles['main-form-contact-item']}>
@@ -354,6 +356,7 @@ function MainForm() {
                             alt="Fábrica 3 Isoart"
                             width={1000}
                             height={700}
+                            loading="lazy"
                         />
                         <h5>Fábrica 3</h5>
                         <div className={styles['main-form-contact-item']}>

@@ -35,8 +35,8 @@ export default function RootLayout({
       <head>
         {/* Preload recursos críticos */}
         <link rel="preload" href="/img/isoart-logotipo.svg" as="image" type="image/svg+xml" />
-        <link rel="preload" href="/img/geral/endereco-01-01.avif" as="image" />
-        <link rel="preload" href="/img/HeroBanners/banner001.webp" as="image" fetchPriority="high" />
+        {/* Removed heavy image preload to reduce initial payload */}
+        {/* Removed banner preload to reduce initial payload */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         
