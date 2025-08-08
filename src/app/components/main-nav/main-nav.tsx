@@ -156,10 +156,22 @@ function MainNav() {
             <nav className={styles['institutional-nav-section']}>
                 <div className={styles['institutional-nav-wrapper']}>
                     <div className={styles['institutional-nav-social']}>
-                        <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank"><BsInstagram /></Link>
-                        <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank"><BsFacebook /></Link>
-                        <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank"><BsYoutube /></Link>
-                        <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank"><BsLinkedin /></Link>
+                        <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank" aria-label="Siga-nos no Instagram">
+                            <BsInstagram />
+                            <span className={styles['sr-only']}>Instagram</span>
+                        </Link>
+                        <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank" aria-label="Siga-nos no Facebook">
+                            <BsFacebook />
+                            <span className={styles['sr-only']}>Facebook</span>
+                        </Link>
+                        <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank" aria-label="Visite nosso canal no YouTube">
+                            <BsYoutube />
+                            <span className={styles['sr-only']}>YouTube</span>
+                        </Link>
+                        <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank" aria-label="Conecte-se conosco no LinkedIn">
+                            <BsLinkedin />
+                            <span className={styles['sr-only']}>LinkedIn</span>
+                        </Link>
                     </div>
                     <div className={styles['institutional-nav-items']}>
                         <ul>
@@ -250,10 +262,22 @@ function MainNav() {
                             <p><a href="https://wa.me/5545991339642" target="_blank" rel="noopener noreferrer"><BsWhatsapp /> +55 45 99133 9642</a></p>
                             <p><a href="mailto:contato@isoart.com.br"><MdOutlineMarkEmailUnread /> contato@isoart.com.br</a></p>
                             <div className={styles['mobile-social']}>
-                                <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank"><BsInstagram /></Link>
-                                <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank"><BsFacebook /></Link>
-                                <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank"><BsYoutube /></Link>
-                                <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank"><BsLinkedin /></Link>
+                                <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank" aria-label="Siga-nos no Instagram">
+                                    <BsInstagram />
+                                    <span className={styles['sr-only']}>Instagram</span>
+                                </Link>
+                                <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank" aria-label="Siga-nos no Facebook">
+                                    <BsFacebook />
+                                    <span className={styles['sr-only']}>Facebook</span>
+                                </Link>
+                                <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank" aria-label="Visite nosso canal no YouTube">
+                                    <BsYoutube />
+                                    <span className={styles['sr-only']}>YouTube</span>
+                                </Link>
+                                <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank" aria-label="Conecte-se conosco no LinkedIn">
+                                    <BsLinkedin />
+                                    <span className={styles['sr-only']}>LinkedIn</span>
+                                </Link>
                             </div>
                         </div>
                     </div>
