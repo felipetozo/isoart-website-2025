@@ -10,14 +10,14 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  preload: true,
+  preload: false, // Reduzir payload inicial
 });
 
 const redhat = Red_Hat_Display({
   subsets: ["latin"],
   variable: "--font-redhat",
   display: "swap",
-  preload: true,
+  preload: false, // Reduzir payload inicial
 });
 
 export const metadata: Metadata = {
@@ -40,10 +40,10 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         
-        {/* CSS Crítico Inline para melhorar LCP */}
+        {/* CSS Crítico Mínimo para LCP */}
         <style dangerouslySetInnerHTML={{
           __html: `
-            /* Reset crítico */
+            /* Reset essencial */
             *, *::before, *::after { box-sizing: border-box; }
             
             /* Fonts críticas */
@@ -55,34 +55,7 @@ export default function RootLayout({
               color: #171717;
             }
             
-            /* Cores críticas para textos brancos */
-            .hero-container h1,
-            .hero-container p,
-            .hero-title,
-            .nav-chevron,
-            .nav-button {
-              color: #f1f4f7 !important;
-            }
-            
-            .hero-container p {
-              color: #b8c3cc !important;
-            }
-            
-            /* Componentes com fundo escuro */
-            .main-form-section,
-            .sobre-empresa-section {
-              background-color: #0f131e !important;
-            }
-            
-            .main-form-section h4,
-            .main-form-section h3,
-            .main-form-section p,
-            .sobre-empresa-section h3,
-            .sobre-empresa-section p {
-              color: #f1f4f7 !important;
-            }
-            
-            /* Hero crítico */
+            /* Hero crítico - LCP */
             .hero-section {
               width: 100vw;
               height: 80vh;
@@ -90,14 +63,7 @@ export default function RootLayout({
               overflow: hidden;
             }
             
-            /* Primeira imagem do slider - LCP */
-            .hero-section .slide:first-child {
-              background-image: url('/img/HeroBanners/banner001.webp') !important;
-              background-size: cover !important;
-              background-position: center !important;
-            }
-            
-            /* Navigation crítica */
+            /* Navigation fixa */
             .nav-container {
               width: 100%;
               position: fixed;
@@ -105,22 +71,20 @@ export default function RootLayout({
               left: 0;
               z-index: 9999;
             }
-            
-            /* Layout crítico */
-            .main-nav-wrapper {
-              width: 90%;
-              max-width: 1600px;
-              margin: 0 auto;
-              padding: 1rem;
-            }
-            
-            /* Loading state */
-            .loading {
-              opacity: 0;
-              transition: opacity 0.3s ease;
-            }
-            .loaded {
-              opacity: 1;
+          `
+        }} />
+        
+        {/* Carregamento otimizado de fontes */}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            // Carregar fontes de forma otimizada
+            if ('fonts' in document) {
+              Promise.all([
+                document.fonts.load('1em Inter'),
+                document.fonts.load('1em Red Hat Display')
+              ]).then(() => {
+                document.documentElement.classList.add('fonts-loaded');
+              });
             }
           `
         }} />

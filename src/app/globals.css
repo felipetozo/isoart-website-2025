@@ -103,7 +103,14 @@ html.lenis body {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+/* Transições otimizadas apenas onde necessário */
+.transition-all {
   transition: all 0.2s ease;
+}
+
+html {
   scroll-behavior: smooth;
 }
 

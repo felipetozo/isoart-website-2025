@@ -7,16 +7,26 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Forçar desabilitação do linting
-  onDemandEntries: {
-    maxInactiveAge: 25 * 1000,
-    pagesBufferLength: 2,
-  },
   // Otimizações de performance
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
-  // Preload crítico
+  
+  // Otimizações de CSS e JS
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['react-icons'],
+  },
+  
+  // Otimizações de imagens
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  
+  // Headers de performance
   async headers() {
     return [
       {
@@ -34,9 +44,37 @@ const nextConfig: NextConfig = {
             key: 'X-XSS-Protection',
             value: '1; mode=block',
           },
+          // Headers de cache para CSS
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/(.*).css',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
         ],
       },
     ];
+  },
+  
+  // Otimizações de webpack
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      // Otimizar CSS
+      config.optimization.splitChunks.cacheGroups.styles = {
+        name: 'styles',
+        test: /\.(css|scss)$/,
+        chunks: 'all',
+        enforce: true,
+      };
+    }
+    return config;
   },
 };
 
