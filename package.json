@@ -20,6 +20,7 @@
     "react-icons": "^5.5.0",
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugins": "^1.0.8",
+    "sharp": "^0.34.3",
     "tabler-icons-react": "^1.56.0"
   },
   "devDependencies": {

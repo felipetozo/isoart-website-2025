@@ -168,38 +168,38 @@ export default function SobreEpsPirPage() {
             <div className={styles['revestimentos-cores']}>
               <div className={styles['cores-grid']}>
                 {[
-                  { id: 'ral9003', code: 'RAL 9003', name: 'Branco Sinal', type: 'color' },
-                  { id: 'ral7035', code: 'RAL 7035', name: 'Cinza Claro', type: 'color' },
-                  { id: 'ral7040', code: 'RAL 7040', name: 'Cinza Médio', type: 'color' },
-                  { id: 'ral7024', code: 'RAL 7024', name: 'Cinza Grafite', type: 'color' },
+                  { id: 'ral9003', code: 'RAL 9003', name: 'Branco Sinal', type: 'image', image: '/img/PIR/RAL9003---BRANCO.avif' },
+                  { id: 'ral7035', code: 'RAL 7035', name: 'Cinza Claro', type: 'image', image: '/img/PIR/RAL7035---CINZA-CLARO.avif' },
+                  { id: 'ral7040', code: 'RAL 7040', name: 'Cinza Médio', type: 'image', image: '/img/PIR/RAL7040---CINZA-MÉDIO.avif' },
+                  { id: 'ral7024', code: 'RAL 7024', name: 'Cinza Grafite', type: 'image', image: '/img/PIR/RAL7024---CINZA-GRAFITE.avif' },
                   { id: 'ral9006', code: 'RAL 9006', name: 'Prata', type: 'color' },
-                  { id: 'ral1015', code: 'RAL 1015', name: 'Marfim', type: 'color' },
-                  { id: 'ral1023', code: 'RAL 1023', name: 'Amarelo', type: 'color' },
-                  { id: 'ral8023', code: 'RAL 8023', name: 'Terracota', type: 'color' },
-                  { id: 'ral3000', code: 'RAL 3000', name: 'Vermelho Fogo', type: 'color' },
-                  { id: 'ral5010', code: 'RAL 5010', name: 'Azul Genciana', type: 'color' },
-                  { id: 'ral6002', code: 'RAL 6002', name: 'Verde Tráfego', type: 'color' },
-                  { id: 'ral9005', code: 'RAL 9005', name: 'Preto', type: 'color' },
+                  { id: 'ral1015', code: 'RAL 1015', name: 'Marfim', type: 'image', image: '/img/PIR/RAL1015---MARFIM.avif' },
+                  { id: 'ral1023', code: 'RAL 1023', name: 'Amarelo', type: 'image', image: '/img/PIR/RAL1023---AMARELO.avif' },
+                  { id: 'ral8023', code: 'RAL 8023', name: 'Terracota', type: 'image', image: '/img/PIR/RAL8023---TERRACOTA.avif' },
+                  { id: 'ral3000', code: 'RAL 3000', name: 'Vermelho Fogo', type: 'image', image: '/img/PIR/RAL3000---VERMELHO.avif' },
+                  { id: 'ral5010', code: 'RAL 5010', name: 'Azul Genciana', type: 'image', image: '/img/PIR/RAL5010---AZUL.avif' },
+                  { id: 'ral6002', code: 'RAL 6002', name: 'Verde Tráfego', type: 'image', image: '/img/PIR/RAL6002---VERDE.avif' },
+                  { id: 'ral9005', code: 'RAL 9005', name: 'Preto', type: 'image', image: '/img/PIR/RAL9005---PRETO.avif' },
                   { 
                     id: 'galvanizado',
                     code: '', 
                     name: 'Natural Galvanizado', 
-                    type: 'texture',
-                    image: '/img/PIR/PIR-Textura-01.avif'
+                    type: 'image',
+                    image: '/img/PIR/NATURAL-GALVANIZADO.avif'
                   },
                   { 
                     id: 'amadeirado-claro',
                     code: '', 
                     name: 'Amadeirado Claro', 
-                    type: 'texture',
-                    image: '/img/PIR/PIR-Textura-02.avif'
+                    type: 'image',
+                    image: '/img/PIR/AMADEIRADO-CLARO.avif'
                   },
                   { 
                     id: 'amadeirado-escuro',
                     code: '', 
                     name: 'Amadeirado Escuro', 
-                    type: 'texture',
-                    image: '/img/PIR/PIR-Textura-03.avif'
+                    type: 'image',
+                    image: '/img/PIR/AMADEIRADO-ESCURO.avif'
                   },
                 ].map((item) => (
                   <div className={styles['cor-item']} key={item.id}>
@@ -207,31 +207,20 @@ export default function SobreEpsPirPage() {
                       <span 
                         className={styles['cor-thumb']} 
                         style={{ 
-                          backgroundColor: item.code === 'RAL 9003' ? 'rgb(var(--ral-9003))' :
-                          item.code === 'RAL 7035' ? 'rgb(var(--ral-7035))' :
-                          item.code === 'RAL 7040' ? 'rgb(var(--ral-7040))' :
-                          item.code === 'RAL 7024' ? 'rgb(var(--ral-7024))' :
-                          item.code === 'RAL 9006' ? 'rgb(var(--ral-9006))' :
-                          item.code === 'RAL 1015' ? 'rgb(var(--ral-1015))' :
-                          item.code === 'RAL 1023' ? 'rgb(var(--ral-1023))' :
-                          item.code === 'RAL 8023' ? 'rgb(var(--ral-8023))' :
-                          item.code === 'RAL 3000' ? 'rgb(var(--ral-3000))' :
-                          item.code === 'RAL 5010' ? 'rgb(var(--ral-5010))' :
-                          item.code === 'RAL 6002' ? 'rgb(var(--ral-6002))' :
-                          item.code === 'RAL 9005' ? 'rgb(var(--ral-9005))' : '#ccc'
+                          backgroundColor: item.code === 'RAL 9006' ? 'rgb(var(--ral-9006))' : '#ccc'
                         }}
                       ></span>
-                                         ) : (
-                       <div className={styles['textura-thumb']}>
-                         <Image
-                           src={item.image || ''}
-                           alt={item.name}
-                           width={80}
-                           height={80}
-                           className={styles['textura-image']}
-                         />
-                       </div>
-                     )}
+                    ) : (
+                      <div className={styles['textura-thumb']}>
+                        <Image
+                          src={item.image || ''}
+                          alt={item.name}
+                          width={80}
+                          height={80}
+                          className={styles['textura-image']}
+                        />
+                      </div>
+                    )}
                     <p className={styles['cor-code']}>{item.code}</p>
                     <p className={styles['cor-name']}>{item.name}</p>
                   </div>
