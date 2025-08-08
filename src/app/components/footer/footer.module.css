@@ -30,7 +30,7 @@
 .footer-column li {
     line-height: 2;
     width: max-content;
-    color: rgba(17, 17, 17, 0.55);
+    color: rgba(17, 17, 17, 0.60);
 }
 
 .footer-column li:hover {
@@ -54,7 +54,7 @@
 
 .main-form-contact-item,
 .main-form-nav-social {
-    color: rgba(17, 17, 17, 0.55);
+    color: rgba(17, 17, 17, 0.60);
 }
 
 .main-form-contact-item:hover,
