@@ -15,6 +15,7 @@
     overflow: hidden;
     white-space: nowrap;
     background-color: rgba(24, 74, 100, 0.85);
+    transition: all 0.3s ease;
 }
 
 .button.disabled {

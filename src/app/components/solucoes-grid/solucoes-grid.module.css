@@ -35,6 +35,7 @@
     overflow: hidden;
     height: 35rem;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .solucoes-grid-card:hover .solucoes-grid-card-container {
@@ -57,6 +58,7 @@
     object-fit: cover;
     object-position: center;
     z-index: 2;
+    transition: all 0.3s ease;
 }
 
 .solucoes-grid-card-image::before {
@@ -85,6 +87,7 @@
     background: linear-gradient(180deg, rgba(241, 244, 247, 0.1) 50%, rgba(146, 151, 120, 1) 100%);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+    transition: all 0.3s ease;
 }
 
 .solucoes-grid-card-container h5 {
