@@ -133,8 +133,9 @@
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(27.5rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 1rem;
+    width: 100%;
 }
 
 .feature span {
@@ -152,6 +153,7 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+    width: 100%;
     background-color: rgba(251, 251, 251, 0.25);
     border: 1px solid rgba(146, 151, 120, 0.25);
     padding: 2rem;
@@ -168,6 +170,7 @@
     flex-direction: row;
     align-items: center;
     gap: 1rem;
+    width: 100%;
     border: 1px solid rgba(251, 251, 251, 1);
     border-radius: 0.4rem;
     color: rgba(17, 17, 17, 0.75);

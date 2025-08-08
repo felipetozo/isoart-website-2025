@@ -214,7 +214,7 @@ function MainForm() {
                                 onChange={handleChange}
                                 options={[
                                     { value: '', label: 'Selecione uma solução' },
-                                    { value: 'telhas-e-revestimentos', label: 'Telhas e Revestimentos' },
+                                    { value: 'telhas-e-paineis', label: 'Telhas e Painéis' },
                                     { value: 'construcao-civil', label: 'Construção Civil' },
                                     { value: 'forros', label: 'Forros' },
                                     { value: 'molduras', label: 'Molduras' },

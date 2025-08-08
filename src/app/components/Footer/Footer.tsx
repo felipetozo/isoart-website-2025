@@ -46,7 +46,7 @@ function Footer() {
                             <div>
                                 <h5>Produtos</h5>
                                 <ul>
-                                    <li><Link href="/categorias/telhas-e-paineis">Telhas e Revestimentos</Link></li>
+                                    <li><Link href="/categorias/telhas-e-paineis">Telhas e Painéis</Link></li>
                                     <li><Link href="/categorias/construcao-civil">Construção Civil</Link></li>
                                     <li><Link href="/categorias/forros">Forros</Link></li>
                                     <li><Link href="/categorias/molduras-decorativas">Molduras Decorativas</Link></li>

@@ -7,7 +7,7 @@ import Button from '@/app/views/ui/button/button';
 const solucoes = [
     {
         id: 1,
-        title: 'Telhas e Revestimentos Térmicos',
+        title: 'Telhas e Painéis Térmicos',
         description: 'Soluções completas para coberturas e fachadas com isolamento térmico superior. Nossas telhas e painéis oferecem eficiência energética, resistência e durabilidade para diversos projetos de construção.',
         image: '/img/SolucoesGrid/telhas.avif',
         link: '/categorias/telhas-e-paineis'

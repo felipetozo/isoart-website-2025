@@ -46,7 +46,7 @@ const ContatoPage: React.FC = () => {
     const [loadingStates, setLoadingStates] = useState(false);
 
     const themes = [
-        { value: 'telhas-e-revestimentos', label: 'Telhas e Revestimentos' },
+        { value: 'telhas-e-paineis', label: 'Telhas e Painéis' },
         { value: 'construcao-civil', label: 'Construção Civil' },
         { value: 'forros', label: 'Forros' },
         { value: 'molduras', label: 'Molduras' },
