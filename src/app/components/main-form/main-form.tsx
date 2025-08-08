@@ -173,7 +173,7 @@ function MainForm() {
                         </div>
                     </div>
                 </div>
-                <div className={styles['main-form-header-container']}>
+                <div className={styles['main-form-content-container']}>
                     <form className={styles['cadastro-form']} onSubmit={handleSubmit}>
                         <div className={styles['cadastro-form-fields']}>
                             <FormField

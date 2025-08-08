@@ -19,7 +19,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    color: rgba(17, 17, 17, 1);
+    color: rgba(17, 17, 17, 0.80);
 }
 
 .solucoes-grid-grid {
