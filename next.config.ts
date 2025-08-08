@@ -12,11 +12,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   generateEtags: false,
   
-  // Otimizações de CSS e JS
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['react-icons'],
-  },
+  // Otimizações de imagens
   
   // Otimizações de imagens
   images: {
