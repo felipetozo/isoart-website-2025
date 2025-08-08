@@ -175,9 +175,10 @@ function MainNav() {
                     </div>
                     <div className={styles['institutional-nav-items']}>
                         <ul>
-                            <li><Link href="/sobre">SOBRE A EMPRESA</Link></li>
-                            <li><Link href="/sobre-eps-pir">SOBRE O PIR E EPS</Link></li>
-                            <li><Link href="/contato">CONTATO</Link></li>
+                            <li><Link href="/sobre">Sobre</Link></li>
+                            <li><Link href="/solucoes">Soluções</Link></li>
+                            <li><Link href="/sobre-eps-pir">Sobre PIR e EPS</Link></li>
+                            <li><Link href="/contato">Contato</Link></li>
                         </ul>
                     </div>
                 </div>

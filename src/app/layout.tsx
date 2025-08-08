@@ -74,20 +74,7 @@ export default function RootLayout({
           `
         }} />
         
-        {/* Carregamento otimizado de fontes */}
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            // Carregar fontes de forma otimizada
-            if ('fonts' in document) {
-              Promise.all([
-                document.fonts.load('1em Inter'),
-                document.fonts.load('1em Red Hat Display')
-              ]).then(() => {
-                document.documentElement.classList.add('fonts-loaded');
-              });
-            }
-          `
-        }} />
+
       </head>
       <body>
         <LenisProvider>
