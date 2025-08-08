@@ -223,11 +223,13 @@ function Hero() {
                                     {slide.description && (
                                         <p className={styles['split']}>{slide.description}</p>
                                     )}
-                                    <Link href={slide.buttonLink}>
-                                        <Button variant="white" size="medium">
-                                            {slide.buttonText}
-                                        </Button>
-                                    </Link>
+                                    {index === currentSlide && (
+                                        <Link href={slide.buttonLink}>
+                                            <Button variant="white" size="medium">
+                                                {slide.buttonText}
+                                            </Button>
+                                        </Link>
+                                    )}
                                 </div>
                                 <div className={styles['hero-container']}></div>
                             </div>
