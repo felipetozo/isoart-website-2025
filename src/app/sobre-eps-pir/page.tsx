@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import Button from "../views/ui/button/button";
 import Sustentabilidade from "../components/sustentabilidade/sustentabilidade";
 import { CheckCircle } from "lucide-react";
-import { FlameOff } from "tabler-icons-react";
+import { TbAlertTriangle } from "react-icons/tb";
 import Image from "next/image";
 
 const incendioBlocos = [
@@ -252,14 +252,10 @@ export default function SobreEpsPirPage() {
         <div className={styles['incendio-wrapper']}>
           <div className={styles['incendio-header']}>
             <span className={styles['incendio-title']}>
-              <span className={styles['incendio-title-icon']}>
-                <FlameOff />
-              </span>
               <h3>
                 PIR: O escudo protetor contra a propagação de incêndios
               </h3>
-            </span>
-            <span className={styles['incendio-header-description']}>
+              <span className={styles['incendio-header-description']}>
                 A performance do Poliisocianurato (PIR) em situações de incêndio é um de seus maiores
                 diferenciais, oferecendo uma camada de proteção passiva essencial para qualquer edificação.
                 Diferente de outros materiais, o PIR não contribui para a propagação de chamas.
@@ -267,6 +263,12 @@ export default function SobreEpsPirPage() {
                 Quando exposto ao fogo, o núcleo do painel de PIR reage de forma única: ele forma uma
                 camada carbonizada estável e isolante em sua superfície. Essa barreira de carbono age como
                 um escudo protetor, realizando três funções cruciais:
+              </span>
+            </span>
+            <span className={styles['incendio-icon']}>
+              <span className={styles['incendio-title-icon']}>
+                <TbAlertTriangle />
+              </span>
             </span>
           </div>
           <div className={styles['incendio-blocos']}>
