@@ -58,24 +58,8 @@ function SolucoesGrid() {
                                 />
                             </div>
                             <div className={styles['solucoes-grid-card-container']}>
-                                <h5>Decoração</h5>
+                                <h5>Molduras Decorativas</h5>
                                 <p>Aplicação em diversos acabamentos</p>
-                            </div>
-                        </Link>
-                    </div>
-                    <div className={styles['solucoes-grid-card']}>
-                        <Link href="/categorias/forros">
-                        <div className={styles['solucoes-grid-card-image']}>
-                                <Image
-                                    src={'/img/SolucoesGrid/forros.avif'}
-                                    alt="Forros em EPS"
-                                    width={1000}
-                                    height={700}
-                                />
-                            </div>
-                            <div className={styles['solucoes-grid-card-container']}>
-                                <h5>Forros em EPS</h5>
-                                <p>Aplicação em diversos forros</p>
                             </div>
                         </Link>
                     </div>

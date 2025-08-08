@@ -36,15 +36,15 @@ export default function ImageCarousel({ images, alt, width = 1600, height = 800 
     return (
         <>
             <div className={styles['carousel-container']}>
-                <div className={styles['image-container']}>
+                <div className={styles['main-image-container']}>
                     <Image 
                         src={images[currentIndex]} 
                         alt={`${alt} - Imagem ${currentIndex + 1}`}
                         width={width}
                         height={height}
                         style={{
-                            width: `${width}px`,
-                            height: `${height}px`,
+                            width: '100%',
+                            height: '100%',
                             objectFit: 'cover'
                         }}
                     />
@@ -75,19 +75,41 @@ export default function ImageCarousel({ images, alt, width = 1600, height = 800 
                                 <TbChevronRight size={32} />
                             </button>
                             
-                            <div className={styles['indicators']}>
-                                {images.map((_, index) => (
-                                    <button
-                                        key={index}
-                                        className={`${styles['indicator']} ${index === currentIndex ? styles['active'] : ''}`}
-                                        onClick={() => setCurrentIndex(index)}
-                                        aria-label={`Ir para imagem ${index + 1}`}
-                                    />
-                                ))}
+                            {/* Contador de imagens */}
+                            <div className={styles['image-counter']}>
+                                {currentIndex + 1} / {images.length}
                             </div>
                         </>
                     )}
                 </div>
+                
+                {/* Grid de miniaturas */}
+                {images.length > 1 && (
+                    <div className={styles['thumbnails-container']}>
+                        <div className={styles['thumbnails-grid']}>
+                            {images.map((image, index) => (
+                                <button
+                                    key={index}
+                                    className={`${styles['thumbnail']} ${index === currentIndex ? styles['thumbnail-active'] : ''}`}
+                                    onClick={() => setCurrentIndex(index)}
+                                    aria-label={`Ir para imagem ${index + 1}`}
+                                >
+                                    <Image
+                                        src={image}
+                                        alt={`${alt} - Miniatura ${index + 1}`}
+                                        width={120}
+                                        height={80}
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover'
+                                        }}
+                                    />
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
 
             <FullscreenImage
