@@ -1,14 +1,13 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import styles from './main-nav.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/app/views/ui/button/button';
-import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin } from 'react-icons/bs';
+import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
-import { BsWhatsapp } from 'react-icons/bs';
 import menuData from '@/app/data/menu-data.json';
 
 // Define the types for your menu data for better type safety
@@ -29,6 +28,40 @@ interface Category {
     image?: string;
     products: Product[];
 }
+
+// Type assertion para o menuData
+const typedMenuData = menuData as Category[];
+
+// Componente de imagem personalizado para o submenu
+const SubmenuImage = ({ src, alt }: { src: string; alt: string }) => {
+    const [isLoading, setIsLoading] = useState(true);
+    const [hasError, setHasError] = useState(false);
+
+    return (
+        <div className={styles['submenu-image-container']}>
+            {(isLoading || hasError) && (
+                <div className={styles['submenu-image-placeholder']} />
+            )}
+            {!hasError && (
+                <Image
+                    src={src || '/img/placeholder.jpg'}
+                    alt={alt}
+                    width={120}
+                    height={85}
+                    className={styles['submenu-image']}
+                    onLoad={() => setIsLoading(false)}
+                    onError={() => {
+                        setIsLoading(false);
+                        setHasError(true);
+                    }}
+                    style={{ opacity: isLoading ? 0 : 1 }}
+                    priority={false}
+                    loading="lazy"
+                />
+            )}
+        </div>
+    );
+};
 
 function MainNav() {
     const submenuRef = useRef<HTMLDivElement | null>(null);
@@ -200,7 +233,7 @@ function MainNav() {
                         </div>
                         <div className={styles['main-nav-links']}>
                             <ul>
-                                {(menuData as Category[]).map((item, index) => (
+                                {typedMenuData.map((item, index) => (
                                     <Link
                                         key={item.id}
                                         href={`/categorias/${item.slug}`}
@@ -232,18 +265,13 @@ function MainNav() {
                         ref={submenuRef}
                         onMouseEnter={handleMouseEnterSubmenu}
                         onMouseLeave={handleMouseLeaveSubmenu}
-                        data-category={activeSubmenu !== null ? (menuData[activeSubmenu] as Category).slug.replace(/-/g, '') : ''}
+                        data-category={activeSubmenu !== null ? typedMenuData[activeSubmenu].slug.replace(/-/g, '') : ''}
                     >
                         {activeSubmenu !== null &&
-                            (menuData[activeSubmenu] as Category).products.map((product, index) => (
+                            typedMenuData[activeSubmenu].products.map((product, index) => (
                                 <div key={product.id} className={styles['sub-menu-item']}>
-                                    <Link href={`/categorias/${(menuData[activeSubmenu] as Category).slug}/${product.slug}`}>
-                                        <Image
-                                            src={product.image || '/img/placeholder.jpg'}
-                                            alt={product.name}
-                                            width={120}
-                                            height={85}
-                                        />
+                                    <Link href={`/categorias/${typedMenuData[activeSubmenu].slug}/${product.slug}`}>
+                                        <SubmenuImage src={product.image || '/img/placeholder.jpg'} alt={product.name} />
                                         <p>{product.name}</p>
                                     </Link>
                                 </div>
