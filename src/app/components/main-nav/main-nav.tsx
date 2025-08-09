@@ -98,7 +98,7 @@ function MainNav() {
     const handleMouseLeaveLi = () => {
         hideTimeoutRef.current = setTimeout(() => {
             hideSubmenu();
-        }, 200);
+        }, 1000);
     };
 
     const handleMouseEnterSubmenu = () => {
