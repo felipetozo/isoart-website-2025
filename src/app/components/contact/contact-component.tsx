@@ -281,7 +281,7 @@ function ContactComponent() {
 
                     {/* Endereços */}
                     <div className={styles['contact-component-enderecos']}>
-                        <span className={styles['contact-component-endereco']}>
+                        <div className={styles['contact-component-endereco']}>
                             <Image
                                 src={'/img/geral/endereco-01-01-optimized.webp'}
                                 alt="Fábrica 1 Isoart"
@@ -289,7 +289,7 @@ function ContactComponent() {
                                 height={700}
                                 loading='lazy'
                             />
-                            <span className={styles['contact-component-endereco-info']}>
+                            <div className={styles['contact-component-endereco-info']}>
                                 <h5>Fábrica 1 (Matriz)</h5>
                                 <a href="tel:554532311699">
                                     <MdOutlinePhoneInTalk />
@@ -310,70 +310,70 @@ function ContactComponent() {
                                         Santa Tereza do Oeste - Paraná
                                     </p>
                                 </a>
-                            </span>
-                        </span>
-                        <span className={styles['contact-component-endereco']}>
+                            </div>
+                        </div>
+                        <div className={styles['contact-component-endereco']}>
                             <Image
                                 src={'/img/geral/endereco-02-01.avif'}
-                                alt="Fábrica 1 Isoart"
+                                alt="Fábrica 2 Isoart"
                                 width={1000}
                                 height={700}
                                 loading='lazy'
                             />
-                            <span className={styles['contact-component-endereco-info']}>
+                            <div className={styles['contact-component-endereco-info']}>
                                 <h5>Fábrica 2</h5>
-                                <a href="tel:554532311699">
+                                <a href="tel:+554934332025">
                                     <MdOutlinePhoneInTalk />
-                                    +55 45 3231 1699
+                                    +55 49 3433 2025
                                 </a>
-                                <a href="https://wa.me/5545991339642">
+                                <a href="https://wa.me/5549999638373" target="_blank" rel="noopener noreferrer">
                                     <BsWhatsapp />
-                                    +55 45 99133 9642
+                                    +55 49 99963 8373
                                 </a>
                                 <a href="mailto:contato@isoart.com.br">
                                     <MdOutlineMarkEmailUnread />
                                     contato@isoart.com.br
                                 </a>
-                                <a href="https://maps.google.com/?q=Rua+Dorivaldo+Soncela,+1490,+Santa+Tereza+do+Oeste,+Paraná" target="_blank" rel="noopener noreferrer">
+                                <a href="https://maps.google.com/?q=Rodovia+BR+282+KM+496,+Xanxerê,+Santa+Catarina" target="_blank" rel="noopener noreferrer">
                                   <MdLocationOn />
                                     <p>
-                                        Rua Dorivaldo Soncela, 1490<br />
-                                        Santa Tereza do Oeste - Paraná
+                                        Rodovia BR 282 - KM 496<br />
+                                        Xanxerê - Santa Catarina
                                     </p>
                                 </a>
-                            </span>
-                        </span>
-                        <span className={styles['contact-component-endereco']}>
+                            </div>
+                        </div>
+                        <div className={styles['contact-component-endereco']}>
                             <Image
                                 src={'/img/geral/endereco-03-01.avif'}
-                                alt="Fábrica 1 Isoart"
+                                alt="Fábrica 3 Isoart"
                                 width={1000}
                                 height={700}
                                 loading='lazy'
                             />
-                            <span className={styles['contact-component-endereco-info']}>
-                                <h5>Fábrica 1 (Matriz)</h5>
-                                <a href="tel:554532311699">
+                            <div className={styles['contact-component-endereco-info']}>
+                                <h5>Fábrica 3</h5>
+                                <a href="tel:+554530111000">
                                     <MdOutlinePhoneInTalk />
-                                    +55 45 3231 1699
+                                    +55 45 3011 1000
                                 </a>
-                                <a href="https://wa.me/5545991339642">
+                                <a href="https://wa.me/5549998260240" target="_blank" rel="noopener noreferrer">
                                     <BsWhatsapp />
-                                    +55 45 99133 9642
+                                    +55 49 99826 0240
                                 </a>
                                 <a href="mailto:contato@isoart.com.br">
                                     <MdOutlineMarkEmailUnread />
                                     contato@isoart.com.br
                                 </a>
-                                <a href="https://maps.google.com/?q=Rua+Dorivaldo+Soncela,+1490,+Santa+Tereza+do+Oeste,+Paraná" target="_blank" rel="noopener noreferrer">
+                                <a href="https://maps.google.com/?q=Rodovia+BR+277+KM+608,+Santa+Tereza+do+Oeste,+Paraná" target="_blank" rel="noopener noreferrer">
                                   <MdLocationOn />
                                     <p>
-                                        Rua Dorivaldo Soncela, 1490<br />
+                                        Rodovia BR 277 - KM 608<br />
                                         Santa Tereza do Oeste - Paraná
                                     </p>
                                 </a>
-                            </span>
-                        </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

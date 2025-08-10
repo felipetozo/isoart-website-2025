@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import menuData from '@/app/data/menu-data.json';
 import SobreEmpresa from '@/app/components/sobre-empresa/sobre-empresa';
-import MainForm from '@/app/components/main-form/main-form';
+import ContactComponent from '@/app/components/contact/contact-component';
 import Button from '@/app/views/ui/button/button';
 import TabbedSection from './tabbed-section';
 import BenefitsSection from '@/app/components/benefits-section/benefits-section';
@@ -275,7 +275,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <TabbedSection tabDescriptions={tabDescriptions} />
 
             <SobreEmpresa />
-            <MainForm />
+            <ContactComponent />
         </div>
     );
 }
