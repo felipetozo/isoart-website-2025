@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
     const sanitizedCity = city.trim();
 
     // Caminho para o arquivo JSON
-    const filePath = path.join(process.cwd(), 'src', 'app', 'data', 'forms', 'mainform-submissions.json');
+            const filePath = path.join(process.cwd(), 'src', 'app', 'data', 'forms', 'form-section-submissions.json');
 
     // Ler o arquivo existente ou criar novo
     let submissionsData;
@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
       estado: sanitizedState,
       cidade: sanitizedCity,
       aceitou_termos: terms,
-      origem: 'componente-mainform',
+                  origem: 'componente-form-section',
       data_hora: dataHora
     };
 

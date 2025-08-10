@@ -1,5 +1,5 @@
 "use client";
-import MainForm from '../components/main-form/main-form';
+import FormSection from '../components/main-form/form-section';
 import Sustentabilidade from '../components/sustentabilidade/sustentabilidade';
 import styles from './page.module.css';
 import { useState, useRef, useEffect } from 'react';
@@ -337,7 +337,7 @@ export default function SobrePage() {
 
       <Sustentabilidade />
 
-      <MainForm />
+              <FormSection />
     </div>
   );
 }
