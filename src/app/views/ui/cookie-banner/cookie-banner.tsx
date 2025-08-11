@@ -1,29 +1,20 @@
 'use client';
 import { useState, useEffect } from 'react';
+import { cookieConsentManager, type CookiePreferences } from '../../../components/cookie-consent/cookie-consent';
 import styles from './cookie-banner.module.css';
-
-interface CookiePreferences {
-    necessary: boolean;
-    analytics: boolean;
-    marketing: boolean;
-    preferences: boolean;
-}
 
 const CookieBanner = () => {
     const [showBanner, setShowBanner] = useState(false);
     const [showPreferences, setShowPreferences] = useState(false);
     const [preferences, setPreferences] = useState<CookiePreferences>({
-        necessary: true, // Sempre true
+        necessary: true,
         analytics: false,
         marketing: false,
         preferences: false
     });
 
     useEffect(() => {
-        // Verificar se já existe consentimento
-        const existingConsent = localStorage.getItem('isoart-cookie-consent');
-        if (!existingConsent) {
-            // Mostrar banner após 1 segundo
+        if (!cookieConsentManager.hasConsent()) {
             const timer = setTimeout(() => setShowBanner(true), 1000);
             return () => clearTimeout(timer);
         }
@@ -37,7 +28,7 @@ const CookieBanner = () => {
             preferences: true
         };
         
-        saveConsent(allAccepted);
+        cookieConsentManager.saveConsent(allAccepted);
         setShowBanner(false);
     };
 
@@ -49,27 +40,18 @@ const CookieBanner = () => {
             preferences: false
         };
         
-        saveConsent(onlyNecessary);
+        cookieConsentManager.saveConsent(onlyNecessary);
         setShowBanner(false);
     };
 
     const handleSavePreferences = () => {
-        saveConsent(preferences);
+        cookieConsentManager.saveConsent(preferences);
         setShowBanner(false);
         setShowPreferences(false);
     };
 
-    const saveConsent = (consent: CookiePreferences) => {
-        localStorage.setItem('isoart-cookie-consent', JSON.stringify(consent));
-        localStorage.setItem('isoart-cookie-consent-date', Date.now().toString());
-        
-        // Aqui você pode adicionar lógica para ativar/desativar serviços
-        // baseado nas preferências do usuário
-        console.log('Preferências de cookies salvas:', consent);
-    };
-
     const togglePreference = (key: keyof CookiePreferences) => {
-        if (key === 'necessary') return; // Não pode ser desabilitado
+        if (key === 'necessary') return;
         
         setPreferences(prev => ({
             ...prev,
@@ -81,7 +63,6 @@ const CookieBanner = () => {
 
     return (
         <>
-            {/* Banner Principal */}
             {!showPreferences && (
                 <div className={styles['cookies-banner']}>
                     <div className={styles['cookies-banner-content']}>
@@ -128,7 +109,6 @@ const CookieBanner = () => {
                 </div>
             )}
 
-            {/* Modal de Preferências */}
             {showPreferences && (
                 <div className={styles['modal-overlay']}>
                     <div className={styles['modal']}>

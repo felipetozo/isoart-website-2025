@@ -21,20 +21,13 @@ const solucoes = [
     },
     {
         id: 3,
-        title: 'Forros Inovadores',
-        description: 'Forros em EPS/PIR projetados para isolamento térmico e acústico. Ideais para residências, comércios e indústrias, garantem maior conforto ambiental e acabamento sofisticado.',
-        image: '/img/SolucoesGrid/forros.avif',
-        link: '/categorias/forros'
-    },
-    {
-        id: 4,
         title: 'Molduras Decorativas',
         description: 'Molduras em EPS para portas, janelas, beirais e mais. Leves, duráveis e de fácil instalação, são ideais para acabamentos decorativos em ambientes internos e externos.',
         image: '/img/SolucoesGrid/molduras.avif',
         link: '/categorias/molduras-decorativas'
     },
     {
-        id: 5,
+        id: 4,
         title: 'Embalagens em EPS',
         description: 'Embalagens personalizadas em EPS para proteção de produtos durante transporte. Leves, resistentes e versáteis, atendem às necessidades de diversos setores industriais.',
         image: '/img/SolucoesGrid/embalagens.avif',
