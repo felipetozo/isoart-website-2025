@@ -135,7 +135,6 @@
 .category-products-grid-img img {
     width: 100%;
     border-radius: 0.1rem;
-    mix-blend-mode: multiply;
 }
 
 /* Responsive Design */
