@@ -27,9 +27,7 @@ export default function Sustentabilidade() {
           <p className={styles['sustentabilidade-aviso-text']}>
             A Isoart reutiliza integralmente os resíduos gerados internamente e
             conta com dois centros de reciclagem próprios, garantindo o correto
-            reaproveitamento do material. Além disso, promove logística reversa,
-            coletando e comprando EPS de cooperativas, prefeituras e redes varejistas,
-            reforçando seu compromisso com a sustentabilidade e a economia circular.
+            reaproveitamento do material.
           </p>
         </div>
       </div>
