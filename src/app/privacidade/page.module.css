@@ -1,13 +1,15 @@
 .privacidade-hero-section {
     width: 100%;
     background-color: rgba(241, 244, 247, 1);
-    padding: 15rem 0 5rem 0;
+    padding: 15rem 0 0 0;
 }
 
 .privacidade-hero-wrapper {
     width: 90%;
     max-width: 800px;
     margin: 0 auto;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+    padding-bottom: 2.5rem;
 }
 
 .privacidade-hero-wrapper h3 {
@@ -31,7 +33,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding-bottom: 5rem;
+    padding: 2.5rem 0 5rem 0;
 }
 
 .privacidade-content h4 {
@@ -41,4 +43,8 @@
 
 .privacidade-content p {
     color: rgba(17, 17, 17, 0.675);
+}
+
+.privacidade-content li {
+    line-height: 2;
 }
