@@ -5,6 +5,7 @@ import MainNav from "./components/main-nav/main-nav";
 import Footer from "./components/footer/footer";
 import AnalyticsProvider from "./components/analytics-provider/analytics-provider";
 import { LenisProvider } from "./components/lenis-provider";
+import CookieBanner from "./components/cookie-banner/cookie-banner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -73,8 +74,6 @@ export default function RootLayout({
             }
           `
         }} />
-        
-
       </head>
       <body>
         <LenisProvider>
@@ -82,6 +81,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
           <AnalyticsProvider />
+          <CookieBanner />
         </LenisProvider>
       </body>
     </html>

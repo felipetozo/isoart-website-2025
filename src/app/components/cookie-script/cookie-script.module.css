@@ -1,0 +1,136 @@
+/* Estilos personalizados para o banner de cookies Free Privacy Policy */
+
+/* Banner principal */
+:global(.cc-nb) {
+    background-color: rgba(24, 74, 100, 1) !important;
+    border: 2px solid rgba(24, 74, 100, 0.8) !important;
+    box-shadow: 0 4px 20px rgba(24, 74, 100, 0.3) !important;
+}
+
+/* Texto do banner */
+:global(.cc-nb-title) {
+    color: rgba(241, 244, 247, 1) !important;
+    font-weight: 600 !important;
+}
+
+:global(.cc-nb-text) {
+    color: rgba(241, 244, 247, 0.9) !important;
+}
+
+/* Botões */
+:global(.cc-nb-accept) {
+    background-color: rgba(24, 74, 100, 1) !important;
+    border: 2px solid rgba(241, 244, 247, 1) !important;
+    color: rgba(241, 244, 247, 1) !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+:global(.cc-nb-accept:hover) {
+    background-color: rgba(241, 244, 247, 1) !important;
+    color: rgba(24, 74, 100, 1) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 15px rgba(24, 74, 100, 0.4) !important;
+}
+
+:global(.cc-nb-reject) {
+    background-color: transparent !important;
+    border: 2px solid rgba(241, 244, 247, 0.7) !important;
+    color: rgba(241, 244, 247, 0.9) !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+:global(.cc-nb-reject:hover) {
+    background-color: rgba(241, 244, 247, 0.1) !important;
+    border-color: rgba(241, 244, 247, 1) !important;
+    color: rgba(241, 244, 247, 1) !important;
+    transform: translateY(-2px) !important;
+}
+
+:global(.cc-nb-settings) {
+    background-color: transparent !important;
+    border: 2px solid rgba(241, 244, 247, 0.7) !important;
+    color: rgba(241, 244, 247, 0.9) !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+:global(.cc-nb-settings:hover) {
+    background-color: rgba(241, 244, 247, 0.1) !important;
+    border-color: rgba(241, 244, 247, 1) !important;
+    color: rgba(241, 244, 247, 1) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Modal de preferências */
+:global(.cc-modal) {
+    background-color: rgba(24, 74, 100, 0.95) !important;
+    border: 2px solid rgba(241, 244, 247, 0.3) !important;
+}
+
+:global(.cc-modal-header) {
+    background-color: rgba(24, 74, 100, 1) !important;
+    border-bottom: 1px solid rgba(241, 244, 247, 0.2) !important;
+}
+
+:global(.cc-modal-title) {
+    color: rgba(241, 244, 247, 1) !important;
+}
+
+:global(.cc-modal-close) {
+    color: rgba(241, 244, 247, 0.8) !important;
+    transition: color 0.3s ease !important;
+}
+
+:global(.cc-modal-close:hover) {
+    color: rgba(241, 244, 247, 1) !important;
+}
+
+/* Toggles de preferências */
+:global(.cc-toggle) {
+    background-color: rgba(241, 244, 247, 0.3) !important;
+}
+
+:global(.cc-toggle.active) {
+    background-color: rgba(24, 74, 100, 1) !important;
+}
+
+:global(.cc-toggle-handle) {
+    background-color: rgba(241, 244, 247, 1) !important;
+}
+
+/* Botões do modal */
+:global(.cc-modal-footer .cc-btn) {
+    background-color: rgba(24, 74, 100, 1) !important;
+    border: 2px solid rgba(241, 244, 247, 1) !important;
+    color: rgba(241, 244, 247, 1) !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+:global(.cc-modal-footer .cc-btn:hover) {
+    background-color: rgba(241, 244, 247, 1) !important;
+    color: rgba(24, 74, 100, 1) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 15px rgba(24, 74, 100, 0.4) !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    :global(.cc-nb) {
+        padding: 1rem !important;
+    }
+    
+    :global(.cc-nb-buttons) {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+    
+    :global(.cc-nb-accept),
+    :global(.cc-nb-reject),
+    :global(.cc-nb-settings) {
+        width: 100% !important;
+        text-align: center !important;
+    }
+}
