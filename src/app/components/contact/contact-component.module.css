@@ -148,9 +148,9 @@
         justify-content: flex-end;
     }
 
-    .contact-component-row,
-    .contact-component-endereco {
+    .contact-component-row {
         flex-direction: row;
+        align-items: stretch;
     }
 
     .contact-component-content-row {
@@ -164,7 +164,15 @@
 
     .contact-component-enderecos {
         width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     } 
+
+    .contact-component-endereco {
+        flex-direction: row;
+        flex: 1;
+    }
 
     .contact-component-endereco img,
     .contact-component-endereco-info {
