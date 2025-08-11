@@ -1,280 +1,246 @@
-# 🌟 Isoart Website 2025
+# 🌟 ISOART Website 2025
 
-Site institucional da Isoart - Especialistas em soluções térmicas com EPS e PIR para construção civil, embalagens e isolamento.
+Website institucional moderno da ISOART - Indústria de Produtos Térmicos e Construtivos LTDA, desenvolvido com Next.js 14, TypeScript e design responsivo.
 
 ## 🚀 Status do Projeto
 
-- ✅ **Build Funcionando**: Deploy na Vercel operacional
-- ✅ **Performance Otimizada**: PageSpeed 99/100
-- ✅ **LCP Otimizado**: Largest Contentful Paint otimizado
-- ✅ **Arquivo ZIP**: `isoart-02.zip` criado para hospedagem
-- ✅ **Menu Mobile**: Funcionando corretamente
+### ✅ **Implementado e Funcionando**
+- **Estrutura base** Next.js 14 com App Router
+- **Design responsivo** com CSS Modules
+- **Sistema de navegação** principal e institucional
+- **Páginas principais**: Home, Empresa, Soluções, Contato
+- **Página de Política de Privacidade** com conteúdo completo
+- **Sistema de cookies personalizado** com banner LGPD compliant
+- **Transições globais** CSS (0.4s ease) com exceções para animações
+- **Layout responsivo** com componentes organizados
+- **Integração com Lenis** para scroll suave
+- **Estrutura de pastas** organizada e profissional
 
-## 🛠️ Tecnologias
+### 🔄 **Em Desenvolvimento**
+- **Refatoração de CSS** para kebab-case (em andamento)
+- **Otimizações de performance** e SEO
+- **Testes e validações** de funcionalidades
 
-### Core
-- **Next.js 15.3.1** - Framework React com App Router
-- **React 19.0.0** - Biblioteca de interface
-- **TypeScript 5** - Tipagem estática
-- **TailwindCSS 4** - Framework CSS utilitário
+### 📋 **Pendente**
+- **Implementação de analytics** (Google Analytics, Meta Pixel)
+- **Sistema de formulários** avançado
+- **Blog/Notícias** (se necessário)
+- **Deploy em produção**
 
-### Animações e UX
-- **GSAP 3.13.0** - Animações avançadas
-- **Lenis 1.3.4** - Scroll suave
-- **ScrollMagic 2.0.8** - Controle de scroll
-- **Lucide React** - Ícones modernos
-- **React Icons** - Biblioteca de ícones
-- **Tabler Icons** - Ícones adicionais
+## 🏗️ Arquitetura do Projeto
 
-### Analytics e Performance
-- **@vercel/analytics** - Analytics da Vercel
-- **@gsap/react** - Integração GSAP com React
-
-## 📁 Estrutura do Projeto
-
+### **Estrutura de Pastas**
 ```
-isoart-website-2025/
-├── src/
-│   └── app/
-│       ├── components/          # Componentes reutilizáveis
-│       │   ├── hero/           # Slider principal
-│       │   ├── main-nav/       # Navegação
-│       │   ├── footer/         # Rodapé
-│       │   ├── solucoes-grid/  # Grid de soluções
-│       │   ├── sobre-empresa/  # Seção sobre empresa
-│       │   ├── main-form/      # Formulário de contato
-│       │   ├── carrossel-clientes/ # Carrossel de clientes
-│       │   ├── benefits-section/   # Seção de benefícios
-│       │   ├── sustentabilidade/   # Seção sustentabilidade
-│       │   ├── image-carousel/     # Carrossel de imagens
-│       │   ├── fullscreen-image/   # Imagem fullscreen
-│       │   ├── single-image/       # Imagem única
-│       │   ├── analytics-provider/ # Provider de analytics
-│       │   └── lenis-provider.tsx  # Provider de scroll suave
-│       ├── views/ui/           # Componentes UI base
-│       │   ├── button/         # Botões
-│       │   ├── form/           # Campos de formulário
-│       │   └── toast/          # Notificações
-│       ├── data/               # Dados JSON
-│       │   ├── categories/     # Categorias de produtos
-│       │   ├── products/       # Produtos por categoria
-│       │   ├── forms/          # Submissões de formulários
-│       │   ├── menu-data.json  # Dados do menu
-│       │   ├── main-slider-data.json # Dados do slider
-│       │   ├── states.json     # Estados brasileiros
-│       │   └── cities.json     # Cidades brasileiras
-│       ├── api/                # Rotas da API
-│       │   ├── contact/        # Formulário principal
-│       │   ├── contact-page/   # Formulário da página contato
-│       │   ├── states/         # API de estados
-│       │   └── cities/         # API de cidades
-│       ├── categorias/         # Páginas dinâmicas de categorias
-│       │   └── [category]/
-│       │       └── [product]/  # Páginas de produtos
-│       ├── sobre/              # Página sobre
-│       ├── sobre-eps-pir/      # Página sobre EPS/PIR
-│       ├── contato/            # Página de contato
-│       ├── solucoes/           # Página de soluções
-│       ├── hooks/              # Hooks customizados
-│       ├── types/              # Tipos TypeScript
-│       ├── globals.css         # Estilos globais
-│       ├── layout.tsx          # Layout raiz
-│       └── page.tsx            # Página inicial
-├── public/
-│   ├── img/                    # Imagens do site
-│   │   ├── HeroBanners/        # Banners do hero
-│   │   ├── produtos/           # Imagens de produtos
-│   │   ├── geral/              # Imagens gerais
-│   │   ├── parceiros/          # Logos de parceiros
-│   │   ├── fabrica/            # Imagens da fábrica
-│   │   ├── EPS/                # Imagens EPS
-│   │   ├── PIR/                # Imagens PIR
-│   │   ├── incendio/           # Imagens de incêndio
-│   │   └── SolucoesGrid/       # Imagens do grid de soluções
-│   └── icons/                  # Ícones SVG
-└── isoart-02.zip              # Arquivo para hospedagem
+src/
+├── app/                          # App Router Next.js
+│   ├── components/               # Componentes reutilizáveis
+│   │   ├── main-nav/            # Navegação principal
+│   │   ├── footer/              # Rodapé
+│   │   ├── analytics-provider/  # Provedor de analytics
+│   │   ├── lenis-provider/      # Provedor de scroll suave
+│   │   └── cookie-consent/      # Lógica de gerenciamento de cookies
+│   ├── views/                   # Componentes de UI
+│   │   └── ui/
+│   │       └── cookie-banner/   # Banner de cookies (UI)
+│   ├── globals.css              # Estilos globais
+│   └── layout.tsx               # Layout principal
 ```
 
-## 📄 Páginas
+### **Organização de Responsabilidades**
+- **`components/`** - Lógica e funcionalidade
+- **`views/ui/`** - Componentes visuais e estilos
+- **Separação clara** entre lógica de negócio e apresentação
 
-### Páginas Principais
-- **Home** (`/`) - Página inicial com hero, sobre empresa, grid de soluções e formulário
-- **Soluções** (`/solucoes`) - Página dedicada às soluções da empresa
-- **Sobre** (`/sobre`) - Página sobre a empresa
-- **Sobre EPS/PIR** (`/sobre-eps-pir`) - Informações sobre materiais
-- **Contato** (`/contato`) - Página de contato
+## 🍪 Sistema de Cookies
 
-### Páginas Dinâmicas
-- **Categorias** (`/categorias/[category]`) - Páginas de categorias de produtos
-- **Produtos** (`/categorias/[category]/[product]`) - Páginas individuais de produtos
+### **Implementação Personalizada**
+- **Banner customizado** com tema ISOART
+- **Gerenciador de consentimento** robusto e escalável
+- **LGPD compliant** desde o primeiro dia
+- **Preferências granulares** por categoria:
+  - Cookies Essenciais (sempre ativos)
+  - Cookies de Analytics
+  - Cookies de Marketing
+  - Cookies de Preferências
 
-### Categorias Disponíveis
-- **Construção Civil** - Blocos, chapas, flocos, lajes
-- **Embalagens** - Embalagens e pérolas
-- **Forros** - Dunas e Paris
-- **Molduras Decorativas** - Beiral, colunas, muros, paredes, portas
-- **Telhas e Painéis** - Câmara frigorífica, divisória, fachada, sala limpa, telhas térmicas
-
-## ⚡ Otimizações de Performance
-
-### LCP (Largest Contentful Paint)
-- ✅ **CSS Crítico Inline** - Estilos essenciais carregados inline
-- ✅ **Preload de Imagens** - Imagens críticas pré-carregadas
-- ✅ **fetchPriority="high"** - Prioridade alta para imagens LCP
-- ✅ **Fonts Otimizadas** - `display: "swap"` e `preload: true`
-
-### Recursos Críticos
-- ✅ **DNS Prefetch** - Google Fonts e recursos externos
-- ✅ **Headers de Segurança** - XSS, Content-Type, Frame Options
-- ✅ **Compressão** - Gzip habilitado
-- ✅ **Cache Otimizado** - Headers de cache configurados
-
-### Build Otimizado
-- ✅ **ESLint Desabilitado** - `--no-lint` no build
-- ✅ **TypeScript Ignorado** - `ignoreBuildErrors: true`
-- ✅ **CSS Otimizado** - `optimizeCss: true`
-
-## 🎨 Design System
-
-### Estrutura de Componentes
-```
-Section → Wrapper → Container → Content → Individual Elements
-```
-
-### Cores Principais
-- **Primária**: `#0f131e` (Azul escuro)
-- **Secundária**: `#f1f4f7` (Branco)
-- **Acento**: `#b8c3cc` (Cinza claro)
-
-### Tipografia
-- **Inter** - Fonte principal (sans-serif)
-- **Red Hat Display** - Fonte secundária (display)
-
-## 🔧 Configurações
-
-### Next.js (`next.config.ts`)
+### **Arquitetura de Cookies**
 ```typescript
-{
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  compress: true,
-  poweredByHeader: false,
-  optimizeCss: true
+// Gerenciador singleton para cookies
+export class CookieConsentManager {
+  - hasConsent(): boolean
+  - getPreferences(): CookiePreferences
+  - saveConsent(preferences: CookiePreferences): void
+  - applyPreferences(preferences: CookiePreferences): void
+  - clearConsent(): void
+  - getConsentStats(): ConsentStats
 }
 ```
 
-### TypeScript (`tsconfig.json`)
-```json
-{
-  "baseUrl": "./src",
-  "paths": { "@/*": ["./*"] },
-  "skipLibCheck": true,
-  "strict": true
-}
-```
+### **Vantagens da Implementação**
+- ✅ **100% personalizado** com tema ISOART
+- ✅ **Performance otimizada** (sem scripts externos)
+- ✅ **Fácil manutenção** e escalabilidade
+- ✅ **Controle total** sobre funcionalidades
+- ✅ **Sem problemas de hidratação** Next.js
 
-### Package Scripts
-```json
-{
-  "dev": "next dev",
-  "build": "next build --no-lint",
-  "start": "next start",
-  "lint": "next lint"
-}
-```
+## 🎨 Sistema de Estilos
 
-## 📊 Métricas de Performance
+### **CSS Modules com Kebab-Case**
+- **Convenção de nomenclatura**: `.component-elemento`
+- **Exemplo**: `.cookies-banner`, `.cookies-banner-content`
+- **Transições globais**: `transition: all 0.4s ease`
+- **Exceções para animações**: GSAP, CSS animations, etc.
 
-### PageSpeed Insights
-- **Performance**: 99/100
-- **Accessibility**: 100/100
-- **Best Practices**: 100/100
-- **SEO**: 100/100
+### **Paleta de Cores ISOART**
+- **Azul principal**: `rgba(0, 32, 96, 1)` (ISOART Blue)
+- **Dourado**: `rgba(255, 215, 0, 1)` (ISOART Gold)
+- **Sem variáveis CSS** - valores RGBA diretos para compatibilidade
 
-### Otimizações Implementadas
-- ✅ **LCP**: 1.2s (otimizado)
-- ✅ **FID**: < 100ms
-- ✅ **CLS**: < 0.1
-- ✅ **FCP**: < 1.5s
+## 🔧 Tecnologias Utilizadas
 
-## 🚀 Deploy
+### **Frontend**
+- **Next.js 14** - Framework React com App Router
+- **TypeScript** - Tipagem estática
+- **CSS Modules** - Estilos modulares e scoped
+- **React 18** - Hooks e funcionalidades modernas
 
-### Vercel (Desenvolvimento)
-- **URL**: [Deploy automático na Vercel]
-- **Branch**: `main`
-- **Build**: `npm run build --no-lint`
+### **Ferramentas de Desenvolvimento**
+- **ESLint** - Linting de código
+- **Prettier** - Formatação automática
+- **Git** - Controle de versão
 
-### Hospedagem (Produção)
-- **Arquivo**: `isoart-02.zip` (47.8 MB)
-- **Status**: ✅ Pronto para distribuição
-- **Conteúdo**: Código fonte completo + assets
+### **Bibliotecas**
+- **Lenis** - Scroll suave e performático
+- **Font Awesome** - Ícones
+- **Google Fonts** - Tipografia (Inter, Red Hat Display)
 
-## 🔄 Correções Recentes
+## 📱 Responsividade
 
-### Build Issues
-- ✅ **Módulos não encontrados** - Resolvido com novo projeto Next.js
-- ✅ **Dependências faltantes** - GSAP, Lenis, Analytics instalados
-- ✅ **ESLint errors** - Desabilitado durante build
-- ✅ **TypeScript errors** - Ignorados durante build
+### **Breakpoints**
+- **Mobile First** - Design mobile-first
+- **Tablet** - Adaptações para tablets
+- **Desktop** - Layout completo para desktop
+- **Flexbox** - Layout flexível e adaptativo
 
-### Performance Issues
-- ✅ **LCP lento** - CSS crítico inline implementado
-- ✅ **Textos pretos** - Cores hex explícitas adicionadas
-- ✅ **Menu mobile** - Fechamento automático corrigido
-- ✅ **Imagens não encontradas** - Paths corrigidos
+### **Componentes Responsivos**
+- **Navegação** - Menu hambúrguer mobile
+- **Grids** - Adaptação automática por breakpoint
+- **Imagens** - Otimização para diferentes dispositivos
 
-### UX Issues
-- ✅ **Menu mobile persistente** - Função `closeMobileMenu` adicionada
-- ✅ **Navegação** - Links funcionando corretamente
-- ✅ **Formulários** - Validação e submissão funcionando
+## 🚀 Como Executar
 
-## 📝 Últimas Atualizações
+### **Pré-requisitos**
+- Node.js 18+ 
+- npm ou yarn
 
-### v0.1.0 (Agosto 2024)
-- ✅ **Arquivo ZIP** criado para hospedagem
-- ✅ **Performance** otimizada (99/100 PageSpeed)
-- ✅ **LCP** otimizado com CSS crítico
-- ✅ **Menu mobile** corrigido
-- ✅ **Build** funcionando na Vercel
-- ✅ **Deploy** automático configurado
-
-### Próximas Melhorias
-- 🔄 **PWA** - Progressive Web App
-- 🔄 **SEO** - Meta tags dinâmicas
-- 🔄 **Analytics** - Eventos customizados
-- 🔄 **Acessibilidade** - ARIA labels
-
-## 🛠️ Desenvolvimento
-
-### Instalação
+### **Instalação**
 ```bash
+# Clonar repositório
+git clone [URL_DO_REPO]
+
+# Instalar dependências
 npm install
-```
 
-### Desenvolvimento
-```bash
+# Executar em desenvolvimento
 npm run dev
-```
 
-### Build
-```bash
+# Build para produção
 npm run build
+
+# Executar build de produção
+npm start
 ```
 
-### Deploy
-```bash
-git add .
-git commit -m "feat: nova funcionalidade"
-git push origin main
+### **Scripts Disponíveis**
+- `npm run dev` - Servidor de desenvolvimento
+- `npm run build` - Build de produção
+- `npm start` - Executar build de produção
+- `npm run lint` - Verificar código com ESLint
+
+## 📊 Analytics e Tracking
+
+### **Status Atual**
+- **Não implementado** - Google Analytics, Meta Pixel ou outros serviços
+- **Preparado para implementação** - Sistema de cookies já configurado
+- **Estrutura pronta** para integração de analytics
+
+### **Próximos Passos para Analytics**
+1. **Implementar Google Analytics 4** (GA4)
+2. **Configurar Meta Pixel** para Facebook/Instagram
+3. **Integrar com sistema de cookies** existente
+4. **Configurar eventos personalizados** para conversões
+
+## 🔒 LGPD e Privacidade
+
+### **Conformidade Implementada**
+- **Banner de cookies** obrigatório
+- **Consentimento granular** por categoria
+- **Armazenamento seguro** no localStorage
+- **Versionamento** das preferências
+- **Auditoria completa** das escolhas do usuário
+
+### **Política de Privacidade**
+- **Página dedicada** com conteúdo completo
+- **Informações sobre cookies** detalhadas
+- **Direitos do usuário** claramente definidos
+- **Contato para dúvidas** disponível
+
+## 🎯 Próximas Implementações
+
+### **Prioridade Alta**
+- [ ] **Google Analytics 4** - Implementar tracking básico
+- [ ] **Meta Pixel** - Tracking para redes sociais
+- [ ] **Finalizar refatoração CSS** - Converter para kebab-case
+- [ ] **Otimizações de SEO** - Meta tags, sitemap, etc.
+
+### **Prioridade Média**
+- [ ] **Sistema de formulários** - Validação e envio
+- [ ] **Blog/Notícias** - Sistema de conteúdo dinâmico
+- [ ] **PWA** - Progressive Web App
+- [ ] **Testes automatizados** - Jest, Testing Library
+
+### **Prioridade Baixa**
+- [ ] **Internacionalização** - Múltiplos idiomas
+- [ ] **Dashboard admin** - Gerenciamento de conteúdo
+- [ ] **API REST** - Backend para funcionalidades avançadas
+
+## 🤝 Contribuição
+
+### **Padrões de Código**
+- **TypeScript** para tipagem
+- **CSS Modules** com kebab-case
+- **Componentes funcionais** React
+- **Hooks personalizados** quando necessário
+- **ESLint + Prettier** para formatação
+
+### **Estrutura de Commits**
+```
+feat: adicionar nova funcionalidade
+fix: corrigir bug
+refactor: refatorar código
+style: alterações de estilo
+docs: documentação
+test: testes
 ```
 
 ## 📞 Suporte
 
-Para dúvidas ou problemas:
-- **Desenvolvedor**: Felipe Tozo
-- **Cliente**: Isoart
-- **Status**: ✅ Produção
+### **Equipe de Desenvolvimento**
+- **Desenvolvedor Principal**: [Nome]
+- **Designer**: [Nome]
+- **Cliente**: ISOART - Indústria de Produtos Térmicos e Construtivos LTDA
+
+### **Contato**
+- **Email**: [email@isoart.com.br]
+- **Website**: [www.isoart.com.br]
+- **Telefone**: [Telefone]
+
+## 📄 Licença
+
+Este projeto é propriedade da **ISOART - Indústria de Produtos Térmicos e Construtivos LTDA**.
 
 ---
 
-**Isoart Website 2025** - Soluções em EPS e PIR para Construção Civil 🏗️
+**Última atualização**: Janeiro 2025  
+**Versão**: 1.0.0  
+**Status**: Em desenvolvimento ativo
