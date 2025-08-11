@@ -105,6 +105,27 @@ html.lenis body {
   box-sizing: border-box;
 }
 
+/* Transição global para todos os elementos */
+* {
+  transition: all 0.4s ease;
+}
+
+/* Exceções para elementos com animações específicas */
+.transition-all,
+[class*="animate-"],
+[class*="gsap-"],
+[data-gsap],
+[data-animation],
+.animate,
+.animation,
+.gsap,
+/* Elementos com animações CSS */
+[style*="animation"],
+/* Elementos com transições específicas */
+[style*="transition"] {
+  transition: none !important;
+}
+
 /* Transições otimizadas apenas onde necessário */
 .transition-all {
   transition: all 0.2s ease;
