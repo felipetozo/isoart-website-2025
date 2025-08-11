@@ -31,7 +31,7 @@
 }
 
 .primary:hover:not(.disabled) {
-    background-color: rgba(24, 74, 100, 1);
+    background-color: rgba(16, 46, 65, 1);
     border: 1px solid rgba(25, 129, 176, 0.5);
     color: rgba(241, 244, 247, 1);
 }
