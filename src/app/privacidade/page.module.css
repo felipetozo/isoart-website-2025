@@ -1,0 +1,44 @@
+.privacidade-hero-section {
+    width: 100%;
+    background-color: rgba(241, 244, 247, 1);
+    padding: 15rem 0 5rem 0;
+}
+
+.privacidade-hero-wrapper {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.privacidade-hero-wrapper h3 {
+    color: rgba(146, 151, 120, 1);
+}
+
+.privacidade-content-section {
+    width: 100%;
+    background-color: rgba(241, 244, 247, 1);
+}
+
+.privacidade-content-wrapper {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.privacidade-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 5rem;
+}
+
+.privacidade-content h4 {
+    color: rgba(146, 151, 120, 1);
+    margin-bottom: -1rem;
+}
+
+.privacidade-content p {
+    color: rgba(17, 17, 17, 0.675);
+}
