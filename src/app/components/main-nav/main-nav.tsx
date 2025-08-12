@@ -8,6 +8,7 @@ import Image from 'next/image';
 import Button from '@/app/views/ui/button/button';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
+import { IoChevronBack } from 'react-icons/io5';
 import menuData from '@/app/data/menu-data.json';
 
 // Define the types for your menu data for better type safety
@@ -63,12 +64,15 @@ const SubmenuImage = ({ src, alt }: { src: string; alt: string }) => {
     );
 };
 
+
+
 function MainNav() {
     const submenuRef = useRef<HTMLDivElement | null>(null);
     const mobileMenuRef = useRef<HTMLDivElement | null>(null);
     const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
     const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isLanguageExpanded, setIsLanguageExpanded] = useState(false);
     const iconRef = useRef<HTMLDivElement | null>(null);
 
     const showSubmenu = (index: number) => {
@@ -206,13 +210,29 @@ function MainNav() {
                             <span className={styles['sr-only']}>LinkedIn</span>
                         </Link>
                     </div>
-                    <div className={styles['institutional-nav-items']}>
-                        <ul>
-                            <li><Link href="/sobre">Sobre</Link></li>
-                            <li><Link href="/solucoes">Soluções</Link></li>
-                            <li><Link href="/sobre-eps-pir">Sobre PIR e EPS</Link></li>
-                            <li><Link href="/contato">Contato</Link></li>
-                        </ul>
+                    <div className={styles['institucional-nav-right']}>
+                        <div className={styles['institutional-nav-items']}>
+                            <ul>
+                                <li><Link href="/sobre">Sobre</Link></li>
+                                <li><Link href="/solucoes">Soluções</Link></li>
+                                <li><Link href="/sobre-eps-pir">Sobre PIR e EPS</Link></li>
+                                <li><Link href="/contato">Contato</Link></li>
+                            </ul>
+                        </div>
+                        <div 
+                            className={`${styles['language-selector-wrapper']} ${isLanguageExpanded ? styles['expanded'] : ''}`}
+                            onClick={() => setIsLanguageExpanded(!isLanguageExpanded)}
+                        >
+                            <IoChevronBack />
+                            <span className={styles['language-flag']}>🇧🇷</span>
+                            
+                            {isLanguageExpanded && (
+                                <div className={styles['language-options']}>
+                                    <span className={styles['language-flag']}>🇺🇸</span>
+                                    <span className={styles['language-flag']}>🇪🇸</span>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </nav>

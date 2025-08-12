@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "solutions": "Soluções",
+    "contact": "Contato"
+  },
+  "home": {
+    "hero": {
+      "title": "Isoart - Soluções em EPS e PIR para Construção Civil",
+      "description": "Especialistas em soluções térmicas com EPS e PIR para construção civil, embalagens e isolamento. Telhas, forros, molduras e mais."
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 ISOART. Todos os direitos reservados."
+  },
+  "common": {
+    "buttons": {
+      "contact": "Entre em contato",
+      "requestQuote": "Solicite um orçamento",
+      "learnMore": "Saiba mais"
+    },
+    "sections": {
+      "benefits": "Benefícios",
+      "characteristics": "Características",
+      "applications": "Aplicações",
+      "aboutCompany": "Sobre a Empresa"
+    }
+  }
+}

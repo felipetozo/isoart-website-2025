@@ -11,6 +11,7 @@
 .institutional-nav-section {
     width: 100%;
     display: none;
+    flex-direction: row;
     padding: 1rem 0 0.5rem 0;
 }
 
@@ -28,6 +29,12 @@
     font-family: var(--font-redhat);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+}
+
+.institucional-nav-right {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
 
 .institutional-nav-items {
@@ -54,6 +61,8 @@
     align-items: center;
 }
 
+
+
 .institutional-nav-social {
     display: flex;
     flex-direction: row;
@@ -67,6 +76,19 @@
 
 .institutional-nav-social svg:hover {
     color: rgba(241, 244, 247, 1);
+}
+
+/* Language selector */
+.language-selector-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(241, 244, 247, 1);
+    border: 1px solid rgba(241, 244, 247, 0.1);
+    background-color: rgba(241, 244, 247, 0.025);
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.5rem;
 }
 
 /* Main Nav */
@@ -300,7 +322,7 @@
 
 @media (min-width:1200px) {
     .institutional-nav-section {
-        display: block;
+        display: flex;
     }
 
     .main-nav-wrapper {
@@ -407,4 +429,57 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+/* Seletor de Idiomas */
+.institutional-nav-language-selector {
+    display: flex;
+    align-items: center;
+}
+
+.institucional-nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.language-selector-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.language-selector-wrapper.expanded {
+    background-color: rgba(17, 17, 17, 0.50);
+    border: 1px solid rgba(241, 244, 247, 0.05);
+    padding: 0.5rem 1rem;
+}
+
+.language-flag {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.language-options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1rem;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

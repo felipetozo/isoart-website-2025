@@ -15,6 +15,7 @@ Website institucional moderno da ISOART - Indústria de Produtos Térmicos e Con
 - **Layout responsivo** com componentes organizados
 - **Integração com Lenis** para scroll suave
 - **Estrutura de pastas** organizada e profissional
+- **Sistema de internacionalização (i18n)** com suporte a 3 idiomas (pt-BR, en, es)
 
 ### 🔄 **Em Desenvolvimento**
 - **Refatoração de CSS** para kebab-case (em andamento)
@@ -26,6 +27,7 @@ Website institucional moderno da ISOART - Indústria de Produtos Térmicos e Con
 - **Sistema de formulários** avançado
 - **Blog/Notícias** (se necessário)
 - **Deploy em produção**
+- **Implementação completa das rotas multilíngue** (estrutura base já criada)
 
 ## 🏗️ Arquitetura do Projeto
 
@@ -44,12 +46,45 @@ src/
 │   │       └── cookie-banner/   # Banner de cookies (UI)
 │   ├── globals.css              # Estilos globais
 │   └── layout.tsx               # Layout principal
+├── data/                         # Dados e conteúdo
+│   ├── locales/                  # Traduções multilíngue
+│   │   ├── pt-BR.json           # Português (padrão)
+│   │   ├── en.json              # Inglês
+│   │   └── es.json              # Espanhol
+│   ├── categories/               # Categorias de produtos
+│   ├── products/                 # Produtos individuais
+│   └── menu-data.json           # Estrutura do menu
+└── lib/                          # Utilitários e configurações
+    └── i18n.ts                   # Configuração de internacionalização
 ```
 
 ### **Organização de Responsabilidades**
 - **`components/`** - Lógica e funcionalidade
 - **`views/ui/`** - Componentes visuais e estilos
 - **Separação clara** entre lógica de negócio e apresentação
+
+## 🌍 Sistema de Internacionalização (i18n)
+
+### **Implementação Multilíngue**
+- **3 idiomas suportados**: Português (pt-BR), Inglês (en), Espanhol (es)
+- **Estrutura organizada** em `/src/app/data/locales/`
+- **Fallback automático** para português em caso de erro
+- **Traduções centralizadas** em arquivos JSON organizados
+- **Sistema escalável** para adicionar novos idiomas facilmente
+
+### **Arquivos de Tradução**
+```
+src/app/data/locales/
+├── pt-BR.json          # Português (padrão)
+├── en.json             # Inglês
+└── es.json             # Espanhol
+```
+
+### **Configuração i18n**
+- **Utilitários** em `/src/app/lib/i18n.ts`
+- **Validação** de idiomas suportados
+- **Detecção automática** do idioma do navegador
+- **Importação dinâmica** das traduções
 
 ## 🍪 Sistema de Cookies
 
@@ -104,6 +139,12 @@ export class CookieConsentManager {
 - **CSS Modules** - Estilos modulares e scoped
 - **React 18** - Hooks e funcionalidades modernas
 
+### **Internacionalização (i18n)**
+- **Sistema nativo Next.js 15** - Suporte a rotas multilíngue
+- **Arquivos JSON** - Traduções organizadas por idioma
+- **Fallback automático** - Português como idioma padrão
+- **3 idiomas suportados**: pt-BR, en, es
+
 ### **Ferramentas de Desenvolvimento**
 - **ESLint** - Linting de código
 - **Prettier** - Formatação automática
@@ -149,6 +190,18 @@ npm run build
 
 # Executar build de produção
 npm start
+```
+
+### **Build e Deploy**
+```bash
+# Build de produção (sem linting)
+npm run build
+
+# Build com validação de tipos
+npm run build:check
+
+# Deploy (quando configurado)
+npm run deploy
 ```
 
 ### **Scripts Disponíveis**
