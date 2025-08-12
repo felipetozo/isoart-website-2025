@@ -4,40 +4,31 @@ import { useState, useEffect } from 'react';
 import { useLocale } from '@/app/contexts/locale-context';
 import type { SupportedLocale } from '@/app/lib/i18n';
 
+// Importações estáticas das traduções
+import ptBR from '@/app/data/locales/pt-BR.json';
+import en from '@/app/data/locales/en.json';
+import es from '@/app/data/locales/es.json';
+
+const translations = {
+  'pt-BR': ptBR,
+  'en': en,
+  'es': es
+};
+
 export function useTranslations() {
   const { currentLocale } = useLocale();
-  const [translations, setTranslations] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const loadTranslations = async () => {
-      setIsLoading(true);
-      try {
-        const localeData = await import(`@/app/data/locales/${currentLocale}.json`);
-        setTranslations(localeData.default);
-      } catch (error) {
-        console.error(`Failed to load translations for locale: ${currentLocale}`, error);
-        // Fallback para português em caso de erro
-        try {
-          const fallbackData = await import('@/app/data/locales/pt-BR.json');
-          setTranslations(fallbackData.default);
-        } catch (fallbackError) {
-          console.error('Failed to load fallback translations', fallbackError);
-          setTranslations({});
-        }
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadTranslations();
+    setIsLoading(false);
   }, [currentLocale]);
 
   const t = (key: string, defaultValue?: string) => {
-    if (!translations) return defaultValue || key;
+    const currentTranslations = translations[currentLocale];
+    if (!currentTranslations) return defaultValue || key;
     
     const keys = key.split('.');
-    let value = translations;
+    let value = currentTranslations;
     
     for (const k of keys) {
       if (value && typeof value === 'object' && k in value) {
@@ -52,7 +43,7 @@ export function useTranslations() {
 
   return {
     t,
-    translations,
+    translations: translations[currentLocale],
     isLoading,
     currentLocale
   };
