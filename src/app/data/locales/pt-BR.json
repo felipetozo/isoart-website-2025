@@ -3,7 +3,17 @@
     "home": "Início",
     "about": "Sobre",
     "solutions": "Soluções",
-    "contact": "Contato"
+    "contact": "Contato",
+    "aboutEpsPir": "Sobre PIR e EPS",
+    "institutional": {
+      "about": "Sobre",
+      "solutions": "Soluções",
+      "aboutEpsPir": "Sobre PIR e EPS",
+      "contact": "Contato"
+    },
+    "main": {
+      "contactButton": "Entrar em contato"
+    }
   },
   "home": {
     "hero": {
@@ -26,5 +36,10 @@
       "applications": "Aplicações",
       "aboutCompany": "Sobre a Empresa"
     }
+  },
+  "language": {
+    "portuguese": "Português",
+    "english": "Inglês",
+    "spanish": "Espanhol"
   }
 }

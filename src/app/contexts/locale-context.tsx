@@ -1,9 +1,19 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { supportedLocales, defaultLocale, type SupportedLocale } from '@/app/lib/i18n';
 
-export function useLocale() {
+interface LocaleContextType {
+  currentLocale: SupportedLocale;
+  changeLocale: (newLocale: SupportedLocale) => void;
+  getLocaleInfo: (locale: SupportedLocale) => { flag: string; name: string; code: string };
+  isLoading: boolean;
+  supportedLocales: readonly SupportedLocale[];
+}
+
+const LocaleContext = createContext<LocaleContextType | undefined>(undefined);
+
+export function LocaleProvider({ children }: { children: ReactNode }) {
   const [currentLocale, setCurrentLocale] = useState<SupportedLocale>(defaultLocale);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -45,11 +55,25 @@ export function useLocale() {
     return localeInfo[locale];
   };
 
-  return {
+  const value: LocaleContextType = {
     currentLocale,
     changeLocale,
     getLocaleInfo,
     isLoading,
     supportedLocales
   };
+
+  return (
+    <LocaleContext.Provider value={value}>
+      {children}
+    </LocaleContext.Provider>
+  );
+}
+
+export function useLocale() {
+  const context = useContext(LocaleContext);
+  if (context === undefined) {
+    throw new Error('useLocale must be used within a LocaleProvider');
+  }
+  return context;
 }

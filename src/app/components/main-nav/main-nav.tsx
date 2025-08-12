@@ -10,7 +10,8 @@ import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin, BsWhatsapp } from 'reac
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { IoChevronBack } from 'react-icons/io5';
 import menuData from '@/app/data/menu-data.json';
-import { useLocale } from '@/app/hooks/use-locale';
+import { useLocale } from '@/app/contexts/locale-context';
+import { useTranslations } from '@/app/hooks/use-translations';
 
 // Define the types for your menu data for better type safety
 interface Product {
@@ -76,6 +77,7 @@ function MainNav() {
     const [isLanguageExpanded, setIsLanguageExpanded] = useState(false);
     const iconRef = useRef<HTMLDivElement | null>(null);
     const { currentLocale, changeLocale, getLocaleInfo, supportedLocales } = useLocale();
+    const { t } = useTranslations();
 
     const showSubmenu = (index: number) => {
         if (hideTimeoutRef.current) {
@@ -215,10 +217,10 @@ function MainNav() {
                     <div className={styles['institucional-nav-right']}>
                         <div className={styles['institutional-nav-items']}>
                             <ul>
-                                <li><Link href="/sobre">Sobre</Link></li>
-                                <li><Link href="/solucoes">Soluções</Link></li>
-                                <li><Link href="/sobre-eps-pir">Sobre PIR e EPS</Link></li>
-                                <li><Link href="/contato">Contato</Link></li>
+                                <li><Link href="/sobre">{t('nav.institutional.about')}</Link></li>
+                                <li><Link href="/solucoes">{t('nav.institutional.solutions')}</Link></li>
+                                <li><Link href="/sobre-eps-pir">{t('nav.institutional.aboutEpsPir')}</Link></li>
+                                <li><Link href="/contato">{t('nav.institutional.contact')}</Link></li>
                             </ul>
                         </div>
                         <div 
@@ -302,7 +304,7 @@ function MainNav() {
                         <div className={styles['main-nav-button']}>
                             <Link href="/contato">
                                 <Button variant="primary" size="medium">
-                                    Entrar em contato
+                                    {t('nav.main.contactButton')}
                                 </Button>
                             </Link>
                         </div>
@@ -330,10 +332,10 @@ function MainNav() {
                     </div>
                     <div className={styles['mobile-menu']} ref={mobileMenuRef}>
                         <ul>
-                            <li><Link href="/" onClick={closeMobileMenu}>Home</Link></li>
-                            <li><Link href="/solucoes" onClick={closeMobileMenu}>Soluções</Link></li>
-                            <li><Link href="/sobre" onClick={closeMobileMenu}>Sobre</Link></li>
-                            <li><Link href="/contato" onClick={closeMobileMenu}>Contato</Link></li>
+                            <li><Link href="/" onClick={closeMobileMenu}>{t('nav.home')}</Link></li>
+                            <li><Link href="/solucoes" onClick={closeMobileMenu}>{t('nav.solutions')}</Link></li>
+                            <li><Link href="/sobre" onClick={closeMobileMenu}>{t('nav.about')}</Link></li>
+                            <li><Link href="/contato" onClick={closeMobileMenu}>{t('nav.contact')}</Link></li>
                         </ul>
                         <div className={styles['mobile-contact']}>
                             <p>Rua Dorivaldo Soncela, 1490<br />
