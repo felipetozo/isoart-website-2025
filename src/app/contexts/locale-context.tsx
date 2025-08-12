@@ -19,30 +19,37 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     // Tentar recuperar o idioma salvo no localStorage
-    const savedLocale = localStorage.getItem('isoart-locale') as SupportedLocale;
-    if (savedLocale && supportedLocales.includes(savedLocale)) {
-      setCurrentLocale(savedLocale);
-    } else {
-      // Tentar detectar o idioma do navegador
-      const browserLocale = navigator.language;
-      if (browserLocale.startsWith('en')) {
-        setCurrentLocale('en');
-      } else if (browserLocale.startsWith('es')) {
-        setCurrentLocale('es');
+    try {
+      const savedLocale = localStorage.getItem('isoart-locale') as SupportedLocale;
+      if (savedLocale && supportedLocales.includes(savedLocale)) {
+        setCurrentLocale(savedLocale);
       } else {
-        setCurrentLocale('pt-BR');
+        // Tentar detectar o idioma do navegador
+        const browserLocale = navigator.language;
+        if (browserLocale.startsWith('en')) {
+          setCurrentLocale('en');
+        } else if (browserLocale.startsWith('es')) {
+          setCurrentLocale('es');
+        } else {
+          setCurrentLocale('pt-BR');
+        }
       }
+    } catch (error) {
+      console.error('Error loading locale:', error);
+      setCurrentLocale('pt-BR');
+    } finally {
+      setIsLoading(false);
     }
-    setIsLoading(false);
   }, []);
 
   const changeLocale = (newLocale: SupportedLocale) => {
     if (supportedLocales.includes(newLocale)) {
       setCurrentLocale(newLocale);
-      localStorage.setItem('isoart-locale', newLocale);
-      
-      // Aqui você pode adicionar lógica adicional como redirecionamento
-      // ou atualização da URL quando implementar as rotas multilíngue
+      try {
+        localStorage.setItem('isoart-locale', newLocale);
+      } catch (error) {
+        console.error('Error saving locale:', error);
+      }
     }
   };
 
