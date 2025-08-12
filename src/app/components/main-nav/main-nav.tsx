@@ -104,7 +104,7 @@ function MainNav() {
     const [isLanguageExpanded, setIsLanguageExpanded] = useState(false);
     const iconRef = useRef<HTMLDivElement | null>(null);
     const [currentLocale, setCurrentLocale] = useState<'pt-BR' | 'en' | 'es'>('pt-BR');
-    const [isClient, setIsClient] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     // Função para obter tradução
     const t = (key: keyof typeof translations['pt-BR']) => {
@@ -124,6 +124,7 @@ function MainNav() {
     // Função para mudar idioma
     const changeLocale = (newLocale: 'pt-BR' | 'en' | 'es') => {
         setCurrentLocale(newLocale);
+        setIsLanguageExpanded(false);
         // Salvar no localStorage
         try {
             localStorage.setItem('isoart-locale', newLocale);
@@ -132,9 +133,9 @@ function MainNav() {
         }
     };
 
-    // Carregar idioma salvo
+    // Carregar idioma salvo e marcar como montado
     useEffect(() => {
-        setIsClient(true);
+        setMounted(true);
         try {
             const saved = localStorage.getItem('isoart-locale') as 'pt-BR' | 'en' | 'es';
             if (saved && ['pt-BR', 'en', 'es'].includes(saved)) {
@@ -289,7 +290,7 @@ function MainNav() {
                                 <li><Link href="/contato">{t('contact')}</Link></li>
                             </ul>
                         </div>
-                        {isClient && (
+                        {mounted && (
                             <div 
                                 className={`${styles['language-selector-wrapper']} ${isLanguageExpanded ? styles['expanded'] : ''}`}
                                 onClick={() => setIsLanguageExpanded(!isLanguageExpanded)}
@@ -307,16 +308,18 @@ function MainNav() {
                                 
                                 {isLanguageExpanded && (
                                     <div className={styles['language-options']}>
-                                        {['en', 'es'].map((locale) => {
-                                            const localeInfo = getLocaleInfo(locale as 'en' | 'es');
+                                        {(['pt-BR', 'en', 'es'] as const).map((locale) => {
+                                            // Não mostrar o idioma atual
+                                            if (locale === currentLocale) return null;
+                                            
+                                            const localeInfo = getLocaleInfo(locale);
                                             return (
                                                 <button
                                                     key={locale}
                                                     className={styles['language-option']}
                                                     onClick={(e) => {
                                                         e.stopPropagation();
-                                                        changeLocale(locale as 'en' | 'es');
-                                                        setIsLanguageExpanded(false);
+                                                        changeLocale(locale);
                                                     }}
                                                     title={localeInfo.name}
                                                 >
