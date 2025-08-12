@@ -9,6 +9,7 @@ import ContactComponent from '@/app/components/contact/contact-component';
 import Button from '@/app/views/ui/button/button';
 import TabbedSection from './tabbed-section';
 import BenefitsSection from '@/app/components/benefits-section/benefits-section';
+import IncendioComponent from '@/app/components/pir-incendio/pir-incendio';
 import { TbChecks, TbHome, TbMicroscope, TbBuildingFactory2, TbSnowflake, TbMedicineSyrup, TbBuilding, TbBuildingHospital, TbBuildingFactory, TbTools, TbPackage, TbDeviceTv, TbWindow, TbTruck, TbBuildingStore, TbArmchair, TbMicrophone, } from "react-icons/tb";
 import { IoFastFoodOutline } from "react-icons/io5";
 import ImageCarousel from '@/app/components/image-carousel/image-carousel';
@@ -273,6 +274,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
             {/* Tabbed Section */}
             <TabbedSection tabDescriptions={tabDescriptions} />
+
+            {/* PIR Incêndio Component - Apenas para categoria telhas-e-paineis */}
+            {category === 'telhas-e-paineis' && <IncendioComponent />}
 
             <SobreEmpresa />
             <ContactComponent />

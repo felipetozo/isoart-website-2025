@@ -7,6 +7,7 @@ import SobreEmpresa from '@/app/components/sobre-empresa/sobre-empresa';
 import ContactComponent from '@/app/components/contact/contact-component';
 import Button from '@/app/views/ui/button/button';
 import BenefitsSection from '@/app/components/benefits-section/benefits-section';
+import IncendioComponent from '@/app/components/pir-incendio/pir-incendio';
 
 // Updated interfaces to match the actual data structure
 interface Product {
@@ -152,6 +153,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             </section>
 
             <BenefitsSection benefits={benefitsSection} />
+            {categoryData.slug === 'telhas-e-paineis' && <IncendioComponent />}
             <SobreEmpresa />
             <ContactComponent />
         </div>
