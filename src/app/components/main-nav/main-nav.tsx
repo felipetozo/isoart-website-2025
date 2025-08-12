@@ -104,6 +104,7 @@ function MainNav() {
     const [isLanguageExpanded, setIsLanguageExpanded] = useState(false);
     const iconRef = useRef<HTMLDivElement | null>(null);
     const [currentLocale, setCurrentLocale] = useState<'pt-BR' | 'en' | 'es'>('pt-BR');
+    const [isClient, setIsClient] = useState(false);
 
     // Função para obter tradução
     const t = (key: keyof typeof translations['pt-BR']) => {
@@ -133,6 +134,7 @@ function MainNav() {
 
     // Carregar idioma salvo
     useEffect(() => {
+        setIsClient(true);
         try {
             const saved = localStorage.getItem('isoart-locale') as 'pt-BR' | 'en' | 'es';
             if (saved && ['pt-BR', 'en', 'es'].includes(saved)) {
@@ -287,49 +289,51 @@ function MainNav() {
                                 <li><Link href="/contato">{t('contact')}</Link></li>
                             </ul>
                         </div>
-                        <div 
-                            className={`${styles['language-selector-wrapper']} ${isLanguageExpanded ? styles['expanded'] : ''}`}
-                            onClick={() => setIsLanguageExpanded(!isLanguageExpanded)}
-                        >
-                            <IoChevronBack className={styles['language-chevron']} />
-                            <div className={styles['language-flag']}>
-                                <Image
-                                    src={getLocaleInfo(currentLocale).flag}
-                                    alt={`Bandeira ${getLocaleInfo(currentLocale).name}`}
-                                    width={20}
-                                    height={20}
-                                    className={styles['flag-image']}
-                                />
-                            </div>
-                            
-                            {isLanguageExpanded && (
-                                <div className={styles['language-options']}>
-                                    {['en', 'es'].map((locale) => {
-                                        const localeInfo = getLocaleInfo(locale as 'en' | 'es');
-                                        return (
-                                            <button
-                                                key={locale}
-                                                className={styles['language-option']}
-                                                onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    changeLocale(locale as 'en' | 'es');
-                                                    setIsLanguageExpanded(false);
-                                                }}
-                                                title={localeInfo.name}
-                                            >
-                                                <Image
-                                                    src={localeInfo.flag}
-                                                    alt={`Bandeira ${localeInfo.name}`}
-                                                    width={20}
-                                                    height={20}
-                                                    className={styles['flag-image']}
-                                                />
-                                            </button>
-                                        );
-                                    })}
+                        {isClient && (
+                            <div 
+                                className={`${styles['language-selector-wrapper']} ${isLanguageExpanded ? styles['expanded'] : ''}`}
+                                onClick={() => setIsLanguageExpanded(!isLanguageExpanded)}
+                            >
+                                <IoChevronBack className={styles['language-chevron']} />
+                                <div className={styles['language-flag']}>
+                                    <Image
+                                        src={getLocaleInfo(currentLocale).flag}
+                                        alt={`Bandeira ${getLocaleInfo(currentLocale).name}`}
+                                        width={20}
+                                        height={20}
+                                        className={styles['flag-image']}
+                                    />
                                 </div>
-                            )}
-                        </div>
+                                
+                                {isLanguageExpanded && (
+                                    <div className={styles['language-options']}>
+                                        {['en', 'es'].map((locale) => {
+                                            const localeInfo = getLocaleInfo(locale as 'en' | 'es');
+                                            return (
+                                                <button
+                                                    key={locale}
+                                                    className={styles['language-option']}
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        changeLocale(locale as 'en' | 'es');
+                                                        setIsLanguageExpanded(false);
+                                                    }}
+                                                    title={localeInfo.name}
+                                                >
+                                                    <Image
+                                                        src={localeInfo.flag}
+                                                        alt={`Bandeira ${localeInfo.name}`}
+                                                        width={20}
+                                                        height={20}
+                                                        className={styles['flag-image']}
+                                                    />
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+                                )}
+                            </div>
+                        )}
                     </div>
                 </div>
             </nav>
