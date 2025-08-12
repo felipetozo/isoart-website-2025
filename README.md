@@ -15,7 +15,7 @@ Website institucional moderno da ISOART - Indústria de Produtos Térmicos e Con
 - **Layout responsivo** com componentes organizados
 - **Integração com Lenis** para scroll suave
 - **Estrutura de pastas** organizada e profissional
-- **Sistema de internacionalização (i18n)** com suporte a 3 idiomas (pt-BR, en, es)
+- **Sistema de internacionalização (i18n)** ✅ **COMPLETO** - 3 idiomas funcionando perfeitamente
 
 ### 🔄 **Em Desenvolvimento**
 - **Refatoração de CSS** para kebab-case (em andamento)
@@ -65,26 +65,176 @@ src/
 
 ## 🌍 Sistema de Internacionalização (i18n)
 
-### **Implementação Multilíngue**
+### **✅ Implementação Completa e Funcionando**
 - **3 idiomas suportados**: Português (pt-BR), Inglês (en), Espanhol (es)
-- **Estrutura organizada** em `/src/app/data/locales/`
-- **Fallback automático** para português em caso de erro
-- **Traduções centralizadas** em arquivos JSON organizados
-- **Sistema escalável** para adicionar novos idiomas facilmente
+- **Seletor visual** com bandeiras SVG (Brasil, UK, Espanha)
+- **Troca de idioma em tempo real** sem recarregar a página
+- **Persistência automática** da escolha do usuário no localStorage
+- **Sem erros de hidratação** - renderização consistente servidor/cliente
+- **Traduções integradas** diretamente no componente de navegação
 
-### **Arquivos de Tradução**
+### **🏗️ Arquitetura Implementada**
 ```
-src/app/data/locales/
-├── pt-BR.json          # Português (padrão)
-├── en.json             # Inglês
-└── es.json             # Espanhol
+src/app/components/main-nav/
+├── main-nav.tsx              # Componente principal com lógica i18n
+├── main-nav.module.css       # Estilos do seletor de idiomas
+└── translations/             # Traduções hardcoded para performance
+
+src/app/contexts/
+└── locale-context.tsx        # Contexto React para estado global (simplificado)
+
+src/app/hooks/
+└── use-translations.ts       # Hook de traduções (simplificado)
+
+public/icons/
+├── brazil.svg                # Bandeira do Brasil
+├── uk.svg                    # Bandeira do Reino Unido
+└── spain.svg                 # Bandeira da Espanha
 ```
 
-### **Configuração i18n**
-- **Utilitários** em `/src/app/lib/i18n.ts`
-- **Validação** de idiomas suportados
-- **Detecção automática** do idioma do navegador
-- **Importação dinâmica** das traduções
+### **🔧 Como Funciona**
+
+#### **1. Sistema de Traduções**
+```typescript
+// Traduções hardcoded para máxima performance
+const translations = {
+  'pt-BR': {
+    home: 'Home',
+    solutions: 'Soluções',
+    about: 'Sobre',
+    contact: 'Contato',
+    aboutEpsPir: 'Sobre PIR e EPS',
+    contactButton: 'Entrar em contato'
+  },
+  'en': { /* traduções em inglês */ },
+  'es': { /* traduções em espanhol */ }
+};
+```
+
+#### **2. Seletor de Idiomas**
+- **Bandeira ativa**: Mostra o idioma selecionado
+- **Dropdown**: Exibe apenas idiomas disponíveis (não duplica o ativo)
+- **Filtro inteligente**: `if (locale === currentLocale) return null`
+- **Fechamento automático**: Dropdown fecha ao selecionar idioma
+
+#### **3. Estado e Persistência**
+```typescript
+const [currentLocale, setCurrentLocale] = useState<'pt-BR' | 'en' | 'es'>('pt-BR');
+const [mounted, setMounted] = useState(false);
+
+// Carrega idioma salvo e marca como montado
+useEffect(() => {
+  setMounted(true);
+  try {
+    const saved = localStorage.getItem('isoart-locale') as 'pt-BR' | 'en' | 'es';
+    if (saved && ['pt-BR', 'en', 'es'].includes(saved)) {
+      setCurrentLocale(saved);
+    }
+  } catch (error) {
+    console.error('Erro ao carregar idioma:', error);
+  }
+}, []);
+```
+
+#### **4. Prevenção de Hidratação**
+- **Estado `mounted`**: Controla renderização após hidratação
+- **Renderização condicional**: `{mounted && <SeletorDeIdiomas />}`
+- **Sincronização perfeita**: Sem diferenças entre servidor e cliente
+
+### **🎨 Interface Visual**
+
+#### **Estilos do Seletor**
+```css
+.language-selector-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(241, 244, 247, 0.1);
+  background-color: rgba(241, 244, 247, 0.025);
+  border-radius: 0.2rem;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.language-flag {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.2rem;
+}
+
+.language-options {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: slideIn 0.3s ease;
+}
+```
+
+#### **Animações**
+- **Slide in**: Dropdown desliza suavemente
+- **Hover effects**: Feedback visual ao passar o mouse
+- **Transições**: Sem transições CSS (padrão global)
+
+### **🚀 Funcionalidades**
+
+#### **✅ Implementado e Funcionando**
+- **Troca de idioma em tempo real** para todos os textos da navegação
+- **Persistência automática** da escolha do usuário
+- **Seletor visual intuitivo** com bandeiras SVG
+- **Sem erros de hidratação** - funciona perfeitamente no localhost e Vercel
+- **Filtro inteligente** - nunca mostra idioma duplicado
+- **Fechamento automático** do dropdown após seleção
+
+#### **🔄 Comportamento**
+1. **Carregamento inicial**: Mostra idioma padrão (pt-BR)
+2. **Detecção automática**: Carrega idioma salvo do localStorage
+3. **Troca de idioma**: Atualiza todos os textos instantaneamente
+4. **Persistência**: Salva escolha automaticamente
+5. **Navegação**: Pode voltar para qualquer idioma, incluindo o original
+
+### **🔍 Solução de Problemas**
+
+#### **Problemas Resolvidos**
+1. **❌ Erro de hidratação**: Resolvido com estado `mounted`
+2. **❌ Bandeiras duplicadas**: Resolvido com filtro inteligente
+3. **❌ Não voltar para Brasil**: Resolvido incluindo todos os idiomas
+4. **❌ Problemas no Vercel**: Resolvido com lógica robusta
+
+#### **Solução Técnica**
+```typescript
+// Renderização condicional para evitar hidratação
+{mounted && (
+  <div className={`${styles['language-selector-wrapper']} ${isLanguageExpanded ? styles['expanded'] : ''}`}>
+    {/* Seletor de idiomas */}
+  </div>
+)}
+
+// Filtro para evitar duplicatas
+{(['pt-BR', 'en', 'es'] as const).map((locale) => {
+  if (locale === currentLocale) return null; // Não mostra o ativo
+  // ... renderiza opção
+})}
+```
+
+### **📱 Responsividade**
+- **Mobile**: Seletor compacto e funcional
+- **Desktop**: Dropdown expandido com animações
+- **Touch**: Funciona perfeitamente em dispositivos touch
+
+### **🔮 Próximos Passos para i18n**
+
+#### **Expansão de Traduções**
+- [ ] **Páginas completas**: Traduzir conteúdo de todas as páginas
+- [ ] **Meta tags**: Títulos e descrições multilíngue
+- [ ] **URLs localizadas**: `/en/about`, `/es/soluciones`
+- [ ] **Conteúdo dinâmico**: Produtos, categorias e blog
+
+#### **Funcionalidades Avançadas**
+- [ ] **Detecção automática** do idioma do navegador
+- [ ] **Fallback inteligente** para idiomas não suportados
+- [ ] **Cache de traduções** para performance
+- [ ] **Sistema de pluralização** para diferentes idiomas
 
 ## 🍪 Sistema de Cookies
 
@@ -253,7 +403,6 @@ npm run deploy
 - [ ] **Testes automatizados** - Jest, Testing Library
 
 ### **Prioridade Baixa**
-- [ ] **Internacionalização** - Múltiplos idiomas
 - [ ] **Dashboard admin** - Gerenciamento de conteúdo
 - [ ] **API REST** - Backend para funcionalidades avançadas
 
@@ -295,5 +444,5 @@ Este projeto é propriedade da **ISOART - Indústria de Produtos Térmicos e Con
 ---
 
 **Última atualização**: Janeiro 2025  
-**Versão**: 1.0.0  
-**Status**: Em desenvolvimento ativo
+**Versão**: 1.1.0  
+**Status**: Sistema de internacionalização completo e funcionando
