@@ -11,11 +11,12 @@ import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { IoChevronBack } from 'react-icons/io5';
 import menuData from '@/app/data/menu-data.json';
 
+
 // Define the types for your menu data for better type safety
 interface Product {
-    id: number;
+  id: number;
     name: string;
-    slug: string;
+  slug: string;
     description: string;
     image?: string;
     specifications?: { [key: string]: string; };
@@ -29,6 +30,34 @@ interface Category {
     image?: string;
     products: Product[];
 }
+
+// Sistema de traduções integrado
+const translations = {
+  'pt-BR': {
+    home: 'Home',
+    solutions: 'Soluções',
+    about: 'Sobre',
+    contact: 'Contato',
+    aboutEpsPir: 'Sobre PIR e EPS',
+    contactButton: 'Entrar em contato'
+  },
+  'en': {
+    home: 'Home',
+    solutions: 'Solutions',
+    about: 'About',
+    contact: 'Contact',
+    aboutEpsPir: 'About PIR and EPS',
+    contactButton: 'Get in touch'
+  },
+  'es': {
+    home: 'Inicio',
+    solutions: 'Soluciones',
+    about: 'Acerca de',
+    contact: 'Contacto',
+    aboutEpsPir: 'Acerca de PIR y EPS',
+    contactButton: 'Ponerse en contacto'
+  }
+};
 
 // Type assertion para o menuData
 const typedMenuData = menuData as Category[];
@@ -74,7 +103,45 @@ function MainNav() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLanguageExpanded, setIsLanguageExpanded] = useState(false);
     const iconRef = useRef<HTMLDivElement | null>(null);
-    const [currentLocale, setCurrentLocale] = useState('pt-BR');
+    const [currentLocale, setCurrentLocale] = useState<'pt-BR' | 'en' | 'es'>('pt-BR');
+
+    // Função para obter tradução
+    const t = (key: keyof typeof translations['pt-BR']) => {
+        return translations[currentLocale][key];
+    };
+
+    // Função para obter informações do idioma
+    const getLocaleInfo = (locale: 'pt-BR' | 'en' | 'es') => {
+        const localeInfo = {
+            'pt-BR': { flag: '/icons/brazil.svg', name: 'Português' },
+            'en': { flag: '/icons/uk.svg', name: 'English' },
+            'es': { flag: '/icons/spain.svg', name: 'Español' }
+        };
+        return localeInfo[locale];
+    };
+
+    // Função para mudar idioma
+    const changeLocale = (newLocale: 'pt-BR' | 'en' | 'es') => {
+        setCurrentLocale(newLocale);
+        // Salvar no localStorage
+        try {
+            localStorage.setItem('isoart-locale', newLocale);
+        } catch (error) {
+            console.error('Erro ao salvar idioma:', error);
+        }
+    };
+
+    // Carregar idioma salvo
+    useEffect(() => {
+        try {
+            const saved = localStorage.getItem('isoart-locale') as 'pt-BR' | 'en' | 'es';
+            if (saved && ['pt-BR', 'en', 'es'].includes(saved)) {
+                setCurrentLocale(saved);
+            }
+        } catch (error) {
+            console.error('Erro ao carregar idioma:', error);
+        }
+    }, []);
 
     const showSubmenu = (index: number) => {
         if (hideTimeoutRef.current) {
@@ -214,10 +281,10 @@ function MainNav() {
                     <div className={styles['institucional-nav-right']}>
                         <div className={styles['institutional-nav-items']}>
                             <ul>
-                                <li><Link href="/sobre">Sobre</Link></li>
-                                <li><Link href="/solucoes">Soluções</Link></li>
-                                <li><Link href="/sobre-eps-pir">Sobre PIR e EPS</Link></li>
-                                <li><Link href="/contato">Contato</Link></li>
+                                <li><Link href="/sobre">{t('about')}</Link></li>
+                                <li><Link href="/solucoes">{t('solutions')}</Link></li>
+                                <li><Link href="/sobre-eps-pir">{t('aboutEpsPir')}</Link></li>
+                                <li><Link href="/contato">{t('contact')}</Link></li>
                             </ul>
                         </div>
                         <div 
@@ -227,8 +294,8 @@ function MainNav() {
                             <IoChevronBack className={styles['language-chevron']} />
                             <div className={styles['language-flag']}>
                                 <Image
-                                    src="/icons/brazil.svg"
-                                    alt="Bandeira Brasil"
+                                    src={getLocaleInfo(currentLocale).flag}
+                                    alt={`Bandeira ${getLocaleInfo(currentLocale).name}`}
                                     width={20}
                                     height={20}
                                     className={styles['flag-image']}
@@ -237,40 +304,29 @@ function MainNav() {
                             
                             {isLanguageExpanded && (
                                 <div className={styles['language-options']}>
-                                    <button
-                                        className={styles['language-option']}
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            setCurrentLocale('en');
-                                            setIsLanguageExpanded(false);
-                                        }}
-                                        title="English"
-                                    >
-                                        <Image
-                                            src="/icons/uk.svg"
-                                            alt="Bandeira UK"
-                                            width={20}
-                                            height={20}
-                                            className={styles['flag-image']}
-                                        />
-                                    </button>
-                                    <button
-                                        className={styles['language-option']}
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            setCurrentLocale('es');
-                                            setIsLanguageExpanded(false);
-                                        }}
-                                        title="Español"
-                                    >
-                                        <Image
-                                            src="/icons/spain.svg"
-                                            alt="Bandeira Espanha"
-                                            width={20}
-                                            height={20}
-                                            className={styles['flag-image']}
-                                        />
-                                    </button>
+                                    {['en', 'es'].map((locale) => {
+                                        const localeInfo = getLocaleInfo(locale as 'en' | 'es');
+                                        return (
+                                            <button
+                                                key={locale}
+                                                className={styles['language-option']}
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    changeLocale(locale as 'en' | 'es');
+                                                    setIsLanguageExpanded(false);
+                                                }}
+                                                title={localeInfo.name}
+                                            >
+                                                <Image
+                                                    src={localeInfo.flag}
+                                                    alt={`Bandeira ${localeInfo.name}`}
+                                                    width={20}
+                                                    height={20}
+                                                    className={styles['flag-image']}
+                                                />
+                                            </button>
+                                        );
+                                    })}
                                 </div>
                             )}
                         </div>
@@ -312,7 +368,7 @@ function MainNav() {
                         <div className={styles['main-nav-button']}>
                             <Link href="/contato">
                                 <Button variant="primary" size="medium">
-                                    Entrar em contato
+                                    {t('contactButton')}
                                 </Button>
                             </Link>
                         </div>
@@ -340,10 +396,10 @@ function MainNav() {
                     </div>
                     <div className={styles['mobile-menu']} ref={mobileMenuRef}>
                         <ul>
-                            <li><Link href="/" onClick={closeMobileMenu}>Home</Link></li>
-                            <li><Link href="/solucoes" onClick={closeMobileMenu}>Soluções</Link></li>
-                            <li><Link href="/sobre" onClick={closeMobileMenu}>Sobre</Link></li>
-                            <li><Link href="/contato" onClick={closeMobileMenu}>Contato</Link></li>
+                            <li><Link href="/" onClick={closeMobileMenu}>{t('home')}</Link></li>
+                            <li><Link href="/solucoes" onClick={closeMobileMenu}>{t('solutions')}</Link></li>
+                            <li><Link href="/sobre" onClick={closeMobileMenu}>{t('about')}</Link></li>
+                            <li><Link href="/contato" onClick={closeMobileMenu}>{t('contact')}</Link></li>
                         </ul>
                         <div className={styles['mobile-contact']}>
                             <p>Rua Dorivaldo Soncela, 1490<br />
