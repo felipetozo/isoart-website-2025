@@ -6,7 +6,7 @@
         "description": "Molduras em EPS para portas, janelas e paredes. Leves, duráveis e de fácil instalação, são ideais para acabamentos decorativos em ambientes internos e externos.",
         "buttonText": "Saiba mais",
         "buttonLink": "/categorias/molduras-decorativas",
-        "backgroundImage": "/img/HeroBanners/banner001-optimized.webp"
+        "backgroundImage": "/img/heroes/home/home-hero-01.avif"
     },
     {
         "id": 2,
@@ -14,7 +14,7 @@
         "description": "Materiais em EPS, como lajes, blocos e flocos, para construção civil. Proporcionam redução de custos, leveza e isolamento térmico, atendendo a projetos residenciais e comerciais.",
         "buttonText": "Saiba mais",
         "buttonLink": "/categorias/construcao-civil",
-        "backgroundImage": "/img/HeroBanners/banner003.webp"
+        "backgroundImage": "/img/heroes/home/home-hero-02.avif"
     },
     {
         "id": 3,
@@ -22,6 +22,6 @@
         "description": "Telhas e painéis da Isoart para coberturas e fachadas. Disponíveis com ou sem isolamento térmico em EPS/PIR, oferecem eficiência energética e resistência. Adequados para diversos projetos de construção.",
         "buttonText": "Saiba mais",
         "buttonLink": "/categorias/telhas-e-paineis",
-        "backgroundImage": "/img/HeroBanners/banner002-optimized.webp"
+        "backgroundImage": "/img/heroes/home/home-hero-03.avif"
     }
 ]
