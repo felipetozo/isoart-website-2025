@@ -204,9 +204,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 <div className={styles['product-page-hero-content']}>
                     <h1>{heroSection.title}</h1>
                     <p>{heroSection.description}</p>
-                    <Link href={heroSection.buttonLink}>
+                    <Link href={heroSection.buttonLink || '/contato'}>
                         <Button variant="primary" size="medium">
-                            {heroSection.buttonText}
+                            {heroSection.buttonText || 'Entrar em contato'}
                         </Button>
                     </Link>
                 </div>
