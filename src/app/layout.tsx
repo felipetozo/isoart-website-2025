@@ -129,13 +129,15 @@ export default function RootLayout({
         }} />
       </head>
       <body>
-        <LenisProvider>
-          <MainNav />
-          <main>{children}</main>
-          <Footer />
-          <AnalyticsProvider />
-          <CookieBanner />
-        </LenisProvider>
+        <LocaleProvider>
+          <LenisProvider>
+            <MainNav />
+            <main>{children}</main>
+            <Footer />
+            <AnalyticsProvider />
+            <CookieBanner />
+          </LenisProvider>
+        </LocaleProvider>
       </body>
     </html>
   );

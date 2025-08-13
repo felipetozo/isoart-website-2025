@@ -10,6 +10,7 @@ import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin, BsWhatsapp } from 'reac
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { IoChevronBack } from 'react-icons/io5';
 import menuData from '@/app/data/menu-data.json';
+import { useLocale } from '@/app/contexts/locale-context';
 
 
 // Define the types for your menu data for better type safety
@@ -103,7 +104,7 @@ function MainNav() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLanguageExpanded, setIsLanguageExpanded] = useState(false);
     const iconRef = useRef<HTMLDivElement | null>(null);
-    const [currentLocale, setCurrentLocale] = useState<'pt-BR' | 'en' | 'es'>('pt-BR');
+    const { currentLocale, changeLocale } = useLocale();
     const [mounted, setMounted] = useState(false);
 
     // Função para obter tradução
@@ -122,28 +123,14 @@ function MainNav() {
     };
 
     // Função para mudar idioma
-    const changeLocale = (newLocale: 'pt-BR' | 'en' | 'es') => {
-        setCurrentLocale(newLocale);
+    const handleLocaleChange = (newLocale: 'pt-BR' | 'en' | 'es') => {
+        changeLocale(newLocale);
         setIsLanguageExpanded(false);
-        // Salvar no localStorage
-        try {
-            localStorage.setItem('isoart-locale', newLocale);
-        } catch (error) {
-            console.error('Erro ao salvar idioma:', error);
-        }
     };
 
-    // Carregar idioma salvo e marcar como montado
+    // Marcar como montado
     useEffect(() => {
         setMounted(true);
-        try {
-            const saved = localStorage.getItem('isoart-locale') as 'pt-BR' | 'en' | 'es';
-            if (saved && ['pt-BR', 'en', 'es'].includes(saved)) {
-                setCurrentLocale(saved);
-            }
-        } catch (error) {
-            console.error('Erro ao carregar idioma:', error);
-        }
     }, []);
 
     const showSubmenu = (index: number) => {
@@ -319,7 +306,7 @@ function MainNav() {
                                                     className={styles['language-option']}
                                                     onClick={(e) => {
                                                         e.stopPropagation();
-                                                        changeLocale(locale);
+                                                        handleLocaleChange(locale);
                                                     }}
                                                     title={localeInfo.name}
                                                 >
