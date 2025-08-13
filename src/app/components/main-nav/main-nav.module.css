@@ -454,7 +454,7 @@
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 0.25rem 0.50;
     border-radius: 0.25rem;
     position: relative;
 }
@@ -462,7 +462,6 @@
 .language-selector-wrapper.expanded {
     background-color: rgba(17, 17, 17, 0.50);
     border: 1px solid rgba(241, 244, 247, 0.15);
-    padding: 0.5rem 1rem;
 }
 
 .language-options {
@@ -476,8 +475,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1rem;
+    height: 1rem;
     cursor: pointer;
 }
 
@@ -485,8 +484,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1rem;
+    height: 1rem;
 }
 
 .flag-image {
