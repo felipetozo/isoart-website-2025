@@ -418,13 +418,15 @@ const ContatoPage: React.FC = () => {
                 </div>
             </section>
             
-            <Toast
-                message="Sua mensagem foi enviada com sucesso!"
-                type="success"
-                isVisible={showToast}
-                onClose={() => setShowToast(false)}
-                duration={4000}
-            />
+            {showToast && (
+                <Toast
+                    message="Sua mensagem foi enviada com sucesso!"
+                    type="success"
+                    isVisible={showToast}
+                    onClose={() => setShowToast(false)}
+                    duration={4000}
+                />
+            )}
         </div>
     );
 };
