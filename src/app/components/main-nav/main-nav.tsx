@@ -109,7 +109,12 @@ function MainNav() {
 
     // Função para obter tradução
     const t = (key: keyof typeof translations['pt-BR']) => {
-        return translations[currentLocale][key];
+        try {
+            return translations[currentLocale][key];
+        } catch (error) {
+            console.error('Erro na tradução:', error, 'key:', key, 'locale:', currentLocale);
+            return key;
+        }
     };
 
     // Função para obter informações do idioma
