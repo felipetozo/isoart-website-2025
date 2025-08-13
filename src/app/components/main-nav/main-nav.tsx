@@ -284,11 +284,9 @@ function MainNav() {
                             >
                                 <IoChevronBack className={styles['language-chevron']} />
                                 <div className={styles['language-flag']}>
-                                    <Image
+                                    <img
                                         src={getLocaleInfo(currentLocale).flag}
                                         alt={`Bandeira ${getLocaleInfo(currentLocale).name}`}
-                                        width={20}
-                                        height={20}
                                         className={styles['flag-image']}
                                     />
                                 </div>
@@ -310,11 +308,9 @@ function MainNav() {
                                                     }}
                                                     title={localeInfo.name}
                                                 >
-                                                    <Image
+                                                    <img
                                                         src={localeInfo.flag}
                                                         alt={`Bandeira ${localeInfo.name}`}
-                                                        width={20}
-                                                        height={20}
                                                         className={styles['flag-image']}
                                                     />
                                                 </button>
