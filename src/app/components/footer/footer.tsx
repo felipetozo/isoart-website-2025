@@ -100,7 +100,7 @@ export default function Footer() {
                 <div className={styles['footer-wrapper']}>
                     <div className={styles['footer-cnpj']}>
                         <p>
-                            © 2025 ISOART - Todos os direitos reservados
+                            Isoart Indústria de produtos térmicos e construtivos ltda. CNPJ: 09.094.564/0001-05
                         </p>
                     </div>
                 </div>
