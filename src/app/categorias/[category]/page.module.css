@@ -41,12 +41,14 @@
     font-size: 3rem;
     font-weight: bold;
     line-height: 1;
+    color: rgba(146, 151, 120, 1);
 }
 
 .category-page-hero-content p {
     font-size: 1.2rem;
     line-height: 1.4;
     max-width: 600px;
+    color: rgba(17, 17, 17, 0.825);
 }
 
 .category-page {

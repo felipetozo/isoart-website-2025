@@ -52,10 +52,6 @@
     color: rgba(17, 17, 17, 0.825);
 }
 
-
-
-
-
 .product-page {
     min-height: 100vh;
     background-color: rgba(241, 244, 247, 1);
@@ -229,7 +225,7 @@
     overflow: hidden;
     height: 50rem;
     margin: 0 auto;
-    max-width: 1600px;
+    max-width: 1440px;
     justify-content: center;
 }
 
