@@ -10,7 +10,7 @@
 /* Navegador Institucional */
 .institutional-nav-section {
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: row;
     padding: 1rem 0 0.5rem 0;
 }
