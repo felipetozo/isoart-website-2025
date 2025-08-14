@@ -6,7 +6,6 @@ import Footer from "./components/footer/footer";
 import AnalyticsProvider from "./components/analytics-provider/analytics-provider";
 import { LenisProvider } from "./components/lenis-provider";
 import CookieBanner from "./views/ui/cookie-banner";
-import { LocaleProvider } from "./contexts/locale-context";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -129,15 +128,13 @@ export default function RootLayout({
         }} />
       </head>
       <body>
-        <LocaleProvider>
-          <LenisProvider>
-            <MainNav />
-            <main>{children}</main>
-            <Footer />
-            <AnalyticsProvider />
-            <CookieBanner />
-          </LenisProvider>
-        </LocaleProvider>
+        <LenisProvider>
+          <MainNav />
+          <main>{children}</main>
+          <Footer />
+          <AnalyticsProvider />
+          <CookieBanner />
+        </LenisProvider>
       </body>
     </html>
   );

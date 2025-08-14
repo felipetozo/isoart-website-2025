@@ -79,7 +79,7 @@ interface CategoryData {
 }
 
 interface ProductPageProps {
-    params: Promise<{ category: string; product: string }>;
+    params: { category: string; product: string };
 }
 
 // Função para renderizar ícones do Tabler
@@ -124,7 +124,7 @@ async function getCategoryData(categorySlug: string): Promise<CategoryData | und
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
-    const { category, product } = await params;
+    const { category, product } = params;
 
     let productData: ProductData | undefined;
 
@@ -206,7 +206,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                     <p>{heroSection.description}</p>
                     <Link href={heroSection.buttonLink || '/contato'}>
                         <Button variant="primary" size="medium">
-                            {heroSection.buttonText || 'Entrar em contato'}
+                            {heroSection.buttonText || 'Solicite um orçamento'}
                         </Button>
                     </Link>
                 </div>
@@ -243,7 +243,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                         />
                     )}
                 </div>
-                    <h3>Características Gerais:</h3>
+                    <h3>Características:</h3>
                     <div className={styles['features-grid']}>
                         {generalCharacteristics.map((char, index) => (
                             <div key={index} className={styles['feature']}>
@@ -259,7 +259,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 <div className={styles['applications-wrapper']}>
                     <h3>{applications.title}</h3>
                     <p>{applications.description}</p>
-                    <p>Indicada para obras residenciais, comerciais e industriais como:</p>
+                    <p>Aplicações:</p>
                     <div className={styles['application-carousel']}>
                         <div className={styles['application-cards']}>
                             {applications.indications.map((indication, index) => (
@@ -295,7 +295,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: ProductPageProps) {
-    const { category, product } = await params;
+    const { category, product } = params;
     let productData: ProductData | undefined;
 
     try {

@@ -13,8 +13,6 @@ const nextConfig: NextConfig = {
   generateEtags: false,
   
   // Otimizações de imagens
-  
-  // Otimizações de imagens
   images: {
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,

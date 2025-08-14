@@ -19,27 +19,212 @@
     "hero": {
       "title": "Isoart - EPS and PIR Solutions for Civil Construction",
       "description": "Experts in thermal solutions with EPS and PIR for civil construction, packaging and insulation. Roofing, ceilings, moldings and more."
+    },
+    "slider": {
+      "slide1": {
+        "title": "Decorative moldings",
+        "description": "EPS moldings for doors, windows and walls. Lightweight, durable and easy to install, ideal for decorative finishes in indoor and outdoor environments.",
+        "buttonText": "Learn more"
+      },
+      "slide2": {
+        "title": "EPS products for civil construction",
+        "description": "EPS materials such as slabs, blocks and flakes for civil construction. They provide cost reduction, lightness and thermal insulation, serving residential and commercial projects.",
+        "buttonText": "Learn more"
+      },
+      "slide3": {
+        "title": "Roofing and Panels",
+        "description": "Isoart roofing and panels for roofs and facades. Available with or without EPS/PIR thermal insulation, they offer energy efficiency and resistance. Suitable for various construction projects.",
+        "buttonText": "Learn more"
+      }
+    },
+    "homeSolutions": {
+      "title": "Our Solutions",
+      "subtitle": "Innovative products for civil construction, packaging and thermal insulation",
+      "construcaoCivil": {
+        "title": "Civil Construction",
+        "description": "EPS materials for slabs, blocks and flakes"
+      },
+      "embalagens": {
+        "title": "Packaging",
+        "description": "EPS solutions for protection and transport"
+      },
+      "molduras": {
+        "title": "Decorative Moldings",
+        "description": "EPS finishes for doors, windows and walls"
+      },
+      "telhasPaineis": {
+        "title": "Roofing and Panels",
+        "description": "Roofs and facades with thermal insulation"
+      }
+    }
+  },
+  "categories": {
+    "construcaoCivil": {
+      "title": "Civil Construction with EPS",
+      "description": "EPS materials such as slabs, blocks and flakes for civil construction. They provide cost reduction, lightness and thermal insulation, serving residential and commercial projects.",
+      "buttonText": "Contact us",
+      "categoryDescription": "Lightness, resistance and efficiency for smarter constructions. Our EPS products reduce costs, increase productivity and offer innovative solutions for slabs, fillings and high-performance thermal insulation."
+    },
+    "embalagens": {
+      "title": "EPS Packaging",
+      "description": "EPS solutions for product packaging and protection. Lightweight, resistant and with excellent impact absorption capacity.",
+      "buttonText": "Contact us",
+      "categoryDescription": "Intelligent protection for your products with customized EPS packaging. We offer solutions that ensure safety in transport and storage."
+    },
+    "molduras": {
+      "title": "Decorative Moldings",
+      "description": "EPS moldings for decorative finishes. Lightweight, durable and easy to install.",
+      "buttonText": "Contact us",
+      "categoryDescription": "Transform your environments with decorative EPS moldings. Elegance and sophistication for doors, windows and walls with simple installation and perfect finish."
+    },
+    "telhasPaineis": {
+      "title": "Roofing and Panels",
+      "description": "Roofing and panels with EPS/PIR thermal insulation. Energy efficiency and resistance for roofs and facades.",
+      "buttonText": "Contact us",
+      "categoryDescription": "Advanced thermal solutions for roofs and facades. Our roofing and panels offer excellent thermal insulation, reducing energy costs and increasing comfort."
+    }
+  },
+  "products": {
+    "construcaoCivil": {
+      "lajes": {
+        "name": "EPS Slabs",
+        "description": "Slabs with EPS filling, reducing costs and improving structure."
+      },
+      "blocos": {
+        "name": "EPS Blocks",
+        "description": "EPS blocks for lightweight and resistant constructions."
+      },
+      "flocos": {
+        "name": "EPS Flakes",
+        "description": "EPS flakes for various construction applications."
+      },
+      "chapas": {
+        "name": "EPS Sheets and Panels",
+        "description": "EPS sheets and panels for various constructions."
+      }
+    },
+    "embalagens": {
+      "embalagens": {
+        "name": "EPS Packaging",
+        "description": "Customized EPS solutions for product protection."
+      },
+      "perolas": {
+        "name": "EPS Pearls",
+        "description": "EPS pearls for filling and protection."
+      }
+    },
+    "molduras": {
+      "beiral": {
+        "name": "Eave Moldings",
+        "description": "Moldings for eave and roof finishing."
+      },
+      "colunas": {
+        "name": "Columns and Capitals",
+        "description": "Decorative elements for columns and structures."
+      },
+      "muros": {
+        "name": "Wall Moldings",
+        "description": "Decorative finishes for walls and fences."
+      },
+      "parede": {
+        "name": "Wall Moldings",
+        "description": "Decorative moldings for indoor and outdoor walls."
+      },
+      "portas": {
+        "name": "Door Moldings",
+        "description": "Elegant finishes for doors and openings."
+      }
+    },
+    "telhasPaineis": {
+      "telhasTermicas": {
+        "name": "Thermal Roofing",
+        "description": "Roofing with PIR or EPS core and double coating with galvalume steel sheets or film, ideal for roofs with excellent thermal insulation."
+      },
+      "camaraFrigorifica": {
+        "name": "Cold Storage",
+        "description": "Panels for cold storage with superior thermal insulation."
+      },
+      "divisoriaForro": {
+        "name": "Partition and Ceiling",
+        "description": "Solutions for partitions and ceilings with acoustic and thermal insulation."
+      },
+      "fachadaFechamento": {
+        "name": "Facade and Closure",
+        "description": "Panels for facades and side closures with premium finish."
+      },
+      "salaLimpa": {
+        "name": "Clean Room",
+        "description": "Special panels for environments that require contamination control."
+      }
+    }
+  },
+  "benefits": {
+    "title": "Benefits",
+    "levezaEstrutural": {
+      "title": "Structural Lightness",
+      "description": "Reduces construction weight, allowing lightweight foundations and savings in structural materials without compromising resistance."
+    },
+    "eficienciaTermica": {
+      "title": "Thermal and Acoustic Efficiency",
+      "description": "Minimizes heat and noise exchange, providing greater comfort and reducing energy consumption for climate control."
+    },
+    "durabilidade": {
+      "title": "Extended Durability",
+      "description": "Lightweight, resistant and low-maintenance material, ensuring extended service life with excellent cost-benefit."
     }
   },
   "footer": {
-    "copyright": "© 2025 ISOART. All rights reserved."
+    "copyright": "© 2025 ISOART. All rights reserved.",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "social": "Social Media"
   },
   "common": {
     "buttons": {
       "contact": "Contact us",
       "requestQuote": "Request a quote",
-      "learnMore": "Learn more"
+      "learnMore": "Learn more",
+      "download": "Download",
+      "viewMore": "View more"
     },
     "sections": {
       "benefits": "Benefits",
       "characteristics": "Characteristics",
       "applications": "Applications",
-      "aboutCompany": "About Company"
-    }
+      "aboutCompany": "About Company",
+      "products": "Products",
+      "solutions": "Solutions"
+    },
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close"
   },
   "language": {
     "portuguese": "Portuguese",
     "english": "English",
     "spanish": "Spanish"
+  },
+  "aboutPage": {
+    "title": "About Isoart",
+    "description": "Leading company in thermal solutions with EPS and PIR for civil construction, packaging and insulation.",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "values": "Our Values"
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "description": "We are ready to serve you and provide the best solutions for your project.",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send message",
+      "success": "Your message was sent successfully!"
+    }
   }
 }

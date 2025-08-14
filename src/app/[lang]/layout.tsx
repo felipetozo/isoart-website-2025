@@ -6,8 +6,6 @@ import Footer from "../components/footer/footer";
 import AnalyticsProvider from "../components/analytics-provider/analytics-provider";
 import { LenisProvider } from "../components/lenis-provider";
 import CookieBanner from "../views/ui/cookie-banner";
-import { getTranslations, isValidLocale, SupportedLocale } from "@/app/lib/i18n";
-import { notFound } from "next/navigation";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,23 +23,23 @@ const redhat = Red_Hat_Display({
 
 interface LangLayoutProps {
   children: React.ReactNode;
-  params: Promise<{ lang: string }>;
+  params: { lang: string };
 }
 
 export async function generateMetadata({ params }: LangLayoutProps): Promise<Metadata> {
-  const { lang } = await params;
+  const { lang } = params;
   
-  if (!isValidLocale(lang)) {
+  // Validar se o idioma é suportado
+  const supportedLocales = ['pt-BR', 'en', 'es'];
+  if (!supportedLocales.includes(lang)) {
     return {
       title: "Idioma não suportado - ISOART",
     };
   }
 
-  const translations = await getTranslations(lang as SupportedLocale);
-  
   return {
-    title: translations.home.hero.title,
-    description: translations.home.hero.description,
+    title: "ISOART - Soluções em EPS e PIR",
+    description: "Especialistas em soluções térmicas com EPS e PIR para construção civil",
     keywords: "EPS, PIR, isolamento térmico, construção civil, telhas, forros, embalagens, ISOART",
     authors: [{ name: "ISOART" }],
     creator: "ISOART",
@@ -65,8 +63,8 @@ export async function generateMetadata({ params }: LangLayoutProps): Promise<Met
       locale: lang,
       url: `https://isoart.stubborn.com.br/${lang}`,
       siteName: 'ISOART',
-      title: translations.home.hero.title,
-      description: translations.home.hero.description,
+      title: "ISOART - Soluções em EPS e PIR",
+      description: "Especialistas em soluções térmicas com EPS e PIR para construção civil",
       images: [
         {
           url: '/img/isoart-logotipo.svg',
@@ -79,8 +77,8 @@ export async function generateMetadata({ params }: LangLayoutProps): Promise<Met
     },
     twitter: {
       card: 'summary_large_image',
-      title: translations.home.hero.title,
-      description: translations.home.hero.description,
+      title: "ISOART - Soluções em EPS e PIR",
+      description: "Especialistas em soluções térmicas com EPS e PIR para construção civil",
       images: ['/img/isoart-logotipo.svg'],
       creator: '@isoart',
       site: '@isoart',
@@ -99,12 +97,13 @@ export async function generateMetadata({ params }: LangLayoutProps): Promise<Met
   };
 }
 
-export default async function LangLayout({ children, params }: LangLayoutProps) {
-  const { lang } = await params;
+export default function LangLayout({ children, params }: LangLayoutProps) {
+  const { lang } = params;
   
   // Validar se o idioma é suportado
-  if (!isValidLocale(lang)) {
-    notFound();
+  const supportedLocales = ['pt-BR', 'en', 'es'];
+  if (!supportedLocales.includes(lang)) {
+    return null; // Retornar null para idiomas não suportados
   }
 
   return (

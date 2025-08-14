@@ -10,8 +10,6 @@ import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin, BsWhatsapp } from 'reac
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { IoChevronBack } from 'react-icons/io5';
 import menuData from '@/app/data/menu-data.json';
-import { useLocale } from '@/app/contexts/locale-context';
-
 
 // Define the types for your menu data for better type safety
 interface Product {
@@ -31,34 +29,6 @@ interface Category {
     image?: string;
     products: Product[];
 }
-
-// Sistema de traduções integrado
-const translations = {
-  'pt-BR': {
-    home: 'Home',
-    solutions: 'Soluções',
-    about: 'Sobre',
-    contact: 'Contato',
-    aboutEpsPir: 'Sobre PIR e EPS',
-    contactButton: 'Entrar em contato'
-  },
-  'en': {
-    home: 'Home',
-    solutions: 'Solutions',
-    about: 'About',
-    contact: 'Contact',
-    aboutEpsPir: 'About PIR and EPS',
-    contactButton: 'Get in touch'
-  },
-  'es': {
-    home: 'Inicio',
-    solutions: 'Soluciones',
-    about: 'Acerca de',
-    contact: 'Contacto',
-    aboutEpsPir: 'Acerca de PIR y EPS',
-    contactButton: 'Ponerse en contacto'
-  }
-};
 
 // Type assertion para o menuData
 const typedMenuData = menuData as Category[];
@@ -94,8 +64,6 @@ const SubmenuImage = ({ src, alt }: { src: string; alt: string }) => {
     );
 };
 
-
-
 function MainNav() {
     const submenuRef = useRef<HTMLDivElement | null>(null);
     const mobileMenuRef = useRef<HTMLDivElement | null>(null);
@@ -104,37 +72,37 @@ function MainNav() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLanguageExpanded, setIsLanguageExpanded] = useState(false);
     const iconRef = useRef<HTMLDivElement | null>(null);
-    const { currentLocale, changeLocale } = useLocale();
+    const [currentLocale, setCurrentLocale] = useState('pt-BR');
     const [mounted, setMounted] = useState(false);
 
-    // Função para obter tradução
-    const t = (key: keyof typeof translations['pt-BR']) => {
-        try {
-            return translations[currentLocale][key];
-        } catch (error) {
-            console.error('Erro na tradução:', error, 'key:', key, 'locale:', currentLocale);
-            return key;
-        }
-    };
-
     // Função para obter informações do idioma
-    const getLocaleInfo = (locale: 'pt-BR' | 'en' | 'es') => {
+    const getLocaleInfo = (locale: string) => {
         const localeInfo = {
             'pt-BR': { flag: '/icons/brazil.svg', name: 'Português' },
             'en': { flag: '/icons/uk.svg', name: 'English' },
             'es': { flag: '/icons/spain.svg', name: 'Español' }
         };
-        return localeInfo[locale];
+        return localeInfo[locale as keyof typeof localeInfo] || localeInfo['pt-BR'];
     };
 
-    // Função para mudar idioma
-    const handleLocaleChange = (newLocale: 'pt-BR' | 'en' | 'es') => {
-        changeLocale(newLocale);
+    // Função para mudar idioma (apenas visual)
+    const handleLocaleChange = (newLocale: string) => {
+        setCurrentLocale(newLocale);
         setIsLanguageExpanded(false);
+        // Salvar no localStorage para manter a seleção
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('locale', newLocale);
+        }
     };
 
-    // Marcar como montado
+    // Carregar locale salvo no localStorage na inicialização
     useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const savedLocale = localStorage.getItem('locale');
+            if (savedLocale && ['pt-BR', 'en', 'es'].includes(savedLocale)) {
+                setCurrentLocale(savedLocale);
+            }
+        }
         setMounted(true);
     }, []);
 
@@ -276,10 +244,10 @@ function MainNav() {
                     <div className={styles['institucional-nav-right']}>
                         <div className={styles['institutional-nav-items']}>
                             <ul>
-                                <li><Link href="/sobre">{t('about')}</Link></li>
-                                <li><Link href="/solucoes">{t('solutions')}</Link></li>
-                                <li><Link href="/sobre-eps-pir">{t('aboutEpsPir')}</Link></li>
-                                <li><Link href="/contato">{t('contact')}</Link></li>
+                                                        <li><Link href="/sobre">Sobre</Link></li>
+                        <li><Link href="/solucoes">Soluções</Link></li>
+                        <li><Link href="/sobre-eps-pir">Sobre EPS PIR</Link></li>
+                        <li><Link href="/contato">Contato</Link></li>
                             </ul>
                         </div>
                         {mounted && (
@@ -362,9 +330,9 @@ function MainNav() {
                         </div>
                         <div className={styles['main-nav-button']}>
                             <Link href="/contato">
-                                <Button variant="primary" size="medium">
-                                    {t('contactButton')}
-                                </Button>
+                                                            <Button variant="primary" size="medium">
+                                Entre em Contato
+                            </Button>
                             </Link>
                         </div>
                         <div className={styles['main-nav-menu-icon']} onClick={toggleMobileMenu} ref={iconRef}>
@@ -391,10 +359,10 @@ function MainNav() {
                     </div>
                     <div className={styles['mobile-menu']} ref={mobileMenuRef}>
                         <ul>
-                            <li><Link href="/" onClick={closeMobileMenu}>{t('home')}</Link></li>
-                            <li><Link href="/solucoes" onClick={closeMobileMenu}>{t('solutions')}</Link></li>
-                            <li><Link href="/sobre" onClick={closeMobileMenu}>{t('about')}</Link></li>
-                            <li><Link href="/contato" onClick={closeMobileMenu}>{t('contact')}</Link></li>
+                                                    <li><Link href="/" onClick={closeMobileMenu}>Início</Link></li>
+                        <li><Link href="/solucoes" onClick={closeMobileMenu}>Soluções</Link></li>
+                        <li><Link href="/sobre" onClick={closeMobileMenu}>Sobre</Link></li>
+                        <li><Link href="/contato" onClick={closeMobileMenu}>Contato</Link></li>
                         </ul>
                         <div className={styles['mobile-contact']}>
                             <p>Rua Dorivaldo Soncela, 1490<br />

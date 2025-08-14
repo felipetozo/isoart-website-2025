@@ -9,9 +9,9 @@ function SolucoesGrid() {
         <section className={styles['solucoes-grid-section']} id="solucoes-grid">
             <div className={styles['solucoes-grid-wrapper']}>
                 <div className={styles['solucoes-grid-header']}>
-                    <p>Nossos produtos</p>
+                    <p>Conheça nossas soluções em EPS e PIR</p>
                     <h3>
-                        Soluções em Poliestireno Expandido (EPS) e Poliisocianurato Isolante Rígido (PIR)
+                        Soluções Térmicas para Construção Civil
                     </h3>
                 </div>
                 <div className={styles['solucoes-grid-grid']}>
@@ -20,14 +20,14 @@ function SolucoesGrid() {
                             <div className={styles['solucoes-grid-card-image']}>
                                 <Image
                                     src={'/img/SolucoesGrid/telhas.avif'}
-                                    alt="Soluções Construtivas Isotérmicas"
+                                    alt="Telhas e Painéis Térmicos"
                                     width={1000}
                                     height={700}
                                 />
                             </div>
                             <div className={styles['solucoes-grid-card-container']}>
-                                <h5>Soluções Construtivas Isotérmicas</h5>
-                                <p>Telhas e painéis isotérmicos em PIR e EPS</p>
+                                <h5>Telhas e Painéis</h5>
+                                <p>Soluções térmicas para coberturas e fachadas com isolamento superior.</p>
                             </div>
                         </Link>
                     </div>
@@ -36,14 +36,14 @@ function SolucoesGrid() {
                         <div className={styles['solucoes-grid-card-image']}>
                                 <Image
                                     src={'/img/SolucoesGrid/construcaocivil.avif'}
-                                    alt="Construção Civil"
+                                    alt="Construção Civil com EPS"
                                     width={1000}
                                     height={700}
                                 />
                             </div>
                             <div className={styles['solucoes-grid-card-container']}>
                                 <h5>Construção Civil</h5>
-                                <p>Lajes unidirecionais, bidirecionais e EPS para lajes pré-fabricadas</p>
+                                <p>Materiais leves e eficientes para construções mais inteligentes.</p>
                             </div>
                         </Link>
                     </div>
@@ -52,14 +52,14 @@ function SolucoesGrid() {
                         <div className={styles['solucoes-grid-card-image']}>
                                 <Image
                                     src={'/img/SolucoesGrid/molduras.avif'}
-                                    alt="Decoração"
+                                    alt="Molduras Decorativas"
                                     width={1000}
                                     height={700}
                                 />
                             </div>
                             <div className={styles['solucoes-grid-card-container']}>
                                 <h5>Molduras Decorativas</h5>
-                                <p>Aplicação em diversos acabamentos</p>
+                                <p>Acabamentos elegantes para portas, janelas e paredes.</p>
                             </div>
                         </Link>
                     </div>
@@ -68,14 +68,14 @@ function SolucoesGrid() {
                         <div className={styles['solucoes-grid-card-image']}>
                                 <Image
                                     src={'/img/SolucoesGrid/embalagens.avif'}
-                                    alt="Embalagens"
+                                    alt="Embalagens em EPS"
                                     width={1000}
                                     height={700}
                                 />
                             </div>
                             <div className={styles['solucoes-grid-card-container']}>
-                                <h5>Embalagens</h5>
-                                <p>Proteção ideal para embalar o seu produto</p>
+                                <h5>Embalagens em EPS</h5>
+                                <p>Proteção personalizada para produtos durante transporte.</p>
                             </div>
                         </Link>
                     </div>

@@ -51,11 +51,11 @@ interface CategoryData {
 
 // Fix: Change params to be a Promise in Next.js 15
 interface CategoryPageProps {
-    params: Promise<{ category: string }>;
+    params: { category: string };
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) {
-    const { category } = await params;
+    const { category } = params;
 
     let categoryData: CategoryData | undefined;
 
@@ -107,7 +107,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                     <p>{heroSection.description}</p>
                     <Link href={heroSection.buttonLink || '/contato'}>
                         <Button variant="primary" size="medium">
-                            {heroSection.buttonText || 'Entrar em contato'}
+                            {heroSection.buttonText || 'Solicite um orçamento'}
                         </Button>
                     </Link>
                 </div>
@@ -169,7 +169,7 @@ export async function generateStaticParams() {
 
 // Dynamic metadata for SEO - Also fix params here
 export async function generateMetadata({ params }: CategoryPageProps) {
-    const { category } = await params;
+    const { category } = params;
 
     let categoryData: CategoryData | undefined;
 

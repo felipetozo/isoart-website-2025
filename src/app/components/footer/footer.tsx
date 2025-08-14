@@ -1,11 +1,13 @@
+'use client';
+
+import React from 'react';
 import styles from './footer.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from "react-icons/md";
-import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin } from "react-icons/bs";
-import { BsWhatsapp } from "react-icons/bs";
+import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin } from 'react-icons/bs';
+import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
 
-function Footer() {
+export default function Footer() {
     return (
         <>
             <section className={styles['footer-section']}>
@@ -16,7 +18,7 @@ function Footer() {
                             <p>+55 45 3231 1699</p>
                         </div>
                         <div className={styles['main-form-contact-item']}>
-                            <BsWhatsapp />
+                            <BsInstagram />
                             <p>+55 45 99133 9642</p>
                         </div>
                         <div className={styles['main-form-contact-item']}>
@@ -51,8 +53,8 @@ function Footer() {
                             <div>
                                 <h5>Institucional</h5>
                                 <ul>
-                                    <li><Link href="/sobre">Sobre a empresa</Link></li>
-                                    <li><Link href="/sobre-eps-pir">Sobre o PIR e o EPS</Link></li>
+                                    <li><Link href="/sobre">Sobre a ISOART</Link></li>
+                                    <li><Link href="/sobre-eps-pir">Sobre EPS PIR</Link></li>
                                 </ul>
                             </div>
                             <div>
@@ -62,7 +64,7 @@ function Footer() {
                                     <li><Link href="/categorias/construcao-civil">Construção Civil</Link></li>
                                     <li><Link href="/categorias/forros">Forros</Link></li>
                                     <li><Link href="/categorias/molduras-decorativas">Molduras Decorativas</Link></li>
-                                    <li><Link href="/categorias/embalagens-em-eps">Embalagens</Link></li>
+                                    <li><Link href="/categorias/embalagens-em-eps">Embalagens em EPS</Link></li>
                                 </ul>
                             </div>
                             <div>
@@ -98,13 +100,11 @@ function Footer() {
                 <div className={styles['footer-wrapper']}>
                     <div className={styles['footer-cnpj']}>
                         <p>
-                            Isoart Indústria de produtos térmicos e construtivos ltda. CNPJ: 09.094.564/0001-05
+                            © 2025 ISOART - Todos os direitos reservados
                         </p>
                     </div>
                 </div>
             </section>
         </>
     );
-};
-
-export default Footer;
+}

@@ -243,17 +243,62 @@ useEffect(() => {
 
 ### **🔮 Próximos Passos para i18n**
 
-#### **Expansão de Traduções**
-- [ ] **Páginas completas**: Traduzir conteúdo de todas as páginas
-- [ ] **Meta tags**: Títulos e descrições multilíngue
-- [ ] **URLs localizadas**: `/en/about`, `/es/soluciones`
-- [ ] **Conteúdo dinâmico**: Produtos, categorias e blog
+#### **📚 Expansão de Traduções (Prioridade Alta)**
+- [ ] **Hook `useTranslations` atualizado** - Integrar com arquivos JSON
+- [ ] **Páginas completas** - Migrar textos hardcoded para chaves de tradução
+- [ ] **Conteúdo dinâmico** - Produtos, categorias e benefícios multilíngue
+- [ ] **Meta tags** - Títulos e descrições para SEO multilíngue
 
-#### **Funcionalidades Avançadas**
+#### **🏗️ Estrutura de Arquivos (Prioridade Média)**
+- [ ] **Organização por página** - `locales/pt-BR/home.json`, `categories.json`, etc.
+- [ ] **Migração de JSONs** - Converter `main-slider-data.json`, `categories/*.json`
+- [ ] **Sistema de fallback** - Português como idioma padrão se tradução não existir
+- [ ] **Validação de traduções** - Verificar chaves faltantes entre idiomas
+
+#### **⚡ Funcionalidades Avançadas (Prioridade Baixa)**
 - [ ] **Detecção automática** do idioma do navegador
-- [ ] **Fallback inteligente** para idiomas não suportados
+- [ ] **URLs localizadas** - `/en/about`, `/es/soluciones`
 - [ ] **Cache de traduções** para performance
 - [ ] **Sistema de pluralização** para diferentes idiomas
+
+#### **🔧 Implementação Técnica**
+```typescript
+// 1. Atualizar useTranslations hook
+export function useTranslations() {
+  const { currentLocale } = useLocale();
+  
+  const t = (key: string, fallback?: string) => {
+    const translations = loadTranslations(currentLocale);
+    return translations[key] || fallback || key;
+  };
+  
+  return { t, currentLocale };
+}
+
+// 2. Estrutura de traduções por página
+locales/
+├── pt-BR/
+│   ├── home.json          # Slider, hero, benefícios
+│   ├── categories.json    # Títulos e descrições
+│   ├── products.json      # Nomes e especificações
+│   ├── about.json         # Conteúdo institucional
+│   └── contact.json       # Formulários e textos
+├── en/                    # [mesma estrutura]
+└── es/                    # [mesma estrutura]
+
+// 3. Migração de componentes
+// ANTES (hardcoded)
+<h1>Molduras decorativas</h1>
+
+// DEPOIS (com traduções)
+<h1>{t('categories.molduras.title')}</h1>
+```
+
+#### **📊 Estimativa de Trabalho**
+- **Infraestrutura e hook**: 2-3 horas
+- **Migração de conteúdo**: 8-12 horas
+- **Testes e ajustes**: 3-5 horas
+- **Total estimado**: 13-20 horas
 
 ## 🍪 Sistema de Cookies
 
@@ -414,6 +459,25 @@ npm run deploy
 - [ ] **Meta Pixel** - Tracking para redes sociais
 - [ ] **Finalizar refatoração CSS** - Converter para kebab-case
 - [ ] **Otimizações de SEO** - Meta tags, sitemap, etc.
+
+### **📁 Sistema de Downloads (Nova Funcionalidade)**
+- [ ] **Estrutura de pastas** - `public/downloads/` organizada por categoria
+- [ ] **Logos institucionais** - SVG, PNG em diferentes orientações
+- **Vídeos institucionais** - MP4 com thumbnails
+- **Catálogos de produtos** - PDFs organizados por categoria
+- **Templates de banners** - PSDs para parceiros e distribuidores
+- **Brand kit completo** - Cores, tipografia e manual de identidade visual
+
+#### **Estrutura Proposta**
+```
+public/downloads/
+├── logos/           # Logotipos (SVG, PNG)
+├── videos/          # Vídeos institucionais + thumbnails
+├── catalogos/       # PDFs de produtos e fichas técnicas
+└── templates/       # PSDs de banners e brand kit
+```
+
+**Vantagens**: Acesso direto via URL, não processa pelo Next.js, downloads rápidos
 
 ### **Prioridade Média**
 - [ ] **Sistema de formulários** - Validação e envio

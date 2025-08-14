@@ -19,27 +19,212 @@
     "hero": {
       "title": "Isoart - Soluciones en EPS y PIR para Construcción Civil",
       "description": "Expertos en soluciones térmicas con EPS y PIR para construcción civil, embalajes y aislamiento. Tejas, techos, molduras y más."
+    },
+    "slider": {
+      "slide1": {
+        "title": "Molduras decorativas",
+        "description": "Molduras en EPS para puertas, ventanas y paredes. Ligeras, duraderas y fáciles de instalar, ideales para acabados decorativos en ambientes internos y externos.",
+        "buttonText": "Saber más"
+      },
+      "slide2": {
+        "title": "Productos en EPS para construcción civil",
+        "description": "Materiales en EPS como losas, bloques y copos para construcción civil. Proporcionan reducción de costos, ligereza y aislamiento térmico, atendiendo proyectos residenciales y comerciales.",
+        "buttonText": "Saber más"
+      },
+      "slide3": {
+        "title": "Tejas y Paneles",
+        "description": "Tejas y paneles Isoart para techos y fachadas. Disponibles con o sin aislamiento térmico en EPS/PIR, ofrecen eficiencia energética y resistencia. Adecuados para diversos proyectos de construcción.",
+        "buttonText": "Saber más"
+      }
+    },
+    "homeSolutions": {
+      "title": "Nuestras Soluciones",
+      "subtitle": "Productos innovadores para construcción civil, embalajes y aislamiento térmico",
+      "construcaoCivil": {
+        "title": "Construcción Civil",
+        "description": "Materiales en EPS para losas, bloques y copos"
+      },
+      "embalagens": {
+        "title": "Embalajes",
+        "description": "Soluciones en EPS para protección y transporte"
+      },
+      "molduras": {
+        "title": "Molduras Decorativas",
+        "description": "Acabados en EPS para puertas, ventanas y paredes"
+      },
+      "telhasPaineis": {
+        "title": "Tejas y Paneles",
+        "description": "Techos y fachadas con aislamiento térmico"
+      }
+    }
+  },
+  "categories": {
+    "construcaoCivil": {
+      "title": "Construcción Civil con EPS",
+      "description": "Materiales en EPS como losas, bloques y copos para construcción civil. Proporcionan reducción de costos, ligereza y aislamiento térmico, atendiendo proyectos residenciales y comerciales.",
+      "buttonText": "Contáctanos",
+      "categoryDescription": "Ligereza, resistencia y eficiencia para construcciones más inteligentes. Nuestros productos en EPS reducen costos, aumentan la productividad y ofrecen soluciones innovadoras para losas, rellenos y aislamiento térmico de alto rendimiento."
+    },
+    "embalagens": {
+      "title": "Embalajes en EPS",
+      "description": "Soluciones en EPS para embalajes y protección de productos. Ligeros, resistentes y con excelente capacidad de absorción de impactos.",
+      "buttonText": "Contáctanos",
+      "categoryDescription": "Protección inteligente para sus productos con embalajes personalizados en EPS. Ofrecemos soluciones que garantizan seguridad en el transporte y almacenamiento."
+    },
+    "molduras": {
+      "title": "Molduras Decorativas",
+      "description": "Molduras en EPS para acabados decorativos. Ligeras, duraderas y fáciles de instalar.",
+      "buttonText": "Contáctanos",
+      "categoryDescription": "Transforme sus ambientes con molduras decorativas en EPS. Elegancia y sofisticación para puertas, ventanas y paredes con instalación simple y acabado perfecto."
+    },
+    "telhasPaineis": {
+      "title": "Tejas y Paneles",
+      "description": "Tejas y paneles con aislamiento térmico en EPS/PIR. Eficiencia energética y resistencia para techos y fachadas.",
+      "buttonText": "Contáctanos",
+      "categoryDescription": "Soluciones térmicas avanzadas para techos y fachadas. Nuestras tejas y paneles ofrecen excelente aislamiento térmico, reduciendo costos de energía y aumentando el confort."
+    }
+  },
+  "products": {
+    "construcaoCivil": {
+      "lajes": {
+        "name": "Losas en EPS",
+        "description": "Losas con relleno en EPS, reduciendo costos y mejorando la estructura."
+      },
+      "blocos": {
+        "name": "Bloques en EPS",
+        "description": "Bloques de EPS para construcciones ligeras y resistentes."
+      },
+      "flocos": {
+        "name": "Copos en EPS",
+        "description": "Copos de EPS para diversas aplicaciones en construcción."
+      },
+      "chapas": {
+        "name": "Chapas y Paneles en EPS",
+        "description": "Chapas y paneles de EPS para diversas construcciones."
+      }
+    },
+    "embalagens": {
+      "embalagens": {
+        "name": "Embalajes en EPS",
+        "description": "Soluciones personalizadas en EPS para protección de productos."
+      },
+      "perolas": {
+        "name": "Perlas en EPS",
+        "description": "Perlas de EPS para relleno y protección."
+      }
+    },
+    "molduras": {
+      "beiral": {
+        "name": "Molduras de Alero",
+        "description": "Molduras para acabado de aleros y techos."
+      },
+      "colunas": {
+        "name": "Columnas y Capiteles",
+        "description": "Elementos decorativos para columnas y estructuras."
+      },
+      "muros": {
+        "name": "Molduras para Muros",
+        "description": "Acabados decorativos para muros y cercas."
+      },
+      "parede": {
+        "name": "Molduras para Paredes",
+        "description": "Molduras decorativas para paredes internas y externas."
+      },
+      "portas": {
+        "name": "Molduras para Puertas",
+        "description": "Acabados elegantes para puertas y aberturas."
+      }
+    },
+    "telhasPaineis": {
+      "telhasTermicas": {
+        "name": "Tejas Térmicas",
+        "description": "Tejas con núcleo en PIR o EPS y revestimiento doble con chapas de acero galvalume o película, ideales para techos con excelente aislamiento térmico."
+      },
+      "camaraFrigorifica": {
+        "name": "Cámara Frigorífica",
+        "description": "Paneles para cámaras frigoríficas con aislamiento térmico superior."
+      },
+      "divisoriaForro": {
+        "name": "Divisoria y Techo",
+        "description": "Soluciones para divisiones y techos con aislamiento acústico y térmico."
+      },
+      "fachadaFechamento": {
+        "name": "Fachada y Cierre",
+        "description": "Paneles para fachadas y cierres laterales con acabado premium."
+      },
+      "salaLimpa": {
+        "name": "Sala Limpia",
+        "description": "Paneles especiales para ambientes que exigen control de contaminación."
+      }
+    }
+  },
+  "benefits": {
+    "title": "Beneficios",
+    "levezaEstrutural": {
+      "title": "Ligereza Estructural",
+      "description": "Reduce el peso de la construcción, permitiendo cimientos ligeros y ahorro en materiales estructurales sin comprometer la resistencia."
+    },
+    "eficienciaTermica": {
+      "title": "Eficiencia Térmica y Acústica",
+      "description": "Minimiza el intercambio de calor y ruidos, proporcionando mayor confort y reduciendo el consumo de energía para climatización."
+    },
+    "durabilidade": {
+      "title": "Durabilidad Prolongada",
+      "description": "Material ligero, resistente y de baja mantención, garantizando una vida útil extendida con excelente costo-beneficio."
     }
   },
   "footer": {
-    "copyright": "© 2025 ISOART. Todos los derechos reservados."
+    "copyright": "© 2025 ISOART. Todos los derechos reservados.",
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "email": "Correo electrónico",
+    "social": "Redes Sociales"
   },
   "common": {
     "buttons": {
       "contact": "Contáctanos",
       "requestQuote": "Solicita un presupuesto",
-      "learnMore": "Saber más"
+      "learnMore": "Saber más",
+      "download": "Descargar",
+      "viewMore": "Ver más"
     },
     "sections": {
       "benefits": "Beneficios",
       "characteristics": "Características",
       "applications": "Aplicaciones",
-      "aboutCompany": "Acerca de la Empresa"
-    }
+      "aboutCompany": "Acerca de la Empresa",
+      "products": "Productos",
+      "solutions": "Soluciones"
+    },
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "close": "Cerrar"
   },
   "language": {
     "portuguese": "Portugués",
     "english": "Inglés",
     "spanish": "Español"
+  },
+  "aboutPage": {
+    "title": "Acerca de Isoart",
+    "description": "Empresa líder en soluciones térmicas con EPS y PIR para construcción civil, embalajes y aislamiento.",
+    "mission": "Nuestra Misión",
+    "vision": "Nuestra Visión",
+    "values": "Nuestros Valores"
+  },
+  "contactPage": {
+    "title": "Contáctanos",
+    "description": "Estamos listos para atenderle y proporcionar las mejores soluciones para su proyecto.",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "company": "Empresa",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje",
+      "success": "¡Su mensaje fue enviado exitosamente!"
+    }
   }
 }
