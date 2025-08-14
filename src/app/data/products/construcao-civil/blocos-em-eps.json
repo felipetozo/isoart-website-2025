@@ -4,6 +4,10 @@
     "slug": "blocos-em-eps",
     "description": "Blocos em EPS (Poliestireno Expandido) para aplicações estruturais e de preenchimento, oferecendo leveza, isolamento térmico e facilidade de manuseio em construções.",
     "image": "/img/produtos/construcao-civil/blocos/blocos-01.avif",
+    "projectImages": [
+        "/img/produtos/construcao-civil/blocos/blocos-1440x800_001.avif",
+        "/img/produtos/construcao-civil/blocos/blocos-1440x800_002.avif"
+    ],
     "specifications": {
         "material": "Poliestireno Expandido (EPS)",
         "densidade": "13-20 kg/m³",
