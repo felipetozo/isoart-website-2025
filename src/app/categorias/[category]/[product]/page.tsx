@@ -231,14 +231,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
                         <ImageCarousel 
                             images={productData.projectImages}
                             alt={productData.name}
-                            width={1600}
+                            width={1440}
                             height={800}
                         />
                     ) : (
                         <SingleImage 
                             src={productData.image || '/img/geral/exemplo2.avif'} 
                             alt={productData.name} 
-                            width={1600} 
+                            width={1440} 
                             height={800}
                         />
                     )}

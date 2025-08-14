@@ -13,7 +13,7 @@ interface ImageCarouselProps {
     height?: number;
 }
 
-export default function ImageCarousel({ images, alt, width = 1600, height = 800 }: ImageCarouselProps) {
+export default function ImageCarousel({ images, alt, width = 1440, height = 800 }: ImageCarouselProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
 
