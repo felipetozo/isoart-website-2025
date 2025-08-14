@@ -42,11 +42,7 @@ export default function ImageCarousel({ images, alt, width = 1440, height = 800 
                         alt={`${alt} - Imagem ${currentIndex + 1}`}
                         width={width}
                         height={height}
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover'
-                        }}
+                        className={styles['main-image']}
                     />
                     
                     <button 
