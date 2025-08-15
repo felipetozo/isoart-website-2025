@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Button from '@/app/views/ui/button/button';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
-import { IoChevronBack } from 'react-icons/io5';
+
 import menuData from '@/app/data/menu-data.json';
 
 // Define the types for your menu data for better type safety
@@ -70,7 +70,7 @@ function MainNav() {
     const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
     const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isLanguageExpanded, setIsLanguageExpanded] = useState(false);
+
     const iconRef = useRef<HTMLDivElement | null>(null);
     const [currentLocale, setCurrentLocale] = useState('pt-BR');
     const [mounted, setMounted] = useState(false);
@@ -88,7 +88,6 @@ function MainNav() {
     // Função para mudar idioma (apenas visual)
     const handleLocaleChange = (newLocale: string) => {
         setCurrentLocale(newLocale);
-        setIsLanguageExpanded(false);
         // Salvar no localStorage para manter a seleção
         if (typeof window !== 'undefined') {
             localStorage.setItem('locale', newLocale);
@@ -251,11 +250,7 @@ function MainNav() {
                             </ul>
                         </div>
                         {mounted && (
-                            <div 
-                                className={`${styles['language-selector-wrapper']} ${isLanguageExpanded ? styles['expanded'] : ''}`}
-                                onClick={() => setIsLanguageExpanded(!isLanguageExpanded)}
-                            >
-                                <IoChevronBack className={styles['language-chevron']} />
+                            <div className={`${styles['language-selector-wrapper']} ${styles['expanded']}`}>
                                 <div className={styles['language-flag']}>
                                     <img
                                         src={getLocaleInfo(currentLocale).flag}
@@ -264,33 +259,31 @@ function MainNav() {
                                     />
                                 </div>
                                 
-                                {isLanguageExpanded && (
-                                    <div className={styles['language-options']}>
-                                        {(['pt-BR', 'en', 'es'] as const).map((locale) => {
-                                            // Não mostrar o idioma atual
-                                            if (locale === currentLocale) return null;
-                                            
-                                            const localeInfo = getLocaleInfo(locale);
-                                            return (
-                                                <button
-                                                    key={locale}
-                                                    className={styles['language-option']}
-                                                    onClick={(e) => {
-                                                        e.stopPropagation();
-                                                        handleLocaleChange(locale);
-                                                    }}
-                                                    title={localeInfo.name}
-                                                >
-                                                    <img
-                                                        src={localeInfo.flag}
-                                                        alt={`Bandeira ${localeInfo.name}`}
-                                                        className={styles['flag-image']}
-                                                    />
-                                                </button>
-                                            );
-                                        })}
-                                    </div>
-                                )}
+                                <div className={styles['language-options']}>
+                                    {(['pt-BR', 'en', 'es'] as const).map((locale) => {
+                                        // Não mostrar o idioma atual
+                                        if (locale === currentLocale) return null;
+                                        
+                                        const localeInfo = getLocaleInfo(locale);
+                                        return (
+                                            <button
+                                                key={locale}
+                                                className={styles['language-option']}
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    handleLocaleChange(locale);
+                                                }}
+                                                title={localeInfo.name}
+                                            >
+                                                <img
+                                                    src={localeInfo.flag}
+                                                    alt={`Bandeira ${localeInfo.name}`}
+                                                    className={styles['flag-image']}
+                                                />
+                                            </button>
+                                        );
+                                    })}
+                                </div>
                             </div>
                         )}
                     </div>

@@ -85,17 +85,14 @@
     align-items: center;
     gap: 0.5rem;
     color: rgba(241, 244, 247, 1);
-    border: 1px solid rgba(241, 244, 247, 0.1);
-    background-color: rgba(241, 244, 247, 0.025);
+    border: 1px solid rgba(241, 244, 247, 0.15);
+    background-color: rgba(17, 17, 17, 0.50);
     border-radius: 0.2rem;
     padding: 0.3rem 0.6rem;
-    cursor: pointer;
     position: relative;
 }
 
-.language-selector-wrapper.expanded .language-chevron {
-    transform: rotate(-180deg);
-}
+
 
 /* Main Nav */
 .main-nav-section {
@@ -459,16 +456,12 @@
     position: relative;
 }
 
-.language-selector-wrapper.expanded {
-    background-color: rgba(17, 17, 17, 0.50);
-    border: 1px solid rgba(241, 244, 247, 0.15);
-}
+
 
 .language-options {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    animation: slideIn 0.3s ease;
 }
 
 .language-option {
@@ -494,13 +487,3 @@
     object-fit: cover;
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-1rem);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
