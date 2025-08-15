@@ -25,10 +25,9 @@ export default function Sustentabilidade() {
         <div className={styles['sustentabilidade-aviso']}>
           <Recycle className={styles['sustentabilidade-aviso-icon']} />
           <p className={styles['sustentabilidade-aviso-text']}>
-          A Isoart reutiliza integralmente os resíduos gerados internamente
-          e conta com dois centros de reciclagem próprios, garantindo o
-          correto reaproveitamento do material e reforçando seu compromisso
-          com a sustentabilidade.
+          A Isoart conta com dois centros de reciclagem internos,
+          onde reutiliza integralmente os resíduos gerados internamente,
+          reforçando seu compromisso com a sustentabilidade.
           </p>
         </div>
       </div>

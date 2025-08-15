@@ -9,28 +9,28 @@ const solucoes = [
         id: 1,
         title: 'Telhas e Painéis Térmicos',
         description: 'Soluções completas para coberturas e fachadas com isolamento térmico superior. Nossas telhas e painéis oferecem eficiência energética, resistência e durabilidade para diversos projetos de construção.',
-        image: '/img/SolucoesGrid/telhas.avif',
+        image: '/img/solucoes-page/solucoes-telhas-paineis.avif',
         link: '/categorias/telhas-e-paineis'
     },
     {
         id: 2,
         title: 'Construção Civil com EPS',
         description: 'Materiais inovadores em EPS para construção civil, incluindo lajes, blocos, flocos e chapas. Proporcionam redução de custos, leveza estrutural e excelente isolamento térmico.',
-        image: '/img/SolucoesGrid/construcaocivil.avif',
+        image: '/img/solucoes-page/solucoes-construcao-civil.avif',
         link: '/categorias/construcao-civil'
     },
     {
         id: 3,
         title: 'Molduras Decorativas',
         description: 'Molduras em EPS para portas, janelas, beirais e mais. Leves, duráveis e de fácil instalação, são ideais para acabamentos decorativos em ambientes internos e externos.',
-        image: '/img/SolucoesGrid/molduras.avif',
+        image: '/img/solucoes-page/solucoes-molduras.avif',
         link: '/categorias/molduras-decorativas'
     },
     {
         id: 4,
         title: 'Embalagens em EPS',
         description: 'Embalagens personalizadas em EPS para proteção de produtos durante transporte. Leves, resistentes e versáteis, atendem às necessidades de diversos setores industriais.',
-        image: '/img/SolucoesGrid/embalagens.avif',
+        image: '/img/solucoes-page/solucoes-embalagens.avif',
         link: '/categorias/embalagens-em-eps'
     }
 ];

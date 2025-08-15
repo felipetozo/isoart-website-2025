@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -29,6 +30,7 @@
 
 .contact-component-header h4 {
     color: rgba(241, 244, 247, 0.825);
+    width: 100%;
 }
 
 .contact-component-header a {

@@ -150,7 +150,7 @@ function MainForm() {
             <div className={styles['main-form-wrapper']}>
                 <div className={styles['main-form-header']}>
                     <h4>
-                        Possui alguma dúvida? Entre ou solicite o contato de um de nossos consultores.
+                        Entre em contato conosco.
                     </h4>
                     <div className={styles['main-form-header-container']}>
                         <div className={styles['main-form-contact-item']}>

@@ -149,7 +149,7 @@ function ContactComponent() {
                 {/* Cabeçalho do formulário */}
                 <div className={styles['contact-component-header']}>
                     <h4>
-                        Possui alguma dúvida? Entre ou solicite o contato de um de nossos consultores.
+                        Entre em contato conosco:
                     </h4>
                     <div className={styles['contact-component-header-container']}>
                         <div className={styles['contact-component-contact-item']}>

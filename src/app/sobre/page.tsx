@@ -2,9 +2,7 @@
 import ContactComponent from '../components/contact/contact-component';
 import Sustentabilidade from '../components/sustentabilidade/sustentabilidade';
 import styles from './page.module.css';
-import { useState, useRef, useEffect } from 'react';
 import { Target, Eye, Heart } from 'lucide-react';
-import { gsap } from 'gsap';
 
 const TIMELINE = [
   {
@@ -31,73 +29,6 @@ const TIMELINE = [
 ];
 
 export default function SobrePage() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [imgPos, setImgPos] = useState<{ x: number; y: number } | null>(null);
-  const imageRefs = useRef<(HTMLImageElement | null)[]>([]);
-
-  // Detect mobile
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 900;
-
-  // Função para animar entrada da imagem
-  const animateImageIn = (index: number) => {
-    const imageRef = imageRefs.current[index];
-    if (imageRef && !isMobile) {
-      // Reset da imagem para estado inicial
-      gsap.set(imageRef, {
-        opacity: 0,
-        scale: 0.8,
-        filter: "blur(10px)",
-        rotation: -5,
-        transformOrigin: "center center"
-      });
-      
-      // Animação de entrada com efeito de blur e rotação
-      gsap.to(imageRef, {
-        opacity: 1,
-        scale: 1,
-        filter: "blur(0px)",
-        rotation: 0,
-        duration: 0.6,
-        ease: "back.out(1.7)"
-      });
-      
-      // Esconder o cursor
-      document.body.style.cursor = 'none';
-    }
-  };
-
-  // Função para animar saída da imagem
-  const animateImageOut = (index: number) => {
-    const imageRef = imageRefs.current[index];
-    if (imageRef && !isMobile) {
-      gsap.to(imageRef, {
-        opacity: 0,
-        scale: 0.8,
-        filter: "blur(5px)",
-        rotation: 5,
-        duration: 0.4,
-        ease: "back.in(1.7)"
-      });
-      
-      // Mostrar o cursor novamente
-      document.body.style.cursor = 'auto';
-    }
-  };
-
-  // Configuração inicial das imagens
-  useEffect(() => {
-    if (!isMobile) {
-      const imageItems = imageRefs.current.filter(Boolean) as HTMLImageElement[];
-      
-      // Configuração inicial das imagens
-      gsap.set(imageItems, {
-        opacity: 0,
-        scale: 0.8,
-        filter: "blur(10px)",
-        rotation: -5
-      });
-    }
-  }, [isMobile]);
 
   return (
     <div>
@@ -148,68 +79,22 @@ export default function SobrePage() {
           {TIMELINE.map((item, idx) => (
             <div
               key={item.year}
-              className={
-                styles['timeline-item'] +
-                (activeIndex === idx ? ' ' + styles['timeline-item-active'] : '')
-              }
-              onMouseEnter={() => {
-                setActiveIndex(idx);
-                animateImageIn(idx);
-              }}
-              onMouseLeave={() => {
-                animateImageOut(idx);
-                setActiveIndex(null);
-              }}
-              onMouseMove={e => {
-                if (!isMobile && activeIndex === idx) {
-                  const section = e.currentTarget as HTMLDivElement;
-                  const rect = section.getBoundingClientRect();
-                  const newPos = {
-                    x: e.clientX - rect.left,
-                    y: e.clientY - rect.top,
-                  };
-                  setImgPos(newPos);
-                  
-                  // Animação suave do movimento da imagem
-                  const imageRef = imageRefs.current[idx];
-                  if (imageRef) {
-                    gsap.to(imageRef, {
-                      left: newPos.x + 40,
-                      top: newPos.y,
-                      duration: 0.1,
-                      ease: "power2.out"
-                    });
-                  }
-                }
-              }}
+              className={styles['timeline-item']}
             >
               <div style={{ flex: 1, minWidth: 120 }}>
                 <div className={styles['timeline-date']}>{item.year}</div>
                 <div className={styles['timeline-label']}>{item.label}</div>
-                {/* Mobile: imagem entre label e descrição */}
-                {isMobile && (
-                  <img
-                    src={item.image}
-                    alt={item.label}
-                    className={styles['timeline-image']}
-                    style={{ position: 'static', opacity: 1, pointerEvents: 'auto', width: '100%', height: 180, margin: '1.5rem 0 1rem 0', transform: 'none' }}
-                  />
-                )}
+                <img
+                  src={item.image}
+                  alt={item.label}
+                  className={`${styles['timeline-image']} ${styles['timeline-image-mobile']}`}
+                  style={{ width: '100%', height: 200, objectFit: 'cover', borderRadius: '0.2rem', marginTop: '1rem' }}
+                />
               </div>
               <div style={{ flex: 5 }}>
                 <div className={styles['timeline-description']}>{item.description}</div>
               </div>
-              {/* Desktop: imagem flutuante ao lado, segue o mouse */}
-              {!isMobile && (
-                <img
-                  ref={(el: HTMLImageElement | null) => {
-                    imageRefs.current[idx] = el;
-                  }}
-                  src={item.image}
-                  alt={item.label}
-                  className={styles['timeline-image']}
-                />
-              )}
+
             </div>
           ))}
         </div>
@@ -226,7 +111,8 @@ export default function SobrePage() {
       </section>
 
       <section className={styles['map-section']}>
-        <img src="/img/geral/isoart-mapa.avif" alt="Mapa da Isoart" className={styles['map-image']} />
+        <img src="/img/geral/isoart-mapa-01.avif" alt="Mapa da Isoart" className={`${styles['map-image']} ${styles['map-image-mobile']}`} />
+        <img src="/img/geral/isoart-mapa-02.avif" alt="Mapa da Isoart" className={`${styles['map-image']} ${styles['map-image-desktop']}`} />
         <div className={styles['map-overlay']}>
           <div className={styles['map-overlay-wrapper']}>
             <div className={styles['map-overlay-content']}>
