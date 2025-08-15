@@ -7,7 +7,6 @@ import menuData from '@/app/data/menu-data.json';
 import SobreEmpresa from '@/app/components/sobre-empresa/sobre-empresa';
 import ContactComponent from '@/app/components/contact/contact-component';
 import Button from '@/app/views/ui/button/button';
-import TabbedSection from './tabbed-section';
 import BenefitsSection from '@/app/components/benefits-section/benefits-section';
 import IncendioComponent from '@/app/components/pir-incendio/pir-incendio';
 import { TbChecks, TbHome, TbMicroscope, TbBuildingFactory2, TbSnowflake, TbMedicineSyrup, TbBuilding, TbBuildingHospital, TbBuildingFactory, TbTools, TbPackage, TbDeviceTv, TbWindow, TbTruck, TbBuildingStore, TbArmchair, TbMicrophone, } from "react-icons/tb";
@@ -272,8 +271,17 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 </div>
             </section>
 
-            {/* Tabbed Section */}
-            <TabbedSection tabDescriptions={tabDescriptions} />
+            {/* Product Descriptions */}
+            <section className={styles['product-descriptions-section']}>
+                <div className={styles['product-descriptions-wrapper']}>
+                    {Object.entries(tabDescriptions).map(([title, description]) => (
+                        <div key={title} className={styles['product-description-item']}>
+                            <h4 className={styles['product-description-title']}>{title}</h4>
+                            <p className={styles['product-description-content']}>{description}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
             {/* PIR Incêndio Component - Apenas para categoria telhas-e-paineis */}
             {category === 'telhas-e-paineis' && <IncendioComponent />}

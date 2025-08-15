@@ -235,6 +235,45 @@
     border-radius: 0.2rem;
 }
 
+/* Product Descriptions Section */
+.product-descriptions-section {
+    width: 100%;
+    padding: 0 0 5rem 0;
+    background-color: rgba(241, 244, 247, 1);
+}
+
+.product-descriptions-wrapper {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.product-description-title {
+    color: rgba(17, 17, 17, 1);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: var(--font-redhat);
+    border-bottom: 1px solid rgba(146, 151, 120, 1);
+    padding-bottom: 0.5rem;
+}
+
+.product-description-content {
+    color: rgba(17, 17, 17, 0.75);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.product-description-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 @media (min-width: 800px) and (max-width: 1199px) {
     .product-page-hero-section {
         height: 50vw;
@@ -252,6 +291,10 @@
     }
 
     .application-cards {
+        flex-direction: row;
+    }
+
+    .product-descriptions-wrapper {
         flex-direction: row;
     }
 }
