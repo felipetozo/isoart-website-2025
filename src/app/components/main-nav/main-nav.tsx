@@ -79,7 +79,7 @@ function MainNav() {
     const getLocaleInfo = (locale: string) => {
         const localeInfo = {
             'pt-BR': { flag: '/icons/brazil.svg', name: 'Português' },
-            'en': { flag: '/icons/uk.svg', name: 'English' },
+            'en': { flag: '/icons/eua.svg', name: 'English' },
             'es': { flag: '/icons/spain.svg', name: 'Español' }
         };
         return localeInfo[locale as keyof typeof localeInfo] || localeInfo['pt-BR'];
@@ -251,24 +251,15 @@ function MainNav() {
                         </div>
                         {mounted && (
                             <div className={`${styles['language-selector-wrapper']} ${styles['expanded']}`}>
-                                <div className={styles['language-flag']}>
-                                    <img
-                                        src={getLocaleInfo(currentLocale).flag}
-                                        alt={`Bandeira ${getLocaleInfo(currentLocale).name}`}
-                                        className={styles['flag-image']}
-                                    />
-                                </div>
-                                
                                 <div className={styles['language-options']}>
                                     {(['pt-BR', 'en', 'es'] as const).map((locale) => {
-                                        // Não mostrar o idioma atual
-                                        if (locale === currentLocale) return null;
-                                        
                                         const localeInfo = getLocaleInfo(locale);
+                                        const isActive = locale === currentLocale;
+                                        
                                         return (
                                             <button
                                                 key={locale}
-                                                className={styles['language-option']}
+                                                className={`${styles['language-option']} ${isActive ? styles['language-option-active'] : ''}`}
                                                 onClick={(e) => {
                                                     e.stopPropagation();
                                                     handleLocaleChange(locale);
