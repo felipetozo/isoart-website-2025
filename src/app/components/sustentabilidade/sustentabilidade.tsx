@@ -1,7 +1,7 @@
 import styles from './sustentabilidade.module.css';
 import { Recycle } from 'lucide-react';
 
-export default function Sustentabilidade() {
+function Sustentabilidade() {
   return (
     <section className={styles['sustentabilidade-section']}>
       <div className={styles['sustentabilidade-wrapper']}>
@@ -33,4 +33,6 @@ export default function Sustentabilidade() {
       </div>
     </section>
   );
-} 
+}
+
+export default Sustentabilidade; 

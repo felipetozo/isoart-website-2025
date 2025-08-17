@@ -35,7 +35,7 @@ const solucoes = [
     }
 ];
 
-export default function SolucoesPage() {
+function SolucoesPage() {
     return (
         <>
             {/* Hero Section */}
@@ -82,4 +82,6 @@ export default function SolucoesPage() {
             </section>
         </>
     );
-} 
+}
+
+export default SolucoesPage; 

@@ -7,7 +7,7 @@ interface TabbedSectionProps {
     tabDescriptions: { [key: string]: string };
 }
 
-export default function TabbedSection({ tabDescriptions }: TabbedSectionProps) {
+function TabbedSection({ tabDescriptions }: TabbedSectionProps) {
     const [activeTab, setActiveTab] = useState(Object.keys(tabDescriptions)[0]);
 
     const handleTabClick = (tab: string) => {
@@ -45,3 +45,5 @@ export default function TabbedSection({ tabDescriptions }: TabbedSectionProps) {
         </section>
     );
 }
+
+export default TabbedSection;

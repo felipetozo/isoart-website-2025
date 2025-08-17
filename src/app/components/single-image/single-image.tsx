@@ -12,7 +12,7 @@ interface SingleImageProps {
     height?: number;
 }
 
-export default function SingleImage({ src, alt, width = 1600, height = 800 }: SingleImageProps) {
+function SingleImage({ src, alt, width = 1600, height = 800 }: SingleImageProps) {
     const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
 
     return (
@@ -50,4 +50,6 @@ export default function SingleImage({ src, alt, width = 1600, height = 800 }: Si
             />
         </>
     );
-} 
+}
+
+export default SingleImage; 

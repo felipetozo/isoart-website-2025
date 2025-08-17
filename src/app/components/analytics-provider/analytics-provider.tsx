@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/next";
 
-export default function AnalyticsProvider() {
+function AnalyticsProvider() {
   // Só carrega em produção
   if (process.env.NODE_ENV !== 'production') {
     return null;
@@ -20,3 +20,5 @@ export default function AnalyticsProvider() {
     </>
   );
 }
+
+export default AnalyticsProvider;

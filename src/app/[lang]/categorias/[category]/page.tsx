@@ -55,7 +55,7 @@ interface CategoryPageProps {
     params: Promise<{ lang: string; category: string }>;
 }
 
-export default async function CategoryPage({ params }: CategoryPageProps) {
+async function CategoryPage({ params }: CategoryPageProps) {
     const { lang, category } = await params;
 
     let categoryData: CategoryData | undefined;
@@ -218,3 +218,5 @@ export async function generateMetadata({ params }: CategoryPageProps) {
         },
     };
 }
+
+export default CategoryPage;

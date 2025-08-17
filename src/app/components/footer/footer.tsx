@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
 
-export default function Footer() {
+function Footer() {
     return (
         <>
             <section className={styles['footer-section']}>
@@ -108,3 +108,5 @@ export default function Footer() {
         </>
     );
 }
+
+export default Footer;

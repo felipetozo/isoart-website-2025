@@ -13,7 +13,7 @@ const incendioBlocos = [
   { number: '03', destaque: 'Baixa emissão de fumaça', legenda:'Contribui para manter as rotas de fuga mais visíveis e seguras' },
 ];
 
-export default function SobreEpsPirPage() {
+function SobreEpsPirPage() {
   return (
     <div>
       {/* Hero Section */}
@@ -285,3 +285,5 @@ export default function SobreEpsPirPage() {
     </div>
   );
 }
+
+export default SobreEpsPirPage;

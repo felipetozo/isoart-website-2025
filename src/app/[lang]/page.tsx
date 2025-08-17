@@ -4,7 +4,7 @@ interface LangPageProps {
   params: { lang: string };
 }
 
-export default function LangPage({ params }: LangPageProps) {
+function LangPage({ params }: LangPageProps) {
   const { lang } = params;
   
   return (
@@ -22,3 +22,5 @@ export async function generateStaticParams() {
     { lang: 'es' },
   ];
 }
+
+export default LangPage;

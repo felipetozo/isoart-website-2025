@@ -28,7 +28,7 @@ const TIMELINE = [
   },
 ];
 
-export default function SobrePage() {
+function SobrePage() {
 
   return (
     <div>
@@ -227,3 +227,5 @@ export default function SobrePage() {
     </div>
   );
 }
+
+export default SobrePage;

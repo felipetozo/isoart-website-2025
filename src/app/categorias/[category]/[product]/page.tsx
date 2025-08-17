@@ -122,7 +122,7 @@ async function getCategoryData(categorySlug: string): Promise<CategoryData | und
     return categoryData;
 }
 
-export default async function ProductPage({ params }: ProductPageProps) {
+async function ProductPage({ params }: ProductPageProps) {
     const { category, product } = params;
 
     let productData: ProductData | undefined;
@@ -291,6 +291,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
         </div>
     );
 }
+
+export default ProductPage;
 
 export async function generateStaticParams() {
     const allProducts = (menuData as CategoryData[]).flatMap((category: CategoryData) =>

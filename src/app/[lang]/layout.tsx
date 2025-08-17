@@ -97,7 +97,7 @@ export async function generateMetadata({ params }: LangLayoutProps): Promise<Met
   };
 }
 
-export default function LangLayout({ children, params }: LangLayoutProps) {
+function LangLayout({ children, params }: LangLayoutProps) {
   const { lang } = params;
   
   // Validar se o idioma é suportado
@@ -154,3 +154,5 @@ export default function LangLayout({ children, params }: LangLayoutProps) {
     </html>
   );
 }
+
+export default LangLayout;

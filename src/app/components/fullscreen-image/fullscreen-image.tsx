@@ -14,7 +14,7 @@ interface FullscreenImageProps {
     isOpen: boolean;
 }
 
-export default function FullscreenImage({ 
+function FullscreenImage({ 
     images, 
     alt, 
     width = 1600, 
@@ -133,3 +133,5 @@ export default function FullscreenImage({
         </div>
     );
 }
+
+export default FullscreenImage;
