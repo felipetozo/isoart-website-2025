@@ -13,35 +13,89 @@ function Hero() {
     const [startX, setStartX] = useState(0);
     const [dragOffset, setDragOffset] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+    const [slideProgress, setSlideProgress] = useState(0);
     const sliderRef = useRef<HTMLDivElement>(null);
     const containerRefs = useRef<(HTMLDivElement | null)[]>([]);
     const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
+    const progressRef = useRef<NodeJS.Timeout | null>(null);
+
+    const SLIDE_DURATION = 5000; // 5 segundos por slide
 
     const handleDotClick = useCallback((index: number) => {
         setCurrentSlide(index);
+        setSlideProgress(0);
         // Pause auto-play temporarily when user interacts
         setIsAutoPlaying(false);
+        // Pause progress animation
+        if (progressRef.current) {
+            clearInterval(progressRef.current);
+        }
         setTimeout(() => setIsAutoPlaying(true), 3000);
     }, []);
 
     const handlePrev = useCallback(() => {
         setCurrentSlide((prev) => (prev > 0 ? prev - 1 : sliderData.length - 1));
+        setSlideProgress(0);
         setIsAutoPlaying(false);
+        // Pause progress animation
+        if (progressRef.current) {
+            clearInterval(progressRef.current);
+        }
         setTimeout(() => setIsAutoPlaying(true), 3000);
     }, []);
 
     const handleNext = useCallback(() => {
         setCurrentSlide((prev) => (prev < sliderData.length - 1 ? prev + 1 : 0));
+        setSlideProgress(0);
         setIsAutoPlaying(false);
+        // Pause progress animation
+        if (progressRef.current) {
+            clearInterval(progressRef.current);
+        }
         setTimeout(() => setIsAutoPlaying(true), 3000);
     }, []);
+
+    // Progress animation based on slide viewing time
+    useEffect(() => {
+        if (isAutoPlaying) {
+            // Reset progress when slide changes
+            setSlideProgress(0);
+            
+            // Animate progress over the slide duration
+            progressRef.current = setInterval(() => {
+                setSlideProgress((prev) => {
+                    if (prev >= 100) {
+                        return 100;
+                    }
+                    return prev + (100 / (SLIDE_DURATION / 16)); // 60fps animation
+                });
+            }, 16); // 60fps
+        } else {
+            if (progressRef.current) {
+                clearInterval(progressRef.current);
+            }
+        }
+
+        return () => {
+            if (progressRef.current) {
+                clearInterval(progressRef.current);
+            }
+        };
+    }, [currentSlide, isAutoPlaying]);
+
+    // Reset progress when auto-play is paused
+    useEffect(() => {
+        if (!isAutoPlaying) {
+            setSlideProgress(0);
+        }
+    }, [isAutoPlaying]);
 
     // Auto-slide functionality with better control
     useEffect(() => {
         if (isAutoPlaying) {
             autoPlayRef.current = setInterval(() => {
                 handleNext();
-            }, 5000);
+            }, SLIDE_DURATION);
         } else {
             if (autoPlayRef.current) {
                 clearInterval(autoPlayRef.current);
@@ -257,6 +311,9 @@ function Hero() {
                             aria-label={`Go to slide ${index + 1}`}
                             aria-current={index === currentSlide ? 'true' : 'false'}
                             type="button"
+                            style={{
+                                '--slide-progress': index === currentSlide ? `${slideProgress}%` : '0%'
+                            } as React.CSSProperties}
                         />
                     ))}
                     <button
