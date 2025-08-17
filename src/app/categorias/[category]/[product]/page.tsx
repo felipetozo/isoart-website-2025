@@ -224,14 +224,14 @@ async function ProductPage({ params }: ProductPageProps) {
             {/* Carrossel galeria */}
             <section className={styles['general-characteristics-section']}>
                 <div className={styles['general-characteristics-wrapper']}>
-                                    <div className={styles['img-placeholder']}>
-                    <ImageCarousel 
-                        images={productData.projectImages && productData.projectImages.length > 0 ? productData.projectImages : [productData.image || '/img/geral/exemplo2.avif']}
-                        alt={productData.name}
-                        width={1440}
-                        height={800}
-                    />
-                </div>
+                    <div className={styles['img-placeholder']}>
+                        <ImageCarousel 
+                            images={productData.projectImages && productData.projectImages.length > 0 ? productData.projectImages : [productData.image || '/img/geral/exemplo2.avif']}
+                            alt={productData.name}
+                            width={1440}
+                            height={800}
+                        />
+                    </div>
 
                 {/* Características gerais */}
                     <h3>Características:</h3>

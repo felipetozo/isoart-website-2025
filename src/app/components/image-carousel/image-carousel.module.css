@@ -149,15 +149,11 @@
 }
 
 .thumbnail:hover {
-    transform: scale(1.05);
     border-color: rgba(146, 151, 120, 0.6);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .thumbnail-active {
     border-color: rgba(146, 151, 120, 1);
-    transform: scale(1.05);
-    box-shadow: 0 4px 16px rgba(146, 151, 120, 0.3);
 }
 
 .thumbnail img {
