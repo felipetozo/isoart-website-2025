@@ -12,7 +12,6 @@ import IncendioComponent from '@/app/components/pir-incendio/pir-incendio';
 import { TbChecks, TbHome, TbMicroscope, TbBuildingFactory2, TbSnowflake, TbMedicineSyrup, TbBuilding, TbBuildingHospital, TbBuildingFactory, TbTools, TbPackage, TbDeviceTv, TbWindow, TbTruck, TbBuildingStore, TbArmchair, TbMicrophone, } from "react-icons/tb";
 import { IoFastFoodOutline } from "react-icons/io5";
 import ImageCarousel from '@/app/components/image-carousel/image-carousel';
-import SingleImage from '@/app/components/single-image/single-image';
 
 interface ProductData {
     id: number;
@@ -222,26 +221,19 @@ async function ProductPage({ params }: ProductPageProps) {
             {/* Benefits - Agora usando os benefícios da categoria */}
             <BenefitsSection benefits={benefits} />
 
-            {/* General Characteristics */}
+            {/* Carrossel galeria */}
             <section className={styles['general-characteristics-section']}>
                 <div className={styles['general-characteristics-wrapper']}>
                                     <div className={styles['img-placeholder']}>
-                    {productData.projectImages && productData.projectImages.length > 0 ? (
-                        <ImageCarousel 
-                            images={productData.projectImages}
-                            alt={productData.name}
-                            width={1440}
-                            height={800}
-                        />
-                    ) : (
-                        <SingleImage 
-                            src={productData.image || '/img/geral/exemplo2.avif'} 
-                            alt={productData.name} 
-                            width={1440} 
-                            height={800}
-                        />
-                    )}
+                    <ImageCarousel 
+                        images={productData.projectImages && productData.projectImages.length > 0 ? productData.projectImages : [productData.image || '/img/geral/exemplo2.avif']}
+                        alt={productData.name}
+                        width={1440}
+                        height={800}
+                    />
                 </div>
+
+                {/* Características gerais */}
                     <h3>Características:</h3>
                     <div className={styles['features-grid']}>
                         {generalCharacteristics.map((char, index) => (

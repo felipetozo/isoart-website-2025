@@ -19,13 +19,13 @@ function ImageCarousel({ images, alt, width = 1440, height = 800 }: ImageCarouse
 
     const nextImage = () => {
         setCurrentIndex((prevIndex) => 
-            prevIndex === images.length - 1 ? 0 : prevIndex + 1
+            prevIndex === images.length - 1 ? 0 : images.length - 1
         );
     };
 
     const prevImage = () => {
         setCurrentIndex((prevIndex) => 
-            prevIndex === 0 ? images.length - 1 : prevIndex - 1
+            prevIndex === 0 ? 0 : prevIndex - 1
         );
     };
 
@@ -53,59 +53,56 @@ function ImageCarousel({ images, alt, width = 1440, height = 800 }: ImageCarouse
                         <TbMaximize size={24} />
                     </button>
                     
-                    {images.length > 1 && (
-                        <>
-                            <button 
-                                className={`${styles['carousel-button']} ${styles['prev-button']}`}
-                                onClick={prevImage}
-                                aria-label="Imagem anterior"
-                            >
-                                <TbChevronLeft size={32} />
-                            </button>
-                            
-                            <button 
-                                className={`${styles['carousel-button']} ${styles['next-button']}`}
-                                onClick={nextImage}
-                                aria-label="Próxima imagem"
-                            >
-                                <TbChevronRight size={32} />
-                            </button>
-                            
-                            {/* Contador de imagens */}
-                            <div className={styles['image-counter']}>
-                                {currentIndex + 1} / {images.length}
-                            </div>
-                        </>
-                    )}
+                    {/* Sempre mostrar botões de navegação */}
+                    <button 
+                        className={`${styles['carousel-button']} ${styles['prev-button']} ${images.length === 1 ? styles['carousel-button-disabled'] : ''}`}
+                        onClick={prevImage}
+                        aria-label="Imagem anterior"
+                        disabled={images.length === 1}
+                    >
+                        <TbChevronLeft size={32} />
+                    </button>
+                    
+                    <button 
+                        className={`${styles['carousel-button']} ${styles['next-button']} ${images.length === 1 ? styles['carousel-button-disabled'] : ''}`}
+                        onClick={nextImage}
+                        aria-label="Próxima imagem"
+                        disabled={images.length === 1}
+                    >
+                        <TbChevronRight size={32} />
+                    </button>
+                    
+                    {/* Sempre mostrar contador */}
+                    <div className={styles['image-counter']}>
+                        {currentIndex + 1} / {images.length}
+                    </div>
                 </div>
                 
-                {/* Grid de miniaturas */}
-                {images.length > 1 && (
-                    <div className={styles['thumbnails-container']}>
-                        <div className={styles['thumbnails-grid']}>
-                            {images.map((image, index) => (
-                                <button
-                                    key={index}
-                                    className={`${styles['thumbnail']} ${index === currentIndex ? styles['thumbnail-active'] : ''}`}
-                                    onClick={() => setCurrentIndex(index)}
-                                    aria-label={`Ir para imagem ${index + 1}`}
-                                >
-                                    <Image
-                                        src={image}
-                                        alt={`${alt} - Miniatura ${index + 1}`}
-                                        width={120}
-                                        height={80}
-                                        style={{
-                                            width: '100%',
-                                            height: '100%',
-                                            objectFit: 'cover'
-                                        }}
-                                    />
-                                </button>
-                            ))}
-                        </div>
+                {/* Sempre mostrar miniaturas */}
+                <div className={styles['thumbnails-container']}>
+                    <div className={styles['thumbnails-grid']}>
+                        {images.map((image, index) => (
+                            <button
+                                key={index}
+                                className={`${styles['thumbnail']} ${index === currentIndex ? styles['thumbnail-active'] : ''}`}
+                                onClick={() => setCurrentIndex(index)}
+                                aria-label={`Ir para imagem ${index + 1}`}
+                            >
+                                <Image
+                                    src={image}
+                                    alt={`${alt} - Miniatura ${index + 1}`}
+                                    width={120}
+                                    height={80}
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover'
+                                    }}
+                                />
+                            </button>
+                        ))}
                     </div>
-                )}
+                </div>
             </div>
 
             <FullscreenImage

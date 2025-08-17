@@ -78,6 +78,19 @@
     border: 1px solid rgba(146, 151, 120, 1.00);
 }
 
+.carousel-button-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.carousel-button-disabled:hover {
+    background-color: rgba(54, 57, 46, 0.75);
+    color: rgba(241, 244, 247, 0.75);
+    border: 1px solid rgba(146, 151, 120, 0.75);
+    transform: none;
+}
+
 .prev-button {
     left: 1rem;
 }
