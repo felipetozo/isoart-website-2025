@@ -149,8 +149,8 @@
 
 .nav-dot {
     width: 2rem;
-    height: 0.1rem;
-    background-color: rgba(241, 244, 247, 0.50);
+    height: 0.2rem;
+    background-color: rgba(241, 244, 247, 0.25);
     cursor: pointer;
     border: none;
     padding: 0;
@@ -166,20 +166,19 @@
     left: 0;
     height: 100%;
     width: var(--slide-progress, 0%);
-    background-color: rgba(241, 244, 247, 0.75);
+    background-color: rgba(146, 151, 120, 1);
     transition: width 0.1s ease-out;
     border-radius: 0.05rem;
 }
 
 .nav-dot:hover {
-    background-color: rgba(241, 244, 247, 0.75);
+    background-color: rgba(146, 151, 120, 1);
     height: 0.15rem;
     transform: scaleY(1.2);
 }
 
 .nav-dot:hover::before {
     width: 100%;
-    transition: width 0.3s ease-out;
 }
 
 .nav-dot:focus {
@@ -189,7 +188,7 @@
 }
 
 .nav-dot.active {
-    background-color: rgba(241, 244, 247, 0.75);
+    background-color: rgba(241, 244, 247, 0.25);
     height: 0.2rem;
     transform: scaleY(1.3);
 }
