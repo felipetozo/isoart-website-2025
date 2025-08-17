@@ -29,18 +29,7 @@
     margin: 0 auto;
 }
 
-/* Responsividade */
-@media (min-width: 768px) {
-    .carrossel-clientes-wrapper p {
-        font-size: 1.75rem;
-    }
-}
-
 @media (min-width: 1200px) {
-    .carrossel-clientes-wrapper p {
-        font-size: 2rem;
-    }
-    
     .parceiros-carousel-container {
         max-width: 1000px;
     }
