@@ -19,7 +19,7 @@ function ImageCarousel({ images, alt, width = 1440, height = 800 }: ImageCarouse
 
     const nextImage = () => {
         setCurrentIndex((prevIndex) => 
-            prevIndex === images.length - 1 ? 0 : images.length - 1
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
         );
     };
 
