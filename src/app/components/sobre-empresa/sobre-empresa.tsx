@@ -11,12 +11,12 @@ function SobreEmpresa() {
                         <p>Expanda sua criatividade</p>
                     </div>
                     <div className={styles['sobre-empresa-container']}>
-                        <h3>
+                        <h2>
                             Soluções inovadoras, sustentáveis e de alta
                             qualidade em Poliestireno Expandido (EPS) e
                             Espuma Rígida de Poliisocianurato (PIR) que
                             atendem às diversas demandas do mercado.
-                        </h3>
+                        </h2>
                         <div>
                             <Link href="/sobre">
                                 <Button variant="white" size="medium">

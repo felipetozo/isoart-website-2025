@@ -26,7 +26,7 @@ function SolucoesGrid() {
                                 />
                             </div>
                             <div className={styles['solucoes-grid-card-container']}>
-                                <h5>Telhas e Painéis</h5>
+                                <h4>Telhas e Painéis</h4>
                                 <p>Soluções térmicas para coberturas e fachadas com isolamento superior.</p>
                             </div>
                         </Link>
@@ -42,7 +42,7 @@ function SolucoesGrid() {
                                 />
                             </div>
                             <div className={styles['solucoes-grid-card-container']}>
-                                <h5>Construção Civil</h5>
+                                <h4>Construção Civil</h4>
                                 <p>Materiais leves e eficientes para construções mais inteligentes.</p>
                             </div>
                         </Link>
@@ -58,7 +58,7 @@ function SolucoesGrid() {
                                 />
                             </div>
                             <div className={styles['solucoes-grid-card-container']}>
-                                <h5>Molduras Decorativas</h5>
+                                <h4>Molduras Decorativas</h4>
                                 <p>Acabamentos elegantes para portas, janelas e paredes.</p>
                             </div>
                         </Link>
@@ -74,7 +74,7 @@ function SolucoesGrid() {
                                 />
                             </div>
                             <div className={styles['solucoes-grid-card-container']}>
-                                <h5>Embalagens em EPS</h5>
+                                <h4>Embalagens em EPS</h4>
                                 <p>Proteção personalizada para produtos durante transporte.</p>
                             </div>
                         </Link>
