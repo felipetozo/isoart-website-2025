@@ -81,14 +81,7 @@
                 "image": "/img/submenu/construcao-civil/lajes-01.avif",
                 "specifications": {}
             },
-            {
-                "id": 7,
-                "name": "Isolamento para telha",
-                "slug": "flocos-em-eps",
-                "description": "Flocos de EPS para diversas aplicações",
-                "image": "/img/submenu/construcao-civil/flocos-01.avif",
-                "specifications": {}
-            },
+
             {
                 "id": 8,
                 "name": "Forros",

@@ -23,17 +23,7 @@
                 "aplicacao": "Lajes"
             }
         },
-        {
-            "id": 7,
-            "name": "Flocos em EPS",
-            "slug": "flocos-em-eps",
-            "description": "Flocos de EPS para diversas aplicações em construção.",
-            "image": "/img/produtos/construcao-civil/flocos/flocos-1440x800_001.avif",
-            "specifications": {
-                "material": "EPS",
-                "aplicacao": "Preenchimento"
-            }
-        },
+
         {
             "id": 8,
             "name": "Blocos em EPS",
