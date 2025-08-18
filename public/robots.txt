@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://isoart.stubborn.com.br/sitemap.xml
+
+# Crawl-delay para ser respeitoso com o servidor
+Crawl-delay: 1
+
+# Permitir todos os diretórios principais
+Allow: /categorias/
+Allow: /sobre/
+Allow: /solucoes/
+Allow: /contato/
+Allow: /privacidade/
+
+# Bloquear arquivos de sistema e desenvolvimento
+Disallow: /_next/
+Disallow: /api/
+Disallow: /logs/
+Disallow: /.env
+Disallow: /.git
+Disallow: /node_modules/
+
+# Permitir acesso a imagens e recursos estáticos
+Allow: /img/
+Allow: /icons/
+Allow: /downloads/
+Allow: /favicon.ico
