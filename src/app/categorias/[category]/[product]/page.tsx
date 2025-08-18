@@ -34,6 +34,7 @@ interface ProductData {
         title: string;
         description: string;
     };
+
     benefits?: {
         id: number;
         title: string;

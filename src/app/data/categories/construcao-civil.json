@@ -55,6 +55,17 @@
                 "material": "EPS",
                 "aplicacao": "Painéis"
             }
+        },
+        {
+            "id": 10,
+            "name": "Forros",
+            "slug": "forros",
+            "description": "Forros em EPS com designs únicos e sofisticados, disponíveis em múltiplos modelos como Dunas e Paris.",
+            "image": "/img/produtos/construcao-civil/forros/forros-01.avif",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Forros"
+            }
         }
     ],
     "benefits": [

@@ -1,0 +1,89 @@
+{
+    "id": 8,
+    "name": "Forros",
+    "slug": "forros",
+    "description": "Forros em EPS de alta densidade com designs únicos e sofisticados. Disponíveis em múltiplos modelos como Dunas e Paris, oferecem acabamentos estéticos diferenciados para tetos internos residenciais e comerciais.",
+    "image": "/img/produtos/construcao-civil/forros/forros-01.avif",
+    "specifications": {
+        "material": "EPS virgem com revestimento opcional",
+        "densidade": "15-20 kg/m³",
+        "dimensoes": "Personalizável sob consulta",
+        "aplicacao": "Tetos internos residenciais e comerciais"
+    },
+    "hero": {
+        "title": "Forros em EPS",
+        "description": "Forros em EPS de alta densidade com designs únicos e sofisticados. Disponíveis em múltiplos modelos como Dunas e Paris, oferecem acabamentos estéticos diferenciados para tetos internos.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/heroes/products/construcao-civil-forros-paris-hero.avif"
+    },
+    "categoryDescription": {
+        "title": "Os Forros Isoart combinam design sofisticado com tecnologia moderna em EPS.",
+        "description": "Os Forros Isoart são fabricados em EPS de alta densidade, oferecendo múltiplos modelos com designs únicos e sofisticados. Atualmente disponíveis nos modelos Dunas e Paris, cada um com características estéticas distintas que permitem personalização completa dos ambientes. Substituem materiais tradicionais como gesso com maior leveza, resistência a umidade e instalação rápida, proporcionando economia, conforto térmico e acabamentos de alta qualidade para tetos internos."
+    },
+    "projectImages": [
+        "/img/produtos/construcao-civil/forros/dunas-1440x-800_01.avif",
+        "/img/produtos/construcao-civil/forros/paris-1440x-800_01.avif"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Múltiplos modelos disponíveis",
+            "description": "Atualmente oferecemos os modelos Dunas e Paris, com novos modelos sendo desenvolvidos constantemente."
+        },
+        {
+            "id": 2,
+            "title": "Designs únicos e sofisticados",
+            "description": "Cada modelo possui características estéticas distintas, permitindo personalização completa dos ambientes."
+        },
+        {
+            "id": 3,
+            "title": "Instalação fácil e rápida",
+            "description": "Fixação com adesivos ou argamassa reduz tempo e custos de obra."
+        },
+        {
+            "id": 4,
+            "title": "Isolamento térmico eficiente",
+            "description": "Contribui para conforto térmico e economia de energia em climatização."
+        }
+    ],
+    "generalCharacteristics": [
+        "EPS de alta densidade (15-20 kg/m³)",
+        "Condutividade térmica de ~0,035 W/m·K",
+        "Resistência à compressão de 0,10-0,15 MPa",
+        "Absorção de água < 4% em 5 anos",
+        "Superfície lisa, pronta para pintura ou texturas",
+        "100% reciclável, sem emissão de CFC",
+        "Múltiplos modelos com designs diferenciados",
+        "Expansão contínua da linha de produtos"
+    ],
+    "applications": {
+        "title": "Acabamentos estéticos sofisticados para tetos em projetos residenciais e comerciais",
+        "description": "Os Forros Isoart são ideais para tetos internos que exigem acabamentos estéticos diferenciados. Com múltiplos modelos disponíveis, cada um oferece características únicas que permitem personalização completa dos ambientes. Substituem materiais tradicionais como gesso e madeira, oferecendo leveza, resistência a umidade e isolamento térmico, sendo perfeitos para residências, escritórios e espaços comerciais que buscam estética, funcionalidade e diferenciação.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Salas e quartos residenciais"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Escritórios e salas comerciais"
+            },
+            {
+                "icon": "TbBuildingStore",
+                "text": "Lojas e restaurantes"
+            },
+            {
+                "icon": "TbTools",
+                "text": "Projetos de decoração e arquitetura"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Múltiplos modelos disponíveis": "Atualmente oferecemos os modelos Dunas e Paris, cada um com características estéticas únicas. O modelo Dunas é inspirado nas ondulações naturais das dunas de areia, enquanto o Paris remete à elegância da arquitetura parisiense. Novos modelos estão sendo constantemente desenvolvidos para expandir as opções de acabamento.",
+        "Estética e personalização": "Cada modelo de forro possui design único e sofisticado, permitindo acabamentos como pinturas, texturas e sancas. Os padrões diferenciados atendem desde projetos que buscam harmonia com a natureza até aqueles que exigem sofisticação e refinamento arquitetônico.",
+        "Instalação eficiente": "Fixação com adesivos específicos ou argamassa AC-3 garante rapidez, praticidade e limpeza na obra, com emendas reforçadas por fita telada.",
+        "Isolamento térmico": "O EPS de baixa condutividade térmica (~0,035 W/m·K) proporciona conforto térmico e economia de energia em climatização.",
+        "Sustentabilidade": "100% recicláveis e livres de CFC, os forros Isoart são ambientalmente responsáveis."
+    }
+}

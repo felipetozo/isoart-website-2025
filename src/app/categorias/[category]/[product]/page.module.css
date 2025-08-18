@@ -274,6 +274,8 @@
     width: 100%;
 }
 
+
+
 @media (min-width: 800px) and (max-width: 1199px) {
     .product-page-hero-section {
         height: 50vw;
@@ -305,4 +307,6 @@
     .img-placeholder {
         height: 50rem;
     }
+
+
 }
