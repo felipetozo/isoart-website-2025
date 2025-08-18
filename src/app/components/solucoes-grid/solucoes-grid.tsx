@@ -9,9 +9,9 @@ function SolucoesGrid() {
         <section className={styles['solucoes-grid-section']} id="solucoes-grid">
             <div className={styles['solucoes-grid-wrapper']}>
                 <div className={styles['solucoes-grid-header']}>
-                    <p>Conheça nossas soluções em EPS e PIR</p>
+                    <p>Nossos produtos</p>
                     <h3>
-                        Soluções Térmicas para Construção Civil
+                        Soluções em Poliestireno Expandido (EPS) e Poliisocianurato Isolante Rígido (PIR)
                     </h3>
                 </div>
                 <div className={styles['solucoes-grid-grid']}>

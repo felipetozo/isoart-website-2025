@@ -152,13 +152,13 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(2.5rem, 3.5vw, 4.5rem);
+  font-size: clamp(1.8rem, 2.2vw, 3rem);
   font-family: var(--font-redhat);
   line-height: 1.2;
 }
 
 h3 {
-  font-size: clamp(1.8rem, 2.2vw, 3rem);
+  font-size: clamp(1.6rem, 2vw, 2.8rem);
   font-family: var(--font-redhat);
   line-height: 1.3;
 }
