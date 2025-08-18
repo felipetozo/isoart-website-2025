@@ -23,7 +23,17 @@
                 "aplicacao": "Lajes"
             }
         },
-
+        {
+            "id": 7,
+            "name": "Isolamento para Telhas",
+            "slug": "isolamento-telhas",
+            "description": "Sistema de isolamento térmico em EPS para telhas, proporcionando conforto térmico e acústico em coberturas.",
+            "image": "/img/produtos/construcao-civil/isolamento-telhas/isolamento-telhas-1440x-800_001.avif",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Isolamento térmico para telhas"
+            }
+        },
         {
             "id": 8,
             "name": "Blocos em EPS",

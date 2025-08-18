@@ -51,11 +51,11 @@ interface CategoryData {
 
 // Fix: Change params to be a Promise in Next.js 15
 interface CategoryPageProps {
-    params: { category: string };
+    params: Promise<{ category: string }>;
 }
 
 async function CategoryPage({ params }: CategoryPageProps) {
-    const { category } = params;
+    const { category } = await params;
 
     let categoryData: CategoryData | undefined;
 
@@ -169,7 +169,7 @@ export async function generateStaticParams() {
 
 // Dynamic metadata for SEO - Also fix params here
 export async function generateMetadata({ params }: CategoryPageProps) {
-    const { category } = params;
+    const { category } = await params;
 
     let categoryData: CategoryData | undefined;
 

@@ -109,7 +109,6 @@ function LangLayout({ children, params }: LangLayoutProps) {
   return (
     <html lang={lang} className={`${inter.variable} ${redhat.variable}`}>
       <head>
-        <link rel="preload" href="/img/isoart-logotipo.svg" as="image" type="image/svg+xml" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         

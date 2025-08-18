@@ -81,7 +81,14 @@
                 "image": "/img/submenu/construcao-civil/lajes-01.avif",
                 "specifications": {}
             },
-
+            {
+                "id": 7,
+                "name": "Isolamento para Telhas",
+                "slug": "isolamento-telhas",
+                "description": "Sistema de isolamento térmico para telhas",
+                "image": "/img/submenu/construcao-civil/isolamento-telhas_010.avif",
+                "specifications": {}
+            },
             {
                 "id": 8,
                 "name": "Forros",

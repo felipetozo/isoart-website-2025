@@ -86,10 +86,7 @@ function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${redhat.variable}`}>
       <head>
-        {/* Preload recursos críticos */}
-        <link rel="preload" href="/img/isoart-logotipo.svg" as="image" type="image/svg+xml" />
-        {/* Removed heavy image preload to reduce initial payload */}
-        {/* Removed banner preload to reduce initial payload */}
+        {/* DNS prefetch para fontes */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         

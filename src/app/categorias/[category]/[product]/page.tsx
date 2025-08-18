@@ -89,7 +89,7 @@ interface CategoryData {
 }
 
 interface ProductPageProps {
-    params: { category: string; product: string };
+    params: Promise<{ category: string; product: string }>;
 }
 
 // Função para renderizar ícones do Tabler
@@ -134,7 +134,7 @@ async function getCategoryData(categorySlug: string): Promise<CategoryData | und
 }
 
 async function ProductPage({ params }: ProductPageProps) {
-    const { category, product } = params;
+    const { category, product } = await params;
 
     let productData: ProductData | undefined;
 

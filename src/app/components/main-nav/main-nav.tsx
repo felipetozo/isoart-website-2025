@@ -38,6 +38,8 @@ const SubmenuImage = ({ src, alt }: { src: string; alt: string }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
 
+    console.log('SubmenuImage renderizando:', { src, alt, isLoading, hasError });
+
     return (
         <div className={styles['submenu-image-container']}>
             {(isLoading || hasError) && (
@@ -50,8 +52,12 @@ const SubmenuImage = ({ src, alt }: { src: string; alt: string }) => {
                     width={120}
                     height={85}
                     className={styles['submenu-image']}
-                    onLoad={() => setIsLoading(false)}
-                    onError={() => {
+                    onLoad={() => {
+                        console.log('Imagem carregada com sucesso:', src);
+                        setIsLoading(false);
+                    }}
+                    onError={(e) => {
+                        console.error('Erro ao carregar imagem:', src, e);
                         setIsLoading(false);
                         setHasError(true);
                     }}
@@ -111,18 +117,34 @@ function MainNav() {
             hideTimeoutRef.current = null;
         }
         setActiveSubmenu(index);
-        const tl = gsap.timeline();
-        tl.set(submenuRef.current, { display: 'flex' });
-        tl.fromTo(submenuRef.current, { height: 0 }, { height: 'auto', duration: 0.1 });
-        tl.fromTo(`.${styles['sub-menu-item']}`, { opacity: 0 }, { opacity: 1, duration: 0.1, stagger: 0.1 });
+        
+        if (submenuRef.current) {
+            const tl = gsap.timeline();
+            tl.set(submenuRef.current, { display: 'flex' });
+            tl.fromTo(submenuRef.current, { height: 0 }, { height: 'auto', duration: 0.1 });
+            
+            // Verificar se os elementos existem antes de animar
+            const submenuItems = submenuRef.current.querySelectorAll(`.${styles['sub-menu-item']}`);
+            if (submenuItems.length > 0) {
+                tl.fromTo(submenuItems, { opacity: 0 }, { opacity: 1, duration: 0.1, stagger: 0.1 });
+            }
+        }
     };
 
     const hideSubmenu = () => {
-        const tl = gsap.timeline();
-        tl.to(`.${styles['sub-menu-item']}`, { opacity: 0, duration: 0.1 });
-        tl.to(submenuRef.current, { height: 0, duration: 0.1 });
-        tl.set(submenuRef.current, { display: 'none' });
-        tl.eventCallback('onComplete', () => setActiveSubmenu(null));
+        if (submenuRef.current) {
+            const tl = gsap.timeline();
+            
+            // Verificar se os elementos existem antes de animar
+            const submenuItems = submenuRef.current.querySelectorAll(`.${styles['sub-menu-item']}`);
+            if (submenuItems.length > 0) {
+                tl.to(submenuItems, { opacity: 0, duration: 0.1 });
+            }
+            
+            tl.to(submenuRef.current, { height: 0, duration: 0.1 });
+            tl.set(submenuRef.current, { display: 'none' });
+            tl.eventCallback('onComplete', () => setActiveSubmenu(null));
+        }
     };
 
     const handleMouseEnterLi = (index: number) => {
