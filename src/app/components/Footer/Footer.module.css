@@ -2,7 +2,7 @@
     width: 100%;
     padding: 5rem 0;
     background-color: rgba(255, 255, 255, 1);
-    color: rgba(17, 17, 17, 0.875);
+    color: rgba(17, 17, 17, 0.925);
 }
 
 .footer-wrapper {
@@ -30,7 +30,7 @@
 .footer-column li {
     line-height: 2;
     width: max-content;
-    color: rgba(17, 17, 17, 0.875);
+    color: rgba(17, 17, 17, 0.925);
 }
 
 .footer-column li:hover {
@@ -54,7 +54,7 @@
 
 .main-form-contact-item,
 .main-form-nav-social {
-    color: rgba(17, 17, 17, 0.875);
+    color: rgba(17, 17, 17, 0.925);
 }
 
 .main-form-contact-item:hover,
@@ -82,7 +82,7 @@
 .footer-cnpj p {
     margin: 0 auto;
     font-size: 0.8rem;
-    color: rgba(17, 17, 17, 0.85);
+    color: rgba(17, 17, 17, 0.925);
     border-top: 1px solid rgba(17, 17, 17, 0.25);
     padding: 1rem 0;
     width: 80%;
