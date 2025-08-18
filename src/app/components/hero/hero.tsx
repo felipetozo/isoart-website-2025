@@ -17,7 +17,7 @@ function Hero() {
     const sliderRef = useRef<HTMLDivElement>(null);
     const containerRefs = useRef<(HTMLDivElement | null)[]>([]);
     const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
-    const progressRef = useRef<NodeJS.Timeout | null>(null);
+    const progressRef = useRef<number | null>(null);
 
     const SLIDE_DURATION = 5000; // 5 segundos por slide
 
@@ -28,7 +28,7 @@ function Hero() {
         setIsAutoPlaying(false);
         // Pause progress animation
         if (progressRef.current) {
-            clearInterval(progressRef.current);
+            cancelAnimationFrame(progressRef.current);
         }
         setTimeout(() => setIsAutoPlaying(true), 3000);
     }, []);
@@ -39,7 +39,7 @@ function Hero() {
         setIsAutoPlaying(false);
         // Pause progress animation
         if (progressRef.current) {
-            clearInterval(progressRef.current);
+            cancelAnimationFrame(progressRef.current);
         }
         setTimeout(() => setIsAutoPlaying(true), 3000);
     }, []);
@@ -50,7 +50,7 @@ function Hero() {
         setIsAutoPlaying(false);
         // Pause progress animation
         if (progressRef.current) {
-            clearInterval(progressRef.current);
+            cancelAnimationFrame(progressRef.current);
         }
         setTimeout(() => setIsAutoPlaying(true), 3000);
     }, []);
@@ -61,24 +61,41 @@ function Hero() {
             // Reset progress when slide changes
             setSlideProgress(0);
             
-            // Animate progress over the slide duration
-            progressRef.current = setInterval(() => {
-                setSlideProgress((prev) => {
-                    if (prev >= 100) {
-                        return 100;
-                    }
-                    return prev + (100 / (SLIDE_DURATION / 16)); // 60fps animation
-                });
-            }, 16); // 60fps
+            // Start progress immediately with requestAnimationFrame
+            let startTime = Date.now();
+            let animationId: number;
+            
+            const animateProgress = () => {
+                const elapsed = Date.now() - startTime;
+                const progress = Math.min((elapsed / SLIDE_DURATION) * 100, 100);
+                
+                setSlideProgress(progress);
+                
+                if (progress < 100) {
+                    animationId = requestAnimationFrame(animateProgress);
+                }
+            };
+            
+            // Start animation immediately
+            animationId = requestAnimationFrame(animateProgress);
+            
+            // Store the animation ID for cleanup
+            progressRef.current = animationId as any;
         } else {
             if (progressRef.current) {
-                clearInterval(progressRef.current);
+                // Cancel animation frame if it's an animation ID
+                if (typeof progressRef.current === 'number') {
+                    cancelAnimationFrame(progressRef.current);
+                }
             }
         }
 
         return () => {
             if (progressRef.current) {
-                clearInterval(progressRef.current);
+                // Cancel animation frame if it's an animation ID
+                if (typeof progressRef.current === 'number') {
+                    cancelAnimationFrame(progressRef.current);
+                }
             }
         };
     }, [currentSlide, isAutoPlaying]);
