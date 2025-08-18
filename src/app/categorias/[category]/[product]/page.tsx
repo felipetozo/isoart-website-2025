@@ -46,6 +46,17 @@ interface ProductData {
         description: string;
         indications: { icon: string; text: string }[];
     };
+    modelsTable?: {
+        title: string;
+        headers: string[];
+        rows: {
+            material: string;
+            espessuras: string[];
+            revestimento: string;
+            trapezios: string;
+        }[];
+        note: string;
+    };
     tabDescriptions?: {
         [key: string]: string;
     };
@@ -264,17 +275,61 @@ async function ProductPage({ params }: ProductPageProps) {
                 </div>
             </section>
 
-            {/* Product Descriptions */}
-            <section className={styles['product-descriptions-section']}>
-                <div className={styles['product-descriptions-wrapper']}>
-                    {Object.entries(tabDescriptions).map(([title, description]) => (
-                        <div key={title} className={styles['product-description-item']}>
-                            <h4 className={styles['product-description-title']}>{title}</h4>
-                            <p className={styles['product-description-content']}>{description}</p>
+            {/* Models Table - Apenas para telhas térmicas */}
+            {productData.modelsTable && (
+                <section className={styles['models-table-section']}>
+                    <div className={styles['models-table-wrapper']}>
+                        <h5 className={styles['models-table-title']}>{productData.modelsTable.title}</h5>
+                        <div className={styles['models-table-container']}>
+                            <table className={styles['models-table']}>
+                                <thead>
+                                    <tr>
+                                        {productData.modelsTable.headers.map((header, index) => (
+                                            <th key={index}>{header}</th>
+                                        ))}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {productData.modelsTable!.rows.map((row, rowIndex) => {
+                                        const totalRows = productData.modelsTable!.rows.reduce((acc, r) => acc + r.espessuras.length, 0);
+                                        return row.espessuras.map((espessura, espIndex) => (
+                                            <tr key={`${rowIndex}-${espIndex}`}>
+                                                {rowIndex === 0 && espIndex === 0 ? (
+                                                    <td rowSpan={totalRows}>{row.material}</td>
+                                                ) : null}
+                                                <td>{espessura}</td>
+                                                {espIndex === 0 ? (
+                                                    <td rowSpan={row.espessuras.length}>{row.revestimento}</td>
+                                                ) : null}
+                                                {rowIndex === 0 && espIndex === 0 ? (
+                                                    <td rowSpan={totalRows}>{row.trapezios}</td>
+                                                ) : null}
+                                            </tr>
+                                        ));
+                                    })}
+                                </tbody>
+                            </table>
+                            {productData.modelsTable.note && (
+                                <p className={styles['models-table-note']}>{productData.modelsTable.note}</p>
+                            )}
                         </div>
-                    ))}
-                </div>
-            </section>
+                    </div>
+                </section>
+            )}
+
+            {/* Product Descriptions - Apenas se não houver tabela de modelos */}
+            {!productData.modelsTable && (
+                <section className={styles['product-descriptions-section']}>
+                    <div className={styles['product-descriptions-wrapper']}>
+                        {Object.entries(tabDescriptions).map(([title, description]) => (
+                            <div key={title} className={styles['product-description-item']}>
+                                <h4 className={styles['product-description-title']}>{title}</h4>
+                                <p className={styles['product-description-content']}>{description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            )}
 
             {/* PIR Incêndio Component - Apenas para categoria telhas-e-paineis */}
             {category === 'telhas-e-paineis' && <IncendioComponent />}

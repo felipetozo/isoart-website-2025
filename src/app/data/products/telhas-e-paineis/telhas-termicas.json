@@ -78,6 +78,25 @@
             }
         ]
     },
+    "modelsTable": {
+        "title": "Modelos disponíveis:",
+        "headers": ["Material", "Espessura", "Revestimento", "Trapézios"],
+        "rows": [
+            {
+                "material": "PIR",
+                "espessuras": ["30mm", "50mm"],
+                "revestimento": "Aço / Aço",
+                "trapezios": "3 ou 5 trapézios"
+            },
+            {
+                "material": "PIR",
+                "espessuras": ["20mm", "30mm"],
+                "revestimento": "Aço / Filme",
+                "trapezios": "3 ou 5 trapézios"
+            }
+        ],
+        "note": "Aço nas opções de espessuras: 0.38mm / 0.43mm / 0.50mm"
+    },
     "tabDescriptions": {
         "Alívio de carga na estrutura": "A leveza do EPS reduz significativamente o peso próprio da laje em comparação aos sistemas tradicionais, o que alivia a carga nas fundações, pilares e vigas. Isso possibilita um dimensionamento mais eficiente e econômico de toda a estrutura, resultando em menor consumo de concreto e aço. Além disso, permite vencer vãos maiores com menos elementos de apoio, otimizando o projeto e contribuindo para uma execução mais racional da obra.",
         "Economia na obra": "As Lajes em EPS oferecem economia em diversas frentes: materiais, tempo e mão de obra. A montagem é mais simples e ágil, exigindo menos profissionais no canteiro. O transporte das peças é facilitado pelo baixo peso, tanto na horizontal quanto na vertical. A redução no uso de formas de madeira, concreto e aço também impacta diretamente no orçamento, tornando o sistema mais competitivo e sustentável, sem abrir mão do desempenho estrutural.",
