@@ -24,13 +24,13 @@
 .footer-column h5 {
     font-size: 0.8rem;
     margin-bottom: 1rem;
-    color: rgba(25, 129, 176, 1);
+    color: rgba(62, 65, 51, 1);
 }
 
 .footer-column li {
     line-height: 2;
     width: max-content;
-    color: rgba(17, 17, 17, 0.925);
+    color: rgba(79, 79, 79, 1);
 }
 
 .footer-column li:hover {
