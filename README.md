@@ -165,6 +165,33 @@ O build final ficará disponível em `.next/`.
 - Navegação dinâmica entre categorias e produtos
 - Breadcrumbs e navegação hierárquica
 
+### Status da Internacionalização (Tradução)
+**⚠️ ATENÇÃO: Sistema de tradução parcialmente implementado**
+
+**O que está funcionando:**
+- ✅ **Estrutura de rotas:** `/[lang]` para idiomas suportados
+- ✅ **Arquivos de tradução:** `pt-BR.json`, `en.json`, `es.json` existem
+- ✅ **Seletor de idioma:** Interface visual no header (apenas cosmético)
+- ✅ **Validação de idiomas:** Suporte para `pt-BR`, `en`, `es`
+
+**O que NÃO está funcionando:**
+- ❌ **Tradução de conteúdo:** Textos permanecem em português
+- ❌ **Navegação entre idiomas:** Links não redirecionam para versões traduzidas
+- ❌ **SEO multilíngue:** Metadados não são traduzidos
+- ❌ **Conteúdo dinâmico:** Produtos e categorias não são traduzidos
+
+**Arquivos relacionados:**
+- `src/app/[lang]/layout.tsx` - Layout para rotas internacionalizadas
+- `src/app/data/locales/` - Arquivos de tradução (JSON)
+- `src/app/components/main-nav/main-nav.tsx` - Seletor de idioma (cosmético)
+
+**Para completar a implementação seria necessário:**
+1. Integrar sistema de tradução (react-i18next ou similar)
+2. Traduzir todo o conteúdo estático e dinâmico
+3. Implementar redirecionamentos automáticos
+4. Adicionar hreflang tags para SEO
+5. Traduzir metadados e URLs
+
 ---
 
 ## Estado, Formulários e Validação
