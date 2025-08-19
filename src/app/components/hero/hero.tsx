@@ -7,7 +7,9 @@ import Button from '@/app/views/ui/button/button';
 import sliderData from '@/app/data/main-slider-data.json';
 import { TbChevronLeft, TbChevronRight } from 'react-icons/tb';
 
+
 function Hero() {
+
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
@@ -272,7 +274,7 @@ function Hero() {
                             className={styles['slide']}
                             style={{ backgroundImage: `url(${slide.backgroundImage})` }}
                             role="group"
-                            aria-label={`Slide ${index + 1} of ${sliderData.length}`}
+                                                                aria-label={`Slide ${index + 1} of ${sliderData.length}`}
                             aria-hidden={index !== currentSlide}
                         >
                             {/* Preload da primeira imagem para LCP */}

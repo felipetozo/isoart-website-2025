@@ -8,6 +8,7 @@ import Image from 'next/image';
 import Button from '@/app/views/ui/button/button';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
+import { useLanguage } from '@/hooks/use-language';
 
 import menuData from '@/app/data/menu-data.json';
 
@@ -78,36 +79,18 @@ function MainNav() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const iconRef = useRef<HTMLDivElement | null>(null);
-    const [currentLocale, setCurrentLocale] = useState('pt-BR');
+    const { currentLocale, changeLanguage, getLocaleInfo, supportedLocales } = useLanguage();
     const [mounted, setMounted] = useState(false);
 
-    // Função para obter informações do idioma
-    const getLocaleInfo = (locale: string) => {
-        const localeInfo = {
-            'pt-BR': { flag: '/icons/brazil.svg', name: 'Português' },
-            'en': { flag: '/icons/eua.svg', name: 'English' },
-            'es': { flag: '/icons/spain.svg', name: 'Español' }
-        };
-        return localeInfo[locale as keyof typeof localeInfo] || localeInfo['pt-BR'];
-    };
 
-    // Função para mudar idioma (apenas visual)
+
+    // Função para mudar idioma
     const handleLocaleChange = (newLocale: string) => {
-        setCurrentLocale(newLocale);
-        // Salvar no localStorage para manter a seleção
-        if (typeof window !== 'undefined') {
-            localStorage.setItem('locale', newLocale);
-        }
+        changeLanguage(newLocale);
     };
 
     // Carregar locale salvo no localStorage na inicialização
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const savedLocale = localStorage.getItem('locale');
-            if (savedLocale && ['pt-BR', 'en', 'es'].includes(savedLocale)) {
-                setCurrentLocale(savedLocale);
-            }
-        }
         setMounted(true);
     }, []);
 
@@ -274,7 +257,7 @@ function MainNav() {
                         {mounted && (
                             <div className={`${styles['language-selector-wrapper']} ${styles['expanded']}`}>
                                 <div className={styles['language-options']}>
-                                    {(['pt-BR', 'en', 'es'] as const).map((locale) => {
+                                    {supportedLocales.map((locale) => {
                                         const localeInfo = getLocaleInfo(locale);
                                         const isActive = locale === currentLocale;
                                         

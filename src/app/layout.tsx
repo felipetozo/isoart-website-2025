@@ -7,6 +7,7 @@ import AnalyticsProvider from "./components/analytics-provider/analytics-provide
 import { LenisProvider } from "./components/lenis-provider";
 import CookieBanner from "./views/ui/cookie-banner";
 
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
