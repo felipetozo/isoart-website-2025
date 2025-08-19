@@ -1,6 +1,6 @@
 # Isoart Website 2025
 
-Website da Isoart, empresa especializada em soluções térmicas com EPS e PIR para construção civil, embalagens e isolamento. Construído com Next.js 15, React 19, TypeScript, Tailwind CSS v4 e otimizações avançadas de performance.
+Website da Isoart, empresa especializada em soluções térmicas com EPS e PIR para construção civil, embalagens e isolamento. Construído com Next.js 15, React 19, TypeScript e otimizações avançadas de performance.
 
 ---
 
@@ -34,7 +34,7 @@ Este é um site corporativo moderno e responsivo que apresenta as soluções da 
 ### Core
 - **Next.js 15** (Framework React com App Router)
 - **React 19** + **TypeScript** (UI e tipagem estática)
-- **Tailwind CSS v4** (Sistema de design e estilização)
+- **CSS Modules** (Sistema de design e estilização)
 
 ### Animações e Performance
 - **GSAP** + **@gsap/react** (Animações avançadas)
@@ -47,6 +47,7 @@ Este é um site corporativo moderno e responsivo que apresenta as soluções da 
 - **Tabler Icons React** (Ícones adicionais)
 
 ### Analytics
+- **Vercel Analytics** (Ativo e funcionando)
 
 ### Ferramentas de Desenvolvimento
 - **ESLint** (Linting de código)
@@ -61,23 +62,30 @@ Este é um site corporativo moderno e responsivo que apresenta as soluções da 
 isoart-website-2025/
 ├── src/
 │   ├── app/                    # App Router do Next.js
-│   │   ├── [lang]/            # Rotas internacionalizadas
-│   │   ├── categorias/        # Páginas de categorias
-│   │   ├── components/        # Componentes reutilizáveis
-│   │   ├── contato/           # Página de contato
-│   │   ├── sobre/             # Páginas institucionais
-│   │   ├── solucoes/          # Página de soluções
-│   │   ├── views/             # Componentes de UI
-│   │   ├── globals.css        # Estilos globais
-│   │   └── layout.tsx         # Layout raiz
-│   ├── data/                  # Dados estáticos e JSON
-│   ├── hooks/                 # Hooks customizados
-│   ├── lib/                   # Utilitários e helpers
-│   └── types/                 # Definições de tipos
-├── public/                    # Arquivos estáticos
-├── next.config.ts            # Configuração do Next.js
-├── postcss.config.mjs        # Configuração do PostCSS
-└── tsconfig.json             # Configuração do TypeScript
+│   │   ├── categorias/         # Páginas de categorias e produtos
+│   │   │   ├── [category]/     # Páginas dinâmicas de categorias
+│   │   │   └── [category]/[product]/ # Páginas dinâmicas de produtos
+│   │   ├── components/         # Componentes reutilizáveis
+│   │   ├── contato/            # Página de contato
+│   │   ├── sobre/              # Páginas institucionais
+│   │   ├── solucoes/           # Página de soluções
+│   │   ├── views/              # Componentes de UI
+│   │   ├── globals.css         # Estilos globais
+│   │   └── layout.tsx          # Layout raiz
+│   ├── data/                   # Dados estáticos e JSON
+│   │   ├── categories/         # Dados específicos de categorias
+│   │   ├── menu-data.json      # Estrutura do menu principal
+│   │   └── products/           # Dados de produtos
+│   ├── hooks/                  # Hooks customizados
+│   ├── lib/                    # Utilitários e helpers
+│   └── types/                  # Definições de tipos
+├── public/                     # Arquivos estáticos
+│   ├── img/                    # Imagens do site
+│   ├── icons/                  # Ícones e bandeiras
+│   └── downloads/              # Arquivos para download
+├── next.config.ts             # Configuração do Next.js
+├── postcss.config.mjs         # Configuração do PostCSS
+└── tsconfig.json              # Configuração do TypeScript
 ```
 
 ---
@@ -132,7 +140,7 @@ O build final ficará disponível em `.next/`.
 
 ## Padronização e Qualidade de Código
 
-- **ESLint** configurado em `eslint.config.mjs` e `.eslintrc.json`
+- **ESLint** configurado em `eslint.config.mjs`
 - **TypeScript** com configuração estrita em `tsconfig.json`
 - **Prettier** (recomendado) para formatação consistente de código
 - Padrões de nomenclatura em kebab-case para CSS classes
@@ -142,11 +150,10 @@ O build final ficará disponível em `.next/`.
 
 ## Estilo e UI
 
-- **Tailwind CSS v4** configurado via `postcss.config.mjs`
-- Sistema de cores personalizado com variáveis CSS customizadas
+- **CSS Modules** para estilização modular
+- Sistema de cores personalizado com valores RGBA diretos
 - Tipografia com fontes Google (Inter, Red Hat Display)
 - Design responsivo e mobile-first
-- Suporte a tema claro/escuro
 - Componentes modulares e reutilizáveis
 
 ### Sistema de Cores
@@ -161,36 +168,36 @@ O build final ficará disponível em `.next/`.
 
 - **App Router** do Next.js 15
 - Estrutura de rotas baseada em pastas
-- Suporte a internacionalização (`[lang]`)
 - Navegação dinâmica entre categorias e produtos
 - Breadcrumbs e navegação hierárquica
 
 ### Status da Internacionalização (Tradução)
-**⚠️ ATENÇÃO: Sistema de tradução parcialmente implementado**
+**✅ SISTEMA DE TRADUÇÃO REMOVIDO - SITE FUNCIONANDO EM PORTUGUÊS BRASILEIRO**
 
-**O que está funcionando:**
-- ✅ **Estrutura de rotas:** `/[lang]` para idiomas suportados
-- ✅ **Arquivos de tradução:** `pt-BR.json`, `en.json`, `es.json` existem
-- ✅ **Seletor de idioma:** Interface visual no header (apenas cosmético)
-- ✅ **Validação de idiomas:** Suporte para `pt-BR`, `en`, `es`
+**Situação Atual:**
+- ✅ **Site funcionando perfeitamente** em português brasileiro
+- ✅ **Menu e submenu funcionando** com navegação completa
+- ✅ **Rotas das categorias funcionando** (`/categorias/[category]`)
+- ✅ **Rotas dos produtos funcionando** (`/categorias/[category]/[product]`)
+- ✅ **Sem conflitos de roteamento** dinâmico
+- ✅ **Performance otimizada** sem overhead de internacionalização
 
-**O que NÃO está funcionando:**
-- ❌ **Tradução de conteúdo:** Textos permanecem em português
-- ❌ **Navegação entre idiomas:** Links não redirecionam para versões traduzidas
-- ❌ **SEO multilíngue:** Metadados não são traduzidos
-- ❌ **Conteúdo dinâmico:** Produtos e categorias não são traduzidos
+**O que foi removido:**
+- ❌ **Sistema de rotas `[lang]`** - Causava conflitos
+- ❌ **Arquivos de tradução** - `pt-BR.json`, `en.json`, `es.json`
+- ❌ **Middleware de internacionalização** - `middleware.ts`
+- ❌ **Seletor de idiomas** - Interface de troca de idioma
+- ❌ **Dependências de i18n** - `next-intl`, `react-i18next`
 
-**Arquivos relacionados:**
-- `src/app/[lang]/layout.tsx` - Layout para rotas internacionalizadas
-- `src/app/data/locales/` - Arquivos de tradução (JSON)
-- `src/app/components/main-nav/main-nav.tsx` - Seletor de idioma (cosmético)
+**Estrutura atual funcionando:**
+- **Menu principal**: Navegação entre categorias principais
+- **Submenu**: Produtos de cada categoria com imagens
+- **Páginas de categoria**: Layout específico para cada categoria
+- **Páginas de produto**: Detalhes completos de cada produto
+- **Navegação institucional**: Sobre, Soluções, Contato
 
-**Para completar a implementação seria necessário:**
-1. Integrar sistema de tradução (react-i18next ou similar)
-2. Traduzir todo o conteúdo estático e dinâmico
-3. Implementar redirecionamentos automáticos
-4. Adicionar hreflang tags para SEO
-5. Traduzir metadados e URLs
+**Decisão técnica:**
+O sistema de tradução foi removido para resolver conflitos de roteamento e manter o site 100% funcional. O site está otimizado para o mercado brasileiro, que é o público-alvo principal da Isoart.
 
 ---
 
@@ -271,6 +278,17 @@ O build final ficará disponível em `.next/`.
 - [ ] Monitoramento de erros
 - [ ] Otimizações de SEO avançadas
 
+### Considerações sobre Internacionalização
+**⚠️ IMPORTANTE**: Se no futuro for necessário implementar suporte a múltiplos idiomas:
+
+1. **Implementar sistema de roteamento limpo** sem conflitos
+2. **Usar biblioteca de tradução robusta** (react-i18next ou next-intl)
+3. **Traduzir todo o conteúdo** estático e dinâmico
+4. **Implementar SEO multilíngue** com hreflang tags
+5. **Testar navegação** entre idiomas extensivamente
+
+**Recomendação atual**: Manter o site em português brasileiro para foco no mercado principal.
+
 ---
 
 ## Contribuição
@@ -294,6 +312,21 @@ Este projeto é privado e propriedade da Isoart. Todos os direitos reservados.
 - **Website**: [www.isoart.br](https://www.isoart.com.br)
 - **Email**: contato@isoart.com.br
 - **Telefone**: +55 (45) 3231-1699
+
+---
+
+## Status do Projeto (Atualizado: Janeiro 2025)
+
+**✅ PROJETO FUNCIONANDO PERFEITAMENTE**
+
+- **Commit atual**: `193d5be` ("updated")
+- **Status**: Site 100% funcional sem conflitos
+- **Idioma**: Português brasileiro (otimizado para mercado local)
+- **Performance**: Otimizada e sem overhead de internacionalização
+- **Menu e navegação**: Funcionando perfeitamente
+- **Rotas dinâmicas**: Categorias e produtos funcionando
+
+**Última atualização**: Janeiro 2025 - Sistema de tradução removido para resolver conflitos e manter funcionalidade completa.
 
 ---
 
