@@ -249,6 +249,40 @@
     "success": "Sucesso",
     "close": "Fechar"
   },
+  "productPage": {
+    "defaults": {
+      "heroDescription": "Descubra a solução ideal para coberturas eficientes com isolamento térmico superior.",
+      "buttonText": "Solicite um orçamento",
+      "categoryDescriptionTitle": "As Telhas Térmicas Isoart oferecem leveza, economia e excelente desempenho térmico, otimizando a obra e garantindo conforto com menor custo.",
+      "categoryDescriptionText": "A Telha Térmica Isoart é uma solução leve e eficiente para a construção civil, substituindo com vantagens os sistemas tradicionais. Produzida com núcleos de poliestireno expandido (EPS) ou poliisocianurato (PIR) e revestimento em aço galvalume, proporciona estruturas mais leves, redução de carga nas fundações e maior agilidade na obra. Além de excelente desempenho térmico, permite economia significativa de concreto, aço e mão de obra, sendo ideal para projetos que exigem produtividade, conforto e custo-benefício.",
+      "defaultBenefits": [
+        { "id": 1, "title": "Qualidade Superior", "description": "Produtos com rigoroso controle de qualidade." },
+        { "id": 2, "title": "Eficiência Garantida", "description": "Soluções que entregam o melhor desempenho." }
+      ],
+      "generalCharacteristics": [
+        "Adaptações personalizadas de altura, largura e comprimento",
+        "Menor carga sobre a estrutura com excelente desempenho mecânico",
+        "Mais fácil de transportar e montar, otimizando o tempo da obra",
+        "Menor consumo de recursos como concreto, aço e madeira",
+        "Conforto térmico e redução de ruídos em ambientes internos",
+        "Recebe chapisco e reboco com ótima aderência"
+      ],
+      "applicationsTitle": "Maior economia, agilidade na execução e conforto térmico com menor esforço estrutural",
+      "applicationsDescription": "A Telha Térmica Isoart é fabricada com blocos de poliestireno expandido ou poliisocianurato, proporcionando telhas mais leves, com menor consumo de concreto e aço, fácil manuseio e excelente isolamento térmico. Ideal para obras que exigem rapidez, desempenho e redução de custos.",
+      "applicationsLabel": "Aplicações:",
+      "tabDescriptions": {
+        "Alívio de carga na estrutura": "As Telhas Térmicas Isoart reduzem significativamente a carga sobre a estrutura, permitindo projetos mais leves e econômicos sem comprometer a segurança ou durabilidade.",
+        "Economia na obra": "Com menor consumo de materiais como concreto e aço, as Telhas Térmicas otimizam custos e aceleram o cronograma, oferecendo alta eficiência na construção.",
+        "Flexibilidade no projeto": "Personalizáveis em dimensões e acabamentos, essas telhas se adaptam a diversos projetos, desde residências até galpões industriais, garantindo versatilidade.",
+        "Isolamento térmico inteligente": "Projetadas com materiais como PIR e EPS, as Telhas Térmicas oferecem excelente isolamento, reduzindo a necessidade de climatização e aumentando o conforto interno."
+      }
+    },
+    "sections": {
+      "characteristics": "Características:",
+      "modelsTableTitle": "Modelos disponíveis:",
+      "modelsTableNote": "Aço nas opções de espessuras: 0.38mm / 0.43mm / 0.50mm"
+    }
+  },
   "language": {
     "portuguese": "Português",
     "english": "Inglês",
@@ -272,7 +306,8 @@
       "subject": "Assunto",
       "message": "Mensagem",
       "submit": "Enviar mensagem",
-      "success": "Sua mensagem foi enviada com sucesso!"
+      "success": "Sua mensagem foi enviada com sucesso!",
+      "contact": "Entre em contato conosco:"
     }
   }
 }

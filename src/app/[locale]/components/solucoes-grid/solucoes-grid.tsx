@@ -3,19 +3,23 @@
 import styles from './solucoes-grid.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 interface SolucoesGridProps {
     locale: string;
 }
 
 function SolucoesGrid({ locale }: SolucoesGridProps) {
+    const t = useTranslations('home.homeSolutions');
+    const tCommon = useTranslations('common.buttons');
+
     return (
         <section className={styles['solucoes-grid-section']} id="solucoes-grid">
             <div className={styles['solucoes-grid-wrapper']}>
                 <div className={styles['solucoes-grid-header']}>
-                    <p>Nossos produtos</p>
+                    <p>{t('title')}</p>
                     <h3>
-                        Soluções em Poliestireno Expandido (EPS) e Poliisocianurato Isolante Rígido (PIR)
+                        {t('subtitle')}
                     </h3>
                 </div>
                 <div className={styles['solucoes-grid-grid']}>
@@ -30,8 +34,8 @@ function SolucoesGrid({ locale }: SolucoesGridProps) {
                                 />
                             </div>
                             <div className={styles['solucoes-grid-card-container']}>
-                                <h4>Telhas e Painéis</h4>
-                                <p>Soluções térmicas para coberturas e fachadas com isolamento superior.</p>
+                                <h4>{t('telhasPaineis.title')}</h4>
+                                <p>{t('telhasPaineis.description')}</p>
                             </div>
                         </Link>
                     </div>
@@ -46,8 +50,8 @@ function SolucoesGrid({ locale }: SolucoesGridProps) {
                                 />
                             </div>
                             <div className={styles['solucoes-grid-card-container']}>
-                                <h4>Construção Civil</h4>
-                                <p>Materiais leves e eficientes para construções mais inteligentes.</p>
+                                <h4>{t('construcaoCivil.title')}</h4>
+                                <p>{t('construcaoCivil.description')}</p>
                             </div>
                         </Link>
                     </div>
@@ -62,8 +66,8 @@ function SolucoesGrid({ locale }: SolucoesGridProps) {
                                 />
                             </div>
                             <div className={styles['solucoes-grid-card-container']}>
-                                <h4>Molduras Decorativas</h4>
-                                <p>Acabamentos elegantes para portas, janelas e paredes.</p>
+                                <h4>{t('molduras.title')}</h4>
+                                <p>{t('molduras.description')}</p>
                             </div>
                         </Link>
                     </div>
@@ -78,8 +82,8 @@ function SolucoesGrid({ locale }: SolucoesGridProps) {
                                 />
                             </div>
                             <div className={styles['solucoes-grid-card-container']}>
-                                <h4>Embalagens em EPS</h4>
-                                <p>Proteção personalizada para produtos durante transporte.</p>
+                                <h4>{t('embalagens.title')}</h4>
+                                <p>{t('embalagens.description')}</p>
                             </div>
                         </Link>
                     </div>

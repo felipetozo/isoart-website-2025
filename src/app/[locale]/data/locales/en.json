@@ -249,6 +249,40 @@
     "success": "Success",
     "close": "Close"
   },
+  "productPage": {
+    "defaults": {
+      "heroDescription": "Discover the ideal solution for efficient roofs with superior thermal insulation.",
+      "buttonText": "Request a quote",
+      "categoryDescriptionTitle": "Isoart Thermal Roofing offers lightness, economy and excellent thermal performance, optimizing construction and ensuring comfort at lower cost.",
+      "categoryDescriptionText": "Isoart Thermal Roofing is a lightweight and efficient solution for civil construction, replacing traditional systems with advantages. Produced with expanded polystyrene (EPS) or polyisocyanurate (PIR) cores and galvalume steel coating, it provides lighter structures, reduced foundation load and greater construction agility. In addition to excellent thermal performance, it allows significant savings in concrete, steel and labor, being ideal for projects that require productivity, comfort and cost-effectiveness.",
+      "defaultBenefits": [
+        { "id": 1, "title": "Superior Quality", "description": "Products with rigorous quality control." },
+        { "id": 2, "title": "Guaranteed Efficiency", "description": "Solutions that deliver the best performance." }
+      ],
+      "generalCharacteristics": [
+        "Custom adaptations of height, width and length",
+        "Lower load on structure with excellent mechanical performance",
+        "Easier to transport and assemble, optimizing construction time",
+        "Lower consumption of resources such as concrete, steel and wood",
+        "Thermal comfort and noise reduction in internal environments",
+        "Receives plaster and mortar with excellent adhesion"
+      ],
+      "applicationsTitle": "Greater economy, agility in execution and thermal comfort with less structural effort",
+      "applicationsDescription": "Isoart Thermal Roofing is manufactured with expanded polystyrene or polyisocyanurate blocks, providing lighter roofing, with lower consumption of concrete and steel, easy handling and excellent thermal insulation. Ideal for works that require speed, performance and cost reduction.",
+      "applicationsLabel": "Applications:",
+      "tabDescriptions": {
+        "Structural load relief": "Isoart Thermal Roofing significantly reduces the load on the structure, allowing lighter and more economical projects without compromising safety or durability.",
+        "Construction economy": "With lower consumption of materials such as concrete and steel, Thermal Roofing optimizes costs and accelerates the schedule, offering high construction efficiency.",
+        "Project flexibility": "Customizable in dimensions and finishes, these roofing tiles adapt to various projects, from residences to industrial sheds, ensuring versatility.",
+        "Smart thermal insulation": "Designed with materials such as PIR and EPS, Thermal Roofing offers excellent insulation, reducing the need for air conditioning and increasing internal comfort."
+      }
+    },
+    "sections": {
+      "characteristics": "Characteristics:",
+      "modelsTableTitle": "Available models:",
+      "modelsTableNote": "Steel in thickness options: 0.38mm / 0.43mm / 0.50mm"
+    }
+  },
   "language": {
     "portuguese": "Portuguese",
     "english": "English",
@@ -272,7 +306,8 @@
       "subject": "Subject",
       "message": "Message",
       "submit": "Send message",
-      "success": "Your message was sent successfully!"
+      "success": "Your message was sent successfully!",
+      "contact": "Contact us:"
     }
   }
 }

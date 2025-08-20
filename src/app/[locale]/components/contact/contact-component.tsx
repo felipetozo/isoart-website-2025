@@ -8,6 +8,7 @@ import FormField from '@/app/[locale]/views/ui/form/form-field';
 import FormSelection from '@/app/[locale]/views/ui/form/form-selection';
 import Button from '@/app/[locale]/views/ui/button/button';
 import Toast from '@/app/[locale]/views/ui/toast/toast';
+import { useTranslations } from 'next-intl';
 
 interface FormData {
     name: string;
@@ -34,6 +35,11 @@ interface ContactComponentProps {
 }
 
 function ContactComponent({ locale }: ContactComponentProps) {
+    const t = useTranslations('contactPage.form');
+    const tPage = useTranslations('contactPage');
+    const tContact = useTranslations('contact');
+    const tCommon = useTranslations('common.buttons');
+
     const [formData, setFormData] = useState<FormData>({
         name: '',
         email: '',
@@ -51,8 +57,8 @@ function ContactComponent({ locale }: ContactComponentProps) {
 
     const validateForm = (): boolean => {
         const newErrors: FormErrors = {};
-        if (!formData.name.trim()) newErrors.name = 'Nome é obrigatório';
-        if (!formData.email.trim()) newErrors.email = 'E-mail é obrigatório';
+        if (!formData.name.trim()) newErrors.name = t('name') + ' é obrigatório';
+        if (!formData.email.trim()) newErrors.email = t('email') + ' é obrigatório';
         else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'E-mail inválido';
         if (!formData.solution) newErrors.solution = 'Selecione uma solução';
         if (!formData.state) newErrors.state = 'Selecione um estado';
@@ -153,25 +159,25 @@ function ContactComponent({ locale }: ContactComponentProps) {
                 {/* Cabeçalho do formulário */}
                 <div className={styles['contact-component-header']}>
                     <h4>
-                        Entre em contato conosco:
+                        {t('contact')}
                     </h4>
                     <div className={styles['contact-component-header-container']}>
                         <div className={styles['contact-component-contact-item']}>
                             <a href="tel:+554532311699">
                                 <MdOutlinePhoneInTalk />
-                                <p>+55 45 3231 1699</p>
+                                <p>{tContact('phone')}</p>
                             </a>
                         </div>
                         <div className={styles['contact-component-contact-item']}>
                             <a href="https://wa.me/5545991339642" target="_blank" rel="noopener noreferrer">
                                 <BsWhatsapp />
-                                <p>+55 45 99133 9642</p>
+                                <p>{tContact('whatsapp')}</p>
                             </a>
                         </div>
                         <div className={styles['contact-component-contact-item']}>
                             <a href="mailto:contato@isoart.com.br">
                                 <MdOutlineMarkEmailUnread />
-                                <p>contato@isoart.com.br</p>
+                                <p>{tContact('email')}</p>
                             </a>
                         </div>
                     </div>
@@ -183,7 +189,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                         <div className={styles['cadastro-form-fields']}>
                             <FormField
                                 id="name"
-                                label="Nome completo"
+                                label={t('name')}
                                 type="text"
                                 value={formData.name}
                                 onChange={handleChange}
@@ -194,7 +200,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                         <div className={styles['cadastro-form-fields']}>
                             <FormField
                                 id="email"
-                                label="E-mail"
+                                label={t('email')}
                                 type="email"
                                 value={formData.email}
                                 onChange={handleChange}
@@ -274,7 +280,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                 disabled={submitStatus === 'submitting'}
                             >
                                 <span>
-                                    {submitStatus === 'submitting' ? 'Enviando...' : 'Enviar solicitação'}
+                                    {submitStatus === 'submitting' ? 'Enviando...' : tCommon('requestQuote')}
                                 </span>
                             </Button>
                         </div>

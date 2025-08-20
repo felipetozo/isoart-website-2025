@@ -12,6 +12,7 @@ import IncendioComponent from '@/app/[locale]/components/pir-incendio/pir-incend
 import { TbChecks, TbHome, TbMicroscope, TbBuildingFactory2, TbSnowflake, TbMedicineSyrup, TbBuilding, TbBuildingHospital, TbBuildingFactory, TbTools, TbPackage, TbDeviceTv, TbWindow, TbTruck, TbBuildingStore, TbArmchair, TbMicrophone, } from "react-icons/tb";
 import { IoFastFoodOutline } from "react-icons/io5";
 import ImageCarousel from '@/app/[locale]/components/image-carousel/image-carousel';
+import { useTranslations } from 'next-intl';
 
 interface ProductData {
     id: number;
@@ -135,6 +136,10 @@ async function getCategoryData(categorySlug: string): Promise<CategoryData | und
 
 async function ProductPage({ params }: ProductPageProps) {
     const { category, product, locale } = await params;
+    
+    // Hook de traduções (será usado dentro da função)
+    const t = useTranslations('productPage');
+    const tCommon = useTranslations('common.buttons');
 
     let productData: ProductData | undefined;
 
@@ -159,35 +164,25 @@ async function ProductPage({ params }: ProductPageProps) {
 
     const heroSection = productData.hero || {
         title: productData.name,
-        description: 'Descubra a solução ideal para coberturas eficientes com isolamento térmico superior.',
-        buttonText: 'Solicite um orçamento',
+        description: t('defaults.heroDescription'),
+        buttonText: t('defaults.buttonText'),
         buttonLink: `/${locale}/contato`,
         backgroundImage: productData.image || '/img/default-product-hero.avif'
     };
 
     const categoryDescription = productData.categoryDescription || {
-        title: 'As Telhas Térmicas Isoart oferecem leveza, economia e excelente desempenho térmico, otimizando a obra e garantindo conforto com menor custo.',
-        description: 'A Telha Térmica Isoart é uma solução leve e eficiente para a construção civil, substituindo com vantagens os sistemas tradicionais. Produzida com núcleos de poliestireno expandido (EPS) ou poliisocianurato (PIR) e revestimento em aço galvalume, proporciona estruturas mais leves, redução de carga nas fundações e maior agilidade na obra. Além de excelente desempenho térmico, permite economia significativa de concreto, aço e mão de obra, sendo ideal para projetos que exigem produtividade, conforto e custo-benefício.'
+        title: t('defaults.categoryDescriptionTitle'),
+        description: t('defaults.categoryDescriptionText')
     };
 
     // Usar os benefícios da categoria se existirem, senão usar os benefícios do produto ou padrão
-    const benefits = categoryData?.benefits || productData.benefits || [
-        { id: 1, title: "Qualidade Superior", description: "Produtos com rigoroso controle de qualidade." },
-        { id: 2, title: "Eficiência Garantida", description: "Soluções que entregam o melhor desempenho." }
-    ];
+    const benefits = categoryData?.benefits || productData.benefits || t('defaults.defaultBenefits');
 
-    const generalCharacteristics = productData.generalCharacteristics || [
-        'Adaptações personalizadas de altura, largura e comprimento',
-        'Menor carga sobre a estrutura com excelente desempenho mecânico',
-        'Mais fácil de transportar e montar, otimizando o tempo da obra',
-        'Menor consumo de recursos como concreto, aço e madeira',
-        'Conforto térmico e redução de ruídos em ambientes internos',
-        'Recebe chapisco e reboco com ótima aderência'
-    ];
+    const generalCharacteristics = productData.generalCharacteristics || t('defaults.generalCharacteristics');
 
     const applications = productData.applications || {
-        title: 'Maior economia, agilidade na execução e conforto térmico com menor esforço estrutural',
-        description: 'A Telha Térmica Isoart é fabricada com blocos de poliestireno expandido ou poliisocianurato, proporcionando telhas mais leves, com menor consumo de concreto e aço, fácil manuseio e excelente isolamento térmico. Ideal para obras que exigem rapidez, desempenho e redução de custos.',
+        title: t('defaults.applicationsTitle'),
+        description: t('defaults.applicationsDescription'),
         indications: [
             { icon: 'TbHome', text: 'Casas e sobrados' },
             { icon: 'TbBuilding', text: 'Prédios residenciais' },
@@ -196,12 +191,7 @@ async function ProductPage({ params }: ProductPageProps) {
         ]
     };
 
-    const tabDescriptions = productData.tabDescriptions || {
-        'Alívio de carga na estrutura': 'As Telhas Térmicas Isoart reduzem significativamente a carga sobre a estrutura, permitindo projetos mais leves e econômicos sem comprometer a segurança ou durabilidade.',
-        'Economia na obra': 'Com menor consumo de materiais como concreto e aço, as Telhas Térmicas otimizam custos e aceleram o cronograma, oferecendo alta eficiência na construção.',
-        'Flexibilidade no projeto': 'Personalizáveis em dimensões e acabamentos, essas telhas se adaptam a diversos projetos, desde residências até galpões industriais, garantindo versatilidade.',
-        'Isolamento térmico inteligente': 'Projetadas com materiais como PIR e EPS, as Telhas Térmicas oferecem excelente isolamento, reduzindo a necessidade de climatização e aumentando o conforto interno.'
-    };
+    const tabDescriptions = productData.tabDescriptions || t('defaults.tabDescriptions');
 
     return (
         <div className={styles['product-page']}>
@@ -246,7 +236,7 @@ async function ProductPage({ params }: ProductPageProps) {
                     </div>
 
                 {/* Características gerais */}
-                    <h3>Características:</h3>
+                    <h3>{t('sections.characteristics')}</h3>
                     <div className={styles['features-grid']}>
                         {generalCharacteristics.map((char, index) => (
                             <div key={index} className={styles['feature']}>
@@ -262,7 +252,7 @@ async function ProductPage({ params }: ProductPageProps) {
                 <div className={styles['applications-wrapper']}>
                     <h3>{applications.title}</h3>
                     <p>{applications.description}</p>
-                    <p>Aplicações:</p>
+                    <p>{t('defaults.applicationsLabel')}</p>
                     <div className={styles['application-carousel']}>
                         <div className={styles['application-cards']}>
                             {applications.indications.map((indication, index) => (
@@ -279,7 +269,7 @@ async function ProductPage({ params }: ProductPageProps) {
             {productData.modelsTable && (
                 <section className={styles['models-table-section']}>
                     <div className={styles['models-table-wrapper']}>
-                        <h5 className={styles['models-table-title']}>{productData.modelsTable.title}</h5>
+                        <h5 className={styles['models-table-title']}>{productData.modelsTable.title || t('sections.modelsTableTitle')}</h5>
                         <div className={styles['models-table-container']}>
                             <table className={styles['models-table']}>
                                 <thead>
@@ -312,6 +302,9 @@ async function ProductPage({ params }: ProductPageProps) {
                             {productData.modelsTable.note && (
                                 <p className={styles['models-table-note']}>{productData.modelsTable.note}</p>
                             )}
+                            {!productData.modelsTable.note && (
+                                <p className={styles['models-table-note']}>{t('sections.modelsTableNote')}</p>
+                            )}
                         </div>
                     </div>
                 </section>
@@ -334,8 +327,8 @@ async function ProductPage({ params }: ProductPageProps) {
             {/* PIR Incêndio Component - Apenas para categoria telhas-e-paineis */}
             {category === 'telhas-e-paineis' && <IncendioComponent />}
 
-            <SobreEmpresa />
-            <ContactComponent />
+            <SobreEmpresa locale={locale} />
+            <ContactComponent locale={locale} />
         </div>
     );
 }

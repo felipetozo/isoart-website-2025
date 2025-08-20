@@ -6,12 +6,17 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
+import { useTranslations } from 'next-intl';
 
 interface FooterProps {
     locale: string;
 }
 
 function Footer({ locale }: FooterProps) {
+    const t = useTranslations('footer');
+    const tContact = useTranslations('contact');
+    const tSocial = useTranslations('social');
+
     return (
         <>
             <section className={styles['footer-section']}>
@@ -19,34 +24,31 @@ function Footer({ locale }: FooterProps) {
                     <div className={styles['footer-column']}>
                         <div className={styles['main-form-contact-item']}>
                             <MdOutlinePhoneInTalk />
-                            <p>+55 45 3231 1699</p>
+                            <p>{tContact('phone')}</p>
                         </div>
                         <div className={styles['main-form-contact-item']}>
                             <BsInstagram />
-                            <p>+55 45 99133 9642</p>
+                            <p>{tContact('whatsapp')}</p>
                         </div>
                         <div className={styles['main-form-contact-item']}>
                             <MdOutlineMarkEmailUnread />
-                            <p>contato@isoart.com.br</p>
+                            <p>{tContact('email')}</p>
                         </div>
-                        <p>
-                            Rua Dorivaldo Soncela, 1490<br />
-                            Santa Tereza do Oeste - Paraná - Brasil
-                        </p>
+                        <p dangerouslySetInnerHTML={{ __html: tContact('address') }} />
                         <div className={styles['main-form-nav-social']}>
-                            <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank" aria-label="Siga-nos no Instagram">
+                            <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank" aria-label={tSocial('instagram')}>
                                 <BsInstagram />
                                 <span className={styles['sr-only']}>Instagram</span>
                             </Link>
-                            <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank" aria-label="Siga-nos no Facebook">
+                            <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank" aria-label={tSocial('facebook')}>
                                 <BsFacebook />
                                 <span className={styles['sr-only']}>Facebook</span>
                             </Link>
-                            <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank" aria-label="Visite nosso canal no YouTube">
+                            <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank" aria-label={tSocial('youtube')}>
                                 <BsYoutube />
                                 <span className={styles['sr-only']}>YouTube</span>
                             </Link>
-                            <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank" aria-label="Conecte-se conosco no LinkedIn">
+                            <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank" aria-label={tSocial('linkedin')}>
                                 <BsLinkedin />
                                 <span className={styles['sr-only']}>LinkedIn</span>
                             </Link>

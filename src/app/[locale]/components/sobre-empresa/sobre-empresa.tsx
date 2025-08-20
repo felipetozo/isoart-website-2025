@@ -1,12 +1,16 @@
 import styles from './sobre-empresa.module.css';
 import Link from 'next/link';
 import Button from '@/app/[locale]/views/ui/button/button';
+import { useTranslations } from 'next-intl';
 
 interface SobreEmpresaProps {
     locale: string;
 }
 
 function SobreEmpresa({ locale }: SobreEmpresaProps) {
+    const t = useTranslations('aboutPage');
+    const tCommon = useTranslations('common.buttons');
+
     return (
         <>
             <section className={styles['sobre-empresa-section']} id="#sobre-empresa">
@@ -16,15 +20,12 @@ function SobreEmpresa({ locale }: SobreEmpresaProps) {
                     </div>
                     <div className={styles['sobre-empresa-container']}>
                         <h2>
-                            Soluções inovadoras, sustentáveis e de alta
-                            qualidade em Poliestireno Expandido (EPS) e
-                            Espuma Rígida de Poliisocianurato (PIR) que
-                            atendem às diversas demandas do mercado.
+                            {t('description')}
                         </h2>
                         <div>
                             <Link href={`/${locale}/sobre`}>
                                 <Button variant="white" size="medium">
-                                    Saiba mais
+                                    {tCommon('learnMore')}
                                 </Button>
                             </Link>
                         </div>

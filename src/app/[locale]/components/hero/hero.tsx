@@ -4,11 +4,12 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './hero.module.css';
 import Link from 'next/link';
 import Button from '@/app/[locale]/views/ui/button/button';
-import sliderData from '../../data/main-slider-data.json';
 import { TbChevronLeft, TbChevronRight } from 'react-icons/tb';
-
+import { useTranslations } from 'next-intl';
 
 function Hero() {
+    const t = useTranslations('home.slider');
+    const tCommon = useTranslations('common.buttons');
 
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isDragging, setIsDragging] = useState(false);
@@ -22,6 +23,34 @@ function Hero() {
     const progressRef = useRef<number | null>(null);
 
     const SLIDE_DURATION = 5000; // 5 segundos por slide
+
+    // Dados do slider usando traduções
+    const sliderData = [
+        {
+            id: 1,
+            title: t('slide1.title'),
+            description: t('slide1.description'),
+            buttonText: t('slide1.buttonText'),
+            buttonLink: "/solucoes/molduras-decorativas",
+            backgroundImage: "/img/heroes/home/home-hero-01.avif"
+        },
+        {
+            id: 2,
+            title: t('slide2.title'),
+            description: t('slide2.description'),
+            buttonText: t('slide2.buttonText'),
+            buttonLink: "/solucoes/construcao-civil",
+            backgroundImage: "/img/heroes/home/home-hero-02.avif"
+        },
+        {
+            id: 3,
+            title: t('slide3.title'),
+            description: t('slide3.description'),
+            buttonText: t('slide3.buttonText'),
+            buttonLink: "/solucoes/telhas-e-paineis",
+            backgroundImage: "/img/heroes/home/home-hero-03.avif"
+        }
+    ];
 
     const handleDotClick = useCallback((index: number) => {
         setCurrentSlide(index);

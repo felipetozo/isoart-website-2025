@@ -8,6 +8,7 @@ import ContactComponent from '@/app/[locale]/components/contact/contact-componen
 import Button from '@/app/[locale]/views/ui/button/button';
 import BenefitsSection from '@/app/[locale]/components/benefits-section/benefits-section';
 import IncendioComponent from '@/app/[locale]/components/pir-incendio/pir-incendio';
+import { useTranslations } from 'next-intl';
 
 // Updated interfaces to match the actual data structure
 interface Product {
@@ -154,8 +155,8 @@ async function CategoryPage({ params }: CategoryPageProps) {
 
             <BenefitsSection benefits={benefitsSection} />
             {categoryData.slug === 'telhas-e-paineis' && <IncendioComponent />}
-            <SobreEmpresa />
-            <ContactComponent />
+            <SobreEmpresa locale={locale} />
+            <ContactComponent locale={locale} />
         </div>
     );
 }

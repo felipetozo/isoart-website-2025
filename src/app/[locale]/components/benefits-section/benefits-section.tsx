@@ -1,5 +1,6 @@
 import styles from './benefits-section.module.css';
 import { TbWindOff, TbShieldShare, TbSparkles, TbFeather, TbTopologyStarRing3, TbVolumeOff, TbTopologyStar3 } from "react-icons/tb";
+import { useTranslations } from 'next-intl';
 
 interface Benefit {
     id: number;
@@ -39,9 +40,12 @@ const getBenefitIcon = (title: string): React.ReactElement => {
 };
 
 function BenefitsSection({ benefits }: BenefitsSectionProps) {
+    const t = useTranslations('benefits');
+
     return (
         <section className={styles['benefits-section']}>
             <div className={styles['benefits-wrapper']}>
+                <h3 className={styles['benefits-title']}>{t('title')}</h3>
                 {benefits.map((benefit) => (
                     <div key={benefit.id} className={styles['benefits-card']}>
                                 <div className={styles['benefit-icon']}>

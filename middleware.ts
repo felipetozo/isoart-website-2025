@@ -4,9 +4,29 @@ import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   
-  // Se é a página raiz, redireciona para pt-BR
+  // Se é a página raiz, detectar idioma preferido e redirecionar
   if (pathname === '/') {
-    return NextResponse.redirect(new URL('/pt-BR', request.url));
+    // Verificar se há um cookie de idioma ou header Accept-Language
+    const acceptLanguage = request.headers.get('accept-language') || '';
+    const localeCookie = request.cookies.get('locale')?.value;
+    
+    let preferredLocale = 'pt-BR'; // padrão
+    
+    // Se há cookie de idioma, usar ele
+    if (localeCookie && ['pt-BR', 'en', 'es'].includes(localeCookie)) {
+      preferredLocale = localeCookie;
+    }
+    // Senão, tentar detectar pelo Accept-Language
+    else if (acceptLanguage) {
+      if (acceptLanguage.includes('en')) {
+        preferredLocale = 'en';
+      } else if (acceptLanguage.includes('es')) {
+        preferredLocale = 'es';
+      }
+      // pt-BR é o padrão, então não precisa verificar
+    }
+    
+    return NextResponse.redirect(new URL(`/${preferredLocale}`, request.url));
   }
   
   // Se é uma rota de categorias antiga, redireciona para soluções

@@ -3,6 +3,11 @@ import ContactComponent from '../components/contact/contact-component';
 import Sustentabilidade from '../components/Sustentabilidade/sustentabilidade';
 import styles from './page.module.css';
 import { Target, Eye, Heart } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+
+interface SobrePageProps {
+    params: Promise<{ locale: string }>;
+}
 
 const TIMELINE = [
   {
@@ -28,7 +33,8 @@ const TIMELINE = [
   },
 ];
 
-function SobrePage() {
+export default async function SobrePage({ params }: SobrePageProps) {
+  const { locale } = await params;
 
   return (
     <div>
@@ -223,9 +229,7 @@ function SobrePage() {
 
       <Sustentabilidade />
 
-              <ContactComponent />
+              <ContactComponent locale={locale} />
     </div>
   );
 }
-
-export default SobrePage;

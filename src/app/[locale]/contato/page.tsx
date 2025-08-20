@@ -7,6 +7,7 @@ import Button from '@/app/[locale]/views/ui/button/button';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn } from 'react-icons/md';
 import { BsWhatsapp } from 'react-icons/bs';
 import Toast from '@/app/[locale]/views/ui/toast/toast';
+import { useTranslations } from 'next-intl';
 
 interface FormData {
     name: string;

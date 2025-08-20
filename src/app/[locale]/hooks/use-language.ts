@@ -32,10 +32,14 @@ export const useLanguage = () => {
       return;
     }
 
-    // Salvar no localStorage
+    // Salvar no localStorage e cookie
     if (typeof window !== 'undefined') {
       localStorage.setItem('locale', newLocale);
-      console.log('💾 Locale salvo no localStorage:', newLocale);
+      
+      // Salvar também em um cookie para o middleware
+      document.cookie = `locale=${newLocale}; path=/; max-age=31536000`; // 1 ano
+      
+      console.log('💾 Locale salvo no localStorage e cookie:', newLocale);
     }
 
     // Navegar para a nova rota
