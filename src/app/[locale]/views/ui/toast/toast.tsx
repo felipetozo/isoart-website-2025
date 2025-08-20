@@ -14,11 +14,16 @@ interface ToastProps {
 function Toast({ message, type = 'success', isVisible, onClose, duration = 4000 }: ToastProps) {
     const [isAnimating, setIsAnimating] = useState(false);
 
+    console.log('Toast renderizado com:', { message, type, isVisible, duration });
+
     useEffect(() => {
+        console.log('Toast useEffect - isVisible:', isVisible);
         if (isVisible) {
+            console.log('Toast: Iniciando animação');
             setIsAnimating(true);
             
             const timer = setTimeout(() => {
+                console.log('Toast: Timer expirado, fechando...');
                 setIsAnimating(false);
                 setTimeout(onClose, 300); // Aguarda a animação de saída
             }, duration);
@@ -27,8 +32,14 @@ function Toast({ message, type = 'success', isVisible, onClose, duration = 4000 
         }
     }, [isVisible, duration, onClose]);
 
-    if (!isVisible && !isAnimating) return null;
+    console.log('Toast: Renderizando com isVisible:', isVisible, 'isAnimating:', isAnimating);
+    
+    if (!isVisible && !isAnimating) {
+        console.log('Toast: Não renderizando (não visível e não animando)');
+        return null;
+    }
 
+    console.log('Toast: Renderizando componente');
     return (
         <div className={`${styles['toast']} ${styles[type]} ${isVisible ? styles.show : styles.hide}`}>
             <div className={styles['toast-content']}>

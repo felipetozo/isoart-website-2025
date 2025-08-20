@@ -27,6 +27,7 @@ interface FormErrors {
     state?: string;
     city?: string;
     terms?: string;
+    submit?: string;
 }
 
 interface ContactFormProps {
@@ -178,11 +179,16 @@ export default function ContactForm({ locale }: ContactFormProps) {
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
+        console.log('🚀 handleSubmit chamado!');
         e.preventDefault();
         
+        console.log('🔍 Validando formulário...');
         if (!validateForm()) {
+            console.log('❌ Validação falhou, retornando...');
             return;
         }
+        
+        console.log('✅ Validação passou, enviando formulário...');
 
         setIsSubmitting(true);
 
@@ -199,6 +205,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
             });
 
             if (response.ok) {
+                console.log('✅ Formulário enviado com sucesso! Mostrando toast...');
                 setShowToast(true);
                 setFormData({
                     name: '',
@@ -221,7 +228,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
         }
     };
 
-    const t = useTranslations('contactPage.form');
+    const t = useTranslations('contactPage');
 
     return (
         <>
@@ -245,42 +252,38 @@ export default function ContactForm({ locale }: ContactFormProps) {
                             <div className={styles['form-row']}>
                                 <FormField
                                     id="name"
-                                    label={t('name')}
+                                    label={t('form.name')}
                                     type="text"
                                     value={formData.name}
-                                    onChange={(value) => handleInputChange('name', value)}
+                                    onChange={(e) => handleInputChange('name', e.target.value)}
                                     error={errors.name}
-                                    required
                                 />
                                 <FormField
                                     id="email"
-                                    label={t('email')}
+                                    label={t('form.email')}
                                     type="email"
                                     value={formData.email}
-                                    onChange={(value) => handleInputChange('email', value)}
+                                    onChange={(e) => handleInputChange('email', e.target.value)}
                                     error={errors.email}
-                                    required
                                 />
                             </div>
 
                             <div className={styles['form-row']}>
                                 <FormField
                                     id="phone"
-                                    label={t('phone')}
+                                    label={t('form.phone')}
                                     type="tel"
                                     value={formData.phone}
-                                    onChange={(value) => handleInputChange('phone', value)}
+                                    onChange={(e) => handleInputChange('phone', e.target.value)}
                                     error={errors.phone}
-                                    required
                                 />
                                 <FormSelection
                                     id="theme"
-                                    label={t('subject')}
+                                    label={t('form.subject')}
                                     value={formData.theme}
-                                    onChange={(value) => handleInputChange('theme', value)}
+                                    onChange={(e) => handleInputChange('theme', e.target.value)}
                                     options={themes}
                                     error={errors.theme}
-                                    required
                                 />
                             </div>
 
@@ -289,20 +292,17 @@ export default function ContactForm({ locale }: ContactFormProps) {
                                     id="state"
                                     label="Estado"
                                     value={formData.state}
-                                    onChange={(value) => handleInputChange('state', value)}
+                                    onChange={(e) => handleInputChange('state', e.target.value)}
                                     options={states}
                                     error={errors.state}
-                                    required
-                                    loading={loadingStates}
                                 />
                                 <FormSelection
                                     id="city"
                                     label="Cidade"
                                     value={formData.city}
-                                    onChange={(value) => handleInputChange('city', value)}
+                                    onChange={(e) => handleInputChange('city', e.target.value)}
                                     options={formData.state ? cities[formData.state as keyof typeof cities] || [] : []}
                                     error={errors.city}
-                                    required
                                     disabled={!formData.state}
                                 />
                             </div>
@@ -336,7 +336,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
                                     disabled={isSubmitting}
                                     className={styles['submit-button']}
                                 >
-                                    {isSubmitting ? 'Enviando...' : t('submit')}
+                                    {isSubmitting ? 'Enviando...' : t('form.submit')}
                                 </Button>
                             </div>
                         </form>
@@ -376,13 +376,14 @@ export default function ContactForm({ locale }: ContactFormProps) {
                 </div>
             </section>
 
-            {showToast && (
-                <Toast
-                    message={t('success')}
-                    type="success"
-                    onClose={() => setShowToast(false)}
-                />
-            )}
+            <Toast
+                message={t('form.success')}
+                type="success"
+                isVisible={showToast}
+                onClose={() => setShowToast(false)}
+            />
+            {/* Debug: mostrar estado do toast */}
+            {console.log('🔍 Estado do showToast:', showToast)}
         </>
     );
 }

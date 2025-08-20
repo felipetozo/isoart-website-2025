@@ -5,7 +5,7 @@ import path from 'path';
 export async function GET(request: NextRequest) {
   try {
     // Caminho para o arquivo JSON
-    const filePath = path.join(process.cwd(), 'src', 'app', 'data', 'states.json');
+    const filePath = path.join(process.cwd(), 'src', 'app', '[locale]', 'data', 'states.json');
 
     // Ler o arquivo JSON
     const fileContent = await fs.readFile(filePath, 'utf-8');

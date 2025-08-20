@@ -386,10 +386,15 @@ function ContactComponent({ locale }: ContactComponentProps) {
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
+            
+            <Toast
+                message="Sua mensagem foi enviada com sucesso!"
+                type="success"
+                isVisible={showToast}
+                onClose={() => setShowToast(false)}
+                duration={4000}
+            />
         </section>
     );
 };

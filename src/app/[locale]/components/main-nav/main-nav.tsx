@@ -89,7 +89,7 @@ function MainNav({ locale }: MainNavProps) {
     const tMenu = useTranslations('menu');
     const tContact = useTranslations('contact');
     const tSocial = useTranslations('social');
-    const [mounted, setMounted] = useState(false);
+
 
     // Mapeamento das categorias para as traduções
     const getCategoryTranslation = (slug: string) => {
@@ -158,10 +158,7 @@ function MainNav({ locale }: MainNavProps) {
         changeLanguage(newLocale);
     };
 
-    // Carregar locale salvo no localStorage na inicialização
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+
 
     const showSubmenu = (index: number) => {
         if (hideTimeoutRef.current) {
@@ -353,39 +350,34 @@ function MainNav({ locale }: MainNavProps) {
                                 <li><Link href={`/${locale}/contato`}>{t('contact')}</Link></li>
                             </ul>
                         </div>
-                        {(() => {
-                            return null;
-                        })()}
-                        {mounted && (
-                            <div className={styles['language-selector-wrapper']}>
-                                <div className={styles['language-options']}>
-                                    {supportedLocales.map((locale) => {
-                                        const localeInfo = getLocaleInfo(locale);
-                                        const isActive = locale === currentLocale;
-                                        
-                                        return (
-                                            <button
-                                                key={locale}
-                                                className={`${styles['language-option']} ${isActive ? styles['language-option-active'] : ''}`}
-                                                onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    handleLocaleChange(locale);
-                                                }}
-                                                title={localeInfo.name}
-                                            >
-                                                <img
-                                                    src={localeInfo.flag}
-                                                    alt={`${t('flag')} ${localeInfo.name}`}
-                                                    className={styles['flag-image']}
-                                                    onError={(e) => console.error('❌ Erro ao carregar bandeira:', locale, e)}
-                                                    onLoad={() => console.log('✅ Bandeira carregada:', locale)}
-                                                />
-                                            </button>
-                                        );
-                                    })}
-                                </div>
+                        <div className={styles['language-selector-wrapper']}>
+                            <div className={styles['language-options']}>
+                                {supportedLocales.map((locale) => {
+                                    const localeInfo = getLocaleInfo(locale);
+                                    const isActive = locale === currentLocale;
+                                    
+                                    return (
+                                        <button
+                                            key={locale}
+                                            className={`${styles['language-option']} ${isActive ? styles['language-option-active'] : ''}`}
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                handleLocaleChange(locale);
+                                            }}
+                                            title={localeInfo.name}
+                                        >
+                                            <img
+                                                src={localeInfo.flag}
+                                                alt={`${t('flag')} ${localeInfo.name}`}
+                                                className={styles['flag-image']}
+                                                onError={(e) => console.error('❌ Erro ao carregar bandeira:', locale, e)}
+                                                onLoad={() => console.log('✅ Bandeira carregada:', locale)}
+                                            />
+                                        </button>
+                                    );
+                                })}
                             </div>
-                        )}
+                        </div>
                     </div>
                 </div>
             </nav>
