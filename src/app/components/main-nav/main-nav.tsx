@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Button from '@/app/views/ui/button/button';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
-import { useLanguage } from '@/hooks/use-language';
+import { useLanguage } from '@/app/[locale]/hooks/use-language';
 import { useTranslations } from 'next-intl';
 
 import menuData from '@/app/data/menu-data.json';
@@ -405,7 +405,7 @@ export default function MainNav() {
                                 {typedMenuData.map((item, index) => (
                                     <Link
                                         key={item.id}
-                                        href={`/categorias/${item.slug}`}
+                                        href={`/solucoes/${item.slug}`}
                                         onMouseEnter={() => handleMouseEnterLi(index)}
                                         onMouseLeave={handleMouseLeaveLi}
                                     >
@@ -439,7 +439,7 @@ export default function MainNav() {
                         {activeSubmenu !== null &&
                             typedMenuData[activeSubmenu].products.map((product, index) => (
                                 <div key={product.id} className={styles['sub-menu-item']}>
-                                    <Link href={`/categorias/${typedMenuData[activeSubmenu].slug}/${product.slug}`}>
+                                    <Link href={`/solucoes/${typedMenuData[activeSubmenu].slug}/${product.slug}`}>
                                         <SubmenuImage src={product.image || '/img/placeholder.jpg'} alt={product.name} />
                                         <p>{getProductTranslation(product.name)}</p>
                                     </Link>

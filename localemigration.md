@@ -14,13 +14,13 @@
 ### 🔄 **ETAPA 1: REORGANIZAÇÃO DE ROTAS E MOVIMENTAÇÃO DE PASTAS**
 
 #### **REORGANIZAÇÃO DE ROTAS (ANTES da movimentação):**
-- [ ] **Renomear pasta**: `src/app/categorias/` → `src/app/solucoes/`
-- [ ] **Atualizar estrutura de rotas**:
+- [x] **Renomear pasta**: `src/app/categorias/` → `src/app/solucoes/`
+- [x] **Atualizar estrutura de rotas**:
   - `meusite.com.br/solucoes` → Página principal de soluções (já existe)
   - `meusite.com.br/solucoes/[categoria]` → Páginas de categorias
   - `meusite.com.br/solucoes/[categoria]/[produto]` → Páginas de produtos
-- [ ] **Atualizar middleware.ts** para redirecionar `/categorias/*` para `/solucoes/*`
-- [ ] **Atualizar imports** em arquivos que referenciam a pasta `categorias`
+- [x] **Atualizar middleware.ts** para redirecionar `/categorias/*` para `/solucoes/*`
+- [x] **Atualizar imports** em arquivos que referenciam a pasta `categorias`
 
 #### **Pastas que DEVEM ser movidas para `[locale]/`:**
 - [ ] `src/app/components/` → `src/app/[locale]/components/`
@@ -172,6 +172,36 @@
 - ✅ **Nova estrutura de rotas**: `/pt-BR/solucoes/[categoria]/[produto]`
 - ✅ **Redirecionamentos funcionando**: `/categorias/*` → `/solucoes/*`
 - ✅ **Pronto para tradução** AMANHÃ
+
+---
+
+## 📊 **PROGRESSO DA MIGRAÇÃO**
+
+### ✅ **ETAPA 1: REORGANIZAÇÃO DE ROTAS - CONCLUÍDA**
+- [x] Pasta `categorias/` renomeada para `solucoes/`
+- [x] Estrutura de rotas reorganizada
+- [x] Middleware.ts atualizado com redirecionamentos
+- [x] Links na página de soluções corrigidos
+- [x] Build testado e funcionando (35 páginas estáticas)
+- [x] Commit realizado: "ETAPA 1 CONCLUÍDA: Reorganização de rotas"
+
+### ✅ **ETAPA 2: MOVIMENTAÇÃO DE PASTAS PEQUENAS - CONCLUÍDA**
+- [x] Mover `src/app/hooks/` → `src/app/[locale]/hooks/`
+- [x] Mover `src/app/types/` → `src/app/[locale]/types/`
+- [x] Mover `src/hooks/use-language.ts` → `src/app/[locale]/hooks/`
+- [x] Corrigir imports dessas pastas
+- [x] Testar build (35 páginas estáticas geradas com sucesso)
+
+### 🔄 **ETAPA 3: MOVIMENTAÇÃO DE PASTAS MÉDIAS - EM ANDAMENTO**
+- [ ] Mover `src/app/views/` → `src/app/[locale]/views/`
+- [ ] Mover `src/app/components/` → `src/app/[locale]/components/`
+- [ ] Corrigir imports dessas pastas
+- [ ] Testar build
+
+### ⏳ **PRÓXIMAS ETAPAS**
+- [ ] ETAPA 4: Mover pastas grandes (data, solucoes)
+- [ ] ETAPA 5: Correção final de imports
+- [ ] ETAPA 6: Teste completo
 
 ---
 
