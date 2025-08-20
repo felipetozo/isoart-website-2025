@@ -115,9 +115,9 @@ async function LocaleLayout({ children, params }: LocaleLayoutProps) {
     <NextIntlClientProvider messages={messages} locale={locale}>
       <div className={`${inter.variable} ${redhat.variable}`}>
         <LenisProvider>
-          <MainNav />
+          <MainNav locale={locale} />
           <main>{children}</main>
-          <Footer />
+          <Footer locale={locale} />
           <CookieBanner />
           <AnalyticsProvider />
         </LenisProvider>

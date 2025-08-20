@@ -29,7 +29,11 @@ interface FormErrors {
     terms?: string;
 }
 
-function MainForm() {
+interface MainFormProps {
+    locale: string;
+}
+
+function MainForm({ locale }: MainFormProps) {
     const [formData, setFormData] = useState<FormData>({
         name: '',
         email: '',
@@ -256,7 +260,7 @@ function MainForm() {
                                     className={styles.termsCheckbox}
                                 />
                                 <label htmlFor="terms" className={styles['terms-text']}>
-                                    Eu aceito a <a href="/pt-BR/privacidade" className={styles['terms-link']}>política de privacidade</a>
+                                    Eu aceito a <a href={`/${locale}/privacidade`} className={styles['terms-link']}>política de privacidade</a>
                                 </label>
                             </div>
                             {errors.terms && <div className={styles['error-message']}>{errors.terms}</div>}

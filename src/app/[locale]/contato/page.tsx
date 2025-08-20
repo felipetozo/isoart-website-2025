@@ -28,7 +28,12 @@ interface FormErrors {
     terms?: string;
 }
 
-const ContatoPage: React.FC = () => {
+interface ContatoPageProps {
+    params: Promise<{ locale: string }>;
+}
+
+export default async function ContatoPage({ params }: ContatoPageProps) {
+    const { locale } = await params;
     const [formData, setFormData] = useState<FormData>({
         name: '',
         email: '',
@@ -398,7 +403,7 @@ const ContatoPage: React.FC = () => {
                                     className={styles['terms-checkbox']}
                                 />
                                 <label htmlFor="terms" className={styles['terms-text']}>
-                                    Eu aceito a <a href="/pt-BR/privacidade" className={styles['terms-link']}>política de privacidade</a>
+                                    Eu aceito a <a href={`/${locale}/privacidade`} className={styles['terms-link']}>política de privacidade</a>
                                 </label>
                             </div>
                             {errors.terms && <span className={styles['theme-error']}>{errors.terms}</span>}
@@ -430,5 +435,3 @@ const ContatoPage: React.FC = () => {
         </div>
     );
 };
-
-export default ContatoPage;

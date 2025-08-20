@@ -2,7 +2,11 @@ import styles from './sobre-empresa.module.css';
 import Link from 'next/link';
 import Button from '@/app/[locale]/views/ui/button/button';
 
-function SobreEmpresa() {
+interface SobreEmpresaProps {
+    locale: string;
+}
+
+function SobreEmpresa({ locale }: SobreEmpresaProps) {
     return (
         <>
             <section className={styles['sobre-empresa-section']} id="#sobre-empresa">
@@ -18,7 +22,7 @@ function SobreEmpresa() {
                             atendem às diversas demandas do mercado.
                         </h2>
                         <div>
-                            <Link href="/pt-BR/sobre">
+                            <Link href={`/${locale}/sobre`}>
                                 <Button variant="white" size="medium">
                                     Saiba mais
                                 </Button>

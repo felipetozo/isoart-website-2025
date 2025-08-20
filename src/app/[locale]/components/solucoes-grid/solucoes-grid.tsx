@@ -4,7 +4,11 @@ import styles from './solucoes-grid.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
-function SolucoesGrid() {
+interface SolucoesGridProps {
+    locale: string;
+}
+
+function SolucoesGrid({ locale }: SolucoesGridProps) {
     return (
         <section className={styles['solucoes-grid-section']} id="solucoes-grid">
             <div className={styles['solucoes-grid-wrapper']}>
@@ -16,7 +20,7 @@ function SolucoesGrid() {
                 </div>
                 <div className={styles['solucoes-grid-grid']}>
                     <div className={styles['solucoes-grid-card']}>
-                        <Link href="/pt-BR/solucoes/telhas-e-paineis">
+                        <Link href={`/${locale}/solucoes/telhas-e-paineis`}>
                             <div className={styles['solucoes-grid-card-image']}>
                                 <Image
                                     src={'/img/SolucoesGrid/telhas.avif'}
@@ -32,7 +36,7 @@ function SolucoesGrid() {
                         </Link>
                     </div>
                     <div className={styles['solucoes-grid-card']}>
-                        <Link href="/pt-BR/solucoes/construcao-civil">
+                        <Link href={`/${locale}/solucoes/construcao-civil`}>
                         <div className={styles['solucoes-grid-card-image']}>
                                 <Image
                                     src={'/img/SolucoesGrid/construcaocivil.avif'}
@@ -48,7 +52,7 @@ function SolucoesGrid() {
                         </Link>
                     </div>
                     <div className={styles['solucoes-grid-card']}>
-                        <Link href="/pt-BR/solucoes/molduras-decorativas">
+                        <Link href={`/${locale}/solucoes/molduras-decorativas`}>
                         <div className={styles['solucoes-grid-card-image']}>
                                 <Image
                                     src={'/img/SolucoesGrid/molduras.avif'}
@@ -64,7 +68,7 @@ function SolucoesGrid() {
                         </Link>
                     </div>
                     <div className={styles['solucoes-grid-card']}>
-                        <Link href="/pt-BR/solucoes/embalagens-em-eps">
+                        <Link href={`/${locale}/solucoes/embalagens-em-eps`}>
                         <div className={styles['solucoes-grid-card-image']}>
                                 <Image
                                     src={'/img/SolucoesGrid/embalagens.avif'}

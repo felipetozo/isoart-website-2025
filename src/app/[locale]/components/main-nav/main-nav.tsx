@@ -72,7 +72,11 @@ const SubmenuImage = ({ src, alt }: { src: string; alt: string }) => {
     );
 };
 
-export default function MainNav() {
+interface MainNavProps {
+    locale: string;
+}
+
+function MainNav({ locale }: MainNavProps) {
     const submenuRef = useRef<HTMLDivElement | null>(null);
     const mobileMenuRef = useRef<HTMLDivElement | null>(null);
     const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -343,10 +347,10 @@ export default function MainNav() {
                     <div className={styles['institucional-nav-right']}>
                         <div className={styles['institutional-nav-items']}>
                             <ul>
-                                <li><Link href="/pt-BR/sobre">{t('about')}</Link></li>
-                                <li><Link href="/pt-BR/solucoes">{t('solutions')}</Link></li>
-                                <li><Link href="/pt-BR/sobre-eps-pir">{t('aboutEpsPir')}</Link></li>
-                                <li><Link href="/pt-BR/contato">{t('contact')}</Link></li>
+                                <li><Link href={`/${locale}/sobre`}>{t('about')}</Link></li>
+                                <li><Link href={`/${locale}/solucoes`}>{t('solutions')}</Link></li>
+                                <li><Link href={`/${locale}/sobre-eps-pir`}>{t('aboutEpsPir')}</Link></li>
+                                <li><Link href={`/${locale}/contato`}>{t('contact')}</Link></li>
                             </ul>
                         </div>
                         {(() => {
@@ -405,7 +409,7 @@ export default function MainNav() {
                                 {typedMenuData.map((item, index) => (
                                     <Link
                                         key={item.id}
-                                        href={`/${currentLocale}/solucoes/${item.slug}`}
+                                        href={`/${locale}/solucoes/${item.slug}`}
                                         onMouseEnter={() => handleMouseEnterLi(index)}
                                         onMouseLeave={handleMouseLeaveLi}
                                     >
@@ -418,7 +422,7 @@ export default function MainNav() {
                             </ul>
                         </div>
                         <div className={styles['main-nav-button']}>
-                            <Link href="/pt-BR/contato">
+                            <Link href={`/${locale}/contato`}>
                                 <Button variant="primary" size="medium">
                                     {t('main.contactButton')}
                                 </Button>
@@ -439,7 +443,7 @@ export default function MainNav() {
                         {activeSubmenu !== null &&
                             typedMenuData[activeSubmenu].products.map((product, index) => (
                                 <div key={product.id} className={styles['sub-menu-item']}>
-                                    <Link href={`/${currentLocale}/solucoes/${typedMenuData[activeSubmenu].slug}/${product.slug}`}>
+                                    <Link href={`/${locale}/solucoes/${typedMenuData[activeSubmenu].slug}/${product.slug}`}>
                                         <SubmenuImage src={product.image || '/img/placeholder.jpg'} alt={product.name} />
                                         <p>{getProductTranslation(product.name)}</p>
                                     </Link>
@@ -448,10 +452,10 @@ export default function MainNav() {
                     </div>
                     <div className={styles['mobile-menu']} ref={mobileMenuRef}>
                         <ul>
-                            <li><Link href="/${currentLocale}/" onClick={closeMobileMenu}>{t('home')}</Link></li>
-                            <li><Link href="/${currentLocale}/solucoes" onClick={closeMobileMenu}>{t('solutions')}</Link></li>
-                            <li><Link href="/${currentLocale}/sobre" onClick={closeMobileMenu}>{t('about')}</Link></li>
-                            <li><Link href="/${currentLocale}/contato" onClick={closeMobileMenu}>{t('contact')}</Link></li>
+                            <li><Link href={`/${locale}/`} onClick={closeMobileMenu}>{t('home')}</Link></li>
+                            <li><Link href={`/${locale}/solucoes`} onClick={closeMobileMenu}>{t('solutions')}</Link></li>
+                            <li><Link href={`/${locale}/sobre`} onClick={closeMobileMenu}>{t('about')}</Link></li>
+                            <li><Link href={`/${locale}/contato`} onClick={closeMobileMenu}>{t('contact')}</Link></li>
                         </ul>
                         <div className={styles['mobile-contact']}>
                             <p dangerouslySetInnerHTML={{ __html: tContact('address') }} />
@@ -510,3 +514,5 @@ export default function MainNav() {
         </div>
     );
 }
+
+export default MainNav;

@@ -7,7 +7,11 @@ import Image from 'next/image';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
 
-function Footer() {
+interface FooterProps {
+    locale: string;
+}
+
+function Footer({ locale }: FooterProps) {
     return (
         <>
             <section className={styles['footer-section']}>
@@ -53,32 +57,32 @@ function Footer() {
                             <div>
                                 <h5>Institucional</h5>
                                 <ul>
-                                    <li><Link href="/pt-BR/sobre">Sobre a ISOART</Link></li>
-                                    <li><Link href="/pt-BR/sobre-eps-pir">Sobre EPS PIR</Link></li>
+                                    <li><Link href={`/${locale}/sobre`}>Sobre a ISOART</Link></li>
+                                    <li><Link href={`/${locale}/sobre-eps-pir`}>Sobre EPS PIR</Link></li>
                                 </ul>
                             </div>
                             <div>
                                 <h5>Produtos</h5>
                                 <ul>
-                                    <li><Link href="/pt-BR/solucoes/telhas-e-paineis">Telhas e Painéis</Link></li>
-                                    <li><Link href="/pt-BR/solucoes/construcao-civil">Construção Civil</Link></li>
-                                    <li><Link href="/pt-BR/solucoes/forros">Forros</Link></li>
-                                    <li><Link href="/pt-BR/solucoes/molduras-decorativas">Molduras Decorativas</Link></li>
-                                    <li><Link href="/pt-BR/solucoes/embalagens-em-eps">Embalagens em EPS</Link></li>
+                                    <li><Link href={`/${locale}/solucoes/telhas-e-paineis`}>Telhas e Painéis</Link></li>
+                                    <li><Link href={`/${locale}/solucoes/construcao-civil`}>Construção Civil</Link></li>
+                                    <li><Link href={`/${locale}/solucoes/forros`}>Forros</Link></li>
+                                    <li><Link href={`/${locale}/solucoes/molduras-decorativas`}>Molduras Decorativas</Link></li>
+                                    <li><Link href={`/${locale}/solucoes/embalagens-em-eps`}>Embalagens em EPS</Link></li>
                                 </ul>
                             </div>
                             <div>
                                 <h5>Suporte</h5>
                                 <ul>
-                                    <li><Link href="/pt-BR/contato">Contato</Link></li>
-                                    <li><Link href="/pt-BR/privacidade">Políticas de privacidade</Link></li>
+                                    <li><Link href={`/${locale}/contato`}>Contato</Link></li>
+                                    <li><Link href={`/${locale}/privacidade`}>Políticas de privacidade</Link></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div className={styles['footer-column']}>
                         <div className={styles['footer-logos']}>
-                            <Link href="/pt-BR">
+                            <Link href={`/${locale}`}>
                                 <Image
                                     src={'/img/isoart-logotipo.svg'}
                                     alt="Logotipo Isoart"
@@ -86,7 +90,7 @@ function Footer() {
                                     height={62}
                                 />
                             </Link>
-                            <Link href="/pt-BR">
+                            <Link href={`/${locale}`}>
                                 <Image
                                     src={'/img/geral/selo-iso.svg'}
                                     alt="Logotipo Isoart"
