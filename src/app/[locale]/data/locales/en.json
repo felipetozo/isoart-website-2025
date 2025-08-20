@@ -309,5 +309,90 @@
       "success": "Your message was sent successfully!",
       "contact": "Contact us:"
     }
+  },
+  "sobreEpsPirPage": {
+    "hero": {
+      "title": "About EPS and PIR"
+    },
+    "headline": {
+      "title": "Expanded Polystyrene (EPS) and Polyisocyanurate Rigid Foam (PIR): thermal efficiency, sustainability and technology for modern constructions.",
+      "epsButton": "Learn about EPS",
+      "pirButton": "Learn about PIR"
+    },
+    "eps": {
+      "title": "EPS: Efficiency and Sustainability",
+      "description": "Expanded Polystyrene (EPS), popularly known as Styrofoam, is a lightweight and versatile material, widely used for its thermal and acoustic insulation properties. Additionally, it is 100% recyclable and does not emit substances harmful to the environment, making it a sustainable choice for various applications.",
+      "subtitle": "Main benefits of EPS:",
+      "benefits": [
+        "Non-toxic and sustainable",
+        "No CFC emissions",
+        "100% recyclable and reusable",
+        "Lightweight material resistant to impacts"
+      ],
+      "applicationsTitle": "Applications",
+      "applicationsDescription": "Used in thermal and acoustic insulation, packaging, civil construction, decoration and other applications. Ideal for commercial, industrial and residential buildings, ensuring energy efficiency, comfort and protection."
+    },
+    "pir": {
+      "title": "PIR: High Technology and Safety",
+      "description": "Polyisocyanurate (PIR) is a high-performance insulating material, mainly used in the manufacture of thermal tiles and panels. Produced in an automated continuous line, PIR ensures superior thermal insulation and high fire resistance, being essential for industrial, commercial and residential projects.",
+      "subtitle": "Main benefits of PIR:",
+      "benefits": [
+        "High-performance thermal insulation",
+        "Fire resistance with self-extinguishing retardant",
+        "Greater durability and mechanical resistance",
+        "Quick and clean assembly",
+        "Excellent acoustic insulation ( -30dB )",
+        "Sustainable, in compliance with the Montreal Protocol"
+      ]
+    },
+    "pirApplications": {
+      "title": "PIR Applications:",
+      "description": "For covering and/or closing industrial and commercial buildings and warehouses, such as supermarkets, shopping centers, distribution and storage centers, hospitals, agribusiness, gyms and industries in general, including residences."
+    },
+    "revestimentos": {
+      "title": "Types of coatings and Colors",
+      "description": "Isoart PIR tiles and panels are available in different types of coatings and colors, ensuring flexibility in choice to meet the specific needs of each project.",
+      "tipos": {
+        "microfrisado": "Micro-ribbed steel",
+        "frisado": "Ribbed steel",
+        "filmeAluminio": "Aluminum film with white or black face"
+      },
+      "cores": {
+        "ral9003": "RAL 9003",
+        "ral7035": "RAL 7035",
+        "ral7040": "RAL 7040",
+        "ral7024": "RAL 7024",
+        "ral9006": "RAL 9006",
+        "ral1015": "RAL 1015",
+        "ral1023": "RAL 1023",
+        "ral8023": "RAL 8023",
+        "ral3000": "RAL 3000",
+        "ral5010": "RAL 5010",
+        "ral6002": "RAL 6002",
+        "ral9005": "RAL 9005",
+        "naturalGalvanizado": "Natural Galvanized",
+        "amadeiradoClaro": "Light Wooden",
+        "amadeiradoEscuro": "Dark Wooden"
+      },
+      "nomes": {
+        "brancoSinal": "Signal White",
+        "cinzaClaro": "Light Gray",
+        "cinzaMedio": "Medium Gray",
+        "cinzaGrafite": "Graphite Gray",
+        "prata": "Silver",
+        "marfim": "Ivory",
+        "amarelo": "Yellow",
+        "terracota": "Terracotta",
+        "vermelhoFogo": "Fire Red",
+        "azulGenciana": "Gentian Blue",
+        "verdeTrafego": "Traffic Green",
+        "preto": "Black"
+      },
+      "aviso": "Standard White RAL 9003. Other colors are suggestions, availability upon request."
+    },
+    "linhaProducao": {
+      "title": "Automated production for maximum efficiency",
+      "description": "Isoart PIR tiles and panels are manufactured in a continuous and fully automated line, ensuring high precision, quality and sustainability. With Polyisocyanurate (PIR) insulating core and galvalume steel sheet coating, the process includes high-pressure injection, continuous pressing and automated cutting, ensuring excellent adhesion, finish and standardization. All products are automatically cooled, stacked and packaged, ready for shipping."
+    }
   }
 }

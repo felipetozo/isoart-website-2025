@@ -309,5 +309,90 @@
       "success": "¡Su mensaje fue enviado exitosamente!",
       "contact": "Contáctanos:"
     }
+  },
+  "sobreEpsPirPage": {
+    "hero": {
+      "title": "Sobre EPS y PIR"
+    },
+    "headline": {
+      "title": "Poliestireno Expandido (EPS) y Espuma Rígida de Poliisocianurato (PIR): eficiencia térmica, sostenibilidad y tecnología para construcciones modernas.",
+      "epsButton": "Conoce el EPS",
+      "pirButton": "Conoce el PIR"
+    },
+    "eps": {
+      "title": "EPS: Eficiencia y Sostenibilidad",
+      "description": "El Poliestireno Expandido (EPS), conocido popularmente como Poliestireno, es un material ligero y versátil, ampliamente utilizado por sus propiedades de aislamiento térmico y acústico. Además, es 100% reciclable y no emite sustancias perjudiciales para el medio ambiente, siendo una elección sostenible para diversas aplicaciones.",
+      "subtitle": "Principales beneficios del EPS:",
+      "benefits": [
+        "No tóxico y sostenible",
+        "Sin emisión de CFC",
+        "100% reciclable y reutilizable",
+        "Material ligero resistente a impactos"
+      ],
+      "applicationsTitle": "Aplicaciones",
+      "applicationsDescription": "Utilizado en aislamiento térmico y acústico, embalajes, construcción civil, decoración y otras aplicaciones. Ideal para edificaciones comerciales, industriales y residenciales, garantizando eficiencia energética, confort y protección."
+    },
+    "pir": {
+      "title": "PIR: Alta Tecnología y Seguridad",
+      "description": "El Poliisocianurato (PIR) es un material aislante de alto rendimiento, utilizado principalmente en la fabricación de tejas y paneles térmicos. Producido en línea continua automatizada, el PIR garantiza un aislamiento térmico superior y alta resistencia al fuego, siendo esencial para proyectos industriales, comerciales y residenciales.",
+      "subtitle": "Principales beneficios del PIR:",
+      "benefits": [
+        "Aislamiento térmico de alto rendimiento",
+        "Resistencia al fuego con retardante autoextinguible",
+        "Mayor durabilidad y resistencia mecánica",
+        "Montaje rápido y limpio",
+        "Excelente aislamiento acústico ( -30dB )",
+        "Sostenible, en conformidad con el Protocolo de Montreal"
+      ]
+    },
+    "pirApplications": {
+      "title": "Aplicaciones del PIR:",
+      "description": "Para cobertura y/o cierre de edificios y galpones industriales y comerciales, como supermercados, centros comerciales, centros de distribución y almacenamiento, hospitales, agronegocios, gimnasios e industrias en general, incluyendo residencias."
+    },
+    "revestimentos": {
+      "title": "Tipos de revestimientos y Colores",
+      "description": "Las tejas y paneles Isoart PIR están disponibles en diferentes tipos de revestimientos y colores, garantizando flexibilidad en la elección para atender las necesidades específicas de cada proyecto.",
+      "tipos": {
+        "microfrisado": "Acero microacanalado",
+        "frisado": "Acero acanalado",
+        "filmeAluminio": "Película de aluminio con cara blanca o negra"
+      },
+      "cores": {
+        "ral9003": "RAL 9003",
+        "ral7035": "RAL 7035",
+        "ral7040": "RAL 7040",
+        "ral7024": "RAL 7024",
+        "ral9006": "RAL 9006",
+        "ral1015": "RAL 1015",
+        "ral1023": "RAL 1023",
+        "ral8023": "RAL 8023",
+        "ral3000": "RAL 3000",
+        "ral5010": "RAL 5010",
+        "ral6002": "RAL 6002",
+        "ral9005": "RAL 9005",
+        "naturalGalvanizado": "Galvanizado Natural",
+        "amadeiradoClaro": "Madera Clara",
+        "amadeiradoEscuro": "Madera Oscura"
+      },
+      "nomes": {
+        "brancoSinal": "Blanco Señal",
+        "cinzaClaro": "Gris Claro",
+        "cinzaMedio": "Gris Medio",
+        "cinzaGrafite": "Gris Grafito",
+        "prata": "Plata",
+        "marfim": "Marfil",
+        "amarelo": "Amarillo",
+        "terracota": "Terracota",
+        "vermelhoFogo": "Rojo Fuego",
+        "azulGenciana": "Azul Genciana",
+        "verdeTrafego": "Verde Tráfico",
+        "preto": "Negro"
+      },
+      "aviso": "Estándar Blanco RAL 9003. Otros colores son sugerencias, disponibilidad bajo consulta."
+    },
+    "linhaProducao": {
+      "title": "Producción automatizada para máxima eficiencia",
+      "description": "Las tejas y paneles Isoart PIR se fabrican en línea continua y totalmente automatizada, garantizando alta precisión, calidad y sostenibilidad. Con núcleo aislante de Poliisocianurato (PIR) y revestimiento en chapas de acero galvalume, el proceso incluye inyección de alta presión, prensado continuo y corte automatizado, asegurando excelente adherencia, acabado y estandarización. Todos los productos se enfrían, apilan y empaquetan automáticamente, listos para envío."
+    }
   }
 }
