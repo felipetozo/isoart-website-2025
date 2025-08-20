@@ -222,7 +222,7 @@ export default function MainNav() {
         const tl = gsap.timeline();
         const topBar = iconRef.current?.querySelector(`.${styles['menu-bar-top']}`);
         const bottomBar = iconRef.current?.querySelector(`.${styles['menu-bar-bottom']}`);
-        const mobileMenuItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-menu']} ul li, .${styles['mobile-contact']} p, .${styles['mobile-social']} a`);
+        const mobileMenuItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-menu']} ul li, .${styles['mobile-contact']} p, .${styles['mobile-social']} a, .${styles['mobile-language-option']}`);
 
         if (topBar && bottomBar) {
             if (willOpen) {
@@ -254,7 +254,23 @@ export default function MainNav() {
                     transformOrigin: "center",
                 });
                 if (mobileMenuItems) {
-                    tl.to(mobileMenuItems, { opacity: 0, duration: 0.1 });
+                    // Animar os itens do menu principal primeiro
+                    const menuItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-menu']} ul li`);
+                    if (menuItems) {
+                        tl.fromTo(menuItems, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.1 });
+                    }
+                    
+                    // Animar as informações de contato
+                    const contactItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-contact']} p`);
+                    if (contactItems) {
+                        tl.fromTo(contactItems, { opacity: 0, y: 15 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.08 }, '-=0.2');
+                    }
+                    
+                    // Animar os ícones sociais e language selector
+                    const socialItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-social']} a, .${styles['mobile-language-option']}`);
+                    if (socialItems) {
+                        tl.fromTo(socialItems, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.05 }, '-=0.1');
+                    }
                 }
                 tl.to(mobileMenuRef.current, { height: 0, duration: 0.1 });
                 tl.set(mobileMenuRef.current, { display: 'none' });
@@ -268,7 +284,7 @@ export default function MainNav() {
             const tl = gsap.timeline();
             const topBar = iconRef.current?.querySelector(`.${styles['menu-bar-top']}`);
             const bottomBar = iconRef.current?.querySelector(`.${styles['menu-bar-bottom']}`);
-            const mobileMenuItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-menu']} ul li, .${styles['mobile-contact']} p, .${styles['mobile-social']} a`);
+            const mobileMenuItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-menu']} ul li, .${styles['mobile-contact']} p, .${styles['mobile-social']} a, .${styles['mobile-language-option']}`);
 
             if (topBar && bottomBar) {
                 tl.to([topBar, bottomBar], {
@@ -279,7 +295,21 @@ export default function MainNav() {
                     transformOrigin: "center",
                 });
                 if (mobileMenuItems) {
-                    tl.to(mobileMenuItems, { opacity: 0, duration: 0.1 });
+                    // Animar o fechamento dos itens em sequência reversa
+                    const socialItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-social']} a, .${styles['mobile-language-option']}`);
+                    if (socialItems) {
+                        tl.to(socialItems, { opacity: 0, y: -10, duration: 0.2, stagger: 0.03 });
+                    }
+                    
+                    const contactItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-contact']} p`);
+                    if (contactItems) {
+                        tl.to(contactItems, { opacity: 0, y: -15, duration: 0.2, stagger: 0.05 }, '-=0.1');
+                    }
+                    
+                    const menuItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-menu']} ul li`);
+                    if (menuItems) {
+                        tl.to(menuItems, { opacity: 0, y: -20, duration: 0.2, stagger: 0.08 }, '-=0.1');
+                    }
                 }
                 tl.to(mobileMenuRef.current, { height: 0, duration: 0.1 });
                 tl.set(mobileMenuRef.current, { display: 'none' });
@@ -419,16 +449,8 @@ export default function MainNav() {
                     <div className={styles['mobile-menu']} ref={mobileMenuRef}>
                         <ul>
                             <li><Link href="/" onClick={closeMobileMenu}>{t('home')}</Link></li>
-                            {typedMenuData.map((item) => (
-                                <li key={item.id}>
-                                    <Link href={`/categorias/${item.slug}`} onClick={closeMobileMenu}>
-                                        {getCategoryTranslation(item.slug)}
-                                    </Link>
-                                </li>
-                            ))}
-                            <li><Link href="/sobre" onClick={closeMobileMenu}>{t('about')}</Link></li>
                             <li><Link href="/solucoes" onClick={closeMobileMenu}>{t('solutions')}</Link></li>
-                            <li><Link href="/sobre-eps-pir" onClick={closeMobileMenu}>{t('aboutEpsPir')}</Link></li>
+                            <li><Link href="/sobre" onClick={closeMobileMenu}>{t('about')}</Link></li>
                             <li><Link href="/contato" onClick={closeMobileMenu}>{t('contact')}</Link></li>
                         </ul>
                         <div className={styles['mobile-contact']}>
@@ -437,22 +459,49 @@ export default function MainNav() {
                             <p><a href="https://wa.me/5545991339642" target="_blank" rel="noopener noreferrer"><BsWhatsapp /> {tContact('whatsapp')}</a></p>
                             <p><a href="mailto:contato@isoart.com.br"><MdOutlineMarkEmailUnread /> {tContact('email')}</a></p>
                             <div className={styles['mobile-social']}>
-                                <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank" aria-label={tSocial('instagram')}>
-                                    <BsInstagram />
-                                    <span className={styles['sr-only']}>Instagram</span>
-                                </Link>
-                                <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank" aria-label={tSocial('facebook')}>
-                                    <BsFacebook />
-                                    <span className={styles['sr-only']}>Facebook</span>
-                                </Link>
-                                <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank" aria-label={tSocial('youtube')}>
-                                    <BsYoutube />
-                                    <span className={styles['sr-only']}>YouTube</span>
-                                </Link>
-                                <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank" aria-label={tSocial('linkedin')}>
-                                    <BsLinkedin />
-                                    <span className={styles['sr-only']}>LinkedIn</span>
-                                </Link>
+                                <div className={styles['mobile-social-icons']}>
+                                    <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank" aria-label={tSocial('instagram')}>
+                                        <BsInstagram />
+                                        <span className={styles['sr-only']}>Instagram</span>
+                                    </Link>
+                                    <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank" aria-label={tSocial('facebook')}>
+                                        <BsFacebook />
+                                        <span className={styles['sr-only']}>Facebook</span>
+                                    </Link>
+                                    <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank" aria-label={tSocial('youtube')}>
+                                        <BsYoutube />
+                                        <span className={styles['sr-only']}>YouTube</span>
+                                    </Link>
+                                    <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank" aria-label={tSocial('linkedin')}>
+                                        <BsLinkedin />
+                                        <span className={styles['sr-only']}>LinkedIn</span>
+                                    </Link>
+                                </div>
+                                <div className={styles['mobile-language-selector']}>
+                                    {supportedLocales.map((locale) => {
+                                        const localeInfo = getLocaleInfo(locale);
+                                        const isActive = locale === currentLocale;
+                                        
+                                        return (
+                                            <button
+                                                key={locale}
+                                                className={`${styles['mobile-language-option']} ${isActive ? styles['mobile-language-option-active'] : ''}`}
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    handleLocaleChange(locale);
+                                                    closeMobileMenu();
+                                                }}
+                                                title={localeInfo.name}
+                                            >
+                                                <img
+                                                    src={localeInfo.flag}
+                                                    alt={`${t('flag')} ${localeInfo.name}`}
+                                                    className={styles['mobile-flag-image']}
+                                                />
+                                            </button>
+                                        );
+                                    })}
+                                </div>
                             </div>
                         </div>
                     </div>
