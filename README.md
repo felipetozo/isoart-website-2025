@@ -1,6 +1,6 @@
-# Isoart Website 2025
+# Isoart Website 2025 - IMPORTANTE UPDATE: Migração para next-intl com i18n Routing
 
-Website da Isoart, empresa especializada em soluções térmicas com EPS e PIR para construção civil, embalagens e isolamento. Construído com Next.js 15, React 19, TypeScript e otimizações avançadas de performance.
+Website da Isoart, empresa especializada em soluções térmicas com EPS e PIR para construção civil, embalagens e isolamento. Construído com Next.js 15, React 19, TypeScript e otimizações avançadas de performance. **ATUALIZAÇÃO IMPORTANTE**: Migração completa para sistema de internacionalização next-intl com roteamento i18n nativo.
 
 ---
 

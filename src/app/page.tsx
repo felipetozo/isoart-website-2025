@@ -10,16 +10,6 @@ export default function RootPage() {
     router.replace('/pt-BR');
   }, [router]);
 
-  return (
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      height: '100vh',
-      backgroundColor: '#000',
-      color: '#fff'
-    }}>
-      <h1>Redirecionando...</h1>
-    </div>
-  );
+  // Retorna null para não renderizar nada visível
+  return null;
 }
