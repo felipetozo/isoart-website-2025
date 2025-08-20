@@ -3,17 +3,65 @@
     "home": "Home",
     "about": "About us",
     "solutions": "Solutions",
-    "contact": "Contact",
     "aboutEpsPir": "About PIR & EPS",
-    "institutional": {
-      "about": "About us",
-      "solutions": "Solutions",
-      "aboutEpsPir": "About PIR & EPS",
-      "contact": "Contact"
-    },
+    "contact": "Contact",
+    "logo": "Isoart Logo",
+    "flag": "Flag",
     "main": {
-      "contactButton": "Contact us"
+      "contactButton": "Contact Us"
     }
+  },
+  "menu": {
+    "categories": {
+      "telhasPaineis": "Roofing & Panels",
+      "construcaoCivil": "Civil Construction",
+      "embalagens": "Packaging",
+      "moldes": "Molds",
+      "molduras": "Decorative Moldings",
+      "acessorios": "Accessories"
+    },
+    "products": {
+      "telhasTermicas": "Thermal Roofing",
+      "fachadaFechamento": "Facade & Side Closure",
+      "divisoriaForro": "Partition & Ceiling",
+      "salaLimpa": "Clean Room",
+      "camaraFrigorifica": "Cold Storage",
+      "lajesEps": "EPS Floor Slabs",
+      "isolamentoTelhas": "Roofing Insulation",
+      "forros": "Ceilings",
+      "blocosEps": "EPS Blocks",
+      "chapasPaineisEps": "EPS Sheets & Panels",
+      "moldurasPortasJanelas": "Door & Window Moldings",
+      "moldurasBeiral": "Eaves Moldings",
+      "moldurasColunasCapiteis": "Column & Capital Moldings",
+      "moldurasMuros": "Wall Moldings",
+      "moldurasParedes": "Wall Moldings",
+      "embalagensEps": "EPS Packaging",
+      "perolasEps": "EPS Beads",
+      "isolamentoParedes": "Wall Insulation",
+      "isolamentoPisos": "Floor Insulation",
+      "embalagensEletronicos": "Electronics Packaging",
+      "embalagensAlimentos": "Food Packaging",
+      "embalagensFarmaceuticos": "Pharmaceutical Packaging",
+      "moldesInjecao": "Injection Molds",
+      "moldesSoprado": "Blow Molds",
+      "moldesTermoformagem": "Thermoforming Molds",
+      "acessoriosTelhas": "Roofing Accessories",
+      "acessoriosPaineis": "Panel Accessories",
+      "acessoriosConstrucao": "Construction Accessories"
+    }
+  },
+  "contact": {
+    "address": "Rua Dorivaldo Soncela, 1490<br />Santa Tereza do Oeste - Paraná - Brazil",
+    "phone": "+55 45 3231 1699",
+    "whatsapp": "+55 45 99133 9642",
+    "email": "contato@isoart.com.br"
+  },
+  "social": {
+    "instagram": "Follow us on Instagram",
+    "facebook": "Follow us on Facebook",
+    "youtube": "Visit our YouTube channel",
+    "linkedin": "Connect with us on LinkedIn"
   },
   "home": {
     "hero": {

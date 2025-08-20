@@ -9,6 +9,7 @@ import Button from '@/app/views/ui/button/button';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { useLanguage } from '@/hooks/use-language';
+import { useTranslations } from 'next-intl';
 
 import menuData from '@/app/data/menu-data.json';
 
@@ -71,7 +72,7 @@ const SubmenuImage = ({ src, alt }: { src: string; alt: string }) => {
     );
 };
 
-function MainNav() {
+export default function MainNav() {
     const submenuRef = useRef<HTMLDivElement | null>(null);
     const mobileMenuRef = useRef<HTMLDivElement | null>(null);
     const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -80,9 +81,73 @@ function MainNav() {
 
     const iconRef = useRef<HTMLDivElement | null>(null);
     const { currentLocale, changeLanguage, getLocaleInfo, supportedLocales } = useLanguage();
+    const t = useTranslations('nav');
+    const tMenu = useTranslations('menu');
+    const tContact = useTranslations('contact');
+    const tSocial = useTranslations('social');
     const [mounted, setMounted] = useState(false);
 
+    // Mapeamento das categorias para as traduções
+    const getCategoryTranslation = (slug: string) => {
+        const translations: { [key: string]: string } = {
+            'telhas-e-paineis': tMenu('categories.telhasPaineis'),
+            'construcao-civil': tMenu('categories.construcaoCivil'),
+            'embalagens-em-eps': tMenu('categories.embalagens'),
+            'moldes-em-eps': tMenu('categories.moldes'),
+            'molduras-decorativas': tMenu('categories.molduras'),
+            'acessorios': tMenu('categories.acessorios')
+        };
+        return translations[slug] || slug;
+    };
 
+    // Mapeamento dos produtos para as traduções
+    const getProductTranslation = (name: string) => {
+        const translations: { [key: string]: string } = {
+            // Telhas e Painéis
+            'Telhas Térmicas': tMenu('products.telhasTermicas'),
+            'Fachada e Fechamento Lateral': tMenu('products.fachadaFechamento'),
+            'Divisória e Forro': tMenu('products.divisoriaForro'),
+            'Sala Limpa': tMenu('products.salaLimpa'),
+            'Câmara Frigorífica': tMenu('products.camaraFrigorifica'),
+            
+            // Construção Civil
+            'Lajes em EPS': tMenu('products.lajesEps'),
+            'Isolamento para Telhas': tMenu('products.isolamentoTelhas'),
+            'Forros': tMenu('products.forros'),
+            'Blocos em EPS': tMenu('products.blocosEps'),
+            'Chapa e Painéis em EPS': tMenu('products.chapasPaineisEps'),
+            
+            // Molduras Decorativas
+            'Molduras para Portas e Janelas': tMenu('products.moldurasPortasJanelas'),
+            'Molduras para Beiral': tMenu('products.moldurasBeiral'),
+            'Molduras para Colunas e Capitéis': tMenu('products.moldurasColunasCapiteis'),
+            'Molduras para Muros': tMenu('products.moldurasMuros'),
+            'Molduras para Paredes': tMenu('products.moldurasParedes'),
+            
+            // Embalagens
+            'Embalagens em EPS': tMenu('products.embalagensEps'),
+            'Pérolas em EPS': tMenu('products.perolasEps'),
+            
+            // Outros produtos existentes
+            'Isolamento para Paredes': tMenu('products.isolamentoParedes'),
+            'Isolamento para Pisos': tMenu('products.isolamentoPisos'),
+            'Embalagens para Eletrônicos': tMenu('products.embalagensEletronicos'),
+            'Embalagens para Alimentos': tMenu('products.embalagensAlimentos'),
+            'Embalagens para Farmacêuticos': tMenu('products.embalagensFarmaceuticos'),
+            'Moldes para Injeção': tMenu('products.moldesInjecao'),
+            'Moldes para Soprado': tMenu('products.moldesSoprado'),
+            'Moldes para Termoformagem': tMenu('products.moldesTermoformagem'),
+            'Acessórios para Telhas': tMenu('products.acessoriosTelhas'),
+            'Acessórios para Painéis': tMenu('products.acessoriosPaineis'),
+            'Acessórios para Construção': tMenu('products.acessoriosConstrucao')
+        };
+        return translations[name] || name;
+    };
+
+    // Debug: verificar se as traduções estão funcionando
+    useEffect(() => {
+        console.log('🔍 MainNav - currentLocale:', currentLocale);
+    }, [currentLocale]);
 
     // Função para mudar idioma
     const handleLocaleChange = (newLocale: string) => {
@@ -228,19 +293,19 @@ function MainNav() {
             <nav className={styles['institutional-nav-section']}>
                 <div className={styles['institutional-nav-wrapper']}>
                     <div className={styles['institutional-nav-social']}>
-                        <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank" aria-label="Siga-nos no Instagram">
+                        <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank" aria-label={tSocial('instagram')}>
                             <BsInstagram />
                             <span className={styles['sr-only']}>Instagram</span>
                         </Link>
-                        <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank" aria-label="Siga-nos no Facebook">
+                        <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank" aria-label={tSocial('facebook')}>
                             <BsFacebook />
                             <span className={styles['sr-only']}>Facebook</span>
                         </Link>
-                        <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank" aria-label="Visite nosso canal no YouTube">
+                        <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank" aria-label={tSocial('youtube')}>
                             <BsYoutube />
                             <span className={styles['sr-only']}>YouTube</span>
                         </Link>
-                        <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank" aria-label="Conecte-se conosco no LinkedIn">
+                        <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank" aria-label={tSocial('linkedin')}>
                             <BsLinkedin />
                             <span className={styles['sr-only']}>LinkedIn</span>
                         </Link>
@@ -248,14 +313,17 @@ function MainNav() {
                     <div className={styles['institucional-nav-right']}>
                         <div className={styles['institutional-nav-items']}>
                             <ul>
-                                                        <li><Link href="/sobre">Sobre</Link></li>
-                        <li><Link href="/solucoes">Soluções</Link></li>
-                        <li><Link href="/sobre-eps-pir">Sobre EPS PIR</Link></li>
-                        <li><Link href="/contato">Contato</Link></li>
+                                <li><Link href="/sobre">{t('about')}</Link></li>
+                                <li><Link href="/solucoes">{t('solutions')}</Link></li>
+                                <li><Link href="/sobre-eps-pir">{t('aboutEpsPir')}</Link></li>
+                                <li><Link href="/contato">{t('contact')}</Link></li>
                             </ul>
                         </div>
+                        {(() => {
+                            return null;
+                        })()}
                         {mounted && (
-                            <div className={`${styles['language-selector-wrapper']} ${styles['expanded']}`}>
+                            <div className={styles['language-selector-wrapper']}>
                                 <div className={styles['language-options']}>
                                     {supportedLocales.map((locale) => {
                                         const localeInfo = getLocaleInfo(locale);
@@ -273,8 +341,10 @@ function MainNav() {
                                             >
                                                 <img
                                                     src={localeInfo.flag}
-                                                    alt={`Bandeira ${localeInfo.name}`}
+                                                    alt={`${t('flag')} ${localeInfo.name}`}
                                                     className={styles['flag-image']}
+                                                    onError={(e) => console.error('❌ Erro ao carregar bandeira:', locale, e)}
+                                                    onLoad={() => console.log('✅ Bandeira carregada:', locale)}
                                                 />
                                             </button>
                                         );
@@ -294,7 +364,7 @@ function MainNav() {
                             <Link href="/">
                                 <Image
                                     src={'/img/isoart-logotipo.svg'}
-                                    alt="Logotipo Isoart"
+                                    alt={t('logo')}
                                     width={120}
                                     height={62}
                                 />
@@ -310,7 +380,7 @@ function MainNav() {
                                         onMouseLeave={handleMouseLeaveLi}
                                     >
                                         <li>
-                                            {item.title}
+                                            {getCategoryTranslation(item.slug)}
                                             <span className={styles['nav-link-underline']}></span>
                                         </li>
                                     </Link>
@@ -319,9 +389,9 @@ function MainNav() {
                         </div>
                         <div className={styles['main-nav-button']}>
                             <Link href="/contato">
-                                                            <Button variant="primary" size="medium">
-                                Entre em Contato
-                            </Button>
+                                <Button variant="primary" size="medium">
+                                    {t('main.contactButton')}
+                                </Button>
                             </Link>
                         </div>
                         <div className={styles['main-nav-menu-icon']} onClick={toggleMobileMenu} ref={iconRef}>
@@ -341,38 +411,45 @@ function MainNav() {
                                 <div key={product.id} className={styles['sub-menu-item']}>
                                     <Link href={`/categorias/${typedMenuData[activeSubmenu].slug}/${product.slug}`}>
                                         <SubmenuImage src={product.image || '/img/placeholder.jpg'} alt={product.name} />
-                                        <p>{product.name}</p>
+                                        <p>{getProductTranslation(product.name)}</p>
                                     </Link>
                                 </div>
                             ))}
                     </div>
                     <div className={styles['mobile-menu']} ref={mobileMenuRef}>
                         <ul>
-                                                    <li><Link href="/" onClick={closeMobileMenu}>Início</Link></li>
-                        <li><Link href="/solucoes" onClick={closeMobileMenu}>Soluções</Link></li>
-                        <li><Link href="/sobre" onClick={closeMobileMenu}>Sobre</Link></li>
-                        <li><Link href="/contato" onClick={closeMobileMenu}>Contato</Link></li>
+                            <li><Link href="/" onClick={closeMobileMenu}>{t('home')}</Link></li>
+                            {typedMenuData.map((item) => (
+                                <li key={item.id}>
+                                    <Link href={`/categorias/${item.slug}`} onClick={closeMobileMenu}>
+                                        {getCategoryTranslation(item.slug)}
+                                    </Link>
+                                </li>
+                            ))}
+                            <li><Link href="/sobre" onClick={closeMobileMenu}>{t('about')}</Link></li>
+                            <li><Link href="/solucoes" onClick={closeMobileMenu}>{t('solutions')}</Link></li>
+                            <li><Link href="/sobre-eps-pir" onClick={closeMobileMenu}>{t('aboutEpsPir')}</Link></li>
+                            <li><Link href="/contato" onClick={closeMobileMenu}>{t('contact')}</Link></li>
                         </ul>
                         <div className={styles['mobile-contact']}>
-                            <p>Rua Dorivaldo Soncela, 1490<br />
-                            Santa Tereza do Oeste - Paraná - Brasil</p>
-                            <p><a href="tel:+554532311699"><MdOutlinePhoneInTalk /> +55 45 3231 1699</a></p>
-                            <p><a href="https://wa.me/5545991339642" target="_blank" rel="noopener noreferrer"><BsWhatsapp /> +55 45 99133 9642</a></p>
-                            <p><a href="mailto:contato@isoart.com.br"><MdOutlineMarkEmailUnread /> contato@isoart.com.br</a></p>
+                            <p dangerouslySetInnerHTML={{ __html: tContact('address') }} />
+                            <p><a href="tel:+554532311699"><MdOutlinePhoneInTalk /> {tContact('phone')}</a></p>
+                            <p><a href="https://wa.me/5545991339642" target="_blank" rel="noopener noreferrer"><BsWhatsapp /> {tContact('whatsapp')}</a></p>
+                            <p><a href="mailto:contato@isoart.com.br"><MdOutlineMarkEmailUnread /> {tContact('email')}</a></p>
                             <div className={styles['mobile-social']}>
-                                <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank" aria-label="Siga-nos no Instagram">
+                                <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank" aria-label={tSocial('instagram')}>
                                     <BsInstagram />
                                     <span className={styles['sr-only']}>Instagram</span>
                                 </Link>
-                                <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank" aria-label="Siga-nos no Facebook">
+                                <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank" aria-label={tSocial('facebook')}>
                                     <BsFacebook />
                                     <span className={styles['sr-only']}>Facebook</span>
                                 </Link>
-                                <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank" aria-label="Visite nosso canal no YouTube">
+                                <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank" aria-label={tSocial('youtube')}>
                                     <BsYoutube />
                                     <span className={styles['sr-only']}>YouTube</span>
                                 </Link>
-                                <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank" aria-label="Conecte-se conosco no LinkedIn">
+                                <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank" aria-label={tSocial('linkedin')}>
                                     <BsLinkedin />
                                     <span className={styles['sr-only']}>LinkedIn</span>
                                 </Link>
@@ -384,5 +461,3 @@ function MainNav() {
         </div>
     );
 }
-
-export default MainNav;

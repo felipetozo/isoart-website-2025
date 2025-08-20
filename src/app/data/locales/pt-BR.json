@@ -3,17 +3,65 @@
     "home": "Início",
     "about": "Sobre",
     "solutions": "Soluções",
-    "contact": "Contato",
     "aboutEpsPir": "Sobre PIR & EPS",
-    "institutional": {
-      "about": "Sobre",
-      "solutions": "Soluções",
-      "aboutEpsPir": "Sobre PIR & EPS",
-      "contact": "Contato"
-    },
+    "contact": "Contato",
+    "logo": "Logotipo Isoart",
+    "flag": "Bandeira",
     "main": {
-      "contactButton": "Entrar em contato"
+      "contactButton": "Entre em Contato"
     }
+  },
+  "menu": {
+    "categories": {
+      "telhasPaineis": "Telhas e Painéis",
+      "construcaoCivil": "Construção Civil",
+      "embalagens": "Embalagens",
+      "moldes": "Moldes",
+      "molduras": "Molduras Decorativas",
+      "acessorios": "Acessórios"
+    },
+    "products": {
+      "telhasTermicas": "Telhas Térmicas",
+      "fachadaFechamento": "Fachada e Fechamento Lateral",
+      "divisoriaForro": "Divisória e Forro",
+      "salaLimpa": "Sala Limpa",
+      "camaraFrigorifica": "Câmara Frigorífica",
+      "lajesEps": "Lajes em EPS",
+      "isolamentoTelhas": "Isolamento para Telhas",
+      "forros": "Forros",
+      "blocosEps": "Blocos em EPS",
+      "chapasPaineisEps": "Chapa e Painéis em EPS",
+      "moldurasPortasJanelas": "Molduras para Portas e Janelas",
+      "moldurasBeiral": "Molduras para Beiral",
+      "moldurasColunasCapiteis": "Molduras para Colunas e Capitéis",
+      "moldurasMuros": "Molduras para Muros",
+      "moldurasParedes": "Molduras para Paredes",
+      "embalagensEps": "Embalagens em EPS",
+      "perolasEps": "Pérolas em EPS",
+      "isolamentoParedes": "Isolamento para Paredes",
+      "isolamentoPisos": "Isolamento para Pisos",
+      "embalagensEletronicos": "Embalagens para Eletrônicos",
+      "embalagensAlimentos": "Embalagens para Alimentos",
+      "embalagensFarmaceuticos": "Embalagens para Farmacêuticos",
+      "moldesInjecao": "Moldes para Injeção",
+      "moldesSoprado": "Moldes para Soprado",
+      "moldesTermoformagem": "Moldes para Termoformagem",
+      "acessoriosTelhas": "Acessórios para Telhas",
+      "acessoriosPaineis": "Acessórios para Painéis",
+      "acessoriosConstrucao": "Acessórios para Construção"
+    }
+  },
+  "contact": {
+    "address": "Rua Dorivaldo Soncela, 1490<br />Santa Tereza do Oeste - Paraná - Brasil",
+    "phone": "+55 45 3231 1699",
+    "whatsapp": "+55 45 99133 9642",
+    "email": "contato@isoart.com.br"
+  },
+  "social": {
+    "instagram": "Siga-nos no Instagram",
+    "facebook": "Siga-nos no Facebook",
+    "youtube": "Visite nosso canal no YouTube",
+    "linkedin": "Conecte-se conosco no LinkedIn"
   },
   "home": {
     "hero": {

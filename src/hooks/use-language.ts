@@ -23,29 +23,47 @@ export const useLanguage = () => {
 
   // Função para mudar idioma e navegar
   const changeLanguage = (newLocale: string) => {
-    if (newLocale === locale) return;
+    console.log('🔍 changeLanguage chamado com:', newLocale);
+    console.log('🔍 locale atual:', locale);
+    console.log('🔍 pathname atual:', pathname);
+    
+    if (newLocale === locale) {
+      console.log('❌ Mesmo idioma, não fazendo nada');
+      return;
+    }
 
     // Salvar no localStorage
     if (typeof window !== 'undefined') {
       localStorage.setItem('locale', newLocale);
+      console.log('💾 Locale salvo no localStorage:', newLocale);
     }
 
     // Navegar para a nova rota
     const currentPath = pathname;
-    let newPath = currentPath;
+    let newPath = '';
     
     // Se estamos em uma rota com idioma, substituir
     if (currentPath.startsWith('/pt-BR/') || currentPath.startsWith('/en/') || currentPath.startsWith('/es/')) {
       newPath = currentPath.replace(/^\/(pt-BR|en|es)/, `/${newLocale}`);
+      console.log('🔄 Substituindo idioma na rota:', currentPath, '→', newPath);
     } else if (currentPath === '/pt-BR' || currentPath === '/en' || currentPath === '/es') {
       newPath = `/${newLocale}`;
+      console.log('🔄 Rota de idioma simples:', currentPath, '→', newPath);
+    } else if (currentPath === '/') {
+      // Se estamos na raiz, ir para o novo idioma
+      newPath = `/${newLocale}`;
+      console.log('🔄 Rota raiz, indo para:', newPath);
     } else {
       // Se não estamos em uma rota com idioma, adicionar
       newPath = `/${newLocale}${currentPath}`;
+      console.log('🔄 Adicionando idioma à rota:', currentPath, '→', newPath);
     }
     
-    if (newPath !== currentPath) {
+    if (newPath && newPath !== currentPath) {
+      console.log('🚀 Navegando para:', newPath);
       router.push(newPath);
+    } else {
+      console.log('❌ Mesma rota ou rota inválida, não navegando');
     }
   };
 

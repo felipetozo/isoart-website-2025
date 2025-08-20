@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Red_Hat_Display } from "next/font/google";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 import "../globals.css";
 import MainNav from "../components/main-nav/main-nav";
 import Footer from "../components/footer/footer";
@@ -106,16 +108,21 @@ async function LocaleLayout({ children, params }: LocaleLayoutProps) {
     return null; // Retornar null para idiomas não suportados
   }
 
+  // Carregar as mensagens de tradução com o locale correto
+  const messages = await getMessages({ locale });
+
   return (
-    <div className={`${inter.variable} ${redhat.variable}`}>
-      <LenisProvider>
-        <MainNav />
-        <main>{children}</main>
-        <Footer />
-        <CookieBanner />
-        <AnalyticsProvider />
-      </LenisProvider>
-    </div>
+    <NextIntlClientProvider messages={messages} locale={locale}>
+      <div className={`${inter.variable} ${redhat.variable}`}>
+        <LenisProvider>
+          <MainNav />
+          <main>{children}</main>
+          <Footer />
+          <CookieBanner />
+          <AnalyticsProvider />
+        </LenisProvider>
+      </div>
+    </NextIntlClientProvider>
   );
 }
 

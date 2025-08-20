@@ -1,19 +1,67 @@
 {
   "nav": {
     "home": "Inicio",
-    "about": "Acerca",
+    "about": "Acerca de Nosotros",
     "solutions": "Soluciones",
-    "contact": "Contacto",
     "aboutEpsPir": "Acerca de PIR & EPS",
-    "institutional": {
-      "about": "Acerca",
-      "solutions": "Soluciones",
-      "aboutEpsPir": "Acerca de PIR & EPS",
-      "contact": "Contacto"
-    },
+    "contact": "Contacto",
+    "logo": "Logo de Isoart",
+    "flag": "Bandera",
     "main": {
       "contactButton": "Contáctanos"
     }
+  },
+  "menu": {
+    "categories": {
+      "telhasPaineis": "Tejas y Paneles",
+      "construcaoCivil": "Construcción Civil",
+      "embalagens": "Embalajes",
+      "moldes": "Moldes",
+      "molduras": "Molduras Decorativas",
+      "acessorios": "Accesorios"
+    },
+    "products": {
+      "telhasTermicas": "Tejas Térmicas",
+      "fachadaFechamento": "Fachada y Cierre Lateral",
+      "divisoriaForro": "Divisorias y Techos",
+      "salaLimpa": "Sala Limpia",
+      "camaraFrigorifica": "Cámara Frigorífica",
+      "lajesEps": "Losas en EPS",
+      "isolamentoTelhas": "Aislamiento para Tejas",
+      "forros": "Techos",
+      "blocosEps": "Bloques en EPS",
+      "chapasPaineisEps": "Chapas y Paneles en EPS",
+      "moldurasPortasJanelas": "Molduras para Puertas y Ventanas",
+      "moldurasBeiral": "Molduras para Aleros",
+      "moldurasColunasCapiteis": "Molduras para Columnas y Capiteles",
+      "moldurasMuros": "Molduras para Muros",
+      "moldurasParedes": "Molduras para Paredes",
+      "embalagensEps": "Embalajes en EPS",
+      "perolasEps": "Perlas en EPS",
+      "isolamentoParedes": "Aislamiento para Paredes",
+      "isolamentoPisos": "Aislamiento para Pisos",
+      "embalagensEletronicos": "Embalajes para Electrónicos",
+      "embalagensAlimentos": "Embalajes para Alimentos",
+      "embalagensFarmaceuticos": "Embalajes para Farmacéuticos",
+      "moldesInjecao": "Moldes para Inyección",
+      "moldesSoprado": "Moldes para Soplado",
+      "moldesTermoformagem": "Moldes para Termoformado",
+      "acessoriosTelhas": "Accesorios para Tejas",
+      "acessoriosPaineis": "Accesorios para Paneles",
+      "acessoriosConstrucao": "Accesorios para Construcción"
+    }
+  },
+  "contact": {
+    "address": "Rua Dorivaldo Soncela, 1490<br />Santa Tereza do Oeste - Paraná - Brasil",
+    "phone": "+55 45 3231 1699",
+    "whatsapp": "+55 45 99133 9642",
+    "email": "contato@isoart.com.br"
+  },
+  "social": {
+    "instagram": "Síguenos en Instagram",
+    "facebook": "Síguenos en Facebook",
+    "youtube": "Visita nuestro canal de YouTube",
+    "linkedin": "Conéctate con nosotros en LinkedIn"
   },
   "home": {
     "hero": {
