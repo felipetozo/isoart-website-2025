@@ -1,7 +1,7 @@
 "use client";
 import styles from "./page.module.css";
 import Button from "../views/ui/button/button";
-import Sustentabilidade from "../components/sustentabilidade/sustentabilidade";
+import Sustentabilidade from "../components/Sustentabilidade/sustentabilidade";
 import IncendioComponent from "../components/pir-incendio/pir-incendio";
 import { CheckCircle } from "lucide-react";
 import { TbAlertTriangle } from "react-icons/tb";

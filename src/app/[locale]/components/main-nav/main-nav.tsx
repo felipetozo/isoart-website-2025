@@ -5,13 +5,13 @@ import gsap from 'gsap';
 import styles from './main-nav.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import Button from '@/app/views/ui/button/button';
+import Button from '@/app/[locale]/views/ui/button/button';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { useLanguage } from '@/app/[locale]/hooks/use-language';
 import { useTranslations } from 'next-intl';
 
-import menuData from '@/app/data/menu-data.json';
+import menuData from '../../data/menu-data.json';
 
 // Define the types for your menu data for better type safety
 interface Product {
@@ -405,7 +405,7 @@ export default function MainNav() {
                                 {typedMenuData.map((item, index) => (
                                     <Link
                                         key={item.id}
-                                        href={`/solucoes/${item.slug}`}
+                                        href={`/${currentLocale}/solucoes/${item.slug}`}
                                         onMouseEnter={() => handleMouseEnterLi(index)}
                                         onMouseLeave={handleMouseLeaveLi}
                                     >
@@ -439,7 +439,7 @@ export default function MainNav() {
                         {activeSubmenu !== null &&
                             typedMenuData[activeSubmenu].products.map((product, index) => (
                                 <div key={product.id} className={styles['sub-menu-item']}>
-                                    <Link href={`/solucoes/${typedMenuData[activeSubmenu].slug}/${product.slug}`}>
+                                    <Link href={`/${currentLocale}/solucoes/${typedMenuData[activeSubmenu].slug}/${product.slug}`}>
                                         <SubmenuImage src={product.image || '/img/placeholder.jpg'} alt={product.name} />
                                         <p>{getProductTranslation(product.name)}</p>
                                     </Link>
@@ -448,10 +448,10 @@ export default function MainNav() {
                     </div>
                     <div className={styles['mobile-menu']} ref={mobileMenuRef}>
                         <ul>
-                            <li><Link href="/" onClick={closeMobileMenu}>{t('home')}</Link></li>
-                            <li><Link href="/solucoes" onClick={closeMobileMenu}>{t('solutions')}</Link></li>
-                            <li><Link href="/sobre" onClick={closeMobileMenu}>{t('about')}</Link></li>
-                            <li><Link href="/contato" onClick={closeMobileMenu}>{t('contact')}</Link></li>
+                            <li><Link href="/${currentLocale}/" onClick={closeMobileMenu}>{t('home')}</Link></li>
+                            <li><Link href="/${currentLocale}/solucoes" onClick={closeMobileMenu}>{t('solutions')}</Link></li>
+                            <li><Link href="/${currentLocale}/sobre" onClick={closeMobileMenu}>{t('about')}</Link></li>
+                            <li><Link href="/${currentLocale}/contato" onClick={closeMobileMenu}>{t('contact')}</Link></li>
                         </ul>
                         <div className={styles['mobile-contact']}>
                             <p dangerouslySetInnerHTML={{ __html: tContact('address') }} />

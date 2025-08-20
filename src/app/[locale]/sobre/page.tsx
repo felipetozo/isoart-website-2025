@@ -1,6 +1,6 @@
 "use client";
 import ContactComponent from '../components/contact/contact-component';
-import Sustentabilidade from '../components/sustentabilidade/sustentabilidade';
+import Sustentabilidade from '../components/Sustentabilidade/sustentabilidade';
 import styles from './page.module.css';
 import { Target, Eye, Heart } from 'lucide-react';
 

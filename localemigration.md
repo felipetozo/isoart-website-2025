@@ -23,21 +23,22 @@
 - [x] **Atualizar imports** em arquivos que referenciam a pasta `categorias`
 
 #### **Pastas que DEVEM ser movidas para `[locale]/`:**
-- [ ] `src/app/components/` → `src/app/[locale]/components/`
-- [ ] `src/app/data/` → `src/app/[locale]/data/`
-- [ ] `src/app/hooks/` → `src/app/[locale]/hooks/`
-- [ ] `src/app/types/` → `src/app/[locale]/types/`
-- [ ] `src/app/views/` → `src/app/[locale]/views/`
-- [ ] `src/app/solucoes/` → `src/app/[locale]/solucoes/` (com nova estrutura)
-- [ ] `src/app/contato/` → `src/app/[locale]/contato/`
-- [ ] `src/app/sobre/` → `src/app/[locale]/sobre/`
-- [ ] `src/app/sobre-eps-pir/` → `src/app/[locale]/sobre-eps-pir/`
-- [ ] `src/app/privacidade/` → `src/app/[locale]/privacidade/`
+- [x] `src/app/components/` → `src/app/[locale]/components/`
+- [x] `src/app/data/` → `src/app/[locale]/data/`
+- [x] `src/app/hooks/` → `src/app/[locale]/hooks/`
+- [x] `src/app/types/` → `src/app/[locale]/types/`
+- [x] `src/app/views/` → `src/app/[locale]/views/`
+- [x] `src/app/solucoes/` → `src/app/[locale]/solucoes/` (com nova estrutura)
+- [x] `src/app/contato/` → `src/app/[locale]/contato/`
+- [x] `src/app/sobre/` → `src/app/[locale]/sobre/`
+- [x] `src/app/sobre-eps-pir/` → `src/app/[locale]/sobre-eps-pir/`
+- [x] `src/app/privacidade/` → `src/app/[locale]/privacidade/`
 
 #### **Arquivos que DEVEM ser movidos:**
-- [ ] `src/app/globals.css` → `src/app/[locale]/globals.css`
-- [ ] `src/app/favicon.ico` → `src/app/[locale]/favicon.ico`
-- [ ] `src/app/i18n.ts` → `src/app/[locale]/i18n.ts`
+- [x] `src/app/globals.css` → `src/app/[locale]/globals.css`
+- [x] `src/app/favicon.ico` → `src/app/[locale]/favicon.ico`
+- [x] **Limpeza**: Remover arquivo `i18n.ts` duplicado da raiz
+- [x] `src/app/i18n.ts` → `src/app/[locale]/i18n.ts` (arquivo correto mantido)
 
 ### 🔧 **ETAPA 2: CORREÇÃO DE IMPORTS**
 

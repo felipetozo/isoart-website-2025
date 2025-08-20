@@ -1,13 +1,13 @@
 'use client';
 import { useState, useEffect } from 'react';
-import styles from './main-form.module.css';
+import styles from './contact-component.module.css';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn } from 'react-icons/md';
 import { BsWhatsapp } from 'react-icons/bs';
-import FormField from '@/app/views/ui/form/form-field';
-import FormSelection from '@/app/views/ui/form/form-selection';
-import Button from '@/app/views/ui/button/button';
 import Image from 'next/image';
-import Toast from '@/app/views/ui/toast/toast';
+import FormField from '@/app/[locale]/views/ui/form/form-field';
+import FormSelection from '@/app/[locale]/views/ui/form/form-selection';
+import Button from '@/app/[locale]/views/ui/button/button';
+import Toast from '@/app/[locale]/views/ui/toast/toast';
 
 interface FormData {
     name: string;
@@ -29,7 +29,7 @@ interface FormErrors {
     terms?: string;
 }
 
-function MainForm() {
+function ContactComponent() {
     const [formData, setFormData] = useState<FormData>({
         name: '',
         email: '',
@@ -105,8 +105,6 @@ function MainForm() {
         }
     };
 
-
-
     // Carregar estados ao montar o componente
     useEffect(() => {
         fetchStates();
@@ -143,29 +141,30 @@ function MainForm() {
         }
     };
 
-    // Estados e cidades agora são carregados dinamicamente do banco
 
     return (
-        <section className={styles['main-form-section']}>
-            <div className={styles['main-form-wrapper']}>
-                <div className={styles['main-form-header']}>
+        <section className={styles['contact-component-section']}>
+            <div className={styles['contact-component-wrapper']}>
+
+                {/* Cabeçalho do formulário */}
+                <div className={styles['contact-component-header']}>
                     <h4>
-                        Entre em contato conosco.
+                        Entre em contato conosco:
                     </h4>
-                    <div className={styles['main-form-header-container']}>
-                        <div className={styles['main-form-contact-item']}>
+                    <div className={styles['contact-component-header-container']}>
+                        <div className={styles['contact-component-contact-item']}>
                             <a href="tel:+554532311699">
                                 <MdOutlinePhoneInTalk />
                                 <p>+55 45 3231 1699</p>
                             </a>
                         </div>
-                        <div className={styles['main-form-contact-item']}>
+                        <div className={styles['contact-component-contact-item']}>
                             <a href="https://wa.me/5545991339642" target="_blank" rel="noopener noreferrer">
                                 <BsWhatsapp />
                                 <p>+55 45 99133 9642</p>
                             </a>
                         </div>
-                        <div className={styles['main-form-contact-item']}>
+                        <div className={styles['contact-component-contact-item']}>
                             <a href="mailto:contato@isoart.com.br">
                                 <MdOutlineMarkEmailUnread />
                                 <p>contato@isoart.com.br</p>
@@ -173,7 +172,9 @@ function MainForm() {
                         </div>
                     </div>
                 </div>
-                <div className={styles['main-form-content-container']}>
+
+                {/* Formulário e Endereços */}
+                <div className={styles['contact-component-row']}>
                     <form className={styles['cadastro-form']} onSubmit={handleSubmit}>
                         <div className={styles['cadastro-form-fields']}>
                             <FormField
@@ -278,125 +279,109 @@ function MainForm() {
                         )}
                     </form>
 
-                    <div className={styles['main-form-locations-list-item']}>
-                        <Image
-                            src={'/img/geral/endereco-01-01-optimized.webp'}
-                            alt="Fábrica 1 Isoart"
-                            width={1000}
-                            height={700}
-                            loading="lazy"
-                        />
-                        <h5>Fábrica 1 (Matriz)</h5>
-                        <div className={styles['main-form-contact-item']}>
-                            <a href="tel:+554532311699">
-                                <MdOutlinePhoneInTalk />
-                                <p>+55 45 3231 1699</p>
-                            </a>
+                    {/* Endereços */}
+                    <div className={styles['contact-component-enderecos']}>
+                        <div className={styles['contact-component-endereco']}>
+                            <Image
+                                src={'/img/geral/endereco-01-01-optimized.webp'}
+                                alt="Fábrica 1 Isoart"
+                                width={1000}
+                                height={700}
+                                loading='lazy'
+                            />
+                            <div className={styles['contact-component-endereco-info']}>
+                                <h5>Fábrica 1 (Matriz)</h5>
+                                <a href="tel:554532311699">
+                                    <MdOutlinePhoneInTalk />
+                                    +55 45 3231 1699
+                                </a>
+                                <a href="https://wa.me/5545991339642">
+                                    <BsWhatsapp />
+                                    +55 45 99133 9642
+                                </a>
+                                <a href="mailto:contato@isoart.com.br">
+                                    <MdOutlineMarkEmailUnread />
+                                    contato@isoart.com.br
+                                </a>
+                                <a href="https://maps.google.com/?q=Rua+Dorivaldo+Soncela,+1490,+Santa+Tereza+do+Oeste,+Paraná" target="_blank" rel="noopener noreferrer">
+                                  <MdLocationOn />
+                                    <p>
+                                        Rua Dorivaldo Soncela, 1490<br />
+                                        Santa Tereza do Oeste - Paraná
+                                    </p>
+                                </a>
+                            </div>
                         </div>
-                        <div className={styles['main-form-contact-item']}>
-                            <a href="https://wa.me/5545991339642" target="_blank" rel="noopener noreferrer">
-                                <BsWhatsapp />
-                                <p>+55 45 99133 9642</p>
-                            </a>
+                        <div className={styles['contact-component-endereco']}>
+                            <Image
+                                src={'/img/geral/endereco-02-01.avif'}
+                                alt="Fábrica 2 Isoart"
+                                width={1000}
+                                height={700}
+                                loading='lazy'
+                            />
+                            <div className={styles['contact-component-endereco-info']}>
+                                <h5>Fábrica 2</h5>
+                                <a href="tel:+554934332025">
+                                    <MdOutlinePhoneInTalk />
+                                    +55 49 3433 2025
+                                </a>
+                                <a href="https://wa.me/5549999638373" target="_blank" rel="noopener noreferrer">
+                                    <BsWhatsapp />
+                                    +55 49 99963 8373
+                                </a>
+                                <a href="mailto:contato@isoart.com.br">
+                                    <MdOutlineMarkEmailUnread />
+                                    contato@isoart.com.br
+                                </a>
+                                <a href="https://maps.google.com/?q=Rodovia+BR+282+KM+496,+Xanxerê,+Santa+Catarina" target="_blank" rel="noopener noreferrer">
+                                  <MdLocationOn />
+                                    <p>
+                                        Rodovia BR 282 - KM 496<br />
+                                        Xanxerê - Santa Catarina
+                                    </p>
+                                </a>
+                            </div>
                         </div>
-                        <div className={styles['main-form-contact-item']}>
-                            <a href="mailto:contato@isoart.com.br">
-                                <MdOutlineMarkEmailUnread />
-                                <p>contato@isoart.com.br</p>
-                            </a>
-                        </div>
-                        <div className={styles['main-form-contact-item']}>
-                            <a href="https://maps.google.com/?q=Rua+Dorivaldo+Soncela,+1490,+Santa+Tereza+do+Oeste,+Paraná" target="_blank" rel="noopener noreferrer">
-                                <MdLocationOn />
-                                <p>Rua Dorivaldo Soncela, 1490<br />
-                                    Santa Tereza do Oeste - Paraná</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className={styles['main-form-locations-list-item']}>
-                        <Image
-                            src={'/img/geral/endereco-02-01.avif'}
-                            alt="Fábrica 2 Isoart"
-                            width={1000}
-                            height={700}
-                            loading="lazy"
-                        />
-                        <h5>Fábrica 2</h5>
-                        <div className={styles['main-form-contact-item']}>
-                            <a href="tel:+554934332025">
-                                <MdOutlinePhoneInTalk />
-                                <p>+55 49 3433 2025</p>
-                            </a>
-                        </div>
-                        <div className={styles['main-form-contact-item']}>
-                            <a href="https://wa.me/5549999638373" target="_blank" rel="noopener noreferrer">
-                                <BsWhatsapp />
-                                <p>+55 49 99963 8373</p>
-                            </a>
-                        </div>
-                        <div className={styles['main-form-contact-item']}>
-                            <a href="mailto:contato@isoart.com.br">
-                                <MdOutlineMarkEmailUnread />
-                                <p>contato@isoart.com.br</p>
-                            </a>
-                        </div>
-                        <div className={styles['main-form-contact-item']}>
-                            <a href="https://maps.google.com/?q=Rodovia+BR+282+KM+496,+Xanxerê,+Santa+Catarina" target="_blank" rel="noopener noreferrer">
-                                <MdLocationOn />
-                                <p>Rodovia BR 282 - KM 496<br />
-                                    Xanxerê - Santa Catarina</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className={styles['main-form-locations-list-item']}>
-                        <Image
-                            src={'/img/geral/endereco-03-01.avif'}
-                            alt="Fábrica 3 Isoart"
-                            width={1000}
-                            height={700}
-                            loading="lazy"
-                        />
-                        <h5>Fábrica 3</h5>
-                        <div className={styles['main-form-contact-item']}>
-                            <a href="tel:+554530111000">
-                                <MdOutlinePhoneInTalk />
-                                <p>+55 45 3011 1000</p>
-                            </a>
-                        </div>
-                        <div className={styles['main-form-contact-item']}>
-                            <a href="https://wa.me/5549998260240" target="_blank" rel="noopener noreferrer">
-                                <BsWhatsapp />
-                                <p>+55 49 99826 0240</p>
-                            </a>
-                        </div>
-                        <div className={styles['main-form-contact-item']}>
-                            <a href="mailto:contato@isoart.com.br">
-                                <MdOutlineMarkEmailUnread />
-                                <p>contato@isoart.com.br</p>
-                            </a>
-                        </div>
-                        <div className={styles['main-form-contact-item']}>
-                            <a href="https://maps.google.com/?q=Rodovia+BR+277+KM+608,+Santa+Tereza+do+Oeste,+Paraná" target="_blank" rel="noopener noreferrer">
-                                <MdLocationOn />
-                                <p>Rodovia BR 277 - KM 608<br />
-                                    Santa Tereza do Oeste - Paraná</p>
-                            </a>
+                        <div className={styles['contact-component-endereco']}>
+                            <Image
+                                src={'/img/geral/endereco-03-01.avif'}
+                                alt="Fábrica 3 Isoart"
+                                width={1000}
+                                height={700}
+                                loading='lazy'
+                            />
+                            <div className={styles['contact-component-endereco-info']}>
+                                <h5>Fábrica 3</h5>
+                                <a href="tel:+554530111000">
+                                    <MdOutlinePhoneInTalk />
+                                    +55 45 3011 1000
+                                </a>
+                                <a href="https://wa.me/5549998260240" target="_blank" rel="noopener noreferrer">
+                                    <BsWhatsapp />
+                                    +55 49 99826 0240
+                                </a>
+                                <a href="mailto:contato@isoart.com.br">
+                                    <MdOutlineMarkEmailUnread />
+                                    contato@isoart.com.br
+                                </a>
+                                <a href="https://maps.google.com/?q=Rodovia+BR+277+KM+608,+Santa+Tereza+do+Oeste,+Paraná" target="_blank" rel="noopener noreferrer">
+                                  <MdLocationOn />
+                                    <p>
+                                        Rodovia BR 277 - KM 608<br />
+                                        Santa Tereza do Oeste - Paraná
+                                    </p>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
+
             </div>
-            
-            <Toast
-                message="Sua mensagem foi enviada com sucesso!"
-                type="success"
-                isVisible={showToast}
-                onClose={() => setShowToast(false)}
-                duration={4000}
-            />
         </section>
     );
-}
+};
 
-export default MainForm;
+export default ContactComponent;

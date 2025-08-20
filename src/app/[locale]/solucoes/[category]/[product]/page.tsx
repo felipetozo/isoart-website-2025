@@ -3,16 +3,15 @@ import { notFound } from 'next/navigation';
 import styles from './page.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import menuData from '@/app/data/menu-data.json';
-import SobreEmpresa from '@/app/components/sobre-empresa/sobre-empresa';
-import ContactComponent from '@/app/components/contact/contact-component';
-import Button from '@/app/views/ui/button/button';
-import TabbedSection from './tabbed-section';
-import BenefitsSection from '@/app/components/benefits-section/benefits-section';
-import IncendioComponent from '@/app/components/pir-incendio/pir-incendio';
+import menuData from '@/app/[locale]/data/menu-data.json';
+import SobreEmpresa from '@/app/[locale]/components/sobre-empresa/sobre-empresa';
+import ContactComponent from '@/app/[locale]/components/contact/contact-component';
+import Button from '@/app/[locale]/views/ui/button/button';
+import BenefitsSection from '@/app/[locale]/components/benefits-section/benefits-section';
+import IncendioComponent from '@/app/[locale]/components/pir-incendio/pir-incendio';
 import { TbChecks, TbHome, TbMicroscope, TbBuildingFactory2, TbSnowflake, TbMedicineSyrup, TbBuilding, TbBuildingHospital, TbBuildingFactory, TbTools, TbPackage, TbDeviceTv, TbWindow, TbTruck, TbBuildingStore, TbArmchair, TbMicrophone, } from "react-icons/tb";
 import { IoFastFoodOutline } from "react-icons/io5";
-import ImageCarousel from '@/app/components/image-carousel/image-carousel';
+import ImageCarousel from '@/app/[locale]/components/image-carousel/image-carousel';
 
 interface ProductData {
     id: number;
@@ -35,6 +34,7 @@ interface ProductData {
         title: string;
         description: string;
     };
+
     benefits?: {
         id: number;
         title: string;
@@ -45,6 +45,17 @@ interface ProductData {
         title: string;
         description: string;
         indications: { icon: string; text: string }[];
+    };
+    modelsTable?: {
+        title: string;
+        headers: string[];
+        rows: {
+            material: string;
+            espessuras: string[];
+            revestimento: string;
+            trapezios: string;
+        }[];
+        note: string;
     };
     tabDescriptions?: {
         [key: string]: string;
@@ -78,7 +89,7 @@ interface CategoryData {
 }
 
 interface ProductPageProps {
-    params: Promise<{ lang: string; category: string; product: string }>;
+    params: Promise<{ category: string; product: string }>;
 }
 
 // Função para renderizar ícones do Tabler
@@ -113,7 +124,7 @@ async function getCategoryData(categorySlug: string): Promise<CategoryData | und
 
     try {
         const normalizedCategory = categorySlug.toLowerCase().replace(/ /g, '-');
-        const categoryFile = await import(`@/app/data/categories/${normalizedCategory}.json`);
+        const categoryFile = await import(`../../../data/categories/${normalizedCategory}.json`);
         categoryData = categoryFile.default as CategoryData;
     } catch (error) {
         categoryData = (menuData as CategoryData[]).find((item: CategoryData) => item.slug === categorySlug);
@@ -123,14 +134,14 @@ async function getCategoryData(categorySlug: string): Promise<CategoryData | und
 }
 
 async function ProductPage({ params }: ProductPageProps) {
-    const { lang, category, product } = await params;
+    const { category, product } = await params;
 
     let productData: ProductData | undefined;
 
     try {
         const normalizedCategory = category.toLowerCase().replace(/ /g, '-');
         const normalizedProduct = product.toLowerCase().replace(/ /g, '-');
-        const productFile = await import(`@/app/data/products/${normalizedCategory}/${normalizedProduct}.json`);
+        const productFile = await import(`../../../data/products/${normalizedCategory}/${normalizedProduct}.json`);
         productData = productFile.default as ProductData;
     } catch (error) {
         const categoryData = (menuData as CategoryData[]).find((item: CategoryData) => item.slug === category);
@@ -203,9 +214,9 @@ async function ProductPage({ params }: ProductPageProps) {
                 <div className={styles['product-page-hero-content']}>
                     <h1>{heroSection.title}</h1>
                     <p>{heroSection.description}</p>
-                    <Link href={heroSection.buttonLink}>
+                    <Link href={heroSection.buttonLink || '/contato'}>
                         <Button variant="primary" size="medium">
-                            {heroSection.buttonText}
+                            {heroSection.buttonText || 'Solicite um orçamento'}
                         </Button>
                     </Link>
                 </div>
@@ -222,7 +233,7 @@ async function ProductPage({ params }: ProductPageProps) {
             {/* Benefits - Agora usando os benefícios da categoria */}
             <BenefitsSection benefits={benefits} />
 
-            {/* General Characteristics */}
+            {/* Carrossel galeria */}
             <section className={styles['general-characteristics-section']}>
                 <div className={styles['general-characteristics-wrapper']}>
                     <div className={styles['img-placeholder']}>
@@ -233,7 +244,9 @@ async function ProductPage({ params }: ProductPageProps) {
                             height={800}
                         />
                     </div>
-                    <h3>Características Gerais:</h3>
+
+                {/* Características gerais */}
+                    <h3>Características:</h3>
                     <div className={styles['features-grid']}>
                         {generalCharacteristics.map((char, index) => (
                             <div key={index} className={styles['feature']}>
@@ -249,7 +262,7 @@ async function ProductPage({ params }: ProductPageProps) {
                 <div className={styles['applications-wrapper']}>
                     <h3>{applications.title}</h3>
                     <p>{applications.description}</p>
-                    <p>Indicada para obras residenciais, comerciais e industriais como:</p>
+                    <p>Aplicações:</p>
                     <div className={styles['application-carousel']}>
                         <div className={styles['application-cards']}>
                             {applications.indications.map((indication, index) => (
@@ -262,8 +275,61 @@ async function ProductPage({ params }: ProductPageProps) {
                 </div>
             </section>
 
-            {/* Tabbed Section */}
-            <TabbedSection tabDescriptions={tabDescriptions} />
+            {/* Models Table - Apenas para telhas térmicas */}
+            {productData.modelsTable && (
+                <section className={styles['models-table-section']}>
+                    <div className={styles['models-table-wrapper']}>
+                        <h5 className={styles['models-table-title']}>{productData.modelsTable.title}</h5>
+                        <div className={styles['models-table-container']}>
+                            <table className={styles['models-table']}>
+                                <thead>
+                                    <tr>
+                                        {productData.modelsTable.headers.map((header, index) => (
+                                            <th key={index}>{header}</th>
+                                        ))}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {productData.modelsTable!.rows.map((row, rowIndex) => {
+                                        const totalRows = productData.modelsTable!.rows.reduce((acc, r) => acc + r.espessuras.length, 0);
+                                        return row.espessuras.map((espessura, espIndex) => (
+                                            <tr key={`${rowIndex}-${espIndex}`}>
+                                                {rowIndex === 0 && espIndex === 0 ? (
+                                                    <td rowSpan={totalRows}>{row.material}</td>
+                                                ) : null}
+                                                <td>{espessura}</td>
+                                                {espIndex === 0 ? (
+                                                    <td rowSpan={row.espessuras.length}>{row.revestimento}</td>
+                                                ) : null}
+                                                {rowIndex === 0 && espIndex === 0 ? (
+                                                    <td rowSpan={totalRows}>{row.trapezios}</td>
+                                                ) : null}
+                                            </tr>
+                                        ));
+                                    })}
+                                </tbody>
+                            </table>
+                            {productData.modelsTable.note && (
+                                <p className={styles['models-table-note']}>{productData.modelsTable.note}</p>
+                            )}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* Product Descriptions - Apenas se não houver tabela de modelos */}
+            {!productData.modelsTable && (
+                <section className={styles['product-descriptions-section']}>
+                    <div className={styles['product-descriptions-wrapper']}>
+                        {Object.entries(tabDescriptions).map(([title, description]) => (
+                            <div key={title} className={styles['product-description-item']}>
+                                <h4 className={styles['product-description-title']}>{title}</h4>
+                                <p className={styles['product-description-content']}>{description}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            )}
 
             {/* PIR Incêndio Component - Apenas para categoria telhas-e-paineis */}
             {category === 'telhas-e-paineis' && <IncendioComponent />}
@@ -279,40 +345,21 @@ export default ProductPage;
 export async function generateStaticParams() {
     const allProducts = (menuData as CategoryData[]).flatMap((category: CategoryData) =>
         category.products.map((product: ProductData) => ({
-            lang: 'pt-BR',
             category: category.slug,
             product: product.slug,
         }))
     );
-
-    // Adicionar versões em inglês e espanhol
-    const enProducts = (menuData as CategoryData[]).flatMap((category: CategoryData) =>
-        category.products.map((product: ProductData) => ({
-            lang: 'en',
-            category: category.slug,
-            product: product.slug,
-        }))
-    );
-
-    const esProducts = (menuData as CategoryData[]).flatMap((category: CategoryData) =>
-        category.products.map((product: ProductData) => ({
-            lang: 'es',
-            category: category.slug,
-            product: product.slug,
-        }))
-    );
-
-    return [...allProducts, ...enProducts, ...esProducts];
+    return allProducts;
 }
 
 export async function generateMetadata({ params }: ProductPageProps) {
-    const { lang, category, product } = await params;
+    const { category, product } = await params;
     let productData: ProductData | undefined;
 
     try {
         const normalizedCategory = category.toLowerCase().replace(/ /g, '-');
         const normalizedProduct = product.toLowerCase().replace(/ /g, '-');
-        const productFile = await import(`@/app/data/products/${normalizedCategory}/${normalizedProduct}.json`);
+        const productFile = await import(`../../../data/products/${normalizedCategory}/${normalizedProduct}.json`);
         productData = productFile.default as ProductData;
     } catch (error) {
         const categoryData = (menuData as CategoryData[]).find((item: CategoryData) => item.slug === category);

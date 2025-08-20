@@ -3,8 +3,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import styles from './hero.module.css';
 import Link from 'next/link';
-import Button from '@/app/views/ui/button/button';
-import sliderData from '@/app/data/main-slider-data.json';
+import Button from '@/app/[locale]/views/ui/button/button';
+import sliderData from '../../data/main-slider-data.json';
 import { TbChevronLeft, TbChevronRight } from 'react-icons/tb';
 
 

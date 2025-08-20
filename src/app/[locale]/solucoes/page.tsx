@@ -1,7 +1,7 @@
 import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import Button from '@/app/views/ui/button/button';
+import Button from '@/app/[locale]/views/ui/button/button';
 
 // Dados das soluções
 const solucoes = [

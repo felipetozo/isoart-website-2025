@@ -1,6 +1,6 @@
 import styles from './sobre-empresa.module.css';
 import Link from 'next/link';
-import Button from '@/app/views/ui/button/button';
+import Button from '@/app/[locale]/views/ui/button/button';
 
 function SobreEmpresa() {
     return (

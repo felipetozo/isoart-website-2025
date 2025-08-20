@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { Inter, Red_Hat_Display } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import "../globals.css";
-import MainNav from "../components/main-nav/main-nav";
-import Footer from "../components/footer/footer";
-import AnalyticsProvider from "../components/analytics-provider/analytics-provider";
-import { LenisProvider } from "../components/lenis-provider";
-import CookieBanner from "../views/ui/cookie-banner";
+import "./globals.css";
+import MainNav from "./components/main-nav/main-nav";
+import Footer from "./components/Footer/footer";
+import AnalyticsProvider from "./components/analytics-provider/analytics-provider";
+import { LenisProvider } from "./components/lenis-provider";
+import CookieBanner from "./views/ui/cookie-banner";
 
 const locales = ['pt-BR', 'en', 'es'] as const;
 

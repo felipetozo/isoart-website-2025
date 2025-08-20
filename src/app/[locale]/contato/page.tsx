@@ -1,12 +1,12 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
-import FormField from '@/app/views/ui/form/form-field';
-import FormSelection from '@/app/views/ui/form/form-selection';
-import Button from '@/app/views/ui/button/button';
+import FormField from '@/app/[locale]/views/ui/form/form-field';
+import FormSelection from '@/app/[locale]/views/ui/form/form-selection';
+import Button from '@/app/[locale]/views/ui/button/button';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn } from 'react-icons/md';
 import { BsWhatsapp } from 'react-icons/bs';
-import Toast from '@/app/views/ui/toast/toast';
+import Toast from '@/app/[locale]/views/ui/toast/toast';
 
 interface FormData {
     name: string;

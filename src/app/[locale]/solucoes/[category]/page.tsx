@@ -2,12 +2,12 @@ import { notFound } from 'next/navigation';
 import styles from './page.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import menuData from '@/app/data/menu-data.json';
-import SobreEmpresa from '@/app/components/sobre-empresa/sobre-empresa';
-import ContactComponent from '@/app/components/contact/contact-component';
-import Button from '@/app/views/ui/button/button';
-import BenefitsSection from '@/app/components/benefits-section/benefits-section';
-import IncendioComponent from '@/app/components/pir-incendio/pir-incendio';
+import menuData from '../../data/menu-data.json';
+import SobreEmpresa from '@/app/[locale]/components/sobre-empresa/sobre-empresa';
+import ContactComponent from '@/app/[locale]/components/contact/contact-component';
+import Button from '@/app/[locale]/views/ui/button/button';
+import BenefitsSection from '@/app/[locale]/components/benefits-section/benefits-section';
+import IncendioComponent from '@/app/[locale]/components/pir-incendio/pir-incendio';
 
 // Updated interfaces to match the actual data structure
 interface Product {
@@ -63,9 +63,9 @@ async function CategoryPage({ params }: CategoryPageProps) {
 
     try {
         const normalizedCategory = category.toLowerCase().replace(/ /g, '-');
-        console.log('Importando arquivo:', `@/app/data/categories/${normalizedCategory}.json`);
+        console.log('Importando arquivo:', `../../data/categories/${normalizedCategory}.json`);
 
-        const specificCategoryData = await import(`@/app/data/categories/${normalizedCategory}.json`);
+        const specificCategoryData = await import(`../../data/categories/${normalizedCategory}.json`);
         categoryData = specificCategoryData.default as CategoryData;
         console.log('Dados carregados do arquivo específico:', categoryData);
     } catch (error) {
@@ -174,7 +174,7 @@ export async function generateMetadata({ params }: CategoryPageProps) {
     let categoryData: CategoryData | undefined;
 
     try {
-        const specificCategoryData = await import(`@/app/data/categories/${category}.json`);
+        const specificCategoryData = await import(`../../data/categories/${category}.json`);
         categoryData = specificCategoryData.default as CategoryData;
     } catch (error) {
         categoryData = (menuData as CategoryData[]).find(
