@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { Inter, Red_Hat_Display } from "next/font/google";
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
 import "../globals.css";
 import MainNav from "../components/main-nav/main-nav";
 import Footer from "../components/footer/footer";
 import AnalyticsProvider from "../components/analytics-provider/analytics-provider";
 import { LenisProvider } from "../components/lenis-provider";
 import CookieBanner from "../views/ui/cookie-banner";
-import { locales } from '../i18n';
+
+const locales = ['pt-BR', 'en', 'es'] as const;
 
 const inter = Inter({
   subsets: ["latin"],
@@ -107,20 +106,16 @@ async function LocaleLayout({ children, params }: LocaleLayoutProps) {
     return null; // Retornar null para idiomas não suportados
   }
 
-  const messages = await getMessages();
-
   return (
-    <NextIntlClientProvider messages={messages}>
-      <div className={`${inter.variable} ${redhat.variable}`}>
-        <LenisProvider>
-          <MainNav />
-          <main>{children}</main>
-          <Footer />
-          <CookieBanner />
-          <AnalyticsProvider />
-        </LenisProvider>
-      </div>
-    </NextIntlClientProvider>
+    <div className={`${inter.variable} ${redhat.variable}`}>
+      <LenisProvider>
+        <MainNav />
+        <main>{children}</main>
+        <Footer />
+        <CookieBanner />
+        <AnalyticsProvider />
+      </LenisProvider>
+    </div>
   );
 }
 

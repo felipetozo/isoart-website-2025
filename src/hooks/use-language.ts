@@ -1,14 +1,15 @@
 'use client';
 
-import { useLocale, useTranslations } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
-import { locales } from '../app/i18n';
+
+const locales = ['pt-BR', 'en', 'es'] as const;
 
 export const useLanguage = () => {
-  const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-  const t = useTranslations();
+  
+  // Extrair locale do pathname
+  const locale = pathname.split('/')[1] || 'pt-BR';
 
   // Função para obter informações do idioma
   const getLocaleInfo = (locale: string) => {
@@ -52,7 +53,6 @@ export const useLanguage = () => {
     currentLocale: locale,
     changeLanguage,
     getLocaleInfo,
-    supportedLocales: locales,
-    t
+    supportedLocales: locales
   };
 };

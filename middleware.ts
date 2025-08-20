@@ -1,21 +1,15 @@
-import createMiddleware from 'next-intl/middleware';
-import {locales, defaultLocale} from './src/app/i18n';
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-export default createMiddleware({
-  // A list of all locales that are supported
-  locales: locales,
+export function middleware(request: NextRequest) {
+  // Se é a página raiz, redireciona para pt-BR
+  if (request.nextUrl.pathname === '/') {
+    return NextResponse.redirect(new URL('/pt-BR', request.url));
+  }
   
-  // Used when no locale matches
-  defaultLocale: defaultLocale,
-  
-  // Always show the locale in the URL
-  localePrefix: 'always',
-  
-  // Redirect to the default locale if no locale is specified
-  localeDetection: true
-});
+  return NextResponse.next();
+}
 
 export const config = {
-  // Match only internationalized pathnames
-  matcher: ['/', '/(pt-BR|en|es)/:path*']
+  matcher: ['/'],
 };
