@@ -1,22 +1,8 @@
-'use client';
-
-import Hero from './components/hero/hero';
-import SobreEmpresa from './components/sobre-empresa/sobre-empresa';
-import SolucoesGrid from './components/solucoes-grid/solucoes-grid';
-import ContactComponent from './components/contact/contact-component';
-
-
-function Home() {
+export default function RootPage() {
   return (
     <div>
-      <main>
-        <Hero />
-        <SobreEmpresa />
-        <SolucoesGrid />
-        <ContactComponent />
-      </main>
+      <h1>Redirecionando...</h1>
+      <p>Esta página será redirecionada automaticamente pelo middleware.</p>
     </div>
   );
 }
-
-export default Home;

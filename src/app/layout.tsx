@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Red_Hat_Display } from "next/font/google";
 import "./globals.css";
-import MainNav from "./components/main-nav/main-nav";
-import Footer from "./components/footer/footer";
-import AnalyticsProvider from "./components/analytics-provider/analytics-provider";
-import { LenisProvider } from "./components/lenis-provider";
-import CookieBanner from "./views/ui/cookie-banner";
-
 
 const inter = Inter({
   subsets: ["latin"],
@@ -90,49 +84,9 @@ function RootLayout({
         {/* DNS prefetch para fontes */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-        
-        {/* CSS Crítico Mínimo para LCP */}
-        <style dangerouslySetInnerHTML={{
-          __html: `
-            /* Reset essencial */
-            *, *::before, *::after { box-sizing: border-box; }
-            
-            /* Fonts críticas */
-            body { 
-              font-family: var(--font-inter), Arial, sans-serif;
-              margin: 0;
-              padding: 0;
-              background: #ffffff;
-              color: #171717;
-            }
-            
-            /* Hero crítico - LCP */
-            .hero-section {
-              width: 100vw;
-              height: 80vh;
-              position: relative;
-              overflow: hidden;
-            }
-            
-            /* Navigation fixa */
-            .nav-container {
-              width: 100%;
-              position: fixed;
-              top: 0;
-              left: 0;
-              z-index: 9999;
-            }
-          `
-        }} />
       </head>
       <body>
-        <LenisProvider>
-          <MainNav />
-          <main>{children}</main>
-          <Footer />
-          <AnalyticsProvider />
-          <CookieBanner />
-        </LenisProvider>
+        {children}
       </body>
     </html>
   );

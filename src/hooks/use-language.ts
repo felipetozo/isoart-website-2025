@@ -1,10 +1,14 @@
-import { useState, useEffect } from 'react';
+'use client';
+
+import { useLocale, useTranslations } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
+import { locales } from '../app/i18n';
 
 export const useLanguage = () => {
+  const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
-  const [currentLocale, setCurrentLocale] = useState('pt-BR');
+  const t = useTranslations();
 
   // Função para obter informações do idioma
   const getLocaleInfo = (locale: string) => {
@@ -18,15 +22,12 @@ export const useLanguage = () => {
 
   // Função para mudar idioma e navegar
   const changeLanguage = (newLocale: string) => {
-    if (newLocale === currentLocale) return;
+    if (newLocale === locale) return;
 
     // Salvar no localStorage
     if (typeof window !== 'undefined') {
       localStorage.setItem('locale', newLocale);
     }
-
-    // Atualizar estado local
-    setCurrentLocale(newLocale);
 
     // Navegar para a nova rota
     const currentPath = pathname;
@@ -47,20 +48,11 @@ export const useLanguage = () => {
     }
   };
 
-  // Carregar locale salvo no localStorage na inicialização
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const savedLocale = localStorage.getItem('locale');
-      if (savedLocale && ['pt-BR', 'en', 'es'].includes(savedLocale)) {
-        setCurrentLocale(savedLocale);
-      }
-    }
-  }, []);
-
   return {
-    currentLocale,
+    currentLocale: locale,
     changeLanguage,
     getLocaleInfo,
-    supportedLocales: ['pt-BR', 'en', 'es'] as const
+    supportedLocales: locales,
+    t
   };
 };

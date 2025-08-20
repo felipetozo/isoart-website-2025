@@ -9,6 +9,7 @@ import Button from '@/app/views/ui/button/button';
 import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { useLanguage } from '@/hooks/use-language';
+import { useTranslations } from 'next-intl';
 
 import menuData from '@/app/data/menu-data.json';
 
@@ -80,6 +81,7 @@ function MainNav() {
 
     const iconRef = useRef<HTMLDivElement | null>(null);
     const { currentLocale, changeLanguage, getLocaleInfo, supportedLocales } = useLanguage();
+    const t = useTranslations();
     const [mounted, setMounted] = useState(false);
 
 
