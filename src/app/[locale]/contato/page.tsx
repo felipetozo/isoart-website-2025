@@ -398,7 +398,7 @@ const ContatoPage: React.FC = () => {
                                     className={styles['terms-checkbox']}
                                 />
                                 <label htmlFor="terms" className={styles['terms-text']}>
-                                    Eu aceito a <a href="/privacidade" className={styles['terms-link']}>política de privacidade</a>
+                                    Eu aceito a <a href="/pt-BR/privacidade" className={styles['terms-link']}>política de privacidade</a>
                                 </label>
                             </div>
                             {errors.terms && <span className={styles['theme-error']}>{errors.terms}</span>}

@@ -343,10 +343,10 @@ export default function MainNav() {
                     <div className={styles['institucional-nav-right']}>
                         <div className={styles['institutional-nav-items']}>
                             <ul>
-                                <li><Link href="/sobre">{t('about')}</Link></li>
-                                <li><Link href="/solucoes">{t('solutions')}</Link></li>
-                                <li><Link href="/sobre-eps-pir">{t('aboutEpsPir')}</Link></li>
-                                <li><Link href="/contato">{t('contact')}</Link></li>
+                                <li><Link href="/pt-BR/sobre">{t('about')}</Link></li>
+                                <li><Link href="/pt-BR/solucoes">{t('solutions')}</Link></li>
+                                <li><Link href="/pt-BR/sobre-eps-pir">{t('aboutEpsPir')}</Link></li>
+                                <li><Link href="/pt-BR/contato">{t('contact')}</Link></li>
                             </ul>
                         </div>
                         {(() => {
@@ -391,7 +391,7 @@ export default function MainNav() {
                 <div className={styles['main-nav-wrapper']}>
                     <div className={styles['main-nav-content']}>
                         <div className={styles['main-nav-logo']}>
-                            <Link href="/">
+                            <Link href="/pt-BR">
                                 <Image
                                     src={'/img/isoart-logotipo.svg'}
                                     alt={t('logo')}
@@ -418,7 +418,7 @@ export default function MainNav() {
                             </ul>
                         </div>
                         <div className={styles['main-nav-button']}>
-                            <Link href="/contato">
+                            <Link href="/pt-BR/contato">
                                 <Button variant="primary" size="medium">
                                     {t('main.contactButton')}
                                 </Button>

@@ -53,32 +53,32 @@ function Footer() {
                             <div>
                                 <h5>Institucional</h5>
                                 <ul>
-                                    <li><Link href="/sobre">Sobre a ISOART</Link></li>
-                                    <li><Link href="/sobre-eps-pir">Sobre EPS PIR</Link></li>
+                                    <li><Link href="/pt-BR/sobre">Sobre a ISOART</Link></li>
+                                    <li><Link href="/pt-BR/sobre-eps-pir">Sobre EPS PIR</Link></li>
                                 </ul>
                             </div>
                             <div>
                                 <h5>Produtos</h5>
                                 <ul>
-                                    <li><Link href="/categorias/telhas-e-paineis">Telhas e Painéis</Link></li>
-                                    <li><Link href="/categorias/construcao-civil">Construção Civil</Link></li>
-                                    <li><Link href="/categorias/forros">Forros</Link></li>
-                                    <li><Link href="/categorias/molduras-decorativas">Molduras Decorativas</Link></li>
-                                    <li><Link href="/categorias/embalagens-em-eps">Embalagens em EPS</Link></li>
+                                    <li><Link href="/pt-BR/solucoes/telhas-e-paineis">Telhas e Painéis</Link></li>
+                                    <li><Link href="/pt-BR/solucoes/construcao-civil">Construção Civil</Link></li>
+                                    <li><Link href="/pt-BR/solucoes/forros">Forros</Link></li>
+                                    <li><Link href="/pt-BR/solucoes/molduras-decorativas">Molduras Decorativas</Link></li>
+                                    <li><Link href="/pt-BR/solucoes/embalagens-em-eps">Embalagens em EPS</Link></li>
                                 </ul>
                             </div>
                             <div>
                                 <h5>Suporte</h5>
                                 <ul>
-                                    <li><Link href="/contato">Contato</Link></li>
-                                    <li><Link href="/privacidade">Políticas de privacidade</Link></li>
+                                    <li><Link href="/pt-BR/contato">Contato</Link></li>
+                                    <li><Link href="/pt-BR/privacidade">Políticas de privacidade</Link></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div className={styles['footer-column']}>
                         <div className={styles['footer-logos']}>
-                            <Link href="/">
+                            <Link href="/pt-BR">
                                 <Image
                                     src={'/img/isoart-logotipo.svg'}
                                     alt="Logotipo Isoart"
@@ -86,7 +86,7 @@ function Footer() {
                                     height={62}
                                 />
                             </Link>
-                            <Link href="/">
+                            <Link href="/pt-BR">
                                 <Image
                                     src={'/img/geral/selo-iso.svg'}
                                     alt="Logotipo Isoart"

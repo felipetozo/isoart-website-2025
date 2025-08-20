@@ -16,7 +16,7 @@ function SolucoesGrid() {
                 </div>
                 <div className={styles['solucoes-grid-grid']}>
                     <div className={styles['solucoes-grid-card']}>
-                        <Link href="/categorias/telhas-e-paineis">
+                        <Link href="/pt-BR/solucoes/telhas-e-paineis">
                             <div className={styles['solucoes-grid-card-image']}>
                                 <Image
                                     src={'/img/SolucoesGrid/telhas.avif'}
@@ -32,7 +32,7 @@ function SolucoesGrid() {
                         </Link>
                     </div>
                     <div className={styles['solucoes-grid-card']}>
-                        <Link href="/categorias/construcao-civil">
+                        <Link href="/pt-BR/solucoes/construcao-civil">
                         <div className={styles['solucoes-grid-card-image']}>
                                 <Image
                                     src={'/img/SolucoesGrid/construcaocivil.avif'}
@@ -48,7 +48,7 @@ function SolucoesGrid() {
                         </Link>
                     </div>
                     <div className={styles['solucoes-grid-card']}>
-                        <Link href="/categorias/molduras-decorativas">
+                        <Link href="/pt-BR/solucoes/molduras-decorativas">
                         <div className={styles['solucoes-grid-card-image']}>
                                 <Image
                                     src={'/img/SolucoesGrid/molduras.avif'}
@@ -64,7 +64,7 @@ function SolucoesGrid() {
                         </Link>
                     </div>
                     <div className={styles['solucoes-grid-card']}>
-                        <Link href="/categorias/embalagens-em-eps">
+                        <Link href="/pt-BR/solucoes/embalagens-em-eps">
                         <div className={styles['solucoes-grid-card-image']}>
                                 <Image
                                     src={'/img/SolucoesGrid/embalagens.avif'}

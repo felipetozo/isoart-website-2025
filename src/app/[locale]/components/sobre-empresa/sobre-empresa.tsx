@@ -18,7 +18,7 @@ function SobreEmpresa() {
                             atendem às diversas demandas do mercado.
                         </h2>
                         <div>
-                            <Link href="/sobre">
+                            <Link href="/pt-BR/sobre">
                                 <Button variant="white" size="medium">
                                     Saiba mais
                                 </Button>

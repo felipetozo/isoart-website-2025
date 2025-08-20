@@ -256,7 +256,7 @@ function MainForm() {
                                     className={styles.termsCheckbox}
                                 />
                                 <label htmlFor="terms" className={styles['terms-text']}>
-                                    Eu aceito a <a href="/privacidade" className={styles['terms-link']}>política de privacidade</a>
+                                    Eu aceito a <a href="/pt-BR/privacidade" className={styles['terms-link']}>política de privacidade</a>
                                 </label>
                             </div>
                             {errors.terms && <div className={styles['error-message']}>{errors.terms}</div>}
