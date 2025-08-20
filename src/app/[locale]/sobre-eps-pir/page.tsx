@@ -6,7 +6,7 @@ import ContactComponent from "../components/contact/contact-component";
 import { CheckCircle } from "lucide-react";
 import { TbAlertTriangle } from "react-icons/tb";
 import Image from "next/image";
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 interface SobreEpsPirPageProps {
   params: Promise<{ locale: string }>;
@@ -16,7 +16,7 @@ async function SobreEpsPirPage({ params }: SobreEpsPirPageProps) {
   const { locale } = await params;
   
   // Hook de traduções
-  const t = useTranslations('sobreEpsPirPage');
+  const t = await getTranslations('sobreEpsPirPage');
   
   return (
     <div>

@@ -1,9 +1,8 @@
-"use client";
 import ContactComponent from '../components/contact/contact-component';
 import Sustentabilidade from '../components/Sustentabilidade/sustentabilidade';
 import styles from './page.module.css';
 import { Target, Eye, Heart } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 interface SobrePageProps {
     params: Promise<{ locale: string }>;
@@ -35,6 +34,9 @@ const TIMELINE = [
 
 export default async function SobrePage({ params }: SobrePageProps) {
   const { locale } = await params;
+  
+  // Hook de traduções
+  const t = await getTranslations('aboutPage');
 
   return (
     <div>
