@@ -51,11 +51,11 @@ interface CategoryData {
 
 // Fix: Change params to be a Promise in Next.js 15
 interface CategoryPageProps {
-    params: Promise<{ category: string }>;
+    params: Promise<{ category: string; locale: string }>;
 }
 
 async function CategoryPage({ params }: CategoryPageProps) {
-    const { category } = await params;
+    const { category, locale } = await params;
 
     let categoryData: CategoryData | undefined;
 
@@ -85,7 +85,7 @@ async function CategoryPage({ params }: CategoryPageProps) {
         title: categoryData.title,
         description: categoryData.description || categoryData.categoryDescription || 'Nossas soluções de alta qualidade.',
         buttonText: 'Solicite um orçamento',
-        buttonLink: '/contato',
+        buttonLink: `/${locale}/contato`,
         backgroundImage: '/img/default-category-hero.avif'
     };
 
@@ -105,7 +105,7 @@ async function CategoryPage({ params }: CategoryPageProps) {
                 <div className={styles['category-page-hero-content']}>
                     <h1>{heroSection.title}</h1>
                     <p>{heroSection.description}</p>
-                    <Link href={heroSection.buttonLink || '/contato'}>
+                    <Link href={heroSection.buttonLink || `/${locale}/contato`}>
                         <Button variant="primary" size="medium">
                             {heroSection.buttonText || 'Solicite um orçamento'}
                         </Button>
@@ -128,7 +128,7 @@ async function CategoryPage({ params }: CategoryPageProps) {
                     <div className={styles['category-products-grid']}>
                         {categoryData.products.map((product) => (
                             <article key={product.id} className={styles['category-products-grid-card']}>
-                                <Link href={`/categorias/${categoryData.slug}/${product.slug}`}>
+                                <Link href={`/${locale}/solucoes/${categoryData.slug}/${product.slug}`}>
                                     <div className={styles['category-products-grid-content']}>
                                         {product.image && (
                                             <div className={styles['category-products-grid-img']}>

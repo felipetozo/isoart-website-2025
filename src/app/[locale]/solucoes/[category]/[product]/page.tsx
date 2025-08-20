@@ -89,7 +89,7 @@ interface CategoryData {
 }
 
 interface ProductPageProps {
-    params: Promise<{ category: string; product: string }>;
+    params: Promise<{ category: string; product: string; locale: string }>;
 }
 
 // Função para renderizar ícones do Tabler
@@ -134,7 +134,7 @@ async function getCategoryData(categorySlug: string): Promise<CategoryData | und
 }
 
 async function ProductPage({ params }: ProductPageProps) {
-    const { category, product } = await params;
+    const { category, product, locale } = await params;
 
     let productData: ProductData | undefined;
 
@@ -161,7 +161,7 @@ async function ProductPage({ params }: ProductPageProps) {
         title: productData.name,
         description: 'Descubra a solução ideal para coberturas eficientes com isolamento térmico superior.',
         buttonText: 'Solicite um orçamento',
-        buttonLink: '/contato',
+        buttonLink: `/${locale}/contato`,
         backgroundImage: productData.image || '/img/default-product-hero.avif'
     };
 
@@ -214,7 +214,7 @@ async function ProductPage({ params }: ProductPageProps) {
                 <div className={styles['product-page-hero-content']}>
                     <h1>{heroSection.title}</h1>
                     <p>{heroSection.description}</p>
-                    <Link href={heroSection.buttonLink || '/contato'}>
+                    <Link href={heroSection.buttonLink || `/${locale}/contato`}>
                         <Button variant="primary" size="medium">
                             {heroSection.buttonText || 'Solicite um orçamento'}
                         </Button>
