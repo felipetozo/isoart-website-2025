@@ -43,6 +43,22 @@
     background-color: rgba(79, 184, 225, 0.1);
 }
 
+/* Estilos para as opções do dropdown quando aberto */
+.select option {
+    background-color: rgba(241, 244, 247, 1);
+    color: rgba(17, 17, 17, 0.9);
+    padding: 0.5rem;
+}
+
+.select option:hover {
+    background-color: rgba(79, 184, 225, 0.1);
+}
+
+.select option:checked {
+    background-color: rgba(79, 184, 225, 0.2);
+    color: rgba(17, 17, 17, 1);
+}
+
 .chevron-icon {
     position: absolute;
     right: 1rem;
@@ -131,6 +147,22 @@
 
 .select-light:focus + .chevron-icon-light {
     color: rgba(146, 151, 120, 1);
+}
+
+/* Estilos para as opções do dropdown quando aberto (tema light) */
+.select-light option {
+    background-color: rgba(241, 244, 247, 1);
+    color: rgba(17, 17, 17, 0.9);
+    padding: 0.5rem;
+}
+
+.select-light option:hover {
+    background-color: rgba(146, 151, 120, 0.1);
+}
+
+.select-light option:checked {
+    background-color: rgba(146, 151, 120, 0.2);
+    color: rgba(17, 17, 17, 1);
 }
 
 .error-light {
