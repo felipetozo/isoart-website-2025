@@ -1,14 +1,14 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About",
+    "about": "About us",
     "solutions": "Solutions",
     "contact": "Contact",
-    "aboutEpsPir": "About PIR and EPS",
+    "aboutEpsPir": "About PIR & EPS",
     "institutional": {
-      "about": "About",
+      "about": "About us",
       "solutions": "Solutions",
-      "aboutEpsPir": "About PIR and EPS",
+      "aboutEpsPir": "About PIR & EPS",
       "contact": "Contact"
     },
     "main": {
@@ -192,7 +192,7 @@
       "benefits": "Benefits",
       "characteristics": "Characteristics",
       "applications": "Applications",
-      "aboutCompany": "About Company",
+      "aboutCompany": "About Us",
       "products": "Products",
       "solutions": "Solutions"
     },
@@ -207,7 +207,7 @@
     "spanish": "Spanish"
   },
   "aboutPage": {
-    "title": "About Isoart",
+    "title": "About Us",
     "description": "Leading company in thermal solutions with EPS and PIR for civil construction, packaging and insulation.",
     "mission": "Our Mission",
     "vision": "Our Vision",
