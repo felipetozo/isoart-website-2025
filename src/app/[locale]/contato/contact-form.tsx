@@ -27,6 +27,7 @@ interface FormErrors {
     state?: string;
     city?: string;
     terms?: string;
+    submit?: string;
 }
 
 interface ContactFormProps {
@@ -229,9 +230,9 @@ export default function ContactForm({ locale }: ContactFormProps) {
             <section className={styles['hero-section']}>
                 <div className={styles['hero-mask']}>
                     <div className={styles['hero-wrapper']}>
-                        <h2 className={styles['hero-title']}>{t('title')}</h2>
+                        <h2 className={styles['hero-title']}>{t('hero.title')}</h2>
                         <p className={styles['hero-description']}>
-                            {t('description')}
+                            {t('hero.description')}
                         </p>
                     </div>
                 </div>
@@ -248,18 +249,16 @@ export default function ContactForm({ locale }: ContactFormProps) {
                                     label={t('name')}
                                     type="text"
                                     value={formData.name}
-                                    onChange={(value) => handleInputChange('name', value)}
+                                    onChange={(e) => handleInputChange('name', e.target.value)}
                                     error={errors.name}
-                                    required
                                 />
                                 <FormField
                                     id="email"
                                     label={t('email')}
                                     type="email"
                                     value={formData.email}
-                                    onChange={(value) => handleInputChange('email', value)}
+                                    onChange={(e) => handleInputChange('email', e.target.value)}
                                     error={errors.email}
-                                    required
                                 />
                             </div>
 
@@ -269,18 +268,16 @@ export default function ContactForm({ locale }: ContactFormProps) {
                                     label={t('phone')}
                                     type="tel"
                                     value={formData.phone}
-                                    onChange={(value) => handleInputChange('phone', value)}
+                                    onChange={(e) => handleInputChange('phone', e.target.value)}
                                     error={errors.phone}
-                                    required
                                 />
                                 <FormSelection
                                     id="theme"
                                     label={t('subject')}
                                     value={formData.theme}
-                                    onChange={(value) => handleInputChange('theme', value)}
+                                    onChange={(e) => handleInputChange('theme', e.target.value)}
                                     options={themes}
                                     error={errors.theme}
-                                    required
                                 />
                             </div>
 
@@ -289,20 +286,17 @@ export default function ContactForm({ locale }: ContactFormProps) {
                                     id="state"
                                     label="Estado"
                                     value={formData.state}
-                                    onChange={(value) => handleInputChange('state', value)}
+                                    onChange={(e) => handleInputChange('state', e.target.value)}
                                     options={states}
                                     error={errors.state}
-                                    required
-                                    loading={loadingStates}
                                 />
                                 <FormSelection
                                     id="city"
                                     label="Cidade"
                                     value={formData.city}
-                                    onChange={(value) => handleInputChange('city', value)}
+                                    onChange={(e) => handleInputChange('city', e.target.value)}
                                     options={formData.state ? cities[formData.state as keyof typeof cities] || [] : []}
                                     error={errors.city}
-                                    required
                                     disabled={!formData.state}
                                 />
                             </div>
@@ -380,6 +374,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
                 <Toast
                     message={t('success')}
                     type="success"
+                    isVisible={showToast}
                     onClose={() => setShowToast(false)}
                 />
             )}

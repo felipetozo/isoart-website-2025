@@ -308,6 +308,10 @@
       "submit": "Enviar mensaje",
       "success": "¡Su mensaje fue enviado exitosamente!",
       "contact": "Contáctanos:"
+    },
+    "hero": {
+      "title": "Contáctanos",
+      "description": "Estamos listos para atenderle y proporcionar las mejores soluciones para su proyecto."
     }
   },
   "sobreEpsPirPage": {
