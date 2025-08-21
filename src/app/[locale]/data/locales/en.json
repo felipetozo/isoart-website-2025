@@ -488,12 +488,12 @@
       "title": "EPS: Efficiency and Sustainability",
       "description": "Expanded Polystyrene (EPS), popularly known as Styrofoam, is a lightweight and versatile material, widely used for its thermal and acoustic insulation properties. Additionally, it is 100% recyclable and does not emit substances harmful to the environment, making it a sustainable choice for various applications.",
       "subtitle": "Main benefits of EPS:",
-      "benefits": [
-        "Non-toxic and sustainable",
-        "No CFC emissions",
-        "100% recyclable and reusable",
-        "Lightweight material resistant to impacts"
-      ],
+      "benefits": {
+        "benefit1": "Non-toxic and sustainable",
+        "benefit2": "No CFC emissions",
+        "benefit3": "100% recyclable and reusable",
+        "benefit4": "Lightweight material resistant to impacts"
+      },
       "applicationsTitle": "Applications",
       "applicationsDescription": "Used in thermal and acoustic insulation, packaging, civil construction, decoration and other applications. Ideal for commercial, industrial and residential buildings, ensuring energy efficiency, comfort and protection."
     },
@@ -501,14 +501,14 @@
       "title": "PIR: High Technology and Safety",
       "description": "Polyisocyanurate (PIR) is a high-performance insulating material, mainly used in the manufacture of thermal tiles and panels. Produced in an automated continuous line, PIR ensures superior thermal insulation and high fire resistance, being essential for industrial, commercial and residential projects.",
       "subtitle": "Main benefits of PIR:",
-      "benefits": [
-        "High-performance thermal insulation",
-        "Fire resistance with self-extinguishing retardant",
-        "Greater durability and mechanical resistance",
-        "Quick and clean assembly",
-        "Excellent acoustic insulation ( -30dB )",
-        "Sustainable, in compliance with the Montreal Protocol"
-      ]
+      "benefits": {
+        "benefit1": "High-performance thermal insulation",
+        "benefit2": "Fire resistance with self-extinguishing retardant",
+        "benefit3": "Greater durability and mechanical resistance",
+        "benefit4": "Quick and clean assembly",
+        "benefit5": "Excellent acoustic insulation ( -30dB )",
+        "benefit6": "Sustainable, in compliance with the Montreal Protocol"
+      }
     },
     "pirApplications": {
       "title": "PIR Applications:",
@@ -551,7 +551,10 @@
         "vermelhoFogo": "Fire Red",
         "azulGenciana": "Gentian Blue",
         "verdeTrafego": "Traffic Green",
-        "preto": "Black"
+        "preto": "Black",
+        "naturalGalvanizado": "Natural Galvanized",
+        "amadeiradoClaro": "Light Wooden",
+        "amadeiradoEscuro": "Dark Wooden"
       },
       "aviso": "Standard White RAL 9003. Other colors are suggestions, availability upon request."
     },

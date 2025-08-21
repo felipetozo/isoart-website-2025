@@ -488,12 +488,12 @@
       "title": "EPS: Eficiencia y Sostenibilidad",
       "description": "El Poliestireno Expandido (EPS), conocido popularmente como Poliestireno, es un material ligero y versátil, ampliamente utilizado por sus propiedades de aislamiento térmico y acústico. Además, es 100% reciclable y no emite sustancias perjudiciales para el medio ambiente, siendo una elección sostenible para diversas aplicaciones.",
       "subtitle": "Principales beneficios del EPS:",
-      "benefits": [
-        "No tóxico y sostenible",
-        "Sin emisión de CFC",
-        "100% reciclable y reutilizable",
-        "Material ligero resistente a impactos"
-      ],
+      "benefits": {
+        "benefit1": "No tóxico y sostenible",
+        "benefit2": "Sin emisión de CFC",
+        "benefit3": "100% reciclable y reutilizable",
+        "benefit4": "Material ligero resistente a impactos"
+      },
       "applicationsTitle": "Aplicaciones",
       "applicationsDescription": "Utilizado en aislamiento térmico y acústico, embalajes, construcción civil, decoración y otras aplicaciones. Ideal para edificaciones comerciales, industriales y residenciales, garantizando eficiencia energética, confort y protección."
     },
@@ -501,14 +501,14 @@
       "title": "PIR: Alta Tecnología y Seguridad",
       "description": "El Poliisocianurato (PIR) es un material aislante de alto rendimiento, utilizado principalmente en la fabricación de tejas y paneles térmicos. Producido en línea continua automatizada, el PIR garantiza un aislamiento térmico superior y alta resistencia al fuego, siendo esencial para proyectos industriales, comerciales y residenciales.",
       "subtitle": "Principales beneficios del PIR:",
-      "benefits": [
-        "Aislamiento térmico de alto rendimiento",
-        "Resistencia al fuego con retardante autoextinguible",
-        "Mayor durabilidad y resistencia mecánica",
-        "Montaje rápido y limpio",
-        "Excelente aislamiento acústico ( -30dB )",
-        "Sostenible, en conformidad con el Protocolo de Montreal"
-      ]
+      "benefits": {
+        "benefit1": "Aislamiento térmico de alto rendimiento",
+        "benefit2": "Resistencia al fuego con retardante autoextinguible",
+        "benefit3": "Mayor durabilidad y resistencia mecánica",
+        "benefit4": "Montaje rápido y limpio",
+        "benefit5": "Excelente aislamiento acústico ( -30dB )",
+        "benefit6": "Sostenible, en conformidad con el Protocolo de Montreal"
+      }
     },
     "pirApplications": {
       "title": "Aplicaciones del PIR:",
@@ -551,7 +551,10 @@
         "vermelhoFogo": "Rojo Fuego",
         "azulGenciana": "Azul Genciana",
         "verdeTrafego": "Verde Tráfico",
-        "preto": "Negro"
+        "preto": "Negro",
+        "naturalGalvanizado": "Galvanizado Natural",
+        "amadeiradoClaro": "Madera Clara",
+        "amadeiradoEscuro": "Madera Oscura"
       },
       "aviso": "Estándar Blanco RAL 9003. Otros colores son sugerencias, disponibilidad bajo consulta."
     },

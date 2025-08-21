@@ -1,3 +1,5 @@
+'use client';
+
 import styles from "./page.module.css";
 import Button from "../views/ui/button/button";
 import Sustentabilidade from "../components/Sustentabilidade/sustentabilidade";
@@ -6,17 +8,15 @@ import ContactComponent from "../components/contact/contact-component";
 import { CheckCircle } from "lucide-react";
 import { TbAlertTriangle } from "react-icons/tb";
 import Image from "next/image";
-import { getTranslations } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
-interface SobreEpsPirPageProps {
-  params: Promise<{ locale: string }>;
-}
-
-async function SobreEpsPirPage({ params }: SobreEpsPirPageProps) {
-  const { locale } = await params;
+export default function SobreEpsPirPage() {
+  const params = useParams();
+  const locale = params.locale as string;
   
   // Hook de traduções
-  const t = await getTranslations('sobreEpsPirPage');
+  const t = useTranslations('sobreEpsPirPage');
   
   return (
     <div>
@@ -115,7 +115,7 @@ async function SobreEpsPirPage({ params }: SobreEpsPirPageProps) {
                   t('pir.benefits.benefit6')
                 ].map((benefit: string, index: number) => (
                   <div className={styles['benefit-item']} key={index}>
-                    <span className={styles['benefit-icon']}><CheckCircle size={2.5} /></span>
+                    <span className={styles['benefit-icon']}><CheckCircle size={28} strokeWidth={2.5} /></span>
                     <span>{benefit}</span>
                   </div>
                 ))}
@@ -286,5 +286,3 @@ async function SobreEpsPirPage({ params }: SobreEpsPirPageProps) {
     </div>
   );
 }
-
-export default SobreEpsPirPage;
