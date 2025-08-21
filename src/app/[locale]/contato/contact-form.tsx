@@ -59,8 +59,6 @@ export default function ContactForm({ locale }: ContactFormProps) {
         { value: 'embalagens', label: 'Embalagens' },
     ];
 
-    // Estados serão carregados dinamicamente da API
-
     const cities = {
         PR: [
             { value: '', label: 'Selecione uma cidade' },
@@ -101,12 +99,11 @@ export default function ContactForm({ locale }: ContactFormProps) {
             { value: '', label: 'Selecione uma cidade' },
             { value: 'rio-de-janeiro', label: 'Rio de Janeiro' },
             { value: 'niteroi', label: 'Niterói' },
-            { value: 'nova-iguacu', label: 'Nova Iguaçu' },
             { value: 'duque-de-caxias', label: 'Duque de Caxias' },
+            { value: 'nova-iguacu', label: 'Nova Iguaçu' },
         ],
     };
 
-    // Estados serão carregados dinamicamente da API
     useEffect(() => {
         const fetchStates = async () => {
             setLoadingStates(true);
@@ -116,7 +113,6 @@ export default function ContactForm({ locale }: ContactFormProps) {
                 setStates(data);
             } catch (error) {
                 console.error('Erro ao carregar estados:', error);
-                // Fallback para estados estáticos
                 setStates([
                     { value: 'PR', label: 'Paraná' },
                     { value: 'SP', label: 'São Paulo' },
@@ -135,7 +131,6 @@ export default function ContactForm({ locale }: ContactFormProps) {
 
     const handleInputChange = (field: keyof FormData, value: string | boolean) => {
         setFormData(prev => ({ ...prev, [field]: value }));
-        // Limpar erro do campo quando o usuário começar a digitar
         if (errors[field]) {
             setErrors(prev => ({ ...prev, [field]: undefined }));
         }
@@ -179,16 +174,11 @@ export default function ContactForm({ locale }: ContactFormProps) {
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
-        console.log('🚀 handleSubmit chamado!');
         e.preventDefault();
         
-        console.log('🔍 Validando formulário...');
         if (!validateForm()) {
-            console.log('❌ Validação falhou, retornando...');
             return;
         }
-        
-        console.log('✅ Validação passou, enviando formulário...');
 
         setIsSubmitting(true);
 
@@ -205,7 +195,6 @@ export default function ContactForm({ locale }: ContactFormProps) {
             });
 
             if (response.ok) {
-                console.log('✅ Formulário enviado com sucesso! Mostrando toast...');
                 setShowToast(true);
                 setFormData({
                     name: '',
@@ -232,143 +221,128 @@ export default function ContactForm({ locale }: ContactFormProps) {
 
     return (
         <>
-            {/* Hero Section */}
-            <section className={styles['hero-section']}>
-                <div className={styles['hero-mask']}>
-                    <div className={styles['hero-wrapper']}>
-                        <h2 className={styles['hero-title']}>{t('title')}</h2>
-                        <p className={styles['hero-description']}>
-                            {t('description')}
-                        </p>
-                    </div>
+            <section className={styles['contato-hero-section']}>
+                <div className={styles['contato-hero-wrapper']}>
+                    <h1>Entre em Contato</h1>
+                    <p>Preencha o formulário abaixo e entraremos em contato em breve</p>
                 </div>
             </section>
 
-            {/* Form Section */}
-            <section className={styles['form-section']}>
-                <div className={styles['form-wrapper']}>
-                    <div className={styles['form-container']}>
-                        <form onSubmit={handleSubmit} className={styles['contact-form']}>
-                            <div className={styles['form-row']}>
-                                <FormField
-                                    id="name"
-                                    label={t('form.name')}
-                                    type="text"
-                                    value={formData.name}
-                                    onChange={(e) => handleInputChange('name', e.target.value)}
-                                    error={errors.name}
+            <section className={styles['contato-form-section']}>
+                <div className={styles['contato-form-wrapper']}>
+                    <h4>Formulário de Contato</h4>
+                    <form onSubmit={handleSubmit} className={styles['contato-form']}>
+                        <div className={styles['contato-form-fields']}>
+                            <FormField
+                                id="name"
+                                label="Nome completo"
+                                type="text"
+                                value={formData.name}
+                                onChange={(e) => handleInputChange('name', e.target.value)}
+                                error={errors.name}
+                                theme="light"
+                            />
+                            <FormField
+                                id="email"
+                                label="E-mail"
+                                type="email"
+                                value={formData.email}
+                                onChange={(e) => handleInputChange('email', e.target.value)}
+                                error={errors.email}
+                                theme="light"
+                            />
+                            <FormField
+                                id="phone"
+                                label="Telefone"
+                                type="tel"
+                                value={formData.phone}
+                                onChange={(e) => handleInputChange('phone', e.target.value)}
+                                error={errors.phone}
+                                theme="light"
+                            />
+                            <FormSelection
+                                id="theme"
+                                label="Assunto"
+                                value={formData.theme}
+                                onChange={(e) => handleInputChange('theme', e.target.value)}
+                                options={themes}
+                                error={errors.theme}
+                                theme="light"
+                            />
+                            <FormSelection
+                                id="state"
+                                label="Estado"
+                                value={formData.state}
+                                onChange={(e) => handleInputChange('state', e.target.value)}
+                                options={states}
+                                error={errors.state}
+                                theme="light"
+                            />
+                            <FormField
+                                id="city"
+                                label="Cidade"
+                                type="text"
+                                value={formData.city}
+                                onChange={(e) => handleInputChange('city', e.target.value)}
+                                placeholder="Digite sua cidade"
+                                error={errors.city}
+                                theme="light"
+                            />
+                            <div className={styles['terms-container']}>
+                                <input
+                                    type="checkbox"
+                                    id="terms"
+                                    name="terms"
+                                    checked={formData.terms}
+                                    onChange={(e) => handleInputChange('terms', e.target.checked)}
+                                    className={styles['terms-checkbox']}
                                 />
-                                <FormField
-                                    id="email"
-                                    label={t('form.email')}
-                                    type="email"
-                                    value={formData.email}
-                                    onChange={(e) => handleInputChange('email', e.target.value)}
-                                    error={errors.email}
-                                />
-                            </div>
-
-                            <div className={styles['form-row']}>
-                                <FormField
-                                    id="phone"
-                                    label={t('form.phone')}
-                                    type="tel"
-                                    value={formData.phone}
-                                    onChange={(e) => handleInputChange('phone', e.target.value)}
-                                    error={errors.phone}
-                                />
-                                <FormSelection
-                                    id="theme"
-                                    label={t('form.subject')}
-                                    value={formData.theme}
-                                    onChange={(e) => handleInputChange('theme', e.target.value)}
-                                    options={themes}
-                                    error={errors.theme}
-                                />
-                            </div>
-
-                            <div className={styles['form-row']}>
-                                <FormSelection
-                                    id="state"
-                                    label="Estado"
-                                    value={formData.state}
-                                    onChange={(e) => handleInputChange('state', e.target.value)}
-                                    options={states}
-                                    error={errors.state}
-                                />
-                                <FormSelection
-                                    id="city"
-                                    label="Cidade"
-                                    value={formData.city}
-                                    onChange={(e) => handleInputChange('city', e.target.value)}
-                                    options={formData.state ? cities[formData.state as keyof typeof cities] || [] : []}
-                                    error={errors.city}
-                                    disabled={!formData.state}
-                                />
-                            </div>
-
-                            <div className={styles['form-row']}>
-                                <div className={styles['terms-container']}>
-                                    <label className={styles['terms-label']}>
-                                        <input
-                                            type="checkbox"
-                                            checked={formData.terms}
-                                            onChange={(e) => handleInputChange('terms', e.target.checked)}
-                                            className={styles['terms-checkbox']}
-                                        />
-                                        <span className={styles['terms-text']}>
-                                            Li e aceito os <a href={`/${locale}/privacidade`} target="_blank" rel="noopener noreferrer">termos de privacidade</a>
-                                        </span>
-                                    </label>
-                                    {errors.terms && <span className={styles['error-message']}>{errors.terms}</span>}
-                                </div>
+                                <label htmlFor="terms" className={styles['terms-text']}>
+                                    Li e aceito os <a href={`/${locale}/privacidade`} className={styles['terms-link']} target="_blank" rel="noopener noreferrer">termos de privacidade</a>
+                                </label>
+                                {errors.terms && <span className={styles['theme-error']}>{errors.terms}</span>}
                             </div>
 
                             {errors.submit && (
-                                <div className={styles['error-message']}>{errors.submit}</div>
+                                <span className={styles['theme-error']}>{errors.submit}</span>
                             )}
 
-                            <div className={styles['submit-container']}>
-                                <Button
-                                    type="submit"
-                                    variant="primary"
-                                    size="large"
-                                    disabled={isSubmitting}
-                                    className={styles['submit-button']}
-                                >
-                                    {isSubmitting ? 'Enviando...' : t('form.submit')}
-                                </Button>
-                            </div>
-                        </form>
-                    </div>
+                            <Button
+                                type="submit"
+                                variant="primary"
+                                size="large"
+                                disabled={isSubmitting}
+                            >
+                                {isSubmitting ? 'Enviando...' : 'Enviar mensagem'}
+                            </Button>
+                        </div>
+                    </form>
+                </div>
 
-                    <div className={styles['contact-info']}>
-                        <h3>Informações de Contato</h3>
+                <div className={styles['contact-info']}>
+                    <h3>Informações de Contato</h3>
+                    <div className={styles['contact-items']}>
                         <div className={styles['contact-item']}>
                             <MdOutlinePhoneInTalk />
                             <div>
-                                <strong>Telefone</strong>
                                 <p>+55 45 3231 1699</p>
                             </div>
                         </div>
                         <div className={styles['contact-item']}>
                             <BsWhatsapp />
                             <div>
-                                <strong>WhatsApp</strong>
                                 <p>+55 45 99133 9642</p>
                             </div>
                         </div>
                         <div className={styles['contact-item']}>
                             <MdOutlineMarkEmailUnread />
                             <div>
-                                <strong>E-mail</strong>
                                 <p>contato@isoart.com.br</p>
                             </div>
                         </div>
                         <div className={styles['contact-item']}>
                             <MdLocationOn />
                             <div>
-                                <strong>Endereço</strong>
                                 <p>Rua Dorivaldo Soncela, 1490<br />Santa Tereza do Oeste - Paraná - Brasil</p>
                             </div>
                         </div>
@@ -377,13 +351,11 @@ export default function ContactForm({ locale }: ContactFormProps) {
             </section>
 
             <Toast
-                message={t('form.success')}
+                message="Sua mensagem foi enviada com sucesso!"
                 type="success"
                 isVisible={showToast}
                 onClose={() => setShowToast(false)}
             />
-            {/* Debug: mostrar estado do toast */}
-            {console.log('🔍 Estado do showToast:', showToast)}
         </>
     );
 }
