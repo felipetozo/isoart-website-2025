@@ -293,7 +293,9 @@
     "description": "Empresa líder em soluções térmicas com EPS e PIR para construção civil, embalagens e isolamento.",
     "mission": "Nossa Missão",
     "vision": "Nossa Visão",
-    "values": "Nossos Valores"
+    "values": "Nossos Valores",
+    "tagline": "Expanda sua criatividade",
+    "fullDescription": "A Isoart é uma empresa especializada em soluções térmicas com EPS e PIR para construção civil, embalagens e isolamento. Com anos de experiência no mercado, oferecemos produtos inovadores que combinam eficiência energética, sustentabilidade e qualidade superior."
   },
   "contactPage": {
     "title": "Entre em Contato",
@@ -361,7 +363,7 @@
         "frisado": "Aço frisado",
         "filmeAluminio": "Filme alumínio de face branca ou preta"
       },
-      "cores": {
+      "colors": {
         "ral9003": "RAL 9003",
         "ral7035": "RAL 7035",
         "ral7040": "RAL 7040",

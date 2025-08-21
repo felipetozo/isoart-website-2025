@@ -293,7 +293,9 @@
     "description": "Leading company in thermal solutions with EPS and PIR for civil construction, packaging and insulation.",
     "mission": "Our Mission",
     "vision": "Our Vision",
-    "values": "Our Values"
+    "values": "Our Values",
+    "tagline": "Expand your creativity",
+    "fullDescription": "Isoart is a company specialized in thermal solutions with EPS and PIR for civil construction, packaging and insulation. With years of market experience, we offer innovative products that combine energy efficiency, sustainability and superior quality."
   },
   "contactPage": {
     "title": "Contact Us",
@@ -361,7 +363,7 @@
         "frisado": "Ribbed steel",
         "filmeAluminio": "Aluminum film with white or black face"
       },
-      "cores": {
+      "colors": {
         "ral9003": "RAL 9003",
         "ral7035": "RAL 7035",
         "ral7040": "RAL 7040",
