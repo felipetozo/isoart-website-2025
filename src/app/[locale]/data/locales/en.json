@@ -308,6 +308,10 @@
       "submit": "Send message",
       "success": "Your message was sent successfully!",
       "contact": "Contact us:"
+    },
+    "hero": {
+      "title": "Contact Us",
+      "description": "We are ready to serve you and provide the best solutions for your project."
     }
   },
   "sobreEpsPirPage": {
