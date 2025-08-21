@@ -1,4 +1,5 @@
-/* eslint-disable */
+'use client';
+
 import { notFound } from 'next/navigation';
 import styles from './page.module.css';
 import Link from 'next/link';
@@ -13,6 +14,8 @@ import { TbChecks, TbHome, TbMicroscope, TbBuildingFactory2, TbSnowflake, TbMedi
 import { IoFastFoodOutline } from "react-icons/io5";
 import ImageCarousel from '@/app/[locale]/components/image-carousel/image-carousel';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
 interface ProductData {
     id: number;
@@ -90,10 +93,8 @@ interface CategoryData {
 }
 
 interface ProductPageProps {
-    params: Promise<{ category: string; product: string; locale: string }>;
 }
 
-// Função para renderizar ícones do Tabler
 function renderIcon(iconName: string) {
     const iconMap: { [key: string]: React.ComponentType<{ size?: number }> } = {
         'TbHome': TbHome,
@@ -119,40 +120,70 @@ function renderIcon(iconName: string) {
     return IconComponent ? <IconComponent size={24} /> : <span>{iconName}</span>;
 }
 
-// Função para buscar dados da categoria
-async function getCategoryData(categorySlug: string): Promise<CategoryData | undefined> {
-    let categoryData: CategoryData | undefined;
-
-    try {
-        const normalizedCategory = categorySlug.toLowerCase().replace(/ /g, '-');
-        const categoryFile = await import(`../../../data/categories/${normalizedCategory}.json`);
-        categoryData = categoryFile.default as CategoryData;
-    } catch (error) {
-        categoryData = (menuData as CategoryData[]).find((item: CategoryData) => item.slug === categorySlug);
-    }
-
-    return categoryData;
-}
-
-async function ProductPage({ params }: ProductPageProps) {
-    const { category, product, locale } = await params;
+export default function ProductPage() {
+    const params = useParams();
+    const category = params.category as string;
+    const product = params.product as string;
+    const locale = params.locale as string;
     
-    // Hook de traduções (será usado dentro da função)
+    // Estados para dados do produto e categoria
+    const [productData, setProductData] = useState<ProductData | null>(null);
+    const [categoryData, setCategoryData] = useState<CategoryData | null>(null);
+    const [loading, setLoading] = useState(true);
+    
+    // Hook de traduções
     const t = useTranslations('productPage');
     const tCommon = useTranslations('common.buttons');
+    const tSections = useTranslations('common.sections');
+    
+    useEffect(() => {
+        const loadProductData = async () => {
+            try {
+                // Primeiro, buscar dados básicos da categoria do menuData
+                const categoryDataTemp = (menuData as CategoryData[]).find((item: CategoryData) => item.slug === category);
+                
+                if (!categoryDataTemp) {
+                    notFound();
+                    return;
+                }
 
-    let productData: ProductData | undefined;
+                setCategoryData(categoryDataTemp);
 
-    try {
-        const normalizedCategory = category.toLowerCase().replace(/ /g, '-');
-        const normalizedProduct = product.toLowerCase().replace(/ /g, '-');
-        const productFile = await import(`../../../data/products/${normalizedCategory}/${normalizedProduct}.json`);
-        productData = productFile.default as ProductData;
-    } catch (error) {
-        const categoryData = (menuData as CategoryData[]).find((item: CategoryData) => item.slug === category);
-        if (categoryData) {
-            productData = categoryData.products.find((p: ProductData) => p.slug === product);
-        }
+                // Tentar carregar dados detalhados do produto individual via API
+                try {
+                    const response = await fetch(`/api/products/${category}/${product}`);
+                    
+                    if (response.ok) {
+                        const detailedProductData = await response.json();
+                        if (detailedProductData) {
+                            setProductData(detailedProductData);
+                            return;
+                        }
+                    }
+                } catch (error) {
+                    // Silenciosamente fallback para dados básicos
+                }
+
+                // Fallback para dados básicos do menuData
+                const basicProductData = categoryDataTemp.products.find((p: ProductData) => p.slug === product);
+                if (basicProductData) {
+                    setProductData(basicProductData);
+                } else {
+                    notFound();
+                }
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+                notFound();
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        loadProductData();
+    }, [category, product]);
+
+    if (loading) {
+        return <div>Carregando...</div>;
     }
 
     if (!productData) {
@@ -160,7 +191,7 @@ async function ProductPage({ params }: ProductPageProps) {
     }
 
     // Buscar dados da categoria para pegar os benefícios
-    const categoryData = await getCategoryData(category);
+    // const categoryData = await getCategoryData(category); // This line is removed as categoryData is now state
 
     const heroSection = productData.hero || {
         title: productData.name,
@@ -175,14 +206,26 @@ async function ProductPage({ params }: ProductPageProps) {
         description: t('defaults.categoryDescriptionText')
     };
 
-    // Usar os benefícios da categoria se existirem, senão usar os benefícios do produto ou padrão
-    const benefits = categoryData?.benefits || productData.benefits || t('defaults.defaultBenefits');
+    // Usar os benefícios específicos do produto se existirem, senão usar os da categoria, senão usar padrão
+    const defaultBenefits = [
+        { id: 1, title: "Qualidade Superior", description: "Produtos com rigoroso controle de qualidade." },
+        { id: 2, title: "Eficiência Garantida", description: "Soluções que entregam o melhor desempenho." }
+    ];
+    const benefits = productData.benefits || categoryData?.benefits || defaultBenefits;
 
-    const generalCharacteristics = productData.generalCharacteristics || t('defaults.generalCharacteristics');
+    const defaultGeneralCharacteristics = [
+        "Adaptações personalizadas de altura, largura e comprimento",
+        "Menor carga sobre a estrutura com excelente desempenho mecânico",
+        "Mais fácil de transportar e montar, otimizando o tempo da obra",
+        "Menor consumo de recursos como concreto, aço e madeira",
+        "Conforto térmico e redução de ruídos em ambientes internos",
+        "Recebe chapisco e reboco com ótima aderência"
+    ];
+    const generalCharacteristics = productData.generalCharacteristics || defaultGeneralCharacteristics;
 
-    const applications = productData.applications || {
-        title: t('defaults.applicationsTitle'),
-        description: t('defaults.applicationsDescription'),
+    const defaultApplications = {
+        title: "Maior economia, agilidade na execução e conforto térmico com menor esforço estrutural",
+        description: "A Telha Térmica Isoart é fabricada com blocos de poliestireno expandido ou poliisocianurato, proporcionando telhas mais leves, com menor consumo de concreto e aço, fácil manuseio e excelente isolamento térmico. Ideal para obras que exigem rapidez, desempenho e redução de custos.",
         indications: [
             { icon: 'TbHome', text: 'Casas e sobrados' },
             { icon: 'TbBuilding', text: 'Prédios residenciais' },
@@ -190,8 +233,15 @@ async function ProductPage({ params }: ProductPageProps) {
             { icon: 'TbBuildingStore', text: 'Estabelecimentos comerciais' }
         ]
     };
+    const applications = productData.applications || defaultApplications;
 
-    const tabDescriptions = productData.tabDescriptions || t('defaults.tabDescriptions');
+    const defaultTabDescriptions = {
+        "Alívio de carga na estrutura": "As Telhas Térmicas Isoart reduzem significativamente a carga sobre a estrutura, permitindo projetos mais leves e econômicos sem comprometer a segurança ou durabilidade.",
+        "Economia na obra": "Com menor consumo de materiais como concreto e aço, as Telhas Térmicas otimizam custos e aceleram o cronograma, oferecendo alta eficiência na construção.",
+        "Flexibilidade no projeto": "Personalizáveis em dimensões e acabamentos, essas telhas se adaptam a diversos projetos, desde residências até galpões industriais, garantindo versatilidade.",
+        "Isolamento térmico inteligente": "Projetadas com materiais como PIR e EPS, as Telhas Térmicas oferecem excelente isolamento, reduzindo a necessidade de climatização e aumentando o conforto interno."
+    };
+    const tabDescriptions = productData.tabDescriptions || defaultTabDescriptions;
 
     return (
         <div className={styles['product-page']}>
@@ -236,7 +286,7 @@ async function ProductPage({ params }: ProductPageProps) {
                     </div>
 
                 {/* Características gerais */}
-                    <h3>{t('sections.characteristics')}</h3>
+                    <h3>{tSections('characteristics')}</h3>
                     <div className={styles['features-grid']}>
                         {generalCharacteristics.map((char, index) => (
                             <div key={index} className={styles['feature']}>
@@ -269,7 +319,7 @@ async function ProductPage({ params }: ProductPageProps) {
             {productData.modelsTable && (
                 <section className={styles['models-table-section']}>
                     <div className={styles['models-table-wrapper']}>
-                        <h5 className={styles['models-table-title']}>{productData.modelsTable.title || t('sections.modelsTableTitle')}</h5>
+                        <h5 className={styles['models-table-title']}>{productData.modelsTable.title || tSections('modelsTableTitle')}</h5>
                         <div className={styles['models-table-container']}>
                             <table className={styles['models-table']}>
                                 <thead>
@@ -303,7 +353,7 @@ async function ProductPage({ params }: ProductPageProps) {
                                 <p className={styles['models-table-note']}>{productData.modelsTable.note}</p>
                             )}
                             {!productData.modelsTable.note && (
-                                <p className={styles['models-table-note']}>{t('sections.modelsTableNote')}</p>
+                                <p className={styles['models-table-note']}>{tSections('modelsTableNote')}</p>
                             )}
                         </div>
                     </div>
@@ -325,55 +375,10 @@ async function ProductPage({ params }: ProductPageProps) {
             )}
 
             {/* PIR Incêndio Component - Apenas para categoria telhas-e-paineis */}
-            {category === 'telhas-e-paineis' && <IncendioComponent />}
+            {category === 'telhas-e-paineis' && <IncendioComponent locale={locale} />}
 
             <SobreEmpresa locale={locale} />
             <ContactComponent locale={locale} />
         </div>
     );
-}
-
-export default ProductPage;
-
-export async function generateStaticParams() {
-    const allProducts = (menuData as CategoryData[]).flatMap((category: CategoryData) =>
-        category.products.map((product: ProductData) => ({
-            category: category.slug,
-            product: product.slug,
-        }))
-    );
-    return allProducts;
-}
-
-export async function generateMetadata({ params }: ProductPageProps) {
-    const { category, product } = await params;
-    let productData: ProductData | undefined;
-
-    try {
-        const normalizedCategory = category.toLowerCase().replace(/ /g, '-');
-        const normalizedProduct = product.toLowerCase().replace(/ /g, '-');
-        const productFile = await import(`../../../data/products/${normalizedCategory}/${normalizedProduct}.json`);
-        productData = productFile.default as ProductData;
-    } catch (error) {
-        const categoryData = (menuData as CategoryData[]).find((item: CategoryData) => item.slug === category);
-        if (categoryData) {
-            productData = categoryData.products.find((p: ProductData) => p.slug === product);
-        }
-    }
-
-    if (!productData) {
-        return {
-            title: 'Produto não encontrado - ISOART',
-        };
-    }
-
-    return {
-        title: `${productData.name} - ISOART`,
-        description: productData.description || `Detalhes do produto ${productData.name} da ISOART`,
-        openGraph: {
-            title: `${productData.name} - ISOART`,
-            description: productData.description || `Detalhes do produto ${productData.name} da ISOART`,
-            images: productData.image ? [productData.image] : [],
-        },
-    };
 }

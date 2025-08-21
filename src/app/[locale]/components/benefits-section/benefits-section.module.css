@@ -35,3 +35,11 @@
     margin-bottom: 1rem;
     color: rgba(146, 151, 120, 0.5);
 }
+
+.no-benefits {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 2rem;
+    color: rgba(146, 151, 120, 0.7);
+    font-style: italic;
+}

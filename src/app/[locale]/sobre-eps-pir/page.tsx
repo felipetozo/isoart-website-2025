@@ -237,7 +237,7 @@ export default function SobreEpsPirPage() {
       </section>
 
       {/* Proteção contra incêndio */}
-      <IncendioComponent />
+      <IncendioComponent locale={locale} />
 
       {/* Linha de produção */}
       <section className={styles['linha-producao-section']}>

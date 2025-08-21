@@ -34,27 +34,37 @@ const getBenefitIcon = (title: string): React.ReactElement => {
             return <TbFeather size={40} />;
         case 'Alta Versatilidade':
             return <TbTopologyStar3 size={40} />;
+        case 'Isolamento térmico':
+            return <TbVolumeOff size={40} />;
+        case 'Alta resistência':
+            return <TbShieldShare size={40} />;
         default:
             return <TbWindOff size={40} />;
     }
 };
 
 function BenefitsSection({ benefits }: BenefitsSectionProps) {
-    const t = useTranslations('benefits');
+    const t = useTranslations('common.sections');
 
     return (
         <section className={styles['benefits-section']}>
             <div className={styles['benefits-wrapper']}>
-                <h3 className={styles['benefits-title']}>{t('title')}</h3>
-                {benefits.map((benefit) => (
-                    <div key={benefit.id} className={styles['benefits-card']}>
-                                <div className={styles['benefit-icon']}>
-          {getBenefitIcon(benefit.title)}
+                <h3 className={styles['benefits-title']}>{t('benefits')}</h3>
+                {benefits && benefits.length > 0 ? (
+                    benefits.map((benefit) => (
+                        <div key={benefit.id} className={styles['benefits-card']}>
+                            <div className={styles['benefit-icon']}>
+                                {getBenefitIcon(benefit.title)}
+                            </div>
+                            <h5>{benefit.title}</h5>
+                            <p>{benefit.description}</p>
                         </div>
-                        <h5>{benefit.title}</h5>
-                        <p>{benefit.description}</p>
+                    ))
+                ) : (
+                    <div className={styles['no-benefits']}>
+                        <p>Nenhum benefício disponível</p>
                     </div>
-                ))}
+                )}
             </div>
         </section>
     );

@@ -381,28 +381,8 @@
       "heroDescription": "Descubre la solución ideal para techos eficientes con aislamiento térmico superior.",
       "buttonText": "Solicita un presupuesto",
       "categoryDescriptionTitle": "Las Tejas Térmicas Isoart ofrecen ligereza, economía y excelente rendimiento térmico, optimizando la construcción y asegurando confort a menor costo.",
-      "categoryDescriptionText": "La Teja Térmica Isoart es una solución ligera y eficiente para la construcción civil, reemplazando con ventajas los sistemas tradicionales. Producida con núcleos de poliestireno expandido (EPS) o poliisocianurato (PIR) y revestimiento en acero galvalume, proporciona estructuras más ligeras, reducción de carga en las fundaciones y mayor agilidad en la obra. Además del excelente rendimiento térmico, permite ahorro significativo en concreto, acero y mano de obra, siendo ideal para proyectos que exigen productividad, conforto y costo-beneficio.",
-      "defaultBenefits": [
-        { "id": 1, "title": "Calidad Superior", "description": "Productos con control de calidad riguroso." },
-        { "id": 2, "title": "Eficiencia Garantizada", "description": "Soluciones que entregan el mejor rendimiento." }
-      ],
-      "generalCharacteristics": [
-        "Adaptaciones personalizadas de altura, ancho y largo",
-        "Menor carga sobre la estructura con excelente rendimiento mecánico",
-        "Más fácil de transportar y montar, optimizando el tiempo de la obra",
-        "Menor consumo de recursos como concreto, acero y madera",
-        "Confort térmico y reducción de ruidos en ambientes internos",
-        "Recibe chapisco y revoque con excelente adherencia"
-      ],
-      "applicationsTitle": "Mayor economía, agilidad en la ejecución y confort térmico con menor esfuerzo estructural",
-      "applicationsDescription": "La Teja Térmica Isoart se fabrica con bloques de poliestireno expandido o poliisocianurato, proporcionando tejas más ligeras, con menor consumo de concreto y acero, fácil manejo y excelente aislamiento térmico. Ideal para obras que exigen rapidez, rendimiento y reducción de costos.",
-      "applicationsLabel": "Aplicaciones:",
-      "tabDescriptions": {
-        "Alivio de carga en la estructura": "Las Tejas Térmicas Isoart reducen significativamente la carga sobre la estructura, permitiendo proyectos más ligeros y económicos sin comprometer la seguridad o durabilidad.",
-        "Economía en la obra": "Con menor consumo de materiales como concreto y acero, las Tejas Térmicas optimizan costos y aceleran el cronograma, ofreciendo alta eficiencia en la construcción.",
-        "Flexibilidad en el proyecto": "Personalizables en dimensiones y acabados, estas tejas se adaptan a diversos proyectos, desde residencias hasta galpones industriales, garantizando versatilidad.",
-        "Aislamiento térmico inteligente": "Diseñadas con materiales como PIR y EPS, las Tejas Térmicas ofrecen excelente aislamiento, reduciendo la necesidad de climatización y aumentando el confort interno."
-      }
+      "categoryDescriptionText": "La Teja Térmica Isoart es una solución ligera y eficiente para la construcción civil, reemplazando con ventajas los sistemas tradicionales. Producida con núcleos de poliestireno expandido (EPS) o poliisocianurato (PIR) y revestimiento en acero galvalume, proporciona estructuras más ligeras, reducción de carga en las fundaciones y mayor agilidad en la obra. Además del excelente rendimiento térmico, permite ahorro significativo en concreto, acero y mano de obra, siendo ideal para projetos que exigen productividad, conforto y costo-beneficio.",
+      "applicationsLabel": "Aplicaciones:"
     },
     "sections": {
       "characteristics": "Características:",
@@ -567,6 +547,29 @@
     "title": "Reciclaje de EPS: sostenibilidad y reutilización inteligente.",
     "description": "El Poliestireno Expandido (EPS), popularmente conocido como Poliestireno®, es un material ampliamente utilizado y 100% reciclable. Aunque no es biodegradable, su reciclaje previene impactos ambientales al reducir el volumen de residuos en vertederos.",
     "aviso": "Isoart cuenta con dos centros de reciclaje internos donde reutiliza integralmente los residuos generados, reforzando su compromiso con la sostenibilidad."
+  },
+  "incendio": {
+    "title": "PIR: El escudo protector contra la propagación de incendios",
+    "description": "El rendimiento del Poliisocianurato (PIR) en situaciones de incendio es uno de sus mayores diferenciadores, ofreciendo una capa de protección pasiva esencial para cualquier edificación. A diferencia de otros materiales, el PIR no contribuye a la propagación de llamas.",
+    "description2": "Cuando se expone al fuego, el núcleo del panel PIR reacciona de manera única: forma una capa carbonizada estable y aislante en su superficie. Esta barrera de carbono actúa como un escudo protector, realizando tres funciones cruciales:",
+    "blocos": {
+      "bloco1": {
+        "number": "01",
+        "destaque": "Previene la propagación",
+        "legenda": "La capa carbonizada retarda significativamente la quema del material, conteniendo el foco del incendio y evitando que las llamas se propaguen por la estructura"
+      },
+      "bloco2": {
+        "number": "02",
+        "destaque": "Protege el núcleo",
+        "legenda": "Aísla el resto del panel del calor intenso, manteniendo la integridad estructural por más tiempo"
+      },
+      "bloco3": {
+        "number": "03",
+        "destaque": "Baja emisión de humo",
+        "legenda": "Contribuye a mantener las rutas de escape más visibles y seguras"
+      }
+    },
+    "teste": "La prueba demostrada en las imágenes comprueba esta eficiencia. Incluso bajo la acción directa de un quemador de 30kW durante 30 minutos, el fuego quedó restringido al área de contacto. Al final, el resultado fue solo una carbonización superficial, con el resto del panel intacto y sin ninguna propagación de fuego, demostrando por qué el PIR es la elección más segura e inteligente para su proyecto."
   },
   "sobrePage": {
     "hero": {

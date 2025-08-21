@@ -220,20 +220,17 @@
 }
 
 .img-placeholder {
-    display: flex;
     width: 100%;
+    height: 50vh;
+    margin-bottom: 3rem;
+    border-radius: 0.5rem;
     overflow: hidden;
-    height: 25rem;
-    margin: 0 auto;
-    max-width: 1440px;
-    justify-content: center;
+    position: relative;
 }
 
-.img-placeholder img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.2rem;
-}
+
+
+
 
 /* Models Table Section */
 .models-table-section {

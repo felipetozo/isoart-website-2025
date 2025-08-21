@@ -382,27 +382,7 @@
       "buttonText": "Solicite um orçamento",
       "categoryDescriptionTitle": "As Telhas Térmicas Isoart oferecem leveza, economia e excelente desempenho térmico, otimizando a obra e garantindo conforto com menor custo.",
       "categoryDescriptionText": "A Telha Térmica Isoart é uma solução leve e eficiente para a construção civil, substituindo com vantagens os sistemas tradicionais. Produzida com núcleos de poliestireno expandido (EPS) ou poliisocianurato (PIR) e revestimento em aço galvalume, proporciona estruturas mais leves, redução de carga nas fundações e maior agilidade na obra. Além de excelente desempenho térmico, permite economia significativa de concreto, aço e mão de obra, sendo ideal para projetos que exigem produtividade, conforto e custo-benefício.",
-      "defaultBenefits": [
-        { "id": 1, "title": "Qualidade Superior", "description": "Produtos com rigoroso controle de qualidade." },
-        { "id": 2, "title": "Eficiência Garantida", "description": "Soluções que entregam o melhor desempenho." }
-      ],
-      "generalCharacteristics": [
-        "Adaptações personalizadas de altura, largura e comprimento",
-        "Menor carga sobre a estrutura com excelente desempenho mecânico",
-        "Mais fácil de transportar e montar, otimizando o tempo da obra",
-        "Menor consumo de recursos como concreto, aço e madeira",
-        "Conforto térmico e redução de ruídos em ambientes internos",
-        "Recebe chapisco e reboco com ótima aderência"
-      ],
-      "applicationsTitle": "Maior economia, agilidade na execução e conforto térmico com menor esforço estrutural",
-      "applicationsDescription": "A Telha Térmica Isoart é fabricada com blocos de poliestireno expandido ou poliisocianurato, proporcionando telhas mais leves, com menor consumo de concreto e aço, fácil manuseio e excelente isolamento térmico. Ideal para obras que exigem rapidez, desempenho e redução de custos.",
-      "applicationsLabel": "Aplicações:",
-      "tabDescriptions": {
-        "Alívio de carga na estrutura": "As Telhas Térmicas Isoart reduzem significativamente a carga sobre a estrutura, permitindo projetos mais leves e econômicos sem comprometer a segurança ou durabilidade.",
-        "Economia na obra": "Com menor consumo de materiais como concreto e aço, as Telhas Térmicas otimizam custos e aceleram o cronograma, oferecendo alta eficiência na construção.",
-        "Flexibilidade no projeto": "Personalizáveis em dimensões e acabamentos, essas telhas se adaptam a diversos projetos, desde residências até galpões industriais, garantindo versatilidade.",
-        "Isolamento térmico inteligente": "Projetadas com materiais como PIR e EPS, as Telhas Térmicas oferecem excelente isolamento, reduzindo a necessidade de climatização e aumentando o conforto interno."
-      }
+      "applicationsLabel": "Aplicações:"
     },
     "sections": {
       "characteristics": "Características:",
@@ -567,6 +547,29 @@
     "title": "Reciclagem de EPS: sustentabilidade e reaproveitamento inteligente.",
     "description": "O Poliestireno Expandido (EPS), popularmente conhecido como Isopor®, é um material amplamente utilizado e 100% reciclável. Apesar de não ser biodegradável, sua reciclagem evita impactos ambientais, reduzindo o volume de resíduos em aterros sanitários.",
     "aviso": "A Isoart conta com dois centros de reciclagem internos, onde reutiliza integralmente os resíduos gerados, reforçando seu compromisso com a sustentabilidade."
+  },
+  "incendio": {
+    "title": "PIR: O escudo protetor contra a propagação de incêndios",
+    "description": "A performance do Poliisocianurato (PIR) em situações de incêndio é um de seus maiores diferenciais, oferecendo uma camada de proteção passiva essencial para qualquer edificação. Diferente de outros materiais, o PIR não contribui para a propagação de chamas.",
+    "description2": "Quando exposto ao fogo, o núcleo do painel de PIR reage de forma única: ele forma uma camada carbonizada estável e isolante em sua superfície. Essa barreira de carbono age como um escudo protetor, realizando três funções cruciais:",
+    "blocos": {
+      "bloco1": {
+        "number": "01",
+        "destaque": "Impede a propagação",
+        "legenda": "A camada carbonizada retarda significativamente a queima do material, contendo o foco do incêndio e evitando que as chamas se espalhem pela estrutura"
+      },
+      "bloco2": {
+        "number": "02",
+        "destaque": "Protege o núcleo",
+        "legenda": "Isola o restante do painel do calor intenso, mantendo a integridade estrutural por mais tempo"
+      },
+      "bloco3": {
+        "number": "03",
+        "destaque": "Baixa emissão de fumaça",
+        "legenda": "Contribui para manter as rotas de fuga mais visíveis e seguras"
+      }
+    },
+    "teste": "O teste demonstrado nas imagens comprova essa eficiência. Mesmo sob a ação direta de um queimador de 30kW por 30 minutos, o fogo ficou restrito à área de contato. Ao final, o resultado foi apenas uma carbonização superficial, com o restante do painel intacto e sem qualquer propagação de fogo, demonstrando por que o PIR é a escolha mais segura e inteligente para o seu projeto."
   },
   "sobrePage": {
     "hero": {

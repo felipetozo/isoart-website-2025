@@ -3,30 +3,32 @@
 import styles from './pir-incendio.module.css';
 import Image from 'next/image';
 import { TbAlertTriangle } from "react-icons/tb";
+import { useTranslations } from 'next-intl';
 
-const incendioBlocos = [
-    { number: '01', destaque: 'Impede a propagação', legenda:'A camada carbonizada retarda significativamente a queima do material, contendo o foco do incêndio e evitando que as chamas se espalhem pela estrutura' },
-    { number: '02', destaque: 'Protege o núcleo', legenda:'Isola o restante do painel do calor intenso, mantendo a integridade estrutural por mais tempo' },
-    { number: '03', destaque: 'Baixa emissão de fumaça', legenda:'Contribui para manter as rotas de fuga mais visíveis e seguras' },
+interface IncendioComponentProps {
+  locale: string;
+}
+
+function IncendioComponent({ locale }: IncendioComponentProps) {
+  const t = useTranslations('incendio');
+  
+  const incendioBlocos = [
+    { number: t('blocos.bloco1.number'), destaque: t('blocos.bloco1.destaque'), legenda: t('blocos.bloco1.legenda') },
+    { number: t('blocos.bloco2.number'), destaque: t('blocos.bloco2.destaque'), legenda: t('blocos.bloco2.legenda') },
+    { number: t('blocos.bloco3.number'), destaque: t('blocos.bloco3.destaque'), legenda: t('blocos.bloco3.legenda') },
   ];
-
-function IncendioComponent() {
     return (
         <section className={styles['incendio-section']}>
             <div className={styles['incendio-wrapper']}>
                 <div className={styles['incendio-header']}>
                     <span className={styles['incendio-title']}>
                         <h3>
-                            PIR: O escudo protetor contra a propagação de incêndios
+                            {t('title')}
                         </h3>
                         <span className={styles['incendio-header-description']}>
-                            A performance do Poliisocianurato (PIR) em situações de incêndio é um de seus maiores
-                            diferenciais, oferecendo uma camada de proteção passiva essencial para qualquer edificação.
-                            Diferente de outros materiais, o PIR não contribui para a propagação de chamas.
+                            {t('description')}
                             <br /><br />
-                            Quando exposto ao fogo, o núcleo do painel de PIR reage de forma única: ele forma uma
-                            camada carbonizada estável e isolante em sua superfície. Essa barreira de carbono age como
-                            um escudo protetor, realizando três funções cruciais:
+                            {t('description2')}
                         </span>
                     </span>
                     <span className={styles['incendio-icon']}>
@@ -79,9 +81,7 @@ function IncendioComponent() {
                 </span>
             </div>
             <span className={styles['incendio-teste']}>
-                O teste demonstrado nas imagens comprova essa eficiência. Mesmo sob a ação direta de um queimador de 30kW por 30 minutos, o fogo ficou restrito
-                à área de contato. Ao final, o resultado foi apenas uma carbonização superficial, com o restante do painel intacto e sem qualquer propagação de fogo,
-                demonstrando por que o PIR é a escolha mais segura e inteligente para o seu projeto.
+                {t('teste')}
             </span>
         </div>
         </section>

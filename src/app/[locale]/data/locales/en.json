@@ -382,27 +382,7 @@
       "buttonText": "Request a quote",
       "categoryDescriptionTitle": "Isoart Thermal Roofing offers lightness, economy and excellent thermal performance, optimizing construction and ensuring comfort at lower cost.",
       "categoryDescriptionText": "Isoart Thermal Roofing is a lightweight and efficient solution for civil construction, replacing traditional systems with advantages. Produced with expanded polystyrene (EPS) or polyisocyanurate (PIR) cores and galvalume steel coating, it provides lighter structures, reduced foundation load and greater construction agility. In addition to excellent thermal performance, it allows significant savings in concrete, steel and labor, being ideal for projects that require productivity, comfort and cost-effectiveness.",
-      "defaultBenefits": [
-        { "id": 1, "title": "Superior Quality", "description": "Products with rigorous quality control." },
-        { "id": 2, "title": "Guaranteed Efficiency", "description": "Solutions that deliver the best performance." }
-      ],
-      "generalCharacteristics": [
-        "Custom adaptations of height, width and length",
-        "Lower load on structure with excellent mechanical performance",
-        "Easier to transport and assemble, optimizing construction time",
-        "Lower consumption of resources such as concrete, steel and wood",
-        "Thermal comfort and noise reduction in internal environments",
-        "Receives plaster and mortar with excellent adhesion"
-      ],
-      "applicationsTitle": "Greater economy, agility in execution and thermal comfort with less structural effort",
-      "applicationsDescription": "Isoart Thermal Roofing is manufactured with expanded polystyrene or polyisocyanurate blocks, providing lighter roofing, with lower consumption of concrete and steel, easy handling and excellent thermal insulation. Ideal for works that require speed, performance and cost reduction.",
-      "applicationsLabel": "Applications:",
-      "tabDescriptions": {
-        "Structural load relief": "Isoart Thermal Roofing significantly reduces the load on the structure, allowing lighter and more economical projects without compromising safety or durability.",
-        "Construction economy": "With lower consumption of materials such as concrete and steel, Thermal Roofing optimizes costs and accelerates the schedule, offering high construction efficiency.",
-        "Project flexibility": "Customizable in dimensions and finishes, these roofing tiles adapt to various projects, from residences to industrial sheds, ensuring versatility.",
-        "Smart thermal insulation": "Designed with materials such as PIR and EPS, Thermal Roofing offers excellent insulation, reducing the need for air conditioning and increasing internal comfort."
-      }
+      "applicationsLabel": "Applications:"
     },
     "sections": {
       "characteristics": "Characteristics:",
@@ -567,6 +547,29 @@
     "title": "EPS Recycling: sustainability and intelligent reuse.",
     "description": "Expanded Polystyrene (EPS), popularly known as Styrofoam®, is a widely used and 100% recyclable material. Although not biodegradable, its recycling prevents environmental impacts by reducing the volume of waste in landfills.",
     "aviso": "Isoart has two internal recycling centers where it fully reuses the generated waste, reinforcing its commitment to sustainability."
+  },
+  "incendio": {
+    "title": "PIR: The protective shield against fire propagation",
+    "description": "The performance of Polyisocyanurate (PIR) in fire situations is one of its greatest differentiators, offering an essential passive protection layer for any building. Unlike other materials, PIR does not contribute to flame propagation.",
+    "description2": "When exposed to fire, the PIR panel core reacts uniquely: it forms a stable and insulating carbonized layer on its surface. This carbon barrier acts as a protective shield, performing three crucial functions:",
+    "blocos": {
+      "bloco1": {
+        "number": "01",
+        "destaque": "Prevents propagation",
+        "legenda": "The carbonized layer significantly retards material burning, containing the fire focus and preventing flames from spreading through the structure"
+      },
+      "bloco2": {
+        "number": "02",
+        "destaque": "Protects the core",
+        "legenda": "It isolates the rest of the panel from intense heat, maintaining structural integrity for longer"
+      },
+      "bloco3": {
+        "number": "03",
+        "destaque": "Low smoke emission",
+        "legenda": "Contributes to keeping escape routes more visible and safe"
+      }
+    },
+    "teste": "The test shown in the images proves this efficiency. Even under the direct action of a 30kW burner for 30 minutes, the fire remained restricted to the contact area. In the end, the result was only superficial carbonization, with the rest of the panel intact and without any fire propagation, demonstrating why PIR is the safest and smartest choice for your project."
   },
   "sobrePage": {
     "hero": {
