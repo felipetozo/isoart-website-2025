@@ -62,8 +62,13 @@ async function SobreEpsPirPage({ params }: SobreEpsPirPageProps) {
             <h2 className={styles['eps-subtitle']}>{t('eps.subtitle')}</h2>
             <div className={styles['benefits-container']}>
               <div className={styles['benefits-grid']}>
-                {(t.raw('eps.benefits') as string[]).map((benefit: string) => (
-                  <div className={styles['benefit-item']} key={benefit}>
+                {[
+                  t('eps.benefits.benefit1'),
+                  t('eps.benefits.benefit2'),
+                  t('eps.benefits.benefit3'),
+                  t('eps.benefits.benefit4')
+                ].map((benefit: string, index: number) => (
+                  <div className={styles['benefit-item']} key={index}>
                     <span className={styles['benefit-icon']}><CheckCircle size={28} strokeWidth={2.5} /></span>
                     <span>{benefit}</span>
                   </div>
@@ -101,9 +106,16 @@ async function SobreEpsPirPage({ params }: SobreEpsPirPageProps) {
             <h2 className={styles['pir-subtitle']}>{t('pir.subtitle')}</h2>
             <div className={styles['benefits-container']}>
               <div className={styles['benefits-grid']}>
-                {(t.raw('pir.benefits') as string[]).map((benefit: string) => (
-                  <div className={styles['benefit-item']} key={benefit}>
-                    <span className={styles['benefit-icon']}><CheckCircle size={28} strokeWidth={2.5} /></span>
+                {[
+                  t('pir.benefits.benefit1'),
+                  t('pir.benefits.benefit2'),
+                  t('pir.benefits.benefit3'),
+                  t('pir.benefits.benefit4'),
+                  t('pir.benefits.benefit5'),
+                  t('pir.benefits.benefit6')
+                ].map((benefit: string, index: number) => (
+                  <div className={styles['benefit-item']} key={index}>
+                    <span className={styles['benefit-icon']}><CheckCircle size={2.5} /></span>
                     <span>{benefit}</span>
                   </div>
                 ))}
@@ -156,18 +168,18 @@ async function SobreEpsPirPage({ params }: SobreEpsPirPageProps) {
             <div className={styles['revestimentos-cores']}>
               <div className={styles['cores-grid']}>
                 {[
-                  { id: 'ral9003', code: t('revestimentos.cores.ral9003'), name: t('revestimentos.nomes.brancoSinal'), type: 'image', image: '/img/PIR/RAL9003---BRANCO.avif' },
-                  { id: 'ral7035', code: t('revestimentos.cores.ral7035'), name: t('revestimentos.nomes.cinzaClaro'), type: 'image', image: '/img/PIR/RAL7035---CINZA-CLARO.avif' },
-                  { id: 'ral7040', code: t('revestimentos.cores.ral7040'), name: t('revestimentos.nomes.cinzaMedio'), type: 'image', image: '/img/PIR/RAL7040---CINZA-MÉDIO.avif' },
-                  { id: 'ral7024', code: t('revestimentos.cores.ral7024'), name: t('revestimentos.nomes.cinzaGrafite'), type: 'image', image: '/img/PIR/RAL7024---CINZA-GRAFITE.avif' },
-                  { id: 'ral9006', code: t('revestimentos.cores.ral9006'), name: t('revestimentos.nomes.prata'), type: 'color' },
-                  { id: 'ral1015', code: t('revestimentos.cores.ral1015'), name: t('revestimentos.nomes.marfim'), type: 'image', image: '/img/PIR/RAL1015---MARFIM.avif' },
-                  { id: 'ral1023', code: t('revestimentos.cores.ral1023'), name: t('revestimentos.nomes.amarelo'), type: 'image', image: '/img/PIR/RAL1023---AMARELO.avif' },
-                  { id: 'ral8023', code: t('revestimentos.cores.ral8023'), name: t('revestimentos.nomes.terracota'), type: 'image', image: '/img/PIR/RAL8023---TERRACOTA.avif' },
-                  { id: 'ral3000', code: t('revestimentos.cores.ral3000'), name: t('revestimentos.nomes.vermelhoFogo'), type: 'image', image: '/img/PIR/RAL3000---VERMELHO.avif' },
-                  { id: 'ral5010', code: t('revestimentos.cores.ral5010'), name: t('revestimentos.nomes.azulGenciana'), type: 'image', image: '/img/PIR/RAL5010---AZUL.avif' },
-                  { id: 'ral6002', code: t('revestimentos.cores.ral6002'), name: t('revestimentos.nomes.verdeTrafego'), type: 'image', image: '/img/PIR/RAL6002---VERDE.avif' },
-                  { id: 'ral9005', code: t('revestimentos.cores.ral9005'), name: t('revestimentos.nomes.preto'), type: 'image', image: '/img/PIR/RAL9005---PRETO.avif' },
+                  { id: 'ral9003', code: 'RAL 9003', name: t('revestimentos.nomes.brancoSinal'), type: 'image', image: '/img/PIR/RAL9003---BRANCO.avif' },
+                  { id: 'ral7035', code: 'RAL 7035', name: t('revestimentos.nomes.cinzaClaro'), type: 'image', image: '/img/PIR/RAL7035---CINZA-CLARO.avif' },
+                  { id: 'ral7040', code: 'RAL 7040', name: t('revestimentos.nomes.cinzaMedio'), type: 'image', image: '/img/PIR/RAL7040---CINZA-MÉDIO.avif' },
+                  { id: 'ral7024', code: 'RAL 7024', name: t('revestimentos.nomes.cinzaGrafite'), type: 'image', image: '/img/PIR/RAL7024---CINZA-GRAFITE.avif' },
+                  { id: 'ral9006', code: 'RAL 9006', name: t('revestimentos.nomes.prata'), type: 'color' },
+                  { id: 'ral1015', code: 'RAL 1015', name: t('revestimentos.nomes.marfim'), type: 'image', image: '/img/PIR/RAL1015---MARFIM.avif' },
+                  { id: 'ral1023', code: 'RAL 1023', name: t('revestimentos.nomes.amarelo'), type: 'image', image: '/img/PIR/RAL1023---AMARELO.avif' },
+                  { id: 'ral8023', code: 'RAL 8023', name: t('revestimentos.nomes.terracota'), type: 'image', image: '/img/PIR/RAL8023---TERRACOTA.avif' },
+                  { id: 'ral3000', code: 'RAL 3000', name: t('revestimentos.nomes.vermelhoFogo'), type: 'image', image: '/img/PIR/RAL3000---VERMELHO.avif' },
+                  { id: 'ral5010', code: 'RAL 5010', name: t('revestimentos.nomes.azulGenciana'), type: 'image', image: '/img/PIR/RAL5010---AZUL.avif' },
+                  { id: 'ral6002', code: 'RAL 6002', name: t('revestimentos.nomes.verdeTrafego'), type: 'image', image: '/img/PIR/RAL6002---VERDE.avif' },
+                  { id: 'ral9005', code: 'RAL 9005', name: t('revestimentos.nomes.preto'), type: 'image', image: '/img/PIR/RAL9005---PRETO.avif' },
                   { 
                     id: 'galvanizado',
                     code: '', 
@@ -195,7 +207,7 @@ async function SobreEpsPirPage({ params }: SobreEpsPirPageProps) {
                       <span 
                         className={styles['cor-thumb']} 
                         style={{ 
-                          backgroundColor: item.code === t('revestimentos.cores.ral9006') ? 'rgb(var(--ral-9006))' : '#ccc'
+                          backgroundColor: item.code === 'RAL 9006' ? 'rgb(var(--ral-9006))' : '#ccc'
                         }}
                       ></span>
                     ) : (
