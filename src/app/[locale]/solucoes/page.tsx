@@ -1,43 +1,46 @@
+'use client';
+
 import styles from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from '@/app/[locale]/views/ui/button/button';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
-interface SolucoesPageProps {
-    params: Promise<{ locale: string }>;
-}
-
-export default async function SolucoesPage({ params }: SolucoesPageProps) {
-    const { locale } = await params;
+export default function SolucoesPage() {
+    const params = useParams();
+    const locale = params.locale as string;
+    
+    const t = useTranslations('solutionsPage');
+    const tCommon = useTranslations('common.buttons');
 
     // Dados das soluções usando traduções
     const solucoes = [
         {
             id: 1,
-            title: 'Telhas e Painéis Térmicos',
-            description: 'Soluções completas para coberturas e fachadas com isolamento térmico superior. Nossas telhas e painéis oferecem eficiência energética, resistência e durabilidade para diversos projetos de construção.',
+            title: t('categories.telhasPaineis.title'),
+            description: t('categories.telhasPaineis.description'),
             image: '/img/solucoes-page/solucoes-telhas-paineis.avif',
             link: `/${locale}/solucoes/telhas-e-paineis`
         },
         {
             id: 2,
-            title: 'Construção Civil com EPS',
-            description: 'Materiais inovadores em EPS para construção civil, incluindo lajes, blocos, flocos e chapas. Proporcionam redução de custos, leveza estrutural e excelente isolamento térmico.',
+            title: t('categories.construcaoCivil.title'),
+            description: t('categories.construcaoCivil.description'),
             image: '/img/solucoes-page/solucoes-construcao-civil.avif',
             link: `/${locale}/solucoes/construcao-civil`
         },
         {
             id: 3,
-            title: 'Molduras Decorativas',
-            description: 'Molduras em EPS para portas, janelas, beirais e mais. Leves, duráveis e de fácil instalação, são ideais para acabamentos decorativos em ambientes internos e externos.',
+            title: t('categories.molduras.title'),
+            description: t('categories.molduras.description'),
             image: '/img/solucoes-page/solucoes-molduras.avif',
             link: `/${locale}/solucoes/molduras-decorativas`
         },
         {
             id: 4,
-            title: 'Embalagens em EPS',
-            description: 'Embalagens personalizadas em EPS para proteção de produtos durante transporte. Leves, resistentes e versáteis, atendem às necessidades de diversos setores industriais.',
+            title: t('categories.embalagens.title'),
+            description: t('categories.embalagens.description'),
             image: '/img/solucoes-page/solucoes-embalagens.avif',
             link: `/${locale}/solucoes/embalagens-em-eps`
         }
@@ -50,7 +53,7 @@ export default async function SolucoesPage({ params }: SolucoesPageProps) {
                 <div className={styles['hero-mask']}>
                     <div className={styles['hero-wrapper']}>
                         <h1 className={styles['hero-title']}>
-                            Nossas Soluções
+                            {t('title')}
                         </h1>
                     </div>
                 </div>
@@ -78,7 +81,7 @@ export default async function SolucoesPage({ params }: SolucoesPageProps) {
                                 <div className={styles['solucao-button']}>
                                     <Link href={solucao.link}>
                                         <Button variant="primary" size="medium">
-                                            Saiba mais
+                                            {tCommon('learnMore')}
                                         </Button>
                                     </Link>
                                 </div>

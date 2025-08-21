@@ -241,6 +241,120 @@
     "privacyPolicy": "Privacy Policy",
     "companyInfo": "Isoart Industry of thermal and construction products ltd. CNPJ: 09.094.564/0001-05"
   },
+  "solutionsPage": {
+    "title": "Our Solutions",
+    "subtitle": "Discover our innovative solutions for civil construction, packaging and thermal insulation",
+    "categories": {
+      "telhasPaineis": {
+        "title": "Thermal Roofing and Panels",
+        "description": "Complete solutions for roofing and facades with superior thermal insulation. Our roofing and panels offer energy efficiency, resistance and durability for various construction projects."
+      },
+      "construcaoCivil": {
+        "title": "Civil Construction with EPS",
+        "description": "Innovative EPS materials for civil construction, including slabs, blocks, flakes and sheets. They provide cost reduction, structural lightness and excellent thermal insulation."
+      },
+      "molduras": {
+        "title": "Decorative Moldings",
+        "description": "EPS moldings for doors, windows, eaves and more. Light, durable and easy to install, they are ideal for decorative finishes in indoor and outdoor environments."
+      },
+      "embalagens": {
+        "title": "EPS Packaging",
+        "description": "Customized EPS packaging for product protection during transport. Light, resistant and versatile, they meet the needs of various industrial sectors."
+      }
+    }
+  },
+  "categoryPage": {
+    "hero": {
+      "defaultButtonText": "Request a quote",
+      "defaultDescription": "Our high quality solutions."
+    },
+    "benefits": {
+      "defaultTitle1": "Superior Quality",
+      "defaultDescription1": "Products with rigorous quality control.",
+      "defaultTitle2": "Guaranteed Efficiency",
+      "defaultDescription2": "Solutions that deliver the best performance."
+    },
+    "categories": {
+      "construcaoCivil": {
+        "title": "Civil Construction",
+        "hero": {
+          "title": "Civil Construction with EPS",
+          "description": "EPS materials, such as slabs, blocks and flakes, for civil construction. They provide cost reduction, lightness and thermal insulation, serving residential and commercial projects.",
+          "buttonText": "Get in touch"
+        },
+        "categoryDescription": "Lightness, resistance and efficiency for smarter constructions. Our EPS products reduce costs, increase productivity and offer innovative solutions for slabs, fillings and thermal insulation with high performance.",
+        "products": {
+          "lajesEps": {
+            "name": "EPS Slabs",
+            "description": "Slabs with EPS filling, reducing costs and improving the structure."
+          },
+          "isolamentoTelhas": {
+            "name": "Roof Insulation",
+            "description": "EPS thermal insulation system for roofing, providing thermal and acoustic comfort in roofing."
+          },
+          "blocosEps": {
+            "name": "EPS Blocks",
+            "description": "EPS blocks for light and resistant constructions."
+          },
+          "chapasPaineisEps": {
+            "name": "EPS Sheets and Panels",
+            "description": "EPS sheets and panels for various constructions."
+          },
+          "forros": {
+            "name": "Ceilings",
+            "description": "EPS ceilings with unique and sophisticated designs, available in multiple models such as Dunes and Paris."
+          }
+        },
+        "benefits": {
+          "benefit1": {
+            "title": "Structural Lightness",
+            "description": "Reduces construction weight, allowing light foundations and savings in structural materials without compromising resistance."
+          },
+          "benefit2": {
+            "title": "Thermal and Acoustic Efficiency",
+            "description": "Minimizes heat exchange and noise, providing greater comfort and reducing energy consumption for air conditioning."
+          },
+          "benefit3": {
+            "title": "Extended Durability",
+            "description": "Light, resistant and low maintenance material, ensuring extended service life with excellent cost-benefit."
+          }
+        }
+      },
+      "telhasPaineis": {
+        "title": "Roofing and Panels",
+        "hero": {
+          "title": "Thermal Roofing and Panels",
+          "description": "Isoart roofing and panels for roofing and facades. Available with or without thermal insulation in EPS/PIR, they offer energy efficiency and resistance.",
+          "buttonText": "Request a quote"
+        },
+        "products": {
+          "telhasTermicas": {
+            "name": "Thermal Roofing",
+            "description": "Roofing with PIR or EPS core and double coating with galvalume steel sheets or film, ideal for roofing with excellent thermal insulation."
+          },
+          "fachadaFechamento": {
+            "name": "Facade and Side Closure",
+            "description": "Versatile panels for facades and side closures, offering insulation and aesthetics."
+          },
+          "divisoriaForro": {
+            "name": "Partition and Ceiling",
+            "description": "Practical and efficient solutions for internal partitions and thermoacoustic ceilings."
+          },
+          "salaLimpa": {
+            "name": "Clean Room",
+            "description": "Specific panels for clean room environments, with high asepsis and particle control."
+          },
+          "camaraFrigorifica": {
+            "name": "Cold Storage",
+            "description": "Robust and efficient panels for cold storage insulation, ensuring ideal temperatures."
+          }
+        }
+      }
+    },
+    "notFound": {
+      "title": "Category not found"
+    }
+  },
   "common": {
     "buttons": {
       "contact": "Contact us",

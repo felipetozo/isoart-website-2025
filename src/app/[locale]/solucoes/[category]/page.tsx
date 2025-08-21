@@ -1,3 +1,5 @@
+'use client';
+
 import { notFound } from 'next/navigation';
 import styles from './page.module.css';
 import Link from 'next/link';
@@ -9,6 +11,8 @@ import Button from '@/app/[locale]/views/ui/button/button';
 import BenefitsSection from '@/app/[locale]/components/benefits-section/benefits-section';
 import IncendioComponent from '@/app/[locale]/components/pir-incendio/pir-incendio';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
 // Updated interfaces to match the actual data structure
 interface Product {
@@ -50,33 +54,121 @@ interface CategoryData {
     benefits?: Benefit[];
 }
 
-// Fix: Change params to be a Promise in Next.js 15
-interface CategoryPageProps {
-    params: Promise<{ category: string; locale: string }>;
-}
+export default function CategoryPage() {
+    const params = useParams();
+    const category = params.category as string;
+    const locale = params.locale as string;
+    
+    const t = useTranslations('categoryPage');
+    const tCommon = useTranslations('common.buttons');
 
-async function CategoryPage({ params }: CategoryPageProps) {
-    const { category, locale } = await params;
+    // Helper function to get translated data for the category
+    const getTranslatedCategoryData = (categorySlug: string, originalData: CategoryData): CategoryData => {
+        const categoryKey = categorySlug.replace('-', '');
+        
+        // Check if we have translations for this category
+        try {
+            const translatedData = { ...originalData };
+            
+            if (t.has(`categories.${categoryKey}.title`)) {
+                translatedData.title = t(`categories.${categoryKey}.title`);
+            }
+            
+            if (t.has(`categories.${categoryKey}.hero.title`)) {
+                translatedData.hero = {
+                    ...originalData.hero,
+                    title: t(`categories.${categoryKey}.hero.title`),
+                    description: t(`categories.${categoryKey}.hero.description`),
+                    buttonText: t(`categories.${categoryKey}.hero.buttonText`),
+                    buttonLink: originalData.hero?.buttonLink || `/${locale}/contato`,
+                    backgroundImage: originalData.hero?.backgroundImage || '/img/default-category-hero.avif'
+                };
+            }
+            
+            if (t.has(`categories.${categoryKey}.categoryDescription`)) {
+                translatedData.categoryDescription = t(`categories.${categoryKey}.categoryDescription`);
+            }
+            
+            // Translate products if available
+            if (originalData.products) {
+                translatedData.products = originalData.products.map(product => {
+                    const productKey = product.slug.replace(/-/g, '');
+                    if (t.has(`categories.${categoryKey}.products.${productKey}.name`)) {
+                        return {
+                            ...product,
+                            name: t(`categories.${categoryKey}.products.${productKey}.name`),
+                            description: t(`categories.${categoryKey}.products.${productKey}.description`)
+                        };
+                    }
+                    return product;
+                });
+            }
+            
+            // Translate benefits if available
+            if (originalData.benefits) {
+                translatedData.benefits = originalData.benefits.map((benefit, index) => {
+                    const benefitKey = `benefit${index + 1}`;
+                    if (t.has(`categories.${categoryKey}.benefits.${benefitKey}.title`)) {
+                        return {
+                            ...benefit,
+                            title: t(`categories.${categoryKey}.benefits.${benefitKey}.title`),
+                            description: t(`categories.${categoryKey}.benefits.${benefitKey}.description`)
+                        };
+                    }
+                    return benefit;
+                });
+            }
+            
+            return translatedData;
+        } catch (error) {
+            console.log('Translation not found for category:', categorySlug);
+            return originalData;
+        }
+    };
 
-    let categoryData: CategoryData | undefined;
+    const [categoryData, setCategoryData] = useState<CategoryData | undefined>(undefined);
+    const [loading, setLoading] = useState(true);
 
-    console.log('Tentando carregar categoria:', category);
+    // Load category data on component mount
+    useEffect(() => {
+        const loadCategoryData = async () => {
+            try {
+                const normalizedCategory = category.toLowerCase().replace(/ /g, '-');
+                console.log('Importando arquivo:', `../../data/categories/${normalizedCategory}.json`);
 
-    try {
-        const normalizedCategory = category.toLowerCase().replace(/ /g, '-');
-        console.log('Importando arquivo:', `../../data/categories/${normalizedCategory}.json`);
+                const specificCategoryData = await import(`../../data/categories/${normalizedCategory}.json`);
+                const originalData = specificCategoryData.default as CategoryData;
+                const translatedData = getTranslatedCategoryData(category, originalData);
+                setCategoryData(translatedData);
+                console.log('Dados carregados do arquivo específico:', translatedData);
+            } catch (error) {
+                console.error('Erro ao importar arquivo específico:', error);
+                const originalData = (menuData as CategoryData[]).find(
+                    (item: CategoryData) => item.slug === category
+                );
+                if (originalData) {
+                    const translatedData = getTranslatedCategoryData(category, originalData);
+                    setCategoryData(translatedData);
+                }
+                console.log('Usando dados do menuData.json:', categoryData);
+            } finally {
+                setLoading(false);
+            }
+        };
 
-        const specificCategoryData = await import(`../../data/categories/${normalizedCategory}.json`);
-        categoryData = specificCategoryData.default as CategoryData;
-        console.log('Dados carregados do arquivo específico:', categoryData);
-    } catch (error) {
-        console.error('Erro ao importar arquivo específico:', error);
-        categoryData = (menuData as CategoryData[]).find(
-            (item: CategoryData) => item.slug === category
+        loadCategoryData();
+    }, [category, locale, t]);
+
+    // Show loading state
+    if (loading) {
+        return (
+            <div className={styles['category-page']}>
+                <div>Carregando...</div>
+            </div>
         );
-        console.log('Usando dados do menuData.json:', categoryData);
     }
 
+    // Show not found if no data
     if (!categoryData) {
         console.log('Categoria não encontrada:', category);
         notFound();
@@ -84,15 +176,15 @@ async function CategoryPage({ params }: CategoryPageProps) {
 
     const heroSection = categoryData.hero || {
         title: categoryData.title,
-        description: categoryData.description || categoryData.categoryDescription || 'Nossas soluções de alta qualidade.',
-        buttonText: 'Solicite um orçamento',
+        description: categoryData.description || categoryData.categoryDescription || t('hero.defaultDescription'),
+        buttonText: t('hero.defaultButtonText'),
         buttonLink: `/${locale}/contato`,
         backgroundImage: '/img/default-category-hero.avif'
     };
 
     const benefitsSection = categoryData.benefits || [
-        { id: 1, title: "Qualidade Superior", description: "Produtos com rigoroso controle de qualidade." },
-        { id: 2, title: "Eficiência Garantida", description: "Soluções que entregam o melhor desempenho." }
+        { id: 1, title: t('benefits.defaultTitle1'), description: t('benefits.defaultDescription1') },
+        { id: 2, title: t('benefits.defaultTitle2'), description: t('benefits.defaultDescription2') }
     ];
 
     return (
@@ -108,7 +200,7 @@ async function CategoryPage({ params }: CategoryPageProps) {
                     <p>{heroSection.description}</p>
                     <Link href={heroSection.buttonLink || `/${locale}/contato`}>
                         <Button variant="primary" size="medium">
-                            {heroSection.buttonText || 'Solicite um orçamento'}
+                            {heroSection.buttonText || t('hero.defaultButtonText')}
                         </Button>
                     </Link>
                 </div>
@@ -160,49 +252,3 @@ async function CategoryPage({ params }: CategoryPageProps) {
         </div>
     );
 }
-
-// Function to generate static paths for category pages
-export async function generateStaticParams() {
-    return (menuData as CategoryData[]).map((category: CategoryData) => ({
-        category: category.slug,
-    }));
-}
-
-// Dynamic metadata for SEO - Also fix params here
-export async function generateMetadata({ params }: CategoryPageProps) {
-    const { category } = await params;
-
-    let categoryData: CategoryData | undefined;
-
-    try {
-        const specificCategoryData = await import(`../../data/categories/${category}.json`);
-        categoryData = specificCategoryData.default as CategoryData;
-    } catch (error) {
-        categoryData = (menuData as CategoryData[]).find(
-            (item: CategoryData) => item.slug === category
-        );
-    }
-
-    if (!categoryData) {
-        return {
-            title: 'Categoria não encontrada - ISOART',
-        };
-    }
-
-    const description = categoryData.metaDescription ||
-        categoryData.description ||
-        categoryData.categoryDescription ||
-        `Produtos e soluções em ${categoryData.title}`;
-
-    return {
-        title: `${categoryData.title} - ISOART`,
-        description: description,
-        openGraph: {
-            title: `${categoryData.title} - ISOART`,
-            description: description,
-            images: categoryData.image ? [categoryData.image] : [],
-        },
-    };
-}
-
-export default CategoryPage;

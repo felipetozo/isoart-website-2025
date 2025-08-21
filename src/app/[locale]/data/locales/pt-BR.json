@@ -241,6 +241,120 @@
     "privacyPolicy": "Políticas de privacidade",
     "companyInfo": "Isoart Indústria de produtos térmicos e construtivos ltda. CNPJ: 09.094.564/0001-05"
   },
+  "solutionsPage": {
+    "title": "Nossas Soluções",
+    "subtitle": "Conheça nossas soluções inovadoras para construção civil, embalagens e isolamento térmico",
+    "categories": {
+      "telhasPaineis": {
+        "title": "Telhas e Painéis Térmicos",
+        "description": "Soluções completas para coberturas e fachadas com isolamento térmico superior. Nossas telhas e painéis oferecem eficiência energética, resistência e durabilidade para diversos projetos de construção."
+      },
+      "construcaoCivil": {
+        "title": "Construção Civil com EPS",
+        "description": "Materiais inovadores em EPS para construção civil, incluindo lajes, blocos, flocos e chapas. Proporcionam redução de custos, leveza estrutural e excelente isolamento térmico."
+      },
+      "molduras": {
+        "title": "Molduras Decorativas",
+        "description": "Molduras em EPS para portas, janelas, beirais e mais. Leves, duráveis e de fácil instalação, são ideais para acabamentos decorativos em ambientes internos e externos."
+      },
+      "embalagens": {
+        "title": "Embalagens em EPS",
+        "description": "Embalagens personalizadas em EPS para proteção de produtos durante transporte. Leves, resistentes e versáteis, atendem às necessidades de diversos setores industriais."
+      }
+    }
+  },
+  "categoryPage": {
+    "hero": {
+      "defaultButtonText": "Solicite um orçamento",
+      "defaultDescription": "Nossas soluções de alta qualidade."
+    },
+    "benefits": {
+      "defaultTitle1": "Qualidade Superior",
+      "defaultDescription1": "Produtos com rigoroso controle de qualidade.",
+      "defaultTitle2": "Eficiência Garantida",
+      "defaultDescription2": "Soluções que entregam o melhor desempenho."
+    },
+    "categories": {
+      "construcaoCivil": {
+        "title": "Construção Civil",
+        "hero": {
+          "title": "Construção Civil com EPS",
+          "description": "Materiais em EPS, como lajes, blocos e flocos, para construção civil. Proporcionam redução de custos, leveza e isolamento térmico, atendendo a projetos residenciais e comerciais.",
+          "buttonText": "Entre em contato"
+        },
+        "categoryDescription": "Leveza, resistência e eficiência para construções mais inteligentes. Nossos produtos em EPS reduzem custos, aumentam a produtividade e oferecem soluções inovadoras para lajes, preenchimentos e isolamento térmico com alto desempenho.",
+        "products": {
+          "lajesEps": {
+            "name": "Lajes em EPS",
+            "description": "Lajes com preenchimento em EPS, reduzindo custos e melhorando a estrutura."
+          },
+          "isolamentoTelhas": {
+            "name": "Isolamento para Telhas",
+            "description": "Sistema de isolamento térmico em EPS para telhas, proporcionando conforto térmico e acústico em coberturas."
+          },
+          "blocosEps": {
+            "name": "Blocos em EPS",
+            "description": "Blocos de EPS para construções leves e resistentes."
+          },
+          "chapasPaineisEps": {
+            "name": "Chapas e Painéis em EPS",
+            "description": "Chapas e painéis de EPS para diversas construções."
+          },
+          "forros": {
+            "name": "Forros",
+            "description": "Forros em EPS com designs únicos e sofisticados, disponíveis em múltiplos modelos como Dunas e Paris."
+          }
+        },
+        "benefits": {
+          "benefit1": {
+            "title": "Leveza Estrutural",
+            "description": "Reduz o peso da construção, permitindo fundações leves e economia em materiais estruturais sem comprometer a resistência."
+          },
+          "benefit2": {
+            "title": "Eficiência Térmica e Acústica",
+            "description": "Minimiza a troca de calor e ruídos, proporcionando maior conforto e reduzindo o consumo de energia para climatização."
+          },
+          "benefit3": {
+            "title": "Durabilidade prolongada",
+            "description": "Material leve, resistente e de baixa manutenção, garantindo uma vida útil estendida com excelente custo-benefício."
+          }
+        }
+      },
+      "telhasPaineis": {
+        "title": "Telhas e Painéis",
+        "hero": {
+          "title": "Telhas e Painéis Térmicos",
+          "description": "Telhas e painéis da Isoart para coberturas e fachadas. Disponíveis com ou sem isolamento térmico em EPS/PIR, oferecem eficiência energética e resistência.",
+          "buttonText": "Solicite um orçamento"
+        },
+        "products": {
+          "telhasTermicas": {
+            "name": "Telhas Térmicas",
+            "description": "Telhas com núcleo em PIR ou EPS e revestimento duplo com chapas de aço galvalume ou filme, ideais para coberturas com excelente isolamento térmico."
+          },
+          "fachadaFechamento": {
+            "name": "Fachada e Fechamento Lateral",
+            "description": "Painéis versáteis para fachadas e fechamentos laterais, oferecendo isolamento e estética."
+          },
+          "divisoriaForro": {
+            "name": "Divisória e Forro",
+            "description": "Soluções práticas e eficientes para divisórias internas e forros termoacústicos."
+          },
+          "salaLimpa": {
+            "name": "Sala Limpa",
+            "description": "Painéis específicos para ambientes de sala limpa, com alta assepsia e controle de partículas."
+          },
+          "camaraFrigorifica": {
+            "name": "Câmara Frigorífica",
+            "description": "Painéis robustos e eficientes para isolamento de câmaras frigoríficas, garantindo temperaturas ideais."
+          }
+        }
+      }
+    },
+    "notFound": {
+      "title": "Categoria não encontrada"
+    }
+  },
   "common": {
     "buttons": {
       "contact": "Entre em contato",
