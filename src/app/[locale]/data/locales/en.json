@@ -559,5 +559,69 @@
       "title": "Automated production for maximum efficiency",
       "description": "Isoart PIR tiles and panels are manufactured in a continuous and fully automated line, ensuring high precision, quality and sustainability. With Polyisocyanurate (PIR) insulating core and galvalume steel sheet coating, the process includes high-pressure injection, continuous pressing and automated cutting, ensuring excellent adhesion, finish and standardization. All products are automatically cooled, stacked and packaged, ready for shipping."
     }
+  },
+  "sobrePage": {
+    "hero": {
+      "title": "about us"
+    },
+    "heroHeadline": {
+      "title": "Innovative, sustainable and high-quality solutions in",
+      "epsHighlight": "Expanded Polystyrene (EPS)",
+      "and": "and",
+      "pirHighlight": "Rigid Polyisocyanurate Foam (PIR)",
+      "description": "that meet the diverse demands of the market."
+    },
+    "video": {
+      "title": "Isoart Institutional Video",
+      "caption": "Since 2008, Isoart has been leading the market for innovative and sustainable solutions in Expanded Polystyrene (EPS) and Rigid Polyisocyanurate Foam (PIR), serving the most diverse demands of industries, constructions and other applications. With an unwavering commitment to quality, innovation and sustainability, the company has consolidated its position as a national reference in the sector."
+    },
+    "timeline": {
+      "title": "A history marked by great successes:",
+      "items": {
+        "2008": {
+          "label": "the first steps",
+          "description": "Founded in Santa Tereza do Oeste, Paraná, Isoart began its journey with the purpose of offering innovative and sustainable solutions in Expanded Polystyrene (EPS). From the first moment, the company established a commitment to quality and transparency, serving different sectors with excellence and building a solid foundation of trust in the market."
+        },
+        "2015": {
+          "label": "A new chapter",
+          "description": "The expansion to Xanxerê, Santa Catarina, marked a decisive point in Isoart's history. The inauguration of Factory 2 brought new opportunities, consolidating the company as one of the main EPS transforming industries in Brazil. This unit not only increased production capacity, but also reinforced the commitment to sustainability by focusing on industrialization and recycling of EPS products."
+        },
+        "2021": {
+          "label": "Expand project",
+          "description": "With the launch of the expand project, Isoart inaugurated the modern Factory 3 in Santa Tereza do Oeste, Paraná. This facility represents a milestone in the company's evolution, designed to meet the demands of modern and sustainable constructions. Equipped with cutting-edge technology, Factory 3 produces thermal roofing and isopanels in continuous line, with insulating cores in Rigid Polyisocyanurate Foam, PIR, or EPS."
+        }
+      }
+    },
+    "map": {
+      "title": "Service throughout Brazil, Paraguay and Uruguay.",
+      "description": "Isoart has 3 strategically located factories in the western regions of Paraná and Santa Catarina, ensuring complete coverage throughout Brazilian, Paraguayan and Uruguayan territory with excellence and quality."
+    },
+    "mvv": {
+      "missao": {
+        "title": "Mission",
+        "description": "To satisfy customer needs, exceeding their expectations, through excellence in the manufacture and distribution of EPS products, generating innovative solutions, with profitability and respect for the environment."
+      },
+      "visao": {
+        "title": "Vision",
+        "description": "To be recognized as the reference company in the sector in which it operates, adding social and economic value, within ethical and sustainable principles."
+      },
+      "valores": {
+        "title": "Values",
+        "description": "Commitment to quality, excellence in service, respect for the environment, transparency in actions, valuing life, innovation and boldness."
+      }
+    },
+    "quality": {
+      "title": "Quality policy",
+      "description1": "The Isoart Group, through the Quality Policy, establishes the guidelines by which it declares its commitment to customer, employee and community satisfaction.",
+      "description2": "In this sense, we seek continuous improvement of the Quality Management System, basing our actions on the following premises:",
+      "items": {
+        "item1": "Ensure customer satisfaction by offering quality products and services.",
+        "item2": "Share our values, building lasting partnerships that result in gains for both parties.",
+        "item3": "Maintain a good work environment, valuing safety and respect for life.",
+        "item4": "Seek continuous improvement and process control via performance indicators, favoring the achievement and maintenance of competitive advantages.",
+        "item5": "Promote sustainable actions aiming at minimal environmental impact.",
+        "item6": "Train and qualify all employees to comply with the Quality Policy."
+      }
+    }
   }
 }

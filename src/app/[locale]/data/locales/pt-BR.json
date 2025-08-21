@@ -559,5 +559,69 @@
       "title": "Produção automatizada para máximo eficiência",
       "description": "As telhas e painéis Isoart PIR são fabricadas em linha contínua e totalmente automatizada, garantindo alta precisão, qualidade e sustentabilidade. Com núcleo isolante de Poliisocianurato (PIR) e revestimento em chapas de aço galvalume, o processo inclui injeção de alta pressão, prensagem contínua e corte automatizado, assegurando excelente adesão, acabamento e padronização. Todos os produtos são resfriados, empilhados e embalados automaticamente, prontos para expedição."
     }
+  },
+  "sobrePage": {
+    "hero": {
+      "title": "sobre nós"
+    },
+    "heroHeadline": {
+      "title": "Soluções inovadoras, sustentáveis e de alta qualidade em",
+      "epsHighlight": "Poliestireno Expandido (EPS)",
+      "and": "e",
+      "pirHighlight": "Espuma Rígida de Poliisocianurato (PIR)",
+      "description": "que atendem às diversas demandas do mercado."
+    },
+    "video": {
+      "title": "Vídeo Institucional Isoart",
+      "caption": "Desde 2008, a Isoart tem liderado o mercado de soluções inovadoras e sustentáveis em Poliestireno Expandido (EPS) e Espuma Rígida de Poliisocianurato (PIR), atendendo às mais diversas demandas de indústrias, construções e outras aplicações. Com um compromisso inabalável com qualidade, inovação e sustentabilidade, a empresa tem consolidado sua posição como referência nacional no setor."
+    },
+    "timeline": {
+      "title": "Uma história marcada por grandes sucessos:",
+      "items": {
+        "2008": {
+          "label": "os primeiros passos",
+          "description": "Fundada em Santa Tereza do Oeste, Paraná, a Isoart iniciou sua trajetória com o propósito de oferecer soluções inovadoras e sustentáveis em Poliestireno Expandido (EPS). Desde o primeiro momento, a empresa estabeleceu um compromisso com a qualidade e a transparência, atendendo diferentes setores com excelência e construindo uma base sólida de confiança no mercado."
+        },
+        "2015": {
+          "label": "Um novo capítulo",
+          "description": "A expansão para Xanxerê, Santa Catarina, marcou um ponto decisivo na história da Isoart. A inauguração da Fábrica 2 trouxe novas oportunidades, consolidando a empresa como uma das principais indústrias transformadoras de EPS do Brasil. Essa unidade não apenas aumentou a capacidade produtiva, mas também reforçou o compromisso com a sustentabilidade ao focar na industrialização e reciclagem de produtos em EPS."
+        },
+        "2021": {
+          "label": "Projeto expandir",
+          "description": "Com o lançamento do projeto expandir, a Isoart inaugurou a moderna Fábrica 3 em Santa Tereza do Oeste, Paraná. Essa instalação representa um marco na evolução da empresa, projetada para atender às demandas de construções modernas e sustentáveis. Equipada com tecnologia de ponta, a Fábrica 3 produz telhas térmicas e isopainéis em linha contínua, com núcleos isolantes em Espuma Rígida de Poliisocianurato, PIR, ou EPS."
+        }
+      }
+    },
+    "map": {
+      "title": "Atendimento em todo Brasil, Paraguai e Uruguai.",
+      "description": "A Isoart possui 3 fábricas estrategicamente localizadas nas regiões oeste do Paraná e Santa Catarina, garantindo cobertura completa em todo território brasileiro, paraguaio e uruguaio com excelência e qualidade."
+    },
+    "mvv": {
+      "missao": {
+        "title": "Missão",
+        "description": "Satisfazer as necessidades dos clientes, superando suas expectativas, através da excelência na fabricação e distribuição dos produtos de EPS, gerando soluções inovadoras, com rentabilidade e respeito ao meio ambiente."
+      },
+      "visao": {
+        "title": "Visão",
+        "description": "Ser reconhecida como a empresa referência no setor em que atua, agregando valor social e econômico, dentro de princípios éticos e sustentáveis."
+      },
+      "valores": {
+        "title": "Valores",
+        "description": "Compromisso com a qualidade, excelência no atendimento, respeito ao meio ambiente, transparência nas ações, valorização da vida, inovação e ousadia."
+      }
+    },
+    "quality": {
+      "title": "Política de qualidade",
+      "description1": "O Grupo Isoart, através da Política de Qualidade estabelece as diretrizes pelas quais declara seu compromisso com a satisfação dos clientes, colaboradores e comunidade.",
+      "description2": "Nesse sentido, buscamos a melhoria contínua do Sistema da Gestão da Qualidade, fundamentando nossas ações nas seguintes premissas:",
+      "items": {
+        "item1": "Garantir a satisfação dos clientes, oferecendo produtos e serviços com qualidade.",
+        "item2": "Compartilhar nossos valores, construindo parcerias duradouras que resultem em ganhos para ambas as partes.",
+        "item3": "Manter um bom ambiente de trabalho, valorizando a segurança e o respeito à vida.",
+        "item4": "Buscar a melhoria contínua e o controle dos processos via indicadores de desempenho, favorecendo a obtenção e manutenção de vantagens competitivas.",
+        "item5": "Promover ações sustentáveis almejando o mínimo impacto ambiental.",
+        "item6": "Treinar e capacitar todos os colaboradores visando o cumprimento da Política de Qualidade."
+      }
+    }
   }
 }
