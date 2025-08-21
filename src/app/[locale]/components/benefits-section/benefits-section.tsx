@@ -49,7 +49,6 @@ function BenefitsSection({ benefits }: BenefitsSectionProps) {
     return (
         <section className={styles['benefits-section']}>
             <div className={styles['benefits-wrapper']}>
-                <h3 className={styles['benefits-title']}>{t('benefits')}</h3>
                 {benefits && benefits.length > 0 ? (
                     benefits.map((benefit) => (
                         <div key={benefit.id} className={styles['benefits-card']}>
