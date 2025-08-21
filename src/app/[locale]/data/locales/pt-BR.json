@@ -551,7 +551,10 @@
         "vermelhoFogo": "Vermelho Fogo",
         "azulGenciana": "Azul Genciana",
         "verdeTrafego": "Verde Tráfego",
-        "preto": "Preto"
+        "preto": "Preto",
+        "naturalGalvanizado": "Natural Galvanizado",
+        "amadeiradoClaro": "Amadeirado Claro",
+        "amadeiradoEscuro": "Amadeirado Escuro"
       },
       "aviso": "Padrão Branco RAL 9003. As outras cores são sugestões, disponibilidade sob consulta."
     },
