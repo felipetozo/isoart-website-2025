@@ -226,7 +226,20 @@
     "address": "Dirección",
     "phone": "Teléfono",
     "email": "Correo electrónico",
-    "social": "Redes Sociales"
+    "social": "Redes Sociales",
+    "institutional": "Institucional",
+    "aboutIsoart": "Acerca de ISOART",
+    "aboutEpsPir": "Acerca de EPS PIR",
+    "products": "Productos",
+    "telhasPaineis": "Tejas y Paneles",
+    "construcaoCivil": "Construcción Civil",
+    "forros": "Techos",
+    "moldurasDecorativas": "Molduras Decorativas",
+    "embalagensEps": "Embalajes en EPS",
+    "support": "Soporte",
+    "contact": "Contacto",
+    "privacyPolicy": "Política de Privacidad",
+    "companyInfo": "Isoart Industria de productos térmicos y constructivos ltda. CNPJ: 09.094.564/0001-05"
   },
   "common": {
     "buttons": {

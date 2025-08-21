@@ -57,27 +57,27 @@ function Footer({ locale }: FooterProps) {
                     <div className={styles['footer-column']}>
                         <div className={styles['footer-nav-wrapper']}>
                             <div>
-                                <h5>Institucional</h5>
+                                <h5>{t('institutional')}</h5>
                                 <ul>
-                                    <li><Link href={`/${locale}/sobre`}>Sobre a ISOART</Link></li>
-                                    <li><Link href={`/${locale}/sobre-eps-pir`}>Sobre EPS PIR</Link></li>
+                                    <li><Link href={`/${locale}/sobre`}>{t('aboutIsoart')}</Link></li>
+                                    <li><Link href={`/${locale}/sobre-eps-pir`}>{t('aboutEpsPir')}</Link></li>
                                 </ul>
                             </div>
                             <div>
-                                <h5>Produtos</h5>
+                                <h5>{t('products')}</h5>
                                 <ul>
-                                    <li><Link href={`/${locale}/solucoes/telhas-e-paineis`}>Telhas e Painéis</Link></li>
-                                    <li><Link href={`/${locale}/solucoes/construcao-civil`}>Construção Civil</Link></li>
-                                    <li><Link href={`/${locale}/solucoes/forros`}>Forros</Link></li>
-                                    <li><Link href={`/${locale}/solucoes/molduras-decorativas`}>Molduras Decorativas</Link></li>
-                                    <li><Link href={`/${locale}/solucoes/embalagens-em-eps`}>Embalagens em EPS</Link></li>
+                                    <li><Link href={`/${locale}/solucoes/telhas-e-paineis`}>{t('telhasPaineis')}</Link></li>
+                                    <li><Link href={`/${locale}/solucoes/construcao-civil`}>{t('construcaoCivil')}</Link></li>
+                                    <li><Link href={`/${locale}/solucoes/forros`}>{t('forros')}</Link></li>
+                                    <li><Link href={`/${locale}/solucoes/molduras-decorativas`}>{t('moldurasDecorativas')}</Link></li>
+                                    <li><Link href={`/${locale}/solucoes/embalagens-em-eps`}>{t('embalagensEps')}</Link></li>
                                 </ul>
                             </div>
                             <div>
-                                <h5>Suporte</h5>
+                                <h5>{t('support')}</h5>
                                 <ul>
-                                    <li><Link href={`/${locale}/contato`}>Contato</Link></li>
-                                    <li><Link href={`/${locale}/privacidade`}>Políticas de privacidade</Link></li>
+                                    <li><Link href={`/${locale}/contato`}>{t('contact')}</Link></li>
+                                    <li><Link href={`/${locale}/privacidade`}>{t('privacyPolicy')}</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -106,7 +106,7 @@ function Footer({ locale }: FooterProps) {
                 <div className={styles['footer-wrapper']}>
                     <div className={styles['footer-cnpj']}>
                         <p>
-                            Isoart Indústria de produtos térmicos e construtivos ltda. CNPJ: 09.094.564/0001-05
+                            {t('companyInfo')}
                         </p>
                     </div>
                 </div>
