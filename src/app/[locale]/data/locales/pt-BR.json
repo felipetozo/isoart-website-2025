@@ -563,6 +563,11 @@
       "description": "As telhas e painéis Isoart PIR são fabricadas em linha contínua e totalmente automatizada, garantindo alta precisão, qualidade e sustentabilidade. Com núcleo isolante de Poliisocianurato (PIR) e revestimento em chapas de aço galvalume, o processo inclui injeção de alta pressão, prensagem contínua e corte automatizado, assegurando excelente adesão, acabamento e padronização. Todos os produtos são resfriados, empilhados e embalados automaticamente, prontos para expedição."
     }
   },
+  "sustentabilidade": {
+    "title": "Reciclagem de EPS: sustentabilidade e reaproveitamento inteligente.",
+    "description": "O Poliestireno Expandido (EPS), popularmente conhecido como Isopor®, é um material amplamente utilizado e 100% reciclável. Apesar de não ser biodegradável, sua reciclagem evita impactos ambientais, reduzindo o volume de resíduos em aterros sanitários.",
+    "aviso": "A Isoart conta com dois centros de reciclagem internos, onde reutiliza integralmente os resíduos gerados, reforçando seu compromisso com a sustentabilidade."
+  },
   "sobrePage": {
     "hero": {
       "title": "sobre nós"

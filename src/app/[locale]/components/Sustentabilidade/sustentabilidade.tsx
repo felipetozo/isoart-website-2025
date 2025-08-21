@@ -1,12 +1,21 @@
+'use client';
+
 import styles from './sustentabilidade.module.css';
 import { Recycle } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
-function Sustentabilidade() {
+interface SustentabilidadeProps {
+  locale: string;
+}
+
+function Sustentabilidade({ locale }: SustentabilidadeProps) {
+  const t = useTranslations('sustentabilidade');
+  
   return (
     <section className={styles['sustentabilidade-section']}>
       <div className={styles['sustentabilidade-wrapper']}>
         <h2 className={styles['sustentabilidade-title']}>
-          Reciclagem de EPS: sustentabilidade e reaproveitamento inteligente.
+          {t('title')}
         </h2>
         
         <img 
@@ -16,18 +25,13 @@ function Sustentabilidade() {
         />
         
         <p className={styles['sustentabilidade-description']}>
-          O Poliestireno Expandido (EPS), popularmente conhecido como Isopor®,
-          é um material amplamente utilizado e 100% reciclável. Apesar de não ser
-          biodegradável, sua reciclagem evita impactos ambientais, reduzindo o
-          volume de resíduos em aterros sanitários.
+          {t('description')}
         </p>
         
         <div className={styles['sustentabilidade-aviso']}>
           <Recycle className={styles['sustentabilidade-aviso-icon']} />
           <p className={styles['sustentabilidade-aviso-text']}>
-          A Isoart conta com dois centros de reciclagem internos,
-          onde reutiliza integralmente os resíduos gerados,
-          reforçando seu compromisso com a sustentabilidade.
+            {t('aviso')}
           </p>
         </div>
       </div>

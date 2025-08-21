@@ -560,8 +560,13 @@
     },
     "linhaProducao": {
       "title": "Producción automatizada para máxima eficiencia",
-      "description": "Las tejas y paneles Isoart PIR se fabrican en línea continua y totalmente automatizada, garantizando alta precisión, calidad y sostenibilidad. Con núcleo aislante de Poliisocianurato (PIR) y revestimiento en chapas de acero galvalume, el proceso incluye inyección de alta presión, prensado continuo y corte automatizado, asegurando excelente adherencia, acabado y estandarización. Todos los productos se enfrían, apilan y empaquetan automáticamente, listos para envío."
+      "description": "Las tejas y paneles Isoart PIR se fabrican en línea continua y totalmente automatizada, garantizando alta precisión, calidad y sostenibilidad. Con núcleo aislante de Poliisocianurato (PIR) y revestimiento en chapas de acero galvalume, el proceso incluye inyeção de alta presión, prensado continuo y corte automatizado, asegurando excelente adherencia, acabado y estandarización. Todos los productos se enfrían, apilan y empaquetan automáticamente, listos para envío."
     }
+  },
+  "sustentabilidade": {
+    "title": "Reciclaje de EPS: sostenibilidad y reutilización inteligente.",
+    "description": "El Poliestireno Expandido (EPS), popularmente conocido como Poliestireno®, es un material ampliamente utilizado y 100% reciclable. Aunque no es biodegradable, su reciclaje previene impactos ambientales al reducir el volumen de residuos en vertederos.",
+    "aviso": "Isoart cuenta con dos centros de reciclaje internos donde reutiliza integralmente los residuos generados, reforzando su compromiso con la sostenibilidad."
   },
   "sobrePage": {
     "hero": {

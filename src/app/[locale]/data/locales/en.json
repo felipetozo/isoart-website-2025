@@ -563,6 +563,11 @@
       "description": "Isoart PIR tiles and panels are manufactured in a continuous and fully automated line, ensuring high precision, quality and sustainability. With Polyisocyanurate (PIR) insulating core and galvalume steel sheet coating, the process includes high-pressure injection, continuous pressing and automated cutting, ensuring excellent adhesion, finish and standardization. All products are automatically cooled, stacked and packaged, ready for shipping."
     }
   },
+  "sustentabilidade": {
+    "title": "EPS Recycling: sustainability and intelligent reuse.",
+    "description": "Expanded Polystyrene (EPS), popularly known as Styrofoam®, is a widely used and 100% recyclable material. Although not biodegradable, its recycling prevents environmental impacts by reducing the volume of waste in landfills.",
+    "aviso": "Isoart has two internal recycling centers where it fully reuses the generated waste, reinforcing its commitment to sustainability."
+  },
   "sobrePage": {
     "hero": {
       "title": "about us"

@@ -90,7 +90,7 @@ export default function SobreEpsPirPage() {
       </section>
 
       {/* Reciclagem de EPS / Sustentabilidade */}
-      <Sustentabilidade />
+      <Sustentabilidade locale={locale} />
       
       {/* Sobre o PIR */}
       <section id="pir" className={styles['pir-section']}>
