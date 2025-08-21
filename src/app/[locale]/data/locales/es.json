@@ -309,11 +309,43 @@
       "message": "Mensaje",
       "submit": "Enviar mensaje",
       "success": "¡Su mensaje fue enviado exitosamente!",
-      "contact": "Contáctanos:"
+      "contact": "Contáctanos:",
+      "phoneWhatsapp": "Teléfono / WhatsApp",
+      "solutionDesired": "Solución deseada",
+      "state": "Estado",
+      "city": "Ciudad",
+      "terms": "Acepto la",
+      "privacyPolicy": "política de privacidad",
+      "sending": "Enviando...",
+      "errorSending": "Error al enviar. Intente nuevamente.",
+      "selectSolution": "Seleccione una solución",
+      "selectState": "Seleccione un estado",
+      "enterName": "Ingrese su nombre",
+      "enterEmail": "Ingrese su email",
+      "enterCity": "Ingrese su ciudad",
+      "phonePlaceholder": "(00) 00000-0000",
+      "solutions": {
+        "telhasPaineis": "Tejas y Paneles",
+        "construcaoCivil": "Construcción Civil",
+        "forros": "Techos",
+        "molduras": "Molduras",
+        "embalagens": "Embalajes"
+      }
     },
     "hero": {
       "title": "Contáctanos",
       "description": "Estamos listos para atenderle y proporcionar las mejores soluciones para su proyecto."
+    },
+    "factories": {
+      "factory1": "Fábrica 1 (Matriz)",
+      "factory2": "Fábrica 2",
+      "factory3": "Fábrica 3",
+      "address1": "Calle Dorivaldo Soncela, 1490",
+      "city1": "Santa Tereza do Oeste - Paraná",
+      "address2": "Carretera BR 282 - KM 496",
+      "city2": "Xanxerê - Santa Catarina",
+      "address3": "Carretera BR 277 - KM 608",
+      "city3": "Santa Tereza do Oeste - Paraná"
     }
   },
   "sobreEpsPirPage": {

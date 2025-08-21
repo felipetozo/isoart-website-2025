@@ -309,11 +309,43 @@
       "message": "Message",
       "submit": "Send message",
       "success": "Your message was sent successfully!",
-      "contact": "Contact us:"
+      "contact": "Contact us:",
+      "phoneWhatsapp": "Phone / WhatsApp",
+      "solutionDesired": "Desired solution",
+      "state": "State",
+      "city": "City",
+      "terms": "I accept the",
+      "privacyPolicy": "privacy policy",
+      "sending": "Sending...",
+      "errorSending": "Error sending. Try again.",
+      "selectSolution": "Select a solution",
+      "selectState": "Select a state",
+      "enterName": "Enter your name",
+      "enterEmail": "Enter your email",
+      "enterCity": "Enter your city",
+      "phonePlaceholder": "(00) 00000-0000",
+      "solutions": {
+        "telhasPaineis": "Roofing and Panels",
+        "construcaoCivil": "Civil Construction",
+        "forros": "Ceilings",
+        "molduras": "Moldings",
+        "embalagens": "Packaging"
+      }
     },
     "hero": {
       "title": "Contact Us",
       "description": "We are ready to serve you and provide the best solutions for your project."
+    },
+    "factories": {
+      "factory1": "Factory 1 (Headquarters)",
+      "factory2": "Factory 2",
+      "factory3": "Factory 3",
+      "address1": "Dorivaldo Soncela Street, 1490",
+      "city1": "Santa Tereza do Oeste - Paraná",
+      "address2": "BR 282 Highway - KM 496",
+      "city2": "Xanxerê - Santa Catarina",
+      "address3": "BR 277 Highway - KM 608",
+      "city3": "Santa Tereza do Oeste - Paraná"
     }
   },
   "sobreEpsPirPage": {

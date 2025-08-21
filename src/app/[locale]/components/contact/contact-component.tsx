@@ -60,9 +60,9 @@ function ContactComponent({ locale }: ContactComponentProps) {
         if (!formData.name.trim()) newErrors.name = t('name') + ' é obrigatório';
         if (!formData.email.trim()) newErrors.email = t('email') + ' é obrigatório';
         else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'E-mail inválido';
-        if (!formData.solution) newErrors.solution = 'Selecione uma solução';
-        if (!formData.state) newErrors.state = 'Selecione um estado';
-        if (!formData.city.trim()) newErrors.city = 'Digite sua cidade';
+        if (!formData.solution) newErrors.solution = t('selectSolution');
+        if (!formData.state) newErrors.state = t('selectState');
+        if (!formData.city.trim()) newErrors.city = t('enterCity');
         if (!formData.terms) newErrors.terms = 'Você deve aceitar os termos';
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -193,7 +193,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                 type="text"
                                 value={formData.name}
                                 onChange={handleChange}
-                                placeholder="Digite seu nome"
+                                placeholder={t('enterName')}
                                 error={errors.name}
                             />
                         </div>
@@ -204,32 +204,32 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                 type="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                placeholder="Digite seu email"
+                                placeholder={t('enterEmail')}
                                 error={errors.email}
                             />
                             <FormField
                                 id="phone"
-                                label="Telefone / WhatsApp"
+                                label={t('phoneWhatsapp')}
                                 type="tel"
                                 value={formData.phone}
                                 onChange={handleChange}
-                                placeholder="(00) 00000-0000"
+                                placeholder={t('phonePlaceholder')}
                                 error={errors.phone}
                             />
                         </div>
                         <div className={styles['cadastro-form-fields']}>
                             <FormSelection
                                 id="solution"
-                                label="Solução desejada"
+                                label={t('solutionDesired')}
                                 value={formData.solution}
                                 onChange={handleChange}
                                 options={[
-                                    { value: '', label: 'Selecione uma solução' },
-                                    { value: 'telhas-e-paineis', label: 'Telhas e Painéis' },
-                                    { value: 'construcao-civil', label: 'Construção Civil' },
-                                    { value: 'forros', label: 'Forros' },
-                                    { value: 'molduras', label: 'Molduras' },
-                                    { value: 'embalagens', label: 'Embalagens' },
+                                    { value: '', label: t('selectSolution') },
+                                    { value: 'telhas-e-paineis', label: t('solutions.telhasPaineis') },
+                                    { value: 'construcao-civil', label: t('solutions.construcaoCivil') },
+                                    { value: 'forros', label: t('solutions.forros') },
+                                    { value: 'molduras', label: t('solutions.molduras') },
+                                    { value: 'embalagens', label: t('solutions.embalagens') },
                                 ]}
                                 error={errors.solution}
                             />
@@ -237,7 +237,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                         <div className={styles['cadastro-form-fields']}>
                             <FormSelection
                                 id="state"
-                                label="Estado"
+                                label={t('state')}
                                 value={formData.state}
                                 onChange={handleChange}
                                 options={states}
@@ -248,11 +248,11 @@ function ContactComponent({ locale }: ContactComponentProps) {
                         <div className={styles['cadastro-form-fields']}>
                             <FormField
                                 id="city"
-                                label="Cidade"
+                                label={t('city')}
                                 type="text"
                                 value={formData.city}
                                 onChange={handleChange}
-                                placeholder="Digite sua cidade"
+                                placeholder={t('enterCity')}
                                 error={errors.city}
                             />
                         </div>
@@ -267,7 +267,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                     className={styles.termsCheckbox}
                                 />
                                 <label htmlFor="terms" className={styles['terms-text']}>
-                                    Eu aceito a <a href={`/${locale}/privacidade`} className={styles['terms-link']}>política de privacidade</a>
+                                    {t('terms')} <a href={`/${locale}/privacidade`} className={styles['terms-link']}>{t('privacyPolicy')}</a>
                                 </label>
                             </div>
                             {errors.terms && <div className={styles['error-message']}>{errors.terms}</div>}
@@ -280,12 +280,12 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                 disabled={submitStatus === 'submitting'}
                             >
                                 <span>
-                                    {submitStatus === 'submitting' ? 'Enviando...' : tCommon('requestQuote')}
+                                    {submitStatus === 'submitting' ? t('sending') : tCommon('requestQuote')}
                                 </span>
                             </Button>
                         </div>
                         {submitStatus === 'error' && (
-                            <p className={styles['error-message']}>Erro ao enviar. Tente novamente.</p>
+                            <p className={styles['error-message']}>{t('errorSending')}</p>
                         )}
                     </form>
 
@@ -300,7 +300,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                 loading='lazy'
                             />
                             <div className={styles['contact-component-endereco-info']}>
-                                <h5>Fábrica 1 (Matriz)</h5>
+                                <h5>{tPage('factories.factory1')}</h5>
                                 <a href="tel:554532311699">
                                     <MdOutlinePhoneInTalk />
                                     +55 45 3231 1699
@@ -316,8 +316,8 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                 <a href="https://maps.google.com/?q=Rua+Dorivaldo+Soncela,+1490,+Santa+Tereza+do+Oeste,+Paraná" target="_blank" rel="noopener noreferrer">
                                   <MdLocationOn />
                                     <p>
-                                        Rua Dorivaldo Soncela, 1490<br />
-                                        Santa Tereza do Oeste - Paraná
+                                        {tPage('factories.address1')}<br />
+                                        {tPage('factories.city1')}
                                     </p>
                                 </a>
                             </div>
@@ -331,7 +331,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                 loading='lazy'
                             />
                             <div className={styles['contact-component-endereco-info']}>
-                                <h5>Fábrica 2</h5>
+                                <h5>{tPage('factories.factory2')}</h5>
                                 <a href="tel:+554934332025">
                                     <MdOutlinePhoneInTalk />
                                     +55 49 3433 2025
@@ -347,8 +347,8 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                 <a href="https://maps.google.com/?q=Rodovia+BR+282+KM+496,+Xanxerê,+Santa+Catarina" target="_blank" rel="noopener noreferrer">
                                   <MdLocationOn />
                                     <p>
-                                        Rodovia BR 282 - KM 496<br />
-                                        Xanxerê - Santa Catarina
+                                        {tPage('factories.address2')}<br />
+                                        {tPage('factories.city2')}
                                     </p>
                                 </a>
                             </div>
@@ -362,7 +362,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                 loading='lazy'
                             />
                             <div className={styles['contact-component-endereco-info']}>
-                                <h5>Fábrica 3</h5>
+                                <h5>{tPage('factories.factory3')}</h5>
                                 <a href="tel:+554530111000">
                                     <MdOutlinePhoneInTalk />
                                     +55 45 3011 1000
@@ -378,8 +378,8 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                 <a href="https://maps.google.com/?q=Rodovia+BR+277+KM+608,+Santa+Tereza+do+Oeste,+Paraná" target="_blank" rel="noopener noreferrer">
                                   <MdLocationOn />
                                     <p>
-                                        Rodovia BR 277 - KM 608<br />
-                                        Santa Tereza do Oeste - Paraná
+                                        {tPage('factories.address3')}<br />
+                                        {tPage('factories.city3')}
                                     </p>
                                 </a>
                             </div>
@@ -389,7 +389,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
             </div>
             
             <Toast
-                message="Sua mensagem foi enviada com sucesso!"
+                message={t('success')}
                 type="success"
                 isVisible={showToast}
                 onClose={() => setShowToast(false)}

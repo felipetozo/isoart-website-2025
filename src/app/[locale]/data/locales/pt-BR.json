@@ -309,11 +309,43 @@
       "message": "Mensagem",
       "submit": "Enviar mensagem",
       "success": "Sua mensagem foi enviada com sucesso!",
-      "contact": "Entre em contato conosco:"
+      "contact": "Entre em contato conosco:",
+      "phoneWhatsapp": "Telefone / WhatsApp",
+      "solutionDesired": "Solução desejada",
+      "state": "Estado",
+      "city": "Cidade",
+      "terms": "Eu aceito a",
+      "privacyPolicy": "política de privacidade",
+      "sending": "Enviando...",
+      "errorSending": "Erro ao enviar. Tente novamente.",
+      "selectSolution": "Selecione uma solução",
+      "selectState": "Selecione um estado",
+      "enterName": "Digite seu nome",
+      "enterEmail": "Digite seu email",
+      "enterCity": "Digite sua cidade",
+      "phonePlaceholder": "(00) 00000-0000",
+      "solutions": {
+        "telhasPaineis": "Telhas e Painéis",
+        "construcaoCivil": "Construção Civil",
+        "forros": "Forros",
+        "molduras": "Molduras",
+        "embalagens": "Embalagens"
+      }
     },
     "hero": {
       "title": "Entre em Contato",
       "description": "Estamos prontos para atender você e fornecer as melhores soluções para seu projeto."
+    },
+    "factories": {
+      "factory1": "Fábrica 1 (Matriz)",
+      "factory2": "Fábrica 2",
+      "factory3": "Fábrica 3",
+      "address1": "Rua Dorivaldo Soncela, 1490",
+      "city1": "Santa Tereza do Oeste - Paraná",
+      "address2": "Rodovia BR 282 - KM 496",
+      "city2": "Xanxerê - Santa Catarina",
+      "address3": "Rodovia BR 277 - KM 608",
+      "city3": "Santa Tereza do Oeste - Paraná"
     }
   },
   "sobreEpsPirPage": {
