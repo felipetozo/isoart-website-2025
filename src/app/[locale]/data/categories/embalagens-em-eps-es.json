@@ -1,0 +1,55 @@
+{
+    "id": 5,
+    "title": "Embalajes en EPS",
+    "slug": "embalajes-eps",
+    "metaDescription": "Embalajes en EPS para protección de productos durante el transporte. Ligeros y resistentes, son personalizables para atender a las necesidades de diversos sectores.",
+    "hero": {
+        "title": "Embalajes en EPS",
+        "description": "Embalajes en EPS para protección de productos durante el transporte. Ligeros y resistentes, son personalizables para atender a las necesidades de diversos sectores.",
+        "buttonText": "Entre en contacto",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/heroes/categories/embalagens-eps-hero.avif"
+    },
+    "categoryDescription": "Nuestros embalajes en EPS ofrecen protección personalizada para productos industriales y comerciales, con opciones como cantoneras, moldes y perlas.",
+    "products": [
+        {
+            "id": 18,
+            "name": "Embalajes en EPS",
+            "slug": "embalajes-eps",
+            "description": "Soluciones completas en embalajes de EPS para protección y transporte.",
+            "image": "/img/produtos/embalagens/embalagens/embalagens-1440x-800_001.avif",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Protección y Embalaje"
+            }
+        },
+        {
+            "id": 21,
+            "name": "Perlas en EPS",
+            "slug": "perlas-eps",
+            "description": "Perlas de EPS para relleno de embalajes.",
+            "image": "/img/produtos/embalagens/perolas/perolas-1440x-800_001.avif",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Relleno"
+            }
+        }
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Protección Eficiente",
+            "description": "Amortigua impactos y vibraciones, preservando el producto durante el transporte y almacenamiento."
+        },
+        {
+            "id": 2,
+            "title": "Ligereza y Economía",
+            "description": "Reduce el peso total del embalaje, facilitando el manejo y optimizando costos logísticos."
+        },
+        {
+            "id": 3,
+            "title": "Alta Versatilidad",
+            "description": "Puede ser moldeado en diversos formatos, adaptándose a diferentes tipos de productos."
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+{
+    "id": 13,
+    "name": "Wall Moldings",
+    "slug": "wall-moldings",
+    "description": "High-density EPS moldings with flexible coating, designed for aesthetic finishing of walls and parapets, with weather resistance and practical installation.",
+    "image": "/img/produtos/molduras/muros/muros-01.avif",
+    "specifications": {
+        "material": "Virgin EPS with polymeric resin coating",
+        "densidade": "20-30 kg/m³",
+        "dimensoes": "Customizable upon request",
+        "aplicacao": "External walls and parapets"
+    },
+    "hero": {
+        "title": "Wall Moldings",
+        "description": "Elegant solutions for wall finishing, combining aesthetics, lightness and durability.",
+        "buttonText": "Request a quote",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/heroes/products/molduras-decorativas-muros-hero.avif"
+    },
+    "categoryDescription": {
+        "title": "Isoart Wall Moldings enhance walls and parapets with sophisticated finishing and climate resistance.",
+        "description": "Isoart Wall Moldings are manufactured in high-density EPS with flexible polymeric resin-based coating, perfect for external finishing on walls and parapets. With customization, lightness and weather resistance, they offer modern aesthetics, quick installation and low structural impact, ideal for residential and commercial projects."
+    },
+    "projectImages": [
+        "/img/produtos/molduras/muros/muros-1440x-800_001.avif",
+        "/img/produtos/molduras/muros/muros-1440x-800_002.avif",
+        "/img/produtos/molduras/muros/muros-1440x-800_003.avif",
+        "/img/produtos/molduras/muros/muros-1440x-800_004.avif"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Differentiated aesthetics",
+            "description": "Customizable finishes for elegant walls."
+        },
+        {
+            "id": 2,
+            "title": "Easy installation",
+            "description": "Fixing with AC-3 mortar reduces time and costs."
+        },
+        {
+            "id": 3,
+            "title": "Climate resistance",
+            "description": "Supports rain and thermal variations without cracks."
+        }
+    ],
+    "generalCharacteristics": [
+        "High-density EPS (20-30 kg/m³)",
+        "Flexible coating with polymeric resin and mineral powders",
+        "Compression resistance of 0.15-0.25 MPa",
+        "Water absorption < 4% in 5 years",
+        "Smooth surface, free from cement darkening",
+        "100% recyclable, no CFC emissions"
+    ],
+    "applications": {
+        "title": "Sophisticated finishing for walls and parapets in external projects",
+        "description": "Isoart Wall Moldings are ideal for external finishing on walls and parapets, offering modern aesthetics and weather resistance. With practical installation and customization, they are perfect for residences, condominiums and commercial spaces.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Residential walls"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Condominiums"
+            },
+            {
+                "icon": "TbBuildingStore",
+                "text": "Commercial facades"
+            },
+            {
+                "icon": "TbTools",
+                "text": "External renovations"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Aesthetics and customization": "Produced to measure, wall moldings allow finishes such as textures, graffiatos and paintings, valuing parapets and facades.",
+        "Efficient installation": "Fixing with AC-3 adhesive mortar and wooden dowels for larger pieces ensures speed, practicality and cleanliness in construction.",
+        "External durability": "High-density EPS and flexible coating resist rain, sun and thermal variations, ideal for external walls without maintenance.",
+        "Sustainability": "100% recyclable and CFC-free, Isoart moldings are environmentally responsible."
+    }
+}

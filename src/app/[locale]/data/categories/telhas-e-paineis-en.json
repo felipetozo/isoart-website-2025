@@ -1,0 +1,91 @@
+{
+    "id": 1,
+    "title": "Isoart Thermal Roofing and Panels - Ideal for civil construction",
+    "slug": "roofing-panels",
+    "metaDescription": "Isoart roofing and panels for coverings and facades. Available with or without EPS/PIR thermal insulation, they offer energy efficiency and resistance. Suitable for various construction projects.",
+    "hero": {
+        "title": "Roofing and Panels",
+        "description": "Isoart roofing and panels for coverings and facades. Available with or without EPS/PIR thermal insulation, they offer energy efficiency and resistance. Suitable for various construction projects.",
+        "buttonText": "Contact us",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/heroes/categories/telhas-paineis-hero.avif"
+    },
+    "categoryDescription": "Thermal efficiency and resistance for industrial, commercial and residential constructions. Our roofing and panels guarantee high performance, thermal insulation and durability, ideal for warehouses, logistics centers and works that require high-standard protection and aesthetics.",
+    "products": [
+        {
+            "id": 1,
+            "name": "Thermal Roofing",
+            "slug": "thermal-roofing",
+            "description": "Roofing with PIR core and double coating with galvalume steel sheets or film.",
+            "image": "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0010.avif",
+            "specifications": {
+                "material": "Galvanized steel + EPS/PIR",
+                "espessura": "30mm, 50mm, 100mm",
+                "cor": "Various options",
+                "aplicacao": "Coverings"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Facade and Side Closure",
+            "slug": "facade-side-closure",
+            "description": "Versatile panels for facades and side closures, offering insulation and aesthetics.",
+            "image": "/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-fechamento-1440x-800_0010.avif",
+            "specifications": {
+                "material": "Galvanized steel + EPS/PIR",
+                "acabamento": "Pre-painted, Natural"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Partition and Ceiling",
+            "slug": "partition-ceiling",
+            "description": "Practical and efficient solutions for internal partitions and thermoacoustic ceilings.",
+            "image": "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0010.avif",
+            "specifications": {
+                "material": "Galvanized steel + EPS/PIR",
+                "espessura": "50mm, 75mm",
+                "isolamento": "Thermal and Acoustic"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Clean Room",
+            "slug": "clean-room",
+            "description": "Specific panels for clean room environments, with high asepsis and particle control.",
+            "image": "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0010.avif",
+            "specifications": {
+                "material": "Stainless steel + PIR",
+                "conformidade": "Clean room standards"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Cold Storage Chamber",
+            "slug": "cold-storage-chamber",
+            "description": "Robust and efficient panels for cold storage chamber insulation, ensuring ideal temperatures.",
+            "image": "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0010.avif",
+            "specifications": {
+                "material": "Pre-painted/stainless steel + PIR",
+                "temperatura": "Low and Medium"
+            }
+        }
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Thermal and Acoustic Efficiency",
+            "description": "Minimizes heat and noise exchange, providing greater comfort and reducing energy consumption for air conditioning."
+        },
+        {
+            "id": 2,
+            "title": "Fast and Easy Installation",
+            "description": "Light, they allow agile applications without the need for structural reinforcements, reducing time and costs."
+        },
+        {
+            "id": 3,
+            "title": "Extended Durability",
+            "description": "Light, resistant and low-maintenance material, ensuring extended service life with excellent cost-effectiveness."
+        }
+    ]
+}

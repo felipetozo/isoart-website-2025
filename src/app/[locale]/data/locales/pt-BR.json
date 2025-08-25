@@ -349,6 +349,84 @@
             "description": "Painéis robustos e eficientes para isolamento de câmaras frigoríficas, garantindo temperaturas ideais."
           }
         }
+      },
+      "embalagens": {
+        "title": "Embalagens em EPS",
+        "hero": {
+          "title": "Embalagens em EPS",
+          "description": "Embalagens em EPS para proteção de produtos durante transporte. Leves e resistentes, são personalizáveis para atender às necessidades de diversos setores.",
+          "buttonText": "Entre em contato"
+        },
+        "categoryDescription": "Nossas embalagens em EPS oferecem proteção personalizada para produtos industriais e comerciais, com opções como cantoneiras, moldes e pérolas.",
+        "products": {
+          "embalagensEps": {
+            "name": "Embalagens em EPS",
+            "description": "Soluções completas em embalagens de EPS para proteção e transporte."
+          },
+          "perolasEps": {
+            "name": "Pérolas em EPS",
+            "description": "Pérolas de EPS para preenchimento de embalagens."
+          }
+        },
+        "benefits": {
+          "benefit1": {
+            "title": "Proteção Eficiente",
+            "description": "Amortece impactos e vibrações, preservando o produto durante transporte e armazenamento."
+          },
+          "benefit2": {
+            "title": "Leveza e Economia",
+            "description": "Reduz o peso total da embalagem, facilitando o manuseio e otimizando custos logísticos."
+          },
+          "benefit3": {
+            "title": "Alta Versatilidade",
+            "description": "Pode ser moldado em diversos formatos, adaptando-se a diferentes tipos de produtos."
+          }
+        }
+      },
+      "molduras": {
+        "title": "Molduras Decorativas",
+        "hero": {
+          "title": "Molduras Decorativas",
+          "description": "Molduras em EPS para portas, janelas e paredes. Leves, duráveis e de fácil instalação, são ideais para acabamentos decorativos em ambientes internos e externos.",
+          "buttonText": "Entre em contato"
+        },
+        "categoryDescription": "Explore nossas molduras em EPS para portas, janelas, beirais e mais. Projetadas para agregar valor estético e funcionalidade aos seus projetos.",
+        "products": {
+          "moldurasPortasJanelas": {
+            "name": "Molduras para Portas e Janelas",
+            "description": "Molduras para acabado de portas e janelas com design elegante."
+          },
+          "moldurasBeiral": {
+            "name": "Molduras para Beiral",
+            "description": "Molduras para beirais com acabado sofisticado."
+          },
+          "moldurasColunasCapiteis": {
+            "name": "Molduras para Colunas e Capitéis",
+            "description": "Molduras para colunas e capitéis com estilo clássico."
+          },
+          "moldurasMuros": {
+            "name": "Molduras para Muros",
+            "description": "Molduras para muros com resistência e estética."
+          },
+          "moldurasParedes": {
+            "name": "Molduras para Paredes",
+            "description": "Molduras para paredes com design versátil."
+          }
+        },
+        "benefits": {
+          "benefit1": {
+            "title": "Acabado Sofisticado",
+            "description": "Detalhes elegantes que valorizam o design e agregam estilo a qualquer construção, do clássico ao contemporâneo."
+          },
+          "benefit2": {
+            "title": "Instalação Rápida e Fácil",
+            "description": "Leves, permitem aplicações ágeis sem necessidade de refuerzos estructurales, reduzindo tempo e custos."
+          },
+          "benefit3": {
+            "title": "Durabilidade prolongada",
+            "description": "Material leve, resistente e de baixa manutenção, garantindo uma vida útil estendida com excelente custo-benefício."
+          }
+        }
       }
     },
     "notFound": {

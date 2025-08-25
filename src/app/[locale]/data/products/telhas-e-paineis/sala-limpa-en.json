@@ -1,0 +1,85 @@
+{
+    "id": 4,
+    "name": "Clean Room",
+    "slug": "clean-room",
+    "description": "Thermal panels with PIR core and stainless steel or galvalume coating, designed for clean room environments with high asepsis and particle control, meeting strict standards.",
+    "image": "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-01.avif",
+    "specifications": {
+        "material": "AISI 304 stainless steel or galvalume + PIR",
+        "espessura": "50mm, 100mm, 150mm",
+        "cor": "Matte stainless steel or white RAL 9003",
+        "aplicacao": "Clean rooms (pharmaceutical, electronic, hospital industry)"
+    },
+    "hero": {
+        "title": "Clean Room",
+        "description": "High-performance thermal panels for controlled environments with rigorous particle control and asepsis.",
+        "buttonText": "Request a quote",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/heroes/products/telhas-paineis-sala-limpa-hero.avif"
+    },
+    "categoryDescription": {
+        "title": "Isoart Clean Room Panels guarantee asepsis, particle control and thermal insulation for highly controlled environments.",
+        "description": "Isoart Clean Room Panels are designed to meet the requirements of controlled environments, such as pharmaceutical, electronic and hospital industries. With polyisocyanurate (PIR) core and AISI 304 stainless steel or galvalume coating, they offer high chemical resistance, ease of cleaning and compliance with clean room standards, ensuring safety and efficiency."
+    },
+    "projectImages": [
+        "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0010.avif",
+        "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0020.avif",
+        "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0030.avif",
+        "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0040.avif",
+        "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0050.avif",
+        "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0060.avif"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "High asepsis",
+            "description": "Smooth and resistant surfaces facilitate cleaning and particle control."
+        },
+        {
+            "id": 2,
+            "title": "Standards compliance",
+            "description": "Meets strict clean room standards (ISO 14644, GMP)."
+        },
+        {
+            "id": 3,
+            "title": "Durability",
+            "description": "Resistance to chemical agents and corrosion for long service life."
+        }
+    ],
+    "generalCharacteristics": [
+        "PIR core with density 30-38 kg/m³",
+        "AISI 304 stainless steel or galvalume coating",
+        "Smooth surfaces for easy hygiene",
+        "High fire resistance (Class R1, NBR 15366)",
+        "Superior thermal insulation (0.022 W/m.K)",
+        "Custom production for specific projects"
+    ],
+    "applications": {
+        "title": "Solutions for controlled environments with high asepsis and efficiency requirements",
+        "description": "Isoart Clean Room Panels are ideal for environments that require rigorous particle and temperature control, such as laboratories, pharmaceutical and electronic industries. With high-quality materials and smooth finish, they guarantee asepsis, durability and compliance with international standards.",
+        "indications": [
+            {
+                "icon": "TbMedicineSyrup",
+                "text": "Pharmaceutical industry"
+            },
+            {
+                "icon": "TbMicroscope",
+                "text": "Research laboratories"
+            },
+            {
+                "icon": "TbBuildingFactory2",
+                "text": "Electronic industry"
+            },
+            {
+                "icon": "TbBuildingHospital",
+                "text": "Hospital environments"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Asepsis control": "Panels with AISI 304 stainless steel or smooth galvalume coating guarantee easy-to-clean surfaces, minimizing particle contamination and meeting standards such as ISO 14644 and GMP for clean rooms.",
+        "Thermal insulation": "The PIR core (thermal conductivity 0.022 W/m.K) maintains stable temperatures, reducing air conditioning costs in controlled environments, such as laboratories and pharmaceutical industries.",
+        "Chemical resistance": "Stainless steel and PIR are resistant to chemical and corrosive agents, ensuring durability in aggressive environments and reducing maintenance costs.",
+        "Compliance and safety": "Produced with HCFC-free materials and flame retardants (Class R1), Isoart panels offer fire safety and compliance with environmental and technical standards."
+    }
+}

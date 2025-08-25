@@ -1,0 +1,89 @@
+{
+    "id": 11,
+    "name": "Eaves Moldings",
+    "slug": "eaves-moldings",
+    "description": "High-density EPS moldings with flexible coating, perfect for aesthetic finishing of eaves, with lightness and resistance to weathering.",
+    "image": "/img/produtos/molduras/beiral/beiral-01.avif",
+    "specifications": {
+        "material": "Virgin EPS with polymeric resin coating",
+        "densidade": "20-30 kg/m³",
+        "dimensoes": "Customizable upon request",
+        "aplicacao": "Roof and facade eaves"
+    },
+    "hero": {
+        "title": "Eaves Moldings",
+        "description": "Light and elegant solutions for eaves finishing, enhancing facades with durability and style.",
+        "buttonText": "Request a quote",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/heroes/products/molduras-decorativas-beiral-hero.avif"
+    },
+    "categoryDescription": {
+        "title": "Isoart Eaves Moldings combine aesthetics and functionality for high-quality external finishes.",
+        "description": "Isoart Eaves Moldings are manufactured in high-density EPS with flexible putty coating based on polymeric resin, offering lightness, resistance to weathering and customization for roof and facade eaves. Ideal for architectural projects that seek sophistication and practicality, they guarantee fast installation and low structural impact."
+    },
+    "projectImages": [
+        "/img/produtos/molduras/beiral/beiral-1440x-800_001.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_002.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_003.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_004.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_005.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_006.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_007.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_008.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_009.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_010.avif"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Sophisticated finish",
+            "description": "Enhances eaves with modern and customizable design."
+        },
+        {
+            "id": 2,
+            "title": "Practical installation",
+            "description": "Fixing with AC-3 mortar ensures speed and cleanliness."
+        },
+        {
+            "id": 3,
+            "title": "Climate resistance",
+            "description": "Withstands temperature and humidity variations without cracks."
+        }
+    ],
+    "generalCharacteristics": [
+        "High-density EPS (20-30 kg/m³)",
+        "Flexible coating with polymeric resin and mineral powders",
+        "Compression resistance of 0.15-0.25 MPa",
+        "Water absorption < 4% in 5 years",
+        "Smooth surface, free from cement darkening",
+        "100% recyclable, no CFC emissions"
+    ],
+    "applications": {
+        "title": "Elegant finishing for eaves in residential and commercial projects",
+        "description": "Isoart Eaves Moldings are ideal for external finishing of roofs and facades, offering differentiated aesthetics and resistance to weathering. With simple installation and customization, they are perfect for residences, townhouses and commercial buildings.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Residential roofs"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Commercial facades"
+            },
+            {
+                "icon": "TbBuildingStore",
+                "text": "Institutional buildings"
+            },
+            {
+                "icon": "TbTools",
+                "text": "Roof renovations"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Aesthetics and customization": "Produced to measure, eaves moldings allow finishes such as textures, graffiatos and paintings, ensuring a sophisticated look for roofs and facades.",
+        "Efficient installation": "Fixing with AC-3 adhesive mortar and wooden dowels for larger pieces provides speed, practicality and cleanliness in construction.",
+        "External durability": "Flexible coating and high-density EPS resist rain, sun and thermal variations, ensuring long service life without maintenance.",
+        "Sustainability": "100% recyclable and CFC-free, Isoart moldings are environmentally responsible."
+    }
+}

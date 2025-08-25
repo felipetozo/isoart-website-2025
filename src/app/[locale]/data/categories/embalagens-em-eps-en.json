@@ -1,0 +1,55 @@
+{
+    "id": 5,
+    "title": "EPS Packaging",
+    "slug": "eps-packaging",
+    "metaDescription": "EPS packaging for product protection during transport. Light and resistant, they are customizable to meet the needs of various sectors.",
+    "hero": {
+        "title": "EPS Packaging",
+        "description": "EPS packaging for product protection during transport. Light and resistant, they are customizable to meet the needs of various sectors.",
+        "buttonText": "Contact us",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/heroes/categories/embalagens-eps-hero.avif"
+    },
+    "categoryDescription": "Our EPS packaging offers customized protection for industrial and commercial products, with options such as corner protectors, molds and beads.",
+    "products": [
+        {
+            "id": 18,
+            "name": "EPS Packaging",
+            "slug": "eps-packaging",
+            "description": "Complete EPS packaging solutions for protection and transport.",
+            "image": "/img/produtos/embalagens/embalagens/embalagens-1440x-800_001.avif",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Protection and Packaging"
+            }
+        },
+        {
+            "id": 21,
+            "name": "EPS Beads",
+            "slug": "eps-beads",
+            "description": "EPS beads for packaging filling.",
+            "image": "/img/produtos/embalagens/perolas/perolas-1440x-800_001.avif",
+            "specifications": {
+                "material": "EPS",
+                "aplicacao": "Filling"
+            }
+        }
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Efficient Protection",
+            "description": "Cushions impacts and vibrations, preserving the product during transport and storage."
+        },
+        {
+            "id": 2,
+            "title": "Lightness and Economy",
+            "description": "Reduces the total weight of packaging, facilitating handling and optimizing logistics costs."
+        },
+        {
+            "id": 3,
+            "title": "High Versatility",
+            "description": "Can be molded in various formats, adapting to different types of products."
+        }
+    ]
+}

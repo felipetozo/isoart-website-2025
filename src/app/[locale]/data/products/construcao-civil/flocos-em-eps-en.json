@@ -1,0 +1,81 @@
+{
+    "id": 7,
+    "name": "EPS Flakes",
+    "slug": "eps-flakes",
+    "description": "EPS (Expanded Polystyrene) flakes for lightweight concrete mix, ideal for filling and leveling floors and slabs with weight reduction and thermal insulation.",
+    "image": "/img/produtos/construcao-civil/flocos/flocos-01.avif",
+    "specifications": {
+        "material": "Expanded Polystyrene (EPS)",
+        "densidade": "10-15 kg/m³",
+        "tamanho": "2-5 mm (variable granulometry)",
+        "aplicacao": "Lightweight concrete, floor and slab filling"
+    },
+    "hero": {
+        "title": "EPS Flakes",
+        "description": "Light and sustainable solution for lightweight concrete, with excellent thermal insulation and cost reduction.",
+        "buttonText": "Request a quote",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/heroes/products/construcao-civil-flocos-eps-hero.avif"
+    },
+    "categoryDescription": {
+        "title": "Isoart EPS Flakes are ideal for lightweight concrete, reducing weight and costs in filling and leveling works.",
+        "description": "Isoart EPS Flakes are used in lightweight concrete mix, composed of cement, sand, water and EPS flakes. With low density and high thermal insulation capacity, they are perfect for filling and leveling floors and slabs, providing lightness, material savings and sustainability in civil construction projects."
+    },
+    "projectImages": [
+        "/img/produtos/construcao-civil/flocos/flocos-1440x800_001.avif",
+        "/img/produtos/construcao-civil/flocos/flocos-1440x800_002.avif"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Weight reduction",
+            "description": "Significantly reduces concrete weight, relieving the structure."
+        },
+        {
+            "id": 2,
+            "title": "Thermal insulation",
+            "description": "Improves thermal comfort with low thermal conductivity."
+        },
+        {
+            "id": 3,
+            "title": "Sustainability",
+            "description": "100% recyclable material, no CFC emissions."
+        }
+    ],
+    "generalCharacteristics": [
+        "Average density of 10-15 kg/m³",
+        "2-5 mm granulometry for homogeneous mixing",
+        "Thermal conductivity coefficient of 0.028 Kcal/h.m.°C",
+        "Self-extinguishing material (Class F)",
+        "Moisture resistance with maximum absorption of 4% in 5 years",
+        "Compatible with cement, lime, plaster and sand"
+    ],
+    "applications": {
+        "title": "Light and economical solution for filling in construction projects",
+        "description": "Isoart EPS Flakes are ideal for producing lightweight concrete, used in filling and leveling floors and slabs. With excellent thermal insulation and low density, they are perfect for works that seek weight and cost reduction while maintaining sustainability.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Residential floor filling"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Commercial slab leveling"
+            },
+            {
+                "icon": "TbFactory",
+                "text": "Industrial works"
+            },
+            {
+                "icon": "TbTools",
+                "text": "Renovations and leveling"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Weight reduction": "EPS flakes significantly reduce the density of lightweight concrete, relieving structural load and allowing savings in foundations and pillars.",
+        "Thermal insulation": "With thermal conductivity coefficient of 0.028 Kcal/h.m.°C, EPS flakes provide thermal comfort, reducing air conditioning costs.",
+        "Sustainability": "100% recyclable and CFC-free, Isoart moldings are environmentally responsible.",
+        "Ease of use": "2-5 mm granulometry ensures homogeneous mixing with cement, facilitating application in filling and leveling works."
+    }
+}

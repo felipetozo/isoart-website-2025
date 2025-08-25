@@ -1,0 +1,82 @@
+{
+    "id": 21,
+    "name": "EPS Beads",
+    "slug": "eps-beads",
+    "description": "EPS beads for packaging filling, offering impact protection and lightness for transporting fragile products.",
+    "image": "/img/produtos/embalagens/perolas/perolas-01.avif",
+    "specifications": {
+        "material": "Virgin EPS",
+        "densidade": "10-12 kg/m³",
+        "dimensoes": "2-8 mm granules",
+        "aplicacao": "Packaging filling"
+    },
+    "hero": {
+        "title": "EPS Beads",
+        "description": "EPS solutions for packaging filling, ensuring impact protection and lightness in transport.",
+        "buttonText": "Request a quote",
+        "buttonLink": "/contato",
+        "backgroundImage": "/img/heroes/products/embalagens-eps-perolas-hero.avif"
+    },
+    "categoryDescription": {
+        "title": "Isoart EPS Beads offer light and protective filling for packaging.",
+        "description": "Isoart EPS Beads are low-density expanded polystyrene granules, ideal for filling spaces in packaging and protecting fragile products during transport and storage. With high impact resistance and lightness, they are perfect for logistics, retail and e-commerce industries, being 100% recyclable and sustainable."
+    },
+    "projectImages": [
+        "/img/produtos/embalagens/perolas/perolas-1440x-800_001.avif",
+        "/img/produtos/embalagens/perolas/perolas-1440x-800_002.avif",
+        "/img/produtos/embalagens/perolas/perolas-1440x-800_003.avif"
+    ],
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Impact protection",
+            "description": "Absorbs shocks, protecting fragile products in packaging."
+        },
+        {
+            "id": 2,
+            "title": "Extreme lightness",
+            "description": "Significantly reduces packaging weight."
+        },
+        {
+            "id": 3,
+            "title": "Sustainability",
+            "description": "100% recyclable, with reverse logistics by Isoart."
+        }
+    ],
+    "generalCharacteristics": [
+        "Low-density EPS (10-12 kg/m³)",
+        "Compression resistance of 0.10-0.12 MPa",
+        "Water absorption < 2% in 5 years",
+        "2-8 mm granules for filling",
+        "Does not propagate fungi or bacteria",
+        "100% recyclable, no CFC emissions"
+    ],
+    "applications": {
+        "title": "Protective filling for fragile product packaging",
+        "description": "Isoart EPS Beads are ideal for filling spaces in packaging, protecting fragile products such as electronics, glass and retail items during transport and storage. With lightness and resistance, they serve logistics, e-commerce and retail industries, reducing damage and costs.",
+        "indications": [
+            {
+                "icon": "TbDeviceTv",
+                "text": "Electronics"
+            },
+            {
+                "icon": "TbWindow",
+                "text": "Glass and ceramics"
+            },
+            {
+                "icon": "TbPackage",
+                "text": "Retail products"
+            },
+            {
+                "icon": "TbTruck",
+                "text": "Logistics and e-commerce"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Impact protection": "EPS granules absorb shocks, ensuring protection of fragile products during transport.",
+        "Lightness": "With density of 10-12 kg/m³, beads reduce packaging weight, optimizing logistics costs.",
+        "Versatility": "2-8 mm granules adapt to different types of packaging and products.",
+        "Sustainability": "100% recyclable and CFC-free, Isoart moldings are environmentally responsible."
+    }
+}
