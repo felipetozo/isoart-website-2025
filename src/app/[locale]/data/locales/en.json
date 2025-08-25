@@ -327,6 +327,7 @@
           "description": "Isoart roofing and panels for roofing and facades. Available with or without thermal insulation in EPS/PIR, they offer energy efficiency and resistance.",
           "buttonText": "Request a quote"
         },
+        "categoryDescription": "Our thermal roofing and panels offer innovative solutions for roofing and facades, combining energy efficiency with exceptional durability. Available with EPS or PIR cores, they provide excellent thermal and acoustic insulation, reducing air conditioning costs and improving environmental comfort.",
         "products": {
           "telhasTermicas": {
             "name": "Thermal Roofing",
@@ -347,6 +348,98 @@
           "camaraFrigorifica": {
             "name": "Cold Storage",
             "description": "Robust and efficient panels for cold storage insulation, ensuring ideal temperatures."
+          }
+        },
+        "benefits": {
+          "benefit1": {
+            "title": "Superior Energy Efficiency",
+            "description": "EPS/PIR cores provide excellent thermal insulation, significantly reducing energy consumption for air conditioning."
+          },
+          "benefit2": {
+            "title": "Fast and Economical Installation",
+            "description": "Integrated system that combines roofing and insulation in a single operation, reducing construction time and costs."
+          },
+          "benefit3": {
+            "title": "Durability and Resistance",
+            "description": "Galvalume steel coating ensures corrosion resistance and long service life, even in aggressive environments."
+          }
+        }
+      },
+      "embalagens": {
+        "title": "EPS Packaging",
+        "hero": {
+          "title": "EPS Packaging",
+          "description": "EPS packaging for product protection during transport. Light and resistant, they are customizable to meet the needs of various sectors.",
+          "buttonText": "Contact us"
+        },
+        "categoryDescription": "Our EPS packaging offers customized protection for industrial and commercial products, with options such as corner protectors, molds and beads.",
+        "products": {
+          "embalagensEps": {
+            "name": "EPS Packaging",
+            "description": "Complete EPS packaging solutions for protection and transport."
+          },
+          "perolasEps": {
+            "name": "EPS Beads",
+            "description": "EPS beads for packaging filling."
+          }
+        },
+        "benefits": {
+          "benefit1": {
+            "title": "Efficient Protection",
+            "description": "Cushions impacts and vibrations, preserving the product during transport and storage."
+          },
+          "benefit2": {
+            "title": "Lightness and Economy",
+            "description": "Reduces the total weight of packaging, facilitating handling and optimizing logistics costs."
+          },
+          "benefit3": {
+            "title": "High Versatility",
+            "description": "Can be molded in various formats, adapting to different types of products."
+          }
+        }
+      },
+      "molduras": {
+        "title": "Decorative Moldings",
+        "hero": {
+          "title": "Decorative Moldings",
+          "description": "EPS moldings for doors, windows and walls. Light, durable and easy to install, they are ideal for decorative finishes in internal and external environments.",
+          "buttonText": "Contact us"
+        },
+        "categoryDescription": "Explore our EPS moldings for doors, windows, eaves and more. Designed to add aesthetic value and functionality to your projects.",
+        "products": {
+          "moldurasPortasJanelas": {
+            "name": "Door and Window Moldings",
+            "description": "Moldings for door and window finishing with elegant design."
+          },
+          "moldurasBeiral": {
+            "name": "Eaves Moldings",
+            "description": "Eaves moldings with sophisticated finish."
+          },
+          "moldurasColunasCapiteis": {
+            "name": "Column and Capital Moldings",
+            "description": "Column and capital moldings with classic style."
+          },
+          "moldurasMuros": {
+            "name": "Wall Moldings",
+            "description": "Wall moldings with resistance and aesthetics."
+          },
+          "moldurasParedes": {
+            "name": "Wall Moldings",
+            "description": "Wall moldings with versatile design."
+          }
+        },
+        "benefits": {
+          "benefit1": {
+            "title": "Sophisticated Finish",
+            "description": "Elegant details that enhance design and add style to any construction, from classic to contemporary."
+          },
+          "benefit2": {
+            "title": "Fast and Easy Installation",
+            "description": "Light, they allow agile applications without the need for structural reinforcements, reducing time and costs."
+          },
+          "benefit3": {
+            "title": "Extended durability",
+            "description": "Light, resistant and low-maintenance material, ensuring extended service life with excellent cost-effectiveness."
           }
         }
       }

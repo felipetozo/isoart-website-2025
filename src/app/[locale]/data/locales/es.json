@@ -327,6 +327,7 @@
           "description": "Tejas y paneles de Isoart para cubiertas y fachadas. Disponibles con o sin aislamiento térmico en EPS/PIR, ofrecen eficiencia energética y resistencia.",
           "buttonText": "Solicitar presupuesto"
         },
+        "categoryDescription": "Nuestras tejas y paneles térmicos ofrecen soluciones innovadoras para coberturas y fachadas, combinando eficiencia energética con durabilidad excepcional. Disponibles con núcleos de EPS o PIR, proporcionan excelente aislamiento térmico y acústico, reduciendo costos de climatización y mejorando el conforto de los ambientes.",
         "products": {
           "telhasTermicas": {
             "name": "Tejas Térmicas",
@@ -347,6 +348,98 @@
           "camaraFrigorifica": {
             "name": "Cámara Frigorífica",
             "description": "Paneles robustos y eficientes para aislamiento de cámaras frigoríficas, garantizando temperaturas ideales."
+          }
+        },
+        "benefits": {
+          "benefit1": {
+            "title": "Eficiencia Energética Superior",
+            "description": "Núcleos de EPS/PIR proporcionan excelente aislamiento térmico, reduciendo significativamente el consumo de energía para climatización."
+          },
+          "benefit2": {
+            "title": "Instalación Rápida y Económica",
+            "description": "Sistema integrado que combina cobertura e isolamento en una sola operación, reduciendo tiempo y costos de obra."
+          },
+          "benefit3": {
+            "title": "Durabilidad y Resistencia",
+            "description": "Revestimiento en acero galvalume garantiza resistencia a la corrosión y larga vida útil, incluso en ambientes agresivos."
+          }
+        }
+      },
+      "embalagens": {
+        "title": "Embalajes en EPS",
+        "hero": {
+          "title": "Embalajes en EPS",
+          "description": "Embalajes en EPS para protección de productos durante el transporte. Ligeros y resistentes, son personalizables para atender a las necesidades de diversos sectores.",
+          "buttonText": "Entre en contacto"
+        },
+        "categoryDescription": "Nuestros embalajes en EPS ofrecen protección personalizada para productos industriales y comerciales, con opciones como cantoneras, moldes y perlas.",
+        "products": {
+          "embalagensEps": {
+            "name": "Embalajes en EPS",
+            "description": "Soluciones completas en embalajes de EPS para protección y transporte."
+          },
+          "perolasEps": {
+            "name": "Perlas en EPS",
+            "description": "Perlas de EPS para relleno de embalajes."
+          }
+        },
+        "benefits": {
+          "benefit1": {
+            "title": "Protección Eficiente",
+            "description": "Amortigua impactos y vibraciones, preservando el producto durante el transporte y almacenamiento."
+          },
+          "benefit2": {
+            "title": "Ligereza y Economía",
+            "description": "Reduce el peso total del embalaje, facilitando el manejo y optimizando costos logísticos."
+          },
+          "benefit3": {
+            "title": "Alta Versatilidad",
+            "description": "Puede ser moldeado en diversos formatos, adaptándose a diferentes tipos de productos."
+          }
+        }
+      },
+      "molduras": {
+        "title": "Molduras Decorativas",
+        "hero": {
+          "title": "Molduras Decorativas",
+          "description": "Molduras en EPS para puertas, ventanas y paredes. Ligeras, duraderas y de fácil instalación, son ideales para acabados decorativos en ambientes internos y externos.",
+          "buttonText": "Entre en contacto"
+        },
+        "categoryDescription": "Explora nuestras molduras en EPS para puertas, ventanas, aleros y más. Diseñadas para agregar valor estético y funcionalidad a tus proyectos.",
+        "products": {
+          "moldurasPortasJanelas": {
+            "name": "Molduras para Puertas y Ventanas",
+            "description": "Molduras para acabado de puertas y ventanas con diseño elegante."
+          },
+          "moldurasBeiral": {
+            "name": "Molduras para Aleros",
+            "description": "Molduras para aleros con acabado sofisticado."
+          },
+          "moldurasColunasCapiteis": {
+            "name": "Molduras para Columnas y Capitéis",
+            "description": "Molduras para columnas y capitéis con estilo clásico."
+          },
+          "moldurasMuros": {
+            "name": "Molduras para Muros",
+            "description": "Molduras para muros con resistencia y estética."
+          },
+          "moldurasParedes": {
+            "name": "Molduras para Paredes",
+            "description": "Molduras para paredes con diseño versátil."
+          }
+        },
+        "benefits": {
+          "benefit1": {
+            "title": "Acabado Sofisticado",
+            "description": "Detalles elegantes que valorizan el diseño y agregam estilo a cualquier construcción, del clásico al contemporáneo."
+          },
+          "benefit2": {
+            "title": "Instalación Rápida y Fácil",
+            "description": "Ligeras, permiten aplicaciones ágiles sin necesidad de refuerzos estructurales, reduciendo tiempo y costos."
+          },
+          "benefit3": {
+            "title": "Durabilidad prolongada",
+            "description": "Material ligero, resistente y de bajo mantenimiento, garantizando una vida útil extendida con excelente costo-beneficio."
           }
         }
       }
