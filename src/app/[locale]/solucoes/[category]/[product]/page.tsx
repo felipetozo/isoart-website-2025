@@ -16,6 +16,7 @@ import ImageCarousel from '@/app/[locale]/components/image-carousel/image-carous
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import LoadingScreen from '../../../components/loading-screen/loading-screen';
 
 interface ProductData {
     id: number;
@@ -185,7 +186,7 @@ export default function ProductPage() {
     }, [category, product]);
 
     if (loading) {
-        return <div className={styles['loading-screen']}>Carregando...</div>;
+        return <LoadingScreen />;
     }
 
     if (!productData) {

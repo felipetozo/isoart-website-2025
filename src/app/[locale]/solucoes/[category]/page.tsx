@@ -13,6 +13,7 @@ import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useCategoryData } from '../../hooks/use-category-data';
 import menuData from '@/app/[locale]/data/menu-data.json';
+import LoadingScreen from '../../components/loading-screen/loading-screen';
 
 // Interfaces importadas do hook useCategoryData
 
@@ -31,7 +32,7 @@ export default function CategoryPage() {
     if (!categoryData) {
         return (
             <div className={styles['category-page']}>
-                <div>Carregando...</div>
+                <LoadingScreen />
             </div>
         );
     }
