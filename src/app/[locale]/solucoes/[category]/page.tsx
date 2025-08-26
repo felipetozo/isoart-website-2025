@@ -12,6 +12,7 @@ import IncendioComponent from '@/app/[locale]/components/pir-incendio/pir-incend
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useCategoryData } from '../../hooks/use-category-data';
+import menuData from '@/app/[locale]/data/menu-data.json';
 
 // Interfaces importadas do hook useCategoryData
 
@@ -80,28 +81,35 @@ export default function CategoryPage() {
             <section className={styles['category-products-section']}>
                 <div className={styles['category-products-wrapper']}>
                     <div className={styles['category-products-grid']}>
-                        {categoryData.products.map((product) => (
-                            <article key={product.id} className={styles['category-products-grid-card']}>
-                                <Link href={`/${locale}/solucoes/${categoryData.slug}/${product.slug}`}>
-                                    <div className={styles['category-products-grid-content']}>
-                                        {product.image && (
-                                            <div className={styles['category-products-grid-img']}>
-                                                <Image
-                                                    src={product.image}
-                                                    alt={product.name}
-                                                    width={300}
-                                                    height={200}
-                                                />
+                        {categoryData.products.map((product) => {
+                            // Usar dados estáticos APENAS para a imagem
+                            const staticData = (menuData as any[]).find((item: any) => item.slug === category);
+                            const staticProduct = staticData?.products?.find((p: any) => p.slug === product.slug);
+                            const imageSrc = staticProduct?.image || product.image;
+                            
+                            return (
+                                <article key={product.id} className={styles['category-products-grid-card']}>
+                                    <Link href={`/${locale}/solucoes/${categoryData.slug}/${product.slug}`}>
+                                        <div className={styles['category-products-grid-content']}>
+                                            {imageSrc && (
+                                                <div className={styles['category-products-grid-img']}>
+                                                    <Image
+                                                        src={imageSrc}
+                                                        alt={product.name}
+                                                        width={300}
+                                                        height={200}
+                                                    />
+                                                </div>
+                                            )}
+                                            <div>
+                                                <h4>{product.name}</h4>
+                                                <p>{product.description}</p>
                                             </div>
-                                        )}
-                                        <div>
-                                            <h4>{product.name}</h4>
-                                            <p>{product.description}</p>
                                         </div>
-                                    </div>
-                                </Link>
-                            </article>
-                        ))}
+                                    </Link>
+                                </article>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
