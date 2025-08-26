@@ -155,20 +155,14 @@ export default function ProductPage() {
                     const productFileName = locale === 'pt-BR' ? product : `${product}-${locale === 'en' ? 'en' : 'es'}`;
                     const response = await fetch(`/api/products/${category}/${productFileName}`);
                     
-                    console.log('🔍 DEBUG - Tentando carregar:', `/api/products/${category}/${productFileName}`);
-                    
                     if (response.ok) {
                         const detailedProductData = await response.json();
                         if (detailedProductData) {
-                            console.log('✅ DEBUG - Dados carregados com sucesso:', detailedProductData.name);
                             setProductData(detailedProductData);
                             return;
                         }
-                    } else {
-                        console.log('❌ DEBUG - API retornou erro:', response.status);
                     }
                 } catch (error) {
-                    console.log('❌ DEBUG - Erro na API:', error);
                     // Silenciosamente fallback para dados básicos
                 }
 
@@ -223,13 +217,7 @@ export default function ProductPage() {
 
     const tabDescriptions = productData.tabDescriptions || {};
 
-    // Debug temporário
-    console.log('🔍 DEBUG - Dados carregados:', {
-        benefits: benefits.length,
-        generalCharacteristics: generalCharacteristics.length,
-        applications: applications ? 'Sim' : 'Não',
-        tabDescriptions: Object.keys(tabDescriptions).length
-    });
+
 
     return (
         <div className={styles['product-page']}>

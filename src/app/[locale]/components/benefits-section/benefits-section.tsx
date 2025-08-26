@@ -1,5 +1,5 @@
 import styles from './benefits-section.module.css';
-import { TbWindOff, TbShieldShare, TbSparkles, TbFeather, TbTopologyStarRing3, TbVolumeOff, TbTopologyStar3 } from "react-icons/tb";
+import { TbWindOff, TbShieldShare, TbSparkles, TbFeather, TbTopologyStarRing3, TbVolumeOff, TbTopologyStar3, TbTools } from "react-icons/tb";
 import { useTranslations } from 'next-intl';
 
 interface Benefit {
@@ -127,6 +127,46 @@ const getBenefitIcon = (title: string): React.ReactElement => {
             return <TbVolumeOff size={40} />;
         case 'Durabilidade prolongada':
             return <TbShieldShare size={40} />;
+        
+        // Produtos - Telhas Térmicas - Português
+        case 'Isolamento térmico':
+            return <TbVolumeOff size={40} />;
+        case 'Alta resistência':
+            return <TbShieldShare size={40} />;
+        case 'Durabilidade prolongada':
+            return <TbShieldShare size={40} />;
+        
+        // Produtos - Telhas Térmicas - Inglês
+        case 'Thermal insulation':
+            return <TbVolumeOff size={40} />;
+        case 'High resistance':
+            return <TbShieldShare size={40} />;
+        case 'Extended durability':
+            return <TbShieldShare size={40} />;
+        
+        // Produtos - Telhas Térmicas - Espanhol
+        case 'Aislamiento térmico':
+            return <TbVolumeOff size={40} />;
+        case 'Alta resistencia':
+            return <TbShieldShare size={40} />;
+        case 'Durabilidad prolongada':
+            return <TbShieldShare size={40} />;
+        
+        // Produtos - Blocos em EPS - Português
+        case 'Leveza estrutural':
+            return <TbFeather size={40} />;
+        case 'Isolamento térmico':
+            return <TbVolumeOff size={40} />;
+        case 'Facilidade de instalação':
+            return <TbTools size={40} />;
+        
+        // Produtos - Blocos em EPS - Inglês
+        case 'Structural lightness':
+            return <TbFeather size={40} />;
+        case 'Thermal insulation':
+            return <TbVolumeOff size={40} />;
+        case 'Easy installation':
+            return <TbTools size={40} />;
         
         default:
             return <TbWindOff size={40} />;
