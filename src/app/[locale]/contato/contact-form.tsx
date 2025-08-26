@@ -51,59 +51,6 @@ export default function ContactForm({ locale }: ContactFormProps) {
     const [states, setStates] = useState<Array<{value: string, label: string}>>([]);
     const [loadingStates, setLoadingStates] = useState(false);
 
-    const themes = [
-        { value: 'telhas-e-paineis', label: 'Telhas e Painéis' },
-        { value: 'construcao-civil', label: 'Construção Civil' },
-        { value: 'forros', label: 'Forros' },
-        { value: 'molduras', label: 'Molduras' },
-        { value: 'embalagens', label: 'Embalagens' },
-    ];
-
-    const cities = {
-        PR: [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'curitiba', label: 'Curitiba' },
-            { value: 'londrina', label: 'Londrina' },
-            { value: 'maringa', label: 'Maringá' },
-            { value: 'ponta-grossa', label: 'Ponta Grossa' },
-        ],
-        SP: [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'sao-paulo', label: 'São Paulo' },
-            { value: 'campinas', label: 'Campinas' },
-            { value: 'santos', label: 'Santos' },
-            { value: 'ribeirao-preto', label: 'Ribeirão Preto' },
-        ],
-        SC: [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'florianopolis', label: 'Florianópolis' },
-            { value: 'joinville', label: 'Joinville' },
-            { value: 'blumenau', label: 'Blumenau' },
-            { value: 'criciuma', label: 'Criciúma' },
-        ],
-        RS: [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'porto-alegre', label: 'Porto Alegre' },
-            { value: 'caxias-do-sul', label: 'Caxias do Sul' },
-            { value: 'pelotas', label: 'Pelotas' },
-            { value: 'santa-maria', label: 'Santa Maria' },
-        ],
-        MG: [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'belo-horizonte', label: 'Belo Horizonte' },
-            { value: 'uberlandia', label: 'Uberlândia' },
-            { value: 'contagem', label: 'Contagem' },
-            { value: 'juiz-de-fora', label: 'Juiz de Fora' },
-        ],
-        RJ: [
-            { value: '', label: 'Selecione uma cidade' },
-            { value: 'rio-de-janeiro', label: 'Rio de Janeiro' },
-            { value: 'niteroi', label: 'Niterói' },
-            { value: 'duque-de-caxias', label: 'Duque de Caxias' },
-            { value: 'nova-iguacu', label: 'Nova Iguaçu' },
-        ],
-    };
-
     useEffect(() => {
         const fetchStates = async () => {
             setLoadingStates(true);
@@ -114,12 +61,12 @@ export default function ContactForm({ locale }: ContactFormProps) {
             } catch (error) {
                 console.error('Erro ao carregar estados:', error);
                 setStates([
-                    { value: 'PR', label: 'Paraná' },
-                    { value: 'SP', label: 'São Paulo' },
-                    { value: 'SC', label: 'Santa Catarina' },
-                    { value: 'RS', label: 'Rio Grande do Sul' },
-                    { value: 'MG', label: 'Minas Gerais' },
-                    { value: 'RJ', label: 'Rio de Janeiro' },
+                    { value: 'PR', label: t('states.parana') },
+                    { value: 'SP', label: t('states.saoPaulo') },
+                    { value: 'SC', label: t('states.santaCatarina') },
+                    { value: 'RS', label: t('states.rioGrandeDoSul') },
+                    { value: 'MG', label: t('states.minasGerais') },
+                    { value: 'RJ', label: t('states.rioDeJaneiro') },
                 ]);
             } finally {
                 setLoadingStates(false);
@@ -140,33 +87,33 @@ export default function ContactForm({ locale }: ContactFormProps) {
         const newErrors: FormErrors = {};
 
         if (!formData.name.trim()) {
-            newErrors.name = 'Nome é obrigatório';
+            newErrors.name = t('form.errors.nameRequired');
         }
 
         if (!formData.email.trim()) {
-            newErrors.email = 'E-mail é obrigatório';
+            newErrors.email = t('form.errors.emailRequired');
         } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            newErrors.email = 'E-mail inválido';
+            newErrors.email = t('form.errors.emailInvalid');
         }
 
         if (!formData.phone.trim()) {
-            newErrors.phone = 'Telefone é obrigatório';
+            newErrors.phone = t('form.errors.phoneRequired');
         }
 
         if (!formData.theme) {
-            newErrors.theme = 'Tema é obrigatório';
+            newErrors.theme = t('form.errors.subjectRequired');
         }
 
         if (!formData.state) {
-            newErrors.state = 'Estado é obrigatório';
+            newErrors.state = t('form.errors.stateRequired');
         }
 
         if (!formData.city) {
-            newErrors.city = 'Cidade é obrigatória';
+            newErrors.city = t('form.errors.cityRequired');
         }
 
         if (!formData.terms) {
-            newErrors.terms = 'Você deve aceitar os termos';
+            newErrors.terms = t('form.errors.termsRequired');
         }
 
         setErrors(newErrors);
@@ -211,31 +158,40 @@ export default function ContactForm({ locale }: ContactFormProps) {
             }
         } catch (error) {
             console.error('Erro ao enviar formulário:', error);
-            setErrors({ submit: 'Erro ao enviar formulário. Tente novamente.' });
+            setErrors({ submit: t('form.errors.submitError') });
         } finally {
             setIsSubmitting(false);
         }
     };
 
-    const t = useTranslations('contactPage');
+    const t = useTranslations('contactForm');
+
+    // Definir arrays após a inicialização do hook de traduções
+    const themes = [
+        { value: 'telhas-e-paineis', label: t('themes.telhasPaineis') },
+        { value: 'construcao-civil', label: t('themes.construcaoCivil') },
+        { value: 'forros', label: t('themes.forros') },
+        { value: 'molduras', label: t('themes.molduras') },
+        { value: 'embalagens', label: t('themes.embalagens') },
+    ];
 
     return (
         <>
             <section className={styles['contato-hero-section']}>
                 <div className={styles['contato-hero-wrapper']}>
-                    <h1>Entre em Contato</h1>
-                    <p>Preencha o formulário abaixo e entraremos em contato em breve</p>
+                    <h1>{t('hero.title')}</h1>
+                    <p>{t('hero.description')}</p>
                 </div>
             </section>
 
             <section className={styles['contato-form-section']}>
                 <div className={styles['contato-form-wrapper']}>
-                    <h4>Formulário de Contato</h4>
+                    <h4>{t('form.title')}</h4>
                     <form onSubmit={handleSubmit} className={styles['contato-form']}>
                         <div className={styles['contato-form-fields']}>
                             <FormField
                                 id="name"
-                                label="Nome completo"
+                                label={t('form.name')}
                                 type="text"
                                 value={formData.name}
                                 onChange={(e) => handleInputChange('name', e.target.value)}
@@ -244,7 +200,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
                             />
                             <FormField
                                 id="email"
-                                label="E-mail"
+                                label={t('form.email')}
                                 type="email"
                                 value={formData.email}
                                 onChange={(e) => handleInputChange('email', e.target.value)}
@@ -253,7 +209,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
                             />
                             <FormField
                                 id="phone"
-                                label="Telefone"
+                                label={t('form.phone')}
                                 type="tel"
                                 value={formData.phone}
                                 onChange={(e) => handleInputChange('phone', e.target.value)}
@@ -262,7 +218,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
                             />
                             <FormSelection
                                 id="theme"
-                                label="Assunto"
+                                label={t('form.subject')}
                                 value={formData.theme}
                                 onChange={(e) => handleInputChange('theme', e.target.value)}
                                 options={themes}
@@ -271,7 +227,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
                             />
                             <FormSelection
                                 id="state"
-                                label="Estado"
+                                label={t('form.state')}
                                 value={formData.state}
                                 onChange={(e) => handleInputChange('state', e.target.value)}
                                 options={states}
@@ -280,11 +236,11 @@ export default function ContactForm({ locale }: ContactFormProps) {
                             />
                             <FormField
                                 id="city"
-                                label="Cidade"
+                                label={t('form.city')}
                                 type="text"
                                 value={formData.city}
                                 onChange={(e) => handleInputChange('city', e.target.value)}
-                                placeholder="Digite sua cidade"
+                                placeholder={t('form.cityPlaceholder')}
                                 error={errors.city}
                                 theme="light"
                             />
@@ -298,7 +254,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
                                     className={styles['terms-checkbox']}
                                 />
                                 <label htmlFor="terms" className={styles['terms-text']}>
-                                    Li e aceito os <a href={`/${locale}/privacidade`} className={styles['terms-link']} target="_blank" rel="noopener noreferrer">termos de privacidade</a>
+                                    {t('form.terms')} <a href={`/${locale}/privacidade`} className={styles['terms-link']} target="_blank" rel="noopener noreferrer">{t('form.privacyPolicy')}</a>
                                 </label>
                                 {errors.terms && <span className={styles['theme-error']}>{errors.terms}</span>}
                             </div>
@@ -313,37 +269,37 @@ export default function ContactForm({ locale }: ContactFormProps) {
                                 size="large"
                                 disabled={isSubmitting}
                             >
-                                {isSubmitting ? 'Enviando...' : 'Enviar mensagem'}
+                                {isSubmitting ? t('form.sending') : t('form.submit')}
                             </Button>
                         </div>
                     </form>
                 </div>
 
                 <div className={styles['contact-info']}>
-                    <h3>Informações de Contato</h3>
+                    <h3>{t('contactInfo.title')}</h3>
                     <div className={styles['contact-items']}>
                         <div className={styles['contact-item']}>
                             <MdOutlinePhoneInTalk />
                             <div>
-                                <p>+55 45 3231 1699</p>
+                                <p>{t('contactInfo.phone')}</p>
                             </div>
                         </div>
                         <div className={styles['contact-item']}>
                             <BsWhatsapp />
                             <div>
-                                <p>+55 45 99133 9642</p>
+                                <p>{t('contactInfo.whatsapp')}</p>
                             </div>
                         </div>
                         <div className={styles['contact-item']}>
                             <MdOutlineMarkEmailUnread />
                             <div>
-                                <p>contato@isoart.com.br</p>
+                                <p>{t('contactInfo.email')}</p>
                             </div>
                         </div>
                         <div className={styles['contact-item']}>
                             <MdLocationOn />
                             <div>
-                                <p>Rua Dorivaldo Soncela, 1490<br />Santa Tereza do Oeste - Paraná - Brasil</p>
+                                <p>{t('contactInfo.address')}<br />{t('contactInfo.city')}</p>
                             </div>
                         </div>
                     </div>
@@ -351,7 +307,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
             </section>
 
             <Toast
-                message="Sua mensagem foi enviada com sucesso!"
+                message={t('form.success')}
                 type="success"
                 isVisible={showToast}
                 onClose={() => setShowToast(false)}

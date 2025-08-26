@@ -548,6 +548,145 @@
       "city3": "Santa Tereza do Oeste - Paraná"
     }
   },
+  "privacyPage": {
+    "hero": {
+      "title": "Privacy Policy",
+      "description": "Learn how ISOART protects and uses your personal data:"
+    },
+    "content": {
+      "intro1": "Isoart Industry of Thermal and Construction Products LTDA. and its affiliated companies of its economic group (together \"ISOART\") uses cookie technology to provide a better and more personalized service. This Cookie Policy (\"Policy\") is an integral part of our Privacy Policy.",
+      "intro2": "The terms of this Policy apply to all Users and visitors of our website (hereinafter referred to as \"Site\") with the objective of informing, in a clear and objective manner, about the use of cookies on them.",
+      "intro3": "For more information about how ISOART processes your Personal Data, please consult our Privacy Policy on the website www.isoart.com.br.",
+      "intro4": "When accessing our Site for the first time, Users and visitors are informed through a text notice (\"banner\") regarding the cookie practice of the Sites.",
+      "definitionsTitle": "Definitions",
+      "definitionsDesc": "For the purposes of this Policy, the following definitions and descriptions must be considered for your better understanding, when referred to in uppercase or lowercase, plural or singular, with or without bold:",
+      "personalData": "Personal Data: any information related to an identified or identifiable natural person;",
+      "treatment": "Treatment: every operation performed with Personal Data, such as those referring to collection, production, reception, classification, use, access, reproduction, transmission, distribution, processing, archiving, storage, elimination, evaluation or control of information, modification, communication, transfer, diffusion or extraction;",
+      "user": "User (or Users): all natural or legal persons registered who interact with the functionalities offered by ISOART;",
+      "logs": "Logs: records of visitor and User activities verified on the Site.",
+      "cookiesTitle": "What are cookies?",
+      "cookiesDesc": "Cookies are considered small files, text or image, captured on our Sites, stored on devices used by Users who access them (for example, computers, tablets, smartphones, etc.), where they are recorded for subsequent retransmission to the same Sites when this user visits them again.",
+      "purposeTitle": "What are they for?",
+      "purposeDesc1": "Cookies perform many different functions, such as allowing you to navigate between pages efficiently, store your preferences, and generally improve your browsing experience.",
+      "purposeDesc2": "They can also help personalize advertisements displayed during browsing and marketing activities targeted at Users or visitors, ensuring they are sent according to their interests and preferences.",
+      "managementTitle": "Managing your cookie settings",
+      "managementDesc1": "Most Internet browsers are configured by default to automatically accept cookie installation. However, most browsers allow cookie management to meet your preferences.",
+      "managementDesc2": "Users and visitors can also regularly remove all cookies that are already on their devices by clearing their browser history. This will remove all cookies from all visited sites. However, be aware that if you disable cookies that we use in your browser, it is possible that certain sections or features of our Sites will not work.",
+      "managementDesc3": "If Users or visitors use different devices to view and access our Site, they must ensure that each browser on each device is adjusted to meet their cookie preferences.",
+      "managementDesc4": "For cookie management, the means to configure each browser are different. Therefore, below is a list of methods offered by the main browsers to allow Users or visitors to manage cookie settings in their browser:",
+      "browsers": {
+        "ie": "For Internet Explorer™:",
+        "safari": "For Safari™:",
+        "chrome": "For Google Chrome™:",
+        "firefox": "For Firefox™:",
+        "opera": "For Opera™:"
+      },
+      "moreInfo": "For more information about cookie configuration, visit:",
+      "note": "Please note that this list does not contain all browsers, please consult the \"Settings\" or \"Support\" sections of your browser.",
+      "revocation": "In this way, you can revoke consent for data use at any time, without, however, making the processing of this data illegitimate based on that consent, until the date of effective revocation.",
+      "cookiesUsedTitle": "Cookies used and their purposes",
+      "cookiesUsedDesc": "The Cookies used by our Sites perform the following functions, as mentioned below:",
+      "functionalTitle": "Functional Cookies",
+      "functionalDesc": "Functional Cookies allow us to record the options that Users and visitors select on our Sites, for example, language, remember username/password and preferences. With this information we can provide more personalized functionality to Users and visitors who browse our Sites.",
+      "analyticsTitle": "Analytics and Performance Cookies",
+      "analyticsDesc": "These Cookies allow us to collect information about how you use our site, and are used to help us understand how you interact with our site, so we can offer a better user experience – for example, evaluate our site's performance, or test different design ideas for the site. We may work with third parties to perform these services for us, so these Cookies may be set by a third party.",
+      "structuralTitle": "Site structural cookies",
+      "structuralDesc": "These Cookies are necessary for the website to function and cannot be disabled from our systems. As a rule, these cookies are pre-defined in response to service requests. In some situations, parts of the website may stop working.",
+      "marketingTitle": "Marketing and advertising cookies",
+      "marketingDesc": "These Cookies are used for online behavioral advertising, consequently generating information so that users receive personalized content.",
+      "dartCookie": "Dart Cookie – Google, as a third-party provider, uses cookies to display ads on sites. With the Dart Cookie, Google can require ads based on visits the reader has made to this and other sites on the internet. You can disable the Dart cookie by visiting Google's ad settings.",
+      "webBeacons": "Web Beacons – We use these cookies to store information. For example, personal preferences when visiting sites.",
+      "thirdPartyTitle": "Third-party sites",
+      "thirdPartyDesc": "The ISOART website may maintain connections with other sites that complement or contain useful information and tools for visitors, while if visitors and users access them, this privacy policy does not extend to third parties, and we are not responsible for the privacy policy or content of those.",
+      "rightsTitle": "Data subject rights",
+      "rightsDesc": "The rights of the data subject are safeguarded, especially: access to data; correction of incomplete, inaccurate or outdated data; confirmation of the existence of processing; anonymization, blocking or elimination of unnecessary, excessive data or data processed in non-compliance with the provisions of the General Data Protection Law (Law 13.709 of August 14, 2018); portability of data to another service or product provider, upon express request and observing commercial and industrial secrets; elimination of processed personal data; information on sharing data with public or private entities; information about the consequences of not providing consent and revocation of consent.",
+      "validityTitle": "Validity",
+      "validityDesc": "This Privacy Policy will remain in effect for an indefinite period.",
+      "contactTitle": "Contact us",
+      "contactDesc": "If you have any questions or comments about this Cookie Policy, please contact us through our Relationship Channel on the website"
+    }
+  },
+  "contactForm": {
+    "hero": {
+      "title": "Contact Us",
+      "description": "Fill out the form below and we'll get back to you soon"
+    },
+    "form": {
+      "title": "Contact Form",
+      "name": "Full name",
+      "email": "E-mail",
+      "phone": "Phone",
+      "subject": "Subject",
+      "state": "State",
+      "city": "City",
+      "cityPlaceholder": "Enter your city",
+      "terms": "I have read and accept the",
+      "privacyPolicy": "privacy terms",
+      "submit": "Send message",
+      "success": "Your message was sent successfully!",
+      "sending": "Sending...",
+      "errors": {
+        "nameRequired": "Name is required",
+        "emailRequired": "E-mail is required",
+        "emailInvalid": "Invalid e-mail",
+        "phoneRequired": "Phone is required",
+        "subjectRequired": "Subject is required",
+        "stateRequired": "State is required",
+        "cityRequired": "City is required",
+        "termsRequired": "You must accept the terms",
+        "submitError": "Error sending form. Try again."
+      }
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "phone": "+55 45 3231 1699",
+      "whatsapp": "+55 45 99133 9642",
+      "email": "contato@isoart.com.br",
+      "address": "Rua Dorivaldo Soncela, 1490",
+      "city": "Santa Tereza do Oeste - Paraná - Brazil"
+    },
+    "themes": {
+      "telhasPaineis": "Tiles and Panels",
+      "construcaoCivil": "Civil Construction",
+      "forros": "Ceilings",
+      "molduras": "Moldings",
+      "embalagens": "Packaging"
+    }
+  },
+  "states": {
+    "parana": "Paraná",
+    "saoPaulo": "São Paulo",
+    "santaCatarina": "Santa Catarina",
+    "rioGrandeDoSul": "Rio Grande do Sul",
+    "minasGerais": "Minas Gerais",
+    "rioDeJaneiro": "Rio de Janeiro"
+  },
+  "cities": {
+    "selectCity": "Select a city",
+    "curitiba": "Curitiba",
+    "londrina": "Londrina",
+    "maringa": "Maringá",
+    "pontaGrossa": "Ponta Grossa",
+    "saoPaulo": "São Paulo",
+    "campinas": "Campinas",
+    "santos": "Santos",
+    "ribeiraoPreto": "Ribeirão Preto",
+    "florianopolis": "Florianópolis",
+    "joinville": "Joinville",
+    "blumenau": "Blumenau",
+    "criciuma": "Criciúma",
+    "portoAlegre": "Porto Alegre",
+    "caxiasDoSul": "Caxias do Sul",
+    "pelotas": "Pelotas",
+    "santaMaria": "Santa Maria",
+    "beloHorizonte": "Belo Horizonte",
+    "uberlandia": "Uberlândia",
+    "contagem": "Contagem",
+    "juizDeFora": "Juiz de Fora",
+    "niteroi": "Niterói",
+    "duqueDeCaxias": "Duque de Caxias",
+    "novaIguacu": "Nova Iguaçu"
+  },
   "sobreEpsPirPage": {
     "hero": {
       "title": "About EPS and PIR"

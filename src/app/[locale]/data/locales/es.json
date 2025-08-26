@@ -548,6 +548,145 @@
       "city3": "Santa Tereza do Oeste - Paraná"
     }
   },
+  "privacyPage": {
+    "hero": {
+      "title": "Política de Privacidad",
+      "description": "Conozca cómo ISOART protege y utiliza sus datos personales:"
+    },
+    "content": {
+      "intro1": "Isoart Industria de Productos Térmicos y Constructivos LTDA. y empresas filiales de su grupo económico (en conjunto \"ISOART\") utiliza la tecnología de cookies para ofrecer un servicio mejor y más personalizado. La presente Política de Cookies (\"Política\") es parte integrante de nuestra Política de Privacidad.",
+      "intro2": "Los términos de esta Política se aplican a todos los Usuarios y visitantes de nuestro sitio web (en adelante denominado \"Sitio\") con el objetivo de informar, de forma clara y objetiva sobre el uso de cookies en los mismos.",
+      "intro3": "Para más información sobre cómo ISOART realiza el Tratamiento de sus Datos Personales, consulte nuestra Política de Privacidad en el sitio www.isoart.com.br.",
+      "intro4": "Al acceder a nuestro Sitio por primera vez, los Usuarios y visitantes son informados a través de un aviso de texto (\"banner\") referente a la práctica de cookies de los Sitios.",
+      "definitionsTitle": "Definiciones",
+      "definitionsDesc": "Para los fines de esta Política, deben ser consideradas las siguientes definiciones y descripciones para su mejor entendimiento, cuando se refieran en letra mayúscula o minúscula, plural o singular, con o sin negrita:",
+      "personalData": "Datos Personales: cualquier información relacionada con persona natural identificada o identificable;",
+      "treatment": "Tratamiento: toda operación realizada con Datos Personales, como las que se refieren a recolección, producción, recepción, clasificación, utilización, acceso, reproducción, transmisión, distribución, procesamiento, archivo, almacenamiento, eliminación, evaluación o control de la información, modificación, comunicación, transferencia, difusión o extracción;",
+      "user": "Usuario (o Usuarios): todas las personas físicas o jurídicas registradas que interactúen con las funcionalidades ofrecidas por ISOART;",
+      "logs": "Logs: registros de las actividades de visitantes y Usuarios verificadas en el Sitio.",
+      "cookiesTitle": "¿Qué son las cookies?",
+      "cookiesDesc": "Las \"cookies\" son consideradas pequeños archivos, de texto o imagen, captados en nuestros Sitios, almacenados en los dispositivos utilizados por los Usuarios que los acceden (por ejemplo, computadoras, tablets, smartphones, etc.), donde son registrados para la posterior retransmisión a los mismos Sitios cuando este usuario vuelve a visitarlos.",
+      "purposeTitle": "¿Para qué sirven?",
+      "purposeDesc1": "Las Cookies desempeñan diversas funciones diferentes, tales como permitir que navegue entre las páginas de manera eficiente, almacenar sus preferencias y, en general, mejorar su experiencia de navegación.",
+      "purposeDesc2": "También pueden ayudar a personalizar los anuncios publicitarios mostrados durante la navegación y las actividades de marketing dirigidas a los Usuarios o visitantes, garantizando que sean enviados de acuerdo con sus intereses y preferencias.",
+      "managementTitle": "Gestionando sus configuraciones de cookies",
+      "managementDesc1": "La mayoría de navegadores de Internet están configurados por defecto para aceptar automáticamente la instalación de cookies. Sin embargo, la mayoría de navegadores posibilitan la gestión de cookies para encuadrarse a sus preferencias.",
+      "managementDesc2": "Los Usuarios y visitantes también pueden remover regularmente todas las cookies que ya están en sus dispositivos, limpiando el historial de su navegador. Esto removerá todas las cookies de todos los sitios visitados. Sin embargo, esté consciente de que, si deshabilita las cookies que utilizamos en su navegador, es posible que ciertas secciones o recursos de nuestros Sitios no funcionen.",
+      "managementDesc3": "En caso de que los Usuarios o visitantes usen dispositivos diferentes para visualizar y acceder a nuestro Sitio deben asegurarse de que cada navegador de cada dispositivo esté ajustado para atender sus preferencias respecto a las cookies.",
+      "managementDesc4": "Para la gestión de cookies, los medios para configurar cada navegador son diferentes. De esa manera, sigue abajo una lista de los métodos ofrecidos por los principales navegadores para permitir que los Usuarios o visitantes gestionen las configuraciones de cookies en su navegador:",
+      "browsers": {
+        "ie": "Para Internet Explorer™:",
+        "safari": "Para Safari™:",
+        "chrome": "Para Google Chrome™:",
+        "firefox": "Para Firefox™:",
+        "opera": "Para Opera™:"
+      },
+      "moreInfo": "Para más información sobre la configuración de cookies, acceda:",
+      "note": "Informamos que esta lista no contiene todos los navegadores, consulte las secciones \"Configuración\" o \"Soporte\" de su navegador.",
+      "revocation": "De esta forma, podrá revocar el consentimiento de utilización de datos en cualquier momento, sin que, sin embargo, torne ilegítimo el tratamiento de estos con base en ese consentimiento, hasta la fecha de la efectiva revocación.",
+      "cookiesUsedTitle": "Cookies utilizados y sus finalidades",
+      "cookiesUsedDesc": "Los Cookies utilizados por nuestros Sitios ejecutan las siguientes funciones, conforme mencionado abajo:",
+      "functionalTitle": "Cookies Funcionales",
+      "functionalDesc": "Los Cookies funcionales nos permiten registrar las opciones que los Usuarios y visitantes seleccionan en nuestros Sitios, por ejemplo, el idioma, recordar el usuario/contraseña y las preferencias. Con esta información podemos proporcionar funcionalidades más personalizadas a los Usuarios y visitantes que navegan en nuestros Sitios.",
+      "analyticsTitle": "Cookies de Análisis y Rendimiento",
+      "analyticsDesc": "Estos Cookies nos permiten recolectar información sobre el uso que usted hace de nuestro sitio, y son utilizados para ayudarnos a entender cómo usted interactúa con nuestro sitio, para que podamos ofrecer una mejor experiencia del usuario – por ejemplo, evaluar el rendimiento de nuestro sitio, o probar diferentes ideas de diseño para el sitio. Podemos trabajar con terceros, para realizar estos servicios para nosotros, entonces estos Cookies pueden ser definidos por un tercero.",
+      "structuralTitle": "Cookies estructurales del sitio",
+      "structuralDesc": "Estos Cookies son necesarios para el funcionamiento del sitio web y no pueden ser desactivados de nuestros sistemas. Como regla estos cookies son pre-definidos en respuesta a solicitudes de servicios. En algunas situaciones partes del sitio web podrían dejar de funcionar.",
+      "marketingTitle": "Cookies de marketing y publicidad",
+      "marketingDesc": "Estos Cookies son utilizados para publicidad comportamental online, consecuentemente generan información para que los usuarios reciban contenidos personalizados.",
+      "dartCookie": "Cookie Dart – Google, como proveedor de terceros, utiliza cookies para mostrar anuncios en sitios. Con el Cookie Dart, Google puede exigir anuncios con base en las visitas que el lector ha hecho a este y otros sitios en internet. Usted puede desactivar el cookie Dart visitando la configuración de anuncios de Google.",
+      "webBeacons": "Web Beacons – Utilizamos estos cookies para almacenar información. Por ejemplo, preferencias personales al visitar los sitios.",
+      "thirdPartyTitle": "Sitios de terceros",
+      "thirdPartyDesc": "El sitio de ISOART puede mantener conexiones con otros sitios que complementen o contengan información y herramientas útiles para los visitantes, mientras que si los visitantes y usuarios acceden, esta política de privacidad no se extiende a los terceros, no responsabilizándonos por la política de privacidad o contenido de aquellos.",
+      "rightsTitle": "Derechos del titular",
+      "rightsDesc": "Son resguardados los derechos del titular de los datos, en especial: acceso a los datos; corrección de datos incompletos, inexactos o desactualizados; confirmación de la existencia de tratamiento; anonimización, bloqueo o eliminación de datos innecesarios, excesivos o tratados en desconformidad con lo dispuesto en la Ley General de Protección de Datos (Ley 13.709 de 14 de Agosto de 2018); portabilidad de los datos a otro proveedor de servicio o producto, mediante solicitud expresa y observados los secretos comercial e industrial; eliminación de los datos personales tratados; información de compartir datos con entidades públicas o privadas; información sobre las consecuencias por no proporcionar consentimiento y revocación del consentimiento.",
+      "validityTitle": "Vigencia",
+      "validityDesc": "Esta Política de Privacidad permanecerá en vigor por plazo indeterminado.",
+      "contactTitle": "Entre en contacto con nosotros",
+      "contactDesc": "Si usted tiene cualesquiera dudas o comentarios sobre la presente Política de Cookies, entre en contacto con nosotros a través de nuestro Canal de Relacionamiento en el sitio"
+    }
+  },
+  "contactForm": {
+    "hero": {
+      "title": "Contáctenos",
+      "description": "Complete el formulario abajo y nos pondremos en contacto pronto"
+    },
+    "form": {
+      "title": "Formulario de Contacto",
+      "name": "Nombre completo",
+      "email": "E-mail",
+      "phone": "Teléfono",
+      "subject": "Asunto",
+      "state": "Estado",
+      "city": "Ciudad",
+      "cityPlaceholder": "Ingrese su ciudad",
+      "terms": "He leído y acepto los",
+      "privacyPolicy": "términos de privacidad",
+      "submit": "Enviar mensaje",
+      "success": "¡Su mensaje fue enviado exitosamente!",
+      "sending": "Enviando...",
+      "errors": {
+        "nameRequired": "El nombre es obligatorio",
+        "emailRequired": "El e-mail es obligatorio",
+        "emailInvalid": "E-mail inválido",
+        "phoneRequired": "El teléfono es obligatorio",
+        "subjectRequired": "El asunto es obligatorio",
+        "stateRequired": "El estado es obligatorio",
+        "cityRequired": "La ciudad es obligatoria",
+        "termsRequired": "Debe aceptar los términos",
+        "submitError": "Error al enviar formulario. Intente nuevamente."
+      }
+    },
+    "contactInfo": {
+      "title": "Información de Contacto",
+      "phone": "+55 45 3231 1699",
+      "whatsapp": "+55 45 99133 9642",
+      "email": "contato@isoart.com.br",
+      "address": "Rua Dorivaldo Soncela, 1490",
+      "city": "Santa Tereza do Oeste - Paraná - Brasil"
+    },
+    "themes": {
+      "telhasPaineis": "Tejas y Paneles",
+      "construcaoCivil": "Construcción Civil",
+      "forros": "Techos",
+      "molduras": "Molduras",
+      "embalagens": "Embalajes"
+    }
+  },
+  "states": {
+    "parana": "Paraná",
+    "saoPaulo": "São Paulo",
+    "santaCatarina": "Santa Catarina",
+    "rioGrandeDoSul": "Rio Grande do Sul",
+    "minasGerais": "Minas Gerais",
+    "rioDeJaneiro": "Rio de Janeiro"
+  },
+  "cities": {
+    "selectCity": "Seleccione una ciudad",
+    "curitiba": "Curitiba",
+    "londrina": "Londrina",
+    "maringa": "Maringá",
+    "pontaGrossa": "Ponta Grossa",
+    "saoPaulo": "São Paulo",
+    "campinas": "Campinas",
+    "santos": "Santos",
+    "ribeiraoPreto": "Ribeirão Preto",
+    "florianopolis": "Florianópolis",
+    "joinville": "Joinville",
+    "blumenau": "Blumenau",
+    "criciuma": "Criciúma",
+    "portoAlegre": "Porto Alegre",
+    "caxiasDoSul": "Caxias do Sul",
+    "pelotas": "Pelotas",
+    "santaMaria": "Santa Maria",
+    "beloHorizonte": "Belo Horizonte",
+    "uberlandia": "Uberlândia",
+    "contagem": "Contagem",
+    "juizDeFora": "Juiz de Fora",
+    "niteroi": "Niterói",
+    "duqueDeCaxias": "Duque de Caxias",
+    "novaIguacu": "Nova Iguaçu"
+  },
   "sobreEpsPirPage": {
     "hero": {
       "title": "Sobre EPS y PIR"
