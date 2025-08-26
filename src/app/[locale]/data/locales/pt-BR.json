@@ -327,6 +327,7 @@
           "description": "Telhas e painéis da Isoart para coberturas e fachadas. Disponíveis com ou sem isolamento térmico em EPS/PIR, oferecem eficiência energética e resistência.",
           "buttonText": "Solicite um orçamento"
         },
+        "categoryDescription": "Soluções térmicas avançadas para coberturas e fachadas. Nossas telhas e painéis oferecem excelente isolamento térmico, reduzindo custos de energia e aumentando o conforto.",
         "products": {
           "telhasTermicas": {
             "name": "Telhas Térmicas",
@@ -347,6 +348,20 @@
           "camaraFrigorifica": {
             "name": "Câmara Frigorífica",
             "description": "Painéis robustos e eficientes para isolamento de câmaras frigoríficas, garantindo temperaturas ideais."
+          }
+        },
+        "benefits": {
+          "benefit1": {
+            "title": "Isolamento Térmico Superior",
+            "description": "Núcleos em EPS/PIR proporcionam excelente isolamento térmico, reduzindo o consumo de energia para climatização e garantindo conforto interno."
+          },
+          "benefit2": {
+            "title": "Leveza e Eficiência Estrutural",
+            "description": "Materiais leves reduzem a carga sobre a estrutura, permitindo fundações mais econômicas e instalação mais rápida."
+          },
+          "benefit3": {
+            "title": "Durabilidade e Resistência",
+            "description": "Revestimento em aço galvalume garante alta resistência à corrosão e longa vida útil, mesmo em ambientes agressivos."
           }
         }
       },

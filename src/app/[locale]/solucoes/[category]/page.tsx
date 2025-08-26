@@ -106,7 +106,9 @@ export default function CategoryPage() {
                 </div>
             </section>
 
-            <BenefitsSection benefits={benefitsSection} />
+            {categoryData.benefits && categoryData.benefits.length > 0 && (
+                <BenefitsSection benefits={categoryData.benefits} />
+            )}
             {categoryData.slug === 'telhas-e-paineis' && <IncendioComponent />}
             <SobreEmpresa locale={locale} />
             <ContactComponent locale={locale} />
