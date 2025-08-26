@@ -68,7 +68,7 @@ function Footer({ locale }: FooterProps) {
                                 <ul>
                                     <li><Link href={`/${locale}/solucoes/telhas-e-paineis`}>{t('telhasPaineis')}</Link></li>
                                     <li><Link href={`/${locale}/solucoes/construcao-civil`}>{t('construcaoCivil')}</Link></li>
-                                    <li><Link href={`/${locale}/solucoes/forros`}>{t('forros')}</Link></li>
+
                                     <li><Link href={`/${locale}/solucoes/molduras-decorativas`}>{t('moldurasDecorativas')}</Link></li>
                                     <li><Link href={`/${locale}/solucoes/embalagens-em-eps`}>{t('embalagensEps')}</Link></li>
                                 </ul>
