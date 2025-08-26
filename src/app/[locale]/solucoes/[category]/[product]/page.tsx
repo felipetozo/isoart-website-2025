@@ -196,12 +196,42 @@ export default function ProductPage() {
     // Buscar dados da categoria para pegar os benefícios
     // const categoryData = await getCategoryData(category); // This line is removed as categoryData is now state
 
+    // Mapeamento simples das imagens hero para cada produto
+    const PRODUCT_HERO_IMAGES = {
+        'construcao-civil': {
+            'blocos-em-eps': '/img/heroes/products/construcao-civil-blocos-eps-hero.avif',
+            'chapas-paineis-em-eps': '/img/heroes/products/construcao-civil-chapas-eps-hero.avif',
+            'flocos-em-eps': '/img/heroes/products/construcao-civil-flocos-eps-hero.avif',
+            'forros': '/img/heroes/products/construcao-civil-forros-eps-hero.avif',
+            'isolamento-telhas': '/img/heroes/products/construcao-civil-isolamento-telhas-hero.avif',
+            'lajes-em-eps': '/img/heroes/products/construcao-civil-lajes-eps-hero.avif'
+        },
+        'molduras-decorativas': {
+            'molduras-beiral': '/img/heroes/products/molduras-decorativas-beiral-hero.avif',
+            'molduras-portas-janelas': '/img/heroes/products/molduras-decorativas-portas-janelas-hero.avif',
+            'molduras-colunas-capiteis': '/img/heroes/products/molduras-decorativas-colunas-capiteis-hero.avif',
+            'molduras-muros': '/img/heroes/products/molduras-decorativas-muros-hero.avif',
+            'molduras-paredes': '/img/heroes/products/molduras-decorativas-paredes-hero.avif'
+        },
+        'embalagens-em-eps': {
+            'embalagens-em-eps': '/img/heroes/products/embalagens-eps-hero.avif',
+            'perolas-em-eps': '/img/heroes/products/embalagens-perolas-eps-hero.avif'
+        },
+        'telhas-e-paineis': {
+            'telhas-termicas': '/img/heroes/products/telhas-termicas-hero.avif',
+            'fachada-fechamento-lateral': '/img/heroes/products/fachada-fechamento-lateral-hero.avif',
+            'divisoria-e-forro': '/img/heroes/products/divisoria-forro-hero.avif',
+            'sala-limpa': '/img/heroes/products/sala-limpa-hero.avif',
+            'camara-frigorifica': '/img/heroes/products/camara-frigorifica-hero.avif'
+        }
+    };
+
     const heroSection = productData.hero || {
         title: productData.name,
         description: t('defaults.heroDescription'),
         buttonText: t('defaults.buttonText'),
         buttonLink: `/${locale}/contato`,
-        backgroundImage: productData.image || '/img/default-product-hero.avif'
+        backgroundImage: (PRODUCT_HERO_IMAGES as any)[category]?.[product] || productData.image || '/img/default-product-hero.avif'
     };
 
     const categoryDescription = productData.categoryDescription || {
