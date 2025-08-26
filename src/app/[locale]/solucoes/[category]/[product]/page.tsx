@@ -151,16 +151,24 @@ export default function ProductPage() {
 
                 // Tentar carregar dados detalhados do produto individual via API
                 try {
-                    const response = await fetch(`/api/products/${category}/${product}`);
+                    // Construir nome do arquivo baseado no idioma
+                    const productFileName = locale === 'pt-BR' ? product : `${product}-${locale === 'en' ? 'en' : 'es'}`;
+                    const response = await fetch(`/api/products/${category}/${productFileName}`);
+                    
+                    console.log('🔍 DEBUG - Tentando carregar:', `/api/products/${category}/${productFileName}`);
                     
                     if (response.ok) {
                         const detailedProductData = await response.json();
                         if (detailedProductData) {
+                            console.log('✅ DEBUG - Dados carregados com sucesso:', detailedProductData.name);
                             setProductData(detailedProductData);
                             return;
                         }
+                    } else {
+                        console.log('❌ DEBUG - API retornou erro:', response.status);
                     }
                 } catch (error) {
+                    console.log('❌ DEBUG - Erro na API:', error);
                     // Silenciosamente fallback para dados básicos
                 }
 
@@ -206,42 +214,22 @@ export default function ProductPage() {
         description: t('defaults.categoryDescriptionText')
     };
 
-    // Usar os benefícios específicos do produto se existirem, senão usar os da categoria, senão usar padrão
-    const defaultBenefits = [
-        { id: 1, title: "Qualidade Superior", description: "Produtos com rigoroso controle de qualidade." },
-        { id: 2, title: "Eficiência Garantida", description: "Soluções que entregam o melhor desempenho." }
-    ];
-    const benefits = productData.benefits || categoryData?.benefits || defaultBenefits;
+    // Usar os benefícios específicos do produto se existirem, senão usar os da categoria
+    const benefits = productData.benefits || categoryData?.benefits || [];
 
-    const defaultGeneralCharacteristics = [
-        "Adaptações personalizadas de altura, largura e comprimento",
-        "Menor carga sobre a estrutura com excelente desempenho mecânico",
-        "Mais fácil de transportar e montar, otimizando o tempo da obra",
-        "Menor consumo de recursos como concreto, aço e madeira",
-        "Conforto térmico e redução de ruídos em ambientes internos",
-        "Recebe chapisco e reboco com ótima aderência"
-    ];
-    const generalCharacteristics = productData.generalCharacteristics || defaultGeneralCharacteristics;
+    const generalCharacteristics = productData.generalCharacteristics || [];
 
-    const defaultApplications = {
-        title: "Maior economia, agilidade na execução e conforto térmico com menor esforço estrutural",
-        description: "A Telha Térmica Isoart é fabricada com blocos de poliestireno expandido ou poliisocianurato, proporcionando telhas mais leves, com menor consumo de concreto e aço, fácil manuseio e excelente isolamento térmico. Ideal para obras que exigem rapidez, desempenho e redução de custos.",
-        indications: [
-            { icon: 'TbHome', text: 'Casas e sobrados' },
-            { icon: 'TbBuilding', text: 'Prédios residenciais' },
-            { icon: 'TbFactory', text: 'Galpões industriais' },
-            { icon: 'TbBuildingStore', text: 'Estabelecimentos comerciais' }
-        ]
-    };
-    const applications = productData.applications || defaultApplications;
+    const applications = productData.applications || null;
 
-    const defaultTabDescriptions = {
-        "Alívio de carga na estrutura": "As Telhas Térmicas Isoart reduzem significativamente a carga sobre a estrutura, permitindo projetos mais leves e econômicos sem comprometer a segurança ou durabilidade.",
-        "Economia na obra": "Com menor consumo de materiais como concreto e aço, as Telhas Térmicas otimizam custos e aceleram o cronograma, oferecendo alta eficiência na construção.",
-        "Flexibilidade no projeto": "Personalizáveis em dimensões e acabamentos, essas telhas se adaptam a diversos projetos, desde residências até galpões industriais, garantindo versatilidade.",
-        "Isolamento térmico inteligente": "Projetadas com materiais como PIR e EPS, as Telhas Térmicas oferecem excelente isolamento, reduzindo a necessidade de climatização e aumentando o conforto interno."
-    };
-    const tabDescriptions = productData.tabDescriptions || defaultTabDescriptions;
+    const tabDescriptions = productData.tabDescriptions || {};
+
+    // Debug temporário
+    console.log('🔍 DEBUG - Dados carregados:', {
+        benefits: benefits.length,
+        generalCharacteristics: generalCharacteristics.length,
+        applications: applications ? 'Sim' : 'Não',
+        tabDescriptions: Object.keys(tabDescriptions).length
+    });
 
     return (
         <div className={styles['product-page']}>
@@ -271,7 +259,7 @@ export default function ProductPage() {
             </section>
 
             {/* Benefits - Agora usando os benefícios da categoria */}
-            <BenefitsSection benefits={benefits} />
+            {benefits && benefits.length > 0 && <BenefitsSection benefits={benefits} />}
 
             {/* Carrossel galeria */}
             <section className={styles['general-characteristics-section']}>
@@ -286,34 +274,40 @@ export default function ProductPage() {
                     </div>
 
                 {/* Características gerais */}
-                    <h3>{tSections('characteristics')}</h3>
-                    <div className={styles['features-grid']}>
-                        {generalCharacteristics.map((char, index) => (
-                            <div key={index} className={styles['feature']}>
-                                <span><TbChecks size={24} /></span> <p>{char}</p>
+                    {generalCharacteristics.length > 0 && (
+                        <>
+                            <h3>{tSections('characteristics')}</h3>
+                            <div className={styles['features-grid']}>
+                                {generalCharacteristics.map((char, index) => (
+                                    <div key={index} className={styles['feature']}>
+                                        <span><TbChecks size={24} /></span> <p>{char}</p>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
+                        </>
+                    )}
                 </div>
             </section>
 
             {/* Applications */}
-            <section className={styles['applications-section']}>
-                <div className={styles['applications-wrapper']}>
-                    <h3>{applications.title}</h3>
-                    <p>{applications.description}</p>
-                    <p>{t('defaults.applicationsLabel')}</p>
-                    <div className={styles['application-carousel']}>
-                        <div className={styles['application-cards']}>
-                            {applications.indications.map((indication, index) => (
-                                <div key={index} className={styles['application-card']}>
-                                    {renderIcon(indication.icon)} {indication.text}
-                                </div>
-                            ))}
+            {applications && (
+                <section className={styles['applications-section']}>
+                    <div className={styles['applications-wrapper']}>
+                        <h3>{applications.title}</h3>
+                        <p>{applications.description}</p>
+                        <p>{t('defaults.applicationsLabel')}</p>
+                        <div className={styles['application-carousel']}>
+                            <div className={styles['application-cards']}>
+                                {applications.indications.map((indication, index) => (
+                                    <div key={index} className={styles['application-card']}>
+                                        {renderIcon(indication.icon)} {indication.text}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            )}
 
             {/* Models Table - Apenas para telhas térmicas */}
             {productData.modelsTable && (
@@ -361,7 +355,7 @@ export default function ProductPage() {
             )}
 
             {/* Product Descriptions - Apenas se não houver tabela de modelos */}
-            {!productData.modelsTable && (
+            {!productData.modelsTable && Object.keys(tabDescriptions).length > 0 && (
                 <section className={styles['product-descriptions-section']}>
                     <div className={styles['product-descriptions-wrapper']}>
                         {Object.entries(tabDescriptions).map(([title, description]) => (
