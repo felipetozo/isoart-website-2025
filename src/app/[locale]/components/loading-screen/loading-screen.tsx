@@ -9,8 +9,11 @@ interface LoadingScreenProps {
 
 function LoadingScreen({ text = "Carregando..." }: LoadingScreenProps) {
     return (
-        <div className={styles['loading-screen']}>
-            {text}
+        <div className={styles['loading-overlay']}>
+            <div className={styles['loading-content']}>
+                <div className={styles['loading-spinner']}></div>
+                <p className={styles['loading-text']}>{text}</p>
+            </div>
         </div>
     );
 }
