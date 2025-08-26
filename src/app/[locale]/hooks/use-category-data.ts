@@ -96,6 +96,35 @@ export const useCategoryData = (categorySlug: string): CategoryData | null => {
                 'telhasPaineis': ['telhasTermicas', 'fachadaFechamento', 'divisoriaForro', 'salaLimpa', 'camaraFrigorifica']
             };
             
+            // Mapeamento entre productKeys e slugs reais dos arquivos
+            const productSlugMapping: { [key: string]: { [key: string]: string } } = {
+                'construcaoCivil': {
+                    'lajesEps': 'lajes-em-eps',
+                    'isolamentoTelhas': 'isolamento-telhas',
+                    'blocosEps': 'blocos-em-eps',
+                    'chapasPaineisEps': 'chapas-paineis-em-eps',
+                    'forros': 'forros'
+                },
+                'embalagens': {
+                    'embalagensEps': 'embalagens-em-eps',
+                    'perolasEps': 'perolas-em-eps'
+                },
+                'molduras': {
+                    'moldurasPortasJanelas': 'molduras-portas-janelas',
+                    'moldurasBeiral': 'molduras-beiral',
+                    'moldurasColunasCapiteis': 'molduras-colunas-capiteis',
+                    'moldurasMuros': 'molduras-muros',
+                    'moldurasParedes': 'molduras-paredes'
+                },
+                'telhasPaineis': {
+                    'telhasTermicas': 'telhas-termicas',
+                    'fachadaFechamento': 'fachada-fechamento-lateral',
+                    'divisoriaForro': 'divisoria-e-forro',
+                    'salaLimpa': 'sala-limpa',
+                    'camaraFrigorifica': 'camara-frigorifica'
+                }
+            };
+            
             // Mapear imagens corretas para produtos
             const productImages: { [key: string]: { [key: string]: string } } = {
                 'embalagens': {
@@ -131,21 +160,28 @@ export const useCategoryData = (categorySlug: string): CategoryData | null => {
                     const name = t(`${categoryKey}.products.${productKey}.name`);
                     const description = t(`${categoryKey}.products.${productKey}.description`);
                     
+                    // Usar o slug correto do mapeamento
+                    const correctSlug = productSlugMapping[categoryKey]?.[productKey] || productKey;
+                    
                     return {
                         id: index + 1,
                         name: name || productKey,
-                        slug: productKey,
+                        slug: correctSlug,
                         description: description || '',
-                        image: productImages[categoryKey]?.[productKey] || `/img/produtos/${categorySlug}/${productKey}.avif`
+                        image: productImages[categoryKey]?.[productKey] || `/img/produtos/${categorySlug}/${correctSlug}.avif`
                     };
                 } catch (error) {
                     console.warn(`Product ${productKey} not found for category: ${categoryKey}`);
+                    
+                    // Usar o slug correto mesmo no fallback
+                    const correctSlug = productSlugMapping[categoryKey]?.[productKey] || productKey;
+                    
                     return {
                         id: index + 1,
                         name: productKey,
-                        slug: productKey,
+                        slug: correctSlug,
                         description: '',
-                        image: productImages[categoryKey]?.[productKey] || `/img/produtos/${categorySlug}/${productKey}.avif`
+                        image: productImages[categoryKey]?.[productKey] || `/img/produtos/${categorySlug}/${correctSlug}.avif`
                     };
                 }
             });

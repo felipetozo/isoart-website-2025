@@ -82,14 +82,18 @@ export default function CategoryPage() {
                 <div className={styles['category-products-wrapper']}>
                     <div className={styles['category-products-grid']}>
                         {categoryData.products.map((product) => {
-                            // Usar dados estáticos APENAS para a imagem
+                            // Usar dados estáticos para imagem E link correto
                             const staticData = (menuData as any[]).find((item: any) => item.slug === category);
                             const staticProduct = staticData?.products?.find((p: any) => p.slug === product.slug);
                             const imageSrc = staticProduct?.image || product.image;
                             
+                            // Construir link correto usando dados estáticos
+                            const correctSlug = staticProduct?.slug || product.slug;
+                            const correctCategorySlug = staticData?.slug || categoryData.slug;
+                            
                             return (
                                 <article key={product.id} className={styles['category-products-grid-card']}>
-                                    <Link href={`/${locale}/solucoes/${categoryData.slug}/${product.slug}`}>
+                                    <Link href={`/${locale}/solucoes/${correctCategorySlug}/${correctSlug}`}>
                                         <div className={styles['category-products-grid-content']}>
                                             {imageSrc && (
                                                 <div className={styles['category-products-grid-img']}>

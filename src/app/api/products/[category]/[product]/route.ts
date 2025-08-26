@@ -4,10 +4,10 @@ import fs from 'fs';
 
 export async function GET(
     request: NextRequest,
-    { params }: { params: { category: string; product: string } }
+    { params }: { params: Promise<{ category: string; product: string }> }
 ) {
     try {
-        const { category, product } = params;
+        const { category, product } = await params;
         
         // Construir o caminho para o arquivo JSON do produto
         const productFilePath = path.join(process.cwd(), 'src', 'app', '[locale]', 'data', 'products', category, `${product}.json`);
