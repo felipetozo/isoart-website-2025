@@ -1,6 +1,8 @@
-# Isoart Website 2025 - IMPORTANTE UPDATE: Migração para next-intl com i18n Routing
+# Isoart Website 2025
 
-Website da Isoart, empresa especializada em soluções térmicas com EPS e PIR para construção civil, embalagens e isolamento. Construído com Next.js 15, React 19, TypeScript e otimizações avançadas de performance. **ATUALIZAÇÃO IMPORTANTE**: Migração completa para sistema de internacionalização next-intl com roteamento i18n nativo.
+Website da Isoart, empresa especializada em soluções térmicas com EPS e PIR para construção civil, embalagens e isolamento. Construído com Next.js 15, React 19, TypeScript e otimizações avançadas de performance.
+
+**ATUALIZAÇÃO IMPORTANTE**: Migração completa para sistema de internacionalização next-intl com roteamento i18n nativo.
 
 ---
 
@@ -66,42 +68,42 @@ Este é um site corporativo moderno e responsivo que apresenta as soluções da 
 ```
 isoart-website-2025/
 ├── src/
-│   ├── app/                    # App Router do Next.js
-│   │   ├── [locale]/           # Rotas com suporte a idiomas
-│   │   │   ├── categorias/     # Páginas de categorias e produtos
-│   │   │   │   ├── [category]/ # Páginas dinâmicas de categorias
+│   ├── app/                              # App Router do Next.js
+│   │   ├── [locale]/                     # Rotas com suporte a idiomas
+│   │   │   ├── categorias/               # Páginas de categorias e produtos
+│   │   │   │   ├── [category]/           # Páginas dinâmicas de categorias
 │   │   │   │   └── [category]/[product]/ # Páginas dinâmicas de produtos
-│   │   │   ├── components/     # Componentes reutilizáveis
-│   │   │   ├── contato/        # Página de contato
-│   │   │   ├── sobre/          # Páginas institucionais
-│   │   │   ├── solucoes/       # Página de soluções
-│   │   │   ├── views/          # Componentes de UI
-│   │   │   ├── globals.css     # Estilos globais
-│   │   │   ├── i18n.ts         # Configuração de internacionalização
-│   │   │   └── layout.tsx      # Layout com suporte a idiomas
-│   │   ├── components/         # Componentes globais
-│   │   ├── globals.css         # Estilos globais
-│   │   └── layout.tsx          # Layout raiz
-│   ├── data/                   # Dados estáticos e JSON
-│   │   ├── categories/         # Dados específicos de categorias
-│   │   ├── locales/            # Arquivos de tradução
-│   │   │   ├── pt-BR.json      # Traduções em português
-│   │   │   ├── en.json         # Traduções em inglês
-│   │   │   └── es.json         # Traduções em espanhol
-│   │   ├── menu-data.json      # Estrutura do menu principal
-│   │   └── products/           # Dados de produtos
-│   ├── hooks/                  # Hooks customizados
-│   │   └── use-language.ts     # Hook para gerenciamento de idiomas
-│   ├── lib/                    # Utilitários e helpers
-│   └── types/                  # Definições de tipos
-├── public/                     # Arquivos estáticos
-│   ├── img/                    # Imagens do site
-│   ├── icons/                  # Ícones e bandeiras
-│   └── downloads/              # Arquivos para download
-├── middleware.ts               # Middleware de internacionalização
-├── next.config.ts             # Configuração do Next.js
-├── postcss.config.mjs         # Configuração do PostCSS
-└── tsconfig.json              # Configuração do TypeScript
+│   │   │   ├── components/               # Componentes reutilizáveis
+│   │   │   ├── contato/                  # Página de contato
+│   │   │   ├── sobre/                    # Páginas institucionais
+│   │   │   ├── solucoes/                 # Página de soluções
+│   │   │   ├── views/                    # Componentes de UI
+│   │   │   ├── globals.css               # Estilos globais
+│   │   │   ├── i18n.ts                   # Configuração de internacionalização
+│   │   │   └── layout.tsx                # Layout com suporte a idiomas
+│   │   ├── components/                   # Componentes globais
+│   │   ├── globals.css                   # Estilos globais
+│   │   └── layout.tsx                    # Layout raiz
+│   ├── data/                             # Dados estáticos e JSON
+│   │   ├── categories/                   # Dados específicos de categorias
+│   │   ├── locales/                      # Arquivos de tradução
+│   │   │   ├── pt-BR.json                # Traduções em português
+│   │   │   ├── en.json                   # Traduções em inglês
+│   │   │   └── es.json                   # Traduções em espanhol
+│   │   ├── menu-data.json                # Estrutura do menu principal
+│   │   └── products/                     # Dados de produtos
+│   ├── hooks/                            # Hooks customizados
+│   │   └── use-language.ts               # Hook para gerenciamento de idiomas
+│   ├── lib/                              # Utilitários e helpers
+│   └── types/                            # Definições de tipos
+├── public/                               # Arquivos estáticos
+│   ├── img/                              # Imagens do site
+│   ├── icons/                            # Ícones e bandeiras
+│   └── downloads/                        # Arquivos para download
+├── middleware.ts                         # Middleware de internacionalização
+├── next.config.ts                        # Configuração do Next.js
+├── postcss.config.mjs                    # Configuração do PostCSS
+└── tsconfig.json                         # Configuração do TypeScript
 ```
 
 ---
