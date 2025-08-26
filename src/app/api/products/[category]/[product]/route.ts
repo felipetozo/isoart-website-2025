@@ -9,11 +9,31 @@ export async function GET(
     try {
         const { category, product } = await params;
         
-        // Construir o caminho para o arquivo JSON do produto
-        const productFilePath = path.join(process.cwd(), 'src', 'app', '[locale]', 'data', 'products', category, `${product}.json`);
+        // Tentar diferentes caminhos possíveis para a Vercel
+        const possiblePaths = [
+            // Caminho padrão (localhost)
+            path.join(process.cwd(), 'src', 'app', '[locale]', 'data', 'products', category, `${product}.json`),
+            // Caminho alternativo 1 (Vercel pode ter estrutura diferente)
+            path.join(process.cwd(), 'src', 'app', 'data', 'products', category, `${product}.json`),
+            // Caminho alternativo 2 (Vercel pode ter diretório diferente)
+            path.join(process.cwd(), 'data', 'products', category, `${product}.json`),
+            // Caminho alternativo 3 (Vercel pode ter estrutura flat)
+            path.join(process.cwd(), 'products', category, `${product}.json`)
+        ];
         
-        // Verificar se o arquivo existe
-        if (!fs.existsSync(productFilePath)) {
+        let productFilePath = '';
+        let fileExists = false;
+        
+        // Tentar cada caminho
+        for (const testPath of possiblePaths) {
+            if (fs.existsSync(testPath)) {
+                productFilePath = testPath;
+                fileExists = true;
+                break;
+            }
+        }
+        
+        if (!fileExists) {
             return NextResponse.json({ error: 'Produto não encontrado' }, { status: 404 });
         }
         
