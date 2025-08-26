@@ -17,6 +17,10 @@ function ImageCarousel({ images, alt, width = 1440, height = 800 }: ImageCarouse
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
 
+    // Debug: verificar se as imagens estão sendo recebidas
+    console.log('ImageCarousel - images:', images);
+    console.log('ImageCarousel - images.length:', images?.length);
+
     const nextImage = () => {
         setCurrentIndex((prevIndex) => 
             prevIndex === images.length - 1 ? 0 : prevIndex + 1
@@ -30,6 +34,7 @@ function ImageCarousel({ images, alt, width = 1440, height = 800 }: ImageCarouse
     };
 
     if (!images || images.length === 0) {
+        console.log('ImageCarousel - No images, returning null');
         return null;
     }
 
@@ -45,62 +50,69 @@ function ImageCarousel({ images, alt, width = 1440, height = 800 }: ImageCarouse
                         className={styles['main-image']}
                     />
                     
-                    <button 
-                        className={styles['fullscreen-button']}
-                        onClick={() => setIsFullscreenOpen(true)}
-                        aria-label="Ver em tela cheia"
-                    >
-                        <TbMaximize size={24} />
-                    </button>
-                    
-                    {/* Sempre mostrar botões de navegação */}
-                    <button 
-                        className={`${styles['carousel-button']} ${styles['prev-button']} ${images.length === 1 ? styles['carousel-button-disabled'] : ''}`}
-                        onClick={prevImage}
-                        aria-label="Imagem anterior"
-                        disabled={images.length === 1}
-                    >
-                        <TbChevronLeft size={32} />
-                    </button>
-                    
-                    <button 
-                        className={`${styles['carousel-button']} ${styles['next-button']} ${images.length === 1 ? styles['carousel-button-disabled'] : ''}`}
-                        onClick={nextImage}
-                        aria-label="Próxima imagem"
-                        disabled={images.length === 1}
-                    >
-                        <TbChevronRight size={32} />
-                    </button>
-                    
-                    {/* Sempre mostrar contador */}
-                    <div className={styles['image-counter']}>
-                        {currentIndex + 1} / {images.length}
+                    {/* Container dos controles no topo direito */}
+                    <div className={styles['controls-container']}>
+                        {/* Contador */}
+                        <div className={styles['image-counter']}>
+                            {currentIndex + 1} / {images.length}
+                        </div>
+                        
+                        {/* Setas */}
+                        <button 
+                            className={`${styles['carousel-button']} ${styles['prev-button']} ${images.length === 1 ? styles['carousel-button-disabled'] : ''}`}
+                            onClick={prevImage}
+                            aria-label="Imagem anterior"
+                            disabled={images.length === 1}
+                        >
+                            <TbChevronLeft size={32} />
+                        </button>
+                        
+                        <button 
+                            className={`${styles['carousel-button']} ${styles['next-button']} ${images.length === 1 ? styles['carousel-button-disabled'] : ''}`}
+                            onClick={nextImage}
+                            aria-label="Próxima imagem"
+                            disabled={images.length === 1}
+                        >
+                            <TbChevronRight size={32} />
+                        </button>
+                        
+                        {/* Fullscreen */}
+                        <button 
+                            className={styles['fullscreen-button']}
+                            onClick={() => setIsFullscreenOpen(true)}
+                            aria-label="Ver em tela cheia"
+                        >
+                            <TbMaximize size={24} />
+                        </button>
                     </div>
                 </div>
                 
                 {/* Sempre mostrar miniaturas */}
                 <div className={styles['thumbnails-container']}>
                     <div className={styles['thumbnails-grid']}>
-                        {images.map((image, index) => (
-                            <button
-                                key={index}
-                                className={`${styles['thumbnail']} ${index === currentIndex ? styles['thumbnail-active'] : ''}`}
-                                onClick={() => setCurrentIndex(index)}
-                                aria-label={`Ir para imagem ${index + 1}`}
-                            >
-                                <Image
-                                    src={image}
-                                    alt={`${alt} - Miniatura ${index + 1}`}
-                                    width={120}
-                                    height={80}
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover'
-                                    }}
-                                />
-                            </button>
-                        ))}
+                        {images.map((image, index) => {
+                            console.log(`Rendering thumbnail ${index}:`, image);
+                            return (
+                                <button
+                                    key={index}
+                                    className={`${styles['thumbnail']} ${index === currentIndex ? styles['thumbnail-active'] : ''}`}
+                                    onClick={() => setCurrentIndex(index)}
+                                    aria-label={`Ir para imagem ${index + 1}`}
+                                >
+                                    <Image
+                                        src={image}
+                                        alt={`${alt} - Miniatura ${index + 1}`}
+                                        width={120}
+                                        height={80}
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover'
+                                        }}
+                                    />
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
             </div>

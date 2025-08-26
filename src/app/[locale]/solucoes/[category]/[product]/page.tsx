@@ -254,12 +254,18 @@ export default function ProductPage() {
             <section className={styles['general-characteristics-section']}>
                 <div className={styles['general-characteristics-wrapper']}>
                     <div className={styles['img-placeholder']}>
-                        <ImageCarousel 
-                            images={productData.projectImages && productData.projectImages.length > 0 ? productData.projectImages : [productData.image || '/img/geral/exemplo2.avif']}
-                            alt={productData.name}
-                            width={1440}
-                            height={800}
-                        />
+                        {(() => {
+                            const images = productData.projectImages && productData.projectImages.length > 0 ? productData.projectImages : [productData.image || '/img/geral/exemplo2.avif'];
+                            console.log('Product page - images array:', images);
+                            return (
+                                <ImageCarousel 
+                                    images={images}
+                                    alt={productData.name}
+                                    width={1440}
+                                    height={800}
+                                />
+                            );
+                        })()}
                     </div>
 
                 {/* Características gerais */}
