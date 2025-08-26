@@ -364,6 +364,324 @@ export default function ProductPage() {
         }
     };
 
+    // Mapeamento hardcoded dos benefits para cada produto
+    const PRODUCT_BENEFITS = {
+        'construcao-civil': {
+            'blocos-em-eps': [
+                {
+                    id: 1,
+                    title: "Leveza estrutural",
+                    description: "Reduz a carga em fundações e facilita o transporte."
+                },
+                {
+                    id: 2,
+                    title: "Isolamento térmico",
+                    description: "Proporciona conforto térmico com baixa condutividade."
+                },
+                {
+                    id: 3,
+                    title: "Facilidade de instalação",
+                    description: "Permite cortes precisos e adaptação em obra."
+                }
+            ],
+            'chapas-paineis-em-eps': [
+                {
+                    id: 1,
+                    title: "Alta resistência",
+                    description: "Painéis estruturais com excelente resistência mecânica."
+                },
+                {
+                    id: 2,
+                    title: "Isolamento eficiente",
+                    description: "Isolamento térmico e acústico de alta performance."
+                },
+                {
+                    id: 3,
+                    title: "Facilidade de instalação",
+                    description: "Sistema de encaixe simples e rápido."
+                }
+            ],
+            'flocos-em-eps': [
+                {
+                    id: 1,
+                    title: "Isolamento térmico",
+                    description: "Excelente isolamento térmico para lajes e forros."
+                },
+                {
+                    id: 2,
+                    title: "Leveza",
+                    description: "Reduz significativamente o peso das estruturas."
+                },
+                {
+                    id: 3,
+                    title: "Facilidade de aplicação",
+                    description: "Aplicação simples com equipamentos convencionais."
+                }
+            ],
+            'forros': [
+                {
+                    id: 1,
+                    title: "Isolamento acústico",
+                    description: "Reduz ruídos e melhora a acústica dos ambientes."
+                },
+                {
+                    id: 2,
+                    title: "Leveza estrutural",
+                    description: "Não sobrecarrega a estrutura existente."
+                },
+                {
+                    id: 3,
+                    title: "Instalação rápida",
+                    description: "Sistema de encaixe que agiliza a obra."
+                }
+            ],
+            'isolamento-telhas': [
+                {
+                    id: 1,
+                    title: "Isolamento térmico superior",
+                    description: "Reduz drasticamente a transferência de calor."
+                },
+                {
+                    id: 2,
+                    title: "Economia na obra",
+                    description: "Reduz custos com climatização e energia."
+                },
+                {
+                    id: 3,
+                    title: "Proteção eficiente",
+                    description: "Protege contra variações extremas de temperatura."
+                }
+            ],
+            'lajes-em-eps': [
+                {
+                    id: 1,
+                    title: "Leveza estrutural",
+                    description: "Reduz a carga nas fundações e pilares."
+                },
+                {
+                    id: 2,
+                    title: "Isolamento térmico",
+                    description: "Mantém a temperatura ideal nos ambientes."
+                },
+                {
+                    id: 3,
+                    title: "Facilidade de instalação",
+                    description: "Sistema simples que agiliza a construção."
+                }
+            ]
+        },
+        'molduras-decorativas': {
+            'molduras-beiral': [
+                {
+                    id: 1,
+                    title: "Estética superior",
+                    description: "Design elegante que valoriza a arquitetura."
+                },
+                {
+                    id: 2,
+                    title: "Durabilidade",
+                    description: "Resistente às intempéries e ao tempo."
+                },
+                {
+                    id: 3,
+                    title: "Facilidade de instalação",
+                    description: "Sistema simples que não requer mão de obra especializada."
+                }
+            ],
+            'molduras-portas-janelas': [
+                {
+                    id: 1,
+                    title: "Personalização",
+                    description: "Design personalizável para cada projeto."
+                },
+                {
+                    id: 2,
+                    title: "Resistência",
+                    description: "Material durável e resistente ao impacto."
+                },
+                {
+                    id: 3,
+                    title: "Instalação simples",
+                    description: "Sistema de encaixe que facilita a aplicação."
+                }
+            ],
+            'molduras-colunas-capiteis': [
+                {
+                    id: 1,
+                    title: "Design clássico",
+                    description: "Estética que remete à arquitetura clássica."
+                },
+                {
+                    id: 2,
+                    title: "Durabilidade",
+                    description: "Resistente e de longa duração."
+                },
+                {
+                    id: 3,
+                    title: "Facilidade de manutenção",
+                    description: "Material que não requer cuidados especiais."
+                }
+            ],
+            'molduras-muros': [
+                {
+                    id: 1,
+                    title: "Estética superior",
+                    description: "Design que valoriza qualquer projeto."
+                },
+                {
+                    id: 2,
+                    title: "Resistência",
+                    description: "Material durável e resistente."
+                },
+                {
+                    id: 3,
+                    title: "Instalação simples",
+                    description: "Sistema que facilita a aplicação."
+                }
+            ],
+            'molduras-paredes': [
+                {
+                    id: 1,
+                    title: "Design personalizado",
+                    description: "Estética que se adapta a qualquer estilo."
+                },
+                {
+                    id: 2,
+                    title: "Durabilidade",
+                    description: "Material de longa duração."
+                },
+                {
+                    id: 3,
+                    title: "Facilidade de aplicação",
+                    description: "Sistema simples de instalação."
+                }
+            ]
+        },
+        'embalagens-em-eps': {
+            'embalagens-em-eps': [
+                {
+                    id: 1,
+                    title: "Proteção eficiente",
+                    description: "Protege produtos contra impactos e vibrações."
+                },
+                {
+                    id: 2,
+                    title: "Leveza",
+                    description: "Não aumenta significativamente o peso da carga."
+                },
+                {
+                    id: 3,
+                    title: "Personalização",
+                    description: "Adapta-se perfeitamente ao formato do produto."
+                }
+            ],
+            'perolas-em-eps': [
+                {
+                    id: 1,
+                    title: "Proteção superior",
+                    description: "Proteção eficiente contra impactos e vibrações."
+                },
+                {
+                    id: 2,
+                    title: "Leveza",
+                    description: "Material leve que não sobrecarrega o produto."
+                },
+                {
+                    id: 3,
+                    title: "Personalização",
+                    description: "Adapta-se perfeitamente ao formato do produto."
+                }
+            ]
+        },
+        'telhas-e-paineis': {
+            'telhas-termicas': [
+                {
+                    id: 1,
+                    title: "Isolamento térmico superior",
+                    description: "Reduz drasticamente a transferência de calor."
+                },
+                {
+                    id: 2,
+                    title: "Economia de energia",
+                    description: "Reduz custos com climatização."
+                },
+                {
+                    id: 3,
+                    title: "Durabilidade",
+                    description: "Material resistente e de longa duração."
+                }
+            ],
+            'fachada-fechamento-lateral': [
+                {
+                    id: 1,
+                    title: "Isolamento térmico",
+                    description: "Protege contra variações de temperatura."
+                },
+                {
+                    id: 2,
+                    title: "Estética",
+                    description: "Design que valoriza a arquitetura."
+                },
+                {
+                    id: 3,
+                    title: "Facilidade de instalação",
+                    description: "Sistema simples de aplicação."
+                }
+            ],
+            'divisoria-e-forro': [
+                {
+                    id: 1,
+                    title: "Isolamento acústico",
+                    description: "Reduz ruídos entre ambientes."
+                },
+                {
+                    id: 2,
+                    title: "Leveza",
+                    description: "Não sobrecarrega a estrutura existente."
+                },
+                {
+                    id: 3,
+                    title: "Instalação rápida",
+                    description: "Sistema que agiliza a obra."
+                }
+            ],
+            'sala-limpa': [
+                {
+                    id: 1,
+                    title: "Controle de contaminação",
+                    description: "Previne contaminação em ambientes críticos."
+                },
+                {
+                    id: 2,
+                    title: "Facilidade de limpeza",
+                    description: "Superfície lisa e fácil de higienizar."
+                },
+                {
+                    id: 3,
+                    title: "Durabilidade",
+                    description: "Material resistente e de longa duração."
+                }
+            ],
+            'camara-frigorifica': [
+                {
+                    id: 1,
+                    title: "Isolamento térmico superior",
+                    description: "Mantém temperatura constante em câmaras frias."
+                },
+                {
+                    id: 2,
+                    title: "Economia de energia",
+                    description: "Reduz custos com refrigeração."
+                },
+                {
+                    id: 3,
+                    title: "Durabilidade",
+                    description: "Resistente a baixas temperaturas e umidade."
+                }
+            ]
+        }
+    };
+
     const heroSection = productData.hero || {
         title: productData.name,
         description: t('defaults.heroDescription'),
@@ -377,8 +695,9 @@ export default function ProductPage() {
         description: t('defaults.categoryDescriptionText')
     };
 
-    // Usar os benefícios específicos do produto se existirem, senão usar os da categoria
-    const benefits = productData.benefits || categoryData?.benefits || [];
+    // Usar os benefícios hardcoded se existirem, senão fallback para API/JSON
+    const hardcodedBenefits = (PRODUCT_BENEFITS as any)[category]?.[product];
+    const benefits = hardcodedBenefits || productData.benefits || categoryData?.benefits || [];
 
     const generalCharacteristics = productData.generalCharacteristics || [];
 
