@@ -185,7 +185,7 @@ export default function ProductPage() {
     }, [category, product]);
 
     if (loading) {
-        return <div>Carregando...</div>;
+        return <div className={styles['loading-screen']}>Carregando...</div>;
     }
 
     if (!productData) {
