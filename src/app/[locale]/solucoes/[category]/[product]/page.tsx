@@ -200,29 +200,29 @@ export default function ProductPage() {
     const PRODUCT_HERO_IMAGES = {
         'construcao-civil': {
             'blocos-em-eps': '/img/heroes/products/construcao-civil-blocos-eps-hero.avif',
-            'chapas-paineis-em-eps': '/img/heroes/products/construcao-civil-chapas-eps-hero.avif',
+            'chapas-paineis-em-eps': '/img/heroes/products/construcao-civil-chapas-paineis-hero.avif',
             'flocos-em-eps': '/img/heroes/products/construcao-civil-flocos-eps-hero.avif',
-            'forros': '/img/heroes/products/construcao-civil-forros-eps-hero.avif',
+            'forros': '/img/heroes/products/construcao-civil-forros-hero.avif',
             'isolamento-telhas': '/img/heroes/products/construcao-civil-isolamento-telhas-hero.avif',
             'lajes-em-eps': '/img/heroes/products/construcao-civil-lajes-eps-hero.avif'
         },
         'molduras-decorativas': {
             'molduras-beiral': '/img/heroes/products/molduras-decorativas-beiral-hero.avif',
-            'molduras-portas-janelas': '/img/heroes/products/molduras-decorativas-portas-janelas-hero.avif',
-            'molduras-colunas-capiteis': '/img/heroes/products/molduras-decorativas-colunas-capiteis-hero.avif',
+            'molduras-portas-janelas': '/img/heroes/products/molduras-decorativas-portas-hero.avif',
+            'molduras-colunas-capiteis': '/img/heroes/products/molduras-decorativas-colunas-hero.avif',
             'molduras-muros': '/img/heroes/products/molduras-decorativas-muros-hero.avif',
             'molduras-paredes': '/img/heroes/products/molduras-decorativas-paredes-hero.avif'
         },
         'embalagens-em-eps': {
-            'embalagens-em-eps': '/img/heroes/products/embalagens-eps-hero.avif',
-            'perolas-em-eps': '/img/heroes/products/embalagens-perolas-eps-hero.avif'
+            'embalagens-em-eps': '/img/heroes/products/embalagens-eps-embalagens-hero.avif',
+            'perolas-em-eps': '/img/heroes/products/embalagens-eps-perolas-hero.avif'
         },
         'telhas-e-paineis': {
-            'telhas-termicas': '/img/heroes/products/telhas-termicas-hero.avif',
-            'fachada-fechamento-lateral': '/img/heroes/products/fachada-fechamento-lateral-hero.avif',
-            'divisoria-e-forro': '/img/heroes/products/divisoria-forro-hero.avif',
-            'sala-limpa': '/img/heroes/products/sala-limpa-hero.avif',
-            'camara-frigorifica': '/img/heroes/products/camara-frigorifica-hero.avif'
+            'telhas-termicas': '/img/heroes/products/telhas-paineis-telhas-termicas-hero.avif',
+            'fachada-fechamento-lateral': '/img/heroes/products/telhas-paineis-fachada-fechamento-hero.avif',
+            'divisoria-e-forro': '/img/heroes/products/telhas-paineis-divisoria-forro-hero.avif',
+            'sala-limpa': '/img/heroes/products/telhas-paineis-sala-limpa-hero.avif',
+            'camara-frigorifica': '/img/heroes/products/telhas-paineis-camara-frigorifica-hero.avif'
         }
     };
 
