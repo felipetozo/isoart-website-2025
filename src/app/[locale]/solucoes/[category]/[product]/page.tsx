@@ -202,7 +202,7 @@ export default function ProductPage() {
             'blocos-em-eps': '/img/heroes/products/construcao-civil-blocos-eps-hero.avif',
             'chapas-paineis-em-eps': '/img/heroes/products/construcao-civil-chapas-paineis-hero.avif',
             'flocos-em-eps': '/img/heroes/products/construcao-civil-flocos-eps-hero.avif',
-            'forros': '/img/heroes/products/construcao-civil-forros-hero.avif',
+            'forros': '/img/heroes/products/construcao-civil-forros_10-hero.avif',
             'isolamento-telhas': '/img/heroes/products/construcao-civil-isolamento-telhas-hero.avif',
             'lajes-em-eps': '/img/heroes/products/construcao-civil-lajes-eps-hero.avif'
         },
