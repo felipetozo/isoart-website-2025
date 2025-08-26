@@ -39,16 +39,16 @@ function Hero() {
             title: t('slide2.title'),
             description: t('slide2.description'),
             buttonText: t('slide2.buttonText'),
-            buttonLink: "/solucoes/construcao-civil",
-            backgroundImage: "/img/heroes/home/home-hero-02.avif"
+            buttonLink: "/solucoes/telhas-e-paineis",
+            backgroundImage: "/img/heroes/home/home-hero-03.avif"
         },
         {
             id: 3,
             title: t('slide3.title'),
             description: t('slide3.description'),
             buttonText: t('slide3.buttonText'),
-            buttonLink: "/solucoes/telhas-e-paineis",
-            backgroundImage: "/img/heroes/home/home-hero-03.avif"
+            buttonLink: "/solucoes/construcao-civil",
+            backgroundImage: "/img/heroes/home/home-hero-02.avif"
         }
     ];
 
