@@ -12,6 +12,8 @@
     border: 1px solid rgba(17, 17, 17, 0.25);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background-color: rgba(241, 244, 247, 0.95);
     z-index: 9999;
     animation: slideUp 0.5s ease-out;
 }
@@ -125,6 +127,8 @@
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background: rgba(0, 0, 0, 0.9);
     z-index: 10000;
     display: flex;
     align-items: center;
@@ -136,6 +140,8 @@
 .modal {
     background: rgba(241, 244, 247, 0.875);
     backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background: rgba(241, 244, 247, 0.95);
     max-width: 600px;
     border-radius: 0.2rem;
     width: 100%;

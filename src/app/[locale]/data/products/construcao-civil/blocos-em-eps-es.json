@@ -4,7 +4,6 @@
     "slug": "bloques-de-eps",
     "description": "Bloques de EPS (Poliestireno Expandido) para aplicaciones estructurales y de relleno, que ofrecen ligereza, aislamiento térmico y facilidad de manipulación en la construcción.",
     "image": "/img/produtos/construcao-civil/blocos/blocos-01.avif",
-    "projectImages": [
         "/img/produtos/construcao-civil/blocos/blocos-1440x-800_001.avif"
     ],
     "specifications": {
@@ -18,7 +17,6 @@
         "description": "Una solución versátil y ligera para construcciones con aislamiento térmico y acústico de alto rendimiento.",
         "buttonText": "Solicite un presupuesto",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/heroes/products/construcao-civil-blocos-eps-hero.avif"
     },
     "categoryDescription": {
         "title": "Los Bloques de EPS Isoart ofrecen ligereza, resistencia y aislamiento térmico para construcciones modernas y sostenibles.",

@@ -11,7 +11,42 @@ import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { useLanguage } from '@/app/[locale]/hooks/use-language';
 import { useTranslations } from 'next-intl';
 
-import menuData from '../../data/menu-data.json';
+// Fallback para Android antigo que não suporta importação estática de JSON
+let menuData: any[] = [];
+
+// Tentar importar JSON de forma dinâmica
+try {
+    if (typeof require !== 'undefined') {
+        menuData = require('../../data/menu-data.json');
+    }
+} catch (error) {
+    console.warn('Erro ao importar menu-data.json, usando dados hardcoded');
+    // Dados hardcoded como fallback
+    menuData = [
+        {
+            id: 1,
+            title: "Telhas e Painéis",
+            slug: "telhas-e-paineis",
+            description: "Telhas e painéis da Isoart para coberturas e fachadas.",
+            image: "/img/geral/endereco-03-01.avif",
+            products: [
+                { id: 1, name: "Telhas Térmicas", slug: "telhas-termicas", description: "Telhas com núcleo em PIR ou EPS" },
+                { id: 2, name: "Fachada e Fechamento Lateral", slug: "fachada-fechamento-lateral", description: "Painéis versáteis para fachadas" }
+            ]
+        },
+        {
+            id: 2,
+            title: "Construção Civil",
+            slug: "construcao-civil",
+            description: "Soluções em EPS para construção civil",
+            image: "/img/produtos/construcao-civil/lajes/lajes-01.avif",
+            products: [
+                { id: 6, name: "Lajes em EPS", slug: "lajes-em-eps", description: "Lajes com preenchimento em EPS" },
+                { id: 7, name: "Isolamento para Telhas", slug: "isolamento-telhas", description: "Sistema de isolamento térmico" }
+            ]
+        }
+    ];
+}
 
 // Define the types for your menu data for better type safety
 interface Product {
@@ -79,7 +114,7 @@ interface MainNavProps {
 function MainNav({ locale }: MainNavProps) {
     const submenuRef = useRef<HTMLDivElement | null>(null);
     const mobileMenuRef = useRef<HTMLDivElement | null>(null);
-    const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const hideTimeoutRef = useRef<number | null>(null);
     const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

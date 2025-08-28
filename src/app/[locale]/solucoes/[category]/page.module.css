@@ -69,11 +69,19 @@
 }
 
 .category-description-wrapper h2 {
-    font-size: clamp(1.8rem, 2vw, 2.4rem);
+    /* Fallback para Android antigo */
+    font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 2rem;
     color: rgba(24, 74, 100, 1);
     width: 100%;
+}
+
+/* Tipografia responsiva para Android 7.0+ */
+@supports (font-size: clamp(1rem, 1vw, 2rem)) {
+    .category-description-wrapper h2 {
+        font-size: clamp(1.8rem, 2vw, 2.4rem);
+    }
 }
 
 /* ==================================================================================== */
@@ -94,6 +102,13 @@
 }
 
 .category-products-grid {
+    /* Fallback Flexbox para Android antigo */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1rem;
+    
+    /* Grid principal para Android 7.0+ */
     display: grid;
     width: 100%;
     gap: 1rem;

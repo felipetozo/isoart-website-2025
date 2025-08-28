@@ -4,7 +4,40 @@ import { notFound } from 'next/navigation';
 import styles from './page.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import menuData from '@/app/[locale]/data/menu-data.json';
+// Fallback para Android antigo que não suporta importação estática de JSON
+let menuData: any[] = [];
+
+// Tentar importar JSON de forma dinâmica
+try {
+    if (typeof require !== 'undefined') {
+        menuData = require('@/app/[locale]/data/menu-data.json');
+    }
+} catch (error) {
+    console.warn('Erro ao importar menu-data.json, usando dados hardcoded');
+    // Dados hardcoded como fallback
+    menuData = [
+        {
+            id: 1,
+            title: "Telhas e Painéis",
+            slug: "telhas-e-paineis",
+            description: "Telhas e painéis da Isoart para coberturas e fachadas.",
+            products: [
+                { id: 1, name: "Telhas Térmicas", slug: "telhas-termicas", description: "Telhas com núcleo em PIR ou EPS" },
+                { id: 2, name: "Fachada e Fechamento Lateral", slug: "fachada-fechamento-lateral", description: "Painéis versáteis para fachadas" }
+            ]
+        },
+        {
+            id: 2,
+            title: "Construção Civil",
+            slug: "construcao-civil",
+            description: "Soluções em EPS para construção civil",
+            products: [
+                { id: 6, name: "Lajes em EPS", slug: "lajes-em-eps", description: "Lajes com preenchimento em EPS" },
+                { id: 7, name: "Isolamento para Telhas", slug: "isolamento-telhas", description: "Sistema de isolamento térmico" }
+            ]
+        }
+    ];
+}
 import SobreEmpresa from '@/app/[locale]/components/sobre-empresa/sobre-empresa';
 import ContactComponent from '@/app/[locale]/components/contact/contact-component';
 import Button from '@/app/[locale]/views/ui/button/button';
@@ -154,13 +187,41 @@ export default function ProductPage() {
                 try {
                     // Construir nome do arquivo baseado no idioma
                     const productFileName = locale === 'pt-BR' ? product : `${product}-${locale === 'en' ? 'en' : 'es'}`;
-                    const response = await fetch(`/api/products/${category}/${productFileName}`);
                     
-                    if (response.ok) {
-                        const detailedProductData = await response.json();
-                        if (detailedProductData) {
-                            setProductData(detailedProductData);
-                            return;
+                    // Fallback para Android antigo que não suporta Fetch API
+                    if (typeof fetch === 'undefined') {
+                        // Usar XMLHttpRequest como fallback
+                        const xhr = new XMLHttpRequest();
+                        xhr.open('GET', `/api/products/${category}/${productFileName}`, true);
+                        xhr.onreadystatechange = function() {
+                            if (xhr.readyState === 4) {
+                                if (xhr.status === 200) {
+                                    try {
+                                        const detailedProductData = JSON.parse(xhr.responseText);
+                                        if (detailedProductData) {
+                                            setProductData(detailedProductData);
+                                            return;
+                                        }
+                                    } catch (parseError) {
+                                        // Silenciosamente fallback para dados básicos
+                                    }
+                                }
+                            }
+                        };
+                        xhr.onerror = function() {
+                            // Silenciosamente fallback para dados básicos
+                        };
+                        xhr.send();
+                    } else {
+                        // Fetch API para Android 7.0+
+                        const response = await fetch(`/api/products/${category}/${productFileName}`);
+                        
+                        if (response.ok) {
+                            const detailedProductData = await response.json();
+                            if (detailedProductData) {
+                                setProductData(detailedProductData);
+                                return;
+                            }
                         }
                     }
                 } catch (error) {
@@ -202,7 +263,7 @@ export default function ProductPage() {
             'blocos-em-eps': '/img/heroes/products/construcao-civil-blocos-eps-hero.avif',
             'chapas-paineis-em-eps': '/img/heroes/products/construcao-civil-chapas-paineis-hero.avif',
             'flocos-em-eps': '/img/heroes/products/construcao-civil-flocos-eps-hero.avif',
-            'forros': '/img/heroes/products/construcao-civil-forros_10-hero.avif',
+            'forros': '/img/heroes/products/construcao-civil-forros-hero.avif',
             'isolamento-telhas': '/img/heroes/products/construcao-civil-isolamento-telhas-hero.avif',
             'lajes-em-eps': '/img/heroes/products/construcao-civil-lajes-eps-hero.avif'
         },
@@ -274,24 +335,24 @@ export default function ProductPage() {
                 '/img/produtos/molduras/beiral/beiral-1440x-800_010.avif'
             ],
             'molduras-portas-janelas': [
-                '/img/produtos/molduras/portas/portas-1440x-800_001.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_002.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_003.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_004.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_005.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_006.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_007.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_008.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_009.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_010.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_011.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_012.avif'
+                '/img/produtos/molduras/portas/portas-1440x-800_0010.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0020.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0030.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0040.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0050.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0060.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0070.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0080.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0090.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0100.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0110.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0120.avif'
             ],
             'molduras-colunas-capiteis': [
-                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_001.avif',
-                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_002.avif',
-                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_003.avif',
-                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_004.avif'
+                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_0010.avif',
+                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_0020.avif',
+                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_0030.avif',
+                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_0040.avif'
             ],
             'molduras-muros': [
                 '/img/produtos/molduras/muros/muros-1440x-800_001.avif',
@@ -334,32 +395,34 @@ export default function ProductPage() {
                 '/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0090.avif'
             ],
             'fachada-fechamento-lateral': [
-                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-1440x-800_001.avif',
-                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-1440x-800_002.avif',
-                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-1440x-800_003.avif',
-                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-1440x-800_004.avif',
-                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-1440x-800_005.avif'
+                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-fechamento-1440x-800_0010.avif',
+                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-fechamento-1440x-800_0020.avif',
+                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-fechamento-1440x-800_0030.avif',
+                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-fechamento-1440x-800_0040.avif'
             ],
             'divisoria-e-forro': [
-                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-1440x-800_001.avif',
-                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-1440x-800_002.avif',
-                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-1440x-800_003.avif',
-                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-1440x-800_004.avif',
-                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-1440x-800_005.avif'
+                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0010.avif',
+                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0020.avif',
+                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0030.avif',
+                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0040.avif',
+                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0050.avif',
+                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0060.avif'
             ],
             'sala-limpa': [
-                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_001.avif',
-                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_002.avif',
-                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_003.avif',
-                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_004.avif',
-                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_005.avif'
+                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0010.avif',
+                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0020.avif',
+                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0030.avif',
+                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0040.avif',
+                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0050.avif',
+                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0060.avif'
             ],
             'camara-frigorifica': [
-                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-1440x-800_001.avif',
-                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-1440x-800_002.avif',
-                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-1440x-800_003.avif',
-                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-1440x-800_004.avif',
-                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-1440x-800_005.avif'
+                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0010.avif',
+                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0020.avif',
+                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0030.avif',
+                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0040.avif',
+                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0050.avif',
+                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0060.avif'
             ]
         }
     };
@@ -682,13 +745,15 @@ export default function ProductPage() {
         }
     };
 
-    const heroSection = productData.hero || {
-        title: productData.name,
-        description: t('defaults.heroDescription'),
-        buttonText: t('defaults.buttonText'),
-        buttonLink: `/${locale}/contato`,
-        backgroundImage: (PRODUCT_HERO_IMAGES as any)[category]?.[product] || productData.image || '/img/default-product-hero.avif'
+    const heroSection = {
+        title: productData.hero?.title || productData.name,
+        description: productData.hero?.description || t('defaults.heroDescription'),
+        buttonText: productData.hero?.buttonText || t('defaults.buttonText'),
+        buttonLink: productData.hero?.buttonLink || `/${locale}/contato`,
+        backgroundImage: (PRODUCT_HERO_IMAGES as any)[category]?.[product] || '/img/heroes/categories/construcao-civil-hero.avif'
     };
+    
+
 
     const categoryDescription = productData.categoryDescription || {
         title: t('defaults.categoryDescriptionTitle'),
@@ -742,13 +807,24 @@ export default function ProductPage() {
                 <div className={styles['general-characteristics-wrapper']}>
                     <div className={styles['img-placeholder']}>
                         {(() => {
-                            // Usar as imagens hardcoded se existirem, senão fallback para API/JSON
-                            const galleryImages = (PRODUCT_GALLERY_IMAGES as any)[category]?.[product];
-                            const images = galleryImages || productData.projectImages || [productData.image || '/img/geral/exemplo2.avif'];
-                            console.log('Product page - images array:', images);
+                            // Sistema hardcoded 100% garantido
+                            const hardcodedImages = (PRODUCT_GALLERY_IMAGES as any)[category]?.[product];
+                            
+                            // Se não tiver imagens hardcoded, usar fallback padrão
+                            if (!hardcodedImages || hardcodedImages.length === 0) {
+                                return (
+                                    <ImageCarousel 
+                                        images={['/img/geral/exemplo2.avif']}
+                                        alt={productData.name}
+                                        width={1440}
+                                        height={800}
+                                    />
+                                );
+                            }
+                            
                             return (
                                 <ImageCarousel 
-                                    images={images}
+                                    images={hardcodedImages}
                                     alt={productData.name}
                                     width={1440}
                                     height={800}

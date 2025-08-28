@@ -28,8 +28,9 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    cursor: pointer;
+    /* Fallback para navegadores que não suportam appearance: none */
     background-image: none;
+    cursor: pointer;
 }
 
 .select:hover {
@@ -66,7 +67,6 @@
     transform: translateY(-50%);
     pointer-events: none;
     color: rgba(241, 244, 247, 0.5);
-    transition: color 0.2s ease;
 }
 
 .select-container:hover .chevron-icon {
@@ -115,9 +115,9 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    cursor: pointer;
+    /* Fallback para navegadores que não suportam appearance: none */
     background-image: none;
-    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .select-light:hover {
@@ -138,7 +138,6 @@
     transform: translateY(-50%);
     pointer-events: none;
     color: rgba(146, 151, 120, 0.75);
-    transition: color 0.2s ease;
 }
 
 .select-container-light:hover .chevron-icon-light {

@@ -15,13 +15,11 @@
         "description": "Solución ligera y sostenible para hormigón ligero, con excelente aislamiento térmico y reducción de costos.",
         "buttonText": "Solicite un presupuesto",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/heroes/products/construcao-civil-flocos-eps-hero.avif"
     },
     "categoryDescription": {
         "title": "Los Copos de EPS Isoart son ideales para hormigón ligero, reduciendo peso y costos en obras de relleno y regularización.",
         "description": "Los Copos de EPS Isoart son utilizados en la mezcla de hormigón ligero, compuesto por cemento, arena, agua y copos de EPS. Con baja densidad y alta capacidad de aislamiento térmico, son perfectos para rellenos y regularización de pisos y losas, proporcionando ligereza, economía de materiales y sostenibilidad en proyectos de construcción civil."
     },
-    "projectImages": [
         "/img/produtos/construcao-civil/flocos/flocos-1440x800_001.avif",
         "/img/produtos/construcao-civil/flocos/flocos-1440x800_002.avif"
     ],

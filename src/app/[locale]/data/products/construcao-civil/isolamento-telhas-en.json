@@ -15,13 +15,11 @@
         "description": "Efficient solution for thermal insulation in roofs, ensuring comfort and energy savings.",
         "buttonText": "Request a quote",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/heroes/products/construcao-civil-isolamento-telhas-hero.avif"
     },
     "categoryDescription": {
         "title": "Isoart Roofing Insulation offers excellent thermal performance, lightness and ease of installation for roofs.",
         "description": "Isoart Roofing Insulation is an innovative solution for roofs that seek energy efficiency and thermal comfort. Produced with high-quality expanded polystyrene, it provides superior thermal insulation, reduced air conditioning costs and simple installation, being ideal for residential and commercial projects that value sustainability and comfort."
     },
-    "projectImages": [
         "/img/produtos/construcao-civil/isolamento-telhas/isolamento-telhas-1440x-800_001.avif",
         "/img/produtos/construcao-civil/isolamento-telhas/isolamento-telhas-1440x-800_002.avif",
         "/img/produtos/construcao-civil/isolamento-telhas/isolamento-telhas-1440x-800_003.avif",

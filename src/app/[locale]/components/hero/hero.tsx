@@ -19,7 +19,7 @@ function Hero() {
     const [slideProgress, setSlideProgress] = useState(0);
     const sliderRef = useRef<HTMLDivElement>(null);
     const containerRefs = useRef<(HTMLDivElement | null)[]>([]);
-    const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
+    const autoPlayRef = useRef<number | null>(null);
     const progressRef = useRef<number | null>(null);
 
     const SLIDE_DURATION = 5000; // 5 segundos por slide
@@ -92,31 +92,51 @@ function Hero() {
             // Reset progress when slide changes
             setSlideProgress(0);
             
-            // Start progress immediately with requestAnimationFrame
-            let startTime = Date.now();
-            let animationId: number;
-            
-            const animateProgress = () => {
-                const elapsed = Date.now() - startTime;
-                const progress = Math.min((elapsed / SLIDE_DURATION) * 100, 100);
+            // Fallback para Android antigo que não suporta requestAnimationFrame
+            if (typeof requestAnimationFrame === 'undefined') {
+                // Usar setTimeout como fallback
+                let startTime = Date.now();
+                let timeoutId: number;
                 
-                setSlideProgress(progress);
+                const animateProgress = () => {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min((elapsed / SLIDE_DURATION) * 100, 100);
+                    
+                    setSlideProgress(progress);
+                    
+                    if (progress < 100) {
+                        timeoutId = setTimeout(animateProgress, 16); // ~60fps
+                    }
+                };
                 
-                if (progress < 100) {
-                    animationId = requestAnimationFrame(animateProgress);
-                }
-            };
-            
-            // Start animation immediately
-            animationId = requestAnimationFrame(animateProgress);
-            
-            // Store the animation ID for cleanup
-            progressRef.current = animationId as any;
+                timeoutId = setTimeout(animateProgress, 16);
+                progressRef.current = timeoutId;
+            } else {
+                // requestAnimationFrame para Android 7.0+
+                let startTime = Date.now();
+                let animationId: number;
+                
+                const animateProgress = () => {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min((elapsed / SLIDE_DURATION) * 100, 100);
+                    
+                    setSlideProgress(progress);
+                    
+                    if (progress < 100) {
+                        animationId = requestAnimationFrame(animateProgress);
+                    }
+                };
+                
+                animationId = requestAnimationFrame(animateProgress);
+                progressRef.current = animationId;
+            }
         } else {
             if (progressRef.current) {
                 // Cancel animation frame if it's an animation ID
-                if (typeof progressRef.current === 'number') {
+                if (typeof requestAnimationFrame !== 'undefined' && typeof progressRef.current === 'number') {
                     cancelAnimationFrame(progressRef.current);
+                } else if (typeof progressRef.current === 'number') {
+                    clearTimeout(progressRef.current);
                 }
             }
         }
@@ -124,8 +144,10 @@ function Hero() {
         return () => {
             if (progressRef.current) {
                 // Cancel animation frame if it's an animation ID
-                if (typeof progressRef.current === 'number') {
+                if (typeof requestAnimationFrame !== 'undefined' && typeof progressRef.current === 'number') {
                     cancelAnimationFrame(progressRef.current);
+                } else if (typeof progressRef.current === 'number') {
+                    clearTimeout(progressRef.current);
                 }
             }
         };
@@ -174,8 +196,10 @@ function Hero() {
             }
         };
 
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
+        if (typeof window !== 'undefined' && window.addEventListener) {
+            window.addEventListener('keydown', handleKeyDown);
+            return () => window.removeEventListener('keydown', handleKeyDown);
+        }
     }, [handlePrev, handleNext, handleDotClick]);
 
     // Drag functionality with improved performance
@@ -201,7 +225,7 @@ function Hero() {
     const handleMouseUp = useCallback(() => {
         if (!isDragging) return;
         setIsDragging(false);
-        const threshold = window.innerWidth * 0.1;
+        const threshold = (typeof window !== 'undefined' ? window.innerWidth : 375) * 0.1;
         if (sliderRef.current) {
             sliderRef.current.style.transition = 'transform 0.5s ease-in-out';
             if (dragOffset > threshold) {
@@ -241,7 +265,7 @@ function Hero() {
     const handleTouchEnd = useCallback(() => {
         if (!isDragging) return;
         setIsDragging(false);
-        const threshold = window.innerWidth * 0.1;
+        const threshold = (typeof window !== 'undefined' ? window.innerWidth : 375) * 0.1;
         if (sliderRef.current) {
             sliderRef.current.style.transition = 'transform 0.5s ease-in-out';
             if (dragOffset > threshold) {

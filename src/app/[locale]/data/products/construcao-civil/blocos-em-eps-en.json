@@ -4,7 +4,6 @@
     "slug": "eps-blocks",
     "description": "EPS (Expanded Polystyrene) blocks for structural and filling applications, offering lightness, thermal insulation, and easy handling in construction.",
     "image": "/img/produtos/construcao-civil/blocos/blocos-01.avif",
-    "projectImages": [
         "/img/produtos/construcao-civil/blocos/blocos-1440x-800_001.avif"
     ],
     "specifications": {
@@ -18,7 +17,6 @@
         "description": "A versatile and lightweight solution for construction with high-performance thermal and acoustic insulation.",
         "buttonText": "Request a quote",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/heroes/products/construcao-civil-blocos-eps-hero.avif"
     },
     "categoryDescription": {
         "title": "Isoart EPS Blocks provide lightness, strength, and thermal insulation for modern and sustainable constructions.",

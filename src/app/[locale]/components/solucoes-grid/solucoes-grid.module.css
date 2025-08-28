@@ -23,6 +23,13 @@
 }
 
 .solucoes-grid-grid {
+    /* Fallback Flexbox para Android antigo */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    height: auto;
+    
+    /* Grid principal para Android 7.0+ */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1rem;
@@ -35,7 +42,6 @@
     overflow: hidden;
     height: 35rem;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 .solucoes-grid-card:hover .solucoes-grid-card-container {
@@ -58,7 +64,6 @@
     object-fit: cover;
     object-position: center;
     z-index: 2;
-    transition: all 0.3s ease;
 }
 
 .solucoes-grid-card-image::before {
@@ -87,7 +92,8 @@
     background: linear-gradient(180deg, rgba(241, 244, 247, 0.1) 50%, rgba(146, 151, 120, 1) 100%);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
-    transition: all 0.3s ease;
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background: linear-gradient(180deg, rgba(241, 244, 247, 0.3) 50%, rgba(146, 151, 120, 1) 100%);
 }
 
 .solucoes-grid-card-container h5 {

@@ -29,6 +29,8 @@
     font-family: var(--font-redhat);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background-color: rgba(17, 17, 17, 0.8);
 }
 
 .institucional-nav-right {
@@ -117,8 +119,6 @@
     opacity: 0.65;
     position: relative;
     z-index: 10;
-    /* Transições suaves para evitar mudanças bruscas */
-    transition: opacity 0.2s ease;
     /* Dimensões fixas */
     flex-shrink: 0;
 }
@@ -178,6 +178,8 @@
     border: 1px solid rgba(17, 17, 17, 0.1);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background-color: rgba(241, 244, 247, 0.95);
 }
 
 .main-nav-content {
@@ -319,7 +321,6 @@
     object-fit: cover;
     border-radius: 0.2rem;
     background-color: rgba(128, 128, 128, 0.3);
-    transition: opacity 0.3s ease;
     flex-shrink: 0;
     position: relative;
     z-index: 2;
@@ -496,7 +497,6 @@
     border: none;
     background: none;
     padding: 0;
-    transition: opacity 0.2s ease;
 }
 
 .mobile-language-option:hover {

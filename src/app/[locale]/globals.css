@@ -71,6 +71,19 @@
   --font-mono: var(--font-inter-mono);
 }
 
+/* Fallbacks para propriedades CSS modernas */
+@supports not (backdrop-filter: blur(1rem)) {
+  [style*="backdrop-filter"] {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+  }
+}
+
+@supports not (filter: blur(1rem)) {
+  [style*="filter: blur"] {
+    transform: scale(0.8) !important;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -146,39 +159,72 @@ body {
 }
 
 h1 {
-  font-size: clamp(2.4rem, 4.5vw, 5.5rem);
+  /* Fallback para Android antigo */
+  font-size: 3.5rem;
   font-family: var(--font-redhat);
   line-height: 1.1;
 }
 
 h2 {
-  font-size: clamp(1.8rem, 2.2vw, 3rem);
+  /* Fallback para Android antigo */
+  font-size: 2.5rem;
   font-family: var(--font-redhat);
   line-height: 1.2;
 }
 
 h3 {
-  font-size: clamp(1.6rem, 2vw, 2.6rem);
+  /* Fallback para Android antigo */
+  font-size: 2.2rem;
   font-family: var(--font-redhat);
   line-height: 1.3;
 }
 
 h4 {
-  font-size: clamp(1.3rem, 1.5vw, 2.0rem);
+  /* Fallback para Android antigo */
+  font-size: 1.8rem;
   font-family: var(--font-redhat);
   line-height: 1.2;
 }
 
 h5 {
-  font-size: clamp(1.3rem, 1.6vw, 2.2rem);
+  /* Fallback para Android antigo */
+  font-size: 1.8rem;
   font-family: var(--font-redhat);
   line-height: 1.4;
 }
 
 p {
-  font-size: clamp(0.9rem, 1rem, 1.125rem);
+  /* Fallback para Android antigo */
+  font-size: 1rem;
   line-height: 1.6;
   font-family: var(--font-inter);
+}
+
+/* Tipografia responsiva para Android 7.0+ */
+@supports (font-size: clamp(1rem, 1vw, 2rem)) {
+  h1 {
+    font-size: clamp(2.4rem, 4.5vw, 5.5rem);
+  }
+  
+  h2 {
+    font-size: clamp(1.8rem, 2.2vw, 3rem);
+  }
+  
+  h3 {
+    font-size: clamp(1.6rem, 2vw, 2.6rem);
+  }
+  
+  h4 {
+    font-size: clamp(1.3rem, 1.5vw, 2.0rem);
+  }
+  
+  h5 {
+    font-size: clamp(1.3rem, 1.6vw, 2.2rem);
+  }
+  
+  p {
+    font-size: clamp(0.9rem, 1rem, 1.125rem);
+  }
 }
 
 .blue-text {
@@ -200,4 +246,26 @@ p {
   font-size: 0.9rem;
   text-align: center;
   width: max-content;
+}
+
+/* ==================================================================================== */
+/* POLYFILLS PARA COMPATIBILIDADE ANDROID ANTIGO ====================================== */
+/* ==================================================================================== */
+
+/* Polyfill para Fetch API - Android antigo */
+@supports not (display: grid) {
+  /* Fallback para navegadores que não suportam Grid (Android antigo) */
+  .fetch-fallback {
+    display: none;
+  }
+  
+  .fetch-fallback-message {
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(24, 74, 100, 0.1);
+    border: 1px solid rgba(24, 74, 100, 0.3);
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+  }
 }

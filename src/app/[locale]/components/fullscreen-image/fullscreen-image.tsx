@@ -70,10 +70,12 @@ function FullscreenImage({
     };
 
     useEffect(() => {
-        document.addEventListener('keydown', handleKeyDown);
-        return () => {
-            document.removeEventListener('keydown', handleKeyDown);
-        };
+        if (typeof document !== 'undefined' && document.addEventListener) {
+            document.addEventListener('keydown', handleKeyDown);
+            return () => {
+                document.removeEventListener('keydown', handleKeyDown);
+            };
+        }
     }, [isOpen]);
 
     if (!isOpen) return null;

@@ -15,13 +15,11 @@
         "description": "Light and sustainable solution for lightweight concrete, with excellent thermal insulation and cost reduction.",
         "buttonText": "Request a quote",
         "buttonLink": "/contato",
-        "backgroundImage": "/img/heroes/products/construcao-civil-flocos-eps-hero.avif"
     },
     "categoryDescription": {
         "title": "Isoart EPS Flakes are ideal for lightweight concrete, reducing weight and costs in filling and leveling works.",
         "description": "Isoart EPS Flakes are used in lightweight concrete mix, composed of cement, sand, water and EPS flakes. With low density and high thermal insulation capacity, they are perfect for filling and leveling floors and slabs, providing lightness, material savings and sustainability in civil construction projects."
     },
-    "projectImages": [
         "/img/produtos/construcao-civil/flocos/flocos-1440x800_001.avif",
         "/img/produtos/construcao-civil/flocos/flocos-1440x800_002.avif"
     ],

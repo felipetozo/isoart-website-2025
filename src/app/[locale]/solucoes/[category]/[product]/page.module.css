@@ -104,6 +104,13 @@
 .benefits-wrapper {
     width: 90%;
     margin: 0 auto;
+    /* Fallback Flexbox para Android antigo */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1600px;
+    
+    /* Grid principal para Android 7.0+ */
     display: grid;
     gap: 2rem;
     max-width: 1600px;
@@ -143,6 +150,13 @@
 }
 
 .features-grid {
+    /* Fallback Flexbox para Android antigo */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    
+    /* Grid principal para Android 7.0+ */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr));
     gap: 1rem;

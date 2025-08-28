@@ -69,6 +69,15 @@ export const useCategoryData = (categorySlug: string): CategoryData | null => {
             'telhasPaineis': '/img/heroes/categories/telhas-paineis-hero.avif'
         };
         
+        // Garantir que sempre tenha uma imagem válida
+        const getHeroImage = (categoryKey: string) => {
+            const image = heroImages[categoryKey];
+            if (image) return image;
+            
+            // Fallback para categorias não mapeadas
+            return '/img/heroes/categories/construcao-civil-hero.avif';
+        };
+        
         // Construir dados da categoria usando apenas traduções
         const categoryData: CategoryData = {
             id: 0, // ID padrão
@@ -80,7 +89,7 @@ export const useCategoryData = (categorySlug: string): CategoryData | null => {
                 description: t(`${categoryKey}.hero.description`),
                 buttonText: t(`${categoryKey}.hero.buttonText`),
                 buttonLink: `/${categorySlug}/contato`,
-                backgroundImage: heroImages[categoryKey] || '/img/heroes/categories/default-hero.avif'
+                backgroundImage: getHeroImage(categoryKey)
             },
             products: [],
             benefits: []
