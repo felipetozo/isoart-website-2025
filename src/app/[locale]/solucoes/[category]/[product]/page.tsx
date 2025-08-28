@@ -199,10 +199,10 @@ export default function ProductPage() {
     // Mapeamento simples das imagens hero para cada produto
     const PRODUCT_HERO_IMAGES = {
         'construcao-civil': {
-            'blocos-em-eps': '/img/heroes/products/construcao-civil-blocos-eps-hero.avif',
+            'blocos-em-eps': '/img/heroes/products/construcao-civil-blocos-eps-hero_02.avif',
             'chapas-paineis-em-eps': '/img/heroes/products/construcao-civil-chapas-paineis-hero.avif',
             'flocos-em-eps': '/img/heroes/products/construcao-civil-flocos-eps-hero.avif',
-            'forros': '/img/heroes/products/construcao-civil-forros_10-hero.avif',
+            'forros': '/img/heroes/products/construcao-civil-forros-hero_10.avif',
             'isolamento-telhas': '/img/heroes/products/construcao-civil-isolamento-telhas-hero.avif',
             'lajes-em-eps': '/img/heroes/products/construcao-civil-lajes-eps-hero.avif'
         },
@@ -682,13 +682,15 @@ export default function ProductPage() {
         }
     };
 
-    const heroSection = productData.hero || {
-        title: productData.name,
-        description: t('defaults.heroDescription'),
-        buttonText: t('defaults.buttonText'),
-        buttonLink: `/${locale}/contato`,
-        backgroundImage: (PRODUCT_HERO_IMAGES as any)[category]?.[product] || productData.image || '/img/default-product-hero.avif'
+    const heroSection = {
+        title: productData.hero?.title || productData.name,
+        description: productData.hero?.description || t('defaults.heroDescription'),
+        buttonText: productData.hero?.buttonText || t('defaults.buttonText'),
+        buttonLink: productData.hero?.buttonLink || `/${locale}/contato`,
+        backgroundImage: (PRODUCT_HERO_IMAGES as any)[category]?.[product] || '/img/heroes/categories/construcao-civil-hero.avif'
     };
+    
+
 
     const categoryDescription = productData.categoryDescription || {
         title: t('defaults.categoryDescriptionTitle'),

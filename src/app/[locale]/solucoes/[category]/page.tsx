@@ -37,13 +37,25 @@ export default function CategoryPage() {
         );
     }
 
-    const heroSection = categoryData.hero || {
-        title: categoryData.title,
-        description: categoryData.description || categoryData.categoryDescription || t('hero.defaultDescription'),
-        buttonText: t('hero.defaultButtonText'),
-        buttonLink: `/${locale}/contato`,
-        backgroundImage: '/img/default-category-hero.avif'
+    // Mapeamento das imagens hero para cada categoria
+    const CATEGORY_HERO_IMAGES = {
+        'construcao-civil': '/img/heroes/categories/construcao-civil-hero.avif',
+        'embalagens-em-eps': '/img/heroes/categories/embalagens-eps-hero.avif',
+        'molduras-decorativas': '/img/heroes/categories/molduras-decorativas-hero.avif',
+        'telhas-e-paineis': '/img/heroes/categories/telhas-paineis-hero.avif'
     };
+
+    const heroSection = {
+        title: categoryData.hero?.title || categoryData.title,
+        description: categoryData.hero?.description || categoryData.description || categoryData.categoryDescription || t('hero.defaultDescription'),
+        buttonText: categoryData.hero?.buttonText || t('hero.defaultButtonText'),
+        buttonLink: categoryData.hero?.buttonLink || `/${locale}/contato`,
+        backgroundImage: (CATEGORY_HERO_IMAGES as any)[category] || '/img/heroes/categories/construcao-civil-hero.avif'
+    };
+    
+
+    
+
 
     const benefitsSection = categoryData.benefits || [
         { id: 1, title: t('benefits.defaultTitle1'), description: t('benefits.defaultDescription1') },
