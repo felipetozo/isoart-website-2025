@@ -55,9 +55,63 @@ export default function ContactForm({ locale }: ContactFormProps) {
         const fetchStates = async () => {
             setLoadingStates(true);
             try {
-                const response = await fetch('/api/states');
-                const data = await response.json();
-                setStates(data);
+                // Fallback para Android antigo que não suporta Fetch API
+                if (typeof fetch === 'undefined') {
+                    // Usar XMLHttpRequest como fallback
+                    const xhr = new XMLHttpRequest();
+                    xhr.open('GET', '/api/states', true);
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === 4) {
+                            if (xhr.status === 200) {
+                                try {
+                                    const data = JSON.parse(xhr.responseText);
+                                    setStates(data);
+                                } catch (parseError) {
+                                    console.error('Erro ao fazer parse dos estados:', parseError);
+                                    // Fallback para estados hardcoded
+                                    setStates([
+                                        { value: 'PR', label: t('states.parana') },
+                                        { value: 'SP', label: t('states.saoPaulo') },
+                                        { value: 'SC', label: t('states.santaCatarina') },
+                                        { value: 'RS', label: t('states.rioGrandeDoSul') },
+                                        { value: 'MG', label: t('states.minasGerais') },
+                                        { value: 'RJ', label: t('states.rioDeJaneiro') },
+                                    ]);
+                                }
+                            } else {
+                                // Fallback para estados hardcoded em caso de erro
+                                setStates([
+                                    { value: 'PR', label: t('states.parana') },
+                                    { value: 'SP', label: t('states.saoPaulo') },
+                                    { value: 'SC', label: t('states.santaCatarina') },
+                                    { value: 'RS', label: t('states.rioGrandeDoSul') },
+                                    { value: 'MG', label: t('states.minasGerais') },
+                                    { value: 'RS', label: t('states.rioDeJaneiro') },
+                                ]);
+                            }
+                            setLoadingStates(false);
+                        }
+                    };
+                    xhr.onerror = function() {
+                        console.error('Erro XHR ao buscar estados');
+                        // Fallback para estados hardcoded
+                        setStates([
+                            { value: 'PR', label: t('states.parana') },
+                            { value: 'SP', label: t('states.saoPaulo') },
+                            { value: 'SC', label: t('states.santaCatarina') },
+                            { value: 'RS', label: t('states.rioGrandeDoSul') },
+                            { value: 'MG', label: t('states.minasGerais') },
+                            { value: 'RS', label: t('states.rioDeJaneiro') },
+                        ]);
+                        setLoadingStates(false);
+                    };
+                    xhr.send();
+                } else {
+                    // Fetch API para Android 7.0+
+                    const response = await fetch('/api/states');
+                    const data = await response.json();
+                    setStates(data);
+                }
             } catch (error) {
                 console.error('Erro ao carregar estados:', error);
                 setStates([
@@ -66,7 +120,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
                     { value: 'SC', label: t('states.santaCatarina') },
                     { value: 'RS', label: t('states.rioGrandeDoSul') },
                     { value: 'MG', label: t('states.minasGerais') },
-                    { value: 'RJ', label: t('states.rioDeJaneiro') },
+                    { value: 'RS', label: t('states.rioDeJaneiro') },
                 ]);
             } finally {
                 setLoadingStates(false);
@@ -130,36 +184,73 @@ export default function ContactForm({ locale }: ContactFormProps) {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch('/api/contact-page', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
+            // Fallback para Android antigo que não suporta Fetch API
+            if (typeof fetch === 'undefined') {
+                // Usar XMLHttpRequest como fallback
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', '/api/contact-page', true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            setShowToast(true);
+                            setFormData({
+                                name: '',
+                                email: '',
+                                phone: '',
+                                theme: '',
+                                state: '',
+                                city: '',
+                                terms: false,
+                            });
+                            setErrors({});
+                        } else {
+                            setErrors({ submit: t('form.errors.submitError') });
+                        }
+                        setIsSubmitting(false);
+                    }
+                };
+                xhr.onerror = function() {
+                    console.error('Erro XHR ao enviar formulário');
+                    setErrors({ submit: t('form.errors.submitError') });
+                    setIsSubmitting(false);
+                };
+                xhr.send(JSON.stringify({
                     ...formData,
                     locale,
-                }),
-            });
-
-            if (response.ok) {
-                setShowToast(true);
-                setFormData({
-                    name: '',
-                    email: '',
-                    phone: '',
-                    theme: '',
-                    state: '',
-                    city: '',
-                    terms: false,
-                });
-                setErrors({});
+                }));
             } else {
-                throw new Error('Erro ao enviar formulário');
+                // Fetch API para Android 7.0+
+                const response = await fetch('/api/contact-page', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        ...formData,
+                        locale,
+                    }),
+                });
+
+                if (response.ok) {
+                    setShowToast(true);
+                    setFormData({
+                        name: '',
+                        email: '',
+                        phone: '',
+                        theme: '',
+                        state: '',
+                        city: '',
+                        terms: false,
+                    });
+                    setErrors({});
+                } else {
+                    throw new Error('Erro ao enviar formulário');
+                }
             }
         } catch (error) {
             console.error('Erro ao enviar formulário:', error);
             setErrors({ submit: t('form.errors.submitError') });
-        } finally {
             setIsSubmitting(false);
         }
     };

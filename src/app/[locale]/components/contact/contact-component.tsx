@@ -103,10 +103,36 @@ function ContactComponent({ locale }: ContactComponentProps) {
     const fetchStates = async () => {
         setLoadingStates(true);
         try {
-            const response = await fetch('/api/states');
-            if (response.ok) {
-                const data = await response.json();
-                setStates(data);
+            // Fallback para Android antigo que não suporta Fetch API
+            if (typeof fetch === 'undefined') {
+                // Usar XMLHttpRequest como fallback
+                const xhr = new XMLHttpRequest();
+                xhr.open('GET', '/api/states', true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            try {
+                                const data = JSON.parse(xhr.responseText);
+                                setStates(data);
+                            } catch (parseError) {
+                                console.error('Erro ao fazer parse dos estados:', parseError);
+                            }
+                        }
+                        setLoadingStates(false);
+                    }
+                };
+                xhr.onerror = function() {
+                    console.error('Erro XHR ao buscar estados');
+                    setLoadingStates(false);
+                };
+                xhr.send();
+            } else {
+                // Fetch API para Android 7.0+
+                const response = await fetch('/api/states');
+                if (response.ok) {
+                    const data = await response.json();
+                    setStates(data);
+                }
             }
         } catch (error) {
             console.error('Erro ao buscar estados:', error);
@@ -127,23 +153,55 @@ function ContactComponent({ locale }: ContactComponentProps) {
         setSubmitStatus('submitting');
 
         try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                setSubmitStatus('success');
-                setFormData({ name: '', email: '', phone: '', solution: '', state: '', city: '', terms: false });
-                setShowToast(true);
+            // Fallback para Android antigo que não suporta Fetch API
+            if (typeof fetch === 'undefined') {
+                // Usar XMLHttpRequest como fallback
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', '/api/contact', true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4) {
+                        if (xhr.status === 200) {
+                            try {
+                                const result = JSON.parse(xhr.responseText);
+                                setSubmitStatus('success');
+                                setFormData({ name: '', email: '', phone: '', solution: '', state: '', city: '', terms: false });
+                                setShowToast(true);
+                            } catch (parseError) {
+                                console.error('Erro ao fazer parse da resposta:', parseError);
+                                setSubmitStatus('error');
+                            }
+                        } else {
+                            console.error('Erro na API:', xhr.statusText);
+                            setSubmitStatus('error');
+                        }
+                    }
+                };
+                xhr.onerror = function() {
+                    console.error('Erro XHR ao enviar formulário');
+                    setSubmitStatus('error');
+                };
+                xhr.send(JSON.stringify(formData));
             } else {
-                console.error('Erro na API:', result.error);
-                setSubmitStatus('error');
+                // Fetch API para Android 7.0+
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    setSubmitStatus('success');
+                    setFormData({ name: '', email: '', phone: '', solution: '', state: '', city: '', terms: false });
+                    setShowToast(true);
+                } else {
+                    console.error('Erro na API:', result.error);
+                    setSubmitStatus('error');
+                }
             }
         } catch (error) {
             console.error('Erro ao enviar formulário:', error);

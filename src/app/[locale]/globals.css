@@ -247,3 +247,25 @@ p {
   text-align: center;
   width: max-content;
 }
+
+/* ==================================================================================== */
+/* POLYFILLS PARA COMPATIBILIDADE ANDROID ANTIGO ====================================== */
+/* ==================================================================================== */
+
+/* Polyfill para Fetch API - Android antigo */
+@supports not (display: grid) {
+  /* Fallback para navegadores que não suportam Grid (Android antigo) */
+  .fetch-fallback {
+    display: none;
+  }
+  
+  .fetch-fallback-message {
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(24, 74, 100, 0.1);
+    border: 1px solid rgba(24, 74, 100, 0.3);
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+  }
+}

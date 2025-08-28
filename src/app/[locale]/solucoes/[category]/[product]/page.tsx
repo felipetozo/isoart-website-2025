@@ -154,13 +154,41 @@ export default function ProductPage() {
                 try {
                     // Construir nome do arquivo baseado no idioma
                     const productFileName = locale === 'pt-BR' ? product : `${product}-${locale === 'en' ? 'en' : 'es'}`;
-                    const response = await fetch(`/api/products/${category}/${productFileName}`);
                     
-                    if (response.ok) {
-                        const detailedProductData = await response.json();
-                        if (detailedProductData) {
-                            setProductData(detailedProductData);
-                            return;
+                    // Fallback para Android antigo que não suporta Fetch API
+                    if (typeof fetch === 'undefined') {
+                        // Usar XMLHttpRequest como fallback
+                        const xhr = new XMLHttpRequest();
+                        xhr.open('GET', `/api/products/${category}/${productFileName}`, true);
+                        xhr.onreadystatechange = function() {
+                            if (xhr.readyState === 4) {
+                                if (xhr.status === 200) {
+                                    try {
+                                        const detailedProductData = JSON.parse(xhr.responseText);
+                                        if (detailedProductData) {
+                                            setProductData(detailedProductData);
+                                            return;
+                                        }
+                                    } catch (parseError) {
+                                        // Silenciosamente fallback para dados básicos
+                                    }
+                                }
+                            }
+                        };
+                        xhr.onerror = function() {
+                            // Silenciosamente fallback para dados básicos
+                        };
+                        xhr.send();
+                    } else {
+                        // Fetch API para Android 7.0+
+                        const response = await fetch(`/api/products/${category}/${productFileName}`);
+                        
+                        if (response.ok) {
+                            const detailedProductData = await response.json();
+                            if (detailedProductData) {
+                                setProductData(detailedProductData);
+                                return;
+                            }
                         }
                     }
                 } catch (error) {
