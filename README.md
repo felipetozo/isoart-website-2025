@@ -416,7 +416,7 @@ Este projeto é privado e propriedade da Isoart. Todos os direitos reservados.
 **✅ PROJETO FUNCIONANDO PERFEITAMENTE COM INTERNACIONALIZAÇÃO COMPLETA**
 
 ### **Status Técnico**
-- **Commit atual**: `695a43a` - Solução da API com múltiplos caminhos para resolver problema do carrossel na produção
+- **Commit atual**: `082f691` - feat: implement hardcoded benefits mapping for product pages
 - **Status**: Site 100% funcional com suporte multilíngue completo
 - **Idiomas suportados**: pt-BR (padrão), en, es
 - **Performance**: Otimizada e sem overhead
@@ -470,8 +470,9 @@ Este projeto é privado e propriedade da Isoart. Todos os direitos reservados.
     - Mapeamento correto para todos os idiomas (pt-BR, en, es)
     - Ícones apropriados para cada tipo de benefício
     - Eliminação do ícone "wind" padrão incorreto
+13. **Implementação de benefícios hardcoded** para páginas de produtos com mapeamento direto
 
-**Última atualização**: Janeiro 2025 - Sistema de internacionalização 100% completo e funcional com TODAS as traduções implementadas, benefícios corrigidos, ícones funcionando e site funcionando perfeitamente. Padrão estabelecido para Client Components com traduções. **Problema do carrossel na produção resolvido com implementação de múltiplos caminhos na API de produtos.**
+**Última atualização**: Janeiro 2025 - Sistema de internacionalização 100% completo e funcional com TODAS as traduções implementadas, benefícios corrigidos, ícones funcionando e site funcionando perfeitamente. Padrão estabelecido para Client Components com traduções. **Estado estável e funcional registrado no commit `082f691` como versão de referência.**
 
 ---
 
