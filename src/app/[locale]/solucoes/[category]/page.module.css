@@ -94,6 +94,13 @@
 }
 
 .category-products-grid {
+    /* Fallback Flexbox para Android antigo */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1rem;
+    
+    /* Grid principal para Android 7.0+ */
     display: grid;
     width: 100%;
     gap: 1rem;

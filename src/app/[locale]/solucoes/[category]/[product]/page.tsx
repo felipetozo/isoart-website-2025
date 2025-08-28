@@ -274,24 +274,24 @@ export default function ProductPage() {
                 '/img/produtos/molduras/beiral/beiral-1440x-800_010.avif'
             ],
             'molduras-portas-janelas': [
-                '/img/produtos/molduras/portas/portas-1440x-800_001.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_002.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_003.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_004.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_005.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_006.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_007.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_008.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_009.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_010.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_011.avif',
-                '/img/produtos/molduras/portas/portas-1440x-800_012.avif'
+                '/img/produtos/molduras/portas/portas-1440x-800_0010.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0020.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0030.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0040.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0050.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0060.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0070.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0080.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0090.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0100.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0110.avif',
+                '/img/produtos/molduras/portas/portas-1440x-800_0120.avif'
             ],
             'molduras-colunas-capiteis': [
-                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_001.avif',
-                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_002.avif',
-                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_003.avif',
-                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_004.avif'
+                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_0010.avif',
+                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_0020.avif',
+                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_0030.avif',
+                '/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_0040.avif'
             ],
             'molduras-muros': [
                 '/img/produtos/molduras/muros/muros-1440x-800_001.avif',
@@ -334,32 +334,34 @@ export default function ProductPage() {
                 '/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0090.avif'
             ],
             'fachada-fechamento-lateral': [
-                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-1440x-800_001.avif',
-                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-1440x-800_002.avif',
-                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-1440x-800_003.avif',
-                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-1440x-800_004.avif',
-                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-1440x-800_005.avif'
+                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-fechamento-1440x-800_0010.avif',
+                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-fechamento-1440x-800_0020.avif',
+                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-fechamento-1440x-800_0030.avif',
+                '/img/produtos/telhas-revestimentos/fachada-fechamento/fachada-fechamento-1440x-800_0040.avif'
             ],
             'divisoria-e-forro': [
-                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-1440x-800_001.avif',
-                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-1440x-800_002.avif',
-                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-1440x-800_003.avif',
-                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-1440x-800_004.avif',
-                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-1440x-800_005.avif'
+                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0010.avif',
+                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0020.avif',
+                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0030.avif',
+                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0040.avif',
+                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0050.avif',
+                '/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0060.avif'
             ],
             'sala-limpa': [
-                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_001.avif',
-                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_002.avif',
-                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_003.avif',
-                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_004.avif',
-                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_005.avif'
+                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0010.avif',
+                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0020.avif',
+                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0030.avif',
+                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0040.avif',
+                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0050.avif',
+                '/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0060.avif'
             ],
             'camara-frigorifica': [
-                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-1440x-800_001.avif',
-                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-1440x-800_002.avif',
-                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-1440x-800_003.avif',
-                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-1440x-800_004.avif',
-                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-1440x-800_005.avif'
+                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0010.avif',
+                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0020.avif',
+                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0030.avif',
+                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0040.avif',
+                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0050.avif',
+                '/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0060.avif'
             ]
         }
     };
@@ -744,13 +746,24 @@ export default function ProductPage() {
                 <div className={styles['general-characteristics-wrapper']}>
                     <div className={styles['img-placeholder']}>
                         {(() => {
-                            // Usar as imagens hardcoded se existirem, senão fallback para API/JSON
-                            const galleryImages = (PRODUCT_GALLERY_IMAGES as any)[category]?.[product];
-                            const images = galleryImages || productData.projectImages || [productData.image || '/img/geral/exemplo2.avif'];
-                            console.log('Product page - images array:', images);
+                            // Sistema hardcoded 100% garantido
+                            const hardcodedImages = (PRODUCT_GALLERY_IMAGES as any)[category]?.[product];
+                            
+                            // Se não tiver imagens hardcoded, usar fallback padrão
+                            if (!hardcodedImages || hardcodedImages.length === 0) {
+                                return (
+                                    <ImageCarousel 
+                                        images={['/img/geral/exemplo2.avif']}
+                                        alt={productData.name}
+                                        width={1440}
+                                        height={800}
+                                    />
+                                );
+                            }
+                            
                             return (
                                 <ImageCarousel 
-                                    images={images}
+                                    images={hardcodedImages}
                                     alt={productData.name}
                                     width={1440}
                                     height={800}
