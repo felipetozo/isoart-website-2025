@@ -12,7 +12,40 @@ import IncendioComponent from '@/app/[locale]/components/pir-incendio/pir-incend
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
 import { useCategoryData } from '../../hooks/use-category-data';
-import menuData from '@/app/[locale]/data/menu-data.json';
+// Fallback para Android antigo que não suporta importação estática de JSON
+let menuData: any[] = [];
+
+// Tentar importar JSON de forma dinâmica
+try {
+    if (typeof require !== 'undefined') {
+        menuData = require('@/app/[locale]/data/menu-data.json');
+    }
+} catch (error) {
+    console.warn('Erro ao importar menu-data.json, usando dados hardcoded');
+    // Dados hardcoded como fallback
+    menuData = [
+        {
+            id: 1,
+            title: "Telhas e Painéis",
+            slug: "telhas-e-paineis",
+            description: "Telhas e painéis da Isoart para coberturas e fachadas.",
+            products: [
+                { id: 1, name: "Telhas Térmicas", slug: "telhas-termicas", description: "Telhas com núcleo em PIR ou EPS" },
+                { id: 2, name: "Fachada e Fechamento Lateral", slug: "fachada-fechamento-lateral", description: "Painéis versáteis para fachadas" }
+            ]
+        },
+        {
+            id: 2,
+            title: "Construção Civil",
+            slug: "construcao-civil",
+            description: "Soluções em EPS para construção civil",
+            products: [
+                { id: 6, name: "Lajes em EPS", slug: "lajes-em-eps", description: "Lajes com preenchimento em EPS" },
+                { id: 7, name: "Isolamento para Telhas", slug: "isolamento-telhas", description: "Sistema de isolamento térmico" }
+            ]
+        }
+    ];
+}
 import LoadingScreen from '../../components/loading-screen/loading-screen';
 
 // Interfaces importadas do hook useCategoryData

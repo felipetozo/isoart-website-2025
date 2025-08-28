@@ -92,31 +92,51 @@ function Hero() {
             // Reset progress when slide changes
             setSlideProgress(0);
             
-            // Start progress immediately with requestAnimationFrame
-            let startTime = Date.now();
-            let animationId: number;
-            
-            const animateProgress = () => {
-                const elapsed = Date.now() - startTime;
-                const progress = Math.min((elapsed / SLIDE_DURATION) * 100, 100);
+            // Fallback para Android antigo que não suporta requestAnimationFrame
+            if (typeof requestAnimationFrame === 'undefined') {
+                // Usar setTimeout como fallback
+                let startTime = Date.now();
+                let timeoutId: number;
                 
-                setSlideProgress(progress);
+                const animateProgress = () => {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min((elapsed / SLIDE_DURATION) * 100, 100);
+                    
+                    setSlideProgress(progress);
+                    
+                    if (progress < 100) {
+                        timeoutId = setTimeout(animateProgress, 16); // ~60fps
+                    }
+                };
                 
-                if (progress < 100) {
-                    animationId = requestAnimationFrame(animateProgress);
-                }
-            };
-            
-            // Start animation immediately
-            animationId = requestAnimationFrame(animateProgress);
-            
-            // Store the animation ID for cleanup
-            progressRef.current = animationId as any;
+                timeoutId = setTimeout(animateProgress, 16);
+                progressRef.current = timeoutId;
+            } else {
+                // requestAnimationFrame para Android 7.0+
+                let startTime = Date.now();
+                let animationId: number;
+                
+                const animateProgress = () => {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min((elapsed / SLIDE_DURATION) * 100, 100);
+                    
+                    setSlideProgress(progress);
+                    
+                    if (progress < 100) {
+                        animationId = requestAnimationFrame(animateProgress);
+                    }
+                };
+                
+                animationId = requestAnimationFrame(animateProgress);
+                progressRef.current = animationId;
+            }
         } else {
             if (progressRef.current) {
                 // Cancel animation frame if it's an animation ID
-                if (typeof progressRef.current === 'number') {
+                if (typeof requestAnimationFrame !== 'undefined' && typeof progressRef.current === 'number') {
                     cancelAnimationFrame(progressRef.current);
+                } else if (typeof progressRef.current === 'number') {
+                    clearTimeout(progressRef.current);
                 }
             }
         }
@@ -124,8 +144,10 @@ function Hero() {
         return () => {
             if (progressRef.current) {
                 // Cancel animation frame if it's an animation ID
-                if (typeof progressRef.current === 'number') {
+                if (typeof requestAnimationFrame !== 'undefined' && typeof progressRef.current === 'number') {
                     cancelAnimationFrame(progressRef.current);
+                } else if (typeof progressRef.current === 'number') {
+                    clearTimeout(progressRef.current);
                 }
             }
         };
