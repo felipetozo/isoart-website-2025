@@ -144,10 +144,6 @@
     width: 100%;
     overflow-y: auto;
     padding: 0.5rem;
-    /* Fallback para navegadores que não suportam grid */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .thumbnail {

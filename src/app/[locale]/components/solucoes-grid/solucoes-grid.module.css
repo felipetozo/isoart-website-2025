@@ -27,10 +27,6 @@
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1rem;
     height: auto;
-    /* Fallback para navegadores que não suportam grid */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
 .solucoes-grid-card {

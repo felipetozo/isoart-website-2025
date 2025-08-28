@@ -84,14 +84,6 @@
   }
 }
 
-@supports not (display: grid) {
-  .grid-fallback {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-  }
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
