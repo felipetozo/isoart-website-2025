@@ -14,7 +14,6 @@
     width: 500%;
     height: 100%;
     display: flex;
-    transition: transform 0.5s ease-in-out;
 }
 
 .slide {
@@ -156,7 +155,6 @@
     padding: 0;
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease-out;
 }
 
 .nav-dot::before {
@@ -167,7 +165,6 @@
     height: 100%;
     width: var(--slide-progress, 0%);
     background-color: rgba(146, 151, 120, 1);
-    transition: width 0.1s ease-out;
     border-radius: 0.05rem;
 }
 
@@ -196,7 +193,6 @@
 /* Animação de progresso para o slide ativo */
 .nav-dot.active::before {
     width: var(--slide-progress, 0%);
-    transition: width 0.1s ease-out;
 }
 
 /* Estado de transição entre slides */
@@ -207,7 +203,6 @@
 
 .nav-dot.transitioning::before {
     width: 0%;
-    transition: width 0.1s ease-out;
 }
 
 /* Animação de entrada para novos slides */

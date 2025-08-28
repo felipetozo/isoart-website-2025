@@ -23,7 +23,6 @@
     width: 100% !important;
     height: 100% !important;
     border-radius: 0.5rem;
-    transition: opacity 0.3s ease;
     object-fit: cover;
 }
 
@@ -40,7 +39,6 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
 .fullscreen-button:hover {
@@ -167,7 +165,6 @@
     height: 100%;
     object-fit: cover;
     border-radius: 0.3rem;
-    transition: opacity 0.3s ease;
 }
 
 .thumbnail:hover img {
