@@ -8,6 +8,12 @@
     width: 90%;
     max-width: 1600px;
     margin: 0 auto;
+    /* Fallback Flexbox para Android antigo */
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    
+    /* Grid principal para Android 7.0+ */
     display: grid;
     grid-template-columns: 1fr;
     gap: 5rem;

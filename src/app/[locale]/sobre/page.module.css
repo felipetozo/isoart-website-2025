@@ -297,6 +297,12 @@
 }
 
 .quality-right-column {
+  /* Fallback Flexbox para Android antigo */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+  /* Grid principal para Android 7.0+ */
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
