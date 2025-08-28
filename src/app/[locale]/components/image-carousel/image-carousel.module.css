@@ -9,14 +9,22 @@
 .main-image-container {
     position: relative;
     width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
+    /* Fallback para Android antigo */
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     border-radius: 0.5rem;
     background-color: rgba(241, 244, 247, 0.1);
+}
+
+/* Aspect ratio para Android 7.0+ */
+@supports (aspect-ratio: 16/9) {
+    .main-image-container {
+        height: auto;
+        aspect-ratio: 16/9;
+    }
 }
 
 .main-image {
@@ -194,7 +202,13 @@
     
     .main-image-container {
         height: 800px;
-        aspect-ratio: auto;
+    }
+    
+    /* Aspect ratio para Android 7.0+ */
+    @supports (aspect-ratio: auto) {
+        .main-image-container {
+            aspect-ratio: auto;
+        }
     }
     
     .controls-container {
