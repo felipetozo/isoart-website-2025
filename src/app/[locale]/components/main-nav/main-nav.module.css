@@ -29,6 +29,8 @@
     font-family: var(--font-redhat);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background-color: rgba(17, 17, 17, 0.8);
 }
 
 .institucional-nav-right {
@@ -176,6 +178,8 @@
     border: 1px solid rgba(17, 17, 17, 0.1);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background-color: rgba(241, 244, 247, 0.95);
 }
 
 .main-nav-content {

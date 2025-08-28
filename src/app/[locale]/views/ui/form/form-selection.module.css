@@ -28,8 +28,9 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    cursor: pointer;
+    /* Fallback para navegadores que não suportam appearance: none */
     background-image: none;
+    cursor: pointer;
 }
 
 .select:hover {
@@ -114,8 +115,9 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    cursor: pointer;
+    /* Fallback para navegadores que não suportam appearance: none */
     background-image: none;
+    cursor: pointer;
 }
 
 .select-light:hover {

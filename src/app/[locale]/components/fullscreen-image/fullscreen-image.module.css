@@ -6,6 +6,8 @@
     height: 100vh;
     background-color: rgba(17, 17, 17, 0.8);
     backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background-color: rgba(17, 17, 17, 0.9);
     z-index: 9999;
     display: flex;
     align-items: center;
@@ -44,6 +46,8 @@
     border: 1px solid rgba(146, 151, 120, 0.75);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background-color: rgba(54, 57, 46, 0.95);
     border-radius: 0.2rem;
     width: 3rem;
     height: 3rem;
@@ -69,6 +73,8 @@
     border: 1px solid rgba(146, 151, 120, 0.75);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background-color: rgba(54, 57, 46, 0.95);
     border-radius: 0.2rem;
     width: 3rem;
     height: 3rem;

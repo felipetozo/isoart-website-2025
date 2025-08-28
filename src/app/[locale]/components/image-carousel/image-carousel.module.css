@@ -32,6 +32,8 @@
     border: 1px solid rgba(146, 151, 120, 1.00);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background-color: rgba(54, 57, 46, 0.95);
     border-radius: 0.2rem;
     width: 2.5rem;
     height: 2.5rem;
@@ -53,6 +55,8 @@
     border: 1px solid rgba(146, 151, 120, 1.00);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background-color: rgba(54, 57, 46, 0.95);
     border-radius: 0.2rem;
     width: 2.5rem;
     height: 2.5rem;
@@ -117,6 +121,8 @@
     font-weight: 600;
     font-family: var(--font-redhat);
     backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background-color: rgba(54, 57, 46, 0.95);
     display: flex;
     align-items: center;
 }
@@ -138,6 +144,10 @@
     width: 100%;
     overflow-y: auto;
     padding: 0.5rem;
+    /* Fallback para navegadores que não suportam grid */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .thumbnail {

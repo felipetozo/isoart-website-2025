@@ -71,6 +71,27 @@
   --font-mono: var(--font-inter-mono);
 }
 
+/* Fallbacks para propriedades CSS modernas */
+@supports not (backdrop-filter: blur(1rem)) {
+  [style*="backdrop-filter"] {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+  }
+}
+
+@supports not (filter: blur(1rem)) {
+  [style*="filter: blur"] {
+    transform: scale(0.8) !important;
+  }
+}
+
+@supports not (display: grid) {
+  .grid-fallback {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

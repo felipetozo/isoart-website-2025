@@ -27,6 +27,10 @@
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1rem;
     height: auto;
+    /* Fallback para navegadores que não suportam grid */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .solucoes-grid-card {
@@ -85,6 +89,8 @@
     background: linear-gradient(180deg, rgba(241, 244, 247, 0.1) 50%, rgba(146, 151, 120, 1) 100%);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background: linear-gradient(180deg, rgba(241, 244, 247, 0.3) 50%, rgba(146, 151, 120, 1) 100%);
 }
 
 .solucoes-grid-card-container h5 {

@@ -8,6 +8,8 @@
     border-radius: 0.5rem;
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
+    /* Fallback para navegadores que não suportam backdrop-filter */
+    background-color: rgba(17, 17, 17, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.1);
     min-width: 300px;
     max-width: 90vw;
