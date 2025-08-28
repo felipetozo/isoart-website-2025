@@ -79,7 +79,7 @@ interface MainNavProps {
 function MainNav({ locale }: MainNavProps) {
     const submenuRef = useRef<HTMLDivElement | null>(null);
     const mobileMenuRef = useRef<HTMLDivElement | null>(null);
-    const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const hideTimeoutRef = useRef<number | null>(null);
     const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

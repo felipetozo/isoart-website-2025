@@ -19,7 +19,7 @@ function Hero() {
     const [slideProgress, setSlideProgress] = useState(0);
     const sliderRef = useRef<HTMLDivElement>(null);
     const containerRefs = useRef<(HTMLDivElement | null)[]>([]);
-    const autoPlayRef = useRef<NodeJS.Timeout | null>(null);
+    const autoPlayRef = useRef<number | null>(null);
     const progressRef = useRef<number | null>(null);
 
     const SLIDE_DURATION = 5000; // 5 segundos por slide
@@ -174,8 +174,10 @@ function Hero() {
             }
         };
 
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
+        if (typeof window !== 'undefined' && window.addEventListener) {
+            window.addEventListener('keydown', handleKeyDown);
+            return () => window.removeEventListener('keydown', handleKeyDown);
+        }
     }, [handlePrev, handleNext, handleDotClick]);
 
     // Drag functionality with improved performance
@@ -201,7 +203,7 @@ function Hero() {
     const handleMouseUp = useCallback(() => {
         if (!isDragging) return;
         setIsDragging(false);
-        const threshold = window.innerWidth * 0.1;
+        const threshold = (typeof window !== 'undefined' ? window.innerWidth : 375) * 0.1;
         if (sliderRef.current) {
             sliderRef.current.style.transition = 'transform 0.5s ease-in-out';
             if (dragOffset > threshold) {
@@ -241,7 +243,7 @@ function Hero() {
     const handleTouchEnd = useCallback(() => {
         if (!isDragging) return;
         setIsDragging(false);
-        const threshold = window.innerWidth * 0.1;
+        const threshold = (typeof window !== 'undefined' ? window.innerWidth : 375) * 0.1;
         if (sliderRef.current) {
             sliderRef.current.style.transition = 'transform 0.5s ease-in-out';
             if (dragOffset > threshold) {

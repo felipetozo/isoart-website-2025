@@ -866,5 +866,130 @@
         "item6": "Treinar e capacitar todos os colaboradores visando o cumprimento da Política de Qualidade."
       }
     }
+  },
+  "common": {
+    "buttons": {
+      "saibaMais": "Saiba mais",
+      "entreEmContato": "Entre em contato",
+      "enviar": "Enviar",
+      "voltar": "Voltar",
+      "anterior": "Anterior",
+      "proximo": "Próximo",
+      "fechar": "Fechar",
+      "aceitar": "Aceitar",
+      "rejeitar": "Rejeitar",
+      "salvar": "Salvar"
+    },
+    "sections": {
+      "beneficios": "Benefícios",
+      "caracteristicas": "Características",
+      "aplicacoes": "Aplicações",
+      "especificacoes": "Especificações",
+      "galeria": "Galeria",
+      "contato": "Contato"
+    }
+  },
+  "categoryPage": {
+    "hero": {
+      "defaultDescription": "Soluções inovadoras e sustentáveis para suas necessidades",
+      "defaultButtonText": "Entre em contato"
+    },
+    "benefits": {
+      "defaultTitle1": "Qualidade Garantida",
+      "defaultDescription1": "Produtos certificados com os mais altos padrões de qualidade",
+      "defaultTitle2": "Sustentabilidade",
+      "defaultDescription2": "Materiais 100% recicláveis e eco-friendly"
+    }
+  },
+  "productPage": {
+    "hero": {
+      "defaultDescription": "Produto de alta qualidade para suas necessidades",
+      "defaultButtonText": "Solicitar orçamento"
+    },
+    "benefits": {
+      "defaultTitle1": "Alta Performance",
+      "defaultDescription1": "Desempenho superior em todas as aplicações",
+      "defaultTitle2": "Durabilidade",
+      "defaultDescription2": "Longa vida útil com manutenção mínima"
+    }
+  },
+  "solutionsPage": {
+    "title": "Nossas Soluções",
+    "subtitle": "Produtos inovadores para construção civil, embalagens e isolamento térmico",
+    "description": "Descubra nossa linha completa de soluções em EPS e PIR"
+  },
+  "contactForm": {
+    "title": "Entre em Contato",
+    "subtitle": "Estamos aqui para ajudar com suas necessidades",
+    "name": "Nome completo",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "subject": "Assunto",
+    "message": "Mensagem",
+    "state": "Estado",
+    "city": "Cidade",
+    "terms": "Aceito os termos e condições",
+    "submit": "Enviar mensagem",
+    "form": {
+      "errors": {
+        "nameRequired": "Nome é obrigatório",
+        "emailRequired": "E-mail é obrigatório",
+        "emailInvalid": "E-mail inválido",
+        "phoneRequired": "Telefone é obrigatório",
+        "subjectRequired": "Assunto é obrigatório",
+        "stateRequired": "Estado é obrigatório",
+        "cityRequired": "Cidade é obrigatória",
+        "termsRequired": "Aceite os termos e condições",
+        "submitError": "Erro ao enviar mensagem. Tente novamente."
+      }
+    }
+  },
+  "contactPage": {
+    "title": "Contato",
+    "subtitle": "Entre em contato conosco",
+    "form": {
+      "title": "Formulário de Contato",
+      "name": "Nome completo",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "solution": "Solução de interesse",
+      "state": "Estado",
+      "city": "Cidade",
+      "terms": "Aceito os termos e condições",
+      "submit": "Enviar mensagem",
+      "errors": {
+        "nameRequired": "Nome é obrigatório",
+        "emailRequired": "E-mail é obrigatório",
+        "emailInvalid": "E-mail inválido",
+        "phoneRequired": "Telefone é obrigatório",
+        "solutionRequired": "Solução é obrigatória",
+        "stateRequired": "Estado é obrigatório",
+        "cityRequired": "Cidade é obrigatória",
+        "termsRequired": "Aceite os termos e condições",
+        "submitError": "Erro ao enviar mensagem. Tente novamente."
+      }
+    }
+  },
+  "aboutPage": {
+    "title": "Sobre a Isoart",
+    "subtitle": "Uma empresa comprometida com a qualidade e sustentabilidade",
+    "description": "Desde 2008, a Isoart tem liderado o mercado de soluções inovadoras e sustentáveis em EPS e PIR."
+  },
+  "footer": {
+    "title": "Isoart - Soluções em EPS e PIR",
+    "description": "Especialistas em soluções térmicas com EPS e PIR para construção civil, embalagens e isolamento.",
+    "copyright": "© 2024 Isoart. Todos os direitos reservados.",
+    "links": {
+      "home": "Início",
+      "about": "Sobre",
+      "solutions": "Soluções",
+      "contact": "Contato",
+      "privacy": "Privacidade"
+    }
+  },
+  "sobreEpsPirPage": {
+    "title": "Sobre EPS e PIR",
+    "subtitle": "Conheça nossos materiais inovadores",
+    "description": "Descubra as vantagens dos materiais EPS e PIR para suas aplicações"
   }
 }
