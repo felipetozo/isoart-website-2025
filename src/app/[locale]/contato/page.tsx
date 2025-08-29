@@ -8,9 +8,6 @@ interface ContatoPageProps {
 export default async function ContatoPage({ params }: ContatoPageProps) {
     const { locale } = await params;
     
-    // Hook de traduções
-    const t = await getTranslations('contactPage');
-    
     return (
         <div>
             {/* ContactForm component handles all the form logic */}

@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './footer.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin } from 'react-icons/bs';
+import { BsInstagram, BsFacebook, BsYoutube, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread } from 'react-icons/md';
 import { useTranslations } from 'next-intl';
 
@@ -27,7 +27,7 @@ function Footer({ locale }: FooterProps) {
                             <p>{tContact('phone')}</p>
                         </div>
                         <div className={styles['main-form-contact-item']}>
-                            <BsInstagram />
+                            <BsWhatsapp />
                             <p>{tContact('whatsapp')}</p>
                         </div>
                         <div className={styles['main-form-contact-item']}>

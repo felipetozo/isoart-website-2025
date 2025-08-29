@@ -10,7 +10,7 @@ interface SobreEmpresaProps {
 }
 
 function SobreEmpresa({ locale }: SobreEmpresaProps) {
-    const t = useTranslations('aboutPage');
+    const t = useTranslations('aboutComponent');
     const tCommon = useTranslations('common.buttons');
     
 

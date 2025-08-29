@@ -35,8 +35,8 @@ interface ContactComponentProps {
 }
 
 function ContactComponent({ locale }: ContactComponentProps) {
-    const t = useTranslations('contactPage.form');
-    const tPage = useTranslations('contactPage');
+    const t = useTranslations('contactComponent');
+    const tPage = useTranslations('contactComponent');
     const tContact = useTranslations('contact');
     const tCommon = useTranslations('common.buttons');
 
@@ -57,13 +57,13 @@ function ContactComponent({ locale }: ContactComponentProps) {
 
     const validateForm = (): boolean => {
         const newErrors: FormErrors = {};
-        if (!formData.name.trim()) newErrors.name = t('name') + ' é obrigatório';
-        if (!formData.email.trim()) newErrors.email = t('email') + ' é obrigatório';
-        else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'E-mail inválido';
+        if (!formData.name.trim()) newErrors.name = t('name') + ' ' + t('isRequired');
+        if (!formData.email.trim()) newErrors.email = t('email') + ' ' + t('isRequired');
+        else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = t('invalidEmail');
         if (!formData.solution) newErrors.solution = t('selectSolution');
         if (!formData.state) newErrors.state = t('selectState');
         if (!formData.city.trim()) newErrors.city = t('enterCity');
-        if (!formData.terms) newErrors.terms = 'Você deve aceitar os termos';
+        if (!formData.terms) newErrors.terms = t('termsRequired');
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -217,7 +217,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                 {/* Cabeçalho do formulário */}
                 <div className={styles['contact-component-header']}>
                     <h4>
-                        {t('contact')}
+                        {t('title')}
                     </h4>
                     <div className={styles['contact-component-header-container']}>
                         <div className={styles['contact-component-contact-item']}>
@@ -247,47 +247,47 @@ function ContactComponent({ locale }: ContactComponentProps) {
                         <div className={styles['cadastro-form-fields']}>
                             <FormField
                                 id="name"
-                                label={t('name')}
+                                label={t('form.name')}
                                 type="text"
                                 value={formData.name}
                                 onChange={handleChange}
-                                placeholder={t('enterName')}
+                                placeholder={t('form.enterName')}
                                 error={errors.name}
                             />
                         </div>
                         <div className={styles['cadastro-form-fields']}>
                             <FormField
                                 id="email"
-                                label={t('email')}
+                                label={t('form.email')}
                                 type="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                placeholder={t('enterEmail')}
+                                placeholder={t('form.enterEmail')}
                                 error={errors.email}
                             />
                             <FormField
                                 id="phone"
-                                label={t('phoneWhatsapp')}
+                                label={t('form.phoneWhatsapp')}
                                 type="tel"
                                 value={formData.phone}
                                 onChange={handleChange}
-                                placeholder={t('phonePlaceholder')}
+                                placeholder={t('form.phonePlaceholder')}
                                 error={errors.phone}
                             />
                         </div>
                         <div className={styles['cadastro-form-fields']}>
                             <FormSelection
                                 id="solution"
-                                label={t('solutionDesired')}
+                                label={t('form.solutionDesired')}
                                 value={formData.solution}
                                 onChange={handleChange}
                                 options={[
-                                    { value: '', label: t('selectSolution') },
-                                    { value: 'telhas-e-paineis', label: t('solutions.telhasPaineis') },
-                                    { value: 'construcao-civil', label: t('solutions.construcaoCivil') },
-                                    { value: 'forros', label: t('solutions.forros') },
-                                    { value: 'molduras', label: t('solutions.molduras') },
-                                    { value: 'embalagens', label: t('solutions.embalagens') },
+                                    { value: '', label: t('form.selectSolution') },
+                                    { value: 'telhas-e-paineis', label: t('form.solutions.telhasPaineis') },
+                                    { value: 'construcao-civil', label: t('form.solutions.construcaoCivil') },
+                                    { value: 'forros', label: t('form.solutions.forros') },
+                                    { value: 'molduras', label: t('form.solutions.molduras') },
+                                    { value: 'embalagens', label: t('form.solutions.embalagens') },
                                 ]}
                                 error={errors.solution}
                             />
@@ -295,7 +295,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                         <div className={styles['cadastro-form-fields']}>
                             <FormSelection
                                 id="state"
-                                label={t('state')}
+                                label={t('form.state')}
                                 value={formData.state}
                                 onChange={handleChange}
                                 options={states}
@@ -306,11 +306,11 @@ function ContactComponent({ locale }: ContactComponentProps) {
                         <div className={styles['cadastro-form-fields']}>
                             <FormField
                                 id="city"
-                                label={t('city')}
+                                label={t('form.city')}
                                 type="text"
                                 value={formData.city}
                                 onChange={handleChange}
-                                placeholder={t('enterCity')}
+                                placeholder={t('form.enterCity')}
                                 error={errors.city}
                             />
                         </div>
@@ -325,7 +325,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                     className={styles.termsCheckbox}
                                 />
                                 <label htmlFor="terms" className={styles['terms-text']}>
-                                    {t('terms')} <a href={`/${locale}/privacidade`} className={styles['terms-link']}>{t('privacyPolicy')}</a>
+                                    {t('form.terms')} <a href={`/${locale}/privacidade`} className={styles['terms-link']}>{t('form.privacyPolicy')}</a>
                                 </label>
                             </div>
                             {errors.terms && <div className={styles['error-message']}>{errors.terms}</div>}
@@ -447,7 +447,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
             </div>
             
             <Toast
-                message={t('success')}
+            message={t('form.success')}
                 type="success"
                 isVisible={showToast}
                 onClose={() => setShowToast(false)}

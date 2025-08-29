@@ -918,62 +918,46 @@
     "subtitle": "Productos innovadores para construcción civil, embalajes y aislamiento térmico",
     "description": "Descubra nuestra línea completa de soluciones en EPS y PIR"
   },
-  "contactForm": {
-    "title": "Contáctanos",
-    "subtitle": "Estamos aquí para ayudar con sus necesidades",
+  "contactComponent": {
     "name": "Nombre completo",
     "email": "Correo electrónico",
     "phone": "Teléfono",
-    "subject": "Asunto",
-    "message": "Mensaje",
+    "solution": "Solução de interés",
     "state": "Estado",
     "city": "Ciudad",
     "terms": "Acepto los términos y condiciones",
-    "submit": "Enviar mensaje",
-    "form": {
-      "errors": {
-        "nameRequired": "El nombre es obligatorio",
-        "emailRequired": "El correo electrónico es obligatorio",
-        "emailInvalid": "Correo electrónico inválido",
-        "phoneRequired": "El teléfono es obligatorio",
-        "subjectRequired": "El asunto es obligatorio",
-        "stateRequired": "El estado es obligatorio",
-        "cityRequired": "La ciudad es obligatoria",
-        "termsRequired": "Acepte los términos y condiciones",
-        "submitError": "Error al enviar mensaje. Intente nuevamente."
-      }
-    }
-  },
-  "contactPage": {
-    "title": "Contacto",
-    "subtitle": "Póngase en contacto con nosotros",
-    "form": {
-      "title": "Formulario de Contacto",
-      "name": "Nombre completo",
-      "email": "Correo electrónico",
-      "phone": "Teléfono",
-      "solution": "Solución de interés",
-      "state": "Estado",
-      "city": "Ciudad",
-      "terms": "Acepto los términos y condiciones",
-      "submit": "Enviar mensaje",
-      "errors": {
-        "nameRequired": "El nombre es obligatorio",
-        "emailRequired": "El correo electrónico es obligatorio",
-        "emailInvalid": "Correo electrónico inválido",
-        "phoneRequired": "El teléfono es obligatorio",
-        "solutionRequired": "La solución es obligatoria",
-        "stateRequired": "El estado es obligatorio",
-        "cityRequired": "La ciudad es obligatoria",
-        "termsRequired": "Acepte los términos y condiciones",
-        "submitError": "Error al enviar mensaje. Intente nuevamente."
-      }
+    "privacyPolicy": "política de privacidad",
+    "sending": "Enviando...",
+    "errorSending": "Error al enviar mensaje. Intente nuevamente.",
+    "selectSolution": "Seleccione una solución",
+    "selectState": "Seleccione un estado",
+    "enterName": "Ingrese su nombre",
+    "enterEmail": "Ingrese su correo electrónico",
+    "enterCity": "Ingrese su ciudad",
+    "phonePlaceholder": "(00) 00000-0000",
+    "phoneWhatsapp": "Teléfono / WhatsApp",
+    "solutionDesired": "Solução deseada",
+    "contact": "Contáctenos:",
+    "success": "¡Su mensaje fue enviado exitosamente!",
+    "isRequired": "es obligatorio",
+    "invalidEmail": "Correo electrónico inválido",
+    "termsRequired": "Debe aceptar los términos",
+    "solutions": {
+      "telhasPaineis": "Tejas y Paneles",
+      "construcaoCivil": "Construcción Civil",
+      "forros": "Techos",
+      "molduras": "Molduras",
+      "embalagens": "Embalajes"
     }
   },
   "aboutPage": {
     "title": "Sobre Isoart",
     "subtitle": "Una empresa comprometida con la calidad y sostenibilidad",
     "description": "Desde 2008, Isoart ha liderado el mercado de soluciones innovadoras y sostenibles en EPS y PIR."
+  },
+  "sobreEmpresa": {
+    "tagline": "Expande tu creatividad",
+    "fullDescription": "Isoart es una empresa especializada en soluciones térmicas con EPS y PIR para construcción civil, embalajes y aislamiento. Con años de experiencia en el mercado, ofrecemos productos innovadores que combinan eficiencia energética, sostenibilidad y calidad superior."
   },
   "footer": {
     "title": "Isoart - Soluciones en EPS y PIR",

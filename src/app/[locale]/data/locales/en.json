@@ -548,6 +548,38 @@
       "city3": "Santa Tereza do Oeste - Paraná"
     }
   },
+  "contactComponent": {
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "solution": "Desired solution",
+    "state": "State",
+    "city": "City",
+    "terms": "I accept the",
+    "privacyPolicy": "privacy policy",
+    "sending": "Sending...",
+    "errorSending": "Error sending. Try again.",
+    "selectSolution": "Select a solution",
+    "selectState": "Select a state",
+    "enterName": "Enter your name",
+    "enterEmail": "Enter your email",
+    "enterCity": "Enter your city",
+    "phonePlaceholder": "(00) 00000-0000",
+    "phoneWhatsapp": "Phone / WhatsApp",
+    "solutionDesired": "Desired solution",
+    "contact": "Contact us:",
+    "success": "Your message was sent successfully!",
+    "isRequired": "is required",
+    "invalidEmail": "Invalid email",
+    "termsRequired": "You must accept the terms",
+    "solutions": {
+      "telhasPaineis": "Roofing and Panels",
+      "construcaoCivil": "Civil Construction",
+      "forros": "Ceilings",
+      "molduras": "Moldings",
+      "embalagens": "Packaging"
+    }
+  },
   "privacyPage": {
     "hero": {
       "title": "Privacy Policy",
@@ -866,130 +898,5 @@
         "item6": "Train and qualify all employees to comply with the Quality Policy."
       }
     }
-  },
-  "common": {
-    "buttons": {
-      "saibaMais": "Learn more",
-      "entreEmContato": "Contact us",
-      "enviar": "Send",
-      "voltar": "Back",
-      "anterior": "Previous",
-      "proximo": "Next",
-      "fechar": "Close",
-      "aceitar": "Accept",
-      "rejeitar": "Reject",
-      "salvar": "Save"
-    },
-    "sections": {
-      "beneficios": "Benefits",
-      "caracteristicas": "Features",
-      "aplicacoes": "Applications",
-      "especificacoes": "Specifications",
-      "galeria": "Gallery",
-      "contato": "Contact"
-    }
-  },
-  "categoryPage": {
-    "hero": {
-      "defaultDescription": "Innovative and sustainable solutions for your needs",
-      "defaultButtonText": "Contact us"
-    },
-    "benefits": {
-      "defaultTitle1": "Guaranteed Quality",
-      "defaultDescription1": "Certified products with the highest quality standards",
-      "defaultTitle2": "Sustainability",
-      "defaultDescription2": "100% recyclable and eco-friendly materials"
-    }
-  },
-  "productPage": {
-    "hero": {
-      "defaultDescription": "High quality product for your needs",
-      "defaultButtonText": "Request quote"
-    },
-    "benefits": {
-      "defaultTitle1": "High Performance",
-      "defaultDescription1": "Superior performance in all applications",
-      "defaultTitle2": "Durability",
-      "defaultDescription2": "Long service life with minimal maintenance"
-    }
-  },
-  "solutionsPage": {
-    "title": "Our Solutions",
-    "subtitle": "Innovative products for civil construction, packaging and thermal insulation",
-    "description": "Discover our complete line of EPS and PIR solutions"
-  },
-  "contactForm": {
-    "title": "Contact Us",
-    "subtitle": "We are here to help with your needs",
-    "name": "Full name",
-    "email": "Email",
-    "phone": "Phone",
-    "subject": "Subject",
-    "message": "Message",
-    "state": "State",
-    "city": "City",
-    "terms": "I accept the terms and conditions",
-    "submit": "Send message",
-    "form": {
-      "errors": {
-        "nameRequired": "Name is required",
-        "emailRequired": "Email is required",
-        "emailInvalid": "Invalid email",
-        "phoneRequired": "Phone is required",
-        "subjectRequired": "Subject is required",
-        "stateRequired": "State is required",
-        "cityRequired": "City is required",
-        "termsRequired": "Accept the terms and conditions",
-        "submitError": "Error sending message. Try again."
-      }
-    }
-  },
-  "contactPage": {
-    "title": "Contact",
-    "subtitle": "Get in touch with us",
-    "form": {
-      "title": "Contact Form",
-      "name": "Full name",
-      "email": "Email",
-      "phone": "Phone",
-      "solution": "Solution of interest",
-      "state": "State",
-      "city": "City",
-      "terms": "I accept the terms and conditions",
-      "submit": "Send message",
-      "errors": {
-        "nameRequired": "Name is required",
-        "emailRequired": "Email is required",
-        "emailInvalid": "Invalid email",
-        "phoneRequired": "Phone is required",
-        "solutionRequired": "Solution is required",
-        "stateRequired": "State is required",
-        "cityRequired": "City is required",
-        "termsRequired": "Accept the terms and conditions",
-        "submitError": "Error sending message. Try again."
-      }
-    }
-  },
-  "aboutPage": {
-    "title": "About Isoart",
-    "subtitle": "A company committed to quality and sustainability",
-    "description": "Since 2008, Isoart has been leading the market for innovative and sustainable solutions in EPS and PIR."
-  },
-  "footer": {
-    "title": "Isoart - EPS and PIR Solutions",
-    "description": "Specialists in thermal solutions with EPS and PIR for civil construction, packaging and insulation.",
-    "copyright": "© 2024 Isoart. All rights reserved.",
-    "links": {
-      "home": "Home",
-      "about": "About",
-      "solutions": "Solutions",
-      "contact": "Contact",
-      "privacy": "Privacy"
-    }
-  },
-  "sobreEpsPirPage": {
-    "title": "About EPS and PIR",
-    "subtitle": "Discover our innovative materials",
-    "description": "Discover the advantages of EPS and PIR materials for your applications"
   }
 }
