@@ -75,8 +75,6 @@ const SubmenuImage = ({ src, alt }: { src: string; alt: string }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
 
-    console.log('SubmenuImage renderizando:', { src, alt, isLoading, hasError });
-
     return (
         <div className={styles['submenu-image-container']}>
             {(isLoading || hasError) && (
@@ -90,7 +88,6 @@ const SubmenuImage = ({ src, alt }: { src: string; alt: string }) => {
                     height={85}
                     className={styles['submenu-image']}
                     onLoad={() => {
-                        console.log('Imagem carregada com sucesso:', src);
                         setIsLoading(false);
                     }}
                     onError={(e) => {
@@ -469,9 +466,9 @@ function MainNav({ locale }: MainNavProps) {
                     >
                         {activeSubmenu !== null &&
                             typedMenuData[activeSubmenu].products.map((product, index) => (
-                                <div key={product.id} className={styles['sub-menu-item']}>
+                                <div key={`${typedMenuData[activeSubmenu].slug}-${product.slug}`} className={styles['sub-menu-item']}>
                                     <Link href={`/${locale}/solucoes/${typedMenuData[activeSubmenu].slug}/${product.slug}`}>
-                                        <SubmenuImage src={product.image || '/img/placeholder.jpg'} alt={product.name} />
+                                        <SubmenuImage key={`${typedMenuData[activeSubmenu].slug}-${product.slug}-image`} src={product.image || '/img/placeholder.jpg'} alt={product.name} />
                                         <p>{getProductTranslation(product.name)}</p>
                                     </Link>
                                 </div>
