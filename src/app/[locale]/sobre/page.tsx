@@ -51,7 +51,7 @@ export default function SobrePage() {
       <section className={styles['hero-headline-section']}>
         <div className={styles['hero-headline-wrapper']}>
           <h1 className={styles['hero-headline']}>
-            Especialistas em <span className="blue-text">EPS</span> e <span className="blue-text">PIR</span> para construção civil, embalagens e isolamento térmico
+            {t('heroHeadline.title')} <span className="blue-text">{t('heroHeadline.epsHighlight')}</span> {t('heroHeadline.and')} <span className="blue-text">{t('heroHeadline.pirHighlight')}</span> {t('heroHeadline.description')}
           </h1>
         </div>
       </section>
@@ -222,9 +222,9 @@ export default function SobrePage() {
         </div>
       </section>
 
-      <Sustentabilidade />
+      <Sustentabilidade locale={locale} />
 
-              <ContactComponent locale={locale} />
+      <ContactComponent locale={locale} />
     </div>
   );
 }

@@ -23,13 +23,11 @@
 }
 
 .solucoes-grid-grid {
-    /* Fallback Flexbox para Android antigo */
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     height: auto;
     
-    /* Grid principal para Android 7.0+ */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 1rem;
