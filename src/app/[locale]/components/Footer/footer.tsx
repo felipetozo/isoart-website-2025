@@ -23,16 +23,22 @@ function Footer({ locale }: FooterProps) {
                 <div className={styles['footer-wrapper']}>
                     <div className={styles['footer-column']}>
                         <div className={styles['main-form-contact-item']}>
-                            <MdOutlinePhoneInTalk />
-                            <p>{tContact('phone')}</p>
+                            <Link href="tel:554532311699" target="_blank">
+                                <MdOutlinePhoneInTalk />
+                                <p>{tContact('phone')}</p>
+                            </Link>
                         </div>
                         <div className={styles['main-form-contact-item']}>
-                            <BsWhatsapp />
-                            <p>{tContact('whatsapp')}</p>
+                            <Link href="https://wa.me/5545991339642" target="_blank">
+                                <BsWhatsapp />
+                                <p>{tContact('whatsapp')}</p>
+                            </Link>
                         </div>
                         <div className={styles['main-form-contact-item']}>
-                            <MdOutlineMarkEmailUnread />
-                            <p>{tContact('email')}</p>
+                            <Link href="mailto:contato@isoart.com.br" target="_blank">
+                                <MdOutlineMarkEmailUnread />
+                                <p>{tContact('email')}</p>
+                            </Link>
                         </div>
                         <p dangerouslySetInnerHTML={{ __html: tContact('address') }} />
                         <div className={styles['main-form-nav-social']}>

@@ -1,19 +1,19 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About us",
+    "about": "About",
     "solutions": "Solutions",
-    "aboutEpsPir": "About PIR & EPS",
+    "aboutEpsPir": "About EPS & PIR",
     "contact": "Contact",
     "logo": "Isoart Logo",
     "flag": "Flag",
     "main": {
-      "contactButton": "Contact Us"
+      "contactButton": "Get in Touch"
     }
   },
   "menu": {
     "categories": {
-      "telhasPaineis": "Roofing & Panels",
+      "telhasPaineis": "Roofing and Panels",
       "construcaoCivil": "Civil Construction",
       "embalagens": "Packaging",
       "moldes": "Molds",
@@ -22,20 +22,20 @@
     },
     "products": {
       "telhasTermicas": "Thermal Roofing",
-      "fachadaFechamento": "Facade & Side Closure",
-      "divisoriaForro": "Partition & Ceiling",
+      "fachadaFechamento": "Facade and Side Closure",
+      "divisoriaForro": "Partition and Ceiling",
       "salaLimpa": "Clean Room",
       "camaraFrigorifica": "Cold Storage",
-      "lajesEps": "EPS Floor Slabs",
-      "isolamentoTelhas": "Roofing Insulation",
+      "lajesEps": "EPS Slabs",
+      "isolamentoTelhas": "Roof Insulation",
       "forros": "Ceilings",
       "blocosEps": "EPS Blocks",
-      "chapasPaineisEps": "EPS Sheets & Panels",
-      "moldurasPortasJanelas": "Door & Window Moldings",
-      "moldurasBeiral": "Eaves Moldings",
-      "moldurasColunasCapiteis": "Column & Capital Moldings",
-      "moldurasMuros": "Wall Moldings",
-      "moldurasParedes": "Wall Moldings",
+      "chapasPaineisEps": "EPS Sheets and Panels",
+      "moldurasPortasJanelas": "Moldings for Doors and Windows",
+      "moldurasBeiral": "Eave Moldings",
+      "moldurasColunasCapiteis": "Moldings for Columns and Capitals",
+      "moldurasMuros": "Moldings for Walls",
+      "moldurasParedes": "Moldings for Partitions",
       "embalagensEps": "EPS Packaging",
       "perolasEps": "EPS Beads",
       "isolamentoParedes": "Wall Insulation",
@@ -52,10 +52,10 @@
     }
   },
   "contact": {
-    "address": "1490 Dorivaldo Soncela street<br />Santa Tereza do Oeste - Paraná - Brazil",
+    "address": "Dorivaldo Soncela Street, 1490<br />Santa Tereza do Oeste - Paraná - Brazil",
     "phone": "+55 45 3231 1699",
     "whatsapp": "+55 45 99133 9642",
-    "email": "contato@isoart.com.br"
+    "email": "contact@isoart.com.br"
   },
   "social": {
     "instagram": "Follow us on Instagram",
@@ -66,70 +66,70 @@
   "home": {
     "hero": {
       "title": "Isoart - EPS and PIR Solutions for Civil Construction",
-      "description": "Experts in thermal solutions with EPS and PIR for civil construction, packaging and insulation. Roofing, ceilings, moldings and more."
+      "description": "Experts in thermal solutions with EPS and PIR for civil construction, packaging, and insulation. Roofing, ceilings, moldings, and more."
     },
     "slider": {
       "slide1": {
-        "title": "Decorative moldings",
-        "description": "EPS moldings for doors, windows and walls. Lightweight, durable and easy to install, ideal for decorative finishes in indoor and outdoor environments.",
-        "buttonText": "Learn more"
+        "title": "Decorative Moldings",
+        "description": "EPS moldings for doors, windows, and walls. Lightweight, durable, and easy to install, ideal for decorative finishes in indoor and outdoor environments.",
+        "buttonText": "Learn More"
       },
       "slide2": {
-        "title": "EPS products for civil construction",
-        "description": "EPS materials such as slabs, blocks and flakes for civil construction. They provide cost reduction, lightness and thermal insulation, serving residential and commercial projects.",
-        "buttonText": "Learn more"
+        "title": "EPS Products for Civil Construction",
+        "description": "EPS materials such as slabs, blocks, and beads for civil construction. They provide cost reduction, lightweight structure, and thermal insulation for residential and commercial projects.",
+        "buttonText": "Learn More"
       },
       "slide3": {
         "title": "Roofing and Panels",
-        "description": "Isoart roofing and panels for roofs and facades. Available with or without EPS/PIR thermal insulation, they offer energy efficiency and resistance. Suitable for various construction projects.",
-        "buttonText": "Learn more"
+        "description": "Isoart roofing and panels for coverings and facades. Available with or without EPS/PIR thermal insulation, offering energy efficiency and durability. Suitable for various construction projects.",
+        "buttonText": "Learn More"
       }
     },
     "homeSolutions": {
       "title": "Our Solutions",
-      "subtitle": "Innovative products for civil construction, packaging and thermal insulation",
+      "subtitle": "Solutions in Expanded Polystyrene (EPS) and Rigid Polyisocyanurate (PIR)",
       "construcaoCivil": {
         "title": "Civil Construction",
-        "description": "EPS materials for slabs, blocks and flakes"
+        "description": "EPS materials for slabs, blocks, and beads"
       },
       "embalagens": {
         "title": "Packaging",
-        "description": "EPS solutions for protection and transport"
+        "description": "EPS solutions for product protection and transportation"
       },
       "molduras": {
         "title": "Decorative Moldings",
-        "description": "EPS finishes for doors, windows and walls"
+        "description": "EPS finishes for doors, windows, and walls"
       },
       "telhasPaineis": {
         "title": "Roofing and Panels",
-        "description": "Roofs and facades with thermal insulation"
+        "description": "Coverings and facades with thermal insulation"
       }
     }
   },
   "categories": {
     "construcaoCivil": {
       "title": "Civil Construction with EPS",
-      "description": "EPS materials such as slabs, blocks and flakes for civil construction. They provide cost reduction, lightness and thermal insulation, serving residential and commercial projects.",
-      "buttonText": "Contact us",
-      "categoryDescription": "Lightness, resistance and efficiency for smarter constructions. Our EPS products reduce costs, increase productivity and offer innovative solutions for slabs, fillings and high-performance thermal insulation."
+      "description": "EPS materials such as slabs, blocks, and beads for civil construction. They provide cost reduction, lightweight structure, and thermal insulation for residential and commercial projects.",
+      "buttonText": "Get in Touch",
+      "categoryDescription": "Lightweight, durable, and efficient for smarter constructions. Our EPS products reduce costs, increase productivity, and offer innovative solutions for slabs, fillings, and high-performance thermal insulation."
     },
     "embalagens": {
       "title": "EPS Packaging",
-      "description": "EPS solutions for product packaging and protection. Lightweight, resistant and with excellent impact absorption capacity.",
-      "buttonText": "Contact us",
-      "categoryDescription": "Intelligent protection for your products with customized EPS packaging. We offer solutions that ensure safety in transport and storage."
+      "description": "EPS solutions for packaging and product protection. Lightweight, durable, and with excellent impact absorption capacity.",
+      "buttonText": "Get in Touch",
+      "categoryDescription": "Smart protection for your products with customized EPS packaging. We offer solutions that ensure safety during transportation and storage."
     },
     "molduras": {
       "title": "Decorative Moldings",
-      "description": "EPS moldings for decorative finishes. Lightweight, durable and easy to install.",
-      "buttonText": "Contact us",
-      "categoryDescription": "Transform your environments with decorative EPS moldings. Elegance and sophistication for doors, windows and walls with simple installation and perfect finish."
+      "description": "EPS moldings for decorative finishes. Lightweight, durable, and easy to install.",
+      "buttonText": "Get in Touch",
+      "categoryDescription": "Transform your spaces with EPS decorative moldings. Elegance and sophistication for doors, windows, and walls with easy installation and perfect finishing."
     },
     "telhasPaineis": {
       "title": "Roofing and Panels",
-      "description": "Roofing and panels with EPS/PIR thermal insulation. Energy efficiency and resistance for roofs and facades.",
-      "buttonText": "Contact us",
-      "categoryDescription": "Advanced thermal solutions for roofs and facades. Our roofing and panels offer excellent thermal insulation, reducing energy costs and increasing comfort."
+      "description": "Roofing and panels with EPS/PIR thermal insulation. Energy efficiency and durability for coverings and facades.",
+      "buttonText": "Get in Touch",
+      "categoryDescription": "Advanced thermal solutions for coverings and facades. Our roofing and panels offer excellent thermal insulation, reducing energy costs and increasing comfort."
     }
   },
   "products": {
@@ -140,11 +140,11 @@
       },
       "blocos": {
         "name": "EPS Blocks",
-        "description": "EPS blocks for lightweight and resistant constructions."
+        "description": "EPS blocks for lightweight and durable constructions."
       },
       "flocos": {
-        "name": "EPS Flakes",
-        "description": "EPS flakes for various construction applications."
+        "name": "EPS Beads",
+        "description": "EPS beads for various construction applications."
       },
       "chapas": {
         "name": "EPS Sheets and Panels",
@@ -157,14 +157,14 @@
         "description": "Customized EPS solutions for product protection."
       },
       "perolas": {
-        "name": "EPS Pearls",
-        "description": "EPS pearls for filling and protection."
+        "name": "EPS Beads",
+        "description": "EPS beads for packaging filling and protection."
       }
     },
     "molduras": {
       "beiral": {
         "name": "Eave Moldings",
-        "description": "Moldings for eave and roof finishing."
+        "description": "Moldings for finishing eaves and coverings."
       },
       "colunas": {
         "name": "Columns and Capitals",
@@ -175,8 +175,8 @@
         "description": "Decorative finishes for walls and fences."
       },
       "parede": {
-        "name": "Wall Moldings",
-        "description": "Decorative moldings for indoor and outdoor walls."
+        "name": "Partition Moldings",
+        "description": "Decorative moldings for interior and exterior walls."
       },
       "portas": {
         "name": "Door Moldings",
@@ -186,7 +186,7 @@
     "telhasPaineis": {
       "telhasTermicas": {
         "name": "Thermal Roofing",
-        "description": "Roofing with PIR or EPS core and double coating with galvalume steel sheets or film, ideal for roofs with excellent thermal insulation."
+        "description": "Roofing with PIR or EPS core and double coating with galvalume steel sheets or film, ideal for coverings with excellent thermal insulation."
       },
       "camaraFrigorifica": {
         "name": "Cold Storage",
@@ -198,27 +198,27 @@
       },
       "fachadaFechamento": {
         "name": "Facade and Closure",
-        "description": "Panels for facades and side closures with premium finish."
+        "description": "Panels for facades and side closures with premium finishing."
       },
       "salaLimpa": {
         "name": "Clean Room",
-        "description": "Special panels for environments that require contamination control."
+        "description": "Special panels for environments requiring contamination control."
       }
     }
   },
   "benefits": {
     "title": "Benefits",
     "levezaEstrutural": {
-      "title": "Structural Lightness",
-      "description": "Reduces construction weight, allowing lightweight foundations and savings in structural materials without compromising resistance."
+      "title": "Structural Lightweight",
+      "description": "Reduces construction weight, allowing for lighter foundations and savings in structural materials without compromising strength."
     },
     "eficienciaTermica": {
       "title": "Thermal and Acoustic Efficiency",
-      "description": "Minimizes heat and noise exchange, providing greater comfort and reducing energy consumption for climate control."
+      "description": "Minimizes heat and noise transfer, providing greater comfort and reducing energy consumption for climate control."
     },
     "durabilidade": {
-      "title": "Extended Durability",
-      "description": "Lightweight, resistant and low-maintenance material, ensuring extended service life with excellent cost-benefit."
+      "title": "Long-Lasting Durability",
+      "description": "Lightweight, durable material with low maintenance, ensuring an extended lifespan with excellent cost-effectiveness."
     }
   },
   "footer": {
@@ -229,7 +229,7 @@
     "social": "Social Media",
     "institutional": "Institutional",
     "aboutIsoart": "About ISOART",
-    "aboutEpsPir": "About EPS PIR",
+    "aboutEpsPir": "About EPS & PIR",
     "products": "Products",
     "telhasPaineis": "Roofing and Panels",
     "construcaoCivil": "Civil Construction",
@@ -239,34 +239,34 @@
     "support": "Support",
     "contact": "Contact",
     "privacyPolicy": "Privacy Policy",
-    "companyInfo": "Isoart Industry of thermal and construction products ltd. CNPJ: 09.094.564/0001-05"
+    "companyInfo": "Isoart Thermal and Construction Products Industry Ltd. CNPJ: 09.094.564/0001-05"
   },
   "solutionsPage": {
     "title": "Our Solutions",
-    "subtitle": "Discover our innovative solutions for civil construction, packaging and thermal insulation",
+    "subtitle": "Discover our innovative solutions for civil construction, packaging, and thermal insulation",
     "categories": {
       "telhasPaineis": {
         "title": "Thermal Roofing and Panels",
-        "description": "Complete solutions for roofing and facades with superior thermal insulation. Our roofing and panels offer energy efficiency, resistance and durability for various construction projects."
+        "description": "Complete solutions for coverings and facades with superior thermal insulation. Our roofing and panels offer energy efficiency, durability, and strength for various construction projects."
       },
       "construcaoCivil": {
         "title": "Civil Construction with EPS",
-        "description": "Innovative EPS materials for civil construction, including slabs, blocks, flakes and sheets. They provide cost reduction, structural lightness and excellent thermal insulation."
+        "description": "Innovative EPS materials for civil construction, including slabs, blocks, beads, and sheets. They provide cost reduction, lightweight structure, and excellent thermal insulation."
       },
       "molduras": {
         "title": "Decorative Moldings",
-        "description": "EPS moldings for doors, windows, eaves and more. Light, durable and easy to install, they are ideal for decorative finishes in indoor and outdoor environments."
+        "description": "EPS moldings for doors, windows, eaves, and more. Lightweight, durable, and easy to install, ideal for decorative finishes in indoor and outdoor environments."
       },
       "embalagens": {
         "title": "EPS Packaging",
-        "description": "Customized EPS packaging for product protection during transport. Light, resistant and versatile, they meet the needs of various industrial sectors."
+        "description": "Customized EPS packaging for product protection during transportation. Lightweight, durable, and versatile, meeting the needs of various industrial sectors."
       }
     }
   },
   "categoryPage": {
     "hero": {
-      "defaultButtonText": "Request a quote",
-      "defaultDescription": "Our high quality solutions."
+      "defaultButtonText": "Request a Quote",
+      "defaultDescription": "Our high-quality solutions."
     },
     "benefits": {
       "defaultTitle1": "Superior Quality",
@@ -279,22 +279,22 @@
         "title": "Civil Construction",
         "hero": {
           "title": "Civil Construction with EPS",
-          "description": "EPS materials, such as slabs, blocks and flakes, for civil construction. They provide cost reduction, lightness and thermal insulation, serving residential and commercial projects.",
-          "buttonText": "Get in touch"
+          "description": "EPS materials such as slabs, blocks, and beads for civil construction. They provide cost reduction, lightweight structure, and thermal insulation for residential and commercial projects.",
+          "buttonText": "Get in Touch"
         },
-        "categoryDescription": "Lightness, resistance and efficiency for smarter constructions. Our EPS products reduce costs, increase productivity and offer innovative solutions for slabs, fillings and thermal insulation with high performance.",
+        "categoryDescription": "Lightweight, durable, and efficient for smarter constructions. Our EPS products reduce costs, increase productivity, and offer innovative solutions for slabs, fillings, and high-performance thermal insulation.",
         "products": {
           "lajesEps": {
             "name": "EPS Slabs",
-            "description": "Slabs with EPS filling, reducing costs and improving the structure."
+            "description": "Slabs with EPS filling, reducing costs and improving structure."
           },
           "isolamentoTelhas": {
             "name": "Roof Insulation",
-            "description": "EPS thermal insulation system for roofing, providing thermal and acoustic comfort in roofing."
+            "description": "EPS thermal insulation system for roofing, providing thermal and acoustic comfort in coverings."
           },
           "blocosEps": {
             "name": "EPS Blocks",
-            "description": "EPS blocks for light and resistant constructions."
+            "description": "EPS blocks for lightweight and durable constructions."
           },
           "chapasPaineisEps": {
             "name": "EPS Sheets and Panels",
@@ -302,21 +302,21 @@
           },
           "forros": {
             "name": "Ceilings",
-            "description": "EPS ceilings with unique and sophisticated designs, available in multiple models such as Dunes and Paris."
+            "description": "EPS ceilings with unique and sophisticated designs, available in multiple models such as Dunas and Paris."
           }
         },
         "benefits": {
           "benefit1": {
-            "title": "Structural Lightness",
-            "description": "Reduces construction weight, allowing light foundations and savings in structural materials without compromising resistance."
+            "title": "Structural Lightweight",
+            "description": "Reduces construction weight, allowing for lighter foundations and savings in structural materials without compromising strength."
           },
           "benefit2": {
             "title": "Thermal and Acoustic Efficiency",
-            "description": "Minimizes heat exchange and noise, providing greater comfort and reducing energy consumption for air conditioning."
+            "description": "Minimizes heat and noise transfer, providing greater comfort and reducing energy consumption for climate control."
           },
           "benefit3": {
-            "title": "Extended Durability",
-            "description": "Light, resistant and low maintenance material, ensuring extended service life with excellent cost-benefit."
+            "title": "Long-Lasting Durability",
+            "description": "Lightweight, durable material with low maintenance, ensuring an extended lifespan with excellent cost-effectiveness."
           }
         }
       },
@@ -324,14 +324,14 @@
         "title": "Roofing and Panels",
         "hero": {
           "title": "Thermal Roofing and Panels",
-          "description": "Isoart roofing and panels for roofing and facades. Available with or without thermal insulation in EPS/PIR, they offer energy efficiency and resistance.",
-          "buttonText": "Request a quote"
+          "description": "Isoart roofing and panels for coverings and facades. Available with or without EPS/PIR thermal insulation, offering energy efficiency and durability.",
+          "buttonText": "Request a Quote"
         },
-        "categoryDescription": "Our thermal roofing and panels offer innovative solutions for roofing and facades, combining energy efficiency with exceptional durability. Available with EPS or PIR cores, they provide excellent thermal and acoustic insulation, reducing air conditioning costs and improving environmental comfort.",
+        "categoryDescription": "Advanced thermal solutions for coverings and facades. Our roofing and panels offer excellent thermal insulation, reducing energy costs and increasing comfort.",
         "products": {
           "telhasTermicas": {
             "name": "Thermal Roofing",
-            "description": "Roofing with PIR or EPS core and double coating with galvalume steel sheets or film, ideal for roofing with excellent thermal insulation."
+            "description": "Roofing with PIR or EPS core and double coating with galvalume steel sheets or film, ideal for coverings with excellent thermal insulation."
           },
           "fachadaFechamento": {
             "name": "Facade and Side Closure",
@@ -343,7 +343,7 @@
           },
           "salaLimpa": {
             "name": "Clean Room",
-            "description": "Specific panels for clean room environments, with high asepsis and particle control."
+            "description": "Special panels for environments requiring contamination control."
           },
           "camaraFrigorifica": {
             "name": "Cold Storage",
@@ -352,16 +352,16 @@
         },
         "benefits": {
           "benefit1": {
-            "title": "Superior Energy Efficiency",
-            "description": "EPS/PIR cores provide excellent thermal insulation, significantly reducing energy consumption for air conditioning."
+            "title": "Superior Thermal Insulation",
+            "description": "EPS/PIR cores provide excellent thermal insulation, reducing energy consumption for climate control and ensuring indoor comfort."
           },
           "benefit2": {
-            "title": "Fast and Economical Installation",
-            "description": "Integrated system that combines roofing and insulation in a single operation, reducing construction time and costs."
+            "title": "Lightweight and Structural Efficiency",
+            "description": "Lightweight materials reduce structural load, allowing for more economical foundations and faster installation."
           },
           "benefit3": {
-            "title": "Durability and Resistance",
-            "description": "Galvalume steel coating ensures corrosion resistance and long service life, even in aggressive environments."
+            "title": "Durability and Strength",
+            "description": "Galvalume steel coating ensures high corrosion resistance and long lifespan, even in harsh environments."
           }
         }
       },
@@ -369,14 +369,14 @@
         "title": "EPS Packaging",
         "hero": {
           "title": "EPS Packaging",
-          "description": "EPS packaging for product protection during transport. Light and resistant, they are customizable to meet the needs of various sectors.",
-          "buttonText": "Contact us"
+          "description": "EPS packaging for product protection during transportation. Lightweight and durable, customizable to meet the needs of various sectors.",
+          "buttonText": "Get in Touch"
         },
-        "categoryDescription": "Our EPS packaging offers customized protection for industrial and commercial products, with options such as corner protectors, molds and beads.",
+        "categoryDescription": "Our EPS packaging offers customized protection for industrial and commercial products, with options such as corners, molds, and beads.",
         "products": {
           "embalagensEps": {
             "name": "EPS Packaging",
-            "description": "Complete EPS packaging solutions for protection and transport."
+            "description": "Complete EPS packaging solutions for protection and transportation."
           },
           "perolasEps": {
             "name": "EPS Beads",
@@ -386,15 +386,15 @@
         "benefits": {
           "benefit1": {
             "title": "Efficient Protection",
-            "description": "Cushions impacts and vibrations, preserving the product during transport and storage."
+            "description": "Absorbs impacts and vibrations, preserving the product during transportation and storage."
           },
           "benefit2": {
-            "title": "Lightness and Economy",
-            "description": "Reduces the total weight of packaging, facilitating handling and optimizing logistics costs."
+            "title": "Lightweight and Cost-Effective",
+            "description": "Reduces the total packaging weight, facilitating handling and optimizing logistics costs."
           },
           "benefit3": {
             "title": "High Versatility",
-            "description": "Can be molded in various formats, adapting to different types of products."
+            "description": "Can be molded into various shapes, adapting to different types of products."
           }
         }
       },
@@ -402,65 +402,65 @@
         "title": "Decorative Moldings",
         "hero": {
           "title": "Decorative Moldings",
-          "description": "EPS moldings for doors, windows and walls. Light, durable and easy to install, they are ideal for decorative finishes in internal and external environments.",
-          "buttonText": "Contact us"
+          "description": "EPS moldings for doors, windows, and walls. Lightweight, durable, and easy to install, ideal for decorative finishes in indoor and outdoor environments.",
+          "buttonText": "Get in Touch"
         },
-        "categoryDescription": "Explore our EPS moldings for doors, windows, eaves and more. Designed to add aesthetic value and functionality to your projects.",
+        "categoryDescription": "Explore our EPS moldings for doors, windows, eaves, and more. Designed to add aesthetic value and functionality to your projects.",
         "products": {
           "moldurasPortasJanelas": {
-            "name": "Door and Window Moldings",
-            "description": "Moldings for door and window finishing with elegant design."
+            "name": "Moldings for Doors and Windows",
+            "description": "Moldings for elegant door and window finishes."
           },
           "moldurasBeiral": {
-            "name": "Eaves Moldings",
-            "description": "Eaves moldings with sophisticated finish."
+            "name": "Eave Moldings",
+            "description": "Moldings for eaves with sophisticated finishing."
           },
           "moldurasColunasCapiteis": {
-            "name": "Column and Capital Moldings",
-            "description": "Column and capital moldings with classic style."
+            "name": "Moldings for Columns and Capitals",
+            "description": "Moldings for columns and capitals with a classic style."
           },
           "moldurasMuros": {
             "name": "Wall Moldings",
-            "description": "Wall moldings with resistance and aesthetics."
+            "description": "Moldings for walls with durability and aesthetics."
           },
           "moldurasParedes": {
-            "name": "Wall Moldings",
-            "description": "Wall moldings with versatile design."
+            "name": "Partition Moldings",
+            "description": "Moldings for walls with versatile design."
           }
         },
         "benefits": {
           "benefit1": {
-            "title": "Sophisticated Finish",
+            "title": "Sophisticated Finishing",
             "description": "Elegant details that enhance design and add style to any construction, from classic to contemporary."
           },
           "benefit2": {
-            "title": "Fast and Easy Installation",
-            "description": "Light, they allow agile applications without the need for structural reinforcements, reducing time and costs."
+            "title": "Quick and Easy Installation",
+            "description": "Lightweight, enabling quick applications without the need for structural reinforcements, reducing time and costs."
           },
           "benefit3": {
-            "title": "Extended durability",
-            "description": "Light, resistant and low-maintenance material, ensuring extended service life with excellent cost-effectiveness."
+            "title": "Long-Lasting Durability",
+            "description": "Lightweight, durable material with low maintenance, ensuring an extended lifespan with excellent cost-effectiveness."
           }
         }
       }
     },
     "notFound": {
-      "title": "Category not found"
+      "title": "Category Not Found"
     }
   },
   "common": {
     "buttons": {
-      "contact": "Contact us",
-      "requestQuote": "Request a quote",
-      "learnMore": "Learn more",
+      "contact": "Get in Touch",
+      "requestQuote": "Request a Quote",
+      "learnMore": "Learn More",
       "download": "Download",
-      "viewMore": "View more"
+      "viewMore": "View More"
     },
     "sections": {
       "benefits": "Benefits",
-      "characteristics": "Characteristics",
+      "characteristics": "Features",
       "applications": "Applications",
-      "aboutCompany": "About Us",
+      "aboutCompany": "About the Company",
       "products": "Products",
       "solutions": "Solutions"
     },
@@ -471,15 +471,15 @@
   },
   "productPage": {
     "defaults": {
-      "heroDescription": "Discover the ideal solution for efficient roofs with superior thermal insulation.",
-      "buttonText": "Request a quote",
-      "categoryDescriptionTitle": "Isoart Thermal Roofing offers lightness, economy and excellent thermal performance, optimizing construction and ensuring comfort at lower cost.",
-      "categoryDescriptionText": "Isoart Thermal Roofing is a lightweight and efficient solution for civil construction, replacing traditional systems with advantages. Produced with expanded polystyrene (EPS) or polyisocyanurate (PIR) cores and galvalume steel coating, it provides lighter structures, reduced foundation load and greater construction agility. In addition to excellent thermal performance, it allows significant savings in concrete, steel and labor, being ideal for projects that require productivity, comfort and cost-effectiveness.",
+      "heroDescription": "Discover the ideal solution for efficient roofing with superior thermal insulation.",
+      "buttonText": "Request a Quote",
+      "categoryDescriptionTitle": "Isoart Thermal Roofing offers lightweight, cost-effective, and excellent thermal performance, optimizing construction and ensuring comfort at a lower cost.",
+      "categoryDescriptionText": "Isoart Thermal Roofing is a lightweight and efficient solution for civil construction, replacing traditional systems with advantages. Produced with expanded polystyrene (EPS) or polyisocyanurate (PIR) cores and galvalume steel coating, it provides lighter structures, reduced foundation loads, and faster construction. In addition to excellent thermal performance, it allows significant savings in concrete, steel, and labor, making it ideal for projects requiring productivity, comfort, and cost-effectiveness.",
       "applicationsLabel": "Applications:"
     },
     "sections": {
-      "characteristics": "Characteristics:",
-      "modelsTableTitle": "Available models:",
+      "characteristics": "Features:",
+      "modelsTableTitle": "Available Models:",
       "modelsTableNote": "Steel in thickness options: 0.38mm / 0.43mm / 0.50mm"
     }
   },
@@ -488,36 +488,36 @@
     "english": "English",
     "spanish": "Spanish"
   },
-  "aboutPage": {
-    "title": "About Us",
-    "description": "Leading company in thermal solutions with EPS and PIR for civil construction, packaging and insulation.",
+  "aboutComponent": {
+    "title": "About Isoart",
+    "description": "Leading company in thermal solutions with EPS and PIR for civil construction, packaging, and insulation.",
     "mission": "Our Mission",
     "vision": "Our Vision",
     "values": "Our Values",
     "tagline": "Expand your creativity",
-    "fullDescription": "Isoart is a company specialized in thermal solutions with EPS and PIR for civil construction, packaging and insulation. With years of market experience, we offer innovative products that combine energy efficiency, sustainability and superior quality."
+    "fullDescription": "Innovative, sustainable, and high-quality solutions in Expanded Polystyrene (EPS) and Rigid Polyisocyanurate (PIR) that meet diverse market demands."
   },
-  "contactPage": {
-    "title": "Contact Us",
-    "description": "We are ready to serve you and provide the best solutions for your project.",
+  "contactComponent": {
+    "title": "Get in Touch",
+    "description": "We are ready to assist you and provide the best solutions for your project.",
     "form": {
-      "name": "Full name",
+      "name": "Full Name",
       "email": "Email",
       "phone": "Phone",
       "company": "Company",
       "subject": "Subject",
       "message": "Message",
-      "submit": "Send message",
+      "submit": "Send Message",
       "success": "Your message was sent successfully!",
-      "contact": "Contact us:",
+      "contact": "Get in touch with us:",
       "phoneWhatsapp": "Phone / WhatsApp",
-      "solutionDesired": "Desired solution",
+      "solutionDesired": "Desired Solution",
       "state": "State",
       "city": "City",
       "terms": "I accept the",
       "privacyPolicy": "privacy policy",
       "sending": "Sending...",
-      "errorSending": "Error sending. Try again.",
+      "errorSending": "Error sending. Please try again.",
       "selectSolution": "Select a solution",
       "selectState": "Select a state",
       "enterName": "Enter your name",
@@ -533,8 +533,8 @@
       }
     },
     "hero": {
-      "title": "Contact Us",
-      "description": "We are ready to serve you and provide the best solutions for your project."
+      "title": "Get in Touch",
+      "description": "We are ready to assist you and provide the best solutions for your project."
     },
     "factories": {
       "factory1": "Factory 1 (Headquarters)",
@@ -548,64 +548,32 @@
       "city3": "Santa Tereza do Oeste - Paraná"
     }
   },
-  "contactComponent": {
-    "name": "Full name",
-    "email": "Email",
-    "phone": "Phone",
-    "solution": "Desired solution",
-    "state": "State",
-    "city": "City",
-    "terms": "I accept the",
-    "privacyPolicy": "privacy policy",
-    "sending": "Sending...",
-    "errorSending": "Error sending. Try again.",
-    "selectSolution": "Select a solution",
-    "selectState": "Select a state",
-    "enterName": "Enter your name",
-    "enterEmail": "Enter your email",
-    "enterCity": "Enter your city",
-    "phonePlaceholder": "(00) 00000-0000",
-    "phoneWhatsapp": "Phone / WhatsApp",
-    "solutionDesired": "Desired solution",
-    "contact": "Contact us:",
-    "success": "Your message was sent successfully!",
-    "isRequired": "is required",
-    "invalidEmail": "Invalid email",
-    "termsRequired": "You must accept the terms",
-    "solutions": {
-      "telhasPaineis": "Roofing and Panels",
-      "construcaoCivil": "Civil Construction",
-      "forros": "Ceilings",
-      "molduras": "Moldings",
-      "embalagens": "Packaging"
-    }
-  },
   "privacyPage": {
     "hero": {
       "title": "Privacy Policy",
       "description": "Learn how ISOART protects and uses your personal data:"
     },
     "content": {
-      "intro1": "Isoart Industry of Thermal and Construction Products LTDA. and its affiliated companies of its economic group (together \"ISOART\") uses cookie technology to provide a better and more personalized service. This Cookie Policy (\"Policy\") is an integral part of our Privacy Policy.",
-      "intro2": "The terms of this Policy apply to all Users and visitors of our website (hereinafter referred to as \"Site\") with the objective of informing, in a clear and objective manner, about the use of cookies on them.",
-      "intro3": "For more information about how ISOART processes your Personal Data, please consult our Privacy Policy on the website www.isoart.com.br.",
-      "intro4": "When accessing our Site for the first time, Users and visitors are informed through a text notice (\"banner\") regarding the cookie practice of the Sites.",
+      "intro1": "Isoart Thermal and Construction Products Industry Ltd. and its affiliated companies (collectively 'ISOART') use cookie technology to provide a better and more personalized service. This Cookie Policy ('Policy') is an integral part of our Privacy Policy.",
+      "intro2": "The terms of this Policy apply to all Users and visitors of our website (hereinafter referred to as 'Site') to clearly and objectively inform about the use of cookies on the Site.",
+      "intro3": "For more information on how ISOART processes your Personal Data, please refer to our Privacy Policy at www.isoart.com.br.",
+      "intro4": "Upon accessing our Site for the first time, Users and visitors are informed through a text notice ('banner') regarding the use of cookies on the Site.",
       "definitionsTitle": "Definitions",
-      "definitionsDesc": "For the purposes of this Policy, the following definitions and descriptions must be considered for your better understanding, when referred to in uppercase or lowercase, plural or singular, with or without bold:",
+      "definitionsDesc": "For the purposes of this Policy, the following definitions and descriptions should be considered for better understanding, whether in uppercase or lowercase, singular or plural, with or without bold:",
       "personalData": "Personal Data: any information related to an identified or identifiable natural person;",
-      "treatment": "Treatment: every operation performed with Personal Data, such as those referring to collection, production, reception, classification, use, access, reproduction, transmission, distribution, processing, archiving, storage, elimination, evaluation or control of information, modification, communication, transfer, diffusion or extraction;",
+      "treatment": "Processing: any operation performed with Personal Data, such as collection, production, receipt, classification, use, access, reproduction, transmission, distribution, processing, archiving, storage, deletion, evaluation or control of information, modification, communication, transfer, dissemination, or extraction;",
       "user": "User (or Users): all natural or legal persons registered who interact with the functionalities offered by ISOART;",
-      "logs": "Logs: records of visitor and User activities verified on the Site.",
+      "logs": "Logs: records of activities of visitors and Users verified on the Site.",
       "cookiesTitle": "What are cookies?",
-      "cookiesDesc": "Cookies are considered small files, text or image, captured on our Sites, stored on devices used by Users who access them (for example, computers, tablets, smartphones, etc.), where they are recorded for subsequent retransmission to the same Sites when this user visits them again.",
-      "purposeTitle": "What are they for?",
-      "purposeDesc1": "Cookies perform many different functions, such as allowing you to navigate between pages efficiently, store your preferences, and generally improve your browsing experience.",
-      "purposeDesc2": "They can also help personalize advertisements displayed during browsing and marketing activities targeted at Users or visitors, ensuring they are sent according to their interests and preferences.",
+      "cookiesDesc": "'Cookies' are small text or image files captured on our Site, stored on the devices used by Users who access them (e.g., computers, tablets, smartphones, etc.), where they are recorded for later retransmission to the same Site when the user revisits.",
+      "purposeTitle": "What are they used for?",
+      "purposeDesc1": "Cookies perform various functions, such as allowing efficient navigation between pages, storing preferences, and generally improving the browsing experience.",
+      "purposeDesc2": "They can also help personalize displayed advertisements during browsing and targeted marketing activities for Users or visitors, ensuring they are sent according to their interests and preferences.",
       "managementTitle": "Managing your cookie settings",
-      "managementDesc1": "Most Internet browsers are configured by default to automatically accept cookie installation. However, most browsers allow cookie management to meet your preferences.",
-      "managementDesc2": "Users and visitors can also regularly remove all cookies that are already on their devices by clearing their browser history. This will remove all cookies from all visited sites. However, be aware that if you disable cookies that we use in your browser, it is possible that certain sections or features of our Sites will not work.",
+      "managementDesc1": "Most internet browsers are configured by default to automatically accept cookies. However, most browsers allow cookie management to suit your preferences.",
+      "managementDesc2": "Users and visitors can also regularly remove all cookies already on their devices by clearing their browser history. This will remove all cookies from all visited sites. However, be aware that disabling the cookies we use in your browser may cause certain sections or features of our Site to stop working.",
       "managementDesc3": "If Users or visitors use different devices to view and access our Site, they must ensure that each browser on each device is adjusted to meet their cookie preferences.",
-      "managementDesc4": "For cookie management, the means to configure each browser are different. Therefore, below is a list of methods offered by the main browsers to allow Users or visitors to manage cookie settings in their browser:",
+      "managementDesc4": "For cookie management, the methods for configuring each browser differ. Below is a list of methods provided by major browsers to allow Users or visitors to manage cookie settings in their browser:",
       "browsers": {
         "ie": "For Internet Explorer™:",
         "safari": "For Safari™:",
@@ -613,157 +581,123 @@
         "firefox": "For Firefox™:",
         "opera": "For Opera™:"
       },
-      "moreInfo": "For more information about cookie configuration, visit:",
-      "note": "Please note that this list does not contain all browsers, please consult the \"Settings\" or \"Support\" sections of your browser.",
-      "revocation": "In this way, you can revoke consent for data use at any time, without, however, making the processing of this data illegitimate based on that consent, until the date of effective revocation.",
+      "moreInfo": "For more information on cookie settings, visit:",
+      "note": "Please note that this list does not include all browsers; consult the 'Settings' or 'Support' sections of your browser.",
+      "revocation": "Thus, you may revoke consent for the use of data at any time, without, however, rendering the processing of such data based on this consent illegitimate until the date of effective revocation.",
       "cookiesUsedTitle": "Cookies used and their purposes",
-      "cookiesUsedDesc": "The Cookies used by our Sites perform the following functions, as mentioned below:",
+      "cookiesUsedDesc": "The Cookies used by our Site perform the following functions, as mentioned below:",
       "functionalTitle": "Functional Cookies",
-      "functionalDesc": "Functional Cookies allow us to record the options that Users and visitors select on our Sites, for example, language, remember username/password and preferences. With this information we can provide more personalized functionality to Users and visitors who browse our Sites.",
+      "functionalDesc": "Functional Cookies allow us to record the choices Users and visitors select on our Site, such as language, remembering username/password, and preferences. With this information, we can provide more personalized functionalities to Users and visitors browsing our Site.",
       "analyticsTitle": "Analytics and Performance Cookies",
-      "analyticsDesc": "These Cookies allow us to collect information about how you use our site, and are used to help us understand how you interact with our site, so we can offer a better user experience – for example, evaluate our site's performance, or test different design ideas for the site. We may work with third parties to perform these services for us, so these Cookies may be set by a third party.",
-      "structuralTitle": "Site structural cookies",
-      "structuralDesc": "These Cookies are necessary for the website to function and cannot be disabled from our systems. As a rule, these cookies are pre-defined in response to service requests. In some situations, parts of the website may stop working.",
-      "marketingTitle": "Marketing and advertising cookies",
-      "marketingDesc": "These Cookies are used for online behavioral advertising, consequently generating information so that users receive personalized content.",
-      "dartCookie": "Dart Cookie – Google, as a third-party provider, uses cookies to display ads on sites. With the Dart Cookie, Google can require ads based on visits the reader has made to this and other sites on the internet. You can disable the Dart cookie by visiting Google's ad settings.",
-      "webBeacons": "Web Beacons – We use these cookies to store information. For example, personal preferences when visiting sites.",
-      "thirdPartyTitle": "Third-party sites",
-      "thirdPartyDesc": "The ISOART website may maintain connections with other sites that complement or contain useful information and tools for visitors, while if visitors and users access them, this privacy policy does not extend to third parties, and we are not responsible for the privacy policy or content of those.",
-      "rightsTitle": "Data subject rights",
-      "rightsDesc": "The rights of the data subject are safeguarded, especially: access to data; correction of incomplete, inaccurate or outdated data; confirmation of the existence of processing; anonymization, blocking or elimination of unnecessary, excessive data or data processed in non-compliance with the provisions of the General Data Protection Law (Law 13.709 of August 14, 2018); portability of data to another service or product provider, upon express request and observing commercial and industrial secrets; elimination of processed personal data; information on sharing data with public or private entities; information about the consequences of not providing consent and revocation of consent.",
+      "analyticsDesc": "These Cookies allow us to collect information about how you use our Site and are used to help us understand how you interact with our Site, so we can provide a better user experience—for example, evaluating Site performance or testing different design ideas for the Site. We may work with third parties to perform these services, so these Cookies may be set by a third party.",
+      "structuralTitle": "Site Structural Cookies",
+      "structuralDesc": "These Cookies are necessary for the website's operation and cannot be disabled in our systems. Typically, these cookies are predefined in response to service requests. In some cases, parts of the website may stop functioning.",
+      "marketingTitle": "Marketing and Advertising Cookies",
+      "marketingDesc": "These Cookies are used for online behavioral advertising, generating information so users receive personalized content.",
+      "dartCookie": "Dart Cookie – Google, as a third-party provider, uses cookies to display ads on websites. With the Dart Cookie, Google can request ads based on the visits the reader made to this and other websites on the internet. You can disable the Dart Cookie by visiting Google’s ad settings.",
+      "webBeacons": "Web Beacons – We use these cookies to store information, such as personal preferences when visiting sites.",
+      "thirdPartyTitle": "Third-Party Sites",
+      "thirdPartyDesc": "The ISOART website may maintain connections with other sites that complement or contain useful information and tools for visitors. However, if visitors and users access them, this privacy policy does not extend to third parties, and we are not responsible for their privacy policies or content.",
+      "rightsTitle": "Data Subject Rights",
+      "rightsDesc": "The rights of the data subject are guaranteed, particularly: access to data; correction of incomplete, inaccurate, or outdated data; confirmation of the existence of processing; anonymization, blocking, or deletion of unnecessary, excessive, or non-compliant data under the General Data Protection Law (Law 13.709 of August 14, 2018); data portability to another service or product provider upon express request, observing commercial and industrial secrets; deletion of processed personal data; information about data sharing with public or private entities; information about the consequences of not providing consent; and revocation of consent.",
       "validityTitle": "Validity",
       "validityDesc": "This Privacy Policy will remain in effect for an indefinite period.",
-      "contactTitle": "Contact us",
-      "contactDesc": "If you have any questions or comments about this Cookie Policy, please contact us through our Relationship Channel on the website"
+      "contactTitle": "Contact Us",
+      "contactDesc": "If you have any questions or comments about this Cookie Policy, please contact us through our Relationship Channel on the website."
     }
   },
   "contactForm": {
     "hero": {
-      "title": "Contact Us",
-      "description": "Fill out the form below and we'll get back to you soon"
+      "title": "Get in Touch",
+      "description": "Fill out the form below, and we will get back to you soon."
     },
     "form": {
       "title": "Contact Form",
-      "name": "Full name",
-      "email": "E-mail",
+      "name": "Full Name",
+      "email": "Email",
       "phone": "Phone",
       "subject": "Subject",
       "state": "State",
       "city": "City",
       "cityPlaceholder": "Enter your city",
       "terms": "I have read and accept the",
-      "privacyPolicy": "privacy terms",
-      "submit": "Send message",
+      "privacyPolicy": "privacy policy",
+      "submit": "Send Message",
       "success": "Your message was sent successfully!",
       "sending": "Sending...",
       "errors": {
         "nameRequired": "Name is required",
-        "emailRequired": "E-mail is required",
-        "emailInvalid": "Invalid e-mail",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email",
         "phoneRequired": "Phone is required",
         "subjectRequired": "Subject is required",
         "stateRequired": "State is required",
         "cityRequired": "City is required",
         "termsRequired": "You must accept the terms",
-        "submitError": "Error sending form. Try again."
+        "submitError": "Error sending the form. Please try again."
       }
     },
     "contactInfo": {
       "title": "Contact Information",
       "phone": "+55 45 3231 1699",
       "whatsapp": "+55 45 99133 9642",
-      "email": "contato@isoart.com.br",
-      "address": "Rua Dorivaldo Soncela, 1490",
+      "email": "contact@isoart.com.br",
+      "address": "Dorivaldo Soncela Street, 1490",
       "city": "Santa Tereza do Oeste - Paraná - Brazil"
     },
     "themes": {
-      "telhasPaineis": "Tiles and Panels",
+      "telhasPaineis": "Roofing and Panels",
       "construcaoCivil": "Civil Construction",
       "forros": "Ceilings",
       "molduras": "Moldings",
       "embalagens": "Packaging"
     }
   },
-  "states": {
-    "parana": "Paraná",
-    "saoPaulo": "São Paulo",
-    "santaCatarina": "Santa Catarina",
-    "rioGrandeDoSul": "Rio Grande do Sul",
-    "minasGerais": "Minas Gerais",
-    "rioDeJaneiro": "Rio de Janeiro"
-  },
-  "cities": {
-    "selectCity": "Select a city",
-    "curitiba": "Curitiba",
-    "londrina": "Londrina",
-    "maringa": "Maringá",
-    "pontaGrossa": "Ponta Grossa",
-    "saoPaulo": "São Paulo",
-    "campinas": "Campinas",
-    "santos": "Santos",
-    "ribeiraoPreto": "Ribeirão Preto",
-    "florianopolis": "Florianópolis",
-    "joinville": "Joinville",
-    "blumenau": "Blumenau",
-    "criciuma": "Criciúma",
-    "portoAlegre": "Porto Alegre",
-    "caxiasDoSul": "Caxias do Sul",
-    "pelotas": "Pelotas",
-    "santaMaria": "Santa Maria",
-    "beloHorizonte": "Belo Horizonte",
-    "uberlandia": "Uberlândia",
-    "contagem": "Contagem",
-    "juizDeFora": "Juiz de Fora",
-    "niteroi": "Niterói",
-    "duqueDeCaxias": "Duque de Caxias",
-    "novaIguacu": "Nova Iguaçu"
-  },
   "sobreEpsPirPage": {
     "hero": {
       "title": "About EPS and PIR"
     },
     "headline": {
-      "title": "Expanded Polystyrene (EPS) and Polyisocyanurate Rigid Foam (PIR): thermal efficiency, sustainability and technology for modern constructions.",
-      "epsButton": "Learn about EPS",
-      "pirButton": "Learn about PIR"
+      "title": "Expanded Polystyrene (EPS) and Rigid Polyisocyanurate (PIR): thermal efficiency, sustainability, and technology for modern constructions.",
+      "epsButton": "Learn About EPS",
+      "pirButton": "Learn About PIR"
     },
     "eps": {
       "title": "EPS: Efficiency and Sustainability",
-      "description": "Expanded Polystyrene (EPS), popularly known as Styrofoam, is a lightweight and versatile material, widely used for its thermal and acoustic insulation properties. Additionally, it is 100% recyclable and does not emit substances harmful to the environment, making it a sustainable choice for various applications.",
-      "subtitle": "Main benefits of EPS:",
+      "description": "Expanded Polystyrene (EPS), popularly known as Styrofoam, is a lightweight and versatile material widely used for its thermal and acoustic insulation properties. Additionally, it is 100% recyclable and does not emit harmful substances to the environment, making it a sustainable choice for various applications.",
+      "subtitle": "Main EPS Benefits:",
       "benefits": {
         "benefit1": "Non-toxic and sustainable",
         "benefit2": "No CFC emissions",
         "benefit3": "100% recyclable and reusable",
-        "benefit4": "Lightweight material resistant to impacts"
+        "benefit4": "Lightweight and impact-resistant material"
       },
       "applicationsTitle": "Applications",
-      "applicationsDescription": "Used in thermal and acoustic insulation, packaging, civil construction, decoration and other applications. Ideal for commercial, industrial and residential buildings, ensuring energy efficiency, comfort and protection."
+      "applicationsDescription": "Used in thermal and acoustic insulation, packaging, civil construction, decoration, and other applications. Ideal for commercial, industrial, and residential buildings, ensuring energy efficiency, comfort, and protection."
     },
     "pir": {
       "title": "PIR: High Technology and Safety",
-      "description": "Polyisocyanurate (PIR) is a high-performance insulating material, mainly used in the manufacture of thermal tiles and panels. Produced in an automated continuous line, PIR ensures superior thermal insulation and high fire resistance, being essential for industrial, commercial and residential projects.",
-      "subtitle": "Main benefits of PIR:",
+      "description": "Polyisocyanurate (PIR) is a high-performance insulating material, mainly used in the production of thermal roofing and panels. Produced in an automated continuous line, PIR ensures superior thermal insulation and high fire resistance, essential for industrial, commercial, and residential projects.",
+      "subtitle": "Main PIR Benefits:",
       "benefits": {
         "benefit1": "High-performance thermal insulation",
         "benefit2": "Fire resistance with self-extinguishing retardant",
-        "benefit3": "Greater durability and mechanical resistance",
+        "benefit3": "Greater durability and mechanical strength",
         "benefit4": "Quick and clean assembly",
         "benefit5": "Excellent acoustic insulation ( -30dB )",
-        "benefit6": "Sustainable, in compliance with the Montreal Protocol"
+        "benefit6": "Sustainable, compliant with the Montreal Protocol"
       }
     },
     "pirApplications": {
       "title": "PIR Applications:",
-      "description": "For covering and/or closing industrial and commercial buildings and warehouses, such as supermarkets, shopping centers, distribution and storage centers, hospitals, agribusiness, gyms and industries in general, including residences."
+      "description": "For roofing and/or closure of industrial and commercial buildings, such as supermarkets, shopping malls, distribution and storage centers, hospitals, agribusiness, gyms, and general industries, including residences."
     },
     "revestimentos": {
-      "title": "Types of coatings and Colors",
-      "description": "Isoart PIR tiles and panels are available in different types of coatings and colors, ensuring flexibility in choice to meet the specific needs of each project.",
+      "title": "Types of Coatings and Colors",
+      "description": "Isoart PIR roofing and panels are available in different types of coatings and colors, ensuring flexibility to meet the specific needs of each project.",
       "tipos": {
-        "microfrisado": "Micro-ribbed steel",
-        "frisado": "Ribbed steel",
+        "microfrisado": "Micro-corrugated steel",
+        "frisado": "Corrugated steel",
         "filmeAluminio": "Aluminum film with white or black face"
       },
       "colors": {
@@ -780,8 +714,8 @@
         "ral6002": "RAL 6002",
         "ral9005": "RAL 9005",
         "naturalGalvanizado": "Natural Galvanized",
-        "amadeiradoClaro": "Light Wooden",
-        "amadeiradoEscuro": "Dark Wooden"
+        "amadeiradoClaro": "Light Wood",
+        "amadeiradoEscuro": "Dark Wood"
       },
       "nomes": {
         "brancoSinal": "Signal White",
@@ -797,105 +731,105 @@
         "verdeTrafego": "Traffic Green",
         "preto": "Black",
         "naturalGalvanizado": "Natural Galvanized",
-        "amadeiradoClaro": "Light Wooden",
-        "amadeiradoEscuro": "Dark Wooden"
+        "amadeiradoClaro": "Light Wood",
+        "amadeiradoEscuro": "Dark Wood"
       },
-      "aviso": "Standard White RAL 9003. Other colors are suggestions, availability upon request."
+      "aviso": "Standard White RAL 9003. Other colors are suggestions, availability upon consultation."
     },
     "linhaProducao": {
       "title": "Automated production for maximum efficiency",
-      "description": "Isoart PIR tiles and panels are manufactured in a continuous and fully automated line, ensuring high precision, quality and sustainability. With Polyisocyanurate (PIR) insulating core and galvalume steel sheet coating, the process includes high-pressure injection, continuous pressing and automated cutting, ensuring excellent adhesion, finish and standardization. All products are automatically cooled, stacked and packaged, ready for shipping."
+      "description": "Isoart PIR roofing and panels are manufactured in a continuous and fully automated line, ensuring high precision, quality, and sustainability. With a polyisocyanurate (PIR) insulating core and galvalume steel sheet coating, the process includes high-pressure injection, continuous pressing, and automated cutting, ensuring excellent adhesion, finishing, and standardization. All products are cooled, stacked, and packaged automatically, ready for shipment."
     }
   },
   "sustentabilidade": {
-    "title": "EPS Recycling: sustainability and intelligent reuse.",
-    "description": "Expanded Polystyrene (EPS), popularly known as Styrofoam®, is a widely used and 100% recyclable material. Although not biodegradable, its recycling prevents environmental impacts by reducing the volume of waste in landfills.",
-    "aviso": "Isoart has two internal recycling centers where it fully reuses the generated waste, reinforcing its commitment to sustainability."
+    "title": "EPS Recycling: Sustainability and Smart Reuse",
+    "description": "Expanded Polystyrene (EPS), popularly known as Styrofoam®, is a widely used and 100% recyclable material. Although not biodegradable, its recycling prevents environmental impacts, reducing the volume of waste in landfills.",
+    "aviso": "Isoart has two internal recycling centers, where it fully reuses generated waste, reinforcing its commitment to sustainability."
   },
   "incendio": {
-    "title": "PIR: The protective shield against fire propagation",
-    "description": "The performance of Polyisocyanurate (PIR) in fire situations is one of its greatest differentiators, offering an essential passive protection layer for any building. Unlike other materials, PIR does not contribute to flame propagation.",
+    "title": "PIR: The Protective Shield Against Fire Spread",
+    "description": "The performance of Polyisocyanurate (PIR) in fire situations is one of its greatest advantages, offering an essential passive protection layer for any building. Unlike other materials, PIR does not contribute to the spread of flames.",
     "description2": "When exposed to fire, the PIR panel core reacts uniquely: it forms a stable and insulating carbonized layer on its surface. This carbon barrier acts as a protective shield, performing three crucial functions:",
     "blocos": {
       "bloco1": {
         "number": "01",
-        "destaque": "Prevents propagation",
-        "legenda": "The carbonized layer significantly retards material burning, containing the fire focus and preventing flames from spreading through the structure"
+        "destaque": "Prevents Spread",
+        "legenda": "The carbonized layer significantly slows material burning, containing the fire focus and preventing flames from spreading through the structure."
       },
       "bloco2": {
         "number": "02",
-        "destaque": "Protects the core",
-        "legenda": "It isolates the rest of the panel from intense heat, maintaining structural integrity for longer"
+        "destaque": "Protects the Core",
+        "legenda": "Insulates the rest of the panel from intense heat, maintaining structural integrity for longer."
       },
       "bloco3": {
         "number": "03",
-        "destaque": "Low smoke emission",
-        "legenda": "Contributes to keeping escape routes more visible and safe"
+        "destaque": "Low Smoke Emission",
+        "legenda": "Contributes to keeping escape routes more visible and safe."
       }
     },
-    "teste": "The test shown in the images proves this efficiency. Even under the direct action of a 30kW burner for 30 minutes, the fire remained restricted to the contact area. In the end, the result was only superficial carbonization, with the rest of the panel intact and without any fire propagation, demonstrating why PIR is the safest and smartest choice for your project."
+    "teste": "The test shown in the images proves this efficiency. Even under the direct action of a 30kW burner for 30 minutes, the fire was restricted to the contact area. At the end, the result was only superficial carbonization, with the rest of the panel intact and without any fire spread, demonstrating why PIR is the safest and smartest choice for your project."
   },
   "sobrePage": {
     "hero": {
-      "title": "about us"
+      "title": "About Us"
     },
     "heroHeadline": {
-      "title": "Innovative, sustainable and high-quality solutions in",
+      "title": "Innovative, sustainable, and high-quality solutions in",
       "epsHighlight": "Expanded Polystyrene (EPS)",
       "and": "and",
-      "pirHighlight": "Rigid Polyisocyanurate Foam (PIR)",
-      "description": "that meet the diverse demands of the market."
+      "pirHighlight": "Rigid Polyisocyanurate (PIR)",
+      "description": "that meet diverse market demands."
     },
     "video": {
       "title": "Isoart Institutional Video",
-      "caption": "Since 2008, Isoart has been leading the market for innovative and sustainable solutions in Expanded Polystyrene (EPS) and Rigid Polyisocyanurate Foam (PIR), serving the most diverse demands of industries, constructions and other applications. With an unwavering commitment to quality, innovation and sustainability, the company has consolidated its position as a national reference in the sector."
+      "caption": "Since 2008, Isoart has led the market in innovative and sustainable solutions in Expanded Polystyrene (EPS) and Rigid Polyisocyanurate (PIR), meeting the diverse demands of industries, constructions, and other applications. With an unwavering commitment to quality, innovation, and sustainability, the company has solidified its position as a national reference in the sector."
     },
     "timeline": {
       "title": "A history marked by great successes:",
       "items": {
         "2008": {
-          "label": "the first steps",
-          "description": "Founded in Santa Tereza do Oeste, Paraná, Isoart began its journey with the purpose of offering innovative and sustainable solutions in Expanded Polystyrene (EPS). From the first moment, the company established a commitment to quality and transparency, serving different sectors with excellence and building a solid foundation of trust in the market."
+          "label": "The First Steps",
+          "description": "Founded in Santa Tereza do Oeste, Paraná, Isoart began its journey with the purpose of offering innovative and sustainable solutions in Expanded Polystyrene (EPS). From the start, the company established a commitment to quality and transparency, serving various sectors with excellence and building a solid foundation of trust in the market."
         },
         "2015": {
-          "label": "A new chapter",
-          "description": "The expansion to Xanxerê, Santa Catarina, marked a decisive point in Isoart's history. The inauguration of Factory 2 brought new opportunities, consolidating the company as one of the main EPS transforming industries in Brazil. This unit not only increased production capacity, but also reinforced the commitment to sustainability by focusing on industrialization and recycling of EPS products."
+          "label": "A New Chapter",
+          "description": "The expansion to Xanxerê, Santa Catarina, marked a turning point in Isoart’s history. The opening of Factory 2 brought new opportunities, consolidating the company as one of Brazil’s leading EPS processing industries. This unit not only increased production capacity but also reinforced the commitment to sustainability by focusing on the industrialization and recycling of EPS products."
         },
         "2021": {
-          "label": "Expand project",
-          "description": "With the launch of the expand project, Isoart inaugurated the modern Factory 3 in Santa Tereza do Oeste, Paraná. This facility represents a milestone in the company's evolution, designed to meet the demands of modern and sustainable constructions. Equipped with cutting-edge technology, Factory 3 produces thermal roofing and isopanels in continuous line, with insulating cores in Rigid Polyisocyanurate Foam, PIR, or EPS."
+          "label": "Expand Project",
+          "description": "With the launch of the Expand Project, Isoart opened the modern Factory 3 in Santa Tereza do Oeste, Paraná. This facility represents a milestone in the company’s evolution, designed to meet the demands of modern and sustainable constructions. Equipped with cutting-edge technology, Factory 3 produces thermal roofing and iso-panels in a continuous line, with insulating cores of Rigid Polyisocyanurate (PIR) or EPS."
         }
       }
     },
     "map": {
-      "title": "Service throughout Brazil, Paraguay and Uruguay.",
-      "description": "Isoart has 3 strategically located factories in the western regions of Paraná and Santa Catarina, ensuring complete coverage throughout Brazilian, Paraguayan and Uruguayan territory with excellence and quality."
+      "title": "Service throughout Brazil, Paraguay, and Uruguay.",
+      "description": "Isoart has three strategically located factories in the western regions of Paraná and Santa Catarina, ensuring complete coverage across Brazilian, Paraguayan, and Uruguayan territories with excellence and quality."
     },
     "mvv": {
       "missao": {
         "title": "Mission",
-        "description": "To satisfy customer needs, exceeding their expectations, through excellence in the manufacture and distribution of EPS products, generating innovative solutions, with profitability and respect for the environment."
+        "description": "Meet customer needs, exceeding their expectations, through excellence in the manufacture and distribution of EPS products, generating innovative solutions with profitability and respect for the environment."
       },
       "visao": {
         "title": "Vision",
-        "description": "To be recognized as the reference company in the sector in which it operates, adding social and economic value, within ethical and sustainable principles."
+        "description": "To be recognized as the reference company in the sector, adding social and economic value, within ethical and sustainable principles."
       },
       "valores": {
         "title": "Values",
-        "description": "Commitment to quality, excellence in service, respect for the environment, transparency in actions, valuing life, innovation and boldness."
+        "description": "Commitment to quality, excellence in service, respect for the environment, transparency in actions, valuing life, innovation, and boldness."
       }
     },
     "quality": {
-      "title": "Quality policy",
-      "description1": "The Isoart Group, through the Quality Policy, establishes the guidelines by which it declares its commitment to customer, employee and community satisfaction.",
-      "description2": "In this sense, we seek continuous improvement of the Quality Management System, basing our actions on the following premises:",
+      "title": "Quality Policy",
+      "description1": "The Isoart Group, through its Quality Policy, establishes guidelines to declare its commitment to the satisfaction of customers, employees, and the community.",
+      "description2": "To this end, we seek continuous improvement of the Quality Management System, basing our actions on the following premises:",
       "items": {
         "item1": "Ensure customer satisfaction by offering quality products and services.",
-        "item2": "Share our values, building lasting partnerships that result in gains for both parties.",
+        "item2": "Share our values, building lasting partnerships that result in mutual gains.",
         "item3": "Maintain a good work environment, valuing safety and respect for life.",
-        "item4": "Seek continuous improvement and process control via performance indicators, favoring the achievement and maintenance of competitive advantages.",
-        "item5": "Promote sustainable actions aiming at minimal environmental impact.",
-        "item6": "Train and qualify all employees to comply with the Quality Policy."
+        "item4": "Seek continuous improvement and process control through performance indicators, favoring the achievement and maintenance of competitive advantages.",
+        "item5": "Promote sustainable actions aiming for minimal environmental impact.",
+        "item6": "Train and develop all employees to comply with the Quality Policy."
       }
     }
   }
