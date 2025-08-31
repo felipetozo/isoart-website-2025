@@ -174,12 +174,14 @@
     font-family: var(--font-redhat);
     align-items: center;
     border-radius: 0.25rem;
-    background-color: rgba(241, 244, 247, 0.75);
-    border: 1px solid rgba(17, 17, 17, 0.1);
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
-    /* Fallback para navegadores que não suportam backdrop-filter */
-    background-color: rgba(241, 244, 247, 0.95);
+    background-color: rgba(241, 244, 247, 0.60);
+    border: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.main-nav-wrapper:hover {
+    background-color: rgba(241, 244, 247, 0.80);
 }
 
 .main-nav-content {
@@ -238,8 +240,6 @@
     background-color: rgba(146, 151, 120, 1);
 }
 
-
-
 .main-nav-menu-icon {
     display: flex;
     flex-direction: column;
@@ -290,13 +290,14 @@
     flex-direction: column;
     width: 100%;
     font-family: var(--font-redhat);
-    background-color: rgba(241, 244, 247, 0.50);
+    background-color: rgba(146, 151, 120, 0.15);
     border: 1px solid rgba(146, 151, 120, 0.25);
+    border-radius: 0.2rem;
 }
 
 .sub-menu-item:hover {
-    background-color: rgba(241, 244, 247, 0.75);
-    border: 1px solid rgba(146, 151, 120, 1);
+    background-color: rgba(146, 151, 120, 0.25);
+    border: 1px solid rgba(146, 151, 120, 1.00);
 }
 
 .sub-menu-item a {
@@ -305,21 +306,19 @@
     gap: 1rem;
     width: 100%;
     padding: 0.5rem;
-    border-radius: 0.4rem;
     color: rgba(17, 17, 17, 0.50);
     line-height: 1.2;
     min-height: 85px;
 }
 
 .sub-menu-item img {
-    border-radius: 0.2rem;
+    border-radius: 0.1rem;
 }
 
 .submenu-image {
     width: 120px !important;
     height: 85px !important;
     object-fit: cover;
-    border-radius: 0.2rem;
     background-color: rgba(128, 128, 128, 0.3);
     flex-shrink: 0;
     position: relative;
@@ -335,7 +334,6 @@
     width: 120px;
     height: 85px;
     border-radius: 0.2rem;
-    overflow: hidden;
     flex-shrink: 0;
     background-color: rgba(128, 128, 128, 0.2);
 }
