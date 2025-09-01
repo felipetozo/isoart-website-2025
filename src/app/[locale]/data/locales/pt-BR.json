@@ -331,7 +331,7 @@
         "products": {
           "telhasTermicas": {
             "name": "Telhas Térmicas",
-            "description": "Telhas com núcleo em PIR ou EPS e revestimento duplo com chapas de aço galvalume ou filme, ideais para coberturas com excelente isolamento térmico."
+            "description": "Telhas com núcleo em PIR e revestimento duplo com chapas de aço galvalume ou filme, ideais para coberturas com excelente isolamento térmico."
           },
           "fachadaFechamento": {
             "name": "Fachada e Fechamento Lateral",
@@ -474,7 +474,7 @@
       "heroDescription": "Descubra a solução ideal para coberturas eficientes com isolamento térmico superior.",
       "buttonText": "Solicite um orçamento",
       "categoryDescriptionTitle": "As Telhas Térmicas Isoart oferecem leveza, economia e excelente desempenho térmico, otimizando a obra e garantindo conforto com menor custo.",
-      "categoryDescriptionText": "A Telha Térmica Isoart é uma solução leve e eficiente para a construção civil, substituindo com vantagens os sistemas tradicionais. Produzida com núcleos de poliestireno expandido (EPS) ou poliisocianurato (PIR) e revestimento em aço galvalume, proporciona estruturas mais leves, redução de carga nas fundações e maior agilidade na obra. Além de excelente desempenho térmico, permite economia significativa de concreto, aço e mão de obra, sendo ideal para projetos que exigem produtividade, conforto e custo-benefício.",
+      "categoryDescriptionText": "A Telha Térmica Isoart é uma solução leve e eficiente para a construção civil, substituindo com vantagens os sistemas tradicionais. Produzida com núcleo Poliisocianurato Isolante Rígido (PIR) e com revestimento em aço galvalume, proporciona estruturas mais leves, redução de carga nas fundações e maior agilidade na obra. Além de excelente desempenho térmico, permite economia significativa de concreto, aço e mão de obra, sendo ideal para projetos que exigem produtividade, conforto e custo-benefício.",
       "applicationsLabel": "Aplicações:"
     },
     "sections": {
