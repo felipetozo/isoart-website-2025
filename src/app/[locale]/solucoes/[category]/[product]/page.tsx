@@ -167,6 +167,7 @@ export default function ProductPage() {
     
     // Hook de traduções
     const t = useTranslations('productPage');
+    const tCategory = useTranslations('categoryPage');
     const tCommon = useTranslations('common.buttons');
     const tSections = useTranslations('common.sections');
     
@@ -710,9 +711,43 @@ export default function ProductPage() {
     
 
 
+    // Mapear slug da URL para chave das traduções
+    const categoryKeyMap: { [key: string]: string } = {
+        'construcao-civil': 'construcaoCivil',
+        'telhas-e-paineis': 'telhasPaineis',
+        'molduras-decorativas': 'molduras',
+        'embalagens-em-eps': 'embalagens'
+    };
+    
+    const categoryKey = categoryKeyMap[category] || category;
+    
+    // Mapear slug do produto para chave das traduções
+    const productKeyMap: { [key: string]: string } = {
+        'lajes-em-eps': 'lajes',
+        'blocos-em-eps': 'blocos',
+        'chapas-paineis-em-eps': 'chapas',
+        'forros': 'forros',
+        'isolamento-telhas': 'isolamentoTelhas',
+        'flocos-em-eps': 'flocos',
+        'embalagens-em-eps': 'embalagens',
+        'perolas-em-eps': 'perolas',
+        'molduras-beiral': 'beiral',
+        'molduras-portas-janelas': 'portas',
+        'molduras-colunas-capiteis': 'colunas',
+        'molduras-muros': 'muros',
+        'molduras-paredes': 'parede',
+        'telhas-termicas': 'telhasTermicas',
+        'fachada-fechamento-lateral': 'fachadaFechamento',
+        'divisoria-e-forro': 'divisoriaForro',
+        'sala-limpa': 'salaLimpa',
+        'camara-frigorifica': 'camaraFrigorifica'
+    };
+    
+    const productKey = productKeyMap[product] || product;
+    
     const categoryDescription = productData.categoryDescription || {
-        title: t('defaults.categoryDescriptionTitle'),
-        description: t('defaults.categoryDescriptionText')
+        title: tCategory(`categories.${categoryKey}.products.${productKey}.name`),
+        description: tCategory(`categories.${categoryKey}.products.${productKey}.description`)
     };
 
     // Usar os benefícios hardcoded se existirem, senão fallback para API/JSON

@@ -618,6 +618,7 @@
       "phone": "Phone",
       "subject": "Subject",
       "state": "State",
+      "statePlaceholder": "Select a state or a country",
       "city": "City",
       "cityPlaceholder": "Enter your city",
       "terms": "I have read and accept the",

@@ -10,59 +10,36 @@
                 "id": 1,
                 "name": "Telhas Térmicas",
                 "slug": "telhas-termicas",
-                "description": "Telhas com núcleo em PIR ou EPS e revestimento duplo com chapas de aço galvalume ou filme, ideais para coberturas com excelente isolamento térmico.",
-                "image": "/img/submenu/telhas-paineis/submenu-telhas-paineis-telhas-termicas.avif",
-                "specifications": {
-                    "material": "Aço galvanizado + EPS/PIR",
-                    "espessura": "30mm, 50mm, 100mm",
-                    "cor": "Diversas opções",
-                    "aplicacao": "Coberturas"
-                }
+                "description": "Telhas com núcleo em PIR e revestimento duplo com chapas de aço galvalume ou filme, ideais para coberturas com excelente isolamento térmico.",
+                "image": "/img/submenu/telhas-paineis/submenu-telhas-paineis-telhas-termicas.avif"
             },
             {
                 "id": 2,
                 "name": "Fachada e Fechamento Lateral",
                 "slug": "fachada-fechamento-lateral",
                 "description": "Painéis versáteis para fachadas e fechamentos laterais, oferecendo isolamento e estética.",
-                "image": "/img/submenu/telhas-paineis/submenu-telhas-paineis-fachada-fechamento.avif",
-                "specifications": {
-                    "material": "Aço galvanizado + EPS/PIR",
-                    "acabamento": "Pré-pintado, Natural"
-                }
+                "image": "/img/submenu/telhas-paineis/submenu-telhas-paineis-fachada-fechamento.avif"
             },
             {
                 "id": 3,
                 "name": "Divisória e Forro",
                 "slug": "divisoria-e-forro",
                 "description": "Soluções práticas e eficientes para divisórias internas e forros termoacústicos.",
-                "image": "/img/submenu/telhas-paineis/submenu-telhas-paineis-divisoria-forro.avif",
-                "specifications": {
-                    "material": "Aço galvanizado + EPS/PIR",
-                    "espessura": "50mm, 75mm",
-                    "isolamento": "Térmico e Acústico"
-                }
+                "image": "/img/submenu/telhas-paineis/submenu-telhas-paineis-divisoria-forro.avif"
             },
             {
                 "id": 4,
                 "name": "Sala Limpa",
                 "slug": "sala-limpa",
                 "description": "Painéis específicos para ambientes de sala limpa, com alta assepsia e controle de partículas.",
-                "image": "/img/submenu/telhas-paineis/submenu-telhas-paineis-sala-limpa.avif",
-                "specifications": {
-                    "material": "Aço inoxidável + PIR",
-                    "conformidade": "Normas de salas limpas"
-                }
+                "image": "/img/submenu/telhas-paineis/submenu-telhas-paineis-sala-limpa.avif"
             },
             {
                 "id": 5,
                 "name": "Câmara Frigorífica",
                 "slug": "camara-frigorifica",
                 "description": "Painéis robustos e eficientes para isolamento de câmaras frigoríficas, garantindo temperaturas ideais.",
-                "image": "/img/submenu/telhas-paineis/submenu-telhas-paineis-camara-frigorifica.avif",
-                "specifications": {
-                    "material": "Aço pré-pintado/inoxidável + PIR",
-                    "temperatura": "Baixa e Média"
-                }
+                "image": "/img/submenu/telhas-paineis/submenu-telhas-paineis-camara-frigorifica.avif"
             }
         ]
     },
@@ -86,32 +63,28 @@
                 "name": "Isolamento para Telhas",
                 "slug": "isolamento-telhas",
                 "description": "Sistema de isolamento térmico para telhas",
-                "image": "/img/submenu/construcao-civil/submenu-construcao-civil-isolamento.avif",
-                "specifications": {}
+                "image": "/img/submenu/construcao-civil/submenu-construcao-civil-isolamento.avif"
             },
             {
                 "id": 8,
                 "name": "Forros",
                 "slug": "forros",
                 "description": "Forros em EPS para diversos ambientes",
-                "image": "/img/submenu/construcao-civil/submenu-construcao-civil-forros.avif",
-                "specifications": {}
+                "image": "/img/submenu/construcao-civil/submenu-construcao-civil-forros.avif"
             },
             {
                 "id": 9,
                 "name": "Blocos em EPS",
                 "slug": "blocos-em-eps",
-                "description": "Blocos de EPS para construção",
-                "image": "/img/submenu/construcao-civil/submenu-construcao-civil-blocos.avif",
-                "specifications": {}
+                "description": "Blocos de EPS para Construção Civil",
+                "image": "/img/submenu/construcao-civil/submenu-construcao-civil-blocos.avif"
             },
             {
                 "id": 10,
                 "name": "Chapa e Painéis em EPS",
                 "slug": "chapas-paineis-em-eps",
                 "description": "Chapas e painéis de EPS",
-                "image": "/img/submenu/construcao-civil/submenu-construcao-civil-chapas.avif",
-                "specifications": {}
+                "image": "/img/submenu/construcao-civil/submenu-construcao-civil-chapas.avif"
             }
         ]
     },
@@ -127,40 +100,35 @@
                 "name": "Molduras para Portas e Janelas",
                 "slug": "molduras-portas-janelas",
                 "description": "Molduras para acabamento de portas e janelas",
-                "image": "/img/submenu/molduras/submenu-molduras-portas.avif",
-                "specifications": {}
+                "image": "/img/submenu/molduras/submenu-molduras-portas.avif"
             },
             {
                 "id": 12,
                 "name": "Molduras para Beiral",
                 "slug": "molduras-beiral",
                 "description": "Molduras para beirais",
-                "image": "/img/submenu/molduras/submenu-molduras-beirais.avif",
-                "specifications": {}
+                "image": "/img/submenu/molduras/submenu-molduras-beirais.avif"
             },
             {
                 "id": 13,
                 "name": "Molduras para Colunas e Capitéis",
                 "slug": "molduras-colunas-capiteis",
                 "description": "Molduras para colunas e capitéis",
-                "image": "/img/submenu/molduras/submenu-molduras-colunas.avif",
-                "specifications": {}
+                "image": "/img/submenu/molduras/submenu-molduras-colunas.avif"
             },
             {
                 "id": 14,
                 "name": "Molduras para Muros",
                 "slug": "molduras-muros",
                 "description": "Molduras para muros",
-                "image": "/img/submenu/molduras/submenu-molduras-muros.avif",
-                "specifications": {}
+                "image": "/img/submenu/molduras/submenu-molduras-muros.avif"
             },
             {
                 "id": 15,
                 "name": "Molduras para Paredes",
                 "slug": "molduras-paredes",
                 "description": "Molduras para paredes",
-                "image": "/img/submenu/molduras/submenu-molduras-parede.avif",
-                "specifications": {}
+                "image": "/img/submenu/molduras/submenu-molduras-parede.avif"
             }
         ]
     },
@@ -176,16 +144,14 @@
                 "name": "Embalagens em EPS",
                 "slug": "embalagens-em-eps",
                 "description": "Soluções completas em embalagens de EPS",
-                "image": "/img/submenu/embalagens/submenu-embalagens-embalagens.avif",
-                "specifications": {}
+                "image": "/img/submenu/embalagens/submenu-embalagens-embalagens.avif"
             },
             {
                 "id": 17,
                 "name": "Pérolas em EPS",
                 "slug": "perolas-em-eps",
                 "description": "Pérolas de EPS para preenchimento",
-                "image": "/img/submenu/embalagens/submenu-embalagens-perolas.avif",
-                "specifications": {}
+                "image": "/img/submenu/embalagens/submenu-embalagens-perolas.avif"
             }
         ]
     }

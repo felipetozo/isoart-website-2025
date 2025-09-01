@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styles from './contact-component.module.css';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn } from 'react-icons/md';
 import { BsWhatsapp } from 'react-icons/bs';
@@ -52,8 +52,6 @@ function ContactComponent({ locale }: ContactComponentProps) {
     const [errors, setErrors] = useState<FormErrors>({});
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
     const [showToast, setShowToast] = useState(false);
-    const [states, setStates] = useState<Array<{value: string, label: string}>>([]);
-    const [loadingStates, setLoadingStates] = useState(false);
 
     const validateForm = (): boolean => {
         const newErrors: FormErrors = {};
@@ -99,52 +97,6 @@ function ContactComponent({ locale }: ContactComponentProps) {
         
         setErrors((prev) => ({ ...prev, [name]: undefined }));
     };
-
-    const fetchStates = async () => {
-        setLoadingStates(true);
-        try {
-            // Fallback para Android antigo que não suporta Fetch API
-            if (typeof fetch === 'undefined') {
-                // Usar XMLHttpRequest como fallback
-                const xhr = new XMLHttpRequest();
-                xhr.open('GET', '/api/states', true);
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState === 4) {
-                        if (xhr.status === 200) {
-                            try {
-                                const data = JSON.parse(xhr.responseText);
-                                setStates(data);
-                            } catch (parseError) {
-                                console.error('Erro ao fazer parse dos estados:', parseError);
-                            }
-                        }
-                        setLoadingStates(false);
-                    }
-                };
-                xhr.onerror = function() {
-                    console.error('Erro XHR ao buscar estados');
-                    setLoadingStates(false);
-                };
-                xhr.send();
-            } else {
-                // Fetch API para Android 7.0+
-                const response = await fetch('/api/states');
-                if (response.ok) {
-                    const data = await response.json();
-                    setStates(data);
-                }
-            }
-        } catch (error) {
-            console.error('Erro ao buscar estados:', error);
-        } finally {
-            setLoadingStates(false);
-        }
-    };
-
-    // Carregar estados ao montar o componente
-    useEffect(() => {
-        fetchStates();
-    }, []);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -209,6 +161,39 @@ function ContactComponent({ locale }: ContactComponentProps) {
         }
     };
 
+    // Lista estática de estados brasileiros
+    const statesCountries = [
+        { value: '', label: t('form.selectState') },
+        { value: 'AC', label: 'Acre' },
+        { value: 'AL', label: 'Alagoas' },
+        { value: 'AP', label: 'Amapá' },
+        { value: 'AM', label: 'Amazonas' },
+        { value: 'BA', label: 'Bahia' },
+        { value: 'CE', label: 'Ceará' },
+        { value: 'DF', label: 'Distrito Federal' },
+        { value: 'ES', label: 'Espírito Santo' },
+        { value: 'GO', label: 'Goiás' },
+        { value: 'MA', label: 'Maranhão' },
+        { value: 'MT', label: 'Mato Grosso' },
+        { value: 'MS', label: 'Mato Grosso do Sul' },
+        { value: 'MG', label: 'Minas Gerais' },
+        { value: 'PA', label: 'Pará' },
+        { value: 'PB', label: 'Paraíba' },
+        { value: 'PR', label: 'Paraná' },
+        { value: 'PE', label: 'Pernambuco' },
+        { value: 'PI', label: 'Piauí' },
+        { value: 'RJ', label: 'Rio de Janeiro' },
+        { value: 'RN', label: 'Rio Grande do Norte' },
+        { value: 'RS', label: 'Rio Grande do Sul' },
+        { value: 'RO', label: 'Rondônia' },
+        { value: 'RR', label: 'Roraima' },
+        { value: 'SC', label: 'Santa Catarina' },
+        { value: 'SP', label: 'São Paulo' },
+        { value: 'SE', label: 'Sergipe' },
+        { value: 'TO', label: 'Tocantins' },
+        { value: 'PY', label: 'Paraguay' },
+        { value: 'UY', label: 'Uruguay' },
+    ];
 
     return (
         <section className={styles['contact-component-section']}>
@@ -298,9 +283,8 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                 label={t('form.state')}
                                 value={formData.state}
                                 onChange={handleChange}
-                                options={states}
+                                options={statesCountries}
                                 error={errors.state}
-                                disabled={loadingStates}
                             />
                         </div>
                         <div className={styles['cadastro-form-fields']}>
@@ -447,7 +431,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
             </div>
             
             <Toast
-            message={t('form.success')}
+                message={t('form.success')}
                 type="success"
                 isVisible={showToast}
                 onClose={() => setShowToast(false)}
