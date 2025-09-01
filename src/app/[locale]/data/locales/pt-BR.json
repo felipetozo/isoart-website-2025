@@ -647,6 +647,7 @@
       "city": "Santa Tereza do Oeste - Paraná - Brasil"
     },
     "themes": {
+      "themesPlaceholder": "Selecione a solução desejada",
       "telhasPaineis": "Telhas e Painéis",
       "construcaoCivil": "Construção Civil",
       "forros": "Forros",

@@ -647,6 +647,7 @@
       "city": "Santa Tereza do Oeste - Paraná - Brazil"
     },
     "themes": {
+      "themesPlaceholder": "Desired Solution",
       "telhasPaineis": "Roofing and Panels",
       "construcaoCivil": "Civil Construction",
       "forros": "Ceilings",

@@ -315,15 +315,13 @@ function ContactComponent({ locale }: ContactComponentProps) {
                             {errors.terms && <div className={styles['error-message']}>{errors.terms}</div>}
                         </div>
                         <div className={styles['cadastro-form-fields']}>
-                            <Button
+                        <Button
+                                type="submit"
                                 variant="primary"
                                 size="medium"
-                                type="submit"
-                                disabled={submitStatus === 'submitting'}
+                                disabled={isSubmitting}
                             >
-                                <span>
-                                    {submitStatus === 'submitting' ? t('sending') : tCommon('requestQuote')}
-                                </span>
+                                {isSubmitting ? t('form.sending') : t('form.submit')}
                             </Button>
                         </div>
                         {submitStatus === 'error' && (

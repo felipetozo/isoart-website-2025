@@ -207,6 +207,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
     ];
 
     const themes = [
+        { value: '', label: t('themes.themesPlaceholder') },
         { value: 'telhas-e-paineis', label: t('themes.telhasPaineis') },
         { value: 'construcao-civil', label: t('themes.construcaoCivil') },
         { value: 'forros', label: t('themes.forros') },
@@ -305,7 +306,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
                             <Button
                                 type="submit"
                                 variant="primary"
-                                size="large"
+                                size="medium"
                                 disabled={isSubmitting}
                             >
                                 {isSubmitting ? t('form.sending') : t('form.submit')}
