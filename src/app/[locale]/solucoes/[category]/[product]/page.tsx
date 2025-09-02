@@ -171,13 +171,14 @@ export default function ProductPage() {
     const tSections = useTranslations('common.sections');
 
     useEffect(() => {
-        const loadProductData = () => {
+        const loadProductData = async () => {
             setLoading(true);
             try {
                 // Buscar dados detalhados da categoria
                 let categoryDataTemp: CategoryData | null = null;
                 try {
-                    categoryDataTemp = require(`@/app/[locale]/data/categories/${category}.json`);
+                    const categoryModule = await import(`@/app/[locale]/data/categories/${category}.json`);
+                    categoryDataTemp = categoryModule.default;
                 } catch (err) {
                     categoryDataTemp = (menuData as CategoryData[]).find((item: CategoryData) => item.slug === category) || null;
                 }
@@ -188,13 +189,21 @@ export default function ProductPage() {
                 }
                 setCategoryData(categoryDataTemp);
 
-                // Buscar dados detalhados do produto usando o caminho completo
+                // Buscar dados detalhados do produto usando o caminho completo e locale
                 let productDataTemp: ProductData | null = null;
                 try {
-                    productDataTemp = require(`@/app/[locale]/data/products/${category}/${product}.json`);
+                    const suffix = locale !== 'pt-BR' ? `-${locale}` : '';
+                    const productModule = await import(`@/app/[locale]/data/products/${category}/${product}${suffix}.json`);
+                    productDataTemp = productModule.default;
                 } catch (err) {
-                    // fallback para dados básicos da categoria
-                    productDataTemp = categoryDataTemp.products.find((p: ProductData) => p.slug === product) || null;
+                    // fallback para português
+                    try {
+                        const fallbackModule = await import(`@/app/[locale]/data/products/${category}/${product}.json`);
+                        productDataTemp = fallbackModule.default;
+                    } catch (err2) {
+                        // fallback para dados básicos da categoria
+                        productDataTemp = categoryDataTemp.products.find((p: ProductData) => p.slug === product) || null;
+                    }
                 }
 
                 if (!productDataTemp) {
@@ -211,7 +220,7 @@ export default function ProductPage() {
             }
         };
         loadProductData();
-    }, [category, product]);
+    }, [category, product, locale]);
 
     if (loading) {
         return <LoadingScreen />;
