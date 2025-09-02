@@ -275,8 +275,8 @@ export default function ProductPage() {
                 '/img/produtos/construcao-civil/flocos/flocos-1440x800_002.avif'
             ],
             'forros': [
-                '/img/produtos/construcao-civil/forros/paris-1440x-800_01.avif',
-                '/img/produtos/construcao-civil/forros/dunas-1440x-800_01.avif'
+                '/img/produtos/construcao-civil/forros/dunas-1440x-800_01.avif',
+                '/img/produtos/construcao-civil/forros/paris-1440x-800_01.avif'
             ],
             'isolamento-telhas': [
                 '/img/produtos/construcao-civil/isolamento-telhas/isolamento-telhas-1440x-800_001.avif',
