@@ -1,28 +1,4 @@
 {
   "submissions": [
-    {
-      "id": "01",
-      "nome": "Felipe",
-      "email": "felipe05061987@gmail.com",
-      "telefone": "(45) 99158-4114",
-      "solucao": "construcao-civil",
-      "estado": "AP",
-      "cidade": "asdasdasd",
-      "aceitou_termos": true,
-      "origem": "componente-form-section",
-      "data_hora": "01/09/2025, 19:52:12"
-    },
-    {
-      "id": "02",
-      "nome": "Felipe",
-      "email": "felipetozo@icloud.com",
-      "telefone": "(45) 99158-4114",
-      "solucao": "molduras",
-      "estado": "PE",
-      "cidade": "asdasdasd",
-      "aceitou_termos": true,
-      "origem": "componente-form-section",
-      "data_hora": "01/09/2025, 20:01:12"
-    }
   ]
 }
