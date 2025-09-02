@@ -1,3 +1,5 @@
+// hero.tsx - Componente de slider hero com autoplay, drag e acessibilidade
+
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
@@ -6,8 +8,10 @@ import Link from 'next/link';
 import Button from '@/app/[locale]/views/ui/button/button';
 import { TbChevronLeft, TbChevronRight } from 'react-icons/tb';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 function Hero() {
+    const { locale } = useParams();
     const t = useTranslations('home.slider');
     const tCommon = useTranslations('common.buttons');
 
@@ -17,10 +21,13 @@ function Hero() {
     const [dragOffset, setDragOffset] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     const [slideProgress, setSlideProgress] = useState(0);
+
     const sliderRef = useRef<HTMLDivElement>(null);
     const containerRefs = useRef<(HTMLDivElement | null)[]>([]);
-    const autoPlayRef = useRef<number | null>(null);
-    const progressRef = useRef<number | null>(null);
+
+    // ✅ Correção de tipos (funciona em Node e Browser)
+    const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
+    const progressRef = useRef<ReturnType<typeof setTimeout> | number | null>(null);
 
     const SLIDE_DURATION = 5000; // 5 segundos por slide
 
@@ -55,11 +62,9 @@ function Hero() {
     const handleDotClick = useCallback((index: number) => {
         setCurrentSlide(index);
         setSlideProgress(0);
-        // Pause auto-play temporarily when user interacts
         setIsAutoPlaying(false);
-        // Pause progress animation
         if (progressRef.current) {
-            cancelAnimationFrame(progressRef.current);
+            cancelAnimationFrame(progressRef.current as number);
         }
         setTimeout(() => setIsAutoPlaying(true), 3000);
     }, []);
@@ -68,9 +73,8 @@ function Hero() {
         setCurrentSlide((prev) => (prev > 0 ? prev - 1 : sliderData.length - 1));
         setSlideProgress(0);
         setIsAutoPlaying(false);
-        // Pause progress animation
         if (progressRef.current) {
-            cancelAnimationFrame(progressRef.current);
+            cancelAnimationFrame(progressRef.current as number);
         }
         setTimeout(() => setIsAutoPlaying(true), 3000);
     }, []);
@@ -79,9 +83,8 @@ function Hero() {
         setCurrentSlide((prev) => (prev < sliderData.length - 1 ? prev + 1 : 0));
         setSlideProgress(0);
         setIsAutoPlaying(false);
-        // Pause progress animation
         if (progressRef.current) {
-            cancelAnimationFrame(progressRef.current);
+            cancelAnimationFrame(progressRef.current as number);
         }
         setTimeout(() => setIsAutoPlaying(true), 3000);
     }, []);
@@ -89,39 +92,31 @@ function Hero() {
     // Progress animation based on slide viewing time
     useEffect(() => {
         if (isAutoPlaying) {
-            // Reset progress when slide changes
             setSlideProgress(0);
             
-            // Fallback para Android antigo que não suporta requestAnimationFrame
             if (typeof requestAnimationFrame === 'undefined') {
-                // Usar setTimeout como fallback
                 let startTime = Date.now();
-                let timeoutId: number;
-                
+                let timeoutId: ReturnType<typeof setTimeout>;
+
                 const animateProgress = () => {
                     const elapsed = Date.now() - startTime;
                     const progress = Math.min((elapsed / SLIDE_DURATION) * 100, 100);
-                    
                     setSlideProgress(progress);
-                    
                     if (progress < 100) {
-                        timeoutId = setTimeout(animateProgress, 16); // ~60fps
+                        timeoutId = setTimeout(animateProgress, 16);
                     }
                 };
                 
                 timeoutId = setTimeout(animateProgress, 16);
                 progressRef.current = timeoutId;
             } else {
-                // requestAnimationFrame para Android 7.0+
                 let startTime = Date.now();
                 let animationId: number;
                 
                 const animateProgress = () => {
                     const elapsed = Date.now() - startTime;
                     const progress = Math.min((elapsed / SLIDE_DURATION) * 100, 100);
-                    
                     setSlideProgress(progress);
-                    
                     if (progress < 100) {
                         animationId = requestAnimationFrame(animateProgress);
                     }
@@ -132,7 +127,6 @@ function Hero() {
             }
         } else {
             if (progressRef.current) {
-                // Cancel animation frame if it's an animation ID
                 if (typeof requestAnimationFrame !== 'undefined' && typeof progressRef.current === 'number') {
                     cancelAnimationFrame(progressRef.current);
                 } else if (typeof progressRef.current === 'number') {
@@ -143,7 +137,6 @@ function Hero() {
 
         return () => {
             if (progressRef.current) {
-                // Cancel animation frame if it's an animation ID
                 if (typeof requestAnimationFrame !== 'undefined' && typeof progressRef.current === 'number') {
                     cancelAnimationFrame(progressRef.current);
                 } else if (typeof progressRef.current === 'number') {
@@ -153,14 +146,12 @@ function Hero() {
         };
     }, [currentSlide, isAutoPlaying]);
 
-    // Reset progress when auto-play is paused
     useEffect(() => {
         if (!isAutoPlaying) {
             setSlideProgress(0);
         }
     }, [isAutoPlaying]);
 
-    // Auto-slide functionality with better control
     useEffect(() => {
         if (isAutoPlaying) {
             autoPlayRef.current = setInterval(() => {
@@ -202,7 +193,7 @@ function Hero() {
         }
     }, [handlePrev, handleNext, handleDotClick]);
 
-    // Drag functionality with improved performance
+    // Drag
     const handleMouseDown = useCallback((e: React.MouseEvent) => {
         setIsDragging(true);
         setStartX(e.pageX);
@@ -237,11 +228,10 @@ function Hero() {
             }
             setDragOffset(0);
         }
-        // Resume auto-play after a delay
         setTimeout(() => setIsAutoPlaying(true), 3000);
     }, [isDragging, dragOffset, handlePrev, handleNext, currentSlide]);
 
-    // Touch events for mobile with improved handling
+    // Touch
     const handleTouchStart = useCallback((e: React.TouchEvent) => {
         setIsDragging(true);
         setStartX(e.touches[0].pageX);
@@ -253,7 +243,7 @@ function Hero() {
 
     const handleTouchMove = useCallback((e: React.TouchEvent) => {
         if (!isDragging) return;
-        e.preventDefault(); // Prevent scrolling while dragging
+        e.preventDefault();
         const currentX = e.touches[0].pageX;
         const diff = currentX - startX;
         setDragOffset(diff);
@@ -277,23 +267,19 @@ function Hero() {
             }
             setDragOffset(0);
         }
-        // Resume auto-play after a delay
         setTimeout(() => setIsAutoPlaying(true), 3000);
     }, [isDragging, dragOffset, handlePrev, handleNext, currentSlide]);
 
-    // CSS Animation control effect
+    // CSS animation
     useEffect(() => {
-        // Remove a classe 'slide-active' de todos os containers
         containerRefs.current.forEach((container) => {
             if (container) {
                 container.classList.remove(styles['slide-active']);
             }
         });
 
-        // Adiciona a classe 'slide-active' apenas ao container atual
         const currentContainer = containerRefs.current[currentSlide];
         if (currentContainer) {
-            // Force reflow para resetar animações
             currentContainer.offsetHeight;
             currentContainer.classList.add(styles['slide-active']);
         }
@@ -327,10 +313,9 @@ function Hero() {
                             className={styles['slide']}
                             style={{ backgroundImage: `url(${slide.backgroundImage})` }}
                             role="group"
-                                                                aria-label={`Slide ${index + 1} of ${sliderData.length}`}
+                            aria-label={`Slide ${index + 1} of ${sliderData.length}`}
                             aria-hidden={index !== currentSlide}
                         >
-                            {/* Preload da primeira imagem para LCP */}
                             {index === 0 && (
                                 <link 
                                     rel="preload" 
@@ -350,7 +335,7 @@ function Hero() {
                                         <p className={styles['split']}>{slide.description}</p>
                                     )}
                                     {index === currentSlide && (
-                                        <Link href={slide.buttonLink}>
+                                        <Link href={`/${locale}${slide.buttonLink}`}>
                                             <Button variant="white" size="medium">
                                                 {slide.buttonText}
                                             </Button>

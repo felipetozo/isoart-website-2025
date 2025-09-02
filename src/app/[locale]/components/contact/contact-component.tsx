@@ -409,7 +409,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                 </a>
                                 <a href="https://wa.me/5549998260240" target="_blank" rel="noopener noreferrer">
                                     <BsWhatsapp />
-                                    +55 49 99826 0240
+                                    +55 45 99826 0240
                                 </a>
                                 <a href="mailto:contato@isoart.com.br">
                                     <MdOutlineMarkEmailUnread />
