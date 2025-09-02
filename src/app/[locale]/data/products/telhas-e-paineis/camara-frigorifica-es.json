@@ -1,0 +1,84 @@
+{
+    "id": 5,
+    "name": "Cámara Frigorífica",
+    "slug": "camara-frigorifica",
+    "description": "Paneles isotérmicos con núcleo en PIR o EPS y revestimiento en acero pre-pintado o inoxidable, diseñados para cámaras frigoríficas con aislamiento térmico superior y resistencia a bajas temperaturas.",
+    "images": [
+        "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-01.avif",
+        "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0010.avif",
+        "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0020.avif",
+        "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0030.avif",
+        "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0040.avif",
+        "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0050.avif",
+        "/img/produtos/telhas-revestimentos/camara-frigorifica/camara-frigorifica-1440x-800_0060.avif"
+    ],
+    "specifications": {
+        "material": "Acero pre-pintado/inoxidable + PIR/EPS",
+        "espessura": "100mm, 150mm, 200mm",
+        "cor": "Blanco RAL 9003 o acero inoxidable mate",
+        "aplicacao": "Cámaras frigoríficas (baja y media temperatura)"
+    },
+    "hero": {
+        "title": "Cámara Frigorífica",
+        "description": "Paneles robustos para cámaras frigoríficas, garantizando aislamiento térmico eficiente y durabilidad en temperaturas extremas.",
+        "buttonText": "Solicite un presupuesto",
+        "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "Los Paneles de Cámara Frigorífica Isoart ofrecen aislamiento térmico excepcional para ambientes de baja y media temperatura.",
+        "description": "Los Paneles de Cámara Frigorífica Isoart están diseñados para mantener temperaturas controladas en cámaras de refrigeración y congelación. Con núcleo de poliisocianurato (PIR) o poliestireno expandido (EPS) y revestimiento en acero pre-pintado o inoxidable, garantizan alta eficiencia térmica, resistencia a la humedad y facilidad de limpieza, ideales para industrias alimentarias, logísticas y farmacéuticas."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Aislamiento térmico superior",
+            "description": "Mantiene temperaturas estables, reduciendo costos con refrigeración."
+        },
+        {
+            "id": 2,
+            "title": "Resistencia a la humedad",
+            "description": "Materiales que evitan infiltraciones y condensación."
+        },
+        {
+            "id": 3,
+            "title": "Fácil higienización",
+            "description": "Superficies lisas que facilitan la limpieza y mantenimiento."
+        }
+    ],
+    "generalCharacteristics": [
+        "Núcleo en PIR (30-38 kg/m³) o EPS (15-20 kg/m³)",
+        "Revestimiento en acero inoxidable AISI 304 o galvalume pre-pintado",
+        "Alta resistencia al fuego (Clase R1 para PIR)",
+        "Encaixe macho-hembra para sellado perfecto",
+        "Resistencia a bajas temperaturas (-40°C a 0°C)",
+        "Producción en línea continua para uniformidad"
+    ],
+    "applications": {
+        "title": "Soluciones robustas para cámaras frigoríficas con eficiencia térmica y durabilidad",
+        "description": "Los Paneles de Cámara Frigorífica Isoart son ideales para ambientes que exigen control riguroso de temperatura, como industrias alimentarias, logísticas y farmacéuticas. Con alta resistencia a la humedad y fácil mantenimiento, garantizan eficiencia energética y longevidad.",
+        "indications": [
+            {
+                "icon": "IoFastFoodOutline",
+                "text": "Industria alimentaria"
+            },
+            {
+                "icon": "TbTruck",
+                "text": "Centros de distribución logística"
+            },
+            {
+                "icon": "TbMedicineSyrup",
+                "text": "Industria farmacéutica"
+            },
+            {
+                "icon": "TbSnowflake",
+                "text": "Cámaras de congelación"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Aislamiento térmico": "El núcleo de PIR (conductividad 0,022 W/m.K) o EPS asegura aislamiento térmico excepcional, manteniendo temperaturas de -40°C a 0°C y reduciendo costos con refrigeración en cámaras frigoríficas.",
+        "Sellado y resistencia": "El sistema de encaixe macho-hembra y revestimientos en acero inoxidable o galvalume garantizan estanqueidad, resistencia a la humedad y protección contra condensación, ideal para ambientes húmedos.",
+        "Higienización fácil": "Superficies lisas en acero inoxidable o pre-pintado facilitan la limpieza, atendiendo normas sanitarias para industrias alimentarias y farmacéuticas.",
+        "Sostenibilidad y durabilidad": "Resistentes a la corrosión, los paneles Isoart garantizan larga vida útil con mantenimiento mínimo. El uso de pentano como agente de expansión en el PIR asegura conformidad ambiental, sin emisión de HCFCs, atendiendo al Protocolo de Montreal."
+    }
+}

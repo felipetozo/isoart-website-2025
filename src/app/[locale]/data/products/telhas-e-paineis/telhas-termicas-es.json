@@ -1,0 +1,115 @@
+{
+    "id": 1,
+    "name": "Tejas Térmicas",
+    "slug": "tejas-termicas",
+    "description": "Tejas con núcleo en PIR o EPS y revestimiento doble con chapas de acero galvalume o película, ideales para techos con excelente aislamiento térmico.",
+    "images": [
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-01.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0010.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0020.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0030.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0040.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0050.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0060.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0070.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0080.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0090.avif"
+    ],
+    "specifications": {
+        "material": "Acero galvanizado + EPS/PIR",
+        "espessura": "30mm, 50mm, 100mm",
+        "cor": "Diversas opciones",
+        "aplicacao": "Techos"
+    },
+    "hero": {
+        "title": "Tejas Térmicas",
+        "description": "Descubre la solución ideal para techos eficientes con aislamiento térmico superior.",
+        "buttonText": "Solicite un presupuesto",
+        "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "Las Tejas Térmicas Isoart ofrecen ligereza, economía y excelente desempeño térmico, optimizando la obra y garantizando confort con menor costo.",
+        "description": "La Teja Térmica Isoart es una solución ligera y eficiente para la construcción civil, sustituyendo con ventajas los sistemas tradicionales. Producida con poliisocianurato (PIR) y revestimiento en acero galvalume, proporciona estructuras más ligeras, reducción de carga en los cimientos y mayor agilidad en la obra. Además de excelente desempeño térmico, permite economía significativa de hormigón, acero y mano de obra, siendo ideal para proyectos que exigen productividad, confort y costo-beneficio."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Aislamiento térmico",
+            "description": "Reduce la necesidad de climatización, garantizando confort interno."
+        },
+        {
+            "id": 2,
+            "title": "Alta resistencia",
+            "description": "Soporta condiciones adversas con durabilidad garantizada."
+        },
+        {
+            "id": 3,
+            "title": "Durabilidad prolongada",
+            "description": "Ofrece larga vida útil con mantenimiento mínimo."
+        }
+    ],
+    "generalCharacteristics": [
+        "Menor carga sobre la estructura con excelente desempeño mecánico",
+        "Más fácil de transportar y montar, optimizando el tiempo de la obra",
+        "Menor consumo de recursos como hormigón, acero y madera",
+        "Confort térmico y reducción de ruidos en ambientes internos"
+    ],
+    "applications": {
+        "title": "Mayor economía, agilidad en la ejecución y confort térmico con menor esfuerzo estructural",
+        "description": "La Teja Térmica está fabricada con Poliisocianurato (PIR), proporcionando tejas más ligeras, de fácil manejo y excelente aislamiento térmico. Ideal para obras que exigen rapidez, desempeño y reducción de costos.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Casas y sobrados"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Edificios residenciales"
+            },
+            {
+                "icon": "TbFactory",
+                "text": "Galpones industriales"
+            },
+            {
+                "icon": "TbBuildingStore",
+                "text": "Establecimientos comerciales"
+            }
+        ]
+    },
+    "modelsTable": {
+        "title": "Modelos disponibles:",
+        "headers": [
+            "Material",
+            "Espesor",
+            "Revestimiento",
+            "Trapecios"
+        ],
+        "rows": [
+            {
+                "material": "PIR",
+                "espessuras": [
+                    "30mm",
+                    "50mm"
+                ],
+                "revestimento": "Acero / Acero",
+                "trapezios": "3 o 5 trapecios"
+            },
+            {
+                "material": "PIR",
+                "espessuras": [
+                    "20mm",
+                    "30mm"
+                ],
+                "revestimento": "Acero / Película",
+                "trapezios": "3 o 5 trapecios"
+            }
+        ],
+        "note": "Acero en opciones de espesores: 0.38mm / 0.43mm / 0.50mm"
+    },
+    "tabDescriptions": {
+        "Alivio de carga en la estructura": "La ligereza del EPS reduce significativamente el peso propio de la losa en comparación a los sistemas tradicionales, lo que alivia la carga en los cimientos, pilares y vigas. Esto posibilita un dimensionamiento más eficiente y económico de toda la estructura, resultando en menor consumo de hormigón y acero. Además, permite vencer vanos mayores con menos elementos de apoyo, optimizando el proyecto y contribuyendo para una ejecución más racional de la obra.",
+        "Economía en la obra": "Las Losas en EPS ofrecen economía en diversas frentes: materiales, tiempo y mano de obra. El montaje es más simple y ágil, exigiendo menos profesionales en el canteiro. El transporte de las piezas es facilitado por el bajo peso, tanto en la horizontal cuanto en la vertical. La reducción en el uso de encofrados de madera, hormigón y acero también impacta directamente en el presupuesto, tornando el sistema más competitivo y sostenible, sin abrir mano del desempeño estructural.",
+        "Flexibilidad en el proyecto": "Con producción a medida, las losas en EPS se adaptan a diferentes necesidades constructivas, tanto en altura cuanto en ancho y largo. Su estructura facilita la creación de caminos para instalaciones eléctricas e hidráulicas, pudiendo ser moldeada con herramientas simples o sopladores térmicos. Esto elimina el riesgo de dañar la capa de hormigón, como ocurre en sistemas cerámicos, y permite adecuaciones sin comprometer la integridad de la losa.",
+        "Aislamiento térmico inteligente": "Además de actuar como un excelente aislante térmico, el EPS contribuye para una cura más adecuada del hormigón. Él evita fuga del agua de amasado, manteniendo la humedad por más tiempo y mejorando la resistencia de la losa después del hormigonado. El resultado es una estructura más estable y duradera, que proporciona confort térmico al ambiente y reduce la necesidad de climatización artificial - lo que impacta directamente en el consumo energético de la edificación."
+    }
+}

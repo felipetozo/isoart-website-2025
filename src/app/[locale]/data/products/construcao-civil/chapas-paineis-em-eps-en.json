@@ -1,0 +1,80 @@
+{
+    "id": 9,
+    "name": "EPS Sheets and Panels",
+    "slug": "eps-sheets-panels",
+    "description": "EPS (Expanded Polystyrene) sheets and panels for thermal and acoustic insulation, ideal for partitions, ceilings, and fillings in sustainable construction.",
+    "images": [
+        "/img/products/construction/eps-sheets/eps-sheets-01.avif",
+        "/img/products/construction/eps-sheets/eps-sheets-1440x-800_001.avif",
+        "/img/products/construction/eps-sheets/eps-sheets-1440x-800_002.avif"
+    ],
+    "specifications": {
+        "material": "Expanded Polystyrene (EPS)",
+        "thickness": "20mm, 50mm, 100mm",
+        "density": "13-20 kg/m³",
+        "application": "Partitions, ceilings, thermal insulation"
+    },
+    "hero": {
+        "title": "EPS Sheets and Panels",
+        "description": "Lightweight and versatile solutions for thermal and acoustic insulation in civil construction projects.",
+        "buttonText": "Request a quote",
+    "buttonLink": "/contact"
+    },
+    "categoryDescription": {
+        "title": "Isoart EPS Sheets and Panels offer thermal insulation, lightweight design, and versatility for modern projects.",
+        "description": "Isoart EPS Sheets and Panels are ideal for applications in partitions, ceilings, and thermal insulation in civil construction. Made with high-quality expanded polystyrene, they provide lightweight design, moisture resistance, and excellent thermal and acoustic insulation, ensuring cost savings and sustainability in residential, commercial, and industrial projects."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Thermal Insulation",
+            "description": "Reduces climate control costs, providing environmental comfort."
+        },
+        {
+            "id": 2,
+            "title": "Lightweight and Easy Handling",
+            "description": "Facilitates transport and installation, reducing construction costs."
+        },
+        {
+            "id": 3,
+            "title": "Sustainability",
+            "description": "100% recyclable material with reverse logistics by Isoart."
+        }
+    ],
+    "generalCharacteristics": [
+        "Average density of 13-20 kg/m³",
+        "Thermal conductivity coefficient of 0.028 Kcal/h.m.°C",
+        "Compression strength of 0.1-0.2 MPa",
+        "Self-extinguishing material (Class F)",
+        "Moisture resistance with maximum absorption of 4%",
+        "Custom production for specific projects"
+    ],
+    "applications": {
+        "title": "Versatile solutions for insulation and partitions in sustainable construction",
+        "description": "Isoart EPS Sheets and Panels are perfect for partitions, ceilings, and thermal insulation in projects seeking energy efficiency and quick execution. With high moisture resistance and ease of cutting, they are ideal for residential, commercial, and industrial projects.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Residential partitions"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Commercial ceilings"
+            },
+            {
+                "icon": "TbFactory",
+                "text": "Insulation in industrial warehouses"
+            },
+            {
+                "icon": "TbTools",
+                "text": "Retrofit projects"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Thermal Insulation": "With a thermal conductivity coefficient of 0.028 Kcal/h.m.°C, EPS sheets and panels reduce climate control costs, ensuring thermal comfort in indoor environments.",
+        "Lightweight and Installation": "The low density (13-20 kg/m³) facilitates transport and installation, reducing labor and equipment costs in construction.",
+        "Versatility": "Custom-produced, the panels and sheets adapt to different thicknesses and formats, ideal for partitions, ceilings, and fillings.",
+        "Sustainability": "100% recyclable and CFC-free, Isoart panels are environmentally responsible."
+    }
+}

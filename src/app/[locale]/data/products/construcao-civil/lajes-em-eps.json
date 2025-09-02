@@ -1,0 +1,82 @@
+{
+    "id": 6,
+    "name": "Lajes em EPS",
+    "slug": "lajes-em-eps",
+    "description": "Lajes em EPS (Poliestireno Expandido) projetadas para reduzir peso e custos em construções, oferecendo isolamento térmico e acústico, além de maior agilidade na obra.",
+    "image": "/img/produtos/construcao-civil/lajes/lajes-01.avif",
+    "specifications": {
+        "material": "Poliestireno Expandido (EPS)",
+        "espessura": "120mm, 150mm, 200mm",
+        "densidade": "13-20 kg/m³",
+        "aplicacao": "Lajes treliçadas, preenchimento de pisos"
+    },
+    "hero": {
+        "title": "Lajes em EPS",
+        "description": "Soluções leves e econômicas para lajes com isolamento térmico e acústico superior.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "As Lajes em EPS Isoart oferecem leveza, economia e excelente desempenho térmico, otimizando a obra e garantindo conforto com menor custo.",
+        "description": "As Lajes em EPS Isoart são uma solução leve e eficiente para a construção civil, substituindo com vantagens os sistemas tradicionais. Produzidas com poliestireno expandido (EPS), proporcionam redução de carga nas fundações, maior agilidade na obra e excelente isolamento térmico e acústico. Ideais para projetos que exigem produtividade, conforto e custo-benefício, conforme normas ABNT NBR 14859."
+    },
+    "projectImages": [
+        "/img/produtos/construcao-civil/lajes/lajes-1440x-800_001.avif",
+        "/img/produtos/construcao-civil/lajes/lajes-1440x-800_002.avif",
+        "/img/produtos/construcao-civil/lajes/lajes-1440x-800_003.avif"
+    ],
+
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Redução de peso",
+            "description": "Diminui a carga estrutural, otimizando fundações e pilares."
+        },
+        {
+            "id": 2,
+            "title": "Isolamento térmico",
+            "description": "Reduz a necessidade de climatização, garantindo conforto."
+        },
+        {
+            "id": 3,
+            "title": "Economia na obra",
+            "description": "Reduz até 20% dos custos com materiais e mão de obra."
+        }
+    ],
+    "generalCharacteristics": [
+        "Leveza com densidade média de 13-20 kg/m³",
+        "Alta resistência à compressão (0,1-0,2 MPa)",
+        "Isolamento térmico com coeficiente de 0,028 Kcal/h.m.°C",
+        "Material autoextinguível (Classe F)",
+        "100% reciclável, sem emissão de CFC",
+        "Facilidade de corte e adaptação em obra"
+    ],
+    "applications": {
+        "title": "Leveza e eficiência para lajes em projetos residenciais e comerciais",
+        "description": "As Lajes em EPS Isoart são ideais para construções que buscam redução de custos e maior rapidez na execução. Com excelente isolamento térmico e acústico, são perfeitas para lajes treliçadas e preenchimento de pisos em obras residenciais, comerciais e industriais.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Casas e sobrados"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Prédios residenciais"
+            },
+            {
+                "icon": "TbFactory",
+                "text": "Galpões industriais"
+            },
+            {
+                "icon": "TbBuildingStore",
+                "text": "Estabelecimentos comerciais"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Alívio de carga na estrutura": "A leveza do EPS reduz significativamente o peso próprio da laje em comparação aos sistemas tradicionais, aliviando a carga nas fundações, pilares e vigas, permitindo um dimensionamento mais econômico e eficiente.",
+        "Economia na obra": "As lajes em EPS oferecem economia em materiais, tempo e mão de obra, com montagem simples e redução no uso de concreto, aço e formas de madeira, conforme ABNT NBR 14859.",
+        "Isolamento térmico e acústico": "O EPS proporciona excelente isolamento térmico (0,028 Kcal/h.m.°C) e acústico, reduzindo custos com climatização e melhorando o conforto ambiental.",
+        "Flexibilidade no projeto": "Produzidas sob medida, as lajes em EPS se adaptam a diferentes vãos e formatos, facilitando a passagem de instalações elétricas e hidráulicas."
+    }
+}

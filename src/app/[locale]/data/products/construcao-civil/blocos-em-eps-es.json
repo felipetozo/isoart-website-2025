@@ -1,0 +1,79 @@
+{
+    "id": 8,
+    "name": "Bloques de EPS",
+    "slug": "bloques-de-eps",
+    "description": "Bloques de EPS (Poliestireno Expandido) para aplicaciones estructurales y de relleno, que ofrecen ligereza, aislamiento térmico y facilidad de manipulación en la construcción.",
+    "images": [
+        "/img/produtos/construcao-civil/blocos/blocos-01.avif",
+        "/img/produtos/construcao-civil/blocos/blocos-1440x-800_001.avif"
+    ],
+    "specifications": {
+        "material": "Poliestireno Expandido (EPS)",
+        "densidade": "13-20 kg/m³",
+        "dimensoes": "Personalizable bajo consulta",
+        "aplicacao": "Paredes, losas, rellenos"
+    },
+    "hero": {
+        "title": "Bloques de EPS",
+        "description": "Una solución versátil y ligera para construcciones con aislamiento térmico y acústico de alto rendimiento.",
+        "buttonText": "Solicite un presupuesto",
+    "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "Los Bloques de EPS Isoart ofrecen ligereza, resistencia y aislamiento térmico para construcciones modernas y sostenibles.",
+        "description": "Los Bloques de EPS Isoart son ideales para aplicaciones en paredes, losas y rellenos en la construcción civil. Con poliestireno expandido de alta calidad, proporcionan reducción de peso estructural, aislamiento térmico y acústico, además de facilidad de corte e instalación, garantizando ahorro y sostenibilidad en proyectos residenciales, comerciales e industriales."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Ligereza estructural",
+            "description": "Reduce la carga en cimientos y facilita el transporte."
+        },
+        {
+            "id": 2,
+            "title": "Aislamiento térmico",
+            "description": "Proporciona confort térmico con baja conductividad."
+        },
+        {
+            "id": 3,
+            "title": "Facilidad de instalación",
+            "description": "Permite cortes precisos y adaptación en obra."
+        }
+    ],
+    "generalCharacteristics": [
+        "Densidad media de 13-20 kg/m³",
+        "Coeficiente de conductividad térmica de 0,028 Kcal/h.m.°C",
+        "Resistencia a la compresión de 0,1-0,2 MPa",
+        "Material autoextinguible (Clase F)",
+        "100% reciclable, sin emisión de CFC",
+        "Compatible con revestimientos como cemento y yeso"
+    ],
+    "applications": {
+        "title": "Versatilidad para paredes y rellenos en proyectos de construcción",
+        "description": "Los Bloques de EPS Isoart son perfectos para construcciones que requieren ligereza, aislamiento térmico y facilidad de manipulación. Ideales para paredes, losas y rellenos, ofrecen ahorro de materiales y rapidez en la ejecución de obras residenciales, comerciales e industriales.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Paredes residenciales"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Edificios comerciales"
+            },
+            {
+                "icon": "TbFactory",
+                "text": "Estructuras industriales"
+            },
+            {
+                "icon": "TbTools",
+                "text": "Rellenos estructurales"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Ligereza y resistencia": "Con una densidad de 13-20 kg/m³, los bloques de EPS reducen la carga estructural, facilitando el transporte y la instalación, mientras mantienen resistencia a la compresión (0,1-0,2 MPa).",
+        "Aislamiento térmico": "El EPS proporciona un aislamiento térmico superior (0,028 Kcal/h.m.°C), reduciendo costos de climatización y mejorando el confort ambiental.",
+        "Flexibilidad de aplicación": "Fabricados a medida, los bloques permiten cortes precisos con herramientas simples, adaptándose a diferentes proyectos y necesidades constructivas.",
+        "Sostenibilidad": "100% reciclables y libres de CFC, los bloques de EPS son responsables con el medio ambiente."
+    }
+}

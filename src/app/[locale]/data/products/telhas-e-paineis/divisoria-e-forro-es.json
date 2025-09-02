@@ -1,0 +1,84 @@
+{
+    "id": 3,
+    "name": "Divisoria y Techo",
+    "slug": "divisoria-techo",
+    "description": "Paneles isotérmicos con núcleo en PIR o EPS y revestimiento en acero galvalume, diseñados para divisiones internas y techos termoacústicos, garantizando confort térmico, acústico y practicidad en la instalación.",
+    "images": [
+        "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-01.avif",
+        "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0010.avif",
+        "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0020.avif",
+        "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0030.avif",
+        "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0040.avif",
+        "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0050.avif",
+        "/img/produtos/telhas-revestimentos/divisoria-forro/divisoria-forro-1440x-800_0060.avif"
+    ],
+    "specifications": {
+        "material": "Acero galvanizado + EPS/PIR",
+        "espessura": "50mm, 75mm, 100mm",
+        "cor": "Pre-pintado (blanco RAL 9003) o natural, otros bajo consulta",
+        "aplicacao": "Divisiones internas, techos termoacústicos"
+    },
+    "hero": {
+        "title": "Divisoria y Techo",
+        "description": "Soluciones prácticas para divisiones y techos con aislamiento térmico y acústico de alto rendimiento.",
+        "buttonText": "Solicite un presupuesto",
+        "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "Los Paneles de Divisoria y Techo Isoart ofrecen aislamiento termoacústico, ligereza y versatilidad para ambientes internos.",
+        "description": "Los Paneles de Divisoria y Techo Isoart son ideales para crear divisiones internas y techos termoacústicos en proyectos comerciales, industriales y residenciales. Con núcleo de poliestireno expandido (EPS) o poliisocianurato (PIR) y revestimiento en acero galvalume, proporcionan excelente aislamiento térmico y acústico, además de fácil instalación y acabado estético. Son perfectos para oficinas, galpones y espacios que exigen confort ambiental y rapidez en la ejecución."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Aislamiento termoacústico",
+            "description": "Reduce ruidos y mantiene la temperatura estable, promoviendo confort."
+        },
+        {
+            "id": 2,
+            "title": "Instalación rápida",
+            "description": "Sistema modular que agiliza el montaje y reduce costos."
+        },
+        {
+            "id": 3,
+            "title": "Versatilidad estética",
+            "description": "Acabados personalizables para diferentes proyectos arquitectónicos."
+        }
+    ],
+    "generalCharacteristics": [
+        "Núcleo en EPS o PIR para aislamiento térmico y acústico",
+        "Revestimiento en acero galvalume con alta resistencia a la corrosión",
+        "Ligereza que facilita transporte e instalación",
+        "Acabados lisos, acanalados o microacanalados",
+        "Producción en línea continua para uniformidad",
+        "Materiales reciclables, en conformidad con el Protocolo de Montreal"
+    ],
+    "applications": {
+        "title": "Soluciones termoacústicas para divisiones y techos en ambientes diversos",
+        "description": "Los Paneles de Divisoria y Techo Isoart son ideales para proyectos que exigen divisiones internas y techos con alto rendimiento termoacústico. Fabricados con núcleo de EPS o PIR, ofrecen montaje rápido, reducción de ruidos y confort térmico, siendo perfectos para oficinas, auditorios y galpones industriales.",
+        "indications": [
+            {
+                "icon": "TbBuilding",
+                "text": "Oficinas y salas comerciales"
+            },
+            {
+                "icon": "TbMicrophone",
+                "text": "Auditorios y espacios culturales"
+            },
+            {
+                "icon": "TbFactory",
+                "text": "Galpones industriales"
+            },
+            {
+                "icon": "TbHome",
+                "text": "Ambientes residenciales"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Aislamiento termoacústico": "Con núcleo PIR (densidad de 30 a 38 kg/m³), los paneles proporcionan reducción de ruidos (22 a 30 dB) y aislamiento térmico (conductividad 0,022 W/m.K), ideales para ambientes que exigen confort acústico y térmico, como oficinas y auditorios.",
+        "Montaje eficiente": "El sistema modular con encaje macho-hembra permite instalación rápida y limpia, reduciendo costos con mano de obra y equipos. La ligereza de los paneles facilita el transporte y la logística en el canteiro de obras.",
+        "Personalización estética": "Disponibles en acabados liso, acanalado o microacanalado, con revestimiento en acero galvalume pre-pintado (blanco RAL 9003 u otros colores bajo consulta), los paneles se adaptan a diferentes necesidades arquitectónicas, garantizando un visual moderno.",
+        "Sostenibilidad y durabilidad": "Resistentes a la corrosión, los paneles Isoart garantizan larga vida útil con mantenimiento mínimo. El uso de pentano como agente de expansión en el PIR asegura conformidad ambiental, sin emisión de HCFCs, atendiendo al Protocolo de Montreal."
+    }
+}

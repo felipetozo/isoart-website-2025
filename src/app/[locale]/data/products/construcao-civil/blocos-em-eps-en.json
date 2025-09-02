@@ -1,0 +1,79 @@
+{
+    "id": 8,
+    "name": "EPS Blocks",
+    "slug": "eps-blocks",
+    "description": "EPS (Expanded Polystyrene) blocks for structural and filling applications, offering lightness, thermal insulation, and easy handling in construction.",
+    "images": [
+        "/img/produtos/construcao-civil/blocos/blocos-01.avif",
+        "/img/produtos/construcao-civil/blocos/blocos-1440x-800_001.avif"
+    ],
+    "specifications": {
+        "material": "Expanded Polystyrene (EPS)",
+        "densidade": "13-20 kg/m³",
+        "dimensoes": "Customizable upon request",
+        "aplicacao": "Walls, slabs, fillings"
+    },
+    "hero": {
+        "title": "EPS Blocks",
+        "description": "A versatile and lightweight solution for construction with high-performance thermal and acoustic insulation.",
+        "buttonText": "Request a quote",
+        "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "Isoart EPS Blocks provide lightness, strength, and thermal insulation for modern and sustainable constructions.",
+        "description": "Isoart EPS Blocks are ideal for wall, slab, and filling applications in civil construction. Made with high-quality expanded polystyrene, they offer structural weight reduction, thermal and acoustic insulation, as well as easy cutting and installation, ensuring savings and sustainability in residential, commercial, and industrial projects."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Structural lightness",
+            "description": "Reduces foundation load and facilitates transportation."
+        },
+        {
+            "id": 2,
+            "title": "Thermal insulation",
+            "description": "Provides thermal comfort with low conductivity."
+        },
+        {
+            "id": 3,
+            "title": "Easy installation",
+            "description": "Allows precise cuts and on-site adaptation."
+        }
+    ],
+    "generalCharacteristics": [
+        "Average density of 13-20 kg/m³",
+        "Thermal conductivity coefficient of 0.028 Kcal/h.m.°C",
+        "Compressive strength of 0.1-0.2 MPa",
+        "Self-extinguishing material (Class F)",
+        "100% recyclable, CFC-free",
+        "Compatible with coatings such as cement and plaster"
+    ],
+    "applications": {
+        "title": "Versatility for walls and fillings in construction projects",
+        "description": "Isoart EPS Blocks are perfect for constructions that require lightness, thermal insulation, and easy handling. Ideal for walls, slabs, and fillings, they offer material savings and faster execution of residential, commercial, and industrial works.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Residential walls"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Commercial buildings"
+            },
+            {
+                "icon": "TbFactory",
+                "text": "Industrial structures"
+            },
+            {
+                "icon": "TbTools",
+                "text": "Structural fillings"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Lightness and strength": "With a density of 13-20 kg/m³, EPS blocks reduce structural load, facilitating transportation and installation, while maintaining compressive strength (0.1-0.2 MPa).",
+        "Thermal insulation": "EPS provides superior thermal insulation (0.028 Kcal/h.m.°C), reducing air conditioning costs and improving environmental comfort.",
+        "Application flexibility": "Custom-made, the blocks allow precise cuts with simple tools, adapting to different projects and construction needs.",
+        "Sustainability": "100% recyclable and CFC-free, EPS blocks are environmentally responsible."
+    }
+}

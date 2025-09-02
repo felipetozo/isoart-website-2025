@@ -1,0 +1,88 @@
+{
+    "id": 11,
+    "name": "Molduras para Aleros",
+    "slug": "molduras-aleros",
+    "description": "Molduras en EPS de alta densidad con revestimiento flexible, perfectas para acabado estético de aleros, con ligereza y resistencia a intemperie.",
+    "images": [
+        "/img/produtos/molduras/beiral/beiral-01.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_001.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_002.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_003.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_004.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_005.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_006.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_007.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_008.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_009.avif",
+        "/img/produtos/molduras/beiral/beiral-1440x-800_010.avif"
+    ],
+    "specifications": {
+        "material": "EPS virgen con revestimiento de resina polimérica",
+        "densidade": "20-30 kg/m³",
+        "dimensoes": "Personalizable bajo consulta",
+        "aplicacao": "Aleros de techos y fachadas"
+    },
+    "hero": {
+        "title": "Molduras para Aleros",
+        "description": "Soluciones ligeras y elegantes para acabado de aleros, valorizando fachadas con durabilidad y estilo.",
+        "buttonText": "Solicite un presupuesto",
+        "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "Las Molduras para Aleros Isoart combinan estética y funcionalidad para acabados externos de alta calidad.",
+        "description": "Las Molduras para Aleros Isoart están fabricadas en EPS de alta densidad con revestimiento de masilla flexible a base de resina polimérica, ofreciendo ligereza, resistencia a intemperie y personalización para aleros de techos y fachadas. Ideales para proyectos arquitectónicos que buscan sofisticación y practicidad, garantizan instalación rápida y bajo impacto estructural."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Acabado sofisticado",
+            "description": "Valoriza aleros con diseño moderno y personalizable."
+        },
+        {
+            "id": 2,
+            "title": "Instalación práctica",
+            "description": "Fijación con argamasa AC-3 garantiza rapidez y limpieza."
+        },
+        {
+            "id": 3,
+            "title": "Resistencia climática",
+            "description": "Soporta variaciones de temperatura y humedad sin grietas."
+        }
+    ],
+    "generalCharacteristics": [
+        "EPS de alta densidad (20-30 kg/m³)",
+        "Revestimiento flexible con resina polimérica y polvos minerales",
+        "Resistencia a la compresión de 0,15-0,25 MPa",
+        "Absorción de agua < 4% en 5 años",
+        "Superficie lisa, libre de oscurecimiento cementicio",
+        "100% reciclable, sin emisión de CFC"
+    ],
+    "applications": {
+        "title": "Acabado elegante para aleros en proyectos residenciales y comerciales",
+        "description": "Las Molduras para Aleros Isoart son ideales para acabados externos de techos y fachadas, ofreciendo estética diferenciada y resistencia a intemperie. Con instalación simple y personalización, son perfectas para residencias, sobrados y edificios comerciales.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Techos residenciales"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Fachadas comerciales"
+            },
+            {
+                "icon": "TbBuildingStore",
+                "text": "Edificios institucionales"
+            },
+            {
+                "icon": "TbTools",
+                "text": "Reformas de techos"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Estética y personalización": "Producidas a medida, las molduras para aleros permiten acabados como texturas, grafiatos y pinturas, garantizando un visual sofisticado para techos y fachadas.",
+        "Instalación eficiente": "La fijación con argamasa colante AC-3 y tarugos de madera para piezas mayores proporciona rapidez, practicidad y limpieza en la obra.",
+        "Durabilidad externa": "El revestimiento flexible y el EPS de alta densidad resisten lluvias, sol y variaciones térmicas, garantizando larga vida útil sin mantenimiento.",
+        "Sostenibilidad": "100% reciclables y libres de CFC, las molduras Isoart son ambientalmente responsables."
+    }
+}

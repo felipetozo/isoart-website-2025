@@ -1,0 +1,88 @@
+{
+    "id": 8,
+    "name": "Techos",
+    "slug": "techos",
+    "description": "Techos en EPS de alta densidad con diseños únicos y sofisticados. Disponibles en múltiples modelos como Dunas y París, ofrecen acabados estéticos diferenciados para techos interiores residenciales y comerciales.",
+    "images": [
+        "/img/produtos/construcao-civil/forros/forros-01.avif",
+        "/img/produtos/construcao-civil/forros/dunas-1440x-800_01.avif",
+        "/img/produtos/construcao-civil/forros/paris-1440x-800_01.avif"
+    ],
+    "specifications": {
+        "material": "EPS virgen con revestimiento opcional",
+        "densidade": "15-20 kg/m³",
+        "dimensoes": "Personalizable bajo consulta",
+        "aplicacao": "Techos interiores residenciales y comerciales"
+    },
+    "hero": {
+        "title": "Techos en EPS",
+        "description": "Techos en EPS de alta densidad con diseños únicos y sofisticados. Disponibles en múltiples modelos como Dunas y París, ofrecen acabados estéticos diferenciados para techos interiores.",
+        "buttonText": "Solicite un presupuesto",
+        "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "Los Techos Isoart combinan diseño sofisticado con tecnología moderna en EPS.",
+        "description": "Los Techos Isoart están fabricados en EPS de alta densidad, ofreciendo múltiples modelos con diseños únicos y sofisticados. Actualmente disponibles en los modelos Dunas y París, cada uno con características estéticas distintas que permiten personalización completa de los ambientes. Sustituyen materiales tradicionales como yeso con mayor ligereza, resistencia a la humedad e instalación rápida, proporcionando economía, confort térmico y acabados de alta calidad para techos interiores."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Múltiples modelos disponibles",
+            "description": "Actualmente ofrecemos los modelos Dunas y París, con nuevos modelos siendo desarrollados constantemente."
+        },
+        {
+            "id": 2,
+            "title": "Diseños únicos y sofisticados",
+            "description": "Cada modelo posee características estéticas distintas, permitiendo personalización completa de los ambientes."
+        },
+        {
+            "id": 3,
+            "title": "Instalación fácil y rápida",
+            "description": "Fijación con adhesivos o argamasa reduce tiempo y costos de obra."
+        },
+        {
+            "id": 4,
+            "title": "Aislamiento térmico eficiente",
+            "description": "Contribuye al confort térmico y economía de energía en climatización."
+        }
+    ],
+    "generalCharacteristics": [
+        "EPS de alta densidad (15-20 kg/m³)",
+        "Conductividad térmica de ~0,035 W/m·K",
+        "Resistencia a la compresión de 0,10-0,15 MPa",
+        "Absorción de agua < 4% en 5 años",
+        "Superficie lisa, lista para pintura o texturas",
+        "100% reciclable, sin emisión de CFC",
+        "Múltiples modelos con diseños diferenciados",
+        "Expansión continua de la línea de productos"
+    ],
+    "applications": {
+        "title": "Acabados estéticos sofisticados para techos en proyectos residenciales y comerciales",
+        "description": "Los Techos Isoart son ideales para techos interiores que exigen acabados estéticos diferenciados. Con múltiples modelos disponibles, cada uno ofrece características únicas que permiten personalización completa de los ambientes. Sustituyen materiales tradicionales como yeso y madera, ofreciendo ligereza, resistencia a la humedad y aislamiento térmico, siendo perfectos para residencias, oficinas y espacios comerciales que buscan estética, funcionalidad y diferenciación.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Salas y dormitorios residenciales"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Oficinas y salas comerciales"
+            },
+            {
+                "icon": "TbBuildingStore",
+                "text": "Tiendas y restaurantes"
+            },
+            {
+                "icon": "TbTools",
+                "text": "Proyectos de decoración y arquitectura"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Múltiples modelos disponibles": "Actualmente ofrecemos los modelos Dunas y París, cada uno con características estéticas únicas. El modelo Dunas está inspirado en las ondulaciones naturales de las dunas de arena, mientras que París remite a la elegancia de la arquitectura parisina. Nuevos modelos están siendo constantemente desarrollados para expandir las opciones de acabado.",
+        "Estética y personalización": "Cada modelo de techo posee diseño único y sofisticado, permitiendo acabados como pinturas, texturas y cornisas. Los patrones diferenciados atienden desde proyectos que buscan armonía con la naturaleza hasta aquellos que exigen sofisticación y refinamiento arquitectónico.",
+        "Instalación eficiente": "Fijación con adhesivos específicos o argamasa AC-3 garantiza rapidez, practicidad y limpieza en la obra, con juntas reforzadas por cinta de fibra de vidrio.",
+        "Aislamiento térmico": "El EPS de baja conductividad térmica (~0,035 W/m·K) proporciona confort térmico y economía de energía en climatización.",
+        "Sostenibilidad": "100% reciclables y libres de CFC, los techos Isoart son ambientalmente responsables."
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "id": 12,
+    "name": "Moldings for Columns and Capitals",
+    "slug": "moldings-columns-capitals",
+    "description": "High-density EPS moldings with flexible coating, designed for columns and capitals, offering elegance, lightness and customization for architectural projects.",
+    "images": [
+        "/img/produtos/molduras/colunasecapiteis/colunas-01.avif",
+        "/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_0010.avif",
+        "/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_0020.avif",
+        "/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_0030.avif",
+        "/img/produtos/molduras/colunasecapiteis/colunas-1440x-800_0040.avif"
+    ],
+    "specifications": {
+        "material": "Virgin EPS with polymeric resin coating",
+        "densidade": "20-30 kg/m³",
+        "dimensoes": "Customizable (square or round)",
+        "aplicacao": "Internal and external columns and capitals"
+    },
+    "hero": {
+        "title": "Moldings for Columns and Capitals",
+        "description": "Decorative solutions for columns and capitals, combining sophistication and ease of installation.",
+        "buttonText": "Request a quote",
+        "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "Isoart Moldings for Columns and Capitals bring charm and elegance to internal and external architectural projects.",
+        "description": "Isoart Moldings for Columns and Capitals are manufactured in high-density EPS with flexible coating, ideal for wrapping square pillars (up to 30x30 cm) or round ones (diameter up to 30 cm). With simple installation and customization, they offer sophisticated aesthetics, resistance to climate variations and low structural impact, perfect for residences and commercial buildings."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Sophisticated design",
+            "description": "Enhances columns with customizable finishes."
+        },
+        {
+            "id": 2,
+            "title": "Structural lightness",
+            "description": "Does not overload pillars, ideal for renovations."
+        },
+        {
+            "id": 3,
+            "title": "Climate resistance",
+            "description": "Withstands humidity and thermal variations without damage."
+        }
+    ],
+    "generalCharacteristics": [
+        "High-density EPS (20-30 kg/m³)",
+        "Flexible coating with polymeric resin and mineral powders",
+        "Compression resistance of 0.15-0.25 MPa",
+        "Water absorption < 4% in 5 years",
+        "Square or round models for pillars up to 30 cm",
+        "100% recyclable, no CFC emissions"
+    ],
+    "applications": {
+        "title": "Elegant solutions for columns and capitals in architectural projects",
+        "description": "Isoart Moldings for Columns and Capitals are ideal for covering pillars in internal and external environments, offering classic or modern aesthetics. With fast installation and resistance to weathering, they are perfect for residences, offices and commercial spaces.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Residential columns"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Office pillars"
+            },
+            {
+                "icon": "TbBuildingStore",
+                "text": "Commercial facades"
+            },
+            {
+                "icon": "TbTools",
+                "text": "Decoration projects"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Customizable aesthetics": "Available in square or round models, the moldings allow finishes such as putties, textures and paintings, adapting to classic or modern projects.",
+        "Practical installation": "Fixing with AC-3 mortar and wooden dowels for larger pieces ensures speed and precision, with joints reinforced by PU foam and mesh tape.",
+        "External durability": "High-density EPS and flexible coating resist rain, sun and thermal variations, ideal for external columns without cracks.",
+        "Sustainability": "100% recyclable and CFC-free, Isoart moldings are environmentally responsible."
+    }
+}

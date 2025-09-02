@@ -1,0 +1,81 @@
+{
+    "id": 21,
+    "name": "Pérolas em EPS",
+    "slug": "perolas-em-eps",
+    "description": "Pérolas em EPS para preenchimento de embalagens, oferecendo proteção contra impactos e leveza para transporte de produtos frágeis.",
+    "images": [
+        "/img/produtos/embalagens/perolas/perolas-01.avif",
+        "/img/produtos/embalagens/perolas/perolas-1440x-800_001.avif",
+        "/img/produtos/embalagens/perolas/perolas-1440x-800_002.avif",
+        "/img/produtos/embalagens/perolas/perolas-1440x-800_003.avif"
+    ],
+    "specifications": {
+        "material": "EPS virgem",
+        "densidade": "10-12 kg/m³",
+        "dimensoes": "Grânulos de 2-8 mm",
+        "aplicacao": "Preenchimento de embalagens"
+    },
+    "hero": {
+        "title": "Pérolas em EPS",
+        "description": "Soluções em EPS para preenchimento de embalagens, garantindo proteção contra impactos e leveza no transporte.",
+        "buttonText": "Solicite um orçamento",
+        "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "As Pérolas em EPS Isoart oferecem preenchimento leve e protetor para embalagens.",
+        "description": "As Pérolas em EPS Isoart são grânulos de poliestireno expandido de baixa densidade, ideais para preencher espaços em embalagens e proteger produtos frágeis durante transporte e armazenamento. Com alta resistência a impactos e leveza, são perfeitas para indústrias logísticas, de varejo e e-commerce, sendo 100% recicláveis e sustentáveis."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Proteção contra impactos",
+            "description": "Absorve choques, protegendo produtos frágeis em embalagens."
+        },
+        {
+            "id": 2,
+            "title": "Leveza extrema",
+            "description": "Reduz significativamente o peso das embalagens."
+        },
+        {
+            "id": 3,
+            "title": "Sustentabilidade",
+            "description": "100% reciclável, com logística reversa pela Isoart."
+        }
+    ],
+    "generalCharacteristics": [
+        "EPS de baixa densidade (10-12 kg/m³)",
+        "Resistência à compressão de 0,10-0,12 MPa",
+        "Absorção de água < 2% em 5 anos",
+        "Grânulos de 2-8 mm para preenchimento",
+        "Não propaga fungos ou bactérias",
+        "100% reciclável, sem emissão de CFC"
+    ],
+    "applications": {
+        "title": "Preenchimento protetor para embalagens de produtos frágeis",
+        "description": "As Pérolas em EPS Isoart são ideais para preencher espaços em embalagens, protegendo produtos frágeis como eletrônicos, vidros e itens de varejo durante transporte e armazenamento. Com leveza e resistência, atendem a indústrias logísticas, de e-commerce e varejo, reduzindo danos e custos.",
+        "indications": [
+            {
+                "icon": "TbDeviceTv",
+                "text": "Eletrônicos"
+            },
+            {
+                "icon": "TbWindow",
+                "text": "Vidros e cerâmicas"
+            },
+            {
+                "icon": "TbPackage",
+                "text": "Produtos de varejo"
+            },
+            {
+                "icon": "TbTruck",
+                "text": "Logística e e-commerce"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Proteção contra impactos": "Os grânulos de EPS absorvem choques, garantindo a proteção de produtos frágeis durante transporte.",
+        "Leveza": "Com densidade de 10-12 kg/m³, as pérolas reduzem o peso das embalagens, otimizando custos logísticos.",
+        "Versatilidade": "Grânulos de 2-8 mm adaptam-se a diferentes tipos de embalagens e produtos.",
+        "Sustentabilidade": "100% recicláveis e livres de CFC, as molduras Isoart são ambientalmente responsáveis."
+    }
+}

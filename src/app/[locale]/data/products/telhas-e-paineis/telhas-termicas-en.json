@@ -1,0 +1,115 @@
+{
+    "id": 1,
+    "name": "Thermal Roofing",
+    "slug": "thermal-roofing",
+    "description": "Roofing with PIR or EPS core and double coating with galvalume steel sheets or film, ideal for roofs with excellent thermal insulation.",
+    "images": [
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-01.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0010.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0020.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0030.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0040.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0050.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0060.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0070.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0080.avif",
+        "/img/produtos/telhas-revestimentos/telhas-termicas/telhas-termicas-1440-800_0090.avif"
+    ],
+    "specifications": {
+        "material": "Galvanized steel + EPS/PIR",
+        "espessura": "30mm, 50mm, 100mm",
+        "cor": "Various options",
+        "aplicacao": "Roofing"
+    },
+    "hero": {
+        "title": "Thermal Roofing",
+        "description": "Discover the ideal solution for efficient roofs with superior thermal insulation.",
+        "buttonText": "Request a quote",
+        "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "Isoart Thermal Roofing offers lightness, economy and excellent thermal performance, optimizing construction and ensuring comfort at lower cost.",
+        "description": "Isoart Thermal Roofing is a light and efficient solution for civil construction, replacing traditional systems with advantages. Produced with polyisocyanurate (PIR) and galvalume steel coating, it provides lighter structures, reduced load on foundations and greater agility in construction. In addition to excellent thermal performance, it allows significant savings in concrete, steel and labor, being ideal for projects that require productivity, comfort and cost-effectiveness."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Thermal insulation",
+            "description": "Reduces the need for air conditioning, ensuring internal comfort."
+        },
+        {
+            "id": 2,
+            "title": "High resistance",
+            "description": "Supports adverse conditions with guaranteed durability."
+        },
+        {
+            "id": 3,
+            "title": "Extended durability",
+            "description": "Offers long service life with minimal maintenance."
+        }
+    ],
+    "generalCharacteristics": [
+        "Lower load on structure with excellent mechanical performance",
+        "Easier to transport and assemble, optimizing construction time",
+        "Lower consumption of resources such as concrete, steel and wood",
+        "Thermal comfort and noise reduction in internal environments"
+    ],
+    "applications": {
+        "title": "Greater economy, agility in execution and thermal comfort with less structural effort",
+        "description": "Thermal Roofing is manufactured with Polyisocyanurate (PIR), providing lighter tiles, easy handling and excellent thermal insulation. Ideal for works that require speed, performance and cost reduction.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Houses and townhouses"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Residential buildings"
+            },
+            {
+                "icon": "TbFactory",
+                "text": "Industrial warehouses"
+            },
+            {
+                "icon": "TbBuildingStore",
+                "text": "Commercial establishments"
+            }
+        ]
+    },
+    "modelsTable": {
+        "title": "Available models:",
+        "headers": [
+            "Material",
+            "Thickness",
+            "Coating",
+            "Trapezoids"
+        ],
+        "rows": [
+            {
+                "material": "PIR",
+                "espessuras": [
+                    "30mm",
+                    "50mm"
+                ],
+                "revestimento": "Steel / Steel",
+                "trapezios": "3 or 5 trapezoids"
+            },
+            {
+                "material": "PIR",
+                "espessuras": [
+                    "20mm",
+                    "30mm"
+                ],
+                "revestimento": "Steel / Film",
+                "trapezios": "3 or 5 trapezoids"
+            }
+        ],
+        "note": "Steel in thickness options: 0.38mm / 0.43mm / 0.50mm"
+    },
+    "tabDescriptions": {
+        "Structural load relief": "The lightness of EPS significantly reduces the self-weight of the slab compared to traditional systems, which relieves the load on foundations, pillars and beams. This enables more efficient and economical sizing of the entire structure, resulting in lower consumption of concrete and steel. Additionally, it allows spanning larger spans with fewer support elements, optimizing the project and contributing to more rational construction execution.",
+        "Construction savings": "EPS slabs offer savings in various areas: materials, time and labor. Assembly is simpler and more agile, requiring fewer professionals on site. Transport of pieces is facilitated by low weight, both horizontally and vertically. The reduction in the use of wooden forms, concrete and steel also directly impacts the budget, making the system more competitive and sustainable, without compromising structural performance.",
+        "Project flexibility": "With production to measure, EPS slabs adapt to different construction needs, both in height and width and length. Their structure facilitates the creation of paths for electrical and hydraulic installations, and can be shaped with simple tools or thermal blowers. This eliminates the risk of damaging the concrete cover, as occurs in ceramic systems, and allows adjustments without compromising slab integrity.",
+        "Intelligent thermal insulation": "In addition to acting as an excellent thermal insulator, EPS contributes to more adequate concrete curing. It prevents loss of mixing water, maintaining moisture for longer and improving slab resistance after concreting. The result is a more stable and durable structure that provides thermal comfort to the environment and reduces the need for artificial air conditioning - which directly impacts the building's energy consumption."
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "id": 4,
+    "name": "Sala Limpia",
+    "slug": "sala-limpia",
+    "description": "Paneles isotérmicos con núcleo en PIR y revestimiento en acero inoxidable o galvalume, diseñados para ambientes de sala limpia con alta asepsia y control de partículas, cumpliendo normas rigurosas.",
+    "images": [
+        "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-01.avif",
+        "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0010.avif",
+        "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0020.avif",
+        "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0030.avif",
+        "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0040.avif",
+        "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0050.avif",
+        "/img/produtos/telhas-revestimentos/sala-limpa/sala-limpa-1440x-800_0060.avif"
+    ],
+    "specifications": {
+        "material": "Acero inoxidable AISI 304 o galvalume + PIR",
+        "espessura": "50mm, 100mm, 150mm",
+        "cor": "Acero inoxidable mate o blanco RAL 9003",
+        "aplicacao": "Salas limpias (industria farmacéutica, electrónica, hospitalaria)"
+    },
+    "hero": {
+        "title": "Sala Limpia",
+        "description": "Paneles isotérmicos de alto rendimiento para ambientes controlados con riguroso control de partículas y asepsia.",
+        "buttonText": "Solicite un presupuesto",
+        "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "Los Paneles de Sala Limpia Isoart garantizan asepsia, control de partículas y aislamiento térmico para ambientes altamente controlados.",
+        "description": "Los Paneles de Sala Limpia Isoart están diseñados para atender las exigencias de ambientes controlados, como industrias farmacéuticas, electrónicas y hospitalarias. Con núcleo de poliisocianurato (PIR) y revestimiento en acero inoxidable AISI 304 o galvalume, ofrecen alta resistencia química, facilidad de limpieza y conformidad con normas de salas limpias, garantizando seguridad y eficiencia."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Alta asepsia",
+            "description": "Superficies lisas y resistentes facilitan la limpieza y el control de partículas."
+        },
+        {
+            "id": 2,
+            "title": "Conformidad con normas",
+            "description": "Atiende estándares rigurosos de salas limpias (ISO 14644, GMP)."
+        },
+        {
+            "id": 3,
+            "title": "Durabilidad",
+            "description": "Resistencia a agentes químicos y corrosión para larga vida útil."
+        }
+    ],
+    "generalCharacteristics": [
+        "Núcleo en PIR con densidad 30-38 kg/m³",
+        "Revestimiento en acero inoxidable AISI 304 o galvalume",
+        "Superficies lisas para fácil higienización",
+        "Alta resistencia al fuego (Clase R1, NBR 15366)",
+        "Aislamiento térmico superior (0,022 W/m.K)",
+        "Producción a medida para proyectos específicos"
+    ],
+    "applications": {
+        "title": "Soluciones para ambientes controlados con alta exigencia de asepsia y eficiencia",
+        "description": "Los Paneles de Sala Limpia Isoart son ideales para ambientes que exigen control riguroso de partículas y temperatura, como laboratorios, industrias farmacéuticas y electrónicas. Con materiales de alta calidad y acabado liso, garantizan asepsia, durabilidad y conformidad con estándares internacionales.",
+        "indications": [
+            {
+                "icon": "TbMedicineSyrup",
+                "text": "Industria farmacéutica"
+            },
+            {
+                "icon": "TbMicroscope",
+                "text": "Laboratorios de investigación"
+            },
+            {
+                "icon": "TbBuildingFactory2",
+                "text": "Industria electrónica"
+            },
+            {
+                "icon": "TbBuildingHospital",
+                "text": "Ambientes hospitalarios"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Control de asepsia": "Los paneles con revestimiento en acero inoxidable AISI 304 o galvalume liso garantizan superficies fáciles de limpiar, minimizando la contaminación por partículas y ateniendo normas como ISO 14644 y GMP para salas limpias.",
+        "Aislamiento térmico": "El núcleo de PIR (conductividad térmica 0,022 W/m.K) mantiene temperaturas estables, reduciendo costos con climatización en ambientes controlados, como laboratorios e industrias farmacéuticas.",
+        "Resistencia química": "El acero inoxidable y el PIR son resistentes a agentes químicos y corrosivos, garantizando durabilidad en ambientes agresivos y reduciendo costos de mantenimiento.",
+        "Conformidad y seguridad": "Producidos con materiales libres de HCFCs y retardantes a la llama (Clase R1), los paneles Isoart ofrecen seguridad contra incendios y conformidad con normas ambientales y técnicas."
+    }
+}

@@ -11,7 +11,7 @@ import BenefitsSection from '@/app/[locale]/components/benefits-section/benefits
 import IncendioComponent from '@/app/[locale]/components/pir-incendio/pir-incendio';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
-import { useCategoryData } from '../../hooks/use-category-data';
+import { useCategoryData } from '@/app/[locale]/hooks/use-category-data';
 // Fallback para Android antigo que não suporta importação estática de JSON
 let menuData: any[] = [];
 
@@ -46,7 +46,7 @@ try {
         }
     ];
 }
-import LoadingScreen from '../../components/loading-screen/loading-screen';
+import LoadingScreen from '@/app/[locale]/components/loading-screen/loading-screen';
 
 // Interfaces importadas do hook useCategoryData
 
@@ -54,7 +54,7 @@ export default function CategoryPage() {
     const params = useParams();
     const category = params.category as string;
     const locale = params.locale as string;
-    
+
     const t = useTranslations('categoryPage');
     const tCommon = useTranslations('common.buttons');
 
@@ -85,9 +85,9 @@ export default function CategoryPage() {
         buttonLink: categoryData.hero?.buttonLink || `/${locale}/contato`,
         backgroundImage: (CATEGORY_HERO_IMAGES as any)[category] || '/img/heroes/categories/construcao-civil-hero.avif'
     };
-    
 
-    
+
+
 
 
     const benefitsSection = categoryData.benefits || [
@@ -132,11 +132,11 @@ export default function CategoryPage() {
                             const staticData = (menuData as any[]).find((item: any) => item.slug === category);
                             const staticProduct = staticData?.products?.find((p: any) => p.slug === product.slug);
                             const imageSrc = staticProduct?.image || product.image;
-                            
+
                             // Construir link correto usando dados estáticos
                             const correctSlug = staticProduct?.slug || product.slug;
                             const correctCategorySlug = staticData?.slug || categoryData.slug;
-                            
+
                             return (
                                 <article key={product.id} className={styles['category-products-grid-card']}>
                                     <Link href={`/${locale}/solucoes/${correctCategorySlug}/${correctSlug}`}>
@@ -167,7 +167,7 @@ export default function CategoryPage() {
             {categoryData.benefits && categoryData.benefits.length > 0 && (
                 <BenefitsSection benefits={categoryData.benefits} />
             )}
-            {categoryData.slug === 'telhas-e-paineis' && <IncendioComponent />}
+            {categoryData.slug === 'telhas-e-paineis' && <IncendioComponent locale={locale} />}
             <SobreEmpresa locale={locale} />
             <ContactComponent locale={locale} />
         </div>

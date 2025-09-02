@@ -1,0 +1,81 @@
+{
+    "id": 6,
+    "name": "Losas en EPS",
+    "slug": "losas-eps",
+    "description": "Losas en EPS (Poliestireno Expandido) proyectadas para reducir peso y costos en construcciones, ofreciendo aislamiento térmico y acústico, además de mayor agilidad en la obra.",
+    "images": [
+        "/img/produtos/construcao-civil/lajes/lajes-01.avif",
+        "/img/produtos/construcao-civil/lajes/lajes-1440x-800_001.avif",
+        "/img/produtos/construcao-civil/lajes/lajes-1440x-800_002.avif",
+        "/img/produtos/construcao-civil/lajes/lajes-1440x-800_003.avif"
+    ],
+    "specifications": {
+        "material": "Poliestireno Expandido (EPS)",
+        "espessura": "120mm, 150mm, 200mm",
+        "densidade": "13-20 kg/m³",
+        "aplicacao": "Losas de celosía, relleno de pisos"
+    },
+    "hero": {
+        "title": "Losas en EPS",
+        "description": "Soluciones ligeras y económicas para losas con aislamiento térmico y acústico superior.",
+        "buttonText": "Solicite un presupuesto",
+        "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "Las Losas en EPS Isoart ofrecen ligereza, economía y excelente desempeño térmico, optimizando la obra y garantizando confort con menor costo.",
+        "description": "Las Losas en EPS Isoart son una solución ligera y eficiente para la construcción civil, sustituyendo con ventajas los sistemas tradicionales. Producidas con poliestireno expandido (EPS), proporcionan reducción de carga en los cimientos, mayor agilidad en la obra y excelente aislamiento térmico y acústico. Ideales para proyectos que exigen productividad, confort y costo-beneficio, conforme normas ABNT NBR 14859."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Reducción de peso",
+            "description": "Disminuye la carga estructural, optimizando cimientos y pilares."
+        },
+        {
+            "id": 2,
+            "title": "Aislamiento térmico",
+            "description": "Reduce la necesidad de climatización, garantizando confort."
+        },
+        {
+            "id": 3,
+            "title": "Economía en la obra",
+            "description": "Reduce hasta 20% de los costos con materiales y mano de obra."
+        }
+    ],
+    "generalCharacteristics": [
+        "Ligereza con densidad media de 13-20 kg/m³",
+        "Alta resistencia a la compresión (0,1-0,2 MPa)",
+        "Aislamiento térmico con coeficiente de 0,028 Kcal/h.m.°C",
+        "Material autoextinguible (Clase F)",
+        "100% reciclable, sin emisión de CFC",
+        "Facilidad de corte y adaptación en obra"
+    ],
+    "applications": {
+        "title": "Ligereza y eficiencia para losas en proyectos residenciales y comerciales",
+        "description": "Las Losas en EPS Isoart son ideales para construcciones que buscan reducción de costos y mayor rapidez en la ejecución. Con excelente aislamiento térmico y acústico, son perfectas para losas de celosía y relleno de pisos en obras residenciales, comerciales e industriales.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Casas y sobrados"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Edificios residenciales"
+            },
+            {
+                "icon": "TbFactory",
+                "text": "Galpones industriales"
+            },
+            {
+                "icon": "TbBuildingStore",
+                "text": "Establecimientos comerciales"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Alivio de carga en la estructura": "La ligereza del EPS reduce significativamente el peso propio de la losa en comparación a los sistemas tradicionales, aliviando la carga en los cimientos, pilares y vigas, permitiendo un dimensionamiento más económico y eficiente.",
+        "Economía en la obra": "Las losas en EPS ofrecen economía en materiales, tiempo y mano de obra, con montaje simple y reducción en el uso de hormigón, acero y encofrados de madera, conforme ABNT NBR 14859.",
+        "Aislamiento térmico y acústico": "El EPS proporciona excelente aislamiento térmico (0,028 Kcal/h.m.°C) y acústico, reduciendo costos con climatización y mejorando el confort ambiental.",
+        "Flexibilidad en el proyecto": "Producidas a medida, las losas en EPS se adaptan a diferentes vanos y formatos, facilitando el paso de instalaciones eléctricas e hidráulicas."
+    }
+}

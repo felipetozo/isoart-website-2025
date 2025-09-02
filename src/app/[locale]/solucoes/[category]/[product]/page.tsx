@@ -48,8 +48,8 @@ import { IoFastFoodOutline } from "react-icons/io5";
 import ImageCarousel from '@/app/[locale]/components/image-carousel/image-carousel';
 import { useTranslations } from 'next-intl';
 import { useParams } from 'next/navigation';
-import { useState, useEffect } from 'react';
-import LoadingScreen from '../../../components/loading-screen/loading-screen';
+import { useEffect, useState } from 'react';
+import LoadingScreen from '@/app/[locale]/components/loading-screen/loading-screen';
 
 interface ProductData {
     id: number;
@@ -159,38 +159,50 @@ export default function ProductPage() {
     const category = params.category as string;
     const product = params.product as string;
     const locale = params.locale as string;
-    
+
     // Estados para dados do produto e categoria
-    const [productData, setProductData] = useState<ProductData | null>(null);
     const [categoryData, setCategoryData] = useState<CategoryData | null>(null);
+    const [productData, setProductData] = useState<ProductData | null>(null);
     const [loading, setLoading] = useState(true);
-    
-    // Hook de traduções
+
     const t = useTranslations('productPage');
     const tCategory = useTranslations('categoryPage');
     const tCommon = useTranslations('common.buttons');
     const tSections = useTranslations('common.sections');
-    
+
     useEffect(() => {
         const loadProductData = () => {
+            setLoading(true);
             try {
-                // Buscar dados básicos da categoria do menuData
-                const categoryDataTemp = (menuData as CategoryData[]).find((item: CategoryData) => item.slug === category);
-                
+                // Buscar dados detalhados da categoria
+                let categoryDataTemp: CategoryData | null = null;
+                try {
+                    categoryDataTemp = require(`@/app/[locale]/data/categories/${category}.json`);
+                } catch (err) {
+                    categoryDataTemp = (menuData as CategoryData[]).find((item: CategoryData) => item.slug === category) || null;
+                }
+
                 if (!categoryDataTemp) {
                     notFound();
                     return;
                 }
-
                 setCategoryData(categoryDataTemp);
 
-                // Buscar dados básicos do produto no menuData
-                const basicProductData = categoryDataTemp.products.find((p: ProductData) => p.slug === product);
-                if (basicProductData) {
-                    setProductData(basicProductData);
-                } else {
-                    notFound();
+                // Buscar dados detalhados do produto usando o caminho completo
+                let productDataTemp: ProductData | null = null;
+                try {
+                    productDataTemp = require(`@/app/[locale]/data/products/${category}/${product}.json`);
+                } catch (err) {
+                    // fallback para dados básicos da categoria
+                    productDataTemp = categoryDataTemp.products.find((p: ProductData) => p.slug === product) || null;
                 }
+
+                if (!productDataTemp) {
+                    notFound();
+                    return;
+                }
+                setProductData(productDataTemp);
+
             } catch (error) {
                 console.error('Erro ao carregar dados:', error);
                 notFound();
@@ -198,7 +210,6 @@ export default function ProductPage() {
                 setLoading(false);
             }
         };
-
         loadProductData();
     }, [category, product]);
 
@@ -209,9 +220,6 @@ export default function ProductPage() {
     if (!productData) {
         notFound();
     }
-
-    // Buscar dados da categoria para pegar os benefícios
-    // const categoryData = await getCategoryData(category); // This line is removed as categoryData is now state
 
     // Mapeamento simples das imagens hero para cada produto
     const PRODUCT_HERO_IMAGES = {
@@ -708,7 +716,7 @@ export default function ProductPage() {
         buttonLink: productData.hero?.buttonLink || `/${locale}/contato`,
         backgroundImage: (PRODUCT_HERO_IMAGES as any)[category]?.[product] || '/img/heroes/categories/construcao-civil-hero.avif'
     };
-    
+
 
 
     // Mapear slug da URL para chave das traduções
@@ -718,9 +726,9 @@ export default function ProductPage() {
         'molduras-decorativas': 'molduras',
         'embalagens-em-eps': 'embalagens'
     };
-    
+
     const categoryKey = categoryKeyMap[category] || category;
-    
+
     // Mapear slug do produto para chave das traduções
     const productKeyMap: { [key: string]: string } = {
         'lajes-em-eps': 'lajes',
@@ -742,9 +750,9 @@ export default function ProductPage() {
         'sala-limpa': 'salaLimpa',
         'camara-frigorifica': 'camaraFrigorifica'
     };
-    
+
     const productKey = productKeyMap[product] || product;
-    
+
     const categoryDescription = productData.categoryDescription || {
         title: tCategory(`categories.${categoryKey}.products.${productKey}.name`),
         description: tCategory(`categories.${categoryKey}.products.${productKey}.description`)
@@ -759,8 +767,6 @@ export default function ProductPage() {
     const applications = productData.applications || null;
 
     const tabDescriptions = productData.tabDescriptions || {};
-
-
 
     return (
         <div className={styles['product-page']}>
@@ -799,11 +805,11 @@ export default function ProductPage() {
                         {(() => {
                             // Sistema hardcoded 100% garantido
                             const hardcodedImages = (PRODUCT_GALLERY_IMAGES as any)[category]?.[product];
-                            
+
                             // Se não tiver imagens hardcoded, usar fallback padrão
                             if (!hardcodedImages || hardcodedImages.length === 0) {
                                 return (
-                                    <ImageCarousel 
+                                    <ImageCarousel
                                         images={['/img/geral/exemplo2.avif']}
                                         alt={productData.name}
                                         width={1440}
@@ -811,9 +817,9 @@ export default function ProductPage() {
                                     />
                                 );
                             }
-                            
+
                             return (
-                                <ImageCarousel 
+                                <ImageCarousel
                                     images={hardcodedImages}
                                     alt={productData.name}
                                     width={1440}
@@ -823,7 +829,7 @@ export default function ProductPage() {
                         })()}
                     </div>
 
-                {/* Características gerais */}
+                    {/* Características gerais */}
                     {generalCharacteristics.length > 0 && (
                         <>
                             <h3>{tSections('characteristics')}</h3>

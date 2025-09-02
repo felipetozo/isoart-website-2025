@@ -1,0 +1,81 @@
+{
+    "id": 21,
+    "name": "Perlas en EPS",
+    "slug": "perlas-eps",
+    "description": "Perlas en EPS para relleno de embalajes, ofreciendo protección contra impactos y ligereza para transporte de productos frágiles.",
+    "images": [
+        "/img/produtos/embalagens/perolas/perolas-01.avif",
+        "/img/produtos/embalagens/perolas/perolas-1440x-800_001.avif",
+        "/img/produtos/embalagens/perolas/perolas-1440x-800_002.avif",
+        "/img/produtos/embalagens/perolas/perolas-1440x-800_003.avif"
+    ],
+    "specifications": {
+        "material": "EPS virgen",
+        "densidade": "10-12 kg/m³",
+        "dimensoes": "Gránulos de 2-8 mm",
+        "aplicacao": "Relleno de embalajes"
+    },
+    "hero": {
+        "title": "Perlas en EPS",
+        "description": "Soluciones en EPS para relleno de embalajes, garantizando protección contra impactos y ligereza en el transporte.",
+        "buttonText": "Solicite un presupuesto",
+        "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "Las Perlas en EPS Isoart ofrecen relleno ligero y protector para embalajes.",
+        "description": "Las Perlas en EPS Isoart son gránulos de poliestireno expandido de baja densidad, ideales para llenar espacios en embalajes y proteger productos frágiles durante transporte y almacenamiento. Con alta resistencia a impactos y ligereza, son perfectas para industrias logísticas, de retail y e-commerce, siendo 100% reciclables y sostenibles."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Protección contra impactos",
+            "description": "Absorbe choques, protegiendo productos frágiles en embalajes."
+        },
+        {
+            "id": 2,
+            "title": "Ligereza extrema",
+            "description": "Reduce significativamente el peso de los embalajes."
+        },
+        {
+            "id": 3,
+            "title": "Sostenibilidad",
+            "description": "100% reciclable, con logística inversa por Isoart."
+        }
+    ],
+    "generalCharacteristics": [
+        "EPS de baja densidad (10-12 kg/m³)",
+        "Resistencia a la compresión de 0,10-0,12 MPa",
+        "Absorción de agua < 2% en 5 años",
+        "Gránulos de 2-8 mm para relleno",
+        "No propaga hongos o bacterias",
+        "100% reciclable, sin emisión de CFC"
+    ],
+    "applications": {
+        "title": "Relleno protector para embalajes de productos frágiles",
+        "description": "Las Perlas en EPS Isoart son ideales para llenar espacios en embalajes, protegiendo productos frágiles como electrónicos, vidrios y artículos de retail durante transporte y almacenamiento. Con ligereza y resistencia, atienden a industrias logísticas, de e-commerce y retail, reduciendo daños y costos.",
+        "indications": [
+            {
+                "icon": "TbDeviceTv",
+                "text": "Electrónicos"
+            },
+            {
+                "icon": "TbWindow",
+                "text": "Vidrios y cerámicas"
+            },
+            {
+                "icon": "TbPackage",
+                "text": "Productos de retail"
+            },
+            {
+                "icon": "TbTruck",
+                "text": "Logística y e-commerce"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Protección contra impactos": "Los gránulos de EPS absorben choques, garantizando la protección de productos frágiles durante transporte.",
+        "Ligereza": "Con densidad de 10-12 kg/m³, las perlas reducen el peso de los embalajes, optimizando costos logísticos.",
+        "Versatilidad": "Gránulos de 2-8 mm se adaptan a diferentes tipos de embalajes y productos.",
+        "Sostenibilidad": "100% reciclables y libres de CFC, las molduras Isoart son ambientalmente responsables."
+    }
+}

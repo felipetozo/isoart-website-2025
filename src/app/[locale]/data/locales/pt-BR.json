@@ -664,32 +664,32 @@
       "epsButton": "Conheça o EPS",
       "pirButton": "Conheça o PIR"
     },
-          "eps": {
-        "title": "EPS: Eficiência e Sustentabilidade",
-        "description": "O Poliestireno Expandido (EPS), conhecido popularmente como Isopor, é um material leve e versátil, amplamente utilizado por suas propriedades de isolamento térmico e acústico. Além disso, é 100% reciclável e não emite substâncias prejudiciais ao meio ambiente, sendo uma escolha sustentável para diversas aplicações.",
-        "subtitle": "Principais benefícios do EPS:",
-        "benefits": {
-          "benefit1": "Atóxico e sustentável",
-          "benefit2": "Sem emissão de CFC",
-          "benefit3": "100% reciclável e reaproveitável",
-          "benefit4": "Material leve e resistente a impactos"
-        },
-        "applicationsTitle": "Aplicações",
-        "applicationsDescription": "Utilizado em isolamento térmico e acústico, embalagens, construção civil, decoração e outras aplicações. Ideal para edificações comerciais, industriais e residenciais, garantindo eficiência energética, conforto e proteção."
+    "eps": {
+      "title": "EPS: Eficiência e Sustentabilidade",
+      "description": "O Poliestireno Expandido (EPS), conhecido popularmente como Isopor, é um material leve e versátil, amplamente utilizado por suas propriedades de isolamento térmico e acústico. Além disso, é 100% reciclável e não emite substâncias prejudiciais ao meio ambiente, sendo uma escolha sustentável para diversas aplicações.",
+      "subtitle": "Principais benefícios do EPS:",
+      "benefits": {
+        "benefit1": "Atóxico e sustentável",
+        "benefit2": "Sem emissão de CFC",
+        "benefit3": "100% reciclável e reaproveitável",
+        "benefit4": "Material leve e resistente a impactos"
       },
-          "pir": {
-        "title": "PIR: Alta Tecnologia e Segurança",
-        "description": "O Poliisocianurato (PIR) é um material isolante de alto desempenho, utilizado principalmente na fabricação de telhas e painéis térmicos. Produzido em linha contínua automatizada, o PIR garante um isolamento térmico superior e alta resistência ao fogo, sendo essencial para projetos industriais, comerciais e residenciais.",
-        "subtitle": "Principais benefícios do PIR:",
-        "benefits": {
-          "benefit1": "Isolamento térmico de alto desempenho",
-          "benefit2": "Resistência ao fogo, com retardante autoextinguível",
-          "benefit3": "Maior durabilidade e resistência mecânica",
-          "benefit4": "Montagem rápida e limpa",
-          "benefit5": "Ótimo isolamento acústico ( -30dB )",
-          "benefit6": "Sustentável, em conformidade com o Protocolo de Montreal"
-        }
-      },
+      "applicationsTitle": "Aplicações",
+      "applicationsDescription": "Utilizado em isolamento térmico e acústico, embalagens, construção civil, decoração e outras aplicações. Ideal para edificações comerciais, industriais e residenciais, garantindo eficiência energética, conforto e proteção."
+    },
+    "pir": {
+      "title": "PIR: Alta Tecnologia e Segurança",
+      "description": "O Poliisocianurato (PIR) é um material isolante de alto desempenho, utilizado principalmente na fabricação de telhas e painéis térmicos. Produzido em linha contínua automatizada, o PIR garante um isolamento térmico superior e alta resistência ao fogo, sendo essencial para projetos industriais, comerciais e residenciais.",
+      "subtitle": "Principais benefícios do PIR:",
+      "benefits": {
+        "benefit1": "Isolamento térmico de alto desempenho",
+        "benefit2": "Resistência ao fogo, com retardante autoextinguível",
+        "benefit3": "Maior durabilidade e resistência mecânica",
+        "benefit4": "Montagem rápida e limpa",
+        "benefit5": "Ótimo isolamento acústico ( -30dB )",
+        "benefit6": "Sustentável, em conformidade com o Protocolo de Montreal"
+      }
+    },
     "pirApplications": {
       "title": "Aplicações do PIR:",
       "description": "Para cobertura e/ou fechamento de prédios e galpões industriais e comerciais, como supermercados, shopping centers, centros de distribuição e armazenagem, hospitais, agronegócios, ginásios e indústrias em geral, inclusive para residências."

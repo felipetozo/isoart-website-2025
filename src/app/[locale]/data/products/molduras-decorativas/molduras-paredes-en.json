@@ -1,0 +1,83 @@
+{
+    "id": 14,
+    "name": "Wall Moldings",
+    "slug": "wall-moldings",
+    "description": "High-density EPS moldings with flexible coating, ideal for decorative finishing of internal and external walls, with lightness and customization.",
+    "images": [
+        "/img/produtos/molduras/parede/parede-01.avif",
+        "/img/produtos/molduras/parede/parede-1440x-800_001.avif",
+        "/img/produtos/molduras/parede/parede-1440x-800_002.avif",
+        "/img/produtos/molduras/parede/parede-1440x-800_003.avif",
+        "/img/produtos/molduras/parede/parede-1440x-800_004.avif",
+        "/img/produtos/molduras/parede/parede-1440x-800_005.avif"
+    ],
+    "specifications": {
+        "material": "Virgin EPS with polymeric resin coating",
+        "densidade": "20-30 kg/m³",
+        "dimensoes": "Customizable upon request",
+        "aplicacao": "Internal and external walls, boiseries"
+    },
+    "hero": {
+        "title": "Wall Moldings",
+        "description": "Decorative solutions for walls, combining aesthetics, lightness and ease of installation.",
+        "buttonText": "Request a quote",
+        "buttonLink": "/contato"
+    },
+    "categoryDescription": {
+        "title": "Isoart Wall Moldings transform environments with elegant and customizable finishes.",
+        "description": "Isoart Wall Moldings are manufactured in high-density EPS with flexible polymeric resin-based coating, perfect for decorative finishes such as boiseries and partitions. With quick installation, weather resistance and customization, they are ideal for residential, commercial and retrofit projects, valuing internal and external walls."
+    },
+    "benefits": [
+        {
+            "id": 1,
+            "title": "Versatile aesthetics",
+            "description": "Ideal for boiseries and customized decorative finishes."
+        },
+        {
+            "id": 2,
+            "title": "Practical installation",
+            "description": "Fixing with AC-3 mortar ensures speed and cleanliness."
+        },
+        {
+            "id": 3,
+            "title": "Climate resistance",
+            "description": "Supports humidity and thermal variations for external use."
+        }
+    ],
+    "generalCharacteristics": [
+        "High-density EPS (20-30 kg/m³)",
+        "Flexible coating with polymeric resin and mineral powders",
+        "Compression resistance of 0.15-0.25 MPa",
+        "Water absorption < 4% in 5 years",
+        "Smooth surface, free from cement darkening",
+        "100% recyclable, no CFC emissions"
+    ],
+    "applications": {
+        "title": "Decorative finishing for internal and external walls in sophisticated projects",
+        "description": "Isoart Wall Moldings are perfect for creating boiseries, partitions and decorative finishes on internal and external walls. With customization and weather resistance, they are ideal for residences, offices and commercial spaces, valuing aesthetics with low structural impact.",
+        "indications": [
+            {
+                "icon": "TbHome",
+                "text": "Residential walls"
+            },
+            {
+                "icon": "TbBuilding",
+                "text": "Offices and commercial rooms"
+            },
+            {
+                "icon": "TbBuildingStore",
+                "text": "Commercial facades"
+            },
+            {
+                "icon": "TbTools",
+                "text": "Decoration projects"
+            }
+        ]
+    },
+    "tabDescriptions": {
+        "Aesthetics and customization": "Produced to measure, wall moldings allow finishes such as textures, paintings and boiseries, creating elegant and modern environments.",
+        "Efficient installation": "Fixing with AC-3 adhesive mortar and joints with PU foam and fiberglass tape ensures speed, practicality and perfect finishing.",
+        "External durability": "High-density EPS and flexible coating resist rain, sun and thermal variations, ideal for external walls.",
+        "Sustainability": "100% recyclable and CFC-free, Isoart moldings are environmentally responsible."
+    }
+}
