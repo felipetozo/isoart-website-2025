@@ -1,4 +1,4 @@
-// main-nav.tsx - Navegação principal com menus, submenu e versão mobile
+// src/app/[locale]/views/layout/main-nav.tsx - Navegação principal com menus, submenu e versão mobile
 
 'use client';
 
@@ -23,7 +23,6 @@ try {
     }
 } catch (error) {
     console.warn('Erro ao importar menu-data.json, usando dados hardcoded');
-    // Dados hardcoded como fallback
     menuData = [
         {
             id: 1,
@@ -52,12 +51,12 @@ try {
 
 // Tipagem
 interface Product {
-  id: number;
-  name: string;
-  slug: string;
-  description: string;
-  image?: string;
-  specifications?: { [key: string]: string; };
+    id: number;
+    name: string;
+    slug: string;
+    description: string;
+    image?: string;
+    specifications?: { [key: string]: string };
 }
 
 interface Category {
@@ -69,19 +68,15 @@ interface Category {
     products: Product[];
 }
 
-// Type assertion para o menuData
 const typedMenuData = menuData as Category[];
 
-// Componente de imagem para submenu
 const SubmenuImage = ({ src, alt }: { src: string; alt: string }) => {
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
 
     return (
         <div className={styles['submenu-image-container']}>
-            {(isLoading || hasError) && (
-                <div className={styles['submenu-image-placeholder']} />
-            )}
+            {(isLoading || hasError) && <div className={styles['submenu-image-placeholder']} />}
             {!hasError && (
                 <Image
                     src={src || '/img/placeholder.jpg'}
@@ -89,11 +84,9 @@ const SubmenuImage = ({ src, alt }: { src: string; alt: string }) => {
                     width={120}
                     height={85}
                     className={styles['submenu-image']}
-                    onLoad={() => {
-                        setIsLoading(false);
-                    }}
-                    onError={(e) => {
-                        console.error('Erro ao carregar imagem:', src, e);
+                    onLoad={() => setIsLoading(false)}
+                    onError={() => {
+                        console.error('Erro ao carregar imagem:', src);
                         setIsLoading(false);
                         setHasError(true);
                     }}
@@ -114,7 +107,7 @@ function MainNav({ locale }: MainNavProps) {
     const submenuRef = useRef<HTMLDivElement | null>(null);
     const mobileMenuRef = useRef<HTMLDivElement | null>(null);
 
-    // ✅ Correção do tipo do timeout
+    // ✅ Correção de tipo do timeout
     const hideTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null);
@@ -127,7 +120,6 @@ function MainNav({ locale }: MainNavProps) {
     const tContact = useTranslations('contact');
     const tSocial = useTranslations('social');
 
-    // Traduções
     const getCategoryTranslation = (slug: string) => {
         const translations: { [key: string]: string } = {
             'telhas-e-paineis': tMenu('categories.telhasPaineis'),
@@ -188,11 +180,12 @@ function MainNav({ locale }: MainNavProps) {
             hideTimeoutRef.current = null;
         }
         setActiveSubmenu(index);
-        
+
         if (submenuRef.current) {
             const tl = gsap.timeline();
             tl.set(submenuRef.current, { display: 'flex' });
             tl.fromTo(submenuRef.current, { height: 0 }, { height: 'auto', duration: 0.1 });
+
             const submenuItems = submenuRef.current.querySelectorAll(`.${styles['sub-menu-item']}`);
             if (submenuItems.length > 0) {
                 tl.fromTo(submenuItems, { opacity: 0 }, { opacity: 1, duration: 0.1, stagger: 0.1 });
@@ -240,37 +233,21 @@ function MainNav({ locale }: MainNavProps) {
         const tl = gsap.timeline();
         const topBar = iconRef.current?.querySelector(`.${styles['menu-bar-top']}`);
         const bottomBar = iconRef.current?.querySelector(`.${styles['menu-bar-bottom']}`);
-        const mobileMenuItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-menu']} ul li, .${styles['mobile-contact']} p, .${styles['mobile-social']} a, .${styles['mobile-language-option']}`);
+        const mobileMenuItems = mobileMenuRef.current?.querySelectorAll(
+            `.${styles['mobile-menu']} ul li, .${styles['mobile-contact']} p, .${styles['mobile-social']} a, .${styles['mobile-language-option']}`
+        );
 
         if (topBar && bottomBar) {
             if (willOpen) {
-                tl.to(topBar, {
-                    rotate: 45,
-                    translateY: '0.35rem',
-                    duration: 0.2,
-                    ease: "power2.out",
-                    transformOrigin: "center",
-                }, 0);
-                tl.to(bottomBar, {
-                    rotate: -45,
-                    translateY: '-0.35rem',
-                    duration: 0.2,
-                    ease: "power2.out",
-                    transformOrigin: "center",
-                }, 0);
+                tl.to(topBar, { rotate: 45, translateY: '0.35rem', duration: 0.2, ease: 'power2.out', transformOrigin: 'center' }, 0);
+                tl.to(bottomBar, { rotate: -45, translateY: '-0.35rem', duration: 0.2, ease: 'power2.out', transformOrigin: 'center' }, 0);
                 tl.set(mobileMenuRef.current, { display: 'flex' });
                 tl.fromTo(mobileMenuRef.current, { height: 0 }, { height: 'auto', duration: 0.1 });
                 if (mobileMenuItems) {
                     tl.fromTo(mobileMenuItems, { opacity: 0 }, { opacity: 1, duration: 0.1, stagger: 0.1 });
                 }
             } else {
-                tl.to([topBar, bottomBar], {
-                    rotate: 0,
-                    translateY: 0,
-                    duration: 0.3,
-                    ease: "power2.in",
-                    transformOrigin: "center",
-                });
+                tl.to([topBar, bottomBar], { rotate: 0, translateY: 0, duration: 0.3, ease: 'power2.in', transformOrigin: 'center' });
                 if (mobileMenuItems) {
                     const menuItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-menu']} ul li`);
                     if (menuItems) {
@@ -297,16 +274,12 @@ function MainNav({ locale }: MainNavProps) {
             const tl = gsap.timeline();
             const topBar = iconRef.current?.querySelector(`.${styles['menu-bar-top']}`);
             const bottomBar = iconRef.current?.querySelector(`.${styles['menu-bar-bottom']}`);
-            const mobileMenuItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-menu']} ul li, .${styles['mobile-contact']} p, .${styles['mobile-social']} a, .${styles['mobile-language-option']}`);
+            const mobileMenuItems = mobileMenuRef.current?.querySelectorAll(
+                `.${styles['mobile-menu']} ul li, .${styles['mobile-contact']} p, .${styles['mobile-social']} a, .${styles['mobile-language-option']}`
+            );
 
             if (topBar && bottomBar) {
-                tl.to([topBar, bottomBar], {
-                    rotate: 0,
-                    translateY: 0,
-                    duration: 0.3,
-                    ease: "power2.in",
-                    transformOrigin: "center",
-                });
+                tl.to([topBar, bottomBar], { rotate: 0, translateY: 0, duration: 0.3, ease: 'power2.in', transformOrigin: 'center' });
                 if (mobileMenuItems) {
                     const socialItems = mobileMenuRef.current?.querySelectorAll(`.${styles['mobile-social']} a, .${styles['mobile-language-option']}`);
                     if (socialItems) {
@@ -329,7 +302,168 @@ function MainNav({ locale }: MainNavProps) {
 
     return (
         <div className={styles['nav-container']}>
-            {/* ... resto igual ao original ... */}
+            {/* Navegador Institucional */}
+            <nav className={styles['institutional-nav-section']}>
+                <div className={styles['institutional-nav-wrapper']}>
+                    <div className={styles['institutional-nav-social']}>
+                        <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank" aria-label={tSocial('instagram')}>
+                            <BsInstagram />
+                            <span className={styles['sr-only']}>Instagram</span>
+                        </Link>
+                        <Link href="https://www.facebook.com/profile.php?id=61551356827381" target="_blank" aria-label={tSocial('facebook')}>
+                            <BsFacebook />
+                            <span className={styles['sr-only']}>Facebook</span>
+                        </Link>
+                        <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank" aria-label={tSocial('youtube')}>
+                            <BsYoutube />
+                            <span className={styles['sr-only']}>YouTube</span>
+                        </Link>
+                        <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank" aria-label={tSocial('linkedin')}>
+                            <BsLinkedin />
+                            <span className={styles['sr-only']}>LinkedIn</span>
+                        </Link>
+                    </div>
+                    <div className={styles['institucional-nav-right']}>
+                        <div className={styles['institutional-nav-items']}>
+                            <ul>
+                                <li><Link href={`/${locale}/sobre`}>{t('about')}</Link></li>
+                                <li><Link href={`/${locale}/solucoes`}>{t('solutions')}</Link></li>
+                                <li><Link href={`/${locale}/sobre-eps-pir`}>{t('aboutEpsPir')}</Link></li>
+                                <li><Link href={`/${locale}/contato`}>{t('contact')}</Link></li>
+                            </ul>
+                        </div>
+                        <div className={styles['language-selector-wrapper']}>
+                            <div className={styles['language-options']}>
+                                {supportedLocales.map((locale) => {
+                                    const localeInfo = getLocaleInfo(locale);
+                                    const isActive = locale === currentLocale;
+                                    return (
+                                        <button
+                                            key={locale}
+                                            className={`${styles['language-option']} ${isActive ? styles['language-option-active'] : ''}`}
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                handleLocaleChange(locale);
+                                            }}
+                                            title={localeInfo.name}
+                                        >
+                                            <img src={localeInfo.flag} alt={`${t('flag')} ${localeInfo.name}`} className={styles['flag-image']} />
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            {/* Navegador Principal */}
+            <section className={styles['main-nav-section']}>
+                <div className={styles['main-nav-wrapper']}>
+                    <div className={styles['main-nav-content']}>
+                        <div className={styles['main-nav-logo']}>
+                            <Link href={`/${locale}`}>
+                                <Image src={'/img/isoart-logotipo.svg'} alt={t('logo')} width={120} height={62} />
+                            </Link>
+                        </div>
+                        <div className={styles['main-nav-links']}>
+                            <ul>
+                                {typedMenuData.map((item, index) => (
+                                    <Link
+                                        key={item.id}
+                                        href={`/${locale}/solucoes/${item.slug}`}
+                                        onMouseEnter={() => handleMouseEnterLi(index)}
+                                        onMouseLeave={handleMouseLeaveLi}
+                                    >
+                                        <li>
+                                            {getCategoryTranslation(item.slug)}
+                                            <span className={styles['nav-link-underline']}></span>
+                                        </li>
+                                    </Link>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className={styles['main-nav-button']}>
+                            <Link href={`/${locale}/contato`}>
+                                <Button variant="primary" size="medium">
+                                    {t('main.contactButton')}
+                                </Button>
+                            </Link>
+                        </div>
+                        <div className={styles['main-nav-menu-icon']} onClick={toggleMobileMenu} ref={iconRef}>
+                            <span className={styles['menu-bar-top']}></span>
+                            <span className={styles['menu-bar-bottom']}></span>
+                        </div>
+                    </div>
+                    <div
+                        className={styles['sub-menu-categorias']}
+                        ref={submenuRef}
+                        onMouseEnter={handleMouseEnterSubmenu}
+                        onMouseLeave={handleMouseLeaveSubmenu}
+                        data-category={activeSubmenu !== null ? typedMenuData[activeSubmenu].slug.replace(/-/g, '') : ''}
+                    >
+                        {activeSubmenu !== null &&
+                            typedMenuData[activeSubmenu].products.map((product) => (
+                                <div key={`${typedMenuData[activeSubmenu].slug}-${product.slug}`} className={styles['sub-menu-item']}>
+                                    <Link href={`/${locale}/solucoes/${typedMenuData[activeSubmenu].slug}/${product.slug}`}>
+                                        <SubmenuImage src={product.image || '/img/placeholder.jpg'} alt={product.name} />
+                                        <p>{getProductTranslation(product.name)}</p>
+                                    </Link>
+                                </div>
+                            ))}
+                    </div>
+                    <div className={styles['mobile-menu']} ref={mobileMenuRef}>
+                        <ul>
+                            <li><Link href={`/${locale}/`} onClick={closeMobileMenu}>{t('home')}</Link></li>
+                            <li><Link href={`/${locale}/solucoes`} onClick={closeMobileMenu}>{t('solutions')}</Link></li>
+                            <li><Link href={`/${locale}/sobre`} onClick={closeMobileMenu}>{t('about')}</Link></li>
+                            <li><Link href={`/${locale}/contato`} onClick={closeMobileMenu}>{t('contact')}</Link></li>
+                        </ul>
+                        <div className={styles['mobile-contact']}>
+                            <p dangerouslySetInnerHTML={{ __html: tContact('address') }} />
+                            <p><a href="tel:+554532311699"><MdOutlinePhoneInTalk /> {tContact('phone')}</a></p>
+                            <p><a href="https://wa.me/5545991339642" target="_blank" rel="noopener noreferrer"><BsWhatsapp /> {tContact('whatsapp')}</a></p>
+                            <p><a href="mailto:contato@isoart.com.br"><MdOutlineMarkEmailUnread /> {tContact('email')}</a></p>
+                            <div className={styles['mobile-social']}>
+                                <div className={styles['mobile-social-icons']}>
+                                    <Link href="https://www.instagram.com/isoartsolucoestermicas/" target="_blank" aria-label={tSocial('instagram')}>
+                                        <BsInstagram /><span className={styles['sr-only']}>Instagram</span>
+                                    </Link>
+                                    <Link href="https://www.facebook.com/profile.php?id=61551356827381" target="_blank" aria-label={tSocial('facebook')}>
+                                        <BsFacebook /><span className={styles['sr-only']}>Facebook</span>
+                                    </Link>
+                                    <Link href="https://www.youtube.com/channel/UC2dlCQSV1Rp5WF91P6ZNDvg" target="_blank" aria-label={tSocial('youtube')}>
+                                        <BsYoutube /><span className={styles['sr-only']}>YouTube</span>
+                                    </Link>
+                                    <Link href="https://www.linkedin.com/company/isoart-industria-produtos-termicos-e-construtivos/" target="_blank" aria-label={tSocial('linkedin')}>
+                                        <BsLinkedin /><span className={styles['sr-only']}>LinkedIn</span>
+                                    </Link>
+                                </div>
+                                <div className={styles['mobile-language-selector']}>
+                                    {supportedLocales.map((locale) => {
+                                        const localeInfo = getLocaleInfo(locale);
+                                        const isActive = locale === currentLocale;
+                                        return (
+                                            <button
+                                                key={locale}
+                                                className={`${styles['mobile-language-option']} ${isActive ? styles['mobile-language-option-active'] : ''}`}
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    handleLocaleChange(locale);
+                                                    closeMobileMenu();
+                                                }}
+                                                title={localeInfo.name}
+                                            >
+                                                <img src={localeInfo.flag} alt={`${t('flag')} ${localeInfo.name}`} className={styles['mobile-flag-image']} />
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 }
