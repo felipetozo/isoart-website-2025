@@ -21,8 +21,7 @@
     "hero": {
         "title": "Sala Limpia",
         "description": "Paneles isotérmicos de alto rendimiento para ambientes controlados con riguroso control de partículas y asepsia.",
-        "buttonText": "Solicite un presupuesto",
-        "buttonLink": "/contato"
+        "buttonText": "Solicite un presupuesto"
     },
     "categoryDescription": {
         "title": "Los Paneles de Sala Limpia Isoart garantizan asepsia, control de partículas y aislamiento térmico para ambientes altamente controlados.",

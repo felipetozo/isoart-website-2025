@@ -25,8 +25,7 @@
     "hero": {
         "title": "Eaves Moldings",
         "description": "Light and elegant solutions for eaves finishing, enhancing facades with durability and style.",
-        "buttonText": "Request a quote",
-        "buttonLink": "/contato"
+        "buttonText": "Request a quote"
     },
     "categoryDescription": {
         "title": "Isoart Eaves Moldings combine aesthetics and functionality for high-quality external finishes.",

@@ -20,8 +20,7 @@
     "hero": {
         "title": "Wall Moldings",
         "description": "Decorative solutions for walls, combining aesthetics, lightness and ease of installation.",
-        "buttonText": "Request a quote",
-        "buttonLink": "/contato"
+        "buttonText": "Request a quote"
     },
     "categoryDescription": {
         "title": "Isoart Wall Moldings transform environments with elegant and customizable finishes.",

@@ -788,7 +788,7 @@ export default function ProductPage() {
                 <div className={styles['product-page-hero-content']}>
                     <h1>{heroSection.title}</h1>
                     <p>{heroSection.description}</p>
-                    <Link href={heroSection.buttonLink || `/${locale}/contato`}>
+                    <Link href={`/${locale}/contato`}>
                         <Button variant="primary" size="medium">
                             {heroSection.buttonText || 'Solicite um orçamento'}
                         </Button>

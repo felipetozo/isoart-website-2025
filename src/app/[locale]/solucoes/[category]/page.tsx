@@ -106,7 +106,7 @@ export default function CategoryPage() {
                 <div className={styles['category-page-hero-content']}>
                     <h1>{heroSection.title}</h1>
                     <p>{heroSection.description}</p>
-                    <Link href={heroSection.buttonLink || `/${locale}/contato`}>
+                    <Link href={`/${locale}/contato`}>
                         <Button variant="primary" size="medium">
                             {heroSection.buttonText || t('hero.defaultButtonText')}
                         </Button>

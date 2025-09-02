@@ -21,8 +21,7 @@
     "hero": {
         "title": "Clean Room",
         "description": "High-performance thermal panels for controlled environments with rigorous particle control and asepsis.",
-        "buttonText": "Request a quote",
-        "buttonLink": "/contato"
+        "buttonText": "Request a quote"
     },
     "categoryDescription": {
         "title": "Isoart Clean Room Panels guarantee asepsis, particle control and thermal insulation for highly controlled environments.",

@@ -21,8 +21,7 @@
     "hero": {
         "title": "Cold Storage Chamber",
         "description": "Robust panels for cold storage chambers, ensuring efficient thermal insulation and durability in extreme temperatures.",
-        "buttonText": "Request a quote",
-        "buttonLink": "/contato"
+        "buttonText": "Request a quote"
     },
     "categoryDescription": {
         "title": "Isoart Cold Storage Chamber Panels offer exceptional thermal insulation for low and medium temperature environments.",
