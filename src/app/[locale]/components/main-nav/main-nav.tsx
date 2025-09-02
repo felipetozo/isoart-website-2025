@@ -167,7 +167,6 @@ function MainNav({ locale }: MainNavProps) {
     };
 
     useEffect(() => {
-        console.log('🔍 MainNav - currentLocale:', currentLocale);
     }, [currentLocale]);
 
     const handleLocaleChange = (newLocale: string) => {

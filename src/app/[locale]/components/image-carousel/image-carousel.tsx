@@ -17,10 +17,6 @@ function ImageCarousel({ images, alt, width = 1440, height = 800 }: ImageCarouse
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
 
-    // Debug: verificar se as imagens estão sendo recebidas
-    console.log('ImageCarousel - images:', images);
-    console.log('ImageCarousel - images.length:', images?.length);
-
     const nextImage = () => {
         setCurrentIndex((prevIndex) => 
             prevIndex === images.length - 1 ? 0 : prevIndex + 1
@@ -34,7 +30,6 @@ function ImageCarousel({ images, alt, width = 1440, height = 800 }: ImageCarouse
     };
 
     if (!images || images.length === 0) {
-        console.log('ImageCarousel - No images, returning null');
         return null;
     }
 
@@ -91,7 +86,6 @@ function ImageCarousel({ images, alt, width = 1440, height = 800 }: ImageCarouse
                 <div className={styles['thumbnails-container']}>
                     <div className={styles['thumbnails-grid']}>
                         {images.map((image, index) => {
-                            console.log(`Rendering thumbnail ${index}:`, image);
                             return (
                                 <button
                                     key={index}
