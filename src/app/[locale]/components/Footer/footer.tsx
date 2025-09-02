@@ -46,7 +46,7 @@ function Footer({ locale }: FooterProps) {
                                 <BsInstagram />
                                 <span className={styles['sr-only']}>Instagram</span>
                             </Link>
-                            <Link href="https://www.facebook.com/isoartsolucoestermicas" target="_blank" aria-label={tSocial('facebook')}>
+                            <Link href="https://www.facebook.com/profile.php?id=61551356827381" target="_blank" aria-label={tSocial('facebook')}>
                                 <BsFacebook />
                                 <span className={styles['sr-only']}>Facebook</span>
                             </Link>
