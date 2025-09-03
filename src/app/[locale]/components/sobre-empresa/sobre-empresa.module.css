@@ -26,9 +26,3 @@
     gap: 2rem;
     color: rgba(241, 244, 247, 0.75);
 }
-
-@media (min-width:1600px) {
-    .sobre-empresa-wrapper {
-        grid-template-columns: 20% 70%;
-    }
-}

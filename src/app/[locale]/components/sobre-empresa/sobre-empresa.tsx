@@ -20,9 +20,6 @@ function SobreEmpresa({ locale }: SobreEmpresaProps) {
             <section className={styles['sobre-empresa-section']} id="#sobre-empresa">
                 <div className={styles['sobre-empresa-wrapper']}>
                     <div className={styles['sobre-empresa-container']}>
-                        <p>{t('tagline')}</p>
-                    </div>
-                    <div className={styles['sobre-empresa-container']}>
                         <h2>
                             {t('fullDescription')}
                         </h2>
