@@ -313,7 +313,6 @@ export default function ContactForm({ locale }: ContactFormProps) {
                         </div>
                     </form>
                 </div>
-
             </section>
 
             <Toast

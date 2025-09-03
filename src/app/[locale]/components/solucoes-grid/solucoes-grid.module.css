@@ -91,12 +91,12 @@
     backdrop-filter: blur(1rem);
     -webkit-backdrop-filter: blur(1rem);
     /* Fallback para navegadores que não suportam backdrop-filter */
-    background: linear-gradient(180deg, rgba(241, 244, 247, 0.3) 50%, rgba(146, 151, 120, 1) 100%);
+    background: linear-gradient(180deg, rgba(62, 65, 51, 0.35) 50%, rgba(146, 151, 120, 1) 100%);
 }
 
-.solucoes-grid-card-container h5 {
+.solucoes-grid-card-container h4 {
+    color: rgba(241, 244, 247, 1);
     line-height: 120%;
-    font-size: 1.4rem;
 }
 
 /* Desktop */
