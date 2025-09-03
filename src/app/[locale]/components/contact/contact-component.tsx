@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import styles from './contact-component.module.css';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn } from 'react-icons/md';
-import { BsWhatsapp } from 'react-icons/bs';
 import Image from 'next/image';
 import FormField from '@/app/[locale]/views/ui/form/form-field';
 import FormSelection from '@/app/[locale]/views/ui/form/form-selection';
@@ -212,12 +211,6 @@ function ContactComponent({ locale }: ContactComponentProps) {
                             </a>
                         </div>
                         <div className={styles['contact-component-contact-item']}>
-                            <a href="https://wa.me/5545991339642" target="_blank" rel="noopener noreferrer">
-                                <BsWhatsapp />
-                                <p>{tContact('whatsapp')}</p>
-                            </a>
-                        </div>
-                        <div className={styles['contact-component-contact-item']}>
                             <a href="mailto:contato@isoart.com.br">
                                 <MdOutlineMarkEmailUnread />
                                 <p>{tContact('email')}</p>
@@ -345,10 +338,6 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                     <MdOutlinePhoneInTalk />
                                     +55 45 3231 1699
                                 </a>
-                                <a href="https://wa.me/5545991339642">
-                                    <BsWhatsapp />
-                                    +55 45 99133 9642
-                                </a>
                                 <a href="mailto:contato@isoart.com.br">
                                     <MdOutlineMarkEmailUnread />
                                     contato@isoart.com.br
@@ -376,10 +365,6 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                     <MdOutlinePhoneInTalk />
                                     +55 49 3433 2025
                                 </a>
-                                <a href="https://wa.me/5549999638373" target="_blank" rel="noopener noreferrer">
-                                    <BsWhatsapp />
-                                    +55 49 99963 8373
-                                </a>
                                 <a href="mailto:contato@isoart.com.br">
                                     <MdOutlineMarkEmailUnread />
                                     contato@isoart.com.br
@@ -406,10 +391,6 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                 <a href="tel:+554530111000">
                                     <MdOutlinePhoneInTalk />
                                     +55 45 3011 1000
-                                </a>
-                                <a href="https://wa.me/5549998260240" target="_blank" rel="noopener noreferrer">
-                                    <BsWhatsapp />
-                                    +55 45 99826 0240
                                 </a>
                                 <a href="mailto:contato@isoart.com.br">
                                     <MdOutlineMarkEmailUnread />

@@ -5,7 +5,6 @@ import FormField from '@/app/[locale]/views/ui/form/form-field';
 import FormSelection from '@/app/[locale]/views/ui/form/form-selection';
 import Button from '@/app/[locale]/views/ui/button/button';
 import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn } from 'react-icons/md';
-import { BsWhatsapp } from 'react-icons/bs';
 import Toast from '@/app/[locale]/views/ui/toast/toast';
 import { useTranslations } from 'next-intl';
 
@@ -315,35 +314,6 @@ export default function ContactForm({ locale }: ContactFormProps) {
                     </form>
                 </div>
 
-                <div className={styles['contact-info']}>
-                    <h3>{t('contactInfo.title')}</h3>
-                    <div className={styles['contact-items']}>
-                        <div className={styles['contact-item']}>
-                            <MdOutlinePhoneInTalk />
-                            <div>
-                                <p>{t('contactInfo.phone')}</p>
-                            </div>
-                        </div>
-                        <div className={styles['contact-item']}>
-                            <BsWhatsapp />
-                            <div>
-                                <p>{t('contactInfo.whatsapp')}</p>
-                            </div>
-                        </div>
-                        <div className={styles['contact-item']}>
-                            <MdOutlineMarkEmailUnread />
-                            <div>
-                                <p>{t('contactInfo.email')}</p>
-                            </div>
-                        </div>
-                        <div className={styles['contact-item']}>
-                            <MdLocationOn />
-                            <div>
-                                <p>{t('contactInfo.address')}<br />{t('contactInfo.city')}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </section>
 
             <Toast
