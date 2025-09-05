@@ -409,11 +409,11 @@
         "products": {
           "moldurasPortasJanelas": {
             "name": "Molduras para Portas e Janelas",
-            "description": "Molduras para acabado de portas e janelas com design elegante."
+            "description": "Molduras para acabamento de portas e janelas com design elegante."
           },
           "moldurasBeiral": {
             "name": "Molduras para Beiral",
-            "description": "Molduras para beirais com acabado sofisticado."
+            "description": "Molduras para beirais com acabamento sofisticado."
           },
           "moldurasColunasCapiteis": {
             "name": "Molduras para Colunas e Capitéis",
@@ -430,7 +430,7 @@
         },
         "benefits": {
           "benefit1": {
-            "title": "Acabado Sofisticado",
+            "title": "Acabamento Sofisticado",
             "description": "Detalhes elegantes que valorizam o design e agregam estilo a qualquer construção, do clássico ao contemporâneo."
           },
           "benefit2": {
