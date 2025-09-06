@@ -41,8 +41,8 @@ export async function POST(request: NextRequest) {
     const sanitizedState = state.trim();
     const sanitizedCity = city.trim();
 
-    // Caminho para o arquivo JSON
-    const filePath = path.join(process.cwd(), 'src', 'app', '[locale]', 'data', 'forms', 'form-section-submissions.json');
+    // Caminho para o arquivo JSON (diretório público)
+    const filePath = path.join(process.cwd(), 'public', 'data', 'forms', 'form-section-submissions.json');
 
     // Ler o arquivo existente ou criar novo
     let submissionsData;
