@@ -11,6 +11,23 @@
       "contactButton": "Contactanos"
     }
   },
+  "CookieBanner": {
+    "cookiePolicyTitle": "Política de Cookies",
+    "cookiePolicyDescription": "Usamos cookies para mejorar tu experiencia en el sitio. Algunos son esenciales para el funcionamiento, otros nos ayudan a mejorar el contenido y personalizar tu experiencia.",
+    "btnRejectAll": "Rechazar todos",
+    "btnPersonalize": "Personalizar",
+    "btnAcceptAll": "Aceptar todos",
+    "btnSavePreferences": "Guardar preferencias",
+    "cookieConfigTitle": "Configuración de Cookies",
+    "cookieConfigTopic1": "Cookies esenciales",
+    "cookieConfigTopic2": "Cookies de análisis",
+    "cookieConfigTopic3": "Cookies de marketing",
+    "cookieConfigTopic4": "Cookies de preferencias",
+    "cookieConfigDescription1": "Siempre activos. Necesarios para el funcionamiento básico del sitio.",
+    "cookieConfigDescription2": "Nos ayudan a entender cómo usás el sitio para mejorarlo.",
+    "cookieConfigDescription3": "Se usan para mostrar anuncios relevantes y medir campañas.",
+    "cookieConfigDescription4": "Recuerdan tus elecciones para personalizar tu experiencia."
+  },
   "menu": {
     "categories": {
       "telhasPaineis": "Tejas y Paneles",

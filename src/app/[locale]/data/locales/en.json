@@ -11,6 +11,23 @@
       "contactButton": "Get in Touch"
     }
   },
+  "CookieBanner": {
+    "cookiePolicyTitle": "Cookie Policy",
+    "cookiePolicyDescription": "We use cookies to improve your experience on the site. Some are essential for its operation, while others help us enhance content and personalize your experience.",
+    "btnRejectAll": "Reject All",
+    "btnPersonalize": "Customize",
+    "btnAcceptAll": "Accept All",
+    "btnSavePreferences": "Save Preferences",
+    "cookieConfigTitle": "Cookie Settings",
+    "cookieConfigTopic1": "Essential Cookies",
+    "cookieConfigTopic2": "Analytics Cookies",
+    "cookieConfigTopic3": "Marketing Cookies",
+    "cookieConfigTopic4": "Preference Cookies",
+    "cookieConfigDescription1": "Always active. Required for the basic functioning of the site.",
+    "cookieConfigDescription2": "Help us understand how you use the site so we can improve it.",
+    "cookieConfigDescription3": "Used to show relevant ads and measure campaigns.",
+    "cookieConfigDescription4": "Remember your choices to personalize your experience."
+},
   "menu": {
     "categories": {
       "telhasPaineis": "Roofing and Panels",

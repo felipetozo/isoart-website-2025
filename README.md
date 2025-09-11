@@ -4,6 +4,8 @@ Website da Isoart, empresa especializada em soluções térmicas com EPS e PIR p
 
 **ATUALIZAÇÃO IMPORTANTE**: Migração completa para sistema de internacionalização next-intl com roteamento i18n nativo.
 
+**NOVA ATUALIZAÇÃO (Setembro 2025)**: Integração com Resend para envio de notificações por email a partir de formulários de contato. Configuração via variável de ambiente para desenvolvimento e variáveis de servidor em produção.
+
 ---
 
 ## Sumário
@@ -30,6 +32,8 @@ Website da Isoart, empresa especializada em soluções térmicas com EPS e PIR p
 
 Este é um site corporativo moderno e responsivo que apresenta as soluções da empresa em EPS (Poliestireno Expandido) e PIR (Poliisocianurato) para construção civil, embalagens e isolamento térmico. O projeto prioriza performance, SEO, acessibilidade e uma experiência de usuário excepcional com animações suaves e navegação intuitiva.
 
+Com a integração do Resend, os formulários de contato agora enviam notificações por email para `contato@isoart.com.br`, mantendo o salvamento em arquivos JSON para futuro dashboard.
+
 ---
 
 ## Tecnologias e Bibliotecas
@@ -54,6 +58,9 @@ Este é um site corporativo moderno e responsivo que apresenta as soluções da 
 - **Tabler Icons React** (Ícones adicionais)
 - **CSS Modules** (Sistema de design modular)
 
+### Email e Notificações
+- **Resend** (Envio de emails para notificações de formulários de contato)
+
 ### Analytics
 - **Vercel Analytics** (Ativo e funcionando)
 
@@ -69,42 +76,42 @@ Este é um site corporativo moderno e responsivo que apresenta as soluções da 
 ```
 isoart-website-2025/
 ├── src/
-│   ├── app/                              # App Router do Next.js
-│   │   ├── [locale]/                     # Rotas com suporte a idiomas
-│   │   │   ├── categorias/               # Páginas de categorias e produtos
-│   │   │   │   ├── [category]/           # Páginas dinâmicas de categorias
-│   │   │   │   └── [category]/[product]/ # Páginas dinâmicas de produtos
-│   │   │   ├── components/               # Componentes reutilizáveis
-│   │   │   ├── contato/                  # Página de contato
-│   │   │   ├── sobre/                    # Páginas institucionais
-│   │   │   ├── solucoes/                 # Página de soluções
-│   │   │   ├── views/                    # Componentes de UI
-│   │   │   ├── globals.css               # Estilos globais
-│   │   │   ├── i18n.ts                   # Configuração de internacionalização
-│   │   │   └── layout.tsx                # Layout com suporte a idiomas
-│   │   ├── components/                   # Componentes globais
-│   │   ├── globals.css                   # Estilos globais
-│   │   └── layout.tsx                    # Layout raiz
-│   ├── data/                             # Dados estáticos e JSON
-│   │   ├── categories/                   # Dados específicos de categorias
-│   │   ├── locales/                      # Arquivos de tradução
-│   │   │   ├── pt-BR.json                # Traduções em português
-│   │   │   ├── en.json                   # Traduções em inglês
-│   │   │   └── es.json                   # Traduções em espanhol
-│   │   ├── menu-data.json                # Estrutura do menu principal
-│   │   └── products/                     # Dados de produtos
-│   ├── hooks/                            # Hooks customizados
-│   │   └── use-language.ts               # Hook para gerenciamento de idiomas
-│   ├── lib/                              # Utilitários e helpers
-│   └── types/                            # Definições de tipos
-├── public/                               # Arquivos estáticos
-│   ├── img/                              # Imagens do site
-│   ├── icons/                            # Ícones e bandeiras
-│   └── downloads/                        # Arquivos para download
-├── middleware.ts                         # Middleware de internacionalização
-├── next.config.ts                        # Configuração do Next.js
-├── postcss.config.mjs                    # Configuração do PostCSS
-└── tsconfig.json                         # Configuração do TypeScript
+│   ├── app/                                  # App Router do Next.js
+│   │   ├── [locale]/                         # Rotas com suporte a idiomas
+│   │   │   ├── categorias/                   # Páginas de categorias e produtos
+│   │   │   │   ├── [category]/               # Páginas dinâmicas de categorias
+│   │   │   │   └── [category]/[product]/     # Páginas dinâmicas de produtos
+│   │   │   ├── components/                   # Componentes reutilizáveis
+│   │   │   ├── contato/                      # Página de contato
+│   │   │   ├── sobre/                        # Páginas institucionais
+│   │   │   ├── solucoes/                     # Página de soluções
+│   │   │   ├── views/                        # Componentes de UI
+│   │   │   ├── globals.css                   # Estilos globais
+│   │   │   ├── i18n.ts                       # Configuração de internacionalização
+│   │   │   └── layout.tsx                    # Layout com suporte a idiomas
+│   │   ├── components/                       # Componentes globais
+│   │   ├── globals.css                       # Estilos globais
+│   │   └── layout.tsx                        # Layout raiz
+│   ├── data/                                 # Dados estáticos e JSON
+│   │   ├── categories/                       # Dados específicos de categorias
+│   │   ├── locales/                          # Arquivos de tradução
+│   │   │   ├── pt-BR.json                    # Traduções em português
+│   │   │   ├── en.json                       # Traduções em inglês
+│   │   │   └── es.json                       # Traduções em espanhol
+│   │   ├── menu-data.json                    # Estrutura do menu principal
+│   │   └── products/                         # Dados de produtos
+│   ├── hooks/                                # Hooks customizados
+│   │   └── use-language.ts                   # Hook para gerenciamento de idiomas
+│   ├── lib/                                  # Utilitários e helpers
+│   └── types/                                # Definições de tipos
+├── public/                                   # Arquivos estáticos
+│   ├── img/                                  # Imagens do site
+│   ├── icons/                                # Ícones e bandeiras
+│   └── downloads/                            # Arquivos para download
+├── middleware.ts                             # Middleware de internacionalização
+├── next.config.ts                            # Configuração do Next.js
+├── postcss.config.mjs                        # Configuração do PostCSS
+└── tsconfig.json                             # Configuração do TypeScript
 ```
 
 ---
@@ -113,6 +120,13 @@ isoart-website-2025/
 
 - **Node.js 18+** (recomendado) e **npm 9+** ou **pnpm/yarn**
 - **Git** para clonar o repositório
+- **Resend API Key** para envio de emails (configure em `.env.local` para desenvolvimento)
+
+Crie um arquivo `.env.local` no root do projeto com:
+```
+RESEND_API_KEY=your_resend_api_key_here
+```
+Substitua `your_resend_api_key_here` pelo sua chave real do Resend. Para produção, configure como variável de ambiente no servidor.
 
 ---
 
@@ -130,7 +144,7 @@ npm install
 npm run dev
 ```
 
-Acesse `http://localhost:3000` no seu navegador.
+Acesse `http://localhost:3000` no seu navegador. Certifique-se de que `.env.local` está configurado para testar envios de email com Resend.
 
 ---
 
@@ -144,7 +158,7 @@ npm run build
 npm run start
 ```
 
-O build final ficará disponível em `.next/`.
+O build final ficará disponível em `.next/`. Para produção, configure `RESEND_API_KEY` como variável de ambiente no servidor de hospedagem.
 
 ---
 
@@ -198,6 +212,8 @@ O build final ficará disponível em `.next/`.
 - `/es` → Site em espanhol
 - `/[locale]/categorias/[category]` → Páginas de categoria por idioma
 - `/[locale]/categorias/[category]/[product]` → Páginas de produto por idioma
+- `/api/contact` → Endpoint para formulários de contato (salva em JSON e envia email via Resend)
+- `/api/contact-page` → Endpoint para página de contato (salva em JSON e envia email via Resend)
 
 ---
 
@@ -216,243 +232,7 @@ O build final ficará disponível em `.next/`.
 - ✅ **Componentes traduzidos** funcionando perfeitamente
 - ✅ **Formulários multilíngue** com placeholders e validações traduzidas
 - ✅ **Páginas dinâmicas** com traduções implementadas
-- ✅ **Padrão estabelecido** para Client Components com traduções
-
-### **Funcionalidades Implementadas**
-1. **Roteamento Automático**
-   - URLs com locale: `/pt-BR`, `/en`, `/es`
-   - Redirecionamento automático para locale padrão
-   - Suporte para páginas estáticas e dinâmicas
-
-2. **Configuração Técnica**
-   - Plugin `createNextIntlPlugin` no `next.config.ts`
-   - Middleware configurado em `middleware.ts`
-   - Arquivo de configuração `src/app/i18n.ts`
-   - Hook `useLanguage` atualizado para next-intl
-
-3. **Estrutura de Arquivos**
-   - Arquivos de tradução em `src/data/locales/`
-   - Layout específico para idiomas em `src/app/[locale]/`
-   - Componentes atualizados para suporte multilíngue
-
-### **Arquivos de Tradução**
-- `pt-BR.json` - Português brasileiro (idioma padrão) ✅ **Completo**
-- `en.json` - Inglês ✅ **Completo**
-- `es.json` - Espanhol ✅ **Completo**
-
-### **Componentes e Páginas Traduzidos**
-- ✅ **SobreEmpresa**: Tagline e descrição completa traduzidas
-- ✅ **Contact**: Formulário 100% traduzido (labels, placeholders, opções, endereços)
-- ✅ **MainNav**: Menu e navegação multilíngue
-- ✅ **Footer**: Informações de contato e links traduzidos
-- ✅ **Soluções**: Página principal com categorias traduzidas
-- ✅ **Categorias Dinâmicas**: Páginas de produtos com traduções implementadas
-- ✅ **Sobre**: Página institucional 100% traduzida
-- ✅ **Sobre EPS/PIR**: Página técnica com traduções completas
-- ✅ **Sustentabilidade**: Componente de reciclagem traduzido
-
-### **Como Usar**
-
-#### **Para Páginas com Traduções (Client Components):**
-```typescript
-'use client';
-
-import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
-
-export default function MinhaPagina() {
-  const params = useParams();
-  const locale = params.locale as string;
-  const t = useTranslations('nomeDaSecao');
-  
-  return <h1>{t('title')}</h1>;
-}
-```
-
-#### **Padrão Estabelecido:**
-- ✅ **`'use client'`** sempre no topo para páginas com traduções
-- ✅ **`useTranslations`** para acessar traduções (NUNCA `getTranslations`)
-- ✅ **`useParams`** para obter locale e parâmetros dinâmicos
-- ✅ **Função normal** (NUNCA `async function`)
-- ✅ **Interface de props** para componentes que recebem parâmetros
-
-### **Vantagens da Implementação**
-- **Performance otimizada** sem overhead de internacionalização
-- **SEO multilíngue** com URLs específicas por idioma
-- **Escalabilidade** para futuras expansões
-- **Manutenibilidade** com estrutura clara e organizada
-
-### **Correções e Melhorias Implementadas**
-- ✅ **Estrutura de benefícios padronizada** em todos os idiomas
-- ✅ **Componentes convertidos** de Server para Client Components
-- ✅ **Erros de tradução corrigidos** (MISSING_MESSAGE)
-- ✅ **Build funcionando** sem erros de runtime
-- ✅ **Traduções consistentes** entre pt-BR, en, es
-- ✅ **Padrão estabelecido** para evitar conflitos Server/Client Components
-
----
-
-## Estado, Formulários e Validação
-
-- **React Hooks** para gerenciamento de estado local
-- **Context API** para estado global quando necessário
-- Formulários de contato com validação
-- Gerenciamento de cookies e consentimento
-- Estado de navegação e filtros
-
----
-
-## Animações e Performance
-
-- **GSAP** para animações complexas e sequenciais
-- **Lenis** para scroll suave e otimizado
-- **ScrollMagic** para animações baseadas em scroll
-- Lazy loading de imagens e componentes
-- Otimizações de Core Web Vitals
-- Headers de cache e compressão configurados
-
-### Otimizações de Performance
-- Preload de recursos críticos
-- Otimização de imagens com Sharp
-- Compressão e cache configurados
-- Bundle splitting otimizado
-- Fontes com display swap
-
-### Compatibilidade com Android
-**✅ MELHORIAS DE COMPATIBILIDADE IMPLEMENTADAS**
-
-Para garantir funcionamento perfeito em dispositivos Android, foram implementadas as seguintes otimizações:
-
-1. **CSS Transitions Centralizadas**
-   - ✅ **Transições globais** em `globals.css` com exceções específicas
-   - ✅ **Remoção de transições individuais** de todos os `.module.css`
-   - ✅ **Performance otimizada** para dispositivos com recursos limitados
-   - ✅ **Controle centralizado** de animações CSS
-
-2. **Fallbacks para Propriedades CSS Modernas**
-   - ✅ **`backdrop-filter`**: Fallback com `background-color` para navegadores antigos
-   - ✅ **`filter`**: Fallback com `transform: scale()` para efeitos de blur
-   - ✅ **`-webkit-appearance`**: Fallback para estilização de formulários
-   - ✅ **Suporte universal** para todos os navegadores e dispositivos
-
-3. **Sistema de Imagens Hero Hardcoded**
-   - ✅ **Mapeamento direto** de imagens hero por produto/categoria
-   - ✅ **Carregamento imediato** sem delay de API
-   - ✅ **Zero layout shifts** durante navegação
-   - ✅ **Performance crítica** para tráfego pago
-
----
-
-## Boas Práticas de Deploy
-
-- **Build otimizado** com `npm run build`
-- **Configurações de cache e headers** no `next.config.ts`
-- **Analytics integrado** com @vercel/analytics
-- **Monitoramento de performance e métricas**
-- **Hospedagem** a ser definida pela equipe responsável
-
-### Configurações de Produção
-- **Headers de segurança** configurados
-- **Cache otimizado** para CSS e assets
-- **Compressão habilitada**
-- **Otimizações de webpack** para produção
-
-### Google Analytics e Tracking
-- **Google Analytics**: Configurado mas **NÃO ATIVADO** (pronto para implementação)
-- **ID do GTM**: `GTM-W6JCS4X` (disponível do site antigo)
-- **Vercel Analytics**: Ativo e funcionando
-- **Estrutura preparada**: Componente `AnalyticsProvider` configurado para futuras integrações
-- **Status**: Migração do tracking do site antigo para o novo site pendente
-
-#### Detalhes da Configuração
-- **Site Antigo (CodeIgniter)**: Google Analytics ativo com GTM `GTM-W6JCS4X`
-- **Site Atual (Next.js)**: Estrutura preparada, aguardando ativação
-- **Próximo Passo**: Implementar Google Analytics usando o ID existente
-- **Compatibilidade**: Mantida com o tracking atual do site antigo
-
----
-
-## Roadmap / Próximos Passos
-
-### Funcionalidades Planejadas
-- [ ] Galeria de projetos realizados
-- [ ] Sistema de busca avançado
-- [ ] Filtros dinâmicos para produtos
-- [ ] Blog/notícias da empresa
-- [ ] Sistema de orçamento online
-- [ ] Área do cliente
-
-### Melhorias Técnicas
-- [ ] **Google Analytics**: Ativar tracking com GTM `GTM-W6JCS4X` existente
-- [ ] **Facebook Pixel**: Implementar para remarketing e conversões
-- [ ] **Monitoramento de Performance**: Integrar ferramentas de monitoramento
-- [ ] PWA (Progressive Web App)
-- [ ] Testes automatizados
-- [ ] Storybook para documentação de componentes
-- [ ] Monitoramento de erros
-- [ ] Otimizações de SEO avançadas
-
-### Próximos Passos para Internacionalização
-**✅ SISTEMA COMPLETO E FUNCIONANDO - MELHORIAS FUTURAS:**
-
-1. ✅ ~~**Implementar traduções reais** nos arquivos JSON~~ **CONCLUÍDO**
-2. ✅ ~~**Corrigir inconsistências** entre arquivos de tradução~~ **CONCLUÍDO**
-3. ✅ ~~**Traduzir componentes principais** (sobre-empresa, contact)~~ **CONCLUÍDO**
-4. ✅ ~~**Traduzir páginas dinâmicas** (soluções, categorias)~~ **CONCLUÍDO**
-5. ✅ ~~**Traduzir páginas institucionais** (sobre, sobre-eps-pir)~~ **CONCLUÍDO**
-6. ✅ ~~**Traduzir componentes técnicos** (sustentabilidade)~~ **CONCLUÍDO**
-7. **Adicionar seletor de idioma** no header/navigation
-8. **Configurar meta tags específicas** por idioma
-9. **Testar navegação** entre idiomas extensivamente
-10. **Implementar fallbacks** para idiomas não suportados
-11. **Otimizar SEO multilíngue** com hreflang tags
-
-**Status atual**: Sistema técnico 100% funcional com traduções completas e consistentes. TODOS os componentes e páginas principais traduzidos e funcionando perfeitamente.
-
----
-
-## Contribuição
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
----
-
-## Licença
-
-Este projeto é privado e propriedade da Isoart. Todos os direitos reservados.
-
----
-
-## Contato
-
-- **Website**: [www.isoart.br](https://www.isoart.com.br)
-- **Email**: contato@isoart.com.br
-- **Telefone**: +55 (45) 3231-1699
-
----
-
-## Status do Projeto (Atualizado: Janeiro 2025)
-
-**✅ PROJETO PRONTO PARA HOSPEDAGEM - INTERNACIONALIZAÇÃO COMPLETA E COMPATIBILIDADE ANDROID**
-
-### **Status Técnico**
-- **Commit atual**: Preparado para deploy - shadcn/ui removido, projeto limpo
-- **Status**: Site 100% funcional com suporte multilíngue completo, compatibilidade Android e sistema hardcoded para produção
-- **Arquivo de deploy**: `isoart-website-2025-deploy.zip` criado e pronto para hospedagem
-- **Idiomas suportados**: pt-BR (padrão), en, es
-- **Performance**: Otimizada para Android e dispositivos com recursos limitados
-- **Menu e navegação**: Funcionando perfeitamente
-- **Rotas dinâmicas**: Categorias e produtos funcionando por idioma
-- **Sistema hardcoded**: Heroes, carrossel e benefits funcionando perfeitamente em produção
-- **Compatibilidade Android**: 100% implementada e testada
-
-### **Status das Traduções**
-- ✅ **Arquivos de tradução**: Consistentes entre todos os idiomas
-- ✅ **Componente SobreEmpresa**: 100% traduzido e funcionando
+- ...(truncated 9112 characters)...0% traduzido e funcionando
 - ✅ **Componente Contact**: 100% traduzido (formulário, endereços, validações)
 - ✅ **Componente Footer**: 100% traduzido e funcionando
 - ✅ **Página Soluções**: 100% traduzida com categorias
@@ -499,7 +279,7 @@ Este projeto é privado e propriedade da Isoart. Todos os direitos reservados.
     - Eliminação do ícone "wind" padrão incorreto
 13. **Implementação de benefícios hardcoded** para páginas de produtos com mapeamento direto
 
-**Última atualização**: Janeiro 2025 - Sistema de internacionalização 100% completo e funcional com TODAS as traduções implementadas, benefícios corrigidos, ícones funcionando e site funcionando perfeitamente. Padrão estabelecido para Client Components com traduções. **Projeto limpo e pronto para hospedagem com arquivo .zip de deploy criado.**
+**Última atualização**: Setembro 2025 - Integração com Resend para notificações de formulários. Sistema de internacionalização 100% completo e funcional com TODAS as traduções implementadas, benefícios corrigidos, ícones funcionando e site funcionando perfeitamente. Padrão estabelecido para Client Components com traduções. **Projeto limpo e pronto para hospedagem com arquivo .zip de deploy criado.**
 
 ### **Implementações Hardcoded para Produção (Janeiro 2025)**
 **✅ SISTEMA COMPLETO DE MAPEAMENTO HARDCODED IMPLEMENTADO**
@@ -589,44 +369,53 @@ unzip isoart-website-2025-deploy.zip
 npm install
 ```
 
-#### **2. Build de Produção:**
+#### **2. Configuração de Ambiente:**
+- Crie ou configure variáveis de ambiente no servidor:
+  ```
+  RESEND_API_KEY=your_resend_api_key_here
+  ```
+- Para hospedagem compartilhada ou FTP, consulte o gerente do host para definir variáveis de ambiente.
+
+#### **3. Build de Produção:**
 ```bash
 # Gerar build otimizado
 npm run build
 ```
 
-#### **3. Iniciar Servidor:**
+#### **4. Iniciar Servidor:**
 ```bash
 # Iniciar em produção
 npm start
 ```
 
-#### **4. Requisitos do Servidor:**
+#### **5. Requisitos do Servidor:**
 - **Node.js**: Versão 18+ recomendada
 - **Porta**: 3000 (padrão) ou configurar via variável `PORT`
 - **Memória**: Mínimo 512MB RAM
 - **Storage**: ~200MB para o projeto
+- **Variáveis de Ambiente**: Suporte para `RESEND_API_KEY` (essencial para emails)
 
-#### **5. Configurações Opcionais:**
+#### **6. Configurações Opcionais:**
 - **Domínio personalizado**: Configurar no middleware.ts se necessário
-- **Variáveis de ambiente**: Criar `.env.local` se houver configurações específicas
+- **Variáveis de ambiente**: Use `.env.local` em desenvolvimento; configure no painel do host em produção
 - **SSL/HTTPS**: Configurar no servidor de hospedagem
+- **Resend**: Verifique o domínio remetente no dashboard do Resend (ex: no-reply@isoart.com.br)
 
 ### **Arquivos Incluídos no Deploy:**
 - ✅ **Código fonte completo** (`src/`)
 - ✅ **Configurações** (package.json, next.config.ts, tsconfig.json, etc.)
 - ✅ **Assets estáticos** (`public/` - imagens, ícones, etc.)
 - ✅ **Dados e traduções** (JSON files para produtos e localização)
-- ✅ **Middleware e APIs** (roteamento e endpoints)
+- ✅ **Middleware e APIs** (roteamento e endpoints, incluindo Resend)
 - ✅ **Arquivos de configuração** (ESLint, PostCSS, etc.)
 
 ### **Arquivos Excluídos (Serão Gerados no Servidor):**
 - ❌ `node_modules/` (instalado via `npm install`)
 - ❌ `.next/` (gerado via `npm run build`)
 - ❌ Logs e arquivos temporários
-- ❌ Arquivos de desenvolvimento
+- ❌ `.env.local` (configure variáveis no servidor)
 
-**Status**: ✅ **PRONTO PARA HOSPEDAGEM** - Arquivo .zip criado com sucesso e projeto limpo para deploy.
+**Status**: ✅ **PRONTO PARA HOSPEDAGEM** - Arquivo .zip criado com sucesso e projeto limpo para deploy. Integração com Resend incluída.
 
 ---
 

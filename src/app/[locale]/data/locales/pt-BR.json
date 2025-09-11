@@ -11,6 +11,23 @@
       "contactButton": "Entre em Contato"
     }
   },
+  "CookieBanner": {
+    "cookiePolicyTitle": "Política de Cookies",
+    "cookiePolicyDescription": "Utilizamos cookies para melhorar sua experiência no site. Alguns são essenciais para o funcionamento, outros nos ajudam a melhorar o conteúdo e personalizar sua experiência.",
+    "btnRejectAll": "Rejeitar Todos",
+    "btnPersonalize": "Personalizar",
+    "btnAcceptAll": "Aceitar Todos",
+    "btnSavePreferences": "Salvar Preferências",
+    "cookieConfigTitle": "Configurações de Cookies",
+    "cookieConfigTopic1": "Cookies Essenciais",
+    "cookieConfigTopic2": "Cookies de Analytics",
+    "cookieConfigTopic3": "Cookies de Marketing",
+    "cookieConfigTopic4": "Cookies de Preferências",
+    "cookieConfigDescription1": "Sempre ativos. Necessários para o funcionamento básico do site.",
+    "cookieConfigDescription2": "Nos ajudam a entender como você usa o site para melhorá-lo.",
+    "cookieConfigDescription3": "Usados para mostrar anúncios relevantes e medir campanhas.",
+    "cookieConfigDescription4": "Lembram suas escolhas para personalizar sua experiência."
+  },
   "menu": {
     "categories": {
       "telhasPaineis": "Telhas e Painéis",
