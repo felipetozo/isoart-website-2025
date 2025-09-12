@@ -330,17 +330,17 @@ function Hero() {
                                         containerRefs.current[index] = el;
                                     }}
                                     className={styles['hero-container']}>
-                                    <h1 className={styles['split']}>{slide.title}</h1>
-                                    {slide.description && (
-                                        <p className={styles['split']}>{slide.description}</p>
-                                    )}
-                                    {index === currentSlide && (
-                                        <Link href={`/${locale}${slide.buttonLink}`}>
-                                            <Button variant="white" size="medium">
-                                                {slide.buttonText}
-                                            </Button>
-                                        </Link>
-                                    )}
+                                        <h1 className={styles['split']}>{slide.title}</h1>
+                                        {slide.description && (
+                                            <p className={styles['split']}>{slide.description}</p>
+                                        )}
+                                        {index === currentSlide && (
+                                            <Link href={`/${locale}${slide.buttonLink}`}>
+                                                <Button variant="white" size="medium">
+                                                    {slide.buttonText}
+                                                </Button>
+                                            </Link>
+                                        )}
                                 </div>
                                 <div className={styles['hero-container']}></div>
                             </div>
