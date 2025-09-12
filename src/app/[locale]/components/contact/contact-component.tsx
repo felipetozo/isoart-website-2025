@@ -1,7 +1,8 @@
 'use client';
 import { useState } from 'react';
 import styles from './contact-component.module.css';
-import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn } from 'react-icons/md';
+import { MdOutlinePhoneInTalk, MdOutlineMarkEmailUnread, MdLocationOn, } from 'react-icons/md';
+import { BsWhatsapp } from 'react-icons/bs';
 import Image from 'next/image';
 import FormField from '@/app/[locale]/views/ui/form/form-field';
 import FormSelection from '@/app/[locale]/views/ui/form/form-selection';
@@ -205,13 +206,19 @@ function ContactComponent({ locale }: ContactComponentProps) {
                     </h4>
                     <div className={styles['contact-component-header-container']}>
                         <div className={styles['contact-component-contact-item']}>
-                            <a href="tel:+554532311699">
+                            <a href="tel:+554532311699" target="_blank">
                                 <MdOutlinePhoneInTalk />
                                 <p>{tContact('phone')}</p>
                             </a>
                         </div>
                         <div className={styles['contact-component-contact-item']}>
-                            <a href="mailto:contato@isoart.com.br">
+                            <a href="https://wa.me/5545991339642" target="_blank">
+                                <BsWhatsapp />
+                                <p>{tContact('whatsappDefault')}</p>
+                            </a>
+                        </div>
+                        <div className={styles['contact-component-contact-item']}>
+                            <a href="mailto:contato@isoart.com.br" target="_blank">
                                 <MdOutlineMarkEmailUnread />
                                 <p>{tContact('email')}</p>
                             </a>
@@ -334,13 +341,17 @@ function ContactComponent({ locale }: ContactComponentProps) {
                             />
                             <div className={styles['contact-component-endereco-info']}>
                                 <h5>{tPage('factories.factory1')}</h5>
-                                <a href="tel:554532311699">
+                                <a href="tel:554532311699" target="_blank">
                                     <MdOutlinePhoneInTalk />
-                                    +55 45 3231 1699
+                                    {tContact('phoneFactory01')}
                                 </a>
-                                <a href="mailto:contato@isoart.com.br">
+                                <a href="https://wa.me/5545991339642" target="_blank">
+                                    <BsWhatsapp />
+                                    {tContact('whatsappFactory01')}
+                                </a>
+                                <a href="mailto:contato@isoart.com.br" target="_blank">
                                     <MdOutlineMarkEmailUnread />
-                                    contato@isoart.com.br
+                                    {tContact('email')}
                                 </a>
                                 <a href="https://maps.google.com/?q=Rua+Dorivaldo+Soncela,+1490,+Santa+Tereza+do+Oeste,+Paraná" target="_blank" rel="noopener noreferrer">
                                   <MdLocationOn />
@@ -361,13 +372,17 @@ function ContactComponent({ locale }: ContactComponentProps) {
                             />
                             <div className={styles['contact-component-endereco-info']}>
                                 <h5>{tPage('factories.factory2')}</h5>
-                                <a href="tel:+554934332025">
+                                <a href="tel:+554934332025" target="_blank">
                                     <MdOutlinePhoneInTalk />
-                                    +55 49 3433 2025
+                                    {tContact('phoneFactory02')}
                                 </a>
-                                <a href="mailto:contato@isoart.com.br">
+                                <a href="https://wa.me/5549999638373" target="_blank">
+                                    <BsWhatsapp />
+                                    {tContact('whatsappFactory02')}
+                                </a>
+                                <a href="mailto:contato@isoart.com.br" target="_blank">
                                     <MdOutlineMarkEmailUnread />
-                                    contato@isoart.com.br
+                                    {tContact('email')}
                                 </a>
                                 <a href="https://maps.google.com/?q=Rodovia+BR+282+KM+496,+Xanxerê,+Santa+Catarina" target="_blank" rel="noopener noreferrer">
                                   <MdLocationOn />
@@ -388,13 +403,17 @@ function ContactComponent({ locale }: ContactComponentProps) {
                             />
                             <div className={styles['contact-component-endereco-info']}>
                                 <h5>{tPage('factories.factory3')}</h5>
-                                <a href="tel:+554530111000">
+                                <a href="tel:+554530111000" target="_blank">
                                     <MdOutlinePhoneInTalk />
-                                    +55 45 3011 1000
+                                    {tContact('phoneFactory03')}
                                 </a>
-                                <a href="mailto:contato@isoart.com.br">
+                                <a href="https://wa.me/5545998260240" target="_blank">
+                                    <BsWhatsapp />
+                                    {tContact('whatsappFactory03')}
+                                </a>
+                                <a href="mailto:contato@isoart.com.br" target="_blank">
                                     <MdOutlineMarkEmailUnread />
-                                    contato@isoart.com.br
+                                    {tContact('email')}
                                 </a>
                                 <a href="https://maps.google.com/?q=Rodovia+BR+277+KM+608,+Santa+Tereza+do+Oeste,+Paraná" target="_blank" rel="noopener noreferrer">
                                   <MdLocationOn />

@@ -71,7 +71,13 @@
   "contact": {
     "address": "Rua Dorivaldo Soncela, 1490<br />Santa Tereza do Oeste - Paraná - Brasil",
     "phone": "+55 45 3231 1699",
-    "whatsapp": "+55 45 99133 9642",
+    "phoneFactory01": "+55 45 3231 1699",
+    "phoneFactory02": "+55 49 3433 2025",
+    "phoneFactory03": "+55 45 3011 1000",
+    "whatsappDefault": "+55 45 99133 9642",
+    "whatsappFactory01": "+55 45 99133 9642",
+    "whatsappFactory02": "+55 45 99963 8373",
+    "whatsappFactory03": "+55 45 99826 0240",
     "email": "contato@isoart.com.br"
   },
   "social": {

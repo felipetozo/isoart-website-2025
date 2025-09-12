@@ -1,0 +1,10 @@
+.email-header {
+    padding: 5rem 0;
+    width: 100%;
+}
+
+.email-wrapper {
+    width: 83.33%;
+    max-width: 50rem;
+    margin: 0 auto;
+}
