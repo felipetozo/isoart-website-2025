@@ -3,6 +3,16 @@
 import Script from 'next/script';
 import React from 'react';
 
+declare global {
+    interface Window {
+        CBM: {
+            ChatbotId: string;
+            StartWebChat: () => Promise<any>;
+        };
+        cbAsyncInit: () => void;
+    }
+}
+
 const SuriChatbotProvider: React.FC = () => {
     const chatbotId = process.env.NEXT_PUBLIC_SURI_CHATBOT_ID;
 
@@ -12,30 +22,39 @@ const SuriChatbotProvider: React.FC = () => {
     }
 
     return (
-        <Script
-            id="cbm-jssdk"
-            src="https://webchat.chatbotmaker.io/cbm-jssdk.js"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-                __html: `
-                    window.cbAsyncInit = function () {
-                        CBM.ChatbotId = "${chatbotId}";
-                        CBM.StartWebChat().then(webChat => {
-                               
-                        }).catch(reason => {
-
+        <>
+            <Script
+                src="https://webchat.chatbotmaker.io/cbm-jssdk.js"
+                strategy="afterInteractive"
+                onLoad={() => {
+                    // Initialize the chatbot when the script loads
+                    if (window.CBM) {
+                        window.CBM.ChatbotId = chatbotId;
+                        window.CBM.StartWebChat().then((webChat: any) => {
+                            console.log('Suri Chatbot loaded successfully');
+                        }).catch((reason: any) => {
+                            console.error('Failed to start Suri Chatbot:', reason);
                         });
-                    };
-                    (function (d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) { return; }
-                        js = d.createElement(s); js.id = id;
-                        js.src = "https://webchat.chatbotmaker.io/cbm-jssdk.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                    }(document, 'script', 'cbm-jssdk'));
-                `,
-            }}
-        />
+                    }
+                }}
+            />
+            <Script
+                id="suri-chatbot-init"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+                        window.cbAsyncInit = function () {
+                            CBM.ChatbotId = "${chatbotId}";
+                            CBM.StartWebChat().then(webChat => {
+                                console.log('Suri Chatbot loaded successfully');
+                            }).catch(reason => {
+                                console.error('Failed to start Suri Chatbot:', reason);
+                            });
+                        };
+                    `,
+                }}
+            />
+        </>
     );
 };
 
