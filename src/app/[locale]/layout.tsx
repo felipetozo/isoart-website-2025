@@ -8,6 +8,7 @@ import Footer from "./components/Footer/footer";
 import AnalyticsProvider from "./components/analytics-provider/analytics-provider";
 import { LenisProvider } from "./components/lenis-provider";
 import CookieBanner from "./views/ui/cookie-banner";
+import SuriChatbotProvider from "./components/SuriChatbotProvider";
 
 const locales = ['pt-BR', 'en', 'es'] as const;
 
@@ -95,6 +96,12 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
   };
 }
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+}
+
 interface LocaleLayoutProps {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -120,6 +127,7 @@ async function LocaleLayout({ children, params }: LocaleLayoutProps) {
           <Footer locale={locale} />
           <CookieBanner />
           <AnalyticsProvider />
+          <SuriChatbotProvider />
         </LenisProvider>
       </div>
     </NextIntlClientProvider>
