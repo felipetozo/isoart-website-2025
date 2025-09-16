@@ -212,7 +212,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                             </a>
                         </div>
                         <div className={styles['contact-component-contact-item']}>
-                            <a href="https://wa.me/5545991339642" target="_blank">
+                            <a href="https://wa.me/554530111000" target="_blank">
                                 <BsWhatsapp />
                                 <p>{tContact('whatsappDefault')}</p>
                             </a>
@@ -270,7 +270,6 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                     { value: '', label: t('form.selectSolution') },
                                     { value: 'telhas-e-paineis', label: t('form.solutions.telhasPaineis') },
                                     { value: 'construcao-civil', label: t('form.solutions.construcaoCivil') },
-                                    { value: 'forros', label: t('form.solutions.forros') },
                                     { value: 'molduras', label: t('form.solutions.molduras') },
                                     { value: 'embalagens', label: t('form.solutions.embalagens') },
                                 ]}
@@ -345,7 +344,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                     <MdOutlinePhoneInTalk />
                                     {tContact('phoneFactory01')}
                                 </a>
-                                <a href="https://wa.me/5545991339642" target="_blank">
+                                <a href="https://wa.me/554530111000" target="_blank">
                                     <BsWhatsapp />
                                     {tContact('whatsappFactory01')}
                                 </a>
@@ -376,7 +375,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                     <MdOutlinePhoneInTalk />
                                     {tContact('phoneFactory02')}
                                 </a>
-                                <a href="https://wa.me/5549999638373" target="_blank">
+                                <a href="https://wa.me/554530111000" target="_blank">
                                     <BsWhatsapp />
                                     {tContact('whatsappFactory02')}
                                 </a>
@@ -407,7 +406,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                     <MdOutlinePhoneInTalk />
                                     {tContact('phoneFactory03')}
                                 </a>
-                                <a href="https://wa.me/5545998260240" target="_blank">
+                                <a href="https://wa.me/554530111000" target="_blank">
                                     <BsWhatsapp />
                                     {tContact('whatsappFactory03')}
                                 </a>

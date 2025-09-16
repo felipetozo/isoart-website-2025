@@ -421,7 +421,7 @@ function MainNav({ locale }: MainNavProps) {
                         <div className={styles['mobile-contact']}>
                             <p dangerouslySetInnerHTML={{ __html: tContact('address') }} />
                             <p><a href="tel:+554532311699" target="_blank"><MdOutlinePhoneInTalk /> {tContact('phone')}</a></p>
-                            <p><a href="https://wa.me/5545991339642" target="_blank"><BsWhatsapp /> {tContact('whatsappDefault')}</a></p>
+                            <p><a href="https://wa.me/554530111000" target="_blank"><BsWhatsapp /> {tContact('whatsappDefault')}</a></p>
                             <p><a href="mailto:contato@isoart.com.br" target="_blank"><MdOutlineMarkEmailUnread /> {tContact('email')}</a></p>
                             <div className={styles['mobile-social']}>
                                 <div className={styles['mobile-social-icons']}>

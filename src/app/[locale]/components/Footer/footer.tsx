@@ -29,7 +29,7 @@ function Footer({ locale }: FooterProps) {
                             </Link>
                         </div>
                         <div className={styles['main-form-contact-item']}>
-                            <Link href="https://wa.me/5545991339642" target="_blank">
+                            <Link href="https://wa.me/554530111000" target="_blank">
                                 <BsWhatsapp />
                                 <p>{tContact('whatsappDefault')}</p>
                             </Link>
