@@ -1,0 +1,88 @@
+/* ======================================================== */
+/* Soluções Section                                        */
+/* ======================================================== */
+
+.solucoes-section {
+    width: 100%;
+    padding: 10rem 0;
+    background-color: rgba(241, 244, 247, 1);
+}
+
+.solucoes-wrapper {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.solucao-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.solucao-image {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 0.2rem;
+}
+
+.solucao-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.solucao-title {
+    color: rgba(24, 74, 100, 1);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.solucao-description {
+    color: rgba(17, 17, 17, 0.85);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.solucao-button {
+    width: max-content;
+}
+
+/* ======================================================== */
+/* Desktop Styles                                          */
+/* ======================================================== */
+
+@media (min-width: 1200px) {
+    .solucao-item {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+    }
+
+    .solucao-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .solucao-image {
+        width: 50%;
+        height: 450px;
+    }
+
+    .solucao-content {
+        width: 45%;
+    }
+
+    .solucao-title {
+        font-size: 2.5rem;
+    }
+
+    .solucao-description {
+        font-size: 1.1rem;
+    }
+} 
