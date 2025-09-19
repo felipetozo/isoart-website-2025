@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
+import { sendMail } from '@/lib/smtp';
+import { createFormSectionEmail } from '@/app/[locale]/components/email-templates/utils/email-generator';
 
 export async function POST(request: NextRequest) {
   try {
@@ -84,11 +86,35 @@ export async function POST(request: NextRequest) {
       data_hora: dataHora
     };
 
-    // Adicionar nova submissão
-    submissionsData.submissions.push(newSubmission);
+    // Enviar email de notificação PRIMEIRO (independente do JSON)
+    try {
+      const emailData = createFormSectionEmail({
+        name: sanitizedName,
+        email: sanitizedEmail,
+        phone: sanitizedPhone,
+        solution: sanitizedSolution,
+        state: sanitizedState,
+        city: sanitizedCity,
+        terms: terms,
+        dataHora: dataHora
+      });
+      
+      await sendMail(emailData.to, emailData.subject, emailData.html);
+      console.log('Email de notificação enviado com sucesso');
+    } catch (emailError) {
+      console.error('Erro ao enviar email de notificação:', emailError);
+      // Não falha o processo se o email não for enviado
+    }
 
-    // Salvar no arquivo JSON
-    await fs.writeFile(filePath, JSON.stringify(submissionsData, null, 2), 'utf-8');
+    // Salvar no arquivo JSON (opcional - pode falhar sem afetar o email)
+    try {
+      submissionsData.submissions.push(newSubmission);
+      await fs.writeFile(filePath, JSON.stringify(submissionsData, null, 2), 'utf-8');
+      console.log('Dados salvos no JSON com sucesso');
+    } catch (jsonError) {
+      console.error('Erro ao salvar no JSON (não crítico):', jsonError);
+      // JSON é opcional - email já foi enviado
+    }
     
     return NextResponse.json(
       { 

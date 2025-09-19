@@ -1,0 +1,41 @@
+.email-container {
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.email-header {
+  border-bottom: 2px solid #333;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.email-title {
+  color: black;
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+}
+
+.email-content {
+  background-color: white;
+  color: black;
+  padding: 20px 0;
+  line-height: 1.6;
+}
+
+.email-footer {
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-text {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
