@@ -1,3 +1,4 @@
+// src/app/layout.tsx - Layout com suporte a landing pages sem nav/footer
 import type { Metadata } from "next";
 import { Inter, Red_Hat_Display } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
@@ -9,6 +10,7 @@ import AnalyticsProvider from "./components/analytics-provider/analytics-provide
 import { LenisProvider } from "./components/lenis-provider";
 import CookieBanner from "./views/ui/cookie-banner";
 import SuriChatbotProvider from "./components/SuriChatbotProvider";
+import { headers } from "next/headers";
 
 const locales = ['pt-BR', 'en', 'es'] as const;
 
@@ -28,8 +30,7 @@ const redhat = Red_Hat_Display({
 
 export async function generateMetadata({ params }: LocaleLayoutProps): Promise<Metadata> {
   const { locale } = await params;
-  
-  // Validar se o idioma é suportado
+
   if (!locales.includes(locale as any)) {
     return {
       title: "Idioma não suportado - ISOART",
@@ -107,30 +108,68 @@ interface LocaleLayoutProps {
   params: Promise<{ locale: string }>;
 }
 
-async function LocaleLayout({ children, params }: LocaleLayoutProps) {
-  const { locale } = await params;
-  
-  // Validar se o idioma é suportado
-  if (!locales.includes(locale as any)) {
-    return null; // Retornar null para idiomas não suportados
+// Componente condicional para layout (sem nav/footer para landing pages específicas)
+function ConditionalLayout({ 
+  children, 
+  locale, 
+  pathname 
+}: { 
+  children: React.ReactNode; 
+  locale: string;
+  pathname: string;
+}) {
+  // Remove locale do pathname para o regex
+  const cleanPathname = pathname.startsWith(`/${locale}`) 
+    ? pathname.replace(`/${locale}`, '') 
+    : pathname;
+
+  // ← ESPECÍFICO: só para /landing-pages/molduras por agora
+  const isLandingPage = /\/landing-pages\/molduras/.test(cleanPathname);
+
+  if (isLandingPage) {
+    return <main>{children}</main>;
   }
 
-  // Carregar as mensagens de tradução com o locale correto
+  return (
+    <>
+      <MainNav locale={locale} />
+      <main>{children}</main>
+      <Footer locale={locale} />
+    </>
+  );
+}
+
+// Layout principal com i18n e providers
+async function LocaleLayout({ children, params }: LocaleLayoutProps) {
+  const { locale } = await params;
+
+  if (!locales.includes(locale as any)) {
+    return null;
+  }
+
+  // ← CORRIGIDO: await headers() para resolver o erro TypeScript
+  const headersList = await headers();
+  const pathname = headersList.get("x-pathname") || "/";
+
   const messages = await getMessages({ locale });
 
   return (
-    <NextIntlClientProvider messages={messages} locale={locale}>
-      <div className={`${inter.variable} ${redhat.variable}`}>
-        <LenisProvider>
-          <MainNav locale={locale} />
-          <main>{children}</main>
-          <Footer locale={locale} />
-          <CookieBanner />
-          <AnalyticsProvider />
-          <SuriChatbotProvider />
-        </LenisProvider>
-      </div>
-    </NextIntlClientProvider>
+    <html lang={locale}>
+      <body>
+        <NextIntlClientProvider messages={messages} locale={locale}>
+          <div className={`${inter.variable} ${redhat.variable} font-sans`}>
+            <LenisProvider>
+              <ConditionalLayout locale={locale} pathname={pathname}>
+                {children}
+              </ConditionalLayout>
+              <CookieBanner />
+              <AnalyticsProvider />
+              <SuriChatbotProvider />
+            </LenisProvider>
+          </div>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
 
