@@ -120,8 +120,9 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
     <NextIntlClientProvider messages={messages} locale={locale}>
       <div className={`${inter.variable} ${redhat.variable}`}>
         <LenisProvider>
-          {/* ✅ SEM ConditionalLayout - só renderiza o conteúdo */}
+          <MainNav locale={locale} />
           {children}
+          <Footer locale={locale} />
           <CookieBanner />
           <AnalyticsProvider />
           <SuriChatbotProvider />

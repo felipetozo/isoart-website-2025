@@ -362,7 +362,7 @@ function MainNav({ locale }: MainNavProps) {
                     <div className={styles['main-nav-content']}>
                         <div className={styles['main-nav-logo']}>
                             <Link href={`/${locale}`}>
-                                <Image src={'/img/isoart-logotipo.svg'} alt={t('logo')} width={120} height={62} />
+                                <img src={'/img/isoart-logotipo.svg'} alt={t('logo')} width={120} height={62} />
                             </Link>
                         </div>
                         <div className={styles['main-nav-links']}>

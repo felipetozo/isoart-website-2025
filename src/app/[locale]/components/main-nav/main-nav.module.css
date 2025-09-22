@@ -192,6 +192,18 @@
     align-items: center;
 }
 
+.main-nav-logo {
+    display: block;
+    z-index: 10;
+    position: relative;
+}
+
+.main-nav-logo img {
+    display: block;
+    width: 120px;
+    height: 62px;
+}
+
 .main-nav-links,
 .main-nav-button {
     display: none;

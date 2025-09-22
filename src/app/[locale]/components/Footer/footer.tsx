@@ -91,7 +91,7 @@ function Footer({ locale }: FooterProps) {
                     <div className={styles['footer-column']}>
                         <div className={styles['footer-logos']}>
                             <Link href={`/${locale}`}>
-                                <Image
+                                <img
                                     src={'/img/isoart-logotipo.svg'}
                                     alt="Logotipo Isoart"
                                     width={120}
