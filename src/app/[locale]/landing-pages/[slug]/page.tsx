@@ -1,24 +1,17 @@
 import styles from './page.module.css';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import Button from '@/app/[locale]/views/ui/button/button';
 
-interface LandingPageProps {
-  params: Promise<{
-    locale: string;
-    slug: string;
-  }>;
-}
-
-export default async function LandingPage({ params }: LandingPageProps) {
-  const { locale, slug } = await params;
+export default function LandingPage() {
   
+  const t = useTranslations('LandingPages.Molduras');
+
   return (
-    <div className={styles.container}>
-      <iframe
-        src="https://somosfaiskers.wixstudio.com/molduras"
-        width="100%"
-        height="1000"
-        style={{ border: "none" }}
-        allowFullScreen
-      />
-    </div>
-  );
+    <>
+    <section className={styles['LandingNav-Section']}>
+      <img src={'/img/isoart-logotipo.svg'} alt={t('logo')} width={120} height={62} />
+    </section>
+    </>
+  )
 }
