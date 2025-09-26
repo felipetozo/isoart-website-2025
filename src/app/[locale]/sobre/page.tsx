@@ -20,7 +20,7 @@ export default function SobrePage() {
       year: '2008',
       label: t('timeline.items.2008.label'),
       description: t('timeline.items.2008.description'),
-      image: '/img/geral/endereco-01-01-optimized.webp',
+      image: '/img/geral/endereco-01-01.avif',
     },
     {
       year: '2015',
@@ -110,9 +110,9 @@ export default function SobrePage() {
       {/* Galeria de imagens */}
       <section className={styles['gallery-section']}>
         <div className={styles['gallery-grid']}>
-                          <img src="/img/geral/endereco-01-01-optimized.webp" alt="Exemplo 1" className={styles['gallery-image']} loading="lazy" />
-          <img src="/img/geral/endereco-02-01.avif" alt="Exemplo 2" className={styles['gallery-image']} />
-          <img src="/img/geral/endereco-03-01.avif" alt="Exemplo 3" className={styles['gallery-image']} />
+          <img src="/img/geral/endereco-01-01.avif" alt="Isoart Endereço 01 - Matriz" className={styles['gallery-image']} loading="lazy" />
+          <img src="/img/geral/endereco-02-01.avif" alt="Isoart Endereço 02" className={styles['gallery-image']} />
+          <img src="/img/geral/endereco-03-01.avif" alt="Isoart Endereço 03" className={styles['gallery-image']} />
         </div>
       </section>
 
