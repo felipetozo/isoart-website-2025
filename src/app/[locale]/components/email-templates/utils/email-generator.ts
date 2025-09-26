@@ -4,7 +4,7 @@ import { FormSectionData, ContactPageData } from '../base/email-types';
 // Função principal para gerar email do formulário da seção
 export function createFormSectionEmail(data: FormSectionData) {
   return {
-    to: 'felipetozo@icloud.com',
+    to: 'contato@isoart.com.br',
     subject: 'Novo Contato - Formulário de contato',
     html: generateFormSectionEmailHTML(data)
   };
@@ -13,7 +13,7 @@ export function createFormSectionEmail(data: FormSectionData) {
 // Função principal para gerar email da página de contato
 export function createContactPageEmail(data: ContactPageData) {
   return {
-    to: 'felipetozo@icloud.com',
+    to: 'contato@isoart.com.br',
     subject: 'Novo Contato - Página de Contato',
     html: generateContactPageEmailHTML(data)
   };
