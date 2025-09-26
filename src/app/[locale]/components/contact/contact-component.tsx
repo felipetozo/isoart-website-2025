@@ -17,6 +17,7 @@ interface FormData {
     solution: string;
     state: string;
     city: string;
+    message: string;
     terms: boolean;
 }
 
@@ -27,6 +28,7 @@ interface FormErrors {
     solution?: string;
     state?: string;
     city?: string;
+    message?: string;
     terms?: string;
 }
 
@@ -47,6 +49,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
         solution: '',
         state: '',
         city: '',
+        message: '',
         terms: false,
     });
     const [errors, setErrors] = useState<FormErrors>({});
@@ -61,6 +64,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
         if (!formData.solution) newErrors.solution = t('selectSolution');
         if (!formData.state) newErrors.state = t('selectState');
         if (!formData.city.trim()) newErrors.city = t('enterCity');
+        if (!formData.message.trim()) newErrors.message = t('enterMessage');
         if (!formData.terms) newErrors.terms = t('termsRequired');
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -83,7 +87,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
         }
     };
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         const { name, value, type } = e.target;
         const checked = type === 'checkbox' ? (e.target as HTMLInputElement).checked : undefined;
         
@@ -117,7 +121,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                             try {
                                 const result = JSON.parse(xhr.responseText);
                                 setSubmitStatus('success');
-                                setFormData({ name: '', email: '', phone: '', solution: '', state: '', city: '', terms: false });
+                                setFormData({ name: '', email: '', phone: '', solution: '', state: '', city: '', message: '', terms: false });
                                 setShowToast(true);
                             } catch (parseError) {
                                 console.error('Erro ao fazer parse da resposta:', parseError);
@@ -148,7 +152,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
 
                 if (response.ok) {
                     setSubmitStatus('success');
-                    setFormData({ name: '', email: '', phone: '', solution: '', state: '', city: '', terms: false });
+                    setFormData({ name: '', email: '', phone: '', solution: '', state: '', city: '', message: '', terms: false });
                     setShowToast(true);
                 } else {
                     console.error('Erro na API:', result.error);
@@ -295,6 +299,18 @@ function ContactComponent({ locale }: ContactComponentProps) {
                                 onChange={handleChange}
                                 placeholder={t('form.enterCity')}
                                 error={errors.city}
+                            />
+                        </div>
+                        <div className={styles['cadastro-form-fields']}>
+                            <FormField
+                                id="message"
+                                label={t('form.message')}
+                                variant="textarea"
+                                value={formData.message}
+                                onChange={handleChange}
+                                placeholder={t('form.enterMessage')}
+                                error={errors.message}
+                                rows={4}
                             />
                         </div>
                         <div className={styles['cadastro-form-fields']}>

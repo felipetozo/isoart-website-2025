@@ -546,6 +546,7 @@
       "enterName": "Digite seu nome",
       "enterEmail": "Digite seu email",
       "enterCity": "Digite sua cidade",
+      "enterMessage": "Digite sua mensagem",
       "phonePlaceholder": "(00) 00000-0000",
       "solutions": {
         "telhasPaineis": "Telhas e Painéis",
@@ -644,6 +645,8 @@
       "statePlaceholder": "Selecione um estado ou país",
       "city": "Cidade",
       "cityPlaceholder": "Digite sua cidade",
+      "message": "Mensagem",
+      "messagePlaceholder": "Digite sua mensagem",
       "terms": "Li e aceito os",
       "privacyPolicy": "termos de privacidade",
       "submit": "Enviar mensagem",
@@ -657,6 +660,7 @@
         "subjectRequired": "Tema é obrigatório",
         "stateRequired": "Estado é obrigatório",
         "cityRequired": "Cidade é obrigatória",
+        "messageRequired": "Mensagem é obrigatória",
         "termsRequired": "Você deve aceitar os termos",
         "submitError": "Erro ao enviar formulário. Tente novamente."
       }

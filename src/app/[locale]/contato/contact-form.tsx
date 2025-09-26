@@ -15,6 +15,7 @@ interface FormData {
     theme: string;
     state: string;
     city: string;
+    message: string;
     terms: boolean;
 }
 
@@ -25,6 +26,7 @@ interface FormErrors {
     theme?: string;
     state?: string;
     city?: string;
+    message?: string;
     terms?: string;
     submit?: string;
 }
@@ -43,6 +45,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
         theme: '',
         state: '',
         city: '',
+        message: '',
         terms: false,
     });
 
@@ -86,6 +89,10 @@ export default function ContactForm({ locale }: ContactFormProps) {
             newErrors.city = t('form.errors.cityRequired');
         }
 
+        if (!formData.message.trim()) {
+            newErrors.message = t('form.errors.messageRequired');
+        }
+
         if (!formData.terms) {
             newErrors.terms = t('form.errors.termsRequired');
         }
@@ -119,6 +126,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
                                 theme: '',
                                 state: '',
                                 city: '',
+                                message: '',
                                 terms: false,
                             });
                             setErrors({});
@@ -158,6 +166,7 @@ export default function ContactForm({ locale }: ContactFormProps) {
                         theme: '',
                         state: '',
                         city: '',
+                        message: '',
                         terms: false,
                     });
                     setErrors({});
@@ -282,6 +291,17 @@ export default function ContactForm({ locale }: ContactFormProps) {
                                 placeholder={t('form.cityPlaceholder')}
                                 error={errors.city}
                                 theme="light"
+                            />
+                            <FormField
+                                id="message"
+                                label={t('form.message')}
+                                variant="textarea"
+                                value={formData.message}
+                                onChange={(e) => handleInputChange('message', e.target.value)}
+                                placeholder={t('form.messagePlaceholder')}
+                                error={errors.message}
+                                theme="light"
+                                rows={4}
                             />
                             <div className={styles['terms-container']}>
                                 <input

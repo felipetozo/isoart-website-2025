@@ -546,6 +546,7 @@
       "enterName": "Ingresá tu nombre",
       "enterEmail": "Ingresá tu correo electrónico",
       "enterCity": "Ingresá tu ciudad",
+      "enterMessage": "Ingresá tu mensaje",
       "phonePlaceholder": "(00) 00000-0000",
       "solutions": {
         "telhasPaineis": "Tejas y Paneles",
@@ -644,6 +645,8 @@
       "statePlaceholder": "Selecioná una provincia o país",
       "city": "Ciudad",
       "cityPlaceholder": "Ingresá tu ciudad",
+      "message": "Mensaje",
+      "messagePlaceholder": "Ingresá tu mensaje",
       "terms": "Leí y acepto los",
       "privacyPolicy": "términos de privacidad",
       "submit": "Enviar mensaje",
@@ -657,6 +660,7 @@
         "subjectRequired": "El asunto es obligatorio",
         "stateRequired": "La provincia es obligatoria",
         "cityRequired": "La ciudad es obligatoria",
+        "messageRequired": "El mensaje es obligatorio",
         "termsRequired": "Debes aceptar los términos",
         "submitError": "Error al enviar el formulario. Intentá de nuevo."
       }

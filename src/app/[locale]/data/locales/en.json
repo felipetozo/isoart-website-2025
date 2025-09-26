@@ -546,6 +546,7 @@
       "enterName": "Enter your name",
       "enterEmail": "Enter your email",
       "enterCity": "Enter your city",
+      "enterMessage": "Enter your message",
       "phonePlaceholder": "(00) 00000-0000",
       "solutions": {
         "telhasPaineis": "Roofing and Panels",
@@ -644,6 +645,8 @@
       "statePlaceholder": "Select a state or a country",
       "city": "City",
       "cityPlaceholder": "Enter your city",
+      "message": "Message",
+      "messagePlaceholder": "Enter your message",
       "terms": "I have read and accept the",
       "privacyPolicy": "privacy policy",
       "submit": "Send Message",
@@ -657,6 +660,7 @@
         "subjectRequired": "Subject is required",
         "stateRequired": "State is required",
         "cityRequired": "City is required",
+        "messageRequired": "Message is required",
         "termsRequired": "You must accept the terms",
         "submitError": "Error sending the form. Please try again."
       }
