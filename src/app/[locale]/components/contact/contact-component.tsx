@@ -332,7 +332,7 @@ function ContactComponent({ locale }: ContactComponentProps) {
                     <div className={styles['contact-component-enderecos']}>
                         <div className={styles['contact-component-endereco']}>
                             <Image
-                                src={'/img/geral/endereco-01-01-optimized.webp'}
+                                src={'/img/geral/endereco-01-01.avif'}
                                 alt="Fábrica 1 Isoart"
                                 width={1000}
                                 height={700}

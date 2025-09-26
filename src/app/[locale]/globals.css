@@ -341,3 +341,40 @@ p {
   }
 
 }
+
+/* Suri Chatbot - Aumentar tamanho do ícone */
+/* Seletores mais genéricos para o ChatbotMaker */
+[class*="cbm-widget"],
+[class*="chatbot"],
+[class*="widget-button"],
+iframe[src*="chatbotmaker"],
+iframe[src*="cbm"] {
+  width: 15rem !important;
+  height: 5rem !important;
+  transform: scale(1.2) !important;
+}
+
+/* Seletores específicos do ChatbotMaker */
+.cbm-widget-button,
+.cbm-widget-container,
+.cbm-widget,
+#cbm-widget,
+[data-cbm-widget] {
+  width: 5rem !important;
+  height: 5rem !important;
+  transform: scale(1.2) !important;
+}
+
+/* Ajustar posicionamento */
+.cbm-widget-container,
+[class*="cbm-widget-container"] {
+  bottom: 2rem !important;
+  right: 2rem !important;
+}
+
+/* Forçar estilos em elementos dinâmicos */
+body > div:last-child {
+  width: 5rem !important;
+  height: 5rem !important;
+  transform: scale(1.2) !important;
+}

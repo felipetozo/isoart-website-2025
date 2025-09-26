@@ -47,6 +47,24 @@ const SuriChatbotProvider: React.FC = () => {
                             CBM.ChatbotId = "${chatbotId}";
                             CBM.StartWebChat().then(webChat => {
                                 console.log('Suri Chatbot loaded successfully');
+                                
+                                // Aplicar estilos personalizados após o carregamento
+                                setTimeout(() => {
+                                    const chatbotElements = document.querySelectorAll('[class*="cbm"], [class*="widget"], iframe[src*="chatbotmaker"]');
+                                    chatbotElements.forEach(element => {
+                                        element.style.width = '5rem';
+                                        element.style.height = '5rem';
+                                        element.style.transform = 'scale(1.2)';
+                                    });
+                                    
+                                    // Tentar encontrar o container do chatbot
+                                    const chatbotContainer = document.querySelector('body > div:last-child');
+                                    if (chatbotContainer) {
+                                        chatbotContainer.style.width = '5rem';
+                                        chatbotContainer.style.height = '5rem';
+                                        chatbotContainer.style.transform = 'scale(1.2)';
+                                    }
+                                }, 1000);
                             }).catch(reason => {
                                 console.error('Failed to start Suri Chatbot:', reason);
                             });
