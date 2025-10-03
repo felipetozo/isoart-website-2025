@@ -26,17 +26,6 @@ const SuriChatbotProvider: React.FC = () => {
             <Script
                 src="https://webchat.chatbotmaker.io/cbm-jssdk.js"
                 strategy="afterInteractive"
-                onLoad={() => {
-                    // Initialize the chatbot when the script loads
-                    if (window.CBM) {
-                        window.CBM.ChatbotId = chatbotId;
-                        window.CBM.StartWebChat().then((webChat: any) => {
-                            console.log('Suri Chatbot loaded successfully');
-                        }).catch((reason: any) => {
-                            console.error('Failed to start Suri Chatbot:', reason);
-                        });
-                    }
-                }}
             />
             <Script
                 id="suri-chatbot-init"
@@ -45,7 +34,7 @@ const SuriChatbotProvider: React.FC = () => {
                     __html: `
                         window.cbAsyncInit = function () {
                             CBM.ChatbotId = "${chatbotId}";
-                            CBM.StartWebChat().then(webChat => {
+                            CBM.StartWebChat(null, true).then(webChat => {
                                 console.log('Suri Chatbot loaded successfully');
                                 
                                 // Aplicar estilos personalizados após o carregamento
