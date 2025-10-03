@@ -46,14 +46,8 @@
         }
     ],
     "generalCharacteristics": [
-        "High-density EPS (15-20 kg/m³)",
-        "Thermal conductivity of ~0.035 W/m·K",
-        "Compression resistance of 0.10-0.15 MPa",
-        "Water absorption < 4% in 5 years",
-        "Smooth surface, ready for painting or textures",
         "100% recyclable, no CFC emissions",
-        "Multiple models with differentiated designs",
-        "Continuous expansion of product line"
+        "Models with differentiated designs"
     ],
     "applications": {
         "title": "Sophisticated aesthetic finishes for ceilings in residential and commercial projects",
@@ -80,8 +74,7 @@
     "tabDescriptions": {
         "Multiple models available": "We currently offer Dunes and Paris models, each with unique aesthetic characteristics. The Dunes model is inspired by the natural undulations of sand dunes, while Paris evokes the elegance of Parisian architecture.",
         "Aesthetics and customization": "Each ceiling model has a unique and sophisticated design, allowing finishes such as paintings, textures and cornices. The differentiated patterns serve projects ranging from those seeking harmony with nature to those requiring architectural sophistication and refinement.",
-        "Efficient installation": "Fixing with specific adhesives or AC-3 mortar ensures speed, practicality and cleanliness in construction, with joints reinforced by fiberglass tape.",
-        "Thermal insulation": "Low thermal conductivity EPS (~0.035 W/m·K) provides thermal comfort and energy savings in air conditioning.",
+        "Thermal insulation": "Low thermal conductivity EPS provides thermal comfort and energy savings in air conditioning.",
         "Sustainability": "100% recyclable and CFC-free, Isoart ceilings are environmentally responsible."
     }
 }

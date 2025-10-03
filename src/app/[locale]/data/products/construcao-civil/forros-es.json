@@ -46,14 +46,8 @@
         }
     ],
     "generalCharacteristics": [
-        "EPS de alta densidad (15-20 kg/m³)",
-        "Conductividad térmica de ~0,035 W/m·K",
-        "Resistencia a la compresión de 0,10-0,15 MPa",
-        "Absorción de agua < 4% en 5 años",
-        "Superficie lisa, lista para pintura o texturas",
         "100% reciclable, sin emisión de CFC",
-        "Múltiples modelos con diseños diferenciados",
-        "Expansión continua de la línea de productos"
+        "Modelos con diseños diferenciados"
     ],
     "applications": {
         "title": "Acabados estéticos sofisticados para techos en proyectos residenciales y comerciales",
@@ -80,8 +74,7 @@
     "tabDescriptions": {
         "Múltiples modelos disponibles": "Actualmente ofrecemos los modelos Dunas y París, cada uno con características estéticas únicas. El modelo Dunas está inspirado en las ondulaciones naturales de las dunas de arena, mientras que París remite a la elegancia de la arquitectura parisina.",
         "Estética y personalización": "Cada modelo de techo posee diseño único y sofisticado, permitiendo acabados como pinturas, texturas y cornisas. Los patrones diferenciados atienden desde proyectos que buscan armonía con la naturaleza hasta aquellos que exigen sofisticación y refinamiento arquitectónico.",
-        "Instalación eficiente": "Fijación con adhesivos específicos o argamasa AC-3 garantiza rapidez, practicidad y limpieza en la obra, con juntas reforzadas por cinta de fibra de vidrio.",
-        "Aislamiento térmico": "El EPS de baja conductividad térmica (~0,035 W/m·K) proporciona confort térmico y economía de energía en climatización.",
+        "Aislamiento térmico": "El EPS de baja conductividad térmica proporciona confort térmico y economía de energía en climatización.",
         "Sostenibilidad": "100% reciclables y libres de CFC, los techos Isoart son ambientalmente responsables."
     }
 }

@@ -46,14 +46,8 @@
         }
     ],
     "generalCharacteristics": [
-        "EPS de alta densidade (15-20 kg/m³)",
-        "Condutividade térmica de ~0,035 W/m·K",
-        "Resistência à compressão de 0,10-0,15 MPa",
-        "Absorção de água < 4% em 5 anos",
-        "Superfície lisa, pronta para pintura ou texturas",
         "100% reciclável, sem emissão de CFC",
-        "Múltiplos modelos com designs diferenciados",
-        "Expansão contínua da linha de produtos"
+        "Modelos com designs diferenciados"
     ],
     "applications": {
         "title": "Acabamentos estéticos sofisticados para tetos em projetos residenciais e comerciais",
@@ -80,8 +74,7 @@
     "tabDescriptions": {
         "Múltiplos modelos disponíveis": "Atualmente oferecemos os modelos Dunas e Paris, cada um com características estéticas únicas. O modelo Dunas é inspirado nas ondulações naturais das dunas de areia, enquanto o Paris remete à elegância da arquitetura parisiense.",
         "Estética e personalização": "Cada modelo de forro possui design único e sofisticado, permitindo acabamentos como pinturas, texturas e sancas. Os padrões diferenciados atendem desde projetos que buscam harmonia com a natureza até aqueles que exigem sofisticação e refinamento arquitetônico.",
-        "Instalação eficiente": "Fixação com adesivos específicos ou argamassa AC-3 garante rapidez, praticidade e limpeza na obra, com emendas reforçadas por fita telada.",
-        "Isolamento térmico": "O EPS de baixa condutividade térmica (~0,035 W/m·K) proporciona conforto térmico e economia de energia em climatização.",
+        "Isolamento térmico": "O EPS de baixa condutividade térmica proporciona conforto térmico e economia de energia em climatização.",
         "Sustentabilidade": "100% recicláveis e livres de CFC, os forros Isoart são ambientalmente responsáveis."
     }
 }

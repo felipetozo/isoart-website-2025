@@ -65,6 +65,42 @@
 
 }
 
+@keyframes chatbot-nudge {
+  0% { transform: translateX(0); }
+  1% { transform: translateX(-1rem); }
+  2% { transform: translateX(0); }
+  3% { transform: translateX(1rem); }
+  4% { transform: translateX(0); }
+
+  5% { transform: translateX(-1rem); }
+  6% { transform: translateX(0); }
+  7% { transform: translateX(1rem); }
+  8% { transform: translateX(0); }
+
+  9% { transform: translateX(-1rem); }
+  10% { transform: translateX(0); }
+  11% { transform: translateX(1rem); }
+  12% { transform: translateX(0); }
+
+  13%, 100% { transform: translateX(0); }
+}
+
+/* Aplicar a animação no container/iframe do chatbot Suri */
+.cbm-widget-container,
+[class*="cbm-widget-container"],
+iframe[src*="chatbotmaker"] {
+  animation: chatbot-nudge 30s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cbm-widget-container,
+  [class*="cbm-widget-container"],
+  iframe[src*="chatbotmaker"] {
+    animation: none !important;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
