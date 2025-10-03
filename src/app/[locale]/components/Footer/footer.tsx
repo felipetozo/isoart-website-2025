@@ -23,12 +23,6 @@ function Footer({ locale }: FooterProps) {
                 <div className={styles['footer-wrapper']}>
                     <div className={styles['footer-column']}>
                         <div className={styles['main-form-contact-item']}>
-                            <Link href="tel:554532311699" target="_blank">
-                                <MdOutlinePhoneInTalk />
-                                <p>{tContact('phone')}</p>
-                            </Link>
-                        </div>
-                        <div className={styles['main-form-contact-item']}>
                             <Link href="https://wa.me/554530111000" target="_blank">
                                 <BsWhatsapp />
                                 <p>{tContact('whatsappDefault')}</p>
