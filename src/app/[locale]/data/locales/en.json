@@ -93,16 +93,21 @@
     },
     "slider": {
       "slide1": {
+        "title": "New EPS Factory",
+        "description": "Isoart Group announces new EPS factory in Serra Gaúcha.",
+        "buttonText": "Learn More"
+      },
+      "slide2": {
         "title": "Decorative Moldings",
         "description": "EPS moldings for doors, windows, and walls. Lightweight, durable, and easy to install, ideal for decorative finishes in indoor and outdoor environments.",
         "buttonText": "Learn More"
       },
-      "slide2": {
+      "slide3": {
         "title": "EPS Products for Civil Construction",
         "description": "EPS materials such as slabs, blocks, and beads for civil construction. They provide cost reduction, lightweight structure, and thermal insulation for residential and commercial projects.",
         "buttonText": "Learn More"
       },
-      "slide3": {
+      "slide4": {
         "title": "Roofing and Panels",
         "description": "Isoart roofing and panels for coverings and facades. Available with or without EPS/PIR thermal insulation, offering energy efficiency and durability. Suitable for various construction projects.",
         "buttonText": "Learn More"

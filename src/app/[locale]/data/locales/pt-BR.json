@@ -93,16 +93,21 @@
     },
     "slider": {
       "slide1": {
+        "title": "Nova fábrica de EPS",
+        "description": "Grupo Isoart anuncia nova fábrica de EPS na Serra Gaúcha.",
+        "buttonText": "Saiba mais"
+      },
+      "slide2": {
         "title": "Molduras decorativas",
         "description": "Molduras em EPS para portas, janelas e paredes. Leves, duráveis e de fácil instalação, são ideais para acabamentos decorativos em ambientes internos e externos.",
         "buttonText": "Saiba mais"
       },
-      "slide2": {
+      "slide3": {
         "title": "Produtos em EPS para construção civil",
         "description": "Materiais em EPS, como lajes, blocos e flocos, para construção civil. Proporcionam redução de custos, leveza e isolamento térmico, atendendo a projetos residenciais e comerciais.",
         "buttonText": "Saiba mais"
       },
-      "slide3": {
+      "slide4": {
         "title": "Telhas e Painéis",
         "description": "Telhas e painéis da Isoart para coberturas e fachadas. Disponíveis com ou sem isolamento térmico em EPS/PIR, oferecem eficiência energética e resistência. Adequados para diversos projetos de construção.",
         "buttonText": "Saiba mais"

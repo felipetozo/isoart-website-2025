@@ -247,6 +247,30 @@ Para resolver problemas de funcionamento em dispositivos Android, foram implemen
 
 **Status**: ✅ **PRONTO PARA HOSPEDAGEM** - Arquivo .zip criado com sucesso e projeto limpo para deploy. Integração com Resend incluída.
 
+
+## 🤖 **SURI CHATBOT - Configuração e Funcionalidades**
+
+### **Como Está Configurada Atualmente:**
+
+#### **Arquivo Principal:**
+- `src/app/[locale]/components/SuriChatbotProvider.tsx`
+
+#### **Configuração Atual:**
+- ✅ **Carregamento Automático**: Chat abre automaticamente (`showPopup: true`)
+- ✅ **ID do Chatbot**: Configurado via variável de ambiente `NEXT_PUBLIC_SURI_CHATBOT_ID`
+- ✅ **Tratamento de Erros**: Logs de sucesso e erro implementados
+- ✅ **Estratégia de Carregamento**: `afterInteractive` para performance otimizada
+
+### **Próximos Passos Recomendados:**
+1. **Mensagem Inicial**: Configurar no portal da Suri (mais confiável que código)
+2. **Captura de Dados**: Implementar quando houver sistema de login
+3. **Analytics**: Adicionar tracking de conversas para Google Analytics
+4. **Notificações**: Implementar webhooks para notificações customizadas
+5. **Integração com Formulários**: Conectar dados de contato com o chat
+
+### **Documentação Oficial:**
+- [Conceitos e Métodos - Suri WebChat](https://sejasuri.gitbook.io/webchat/conceitos-e-metodos)
+
 ---
 
 *Desenvolvido por Stubborn - www.stubborn.com.br*

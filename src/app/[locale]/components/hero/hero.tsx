@@ -38,22 +38,30 @@ function Hero() {
             title: t('slide1.title'),
             description: t('slide1.description'),
             buttonText: t('slide1.buttonText'),
-            buttonLink: "/solucoes/molduras-decorativas",
-            backgroundImage: "/img/heroes/home/home-hero-01.avif"
+            buttonLink: "/noticias/nova-fabrica-05",
+            backgroundImage: "/img/geral/isoart-googlemaps-serragaucha.avif"
         },
         {
             id: 2,
             title: t('slide2.title'),
             description: t('slide2.description'),
             buttonText: t('slide2.buttonText'),
-            buttonLink: "/solucoes/construcao-civil",
-            backgroundImage: "/img/heroes/home/home-hero-03.avif"
+            buttonLink: "/solucoes/molduras-decorativas",
+            backgroundImage: "/img/heroes/home/home-hero-01.avif"
         },
         {
             id: 3,
             title: t('slide3.title'),
             description: t('slide3.description'),
             buttonText: t('slide3.buttonText'),
+            buttonLink: "/solucoes/construcao-civil",
+            backgroundImage: "/img/heroes/home/home-hero-03.avif"
+        },
+        {
+            id: 4,
+            title: t('slide4.title'),
+            description: t('slide4.description'),
+            buttonText: t('slide4.buttonText'),
             buttonLink: "/solucoes/telhas-e-paineis",
             backgroundImage: "/img/heroes/home/home-hero-02.avif"
         }

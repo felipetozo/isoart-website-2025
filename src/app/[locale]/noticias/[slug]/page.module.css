@@ -1,0 +1,21 @@
+.noticia-loading {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.noticia-page {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 15rem;
+    width: 90%
+}
+
+@media (min-width:1200px) {
+    .noticia-page {
+        width: 60%;
+    }
+}
