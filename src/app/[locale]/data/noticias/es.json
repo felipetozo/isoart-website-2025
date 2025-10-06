@@ -1,0 +1,16 @@
+{
+    "noticias": [
+        {
+            "id": "nueva-fabrica-05",
+            "cover": "/img/geral/isoart-googlemaps-serragaucha.avif",
+            "subtitulo": "NUEVA FÁBRICA DE EPS",
+            "titulo": "Grupo Isoart anuncia una nueva planta de EPS en la Serra Gaúcha.",
+            "conteudo": "<p>Serra Gaúcha (RS) - Durante una visita a clientes de la región, los directores del Grupo Isoart, Valter Forlin y Leomar Forlin, anunciaron la inauguración de una nueva planta de Poliestireno Expandido (EPS) en la Serra Gaúcha. La unidad refuerza la presencia de la empresa en Rio Grande do Sul y acelera la atención a la Serra, al Área Metropolitana de Porto Alegre y al centro del estado.</p><p>Prevista para comenzar a operar a comienzos de 2026, la nueva planta contará con maquinaria de alto nivel de automatización, garantizando eficiencia productiva y calidad estandarizada.</p><p>Con esta expansión, el Grupo Isoart pasará a operar cinco unidades productivas, ampliando su cobertura logística, ofreciendo mayor seguridad en el suministro y reduciendo los plazos de entrega. La Serra Gaúcha, actualmente atendida por la unidad de Santa Catarina, contará con un soporte logístico aún más cercano, aportando mayor previsibilidad y agilidad en las entregas.</p><blockquote><p>\"Esta nueva unidad representa un paso importante en nuestra estrategia de proximidad con el cliente. Con automatización, eficiencia y procesos estandarizados, atenderemos a la región con mayor rapidez, calidad y confiabilidad.\"</p><cite>Leomar Forlin, socio propietario del Grupo Isoart</cite></blockquote>",
+            "data": "2025-10-03",
+            "autor": "Equipo Isoart",
+            "categoria": "Institucional",
+            "tags": ["EPS", "Construcción", "Nueva Fábrica"],
+            "destaque": true
+        }          
+    ]
+  }

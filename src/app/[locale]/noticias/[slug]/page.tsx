@@ -53,59 +53,40 @@ export default function NoticiaPage() {
       <div className={styles['noticia-error']}>
         <h1>Notícia não encontrada</h1>
         <p>A notícia que você está procurando não existe ou foi removida.</p>
-        <a href="/noticias" className={styles['back-link']}>
-          ← Voltar para notícias
-        </a>
       </div>
     );
   }
 
   return (
     <article className={styles['noticia-page']}>
+        
         {/* Imagem de capa */}
         {noticia.cover && (
         <div className={styles['noticia-cover']}>
-          <Image 
+          <Image
+            width={1740}
+            height={638}
             src={noticia.cover} 
             alt={noticia.titulo}
             className={styles['cover-image']}
           />
         </div>
         )}
+      <div className={styles['noticia-wrapper']}>
+        {/* Header da notícia */}
+        <header className={styles['noticia-header']}>
+          <p className={styles['noticia-destaque']}>{noticia.subtitulo}</p>
+          <h1 className={styles['noticia-titulo']}>{noticia.titulo}</h1>
+        </header>
 
-      {/* Header da notícia */}
-      <header className={styles['noticia-header']}>
-        <div className={styles['noticia-meta']}>
-          <span className={styles['noticia-categoria']}>{noticia.categoria}</span>
-          <time className={styles['noticia-data']} dateTime={noticia.data}>
-            {formatDate(noticia.data)}
-          </time>
+        {/* Conteúdo da notícia */}
+        <div className={styles['noticia-content']}>
+          <div 
+            className={styles['noticia-body']}
+            dangerouslySetInnerHTML={{ __html: noticia.conteudo }}
+          />
         </div>
-        <p className={styles['noticia-subtitulo']}>{noticia.subtitulo}</p>
-        <h1 className={styles['noticia-titulo']}>{noticia.titulo}</h1>
-      </header>
-
-      {/* Conteúdo da notícia */}
-      <div className={styles['noticia-content']}>
-        <div 
-          className={styles['noticia-body']}
-          dangerouslySetInnerHTML={{ __html: noticia.conteudo }}
-        />
       </div>
-
-      {/* Tags */}
-      {noticia.tags && noticia.tags.length > 0 && (
-        <div className={styles['noticia-tags']}>
-          <h3>Tags:</h3>
-          <div className={styles['tags-list']}>
-            {noticia.tags.map((tag, index) => (
-              <span key={index} className={styles['tag']}>
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      )}
     </article>
   );
 }

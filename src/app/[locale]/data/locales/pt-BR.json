@@ -866,5 +866,11 @@
         "item6": "Treinar e capacitar todos os colaboradores visando o cumprimento da Política de Qualidade."
       }
     }
+  },
+  "newsPage": {
+    "loading": "Carregando notícia",
+    "notFound": "Notícia não encontrada",
+    "notFoundDescription": "A notícia que você está procurando não existe ou foi removida.",
+    "backToNews": "← Voltar para notícias"
   }
 }
