@@ -1,6 +1,7 @@
 'use client';
 
 import { useParams } from 'next/navigation';
+import { useLocale } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { Noticia } from '../../types/noticia';
 import { getNoticiaById, loadNoticias, formatDate } from '../../utils/noticias';
@@ -10,6 +11,7 @@ import Image from 'next/image';
 export default function NoticiaPage() {
   const params = useParams();
   const slug = params.slug as string;
+  const locale = useLocale();
   const [noticia, setNoticia] = useState<Noticia | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -18,7 +20,7 @@ export default function NoticiaPage() {
     async function fetchNoticia() {
       try {
         setLoading(true);
-        const data = await loadNoticias('pt');
+        const data = await loadNoticias(locale);
         const noticiaEncontrada = getNoticiaById(data.noticias, slug);
         
         if (noticiaEncontrada) {
@@ -37,7 +39,7 @@ export default function NoticiaPage() {
     if (slug) {
       fetchNoticia();
     }
-  }, [slug]);
+  }, [slug, locale]);
 
   if (loading) {
     return (

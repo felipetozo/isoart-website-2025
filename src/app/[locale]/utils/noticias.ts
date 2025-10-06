@@ -1,22 +1,28 @@
 import { Noticia, NoticiasData, NoticiaFilters, NoticiasPaginated } from '../types/noticia';
+import ptBRNoticias from '@/app/[locale]/data/noticias/pt-BR.json';
+import enNoticias from '@/app/[locale]/data/noticias/en.json';
+import esNoticias from '@/app/[locale]/data/noticias/es.json';
 
 // Carregar dados das notícias
-export async function loadNoticias(locale: string = 'pt'): Promise<NoticiasData> {
-  try {
-    const response = await fetch(`/data/noticias-${locale}.json`);
-    if (!response.ok) {
-      throw new Error(`Erro ao carregar notícias: ${response.status}`);
-    }
-    return await response.json();
-  } catch (error) {
-    console.error('Erro ao carregar notícias:', error);
-    return { noticias: [] };
-  }
+export async function loadNoticias(locale: string = 'pt-BR'): Promise<NoticiasData> {
+  const map: Record<string, NoticiasData> = {
+    'pt-BR': ptBRNoticias as NoticiasData,
+    'en': enNoticias as NoticiasData,
+    'es': esNoticias as NoticiasData
+  };
+  const normalized = map[locale] ? locale : 'pt-BR';
+  return Promise.resolve(map[normalized]);
 }
 
 // Buscar notícia por ID/slug
-export function getNoticiaById(noticias: Noticia[], id: string): Noticia | undefined {
-  return noticias.find(noticia => noticia.id === id);
+export function getNoticiaById(noticias: Noticia[], idOrSlug: string): Noticia | undefined {
+  const needle = idOrSlug.trim();
+  // 1) Exact match by stable id
+  const byId = noticias.find(noticia => noticia.id === needle);
+  if (byId) return byId;
+  // 2) Fallback: match by a slug generated from the localized title
+  const lower = needle.toLowerCase();
+  return noticias.find(noticia => generateSlug(noticia.titulo) === lower);
 }
 
 // Filtrar notícias
