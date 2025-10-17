@@ -34,7 +34,7 @@ const SuriChatbotProvider: React.FC = () => {
                     __html: `
                         window.cbAsyncInit = function () {
                             CBM.ChatbotId = "${chatbotId}";
-                            CBM.StartWebChat(null, true).then(webChat => {
+                            CBM.StartWebChat(null, false).then(webChat => {
                                 console.log('Suri Chatbot loaded successfully');
                                 
                                 // Aplicar estilos personalizados após o carregamento
