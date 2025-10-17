@@ -43,21 +43,19 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: center; /* <-- centraliza vertical */
+    align-items: flex-start; /* ou center, se quiser no meio */
     max-width: 100rem;
-    align-items: flex-start;
-}
+    z-index: 3;
+    position: relative;
+  }
 
 .hero-container {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    top: 50%;
-    transform: translateY(-10%);
     gap: 1rem;
     color: rgba(241, 244, 247, 1);
-    z-index: 3;
-    position: relative;
-}
+  }
 
 .hero-container h1 {
     font-size: 3rem;
