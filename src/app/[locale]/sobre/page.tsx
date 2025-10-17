@@ -17,9 +17,9 @@ export default function SobrePage() {
   // Timeline data using translations
   const TIMELINE = [
     {
-      year: '2008',
-      label: t('timeline.items.2008.label'),
-      description: t('timeline.items.2008.description'),
+      year: '2007',
+      label: t('timeline.items.2007.label'),
+      description: t('timeline.items.2007.description'),
       image: '/img/geral/endereco-01-01.avif',
     },
     {
