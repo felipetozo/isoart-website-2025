@@ -12,13 +12,15 @@
 
 .slider-wrapper {
     width: 500%;
-    height: 100%;
+    height: 80vh;
+    max-height: max-content;
     display: flex;
 }
 
 .slide {
     width: 100vw;
-    height: 100%;
+    height: 80vh;
+    max-height: max-content;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -30,7 +32,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 80vh;
     background-color: rgba(17, 17, 17, 0.25);
     z-index: 2;
 }
