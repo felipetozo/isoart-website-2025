@@ -8,6 +8,8 @@ on:
 jobs:
   deploy-production:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     environment: production
     
     steps:
@@ -88,6 +90,25 @@ jobs:
             **/.github/**
             **/docs/**
             **/logs/**
+
+      - name: Trigger server reset (cron-based)
+        if: success()
+        run: |
+          echo "RESET $(date -u +%Y-%m-%dT%H:%M:%SZ)" > trigger.txt
+        
+      - name: Upload trigger.txt
+        if: success()
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          local-dir: ./
+          exclude: |
+            **/*
+          include: |
+            trigger.txt
       
       - name: Notify server manager
         if: success()
@@ -112,6 +133,7 @@ jobs:
           fi
       
       - name: Create GitHub Release
+        continue-on-error: true
         if: success()
         uses: actions/create-release@v1
         env:

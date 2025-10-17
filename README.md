@@ -20,6 +20,7 @@ Website da Isoart, empresa especializada em soluções térmicas com EPS e PIR p
 - [Estado, Formulários e Validação](#estado-formulários-e-validação)
 - [Animações e Performance](#animações-e-performance)
 - [Roadmap / Próximos Passos](#roadmap--próximos-passos)
+ - [CI/CD e Deploy](#cicd-e-deploy)
 
 ---
 
@@ -277,3 +278,51 @@ Para resolver problemas de funcionamento em dispositivos Android, foram implemen
 # Teste CI/CD público - Fri Oct 10 16:36:12 -03 2025
 # Teste deploy 2 - Fri Oct 10 16:45:32 -03 2025
 #Novo teste ftp com correção do diretório - Fri Oct 17 02:14:39 -03 2025
+
+---
+
+## CI/CD e Deploy
+
+### Visão geral
+- CI (GitHub Actions): lint, type-check, build
+- Staging (Vercel): deploy automático da branch `develop`
+- Produção (Servidor privado via FTP): deploy automático ao merge em `main`
+- Reset pós-deploy: automatizado por `trigger.txt` + cron no servidor
+
+### Branches
+- `feature/*`: desenvolvimento de features
+- `develop`: staging (Vercel)
+- `main`: produção (FTP)
+
+### Fluxo com aprovação do marketing
+1. Crie/atualize `feature/nome-da-feature`
+2. Abra PR → `develop`
+3. Vercel gera URL de preview; enviar para aprovação do marketing
+4. Aprovado → PR `develop` → `main`
+5. Merge em `main` dispara deploy de produção (FTP + trigger de reset)
+
+### Vercel (recomendado para homologação)
+Configure em Project Settings → Git:
+- Production Branch: `develop`
+- Preview Deployments: habilitado
+
+### Produção (servidor privado)
+- Workflow: `.github/workflows/deploy-production.yml`
+- Envia arquivos essenciais por FTP para `${{ secrets.FTP_SERVER_DIR }}` (atual: `/`)
+- Cria `trigger.txt` para o cron executar `/restart.sh`
+- Script e instruções: `server/restart.sh`, `server/README-RESET.md`
+
+### Secrets necessários (GitHub → Settings → Secrets and variables → Actions)
+- `FTP_SERVER` (ex.: `177.220.142.21`)
+- `FTP_USERNAME`, `FTP_PASSWORD`
+- `FTP_SERVER_DIR` (ex.: `/`)
+- `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER` (`noreply@isoart.com.br`), `SMTP_PASS`
+- `NEXT_PUBLIC_SURI_CHATBOT_ID`, `NEXT_PUBLIC_GOOGLE_ANALYTICS_ID` (ex.: `GTM-W6JCS4X`)
+
+### Checklist rápido de deploy
+1. PR → `develop` (CI roda, Vercel gera preview)
+2. Aprovação do marketing
+3. PR `develop` → `main`
+4. Actions → “Deploy Production” (aguardar concluir)
+5. Confirmar reset automático e validar produção
+
