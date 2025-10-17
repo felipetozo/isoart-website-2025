@@ -1,6 +1,6 @@
 .hero-section {
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     max-height: max-content;
     position: relative;
     top: 0;
@@ -12,14 +12,14 @@
 
 .slider-wrapper {
     width: 500%;
-    height: 80vh;
+    height: 100vh;
     max-height: max-content;
     display: flex;
 }
 
 .slide {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     max-height: max-content;
     background-size: cover;
     background-position: center;
@@ -32,7 +32,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     background-color: rgba(17, 17, 17, 0.25);
     z-index: 2;
 }
@@ -43,8 +43,8 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* <-- centraliza vertical */
-    align-items: flex-start; /* ou center, se quiser no meio */
+    justify-content: center;
+    align-items: flex-start;
     max-width: 100rem;
     z-index: 3;
     position: relative;
